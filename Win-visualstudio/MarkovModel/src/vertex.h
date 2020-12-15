@@ -1,4 +1,4 @@
-
+#pragma once
 #include <cstdint>
 
 
@@ -20,7 +20,7 @@ namespace Markov {
 		void adjust(uint64_t offset); 
 		
 		//return right
-		Markov::Node traverse();
+		Markov::Node* traverse();
 
 	private:
 		Markov::Node* left; //source node

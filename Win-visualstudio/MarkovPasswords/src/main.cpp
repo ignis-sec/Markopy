@@ -1,10 +1,18 @@
 
 #include <iostream>
 #include "color/term.h"
+#include <fstream>
+
+
+std::ofstream OpenDatasetFile(char* filename);
+
+
+
+
+
 
 
 void dll_loadtest();   // a function from a DLL
-
 
 int main(int argc, char** argv) {
 	terminal t;
