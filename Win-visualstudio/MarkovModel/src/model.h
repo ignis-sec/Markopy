@@ -1,6 +1,7 @@
 #pragma once
 #include <map>
 #include <vector>
+#include <fstream>
 
 #include "vertex.h"
 #include "node.h"
@@ -20,6 +21,15 @@ namespace Markov {
 		*/
 		void adjust(char* string, long int occurrence);
 
+		/* Import model structure from a savefile
+		*/
+		bool Import(std::ifstream);
+		bool Import(char* filename);
+
+		/* Export model structure to a savefile
+		*/
+		bool Export(std::ofstream);
+		bool Export(char* filename);
 
 	private:
 		/* Map left is the Nodes value

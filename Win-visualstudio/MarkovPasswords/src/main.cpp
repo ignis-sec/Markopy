@@ -15,16 +15,16 @@ Markov::Model* initialize(char* filename);
 
 /* open a dataset file and return ofstream ptr
 */
-std::ofstream OpenDatasetFile(char* filename);
+std::ifstream OpenDatasetFile(char* filename);
 
 
 /* Read dataset line by line and adjust model with each line
 */
-void Train(std::ofstream);
+void Train(std::ifstream);
 
 /* Save current model state to file
 */
-void Save(char* filename)
+std::ofstream Save(char* filename);
 
 
 
