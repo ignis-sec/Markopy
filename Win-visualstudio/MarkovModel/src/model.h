@@ -12,6 +12,30 @@ namespace Markov {
 	public:
 		/* Traverse the model by calling Markov::Node::RandomNext on the start node 
 		*  and repeating until terminator node. (will return NULL)
+
+				var dataString ="We assume we are getting something from our dataset";
+		var order = 3;
+		var ngrams = {};
+
+
+
+		for (int i = 0;i <= s.length - order;i++) {  // its for 3-gram occurance
+			var gram = dataString.substring(i, i + 3);
+			ngrams.push(gram);
+			if (!ngrams[gram]) {
+				ngrams[gram] = []; // when i see 2gram what comes after to see in array
+				ngrams[gram].push(dataString.charAt(i + 3));
+			}
+			ngrams[gram].push(s.charAt(i + 3));
+		}
+		function markoving() {
+			var currentGram = dataString.substring(0, order);
+			var possibilities = ngrams[curremtGram];
+			var nextThing = radom(possibilities); // to give random elemnts from array
+			var result = currentGram + nextThing;
+
+		}
+
 		*/
 		void RandomWalk();
 
