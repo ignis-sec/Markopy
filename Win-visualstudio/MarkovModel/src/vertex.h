@@ -9,18 +9,21 @@ namespace Markov {
 	class Vertex {
 	public:
 		
-		/* 
-		*  Vertex::left   => _left
-		*  Vertex::right  => _right
-		*  Vertex::weight => 0
-		*/
-		Markov::Vertex(Markov::Node* _left, Markov::Node* _right);
+		Markov::Vertex(Markov::Node* _left, Markov::Node* _right) {
+			this->left = _left;
+			this->right = _right;
+			this->weight = 0;
+		}
 		
 		//adjust weight with the offset value
-		void adjust(uint64_t offset); 
+		void adjust(uint64_t offset) {
+			this->weight += offset;
+		}
 		
 		//return right
-		Markov::Node* traverse();
+		Markov::Node* traverse() {
+			return left;
+		}
 
 	private:
 		Markov::Node* left; //source node
