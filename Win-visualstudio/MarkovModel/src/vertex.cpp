@@ -1,7 +1,5 @@
 #include "vertex.h"
-
-class Markov::Node;
-
+#include "node.h"
 
 Markov::Vertex::Vertex() {
 	this->_left = NULL;
