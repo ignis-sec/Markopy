@@ -53,6 +53,7 @@ namespace Markov {
 		*  Return NULL if not found
 		*/
 		Markov::Vertex* findVertice(Markov::Node* l, Markov::Node* r);
+		
 		unsigned char value();
 
 	private:
