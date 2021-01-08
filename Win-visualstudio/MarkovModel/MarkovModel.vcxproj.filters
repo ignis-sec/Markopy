@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\node.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -25,10 +22,13 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\model.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\node.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\vertex.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -36,6 +36,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vertex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\model.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
