@@ -12,6 +12,7 @@ namespace Markov {
 		*  total_vertice_weights  => 0
 		*  vertices => []
 		*/
+		Markov::Node();
 		Markov::Node(unsigned char _value);
 
 		/* Link another Markov::Node with this one, 

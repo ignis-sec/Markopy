@@ -10,6 +10,11 @@ Markov::Node::Node(unsigned char _value) {
 	this->value = _value;
 };
 
+Markov::Node::Node() {
+	this->value = 0;
+};
+
+
 /* Link another Markov::Node with this one,
 *  push it to vertice vector
 *  and return heap pointer to new vertice
