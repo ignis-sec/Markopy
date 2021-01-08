@@ -61,6 +61,8 @@ namespace Markov {
 		*/
 		std::map<unsigned char, Markov::Node*> nodes;
 
+		Markov::Node* starterNode;
+
 		// A list of all vertices
 		// Might drop this in implementation, no use so far
 		std::vector<Markov::Vertex> vertices;
