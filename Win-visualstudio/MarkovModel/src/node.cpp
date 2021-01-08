@@ -50,7 +50,7 @@ Markov::Vertex* Markov::Node::Link(Markov::Vertex* v) {
 /* Select a random vertice based on vertice weights and walk to its Vertex::right.
 *  Return heap pointer to Vertex::right
 */
-Markov::Node* Markov::Node::RandomNext(Markov::Vertex*) {
+Markov::Node* Markov::Node::RandomNext() {
 	int selection = rand() % this->total_vertice_weights;
 	int selection = (selection<0)? selection : selection + this->total_vertice_weights;
 	for ( std::pair<const unsigned char,Markov::Vertex*> const& x : this->vertices) {

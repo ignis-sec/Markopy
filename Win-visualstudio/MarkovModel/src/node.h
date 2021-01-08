@@ -38,7 +38,7 @@ namespace Markov {
 		/* Select a random vertice based on vertice weights and walk to its Vertex::right.
 		*  Return heap pointer to Vertex::right
 		*/
-		Markov::Node* RandomNext(Markov::Vertex*);
+		Markov::Node* RandomNext();
 
 		/* Update the vertice vector. 
 		*  Update the total_vertice_weights
