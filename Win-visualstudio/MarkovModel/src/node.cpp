@@ -52,7 +52,7 @@ Markov::Vertex* Markov::Node::Link(Markov::Vertex* v) {
 */
 Markov::Node* Markov::Node::RandomNext() {
 	int selection = rand() % this->total_vertice_weights;
-	int selection = (selection<0)? selection : selection + this->total_vertice_weights;
+	selection = (selection<0)? selection : selection + this->total_vertice_weights;
 	for ( std::pair<const unsigned char,Markov::Vertex*> const& x : this->vertices) {
 		selection -= x.second->weight();
 		if (selection < 0) return x.second->traverse();
