@@ -17,10 +17,19 @@ namespace Markov {
 		//return right
 		Markov::Node* traverse();
 
+		//setters
+		void set_left (Markov::Node*);
+		void set_right(Markov::Node*);
+		
+		//getters
+		uint64_t weight();
+		Markov::Node* left();
+		Markov::Node* right();
+
 	private:
-		Markov::Node* left; //source node
-		Markov::Node* right;//target node
-		uint64_t weight;    //vertex weight
+		Markov::Node* _left; //source node
+		Markov::Node* _right;//target node
+		uint64_t _weight;    //vertex weight
 	};
 
 
