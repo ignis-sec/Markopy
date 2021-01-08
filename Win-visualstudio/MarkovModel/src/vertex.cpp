@@ -22,6 +22,8 @@ void Markov::Vertex::adjust(uint64_t offset) {
 
 //return right
 Markov::Node* Markov::Vertex::traverse() {
+	if (this->right()->value() == 0xff) //terminator node
+		return NULL;
 	return _left;
 }
 
