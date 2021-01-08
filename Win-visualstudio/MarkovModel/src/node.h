@@ -53,11 +53,12 @@ namespace Markov {
 		*  Return NULL if not found
 		*/
 		Markov::Vertex* findVertice(Markov::Node* l, Markov::Node* r);
+		unsigned char value();
 
 	private:
 
 		//letter held by the node. 255 for start node, 0 for end.
-		unsigned char value; 
+		unsigned char _value; 
 
 		//Total weights of the vertices, required by RandomNext;
 		uint64_t total_vertice_weights;

@@ -7,12 +7,16 @@
 *  vertices => []
 */
 Markov::Node::Node(unsigned char _value) {
-	this->value = _value;
+	this->_value = _value;
 };
 
 Markov::Node::Node() {
-	this->value = 0;
+	this->_value = 0;
 };
+
+unsigned char Markov::Node::value() {
+	return _value;
+}
 
 
 /* Link another Markov::Node with this one,
@@ -67,7 +71,7 @@ Markov::Node* Markov::Node::RandomNext(Markov::Vertex*) {
 *  If this is a terminator node, return NULL
 */
 bool Markov::Node::UpdateVertices(Markov::Vertex* v) {
-	this->vertices.insert({ v->traverse()->value, v });
+	this->vertices.insert({ v->traverse()->value(), v });
 	this->total_vertice_weights += v->weight();
 	return v->traverse();
 }
