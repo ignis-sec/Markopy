@@ -47,12 +47,12 @@ namespace Markov {
 
 		/* Import model structure from a savefile
 		*/
-		bool Import(std::ifstream);
+		bool Import(std::ifstream*);
 		bool Import(char* filename);
 
 		/* Export model structure to a savefile
 		*/
-		bool Export(std::ofstream);
+		bool Export(std::ofstream*);
 		bool Export(char* filename);
 
 	private:
