@@ -2,6 +2,13 @@
 
 class Markov::Node;
 
+
+Markov::Vertex::Vertex() {
+	this->_left = NULL;
+	this->_right = NULL;
+	this->_weight = 0;
+}
+
 Markov::Vertex::Vertex(Markov::Node* _left, Markov::Node* _right) {
 	this->_left = _left;
 	this->_right = _right;

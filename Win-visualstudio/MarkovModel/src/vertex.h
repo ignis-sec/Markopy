@@ -9,6 +9,7 @@ namespace Markov {
 	class Vertex {
 	public:
 		
+		Markov::Vertex();
 		Markov::Vertex(Markov::Node* _left, Markov::Node* _right);
 		
 		//adjust weight with the offset value
