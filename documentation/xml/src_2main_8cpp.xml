@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="src_2main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="term_8h" local="yes">color/term.h</includes>
+    <includes refid="model_8h" local="yes">../../MarkovModel/src/model.h</includes>
+    <includes local="no">fstream</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>cstdint</label>
+      </node>
+      <node id="4">
+        <label>Windows.h</label>
+      </node>
+      <node id="11">
+        <label>node.h</label>
+        <link refid="node_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>fstream</label>
+      </node>
+      <node id="6">
+        <label>../../MarkovModel/src/model.h</label>
+        <link refid="model_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>edge.h</label>
+        <link refid="edge_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>color/term.h</label>
+        <link refid="term_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_markov_passwords">MarkovPasswords</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="src_2main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/main.cpp" line="48" column="5" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/main.cpp" bodystart="48" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/main.cpp"/>
+  </compounddef>
+</doxygen>

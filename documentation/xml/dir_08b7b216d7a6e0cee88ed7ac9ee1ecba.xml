@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_08b7b216d7a6e0cee88ed7ac9ee1ecba" kind="dir">
+    <compoundname>D:/Repositories/MarkovPasswords/Win-visualstudio</compoundname>
+    <innerdir refid="dir_b539b9a81ccacd1d0b50a44cdeb2577b">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel</innerdir>
+    <innerdir refid="dir_a2752fda96a570421222a253f67063c8">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords</innerdir>
+    <innerdir refid="dir_d8761b00490644d5936b6eb21e4e288c">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswordsGUI</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/"/>
+  </compounddef>
+</doxygen>

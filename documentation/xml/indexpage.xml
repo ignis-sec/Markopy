@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>CNG491-Project</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_D__Repositories_MarkovPasswords_README"/> Documentation - Doxygen/Github pages test </para>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/README.md"/>
+  </compounddef>
+</doxygen>

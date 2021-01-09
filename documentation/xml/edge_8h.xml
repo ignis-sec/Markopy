@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="edge_8h" kind="file" language="C++">
+    <compoundname>edge.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includedby refid="edge_8cpp" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.cpp</includedby>
+    <includedby refid="model_8h" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h</includedby>
+    <includedby refid="node_8h" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="1">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.h</label>
+        <link refid="edge_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h</label>
+        <link refid="node_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h</label>
+        <link refid="model_8h_source"/>
+      </node>
+      <node id="1">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.h</label>
+        <link refid="edge_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_markov_1_1_edge" prot="public">Markov::Edge</innerclass>
+    <innernamespace refid="namespace_markov">Markov</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.h"/>
+  </compounddef>
+</doxygen>

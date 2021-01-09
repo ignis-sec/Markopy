@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="class_markov_1_1_edge" kind="class"><name>Markov::Edge</name>
+    <member refid="class_markov_1_1_edge_1a03070e85ea4c6f8ce20b346df9c7ebb4" kind="variable"><name>_left</name></member>
+    <member refid="class_markov_1_1_edge_1ab1789d1a86c5360e98c28b5587185795" kind="variable"><name>_right</name></member>
+    <member refid="class_markov_1_1_edge_1af38ba9baaae84ef3f3ca02affecfca78" kind="variable"><name>_weight</name></member>
+    <member refid="class_markov_1_1_edge_1aa9426b31ca2808bde76ddb2e3ebe9552" kind="function"><name>Markov::Edge</name></member>
+    <member refid="class_markov_1_1_edge_1a7b1dafb9d6e84239e57391e93f76f7b6" kind="function"><name>Markov::Edge</name></member>
+    <member refid="class_markov_1_1_edge_1a1b7c89aaac5ec09491e13adcf133ae2c" kind="function"><name>adjust</name></member>
+    <member refid="class_markov_1_1_edge_1a92a6697d909efeee8938c4fb85df2c75" kind="function"><name>traverse</name></member>
+    <member refid="class_markov_1_1_edge_1ab02be668170419a296cc5c485962a07d" kind="function"><name>set_left</name></member>
+    <member refid="class_markov_1_1_edge_1ae0db61f4d345ecbcbeb45e4fb2c2692d" kind="function"><name>set_right</name></member>
+    <member refid="class_markov_1_1_edge_1a13e3c20a4e7070c551ef8390cff637ea" kind="function"><name>weight</name></member>
+    <member refid="class_markov_1_1_edge_1aeebc3a01e554adeff057806174c2e4a9" kind="function"><name>left</name></member>
+    <member refid="class_markov_1_1_edge_1a55863f8509177d053506a2a6a88dc192" kind="function"><name>right</name></member>
+  </compound>
+  <compound refid="class_markov_passwords_g_u_i" kind="class"><name>MarkovPasswordsGUI</name>
+    <member refid="class_markov_passwords_g_u_i_1a225f44e95f722bc3aa3774222eeb9f39" kind="variable"><name>ui</name></member>
+    <member refid="class_markov_passwords_g_u_i_1aa923171220140b2ad8e7efc68d95f2dc" kind="function"><name>MarkovPasswordsGUI</name></member>
+  </compound>
+  <compound refid="class_markov_1_1_model" kind="class"><name>Markov::Model</name>
+    <member refid="class_markov_1_1_model_1a98faa7fcc8a536ac7b74fc53023590b1" kind="variable"><name>nodes</name></member>
+    <member refid="class_markov_1_1_model_1a18da2649be6f2705e28722d322c9472b" kind="variable"><name>starterNode</name></member>
+    <member refid="class_markov_1_1_model_1a7968167ab6a073b7e505e8517ba4aeb3" kind="variable"><name>edges</name></member>
+    <member refid="class_markov_1_1_model_1a01d659097ae6f9113ddc5946f7ce571a" kind="function"><name>RandomWalk</name></member>
+    <member refid="class_markov_1_1_model_1a7c334d47dfa1920e643b02f57ecbec9e" kind="function"><name>adjust</name></member>
+    <member refid="class_markov_1_1_model_1ab290bb76bc62e9b89fd79108354fd35a" kind="function"><name>Import</name></member>
+    <member refid="class_markov_1_1_model_1ae0393c52fb2366209e9763e568ab8563" kind="function"><name>Import</name></member>
+    <member refid="class_markov_1_1_model_1ac36f9c775ac42c295756cb25f22e1c1b" kind="function"><name>Export</name></member>
+    <member refid="class_markov_1_1_model_1a5a40f49b12eff42d6818476a9efc8288" kind="function"><name>Export</name></member>
+  </compound>
+  <compound refid="class_markov_1_1_node" kind="class"><name>Markov::Node</name>
+    <member refid="class_markov_1_1_node_1a149a7d0f09dbeb7df1ad91953c356ed6" kind="variable"><name>_value</name></member>
+    <member refid="class_markov_1_1_node_1a948109a2529baba339026d93dd0928fd" kind="variable"><name>total_edge_weights</name></member>
+    <member refid="class_markov_1_1_node_1a36a8e798a20a6320e0e5ae2738ff00d0" kind="variable"><name>edges</name></member>
+    <member refid="class_markov_1_1_node_1aba8bb96b31d0f036d1831de9725585cf" kind="function"><name>Markov::Node</name></member>
+    <member refid="class_markov_1_1_node_1a01d11553e9eb43a545ea3e4dd7a8c88e" kind="function"><name>Markov::Node</name></member>
+    <member refid="class_markov_1_1_node_1a7e5907628cba10dd188b91b12aee79fd" kind="function"><name>Link</name></member>
+    <member refid="class_markov_1_1_node_1a6e994decf4700b2c3f5e9cdea3d17ef8" kind="function"><name>Link</name></member>
+    <member refid="class_markov_1_1_node_1a4dd3cbabbdad85e8cb8319c4e2901874" kind="function"><name>RandomNext</name></member>
+    <member refid="class_markov_1_1_node_1a152af05fd4ecc276cf0f125cdb62faf9" kind="function"><name>UpdateEdges</name></member>
+    <member refid="class_markov_1_1_node_1a4361cd880979dfe2919d1e7a1cf4b84e" kind="function"><name>findEdge</name></member>
+    <member refid="class_markov_1_1_node_1a29a5636aa6724997c02b55c3d6f72336" kind="function"><name>findEdge</name></member>
+    <member refid="class_markov_1_1_node_1aaaacdb18a5683b5ec76206c2383554fd" kind="function"><name>value</name></member>
+  </compound>
+  <compound refid="classterminal" kind="class"><name>terminal</name>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59f" kind="enum"><name>color</name></member>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fab5859d8721cfdc0312b2838b9c985bc1" kind="enumvalue"><name>RESET</name></member>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa08d0012388564e95c3b4a7407cf04965" kind="enumvalue"><name>BLACK</name></member>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59faa2d9547b5d3dd9f05984475f7c926da0" kind="enumvalue"><name>RED</name></member>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa9de0e5dd94e861317e74964bed179fa0" kind="enumvalue"><name>GREEN</name></member>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa8a568e5f41b7e4da88fe5c4a00aad34e" kind="enumvalue"><name>YELLOW</name></member>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa1b3e1ee9bff86431dea6b181365ba65f" kind="enumvalue"><name>BLUE</name></member>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fac634ffea7195608364671ac52ee59a61" kind="enumvalue"><name>MAGENTA</name></member>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa344dd8cd533280795b9db82ef0c92749" kind="enumvalue"><name>CYAN</name></member>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fab5bf627e448384cf3a4c35121ca6008d" kind="enumvalue"><name>WHITE</name></member>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa046c542c1879961609e6d616fdf383f6" kind="enumvalue"><name>LIGHTGRAY</name></member>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa0e1e6fddb3b7f6b796fd388b27dc02ab" kind="enumvalue"><name>DARKGRAY</name></member>
+    <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa493cacf6f6a2ae4798b319b8b9ba9488" kind="enumvalue"><name>BROWN</name></member>
+    <member refid="classterminal_1ae0b68f4ce491a1784930a66f23fe81b2" kind="variable"><name>_stdout</name></member>
+    <member refid="classterminal_1a60d4fb4f80a1532004d3cd4a427d029a" kind="variable"><name>_stderr</name></member>
+    <member refid="classterminal_1a47ed57552a6357d5b60b5a14d7d8d19b" kind="variable"><name>colormap</name></member>
+    <member refid="classterminal_1ac01fc0e2438769940675326f7cc4329d" kind="variable"><name>endl</name></member>
+    <member refid="classterminal_1a71b8dd29a72fe71918ee3c2085e74eb6" kind="function"><name>terminal</name></member>
+  </compound>
+  <compound refid="namespace_markov" kind="namespace"><name>Markov</name>
+  </compound>
+  <compound refid="namespace_markov_passwords" kind="namespace"><name>MarkovPasswords</name>
+    <member refid="namespace_markov_passwords_1ae392d7a23712d10ada4a7ebff9cd0b88" kind="function"><name>initialize</name></member>
+    <member refid="namespace_markov_passwords_1ac714bb1c78e0e3b35b9d622446b57678" kind="function"><name>initialize</name></member>
+    <member refid="namespace_markov_passwords_1a30f494674255dd9d7fd49a6f2b282e36" kind="function"><name>OpenDatasetFile</name></member>
+    <member refid="namespace_markov_passwords_1a5d69fc99c0d6986c45ed5947c7f58c31" kind="function"><name>Train</name></member>
+    <member refid="namespace_markov_passwords_1a2cf2f81e86f45e5ec8840fbb82edc2c4" kind="function"><name>Save</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="dllmain_8cpp" kind="file"><name>dllmain.cpp</name>
+    <member refid="dllmain_8cpp_1a403b241d46cd59c0803fa962b9a02274" kind="function"><name>__declspec</name></member>
+    <member refid="dllmain_8cpp_1a26e64fb39b69bcd9d1274d279f1561b9" kind="function"><name>DllMain</name></member>
+  </compound>
+  <compound refid="edge_8cpp" kind="file"><name>edge.cpp</name>
+  </compound>
+  <compound refid="edge_8h" kind="file"><name>edge.h</name>
+  </compound>
+  <compound refid="framework_8h" kind="file"><name>framework.h</name>
+    <member refid="framework_8h_1ac7bef5d85e3dcd73eef56ad39ffc84a9" kind="define"><name>WIN32_LEAN_AND_MEAN</name></member>
+  </compound>
+  <compound refid="model_8cpp" kind="file"><name>model.cpp</name>
+  </compound>
+  <compound refid="model_8h" kind="file"><name>model.h</name>
+  </compound>
+  <compound refid="node_8cpp" kind="file"><name>node.cpp</name>
+    <member refid="node_8cpp_1acecf83ee74821079e763289ccec0ee73" kind="function"><name>findVertice</name></member>
+  </compound>
+  <compound refid="node_8h" kind="file"><name>node.h</name>
+  </compound>
+  <compound refid="pch_8cpp" kind="file"><name>pch.cpp</name>
+  </compound>
+  <compound refid="pch_8h" kind="file"><name>pch.h</name>
+  </compound>
+  <compound refid="term_8cpp" kind="file"><name>term.cpp</name>
+    <member refid="term_8cpp_1a6c02121ac817db33ab43d96ca11c1187" kind="function"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="term_8h" kind="file"><name>term.h</name>
+    <member refid="term_8h_1af9c20a7b067ad05ca6726489ff9d7559" kind="define"><name>TERM_FAIL</name></member>
+    <member refid="term_8h_1ab4aa9c34956736274020c42f469deaf6" kind="define"><name>TERM_INFO</name></member>
+    <member refid="term_8h_1a5a6f93c930291485c408f5c786cd376b" kind="define"><name>TERM_WARN</name></member>
+    <member refid="term_8h_1a76a5663c1e3272efc11781b931390996" kind="define"><name>TERM_SUCC</name></member>
+    <member refid="term_8h_1a6c02121ac817db33ab43d96ca11c1187" kind="function"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="src_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="src_2main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_u_i_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_u_i_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_markov_passwords_g_u_i_8cpp" kind="file"><name>MarkovPasswordsGUI.cpp</name>
+  </compound>
+  <compound refid="_markov_passwords_g_u_i_8h" kind="file"><name>MarkovPasswordsGUI.h</name>
+  </compound>
+  <compound refid="dir_241c2bc72ad6cfbf2c5a3256a2c71fce" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color</name>
+  </compound>
+  <compound refid="dir_b539b9a81ccacd1d0b50a44cdeb2577b" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel</name>
+  </compound>
+  <compound refid="dir_a2752fda96a570421222a253f67063c8" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords</name>
+  </compound>
+  <compound refid="dir_d8761b00490644d5936b6eb21e4e288c" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswordsGUI</name>
+  </compound>
+  <compound refid="dir_ffa355b1424b124a542ac40a271afa58" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src</name>
+  </compound>
+  <compound refid="dir_7a9d88bf31f17ae786648e15765b88df" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src</name>
+  </compound>
+  <compound refid="dir_08b7b216d7a6e0cee88ed7ac9ee1ecba" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

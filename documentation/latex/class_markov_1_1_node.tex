@@ -1,0 +1,178 @@
+\hypertarget{class_markov_1_1_node}{}\doxysection{Markov\+::Node Class Reference}
+\label{class_markov_1_1_node}\index{Markov::Node@{Markov::Node}}
+
+
+A node class that for the vertices of model. Connected with eachother using \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}.  
+
+
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_markov_1_1_node_aba8bb96b31d0f036d1831de9725585cf}\label{class_markov_1_1_node_aba8bb96b31d0f036d1831de9725585cf}} 
+\mbox{\hyperlink{class_markov_1_1_node_aba8bb96b31d0f036d1831de9725585cf}{Markov\+::\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates an empty \mbox{\hyperlink{class_markov_1_1_node}{Node}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_markov_1_1_node_a01d11553e9eb43a545ea3e4dd7a8c88e}{Markov\+::\+Node}} (unsigned char \+\_\+value)
+\begin{DoxyCompactList}\small\item\em Constructor. Creates a \mbox{\hyperlink{class_markov_1_1_node}{Node}} with no edges and with given value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a7e5907628cba10dd188b91b12aee79fd}{Link}} (\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Link this node with another, with this node as its source. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a6e994decf4700b2c3f5e9cdea3d17ef8}{Link}} (\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Link this node with another, with this node as its source. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a4dd3cbabbdad85e8cb8319c4e2901874}{Random\+Next}} ()
+\begin{DoxyCompactList}\small\item\em Chose a random node from the list of edges, with regards to its weight, and traverse to that. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_node_a152af05fd4ecc276cf0f125cdb62faf9}{Update\+Edges}} (\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Insert a new edge to the this.\+edges. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a4361cd880979dfe2919d1e7a1cf4b84e}{find\+Edge}} (char repr)
+\begin{DoxyCompactList}\small\item\em Find an edge with its character representation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a29a5636aa6724997c02b55c3d6f72336}{find\+Edge}} (\mbox{\hyperlink{class_markov_1_1_node}{Node}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Find an edge with its pointer. Avoid unless neccessary because comptutational cost of find by character is cheaper (because of std\+::map) \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{class_markov_1_1_node_aaaacdb18a5683b5ec76206c2383554fd}{value}} ()
+\begin{DoxyCompactList}\small\item\em Return character representation of this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A node class that for the vertices of model. Connected with eachother using \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}. 
+
+This class will {\itshape later be templated to accept other data types than char}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_markov_1_1_node_a4361cd880979dfe2919d1e7a1cf4b84e}\label{class_markov_1_1_node_a4361cd880979dfe2919d1e7a1cf4b84e}} 
+\index{Markov::Node@{Markov::Node}!findEdge@{findEdge}}
+\index{findEdge@{findEdge}!Markov::Node@{Markov::Node}}
+\doxysubsubsection{\texorpdfstring{findEdge()}{findEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$\ast$ Markov\+::\+Node\+::find\+Edge (\begin{DoxyParamCaption}\item[{char}]{repr }\end{DoxyParamCaption})}
+
+
+
+Find an edge with its character representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em repr} & -\/ character value of the target node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_markov_1_1_edge}{Edge}} that is connected between this node, and the target node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_node_a29a5636aa6724997c02b55c3d6f72336}\label{class_markov_1_1_node_a29a5636aa6724997c02b55c3d6f72336}} 
+\index{Markov::Node@{Markov::Node}!findEdge@{findEdge}}
+\index{findEdge@{findEdge}!Markov::Node@{Markov::Node}}
+\doxysubsubsection{\texorpdfstring{findEdge()}{findEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$\ast$ Markov\+::\+Node\+::find\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_node}{Node}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Find an edge with its pointer. Avoid unless neccessary because comptutational cost of find by character is cheaper (because of std\+::map) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & -\/ target node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_markov_1_1_edge}{Edge}} that is connected between this node, and the target node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_node_a6e994decf4700b2c3f5e9cdea3d17ef8}\label{class_markov_1_1_node_a6e994decf4700b2c3f5e9cdea3d17ef8}} 
+\index{Markov::Node@{Markov::Node}!Link@{Link}}
+\index{Link@{Link}!Markov::Node@{Markov::Node}}
+\doxysubsubsection{\texorpdfstring{Link()}{Link()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$ Markov\+::\+Node\+::\+Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Link this node with another, with this node as its source. 
+
+{\itshape DOES NOT} create a new \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}. 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}} & -\/ \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} that will accept this node as its left. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the same edge as parameter target. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_node_a7e5907628cba10dd188b91b12aee79fd}\label{class_markov_1_1_node_a7e5907628cba10dd188b91b12aee79fd}} 
+\index{Markov::Node@{Markov::Node}!Link@{Link}}
+\index{Link@{Link}!Markov::Node@{Markov::Node}}
+\doxysubsubsection{\texorpdfstring{Link()}{Link()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$ Markov\+::\+Node\+::\+Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+Link this node with another, with this node as its source. 
+
+Creates a new \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}. 
+\begin{DoxyParams}{Parameters}
+{\em target} & -\/ Target node which will be the right() of new edge. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new node with left as this, and right as parameter target. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_node_a01d11553e9eb43a545ea3e4dd7a8c88e}\label{class_markov_1_1_node_a01d11553e9eb43a545ea3e4dd7a8c88e}} 
+\index{Markov::Node@{Markov::Node}!Markov::Node@{Markov::Node}}
+\index{Markov::Node@{Markov::Node}!Markov::Node@{Markov::Node}}
+\doxysubsubsection{\texorpdfstring{Markov::Node()}{Markov::Node()}}
+{\footnotesize\ttfamily Markov\+::\+Node\+::\+Markov\+::\+Node (\begin{DoxyParamCaption}\item[{unsigned char}]{\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Constructor. Creates a \mbox{\hyperlink{class_markov_1_1_node}{Node}} with no edges and with given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ Nodes character representation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_markov_1_1_node_a4dd3cbabbdad85e8cb8319c4e2901874}\label{class_markov_1_1_node_a4dd3cbabbdad85e8cb8319c4e2901874}} 
+\index{Markov::Node@{Markov::Node}!RandomNext@{RandomNext}}
+\index{RandomNext@{RandomNext}!Markov::Node@{Markov::Node}}
+\doxysubsubsection{\texorpdfstring{RandomNext()}{RandomNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$ Markov\+::\+Node\+::\+Random\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Chose a random node from the list of edges, with regards to its weight, and traverse to that. 
+
+This operation is done by generating a random number in range of 0-\/this.\+total\+\_\+edge\+\_\+weights, and then iterating over the list of edges. At each step, weight of the edge is subtracted from the random number, and once it is 0, next node is selected. \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_markov_1_1_node}{Node}} that was chosen at weight biased random. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_node_a152af05fd4ecc276cf0f125cdb62faf9}\label{class_markov_1_1_node_a152af05fd4ecc276cf0f125cdb62faf9}} 
+\index{Markov::Node@{Markov::Node}!UpdateEdges@{UpdateEdges}}
+\index{UpdateEdges@{UpdateEdges}!Markov::Node@{Markov::Node}}
+\doxysubsubsection{\texorpdfstring{UpdateEdges()}{UpdateEdges()}}
+{\footnotesize\ttfamily bool Markov\+::\+Node\+::\+Update\+Edges (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Insert a new edge to the this.\+edges. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge} & -\/ New edge that will be inserted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if insertion was successful, false if it fails. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_node_aaaacdb18a5683b5ec76206c2383554fd}\label{class_markov_1_1_node_aaaacdb18a5683b5ec76206c2383554fd}} 
+\index{Markov::Node@{Markov::Node}!value@{value}}
+\index{value@{value}!Markov::Node@{Markov::Node}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily unsigned char Markov\+::\+Node\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return character representation of this node. 
+
+\begin{DoxyReturn}{Returns}
+character representation at \+\_\+value. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Repositories/\+Markov\+Passwords/\+Win-\/visualstudio/\+Markov\+Model/src/node.\+h\item 
+D\+:/\+Repositories/\+Markov\+Passwords/\+Win-\/visualstudio/\+Markov\+Model/src/node.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,122 @@
+\hypertarget{class_markov_1_1_model}{}\doxysection{Markov\+::Model Class Reference}
+\label{class_markov_1_1_model}\index{Markov::Model@{Markov::Model}}
+
+
+class for the final \mbox{\hyperlink{namespace_markov}{Markov}} \mbox{\hyperlink{class_markov_1_1_model}{Model}}, constructed from nodes and edges.  
+
+
+
+
+{\ttfamily \#include $<$model.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a01d659097ae6f9113ddc5946f7ce571a}{Random\+Walk}} ()
+\begin{DoxyCompactList}\small\item\em Do a random walk on this model. Start from the starter node, invoke Random\+Next on current node until terminator node is reached. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_model_a7c334d47dfa1920e643b02f57ecbec9e}{adjust}} (char $\ast$string, long int occurrence)
+\begin{DoxyCompactList}\small\item\em Adjust the model with a single string. Start from the starter node, and for each character, adjust the edge weight from current node to the next, until NULL character is reached. Then, update the edge weight from current node, to the terminator node. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_model_ab290bb76bc62e9b89fd79108354fd35a}{Import}} (std\+::ifstream $\ast$)
+\begin{DoxyCompactList}\small\item\em Import a file to construct the model. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_model_ae0393c52fb2366209e9763e568ab8563}{Import}} (char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Open a file to import with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_ab290bb76bc62e9b89fd79108354fd35a}{Markov\+::\+Model\+::\+Import}} with std\+::ifstream. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_model_ac36f9c775ac42c295756cb25f22e1c1b}{Export}} (std\+::ofstream $\ast$)
+\begin{DoxyCompactList}\small\item\em Export a file of the model. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_model_a5a40f49b12eff42d6818476a9efc8288}{Export}} (char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Open a file to export with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_ac36f9c775ac42c295756cb25f22e1c1b}{Markov\+::\+Model\+::\+Export}} with std\+::ofstream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class for the final \mbox{\hyperlink{namespace_markov}{Markov}} \mbox{\hyperlink{class_markov_1_1_model}{Model}}, constructed from nodes and edges. 
+
+This class will be {\itshape templated later to work with other data types than char}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_markov_1_1_model_a7c334d47dfa1920e643b02f57ecbec9e}\label{class_markov_1_1_model_a7c334d47dfa1920e643b02f57ecbec9e}} 
+\index{Markov::Model@{Markov::Model}!adjust@{adjust}}
+\index{adjust@{adjust}!Markov::Model@{Markov::Model}}
+\doxysubsubsection{\texorpdfstring{adjust()}{adjust()}}
+{\footnotesize\ttfamily void Markov\+::\+Model\+::adjust (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{long int}]{occurrence }\end{DoxyParamCaption})}
+
+
+
+Adjust the model with a single string. Start from the starter node, and for each character, adjust the edge weight from current node to the next, until NULL character is reached. Then, update the edge weight from current node, to the terminator node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ String that is passed from the training, and will be used to adjust the model with \\
+\hline
+{\em occurrence} & -\/ Occurrence of this string. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_markov_1_1_model_a5a40f49b12eff42d6818476a9efc8288}\label{class_markov_1_1_model_a5a40f49b12eff42d6818476a9efc8288}} 
+\index{Markov::Model@{Markov::Model}!Export@{Export}}
+\index{Export@{Export}!Markov::Model@{Markov::Model}}
+\doxysubsubsection{\texorpdfstring{Export()}{Export()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Markov\+::\+Model\+::\+Export (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Open a file to export with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_ac36f9c775ac42c295756cb25f22e1c1b}{Markov\+::\+Model\+::\+Export}} with std\+::ofstream. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, False for incomplete models or corrupt file formats 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_model_ac36f9c775ac42c295756cb25f22e1c1b}\label{class_markov_1_1_model_ac36f9c775ac42c295756cb25f22e1c1b}} 
+\index{Markov::Model@{Markov::Model}!Export@{Export}}
+\index{Export@{Export}!Markov::Model@{Markov::Model}}
+\doxysubsubsection{\texorpdfstring{Export()}{Export()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Markov\+::\+Model\+::\+Export (\begin{DoxyParamCaption}\item[{std\+::ofstream $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Export a file of the model. 
+
+File contains a list of edges. Format is\+: Left\+\_\+repr;weight;right\+\_\+repr Iterate over this vertices, and their edges, and write them to file. \begin{DoxyReturn}{Returns}
+True if successful, False for incomplete models. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_model_ae0393c52fb2366209e9763e568ab8563}\label{class_markov_1_1_model_ae0393c52fb2366209e9763e568ab8563}} 
+\index{Markov::Model@{Markov::Model}!Import@{Import}}
+\index{Import@{Import}!Markov::Model@{Markov::Model}}
+\doxysubsubsection{\texorpdfstring{Import()}{Import()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Markov\+::\+Model\+::\+Import (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Open a file to import with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_ab290bb76bc62e9b89fd79108354fd35a}{Markov\+::\+Model\+::\+Import}} with std\+::ifstream. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, False for incomplete models or corrupt file formats 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_model_ab290bb76bc62e9b89fd79108354fd35a}\label{class_markov_1_1_model_ab290bb76bc62e9b89fd79108354fd35a}} 
+\index{Markov::Model@{Markov::Model}!Import@{Import}}
+\index{Import@{Import}!Markov::Model@{Markov::Model}}
+\doxysubsubsection{\texorpdfstring{Import()}{Import()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Markov\+::\+Model\+::\+Import (\begin{DoxyParamCaption}\item[{std\+::ifstream $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Import a file to construct the model. 
+
+File contains a list of edges. Format is\+: Left\+\_\+repr;weight;right\+\_\+repr Iterate over this list, and construct nodes and edges accordingly. \begin{DoxyReturn}{Returns}
+True if successful, False for incomplete models or corrupt file formats 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_model_a01d659097ae6f9113ddc5946f7ce571a}\label{class_markov_1_1_model_a01d659097ae6f9113ddc5946f7ce571a}} 
+\index{Markov::Model@{Markov::Model}!RandomWalk@{RandomWalk}}
+\index{RandomWalk@{RandomWalk}!Markov::Model@{Markov::Model}}
+\doxysubsubsection{\texorpdfstring{RandomWalk()}{RandomWalk()}}
+{\footnotesize\ttfamily char $\ast$ Markov\+::\+Model\+::\+Random\+Walk (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Do a random walk on this model. Start from the starter node, invoke Random\+Next on current node until terminator node is reached. 
+
+\begin{DoxyReturn}{Returns}
+Null terminated string that was generated. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Repositories/\+Markov\+Passwords/\+Win-\/visualstudio/\+Markov\+Model/src/model.\+h\item 
+D\+:/\+Repositories/\+Markov\+Passwords/\+Win-\/visualstudio/\+Markov\+Model/src/model.\+cpp\end{DoxyCompactItemize}

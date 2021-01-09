@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classterminal" kind="class" language="C++" prot="public">
+    <compoundname>terminal</compoundname>
+    <includes refid="term_8h" local="no">term.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59f" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>color</name>
+        <enumvalue id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fab5859d8721cfdc0312b2838b9c985bc1" prot="public">
+          <name>RESET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa08d0012388564e95c3b4a7407cf04965" prot="public">
+          <name>BLACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59faa2d9547b5d3dd9f05984475f7c926da0" prot="public">
+          <name>RED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa9de0e5dd94e861317e74964bed179fa0" prot="public">
+          <name>GREEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa8a568e5f41b7e4da88fe5c4a00aad34e" prot="public">
+          <name>YELLOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa1b3e1ee9bff86431dea6b181365ba65f" prot="public">
+          <name>BLUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fac634ffea7195608364671ac52ee59a61" prot="public">
+          <name>MAGENTA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa344dd8cd533280795b9db82ef0c92749" prot="public">
+          <name>CYAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fab5bf627e448384cf3a4c35121ca6008d" prot="public">
+          <name>WHITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa046c542c1879961609e6d616fdf383f6" prot="public">
+          <name>LIGHTGRAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa0e1e6fddb3b7f6b796fd388b27dc02ab" prot="public">
+          <name>DARKGRAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classterminal_1a9b6dd987e27cfd6f1ed180540659e59fa493cacf6f6a2ae4798b319b8b9ba9488" prot="public">
+          <name>BROWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" line="23" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classterminal_1ae0b68f4ce491a1784930a66f23fe81b2" prot="public" static="yes" mutable="no">
+        <type>HANDLE</type>
+        <definition>HANDLE terminal::_stdout</definition>
+        <argsstring></argsstring>
+        <name>_stdout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" line="21" column="15" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classterminal_1a60d4fb4f80a1532004d3cd4a427d029a" prot="public" static="yes" mutable="no">
+        <type>HANDLE</type>
+        <definition>HANDLE terminal::_stderr</definition>
+        <argsstring></argsstring>
+        <name>_stderr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" line="22" column="15" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classterminal_1a47ed57552a6357d5b60b5a14d7d8d19b" prot="public" static="yes" mutable="no">
+        <type>std::map&lt; terminal::color, DWORD &gt;</type>
+        <definition>std::map&lt; terminal::color, DWORD &gt; terminal::colormap</definition>
+        <argsstring></argsstring>
+        <name>colormap</name>
+        <initializer>= {
+	{terminal::color::BLACK, 0},
+	{terminal::color::BLUE, 1},
+	{terminal::color::GREEN, 2},
+	{terminal::color::CYAN, 3},
+	{terminal::color::RED, 4},
+	{terminal::color::MAGENTA, 5},
+	{terminal::color::BROWN, 6},
+	{terminal::color::LIGHTGRAY, 7},
+	{terminal::color::DARKGRAY, 8},
+	{terminal::color::YELLOW, 14},
+	{terminal::color::WHITE, 15},
+	{terminal::color::RESET, 15},
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" line="24" column="17" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classterminal_1ac01fc0e2438769940675326f7cc4329d" prot="public" static="yes" mutable="no">
+        <type>std::ostream</type>
+        <definition>std::ostream terminal::endl</definition>
+        <argsstring></argsstring>
+        <name>endl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" line="25" column="21" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classterminal_1a71b8dd29a72fe71918ee3c2085e74eb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>terminal::terminal</definition>
+        <argsstring>()</argsstring>
+        <name>terminal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor. Get references to stdout and stderr handles. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" line="20" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.cpp" bodystart="23" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>pretty colors for terminal. Windows Only. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" line="14" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h" bodystart="14" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classterminal_1a60d4fb4f80a1532004d3cd4a427d029a" prot="public" virt="non-virtual"><scope>terminal</scope><name>_stderr</name></member>
+      <member refid="classterminal_1ae0b68f4ce491a1784930a66f23fe81b2" prot="public" virt="non-virtual"><scope>terminal</scope><name>_stdout</name></member>
+      <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59f" prot="public" virt="non-virtual"><scope>terminal</scope><name>color</name></member>
+      <member refid="classterminal_1a47ed57552a6357d5b60b5a14d7d8d19b" prot="public" virt="non-virtual"><scope>terminal</scope><name>colormap</name></member>
+      <member refid="classterminal_1ac01fc0e2438769940675326f7cc4329d" prot="public" virt="non-virtual"><scope>terminal</scope><name>endl</name></member>
+      <member refid="classterminal_1a71b8dd29a72fe71918ee3c2085e74eb6" prot="public" virt="non-virtual"><scope>terminal</scope><name>terminal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

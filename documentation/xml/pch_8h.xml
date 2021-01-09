@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="pch_8h" kind="file" language="C++">
+    <compoundname>pch.h</compoundname>
+    <includes refid="framework_8h" local="yes">framework.h</includes>
+    <includedby refid="dllmain_8cpp" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/dllmain.cpp</includedby>
+    <includedby refid="pch_8cpp" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/pch.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>windows.h</label>
+      </node>
+      <node id="2">
+        <label>framework.h</label>
+        <link refid="framework_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/pch.h</label>
+        <link refid="pch_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/pch.h"/>
+  </compounddef>
+</doxygen>

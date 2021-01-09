@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_a2752fda96a570421222a253f67063c8" kind="dir">
+    <compoundname>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords</compoundname>
+    <innerdir refid="dir_7a9d88bf31f17ae786648e15765b88df">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/"/>
+  </compounddef>
+</doxygen>

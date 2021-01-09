@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>terminal class | MarkovPasswords Utilizing Markov Models for brute forcing attacks</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <span id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">
+        <a href="https://github.com/FlameOfIgnis/CNG491-Project">MarkovPasswords</a> <span class="m-breadcrumb">|</span> <a href="index.html" class="m-thin">Utilizing Markov Models for brute forcing attacks</a>
+      </span>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          terminal <span class="m-thin">class</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="term_8h.html">&lt;D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color/term.h&gt;</a></div>
+        </h1>
+        <p>pretty colors for terminal. Windows Only.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-types">Public types</a></li>
+                <li><a href="#pub-static-attribs">Public static variables</a></li>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <section id="pub-types">
+          <h2><a href="#pub-types">Public types</a></h2>
+          <dl class="m-doc">
+            <dt id="a9b6dd987e27cfd6f1ed180540659e59f">
+              <span class="m-doc-wrap-bumper">enum class <a href="#a9b6dd987e27cfd6f1ed180540659e59f" class="m-doc-self">color</a> { </span><span class="m-doc-wrap"><a href="#a9b6dd987e27cfd6f1ed180540659e59fab5859d8721cfdc0312b2838b9c985bc1" class="m-doc">RESET</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa08d0012388564e95c3b4a7407cf04965" class="m-doc">BLACK</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59faa2d9547b5d3dd9f05984475f7c926da0" class="m-doc">RED</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa9de0e5dd94e861317e74964bed179fa0" class="m-doc">GREEN</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa8a568e5f41b7e4da88fe5c4a00aad34e" class="m-doc">YELLOW</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa1b3e1ee9bff86431dea6b181365ba65f" class="m-doc">BLUE</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fac634ffea7195608364671ac52ee59a61" class="m-doc">MAGENTA</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa344dd8cd533280795b9db82ef0c92749" class="m-doc">CYAN</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fab5bf627e448384cf3a4c35121ca6008d" class="m-doc">WHITE</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa046c542c1879961609e6d616fdf383f6" class="m-doc">LIGHTGRAY</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa0e1e6fddb3b7f6b796fd388b27dc02ab" class="m-doc">DARKGRAY</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa493cacf6f6a2ae4798b319b8b9ba9488" class="m-doc">BROWN</a> }</span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-static-attribs">
+          <h2><a href="#pub-static-attribs">Public static variables</a></h2>
+          <dl class="m-doc">
+            <dt id="ae0b68f4ce491a1784930a66f23fe81b2">
+              static HANDLE <a href="#ae0b68f4ce491a1784930a66f23fe81b2" class="m-doc-self">_stdout</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a60d4fb4f80a1532004d3cd4a427d029a">
+              static HANDLE <a href="#a60d4fb4f80a1532004d3cd4a427d029a" class="m-doc-self">_stderr</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a47ed57552a6357d5b60b5a14d7d8d19b">
+              static std::map&lt;terminal::color, DWORD&gt; <a href="#a47ed57552a6357d5b60b5a14d7d8d19b" class="m-doc-self">colormap</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ac01fc0e2438769940675326f7cc4329d">
+              static std::ostream <a href="#ac01fc0e2438769940675326f7cc4329d" class="m-doc-self">endl</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a71b8dd29a72fe71918ee3c2085e74eb6" class="m-doc">terminal</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a71b8dd29a72fe71918ee3c2085e74eb6"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> terminal::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a71b8dd29a72fe71918ee3c2085e74eb6" class="m-doc-self">terminal</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+<p>Default constructor. Get references to stdout and stderr handles.</p>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        CNG 491 - 2020  <br>
+Ata Hakçıl <br>
+Ömer Yıldıztugay <br>
+Celal Sahir Çetiner <br>
+Yunus Emre Yılmaz
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>
