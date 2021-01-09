@@ -63,9 +63,9 @@ namespace Markov {
 
 		Markov::Node* starterNode;
 
-		// A list of all vertices
+		// A list of all edges
 		// Might drop this in implementation, no use so far
-		std::vector<Markov::Vertex> vertices;
+		std::vector<Markov::Edge> edges;
 	};
 
 };
