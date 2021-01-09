@@ -23,32 +23,32 @@ unsigned char Markov::Node::value() {
 *  push it to vertice vector
 *  and return heap pointer to new vertice
 *
-*  Vertex::left   => this
-*  Vertex::right  => target
-*  Vertex::weight => 0
+*  Edge::left   => this
+*  Edge::right  => target
+*  Edge::weight => 0
 */
-Markov::Vertex* Markov::Node::Link(Markov::Node* n) {
-	Markov::Vertex *v = new Markov::Vertex(this, n);
+Markov::Edge* Markov::Node::Link(Markov::Node* n) {
+	Markov::Edge *v = new Markov::Edge(this, n);
 	this->UpdateVertices(v);
 	return v;
 }
 
-/* Link another Markov::Node from an existing vertex' right.
+/* Link another Markov::Node from an existing Edge' right.
 *
-*  return heap pointer of the vertex
+*  return heap pointer of the Edge
 *
-*  Vertex::left   => this
-*  Vertex::right  => unchanged
-*  Vertex::weight => unchanged
+*  Edge::left   => this
+*  Edge::right  => unchanged
+*  Edge::weight => unchanged
 */
-Markov::Vertex* Markov::Node::Link(Markov::Vertex* v) {
+Markov::Edge* Markov::Node::Link(Markov::Edge* v) {
 	v->set_left(this);
 	this->UpdateVertices(v);
 	return v;
 }
 
-/* Select a random vertice based on vertice weights and walk to its Vertex::right.
-*  Return heap pointer to Vertex::right
+/* Select a random vertice based on vertice weights and walk to its Edge::right.
+*  Return heap pointer to Edge::right
 */
 Markov::Node* Markov::Node::RandomNext() {
 
@@ -58,11 +58,11 @@ Markov::Node* Markov::Node::RandomNext() {
 	//make absolute, no negative modulus values wanted
 	selection = (selection<0)? selection : selection + this->total_vertice_weights;
 
-	//iterate over the vertex map
-	//Subtract the vertex weight from the selection at each vertex
+	//iterate over the Edge map
+	//Subtract the Edge weight from the selection at each Edge
 	//when selection goes below 0, pick that node 
 	//(Fast random selection with weight bias)
-	for ( std::pair<const unsigned char,Markov::Vertex*> const& x : this->vertices) {
+	for ( std::pair<const unsigned char,Markov::Edge*> const& x : this->vertices) {
 		selection -= x.second->weight();
 		if (selection < 0) return x.second->traverse();
 	}
@@ -80,7 +80,7 @@ Markov::Node* Markov::Node::RandomNext() {
 *
 *  If this is a terminator node, return NULL
 */
-bool Markov::Node::UpdateVertices(Markov::Vertex* v) {
+bool Markov::Node::UpdateVertices(Markov::Edge* v) {
 	this->vertices.insert({ v->traverse()->value(), v });
 	this->total_vertice_weights += v->weight();
 	return v->traverse();
@@ -89,5 +89,5 @@ bool Markov::Node::UpdateVertices(Markov::Vertex* v) {
 /* Check if vertice is in the vector.
 *  Return NULL if not found
 */
-Markov::Vertex* findVertice(Markov::Node* l, Markov::Node* r) {/*TODO*/};
+Markov::Edge* findVertice(Markov::Node* l, Markov::Node* r) {/*TODO*/};
 

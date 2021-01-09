@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include <map>
-#include "vertex.h"
+#include "edge.h"
 
 namespace Markov {
 	class Node {
@@ -19,24 +19,24 @@ namespace Markov {
 		*  push it to vertice vector 
 		*  and return heap pointer to new vertice
 		*
-		*  Vertex::left   => this
-		*  Vertex::right  => target
-		*  Vertex::weight => 0
+		*  Edge::left   => this
+		*  Edge::right  => target
+		*  Edge::weight => 0
 		*/
-		Markov::Vertex* Link(Markov::Node*);
+		Markov::Edge* Link(Markov::Node*);
 		
-		/* Link another Markov::Node from an existing vertex' right.
+		/* Link another Markov::Node from an existing Edge' right.
 		*  
-		*  return heap pointer of the vertex
+		*  return heap pointer of the Edge
 		* 
-		*  Vertex::left   => this
-		*  Vertex::right  => unchanged
-		*  Vertex::weight => unchanged
+		*  Edge::left   => this
+		*  Edge::right  => unchanged
+		*  Edge::weight => unchanged
 		*/
-		Markov::Vertex* Link(Markov::Vertex*);
+		Markov::Edge* Link(Markov::Edge*);
 
-		/* Select a random vertice based on vertice weights and walk to its Vertex::right.
-		*  Return heap pointer to Vertex::right
+		/* Select a random vertice based on vertice weights and walk to its Edge::right.
+		*  Return heap pointer to Edge::right
 		*/
 		Markov::Node* RandomNext();
 
@@ -47,12 +47,12 @@ namespace Markov {
 		*  
 		*  If this is a terminator node, return NULL
 		*/
-		bool UpdateVertices(Markov::Vertex*);
+		bool UpdateVertices(Markov::Edge*);
 		
 		/* Check if vertice is in the vector.
 		*  Return NULL if not found
 		*/
-		Markov::Vertex* findVertice(Markov::Node* l, Markov::Node* r);
+		Markov::Edge* findVertice(Markov::Node* l, Markov::Node* r);
 		
 		unsigned char value();
 
@@ -64,7 +64,7 @@ namespace Markov {
 		//Total weights of the vertices, required by RandomNext;
 		uint64_t total_vertice_weights;
 
-		/* Map left is the vertex::right so target can be found with low cost when training.
+		/* Map left is the Edge::right so target can be found with low cost when training.
 		*  Makes searching by value cheaper.
 		*/
 		std::map<unsigned char, Markov::Vertex*> vertices;

@@ -3,7 +3,7 @@
 #include <vector>
 #include <fstream>
 
-#include "vertex.h"
+#include "edge.h"
 #include "node.h"
 
 namespace Markov {
