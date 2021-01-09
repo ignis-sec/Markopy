@@ -2,11 +2,102 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="indexpage" kind="page">
     <compoundname>index</compoundname>
-    <title>CNG491-Project</title>
+    <title>Markov Passwords</title>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><anchor id="index_1md_D__Repositories_MarkovPasswords_README"/> Documentation - Doxygen/Github pages test </para>
+<para><anchor id="index_1md_D__Repositories_MarkovPasswords_README"/> </para>
+<sect1 id="index_1autotoc_md1">
+<title>Projects</title>
+<para><itemizedlist>
+<listitem><para><ref refid="namespace_markov" kindref="compound">Markov</ref> (MarkovModel)<itemizedlist>
+<listitem><para>Compiled to a .lib and .dll file, and not an executable.</para>
+</listitem><listitem><para>Contains the Model, Node and Edge classes.</para>
+</listitem><listitem><para>Its the backbone of the project and will be the main dependency of <ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref> to work.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref><itemizedlist>
+<listitem><para>Includes MarkovModel.</para>
+</listitem><listitem><para>Will be used to specialize MarkovModel exclusively for password generation.</para>
+</listitem><listitem><para>Will have functions that help with file operations such as input and output, import export.</para>
+</listitem><listitem><para>As an example, this will read the dataset file, and pass each line to <ref refid="class_markov_1_1_model_1a7c334d47dfa1920e643b02f57ecbec9e" kindref="member">Markov::Model::adjust</ref> when training.</para>
+</listitem><listitem><para>Basically command line interface for using MarkovModel.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><ref refid="class_markov_passwords_g_u_i" kindref="compound">MarkovPasswordsGUI</ref><itemizedlist>
+<listitem><para>Has the user interface, will be used for performance analysis, debugging, and reporting.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md2">
+<title>What is a markov model</title>
+<para>Below, is the example <ref refid="namespace_markov" kindref="compound">Markov</ref> Model which can generate strings with the alphabet &quot;a,b,c&quot;</para>
+<para><image type="html" name="images/empty_model.png" inline="yes"></image>
+</para>
+<sect3 id="index_1autotoc_md3">
+<title>Iteration 1</title>
+<para>Below is a demonstration of how training will be done. For this example, we are going to adjust the model with string &quot;ab&quot;, and our occurrence will be &quot;3&quot; From <ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref>, inside the train function, Model::adjust is called with &quot;ab&quot; and &quot;3&quot; parameters.</para>
+<para>Now, Model::adjust will iteratively adjust the edge weights accordingly. It starts by adjusting weight between start and &quot;a&quot; node. This is done by calling Edge::adjust of the edge between the nodes.</para>
+<para><image type="html" name="images/model_1.png" inline="yes"></image>
+</para>
+<para>After adjustment, ajust function iterates to the next character, &quot;b&quot;, and does the same thing.</para>
+<para><image type="html" name="images/model_2.png" inline="yes"></image>
+</para>
+<para>As this string is finished, it will adjust the final weight, b-&gt;&quot;end&quot;</para>
+<para><image type="html" name="images/model_3.png" inline="yes"></image>
+</para>
+</sect3>
+<sect3 id="index_1autotoc_md4">
+<title>Iteration 2</title>
+<para>This time, same procedure will be applied for &quot;bacb&quot; string, with occurrence value of 12.</para>
+<para><image type="html" name="images/model_21.png" inline="yes"></image>
+</para>
+<para><image type="html" name="images/model_22.png" inline="yes"></image>
+</para>
+<para><image type="html" name="images/model_23.png" inline="yes"></image>
+</para>
+<para><image type="html" name="images/model_24.png" inline="yes"></image>
+</para>
+<para><image type="html" name="images/model_25.png" inline="yes"></image>
+</para>
+</sect3>
+<sect3 id="index_1autotoc_md5">
+<title>Iteration 38271</title>
+<para>As the model is trained, hidden linguistical patterns start to appear, and our model looks like this <image type="html" name="images/model_30.png" inline="yes"></image>
+</para>
+<para>With our dataset, without doing any kind of linugistic analysis ourselves, our <ref refid="namespace_markov" kindref="compound">Markov</ref> Model has highlighted that strings are more likely to start with a, b tends to follow a, and a is likely to be repeated in the string. <image type="html" name="images/model_31.png" inline="yes"></image>
+</para>
+</sect3>
+<sect2 id="index_1autotoc_md6">
+<title>Import/Export</title>
+<para>Import and export is done by storing/restoring list of all edges to/from a file. All the edges are traversed and written to the file in the format of &quot;left,weight,right&quot;</para>
+</sect2>
+<sect2 id="index_1autotoc_md7">
+<title>Training</title>
+<para><ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref> should read input from our dataset file, parse it line by line, and feed it to <ref refid="class_markov_1_1_model_1a7c334d47dfa1920e643b02f57ecbec9e" kindref="member">Markov::Model::adjust</ref></para>
+<para>Once a training is complete, <ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref> is supposed to export the model to a savefile so that model is not required to train for each run.</para>
+</sect2>
+<sect2 id="index_1autotoc_md8">
+<title>Generation</title>
+<para>Generation is done by invoking <ref refid="class_markov_1_1_model_1a01d659097ae6f9113ddc5946f7ce571a" kindref="member">Markov::Model::RandomWalk</ref> as many times as neccessary, and writing the result to a file line by line.</para>
+</sect2>
+<sect2 id="index_1autotoc_md9">
+<title>Testing/Cracking</title>
+<para>Cracking is done <bold>EXTERNALLY</bold>. Our tool is not going to be responsible for cracking hashes. We are simply going to generate lists of strings, and are going to use 3rd party tools to crack them. Good examples for hash-cracking tools are Hashcat and John the ripper. They work with user supplied lists of strings.</para>
+</sect2>
+<sect2 id="index_1autotoc_md10">
+<title>Reporting &amp; UI</title>
+<para>We are also supposed to collect data from generation/training steps, and process them into useful graphs/charts/tables to help us determine how to improve the program. Some of the useful data to collect are:<itemizedlist>
+<listitem><para>Number of duplicates generated</para>
+</listitem><listitem><para>Time taken during training, respective to number of lines in dataset</para>
+</listitem><listitem><para>Time taken during generation, respective ot output size</para>
+</listitem><listitem><para>Comparison graphs of number of cracked passwords using traditional wordlists, our generated wordlist, and complete incremental approach (where each password is checked one by one like AAAA, AAAB, AAAC, AAAD...) </para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
     </detaileddescription>
     <location file="D:/Repositories/MarkovPasswords/README.md"/>
   </compounddef>
