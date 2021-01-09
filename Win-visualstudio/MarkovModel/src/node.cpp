@@ -4,7 +4,7 @@
 /*
 *  value   => _value
 *  total_edge_weights  => 0
-*  vertices => []
+*  edges => []
 */
 Markov::Node::Node(unsigned char _value) {
 	this->_value = _value;
@@ -29,7 +29,7 @@ unsigned char Markov::Node::value() {
 */
 Markov::Edge* Markov::Node::Link(Markov::Node* n) {
 	Markov::Edge *v = new Markov::Edge(this, n);
-	this->UpdateVertices(v);
+	this->UpdateEdges(v);
 	return v;
 }
 
@@ -43,7 +43,7 @@ Markov::Edge* Markov::Node::Link(Markov::Node* n) {
 */
 Markov::Edge* Markov::Node::Link(Markov::Edge* v) {
 	v->set_left(this);
-	this->UpdateVertices(v);
+	this->UpdateEdges(v);
 	return v;
 }
 
@@ -80,7 +80,7 @@ Markov::Node* Markov::Node::RandomNext() {
 *
 *  If this is a terminator node, return NULL
 */
-bool Markov::Node::UpdateVertices(Markov::Edge* v) {
+bool Markov::Node::UpdateEdges(Markov::Edge* v) {
 	this->edges.insert({ v->traverse()->value(), v });
 	this->total_edge_weights += v->weight();
 	return v->traverse();
