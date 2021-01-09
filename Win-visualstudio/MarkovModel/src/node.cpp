@@ -3,7 +3,7 @@
 
 /*
 *  value   => _value
-*  total_vertice_weights  => 0
+*  total_edge_weights  => 0
 *  vertices => []
 */
 Markov::Node::Node(unsigned char _value) {
@@ -53,16 +53,16 @@ Markov::Edge* Markov::Node::Link(Markov::Edge* v) {
 Markov::Node* Markov::Node::RandomNext() {
 
 	//get a random value in range of total_vertice_weight
-	int selection = rand() % this->total_vertice_weights;
+	int selection = rand() % this->total_edge_weights;
 	
 	//make absolute, no negative modulus values wanted
-	selection = (selection<0)? selection : selection + this->total_vertice_weights;
+	selection = (selection<0)? selection : selection + this->total_edge_weights;
 
 	//iterate over the Edge map
 	//Subtract the Edge weight from the selection at each Edge
 	//when selection goes below 0, pick that node 
 	//(Fast random selection with weight bias)
-	for ( std::pair<const unsigned char,Markov::Edge*> const& x : this->vertices) {
+	for ( std::pair<const unsigned char,Markov::Edge*> const& x : this->edges) {
 		selection -= x.second->weight();
 		if (selection < 0) return x.second->traverse();
 	}
@@ -74,15 +74,15 @@ Markov::Node* Markov::Node::RandomNext() {
 
 
 /* Update the vertice vector.
-*  Update the total_vertice_weights
+*  Update the total_edge_weights
 *  Skip if vertice is already in the vector
 *  Return False if duplicate found, true if successful.
 *
 *  If this is a terminator node, return NULL
 */
 bool Markov::Node::UpdateVertices(Markov::Edge* v) {
-	this->vertices.insert({ v->traverse()->value(), v });
-	this->total_vertice_weights += v->weight();
+	this->edges.insert({ v->traverse()->value(), v });
+	this->total_edge_weights += v->weight();
 	return v->traverse();
 }
 

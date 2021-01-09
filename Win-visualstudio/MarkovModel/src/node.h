@@ -47,12 +47,12 @@ namespace Markov {
 		*  
 		*  If this is a terminator node, return NULL
 		*/
-		bool UpdateVertices(Markov::Edge*);
+		bool UpdateEdges(Markov::Edge*);
 		
 		/* Check if vertice is in the vector.
 		*  Return NULL if not found
 		*/
-		Markov::Edge* findVertice(Markov::Node* l, Markov::Node* r);
+		Markov::Edge* findEdge(Markov::Node* l, Markov::Node* r);
 		
 		unsigned char value();
 
@@ -62,11 +62,11 @@ namespace Markov {
 		unsigned char _value; 
 
 		//Total weights of the vertices, required by RandomNext;
-		uint64_t total_vertice_weights;
+		uint64_t total_edge_weights;
 
 		/* Map left is the Edge::right so target can be found with low cost when training.
 		*  Makes searching by value cheaper.
 		*/
-		std::map<unsigned char, Markov::Vertex*> vertices;
+		std::map<unsigned char, Markov::Edge*> edges;
 	};
 };
