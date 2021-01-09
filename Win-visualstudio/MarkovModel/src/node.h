@@ -4,68 +4,79 @@
 #include "edge.h"
 
 namespace Markov {
+
+	/** @brief A node class that for the vertices of model. Connected with eachother using Markov::Edge
+	* 
+	* This class will *later be templated to accept other data types than char*.
+	*/
 	class Node {
 	public:
 
-		/*
-		*  value   => _value
-		*  total_vertice_weights  => 0
-		*  vertices => []
+		/** @brief Default constructor. Creates an empty Node.
 		*/
 		Markov::Node();
+		/** @brief Constructor. Creates a Node with no edges and with given value.
+		* @param value - Nodes character representation.
+		*/
 		Markov::Node(unsigned char _value);
 
-		/* Link another Markov::Node with this one, 
-		*  push it to vertice vector 
-		*  and return heap pointer to new vertice
-		*
-		*  Edge::left   => this
-		*  Edge::right  => target
-		*  Edge::weight => 0
+		/** @brief Link this node with another, with this node as its source.
+		* 
+		* Creates a new Edge.
+		* @param target - Target node which will be the right() of new edge.
+		* @return A new node with left as this, and right as parameter target.
 		*/
 		Markov::Edge* Link(Markov::Node*);
 		
-		/* Link another Markov::Node from an existing Edge' right.
-		*  
-		*  return heap pointer of the Edge
+		/** @brief Link this node with another, with this node as its source.
 		* 
-		*  Edge::left   => this
-		*  Edge::right  => unchanged
-		*  Edge::weight => unchanged
+		* *DOES NOT* create a new Edge.
+		* @param Edge - Edge that will accept this node as its left.
+		* @return the same edge as parameter target.
 		*/
 		Markov::Edge* Link(Markov::Edge*);
 
-		/* Select a random vertice based on vertice weights and walk to its Edge::right.
-		*  Return heap pointer to Edge::right
+		/** @brief Chose a random node from the list of edges, with regards to its weight, and traverse to that.
+		* 
+		* This operation is done by generating a random number in range of 0-this.total_edge_weights, and then iterating over the list of edges.
+		* At each step, weight of the edge is subtracted from the random number, and once it is 0, next node is selected.
+		* @return Node that was chosen at weight biased random.
 		*/
 		Markov::Node* RandomNext();
 
-		/* Update the vertice vector. 
-		*  Update the total_vertice_weights
-		*  Skip if vertice is already in the vector
-		*  Return False if duplicate found, true if successful.
-		*  
-		*  If this is a terminator node, return NULL
+		/** @brief Insert a new edge to the this.edges.
+		* @param edge - New edge that will be inserted.
+		* @return true if insertion was successful, false if it fails.
 		*/
 		bool UpdateEdges(Markov::Edge*);
 		
-		/* Check if vertice is in the vector.
-		*  Return NULL if not found
+		/** @brief Find an edge with its character representation.
+		* @param repr - character value of the target node.
+		* @return Edge that is connected between this node, and the target node.
 		*/
-		Markov::Edge* findEdge(Markov::Node* l, Markov::Node* r);
+		Markov::Edge* findEdge(char repr);
+
+		/** @brief Find an edge with its pointer. Avoid unless neccessary because comptutational cost of find by character is cheaper (because of std::map)
+		* @param target - target node.
+		* @return Edge that is connected between this node, and the target node.
+		*/
+		Markov::Edge* findEdge(Node* target);
 		
+		/** @brief Return character representation of this node.
+		* @return character representation at _value.
+		*/
 		unsigned char value();
 
 	private:
 
-		//letter held by the node. 255 for start node, 0 for end.
-		unsigned char _value; 
+		
+		unsigned char _value; /** @brief Character representation of this node. 0 for starter, 0xff for terminator.*/
 
-		//Total weights of the vertices, required by RandomNext;
-		uint64_t total_edge_weights;
+		uint64_t total_edge_weights;/** @brief Total weights of the vertices, required by RandomNext;*/
 
-		/* Map left is the Edge::right so target can be found with low cost when training.
-		*  Makes searching by value cheaper.
+		/** @brief A map of all edges connected to this node, where this node is at the left.
+		* 
+		* Map is indexed by unsigned char, which is the character representation of the node.
 		*/
 		std::map<unsigned char, Markov::Edge*> edges;
 	};

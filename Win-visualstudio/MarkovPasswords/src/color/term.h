@@ -9,9 +9,14 @@
 #define TERM_WARN "[" << terminal::color::YELLOW << "+" << terminal::color::RESET << "] "
 #define TERM_SUCC "[" << terminal::color::GREEN << "+" << terminal::color::RESET << "] "
 
+/** @brief pretty colors for terminal. Windows Only.
+*/
 class terminal {
 public:
 
+	/** Default constructor.
+	* Get references to stdout and stderr handles.
+	*/
 	terminal();
 	static HANDLE _stdout;
 	static HANDLE _stderr;
@@ -22,4 +27,6 @@ public:
 
 };
 
+/** overload for std::cout. 
+*/
 std::ostream& operator<<(std::ostream& os, const terminal::color& c);

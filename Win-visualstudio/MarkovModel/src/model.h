@@ -1,3 +1,7 @@
+/** @dir Model.h
+ *
+ */
+
 #pragma once
 #include <map>
 #include <vector>
@@ -6,65 +10,70 @@
 #include "edge.h"
 #include "node.h"
 
+/**
+	@brief Namespace for model related classes.
+*/
 namespace Markov {
-	
+	/** @brief class for the final Markov Model, constructed from nodes and edges. 
+	* 
+	* This class will be *templated later to work with other data types than char*.
+	*/
 	class Model {
 	public:
-		/* Traverse the model by calling Markov::Node::RandomNext on the start node 
-		*  and repeating until terminator node. (will return NULL)
-
-				var dataString ="We assume we are getting something from our dataset";
-		var order = 3;
-		var ngrams = {};
-
-
-
-		for (int i = 0;i <= s.length - order;i++) {  // its for 3-gram occurance
-			var gram = dataString.substring(i, i + 3);
-			ngrams.push(gram);
-			if (!ngrams[gram]) {
-				ngrams[gram] = []; // when i see 2gram what comes after to see in array
-				ngrams[gram].push(dataString.charAt(i + 3));
-			}
-			ngrams[gram].push(s.charAt(i + 3));
-		}
-		function markoving() {
-			var currentGram = dataString.substring(0, order);
-			var possibilities = ngrams[curremtGram];
-			var nextThing = radom(possibilities); // to give random elemnts from array
-			var result = currentGram + nextThing;
-
-		}
-
+		
+		/** @brief Do a random walk on this model. 
+		* Start from the starter node, invoke RandomNext on current node until terminator node is reached.
+		* @return Null terminated string that was generated.
 		*/
-		void RandomWalk();
+		char* RandomWalk();
 
-		/* Adjust the model with a single string
-		*  Traverse string char by char and adjust each vertice with occurrence.
-		*  Param is signed so negative bias can be applied.
+		/** @brief Adjust the model with a single string. 
+		* Start from the starter node, and for each character, adjust the edge weight from current node to the next, until NULL character is reached.
+		* Then, update the edge weight from current node, to the terminator node.
+		* @param string - String that is passed from the training, and will be used to adjust the model with
+		* @param occurrence - Occurrence of this string. 
 		*/
 		void adjust(char* string, long int occurrence);
 
-		/* Import model structure from a savefile
+		/** @brief Import a file to construct the model. 
+		* 
+		* File contains a list of edges.
+		* Format is: Left_repr;weight;right_repr
+		* Iterate over this list, and construct nodes and edges accordingly. 
+		* @return True if successful, False for incomplete models or corrupt file formats
 		*/
 		bool Import(std::ifstream*);
+
+		/** @brief Open a file to import with filename, and call bool Markov::Model::Import with std::ifstream
+		* @return True if successful, False for incomplete models or corrupt file formats
+		*/
 		bool Import(char* filename);
 
-		/* Export model structure to a savefile
+		/** @brief Export a file of the model.
+		*
+		* File contains a list of edges.
+		* Format is: Left_repr;weight;right_repr
+		* Iterate over this vertices, and their edges, and write them to file.
+		* @return True if successful, False for incomplete models.
 		*/
 		bool Export(std::ofstream*);
+
+		/** @brief Open a file to export with filename, and call bool Markov::Model::Export with std::ofstream
+		* @return True if successful, False for incomplete models or corrupt file formats
+		*/
 		bool Export(char* filename);
 
 	private:
-		/* Map left is the Nodes value
+		/** @brief Map left is the Nodes value
 		* Map right is the node pointer
 		*/
 		std::map<unsigned char, Markov::Node*> nodes;
 
+		/** @brief Starter Node of this model. */
 		Markov::Node* starterNode;
 
-		// A list of all edges
-		// Might drop this in implementation, no use so far
+		
+		/** @brief A list of all edges in this model. */
 		std::vector<Markov::Edge> edges;
 	};
 

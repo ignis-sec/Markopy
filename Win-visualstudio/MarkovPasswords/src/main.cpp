@@ -5,26 +5,43 @@
 #include <fstream>
 
 
-/* Initialize empty markov model
-*/
-Markov::Model* initialize();
 
-/* initialize model from exported model save file.
+/** @brief Namespace for password operations derived from MarkovModel.lib
 */
-Markov::Model* initialize(char* filename);
+namespace MarkovPasswords{
 
-/* open a dataset file and return ofstream ptr
-*/
-std::ifstream OpenDatasetFile(char* filename);
+	/** @brief Initialize the markov model from MarkovModel::Markov::Model
+	* @return Pointer to the constructed model.
+	*/
+	Markov::Model* initialize();
+
+	/** @brief Initialize the markov model from MarkovModel::Markov::Model, with an import file.
+	* 
+	* This function calls the Markov::Model::Import on the filename to construct the model 
+	* @param filename - Filename to import
+	* @return Pointer to the constructed model.
+	*/
+	Markov::Model* initialize(char* filename);
+
+	/** @brief Open dataset file and return the ifstream pointer
+	* @param filename - Filename to open
+	* @return ifstream* to the the dataset file 
+	*/
+	std::ifstream* OpenDatasetFile(char* filename);
 
 
-/* Read dataset line by line and adjust model with each line
-*/
-void Train(std::ifstream);
+	/** @brief Train the model with the dataset file.
+	* @param dataset - Ifstream* to the dataset
+	*/
+	void Train(std::ifstream*);
 
-/* Save current model state to file
-*/
-std::ofstream Save(char* filename);
+	/** @brief Export model to file.
+	* @param filename - Export filename.
+	* @return std::ofstream* of the exported file.
+	*/
+	std::ofstream* Save(char* filename);
+}
+
 
 
 
