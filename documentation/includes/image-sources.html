@@ -1,0 +1,431 @@
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+
+    mermaid.initialize({
+          startOnLoad:true,
+          flowchart: { 
+              curve: 'basis' 
+          },
+          maxTextSize: 900000
+      });
+
+</script>
+
+
+
+<div class="mermaid">
+graph LR
+    s((start))
+    a((a))
+    b((b))
+    c((c))
+    e((end))
+
+    s -->|0| a
+    a -->|0| b
+    b -->|0| c
+    c -->|0| e
+
+    s -->|0| b 
+    s -->|0| c 
+    s -->|0| e 
+
+    a -->|0| a 
+    a -->|0| c 
+    a -->|0| e 
+
+    b -->|0| a 
+    b -->|0| b 
+    b -->|0| e 
+
+    c -->|0| a 
+    c -->|0| b 
+    c -->|0| c
+    c -->|0| e 
+</div>
+
+<h1> Iteration 1</h1>
+<div class="mermaid">
+graph LR
+    s((start))
+    a((a))
+    b((b))
+    c((c))
+    e((end))
+    
+
+    s -->|3| a
+    a -->|0| b
+    b -->|0| c
+    c -->|0| e
+
+    s -->|0| b 
+    s -->|0| c 
+    s -->|0| e 
+
+    a -->|0| a 
+    a -->|0| c 
+    a -->|0| e 
+
+    b -->|0| a 
+    b -->|0| b 
+    b -->|0| e 
+
+    c -->|0| a 
+    c -->|0| b 
+    c -->|0| c
+    c -->|0| e 
+
+    style a fill:#77cccc
+    style a stroke:#55aaaa
+    linkStyle 0 stroke-width:2px,fill:none,stroke:#55aaaa
+</div>
+
+
+<div class="mermaid">
+graph LR
+    s((start))
+    a((a))
+    b((b))
+    c((c))
+    e((end))
+    
+
+    s -->|3| a
+    a -->|3| b
+    b -->|0| c
+    c -->|0| e
+
+    s -->|0| b 
+    s -->|0| c 
+    s -->|0| e 
+
+    a -->|0| a 
+    a -->|0| c 
+    a -->|0| e 
+
+    b -->|0| a 
+    b -->|0| b 
+    b -->|0| e 
+
+    c -->|0| a 
+    c -->|0| b 
+    c -->|0| c
+    c -->|0| e 
+
+    style a fill:#7777cc
+    style a stroke:#5555aa
+    style b fill:#77cccc
+    style b stroke:#55aaaa
+    linkStyle 0 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 1 stroke-width:2px,fill:none,stroke:#55aaaa
+</div>
+
+<div class="mermaid">
+graph LR
+    s((start))
+    a((a))
+    b((b))
+    c((c))
+    e((end))
+    
+
+    s -->|3| a
+    a -->|3| b
+    b -->|0| c
+    c -->|0| e
+
+    s -->|0| b 
+    s -->|0| c 
+    s -->|0| e 
+
+    a -->|0| a 
+    a -->|0| c 
+    a -->|0| e 
+
+    b -->|0| a 
+    b -->|0| b 
+    b -->|3| e 
+
+    c -->|0| a 
+    c -->|0| b 
+    c -->|0| c
+    c -->|0| e 
+
+    style a fill:#7777cc
+    style a stroke:#5555aa
+    style b fill:#7777cc
+    style b stroke:#5555aa
+    style e fill:#77cccc
+    style e stroke:#55aaaa
+    linkStyle 0 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 1 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 12 stroke-width:2px,fill:none,stroke:#5555aa
+</div>
+
+<h1> Iteration 2</h1>
+
+
+
+<div class="mermaid">
+graph LR
+    s((start))
+    a((a))
+    b((b))
+    c((c))
+    e((end))
+    
+
+    s -->|3| a
+    a -->|3| b
+    b -->|0| c
+    c -->|0| e
+
+    s -->|12| b 
+    s -->|0| c 
+    s -->|0| e 
+
+    a -->|0| a 
+    a -->|0| c 
+    a -->|0| e 
+
+    b -->|0| a 
+    b -->|0| b 
+    b -->|3| e 
+
+    c -->|0| a 
+    c -->|0| b 
+    c -->|0| c
+    c -->|0| e 
+
+    style b fill:#77cccc
+    style b stroke:#55aaaa
+    linkStyle 4 stroke-width:2px,fill:none,stroke:#55aaaa
+</div>
+
+<div class="mermaid">
+graph LR
+    s((start))
+    a((a))
+    b((b))
+    c((c))
+    e((end))
+    
+
+    s -->|3| a
+    a -->|3| b
+    b -->|0| c
+    c -->|0| e
+
+    s -->|12| b 
+    s -->|0| c 
+    s -->|0| e 
+
+    a -->|0| a 
+    a -->|0| c 
+    a -->|0| e 
+
+    b -->|12| a 
+    b -->|0| b 
+    b -->|3| e 
+
+    c -->|0| a 
+    c -->|0| b 
+    c -->|0| c
+    c -->|0| e 
+
+
+    style b fill:#7777cc
+    style b stroke:#5555aa
+    style a fill:#77cccc
+    style a stroke:#55aaaa
+    linkStyle 4 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 10 stroke-width:2px,fill:none,stroke:#55aaaa
+</div>
+
+
+<div class="mermaid">
+graph LR
+    s((start))
+    a((a))
+    b((b))
+    c((c))
+    e((end))
+    
+
+    s -->|3| a
+    a -->|3| b
+    b -->|0| c
+    c -->|0| e
+
+    s -->|12| b 
+    s -->|0| c 
+    s -->|0| e 
+
+    a -->|0| a 
+    a -->|12| c 
+    a -->|0| e 
+
+    b -->|12| a 
+    b -->|0| b 
+    b -->|3| e 
+
+    c -->|0| a 
+    c -->|0| b 
+    c -->|0| c
+    c -->|0| e 
+
+
+    style b fill:#7777cc
+    style b stroke:#5555aa
+    style a fill:#7777cc
+    style a stroke:#5555aa
+    style c fill:#77cccc
+    style c stroke:#55aaaa
+    linkStyle 4 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 10 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 8 stroke-width:2px,fill:none,stroke:#55aaaa
+</div>
+
+
+<div class="mermaid">
+graph LR
+    s((start))
+    a((a))
+    b((b))
+    c((c))
+    e((end))
+    
+
+    s -->|3| a
+    a -->|3| b
+    b -->|0| c
+    c -->|0| e
+
+    s -->|12| b 
+    s -->|0| c 
+    s -->|0| e 
+
+    a -->|0| a 
+    a -->|12| c 
+    a -->|0| e 
+
+    b -->|12| a 
+    b -->|0| b 
+    b -->|3| e 
+
+    c -->|0| a 
+    c -->|12| b 
+    c -->|0| c
+    c -->|0| e 
+
+
+    style b fill:#7777cc
+    style a stroke:#5555aa
+    style c fill:#7777cc
+    style c stroke:#5555aa
+    style b fill:#77cccc
+    style b stroke:#55aaaa
+    linkStyle 4 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 10 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 8 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 14 stroke-width:2px,fill:none,stroke:#55aaaa
+</div>
+
+<div class="mermaid">
+graph LR
+    s((start))
+    a((a))
+    b((b))
+    c((c))
+    e((end))
+    
+
+    s -->|3| a
+    a -->|3| b
+    b -->|0| c
+    c -->|0| e
+
+    s -->|12| b 
+    s -->|0| c 
+    s -->|0| e 
+
+    a -->|0| a 
+    a -->|12| c 
+    a -->|0| e 
+
+    b -->|12| a 
+    b -->|0| b 
+    b -->|15| e 
+
+    c -->|0| a 
+    c -->|12| b 
+    c -->|0| c
+    c -->|0| e 
+
+
+    style b fill:#7777cc
+    style a stroke:#5555aa
+    style c fill:#7777cc
+    style c stroke:#5555aa
+    style b fill:#7777cc
+    style b stroke:#5555aa
+    style e fill:#77cccc
+    style e stroke:#55aaaa
+    linkStyle 4 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 10 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 8 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 14 stroke-width:2px,fill:none,stroke:#5555aa
+    linkStyle 12 stroke-width:2px,fill:none,stroke:#55aaaa
+</div>
+
+
+
+<h1>Iteration 38271</h1>
+
+<div class="mermaid">
+graph LR
+    s((start))
+    a((a))
+    b((b))
+    c((c))
+    e((end))
+    
+
+    s -->|1235123| a
+    a -->|1253112| b
+    b -->|1234623| c
+    c -->|1214151| e
+
+    s -->|15231| b 
+    s -->|12351| c 
+    s -->|0| e 
+
+    a -->|1236113| a 
+    a -->|11232| c 
+    a -->|1230| e 
+
+    b -->|11232| a 
+    b -->|1232| b 
+    b -->|1234| e 
+
+    c -->|12351| a 
+    c -->|11232| b 
+    c -->|3242| c
+    c -->|12344| e 
+    linkStyle 0 stroke-width:9px,fill:none,stroke:#5555aa
+    linkStyle 1 stroke-width:9px,fill:none,stroke:#5555aa
+    linkStyle 2 stroke-width:9px,fill:none,stroke:#5555aa
+    linkStyle 3 stroke-width:9px,fill:none,stroke:#5555aa
+    linkStyle 7 stroke-width:5px,fill:none,stroke:#5555aa
+    linkStyle 5 stroke-width:2px,fill:none,stroke:#000000
+    linkStyle 5 stroke-width:2px,fill:none,stroke:#000000
+    linkStyle 5 stroke-width:2px,fill:none,stroke:#000000
+    linkStyle 5 stroke-width:2px,fill:none,stroke:#000000
+    linkStyle 5 stroke-width:2px,fill:none,stroke:#000000
+    linkStyle 5 stroke-width:2px,fill:none,stroke:#000000
+    linkStyle 5 stroke-width:2px,fill:none,stroke:#000000
+    linkStyle 5 stroke-width:2px,fill:none,stroke:#000000
+    linkStyle 5 stroke-width:2px,fill:none,stroke:#000000
+    linkStyle 5 stroke-width:2px,fill:none,stroke:#000000
+</div>
