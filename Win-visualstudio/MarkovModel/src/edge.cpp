@@ -1,44 +1,52 @@
 #include "edge.h"
-#include "node.h"
 
-Markov::Edge::Edge() {
+template <typename NodeStorageType>
+Markov::Edge<NodeStorageType>::Edge() {
 	this->_left = NULL;
 	this->_right = NULL;
 	this->_weight = 0;
 }
 
-Markov::Edge::Edge(Markov::Node* _left, Markov::Node* _right) {
+template <typename NodeStorageType>
+Markov::Edge<NodeStorageType>::Edge(Markov::Node<NodeStorageType>* _left, Markov::Node<NodeStorageType>* _right) {
 	this->_left = _left;
 	this->_right = _right;
 	this->_weight = 0;
 }
 
-void Markov::Edge::adjust(uint64_t offset) {
+template <typename NodeStorageType>
+void Markov::Edge<NodeStorageType>::adjust(uint64_t offset) {
 	this->_weight += offset;
 }
 
-Markov::Node* Markov::Edge::traverse() {
+template <typename NodeStorageType>
+Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::traverse() {
 	if (this->right()->value() == 0xff) //terminator node
 		return NULL;
 	return _left;
 }
 
-void Markov::Edge::set_left(Markov::Node* n) {
+template <typename NodeStorageType>
+void Markov::Edge<NodeStorageType>::set_left(Markov::Node<NodeStorageType>* n) {
 	this->_left = n;
 }
 
-void Markov::Edge::set_right(Markov::Node* n) {
+template <typename NodeStorageType>
+void Markov::Edge<NodeStorageType>::set_right(Markov::Node<NodeStorageType>* n) {
 	this->_right = n;
 }
 
-uint64_t Markov::Edge::weight() {
+template <typename NodeStorageType>
+uint64_t Markov::Edge<NodeStorageType>::weight() {
 	return this->_weight;
 }
 
-Markov::Node* Markov::Edge::left() {
+template <typename NodeStorageType>
+Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::left() {
 	return this->_left;
 }
 
-Markov::Node* Markov::Edge::right() {
+template <typename NodeStorageType>
+Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::right() {
 	return this->_right;
 }

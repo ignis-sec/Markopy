@@ -1,28 +1,34 @@
 #include "model.h"
+#include "node.h"
 #include <fstream>
 #include <assert.h>
 
-bool Markov::Model::Import(std::ifstream* f) {/*TODO*/ return false; }
+template <typename NodeStorageType>
+bool Markov::Model<NodeStorageType>::Import(std::ifstream* f) {/*TODO*/ return false; }
 
-bool Markov::Model::Import(char* filename) {
+template <typename NodeStorageType>
+bool Markov::Model<NodeStorageType>::Import(char* filename) {
 	std::ifstream importfile;
 	importfile.open(filename);
-	return this->Import(&importfile);
+	return this->Import<NodeStorageType>(&importfile);
 
 }
 
-bool Markov::Model::Export(std::ofstream* f) {/*TODO*/ return false;}
+template <typename NodeStorageType>
+bool Markov::Model<NodeStorageType>::Export(std::ofstream* f) {/*TODO*/ return false;}
 
-bool Markov::Model::Export(char* filename) {
+template <typename NodeStorageType>
+bool Markov::Model<NodeStorageType>::Export(char* filename) {
 	std::ofstream exportfile;
 	exportfile.open(filename);
 	return this->Export(&exportfile);
 }
 
-char* Markov::Model::RandomWalk() {
-	Markov::Node* n = this->starterNode;
+template <typename NodeStorageType>
+NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk() {
+	Markov::Node<NodeStorageType>* n = this->starterNode;
 	int len = 0;
-	char ret[32] = "";
+	NodeStorageType ret[32] = "";
 	while (n != NULL) {
 		n = n->RandomNext();
 		ret[len++] = n->value();

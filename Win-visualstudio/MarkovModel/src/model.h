@@ -8,7 +8,6 @@
 #include <fstream>
 
 #include "edge.h"
-#include "node.h"
 
 /**
 	@brief Namespace for model related classes.
@@ -18,6 +17,7 @@ namespace Markov {
 	* 
 	* This class will be *templated later to work with other data types than char*.
 	*/
+	template <typename NodeStorageType>
 	class Model {
 	public:
 		
@@ -25,7 +25,8 @@ namespace Markov {
 		* Start from the starter node, invoke RandomNext on current node until terminator node is reached.
 		* @return Null terminated string that was generated.
 		*/
-		char* RandomWalk();
+
+		NodeStorageType* RandomWalk();
 
 		/** @brief Adjust the model with a single string. 
 		* Start from the starter node, and for each character, adjust the edge weight from current node to the next, until NULL character is reached.
@@ -33,7 +34,7 @@ namespace Markov {
 		* @param string - String that is passed from the training, and will be used to adjust the model with
 		* @param occurrence - Occurrence of this string. 
 		*/
-		void adjust(char* string, long int occurrence);
+		void adjust(NodeStorageType* payload, long int occurrence);
 
 		/** @brief Import a file to construct the model. 
 		* 
@@ -67,14 +68,14 @@ namespace Markov {
 		/** @brief Map left is the Nodes value
 		* Map right is the node pointer
 		*/
-		std::map<unsigned char, Markov::Node*> nodes;
+		std::map<NodeStorageType, Markov::Node<NodeStorageType>*> nodes;
 
 		/** @brief Starter Node of this model. */
-		Markov::Node* starterNode;
+		Markov::Node<NodeStorageType>* starterNode;
 
 		
 		/** @brief A list of all edges in this model. */
-		std::vector<Markov::Edge> edges;
+		std::vector<Markov::Edge<NodeStorageType>> edges;
 	};
 
 };
