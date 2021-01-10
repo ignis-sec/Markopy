@@ -24,6 +24,8 @@ public:
 	*/
 	static ProgramOptions* parse(int argc, char** argv);
 
+	/** @brief Print help string.
+	*/
 	static void help();
 private:
 

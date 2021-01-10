@@ -52,12 +52,13 @@
         <argsstring>()</argsstring>
         <name>help</name>
         <briefdescription>
+<para>Print help string. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" line="27" column="13" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.cpp" bodystart="6" bodyend="8"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" line="29" column="13" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.cpp" bodystart="6" bodyend="8"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -65,7 +66,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" line="18" column="8" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" bodystart="18" bodyend="30"/>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" line="18" column="8" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" bodystart="18" bodyend="32"/>
     <listofallmembers>
       <member refid="class_argparse_1a720195071367bec91ac78bc3ac3dcfa2" prot="public" virt="non-virtual"><scope>Argparse</scope><name>help</name></member>
       <member refid="class_argparse_1a4c977d7fcdffd09e8437f214f56ac0ac" prot="public" virt="non-virtual"><scope>Argparse</scope><name>parse</name></member>

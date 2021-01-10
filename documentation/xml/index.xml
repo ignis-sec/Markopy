@@ -35,6 +35,7 @@
     <member refid="class_markov_passwords_1a30f494674255dd9d7fd49a6f2b282e36" kind="function"><name>OpenDatasetFile</name></member>
     <member refid="class_markov_passwords_1a1f98bc18800dabc30d9477513d86db81" kind="function"><name>Train</name></member>
     <member refid="class_markov_passwords_1a2cf2f81e86f45e5ec8840fbb82edc2c4" kind="function"><name>Save</name></member>
+    <member refid="class_markov_passwords_1a8787ba47e5ae8dfe38f06a693727c2db" kind="function"><name>Generate</name></member>
   </compound>
   <compound refid="class_markov_passwords_g_u_i" kind="class"><name>MarkovPasswordsGUI</name>
     <member refid="class_markov_passwords_g_u_i_1a225f44e95f722bc3aa3774222eeb9f39" kind="variable"><name>ui</name></member>
