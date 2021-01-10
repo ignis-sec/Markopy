@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
-  <compounddef id="namespace_morning_coffee" kind="namespace" language="C++">
-    <compoundname>MorningCoffee</compoundname>
+  <compounddef id="namespace_0d20" kind="namespace" language="C++">
+    <compoundname>@20</compoundname>
     <briefdescription>
-<para>The Morning Coffee library. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="4" column="1"/>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswordsGUI/x64/Debug/rcc/qrc_MarkovPasswordsGUI.cpp" line="41" column="1"/>
   </compounddef>
 </doxygen>

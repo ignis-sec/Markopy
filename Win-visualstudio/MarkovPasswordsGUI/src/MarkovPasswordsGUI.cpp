@@ -1,8 +1,9 @@
 #include "MarkovPasswordsGUI.h"
 #include <fstream>
 #include <qwebengineview.h>
-
 #include <Windows.h>
+
+
 MarkovPasswordsGUI::MarkovPasswordsGUI(QWidget *parent)
     : QMainWindow(parent)
 {
@@ -18,5 +19,18 @@ MarkovPasswordsGUI::MarkovPasswordsGUI(QWidget *parent)
     std::string layout = "file:///" + std::string(path) + "\\views\\example.html";
     std::replace(layout.begin(), layout.end(), '\\', '/');
     webkit->setUrl(QUrl(layout.c_str()));
+
+}
+
+
+void MarkovPasswordsGUI::renderHTMLFile(std::string* filename) {
+    //extract and parametrize the code from constructor
+
+}
+
+
+
+void MarkovPasswordsGUI::loadDataset(std::string* filename) {
+    //extract and parametrize the code from constructor
 
 }

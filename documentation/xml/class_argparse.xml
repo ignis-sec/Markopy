@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_argparse" kind="class" language="C++" prot="public">
+    <compoundname>Argparse</compoundname>
+    <includes refid="argparse_8h" local="no">argparse.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_argparse_1a4c977d7fcdffd09e8437f214f56ac0ac" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct__program_options" kindref="compound">ProgramOptions</ref> *</type>
+        <definition>ProgramOptions * Argparse::parse</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+<para>parse cli commands and return </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Program arguement count </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Program arguement values array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ProgramOptions structure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" line="25" column="23" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.cpp" bodystart="4" bodyend="4"/>
+      </memberdef>
+      <memberdef kind="function" id="class_argparse_1a720195071367bec91ac78bc3ac3dcfa2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Argparse::help</definition>
+        <argsstring>()</argsstring>
+        <name>help</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" line="27" column="13" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.cpp" bodystart="6" bodyend="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Parse command line arguements. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" line="18" column="8" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" bodystart="18" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_argparse_1a720195071367bec91ac78bc3ac3dcfa2" prot="public" virt="non-virtual"><scope>Argparse</scope><name>help</name></member>
+      <member refid="class_argparse_1a4c977d7fcdffd09e8437f214f56ac0ac" prot="public" virt="non-virtual"><scope>Argparse</scope><name>parse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

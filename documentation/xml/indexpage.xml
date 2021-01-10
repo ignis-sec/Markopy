@@ -13,10 +13,10 @@
 <listitem><para><ref refid="namespace_markov" kindref="compound">Markov</ref> (MarkovModel)<itemizedlist>
 <listitem><para>Compiled to a .lib and .dll file, and not an executable.</para>
 </listitem><listitem><para>Contains the Model, Node and Edge classes.</para>
-</listitem><listitem><para>Its the backbone of the project and will be the main dependency of <ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref> to work.</para>
+</listitem><listitem><para>Its the backbone of the project and will be the main dependency of <ref refid="class_markov_passwords" kindref="compound">MarkovPasswords</ref> to work.</para>
 </listitem></itemizedlist>
 </para>
-</listitem><listitem><para><ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref><itemizedlist>
+</listitem><listitem><para><ref refid="class_markov_passwords" kindref="compound">MarkovPasswords</ref><itemizedlist>
 <listitem><para>Includes MarkovModel.</para>
 </listitem><listitem><para>Will be used to specialize MarkovModel exclusively for password generation.</para>
 </listitem><listitem><para>Will have functions that help with file operations such as input and output, import export.</para>
@@ -38,7 +38,7 @@
 </para>
 <sect3 id="index_1autotoc_md3">
 <title>Iteration 1</title>
-<para>Below is a demonstration of how training will be done. For this example, we are going to adjust the model with string &quot;ab&quot;, and our occurrence will be &quot;3&quot; From <ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref>, inside the train function, Model::adjust is called with &quot;ab&quot; and &quot;3&quot; parameters.</para>
+<para>Below is a demonstration of how training will be done. For this example, we are going to adjust the model with string &quot;ab&quot;, and our occurrence will be &quot;3&quot; From <ref refid="class_markov_passwords" kindref="compound">MarkovPasswords</ref>, inside the train function, Model::adjust is called with &quot;ab&quot; and &quot;3&quot; parameters.</para>
 <para>Now, Model::adjust will iteratively adjust the edge weights accordingly. It starts by adjusting weight between start and &quot;a&quot; node. This is done by calling Edge::adjust of the edge between the nodes.</para>
 <para><image type="html" name="images/model_1.png" inline="yes"></image>
 </para>
@@ -76,8 +76,8 @@
 </sect2>
 <sect2 id="index_1autotoc_md7">
 <title>Training</title>
-<para><ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref> should read input from our dataset file, parse it line by line, and feed it to <ref refid="class_markov_1_1_model_1abb14649eb59af2b60d17400e3c1d827b" kindref="member">Markov::Model::adjust</ref></para>
-<para>Once a training is complete, <ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref> is supposed to export the model to a savefile so that model is not required to train for each run.</para>
+<para><ref refid="class_markov_passwords" kindref="compound">MarkovPasswords</ref> should read input from our dataset file, parse it line by line, and feed it to <ref refid="class_markov_1_1_model_1abb14649eb59af2b60d17400e3c1d827b" kindref="member">Markov::Model::adjust</ref></para>
+<para>Once a training is complete, <ref refid="class_markov_passwords" kindref="compound">MarkovPasswords</ref> is supposed to export the model to a savefile so that model is not required to train for each run.</para>
 </sect2>
 <sect2 id="index_1autotoc_md8">
 <title>Generation</title>

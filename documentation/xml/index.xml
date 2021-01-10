@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="struct__program_options" kind="struct"><name>_programOptions</name>
+    <member refid="struct__program_options_1ad2f314dbe337d2e7e20dfca1d5b7d18a" kind="variable"><name>bImport</name></member>
+    <member refid="struct__program_options_1ac556ceadc2ed59b2f2a0a4ce1339dc3f" kind="variable"><name>bExport</name></member>
+    <member refid="struct__program_options_1a9d0ae7932291a1f6909053b778ff6aac" kind="variable"><name>bFailure</name></member>
+    <member refid="struct__program_options_1adaff05c1a34f18dd3ade2541823b09e0" kind="variable"><name>importname</name></member>
+    <member refid="struct__program_options_1a8d881e7b82ea8ae14cc0aa43f26ded35" kind="variable"><name>exportname</name></member>
+    <member refid="struct__program_options_1ad2d16addb437376e209d3928bd994f08" kind="variable"><name>datasetname</name></member>
+  </compound>
+  <compound refid="class_argparse" kind="class"><name>Argparse</name>
+    <member refid="class_argparse_1a4c977d7fcdffd09e8437f214f56ac0ac" kind="function"><name>parse</name></member>
+    <member refid="class_argparse_1a720195071367bec91ac78bc3ac3dcfa2" kind="function"><name>help</name></member>
+  </compound>
   <compound refid="class_markov_1_1_edge" kind="class"><name>Markov::Edge</name>
     <member refid="class_markov_1_1_edge_1a622d63509c6179cec56963d803ad1592" kind="variable"><name>_left</name></member>
     <member refid="class_markov_1_1_edge_1a1980a59351e80a7ef83fc04707529cfe" kind="variable"><name>_right</name></member>
@@ -14,9 +26,21 @@
     <member refid="class_markov_1_1_edge_1a642aa92fbeb81971c5ec9d2894d76402" kind="function"><name>left</name></member>
     <member refid="class_markov_1_1_edge_1a876e20dc6d98e046a7503f017cf553f2" kind="function"><name>right</name></member>
   </compound>
+  <compound refid="class_markov_passwords" kind="class"><name>MarkovPasswords</name>
+    <member refid="class_markov_passwords_1abb4e3cd729c7ef289ac0e9a8c2a4d208" kind="variable"><name>datasetFile</name></member>
+    <member refid="class_markov_passwords_1a558d8e28a41af38a34dab6eeb2c0374a" kind="variable"><name>modelSavefile</name></member>
+    <member refid="class_markov_passwords_1ab116d35b45b3128e64962b98764a79e7" kind="variable"><name>outputFile</name></member>
+    <member refid="class_markov_passwords_1aa5e8784aa8c5c873b85ac9aeef7b430c" kind="function"><name>MarkovPasswords</name></member>
+    <member refid="class_markov_passwords_1a54cf1e3d31020ae9546574586d5181fd" kind="function"><name>MarkovPasswords</name></member>
+    <member refid="class_markov_passwords_1a30f494674255dd9d7fd49a6f2b282e36" kind="function"><name>OpenDatasetFile</name></member>
+    <member refid="class_markov_passwords_1a1f98bc18800dabc30d9477513d86db81" kind="function"><name>Train</name></member>
+    <member refid="class_markov_passwords_1a2cf2f81e86f45e5ec8840fbb82edc2c4" kind="function"><name>Save</name></member>
+  </compound>
   <compound refid="class_markov_passwords_g_u_i" kind="class"><name>MarkovPasswordsGUI</name>
     <member refid="class_markov_passwords_g_u_i_1a225f44e95f722bc3aa3774222eeb9f39" kind="variable"><name>ui</name></member>
     <member refid="class_markov_passwords_g_u_i_1aa923171220140b2ad8e7efc68d95f2dc" kind="function"><name>MarkovPasswordsGUI</name></member>
+    <member refid="class_markov_passwords_g_u_i_1af9cd18a960d5eb8982e3034810f0e79d" kind="function"><name>renderHTMLFile</name></member>
+    <member refid="class_markov_passwords_g_u_i_1a94c3599da1164e89a3a386314291f3c9" kind="function"><name>loadDataset</name></member>
   </compound>
   <compound refid="class_markov_1_1_model" kind="class"><name>Markov::Model</name>
     <member refid="class_markov_1_1_model_1ae6e142d545313dcdb87b0ae3618397fa" kind="variable"><name>nodes</name></member>
@@ -65,13 +89,6 @@
   </compound>
   <compound refid="namespace_markov" kind="namespace"><name>Markov</name>
   </compound>
-  <compound refid="namespace_markov_passwords" kind="namespace"><name>MarkovPasswords</name>
-    <member refid="namespace_markov_passwords_1ae392d7a23712d10ada4a7ebff9cd0b88" kind="function"><name>initialize</name></member>
-    <member refid="namespace_markov_passwords_1ac714bb1c78e0e3b35b9d622446b57678" kind="function"><name>initialize</name></member>
-    <member refid="namespace_markov_passwords_1a30f494674255dd9d7fd49a6f2b282e36" kind="function"><name>OpenDatasetFile</name></member>
-    <member refid="namespace_markov_passwords_1a5d69fc99c0d6986c45ed5947c7f58c31" kind="function"><name>Train</name></member>
-    <member refid="namespace_markov_passwords_1a2cf2f81e86f45e5ec8840fbb82edc2c4" kind="function"><name>Save</name></member>
-  </compound>
   <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
   </compound>
   <compound refid="dllmain_8cpp" kind="file"><name>dllmain.cpp</name>
@@ -98,6 +115,11 @@
   </compound>
   <compound refid="pch_8h" kind="file"><name>pch.h</name>
   </compound>
+  <compound refid="argparse_8cpp" kind="file"><name>argparse.cpp</name>
+  </compound>
+  <compound refid="argparse_8h" kind="file"><name>argparse.h</name>
+    <member refid="argparse_8h_1a9d530970d74edd006d44cfd25450183f" kind="typedef"><name>ProgramOptions</name></member>
+  </compound>
   <compound refid="term_8cpp" kind="file"><name>term.cpp</name>
     <member refid="term_8cpp_1a6c02121ac817db33ab43d96ca11c1187" kind="function"><name>operator&lt;&lt;</name></member>
   </compound>
@@ -111,8 +133,10 @@
   <compound refid="src_2main_8cpp" kind="file"><name>main.cpp</name>
     <member refid="src_2main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
-  <compound refid="_u_i_2main_8cpp" kind="file"><name>main.cpp</name>
-    <member refid="_u_i_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  <compound refid="_u_i_2src_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_u_i_2src_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="markov_passwords_8h" kind="file"><name>markovPasswords.h</name>
   </compound>
   <compound refid="_markov_passwords_g_u_i_8cpp" kind="file"><name>MarkovPasswordsGUI.cpp</name>
   </compound>
@@ -129,6 +153,8 @@
   <compound refid="dir_ffa355b1424b124a542ac40a271afa58" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src</name>
   </compound>
   <compound refid="dir_7a9d88bf31f17ae786648e15765b88df" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src</name>
+  </compound>
+  <compound refid="dir_e0b451e42ab690da0f09e7eb9661d287" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswordsGUI/src</name>
   </compound>
   <compound refid="dir_08b7b216d7a6e0cee88ed7ac9ee1ecba" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio</name>
   </compound>

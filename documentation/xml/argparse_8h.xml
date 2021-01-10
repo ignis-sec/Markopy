@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="argparse_8h" kind="file" language="C++">
+    <compoundname>argparse.h</compoundname>
+    <includedby refid="argparse_8cpp" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.cpp</includedby>
+    <includedby refid="src_2main_8cpp" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/main.cpp</includedby>
+    <innerclass refid="struct__program_options" prot="public">_programOptions</innerclass>
+    <innerclass refid="class_argparse" prot="public">Argparse</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="argparse_8h_1a9d530970d74edd006d44cfd25450183f" prot="public" static="no">
+        <type>struct <ref refid="struct__program_options" kindref="compound">_programOptions</ref></type>
+        <definition>typedef struct _programOptions ProgramOptions</definition>
+        <argsstring></argsstring>
+        <name>ProgramOptions</name>
+        <briefdescription>
+<para>Structure to hold parsed cli arguements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" line="13" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h"/>
+  </compounddef>
+</doxygen>
