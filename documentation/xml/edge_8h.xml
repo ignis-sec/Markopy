@@ -21,8 +21,6 @@
       <node id="3">
         <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h</label>
         <link refid="node_8h_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
       </node>
       <node id="2">
         <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h</label>

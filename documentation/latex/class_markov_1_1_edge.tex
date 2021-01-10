@@ -1,5 +1,5 @@
-\hypertarget{class_markov_1_1_edge}{}\doxysection{Markov\+::Edge Class Reference}
-\label{class_markov_1_1_edge}\index{Markov::Edge@{Markov::Edge}}
+\hypertarget{class_markov_1_1_edge}{}\doxysection{Markov\+::Edge$<$ Node\+Storage\+Type $>$ Class Template Reference}
+\label{class_markov_1_1_edge}\index{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}}
 
 
 \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} class used to link nodes in the model together.  
@@ -8,38 +8,42 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_markov_1_1_edge_aa9426b31ca2808bde76ddb2e3ebe9552}\label{class_markov_1_1_edge_aa9426b31ca2808bde76ddb2e3ebe9552}} 
-\mbox{\hyperlink{class_markov_1_1_edge_aa9426b31ca2808bde76ddb2e3ebe9552}{Markov\+::\+Edge}} ()
+\mbox{\Hypertarget{class_markov_1_1_edge_a36413aeee1084d1e555345d57bf27fdd}\label{class_markov_1_1_edge_a36413aeee1084d1e555345d57bf27fdd}} 
+\mbox{\hyperlink{class_markov_1_1_edge_a36413aeee1084d1e555345d57bf27fdd}{Markov\+::\+Edge}} ()
 \begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_edge_a7b1dafb9d6e84239e57391e93f76f7b6}{Markov\+::\+Edge}} (\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$\+\_\+left, \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$\+\_\+right)
+\mbox{\hyperlink{class_markov_1_1_edge_a667f6d97af29300ad9217e80f1e6dae1}{Markov\+::\+Edge}} (\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$\+\_\+left, \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$\+\_\+right)
 \begin{DoxyCompactList}\small\item\em Constructor. Initialize edge with given right and left. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_markov_1_1_edge_a1b7c89aaac5ec09491e13adcf133ae2c}{adjust}} (uint64\+\_\+t offset)
+void \mbox{\hyperlink{class_markov_1_1_edge_ab36e4f8f7ae37b81966e10929097f2aa}{adjust}} (uint64\+\_\+t offset)
 \begin{DoxyCompactList}\small\item\em Adjust the edge weight with offset. Adds the offset parameter to the edge weight. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$ \mbox{\hyperlink{class_markov_1_1_edge_a92a6697d909efeee8938c4fb85df2c75}{traverse}} ()
+\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_edge_adaa67349cf3b42e4c012d2247aa40c92}{traverse}} ()
 \begin{DoxyCompactList}\small\item\em Traverse this edge to right. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_markov_1_1_edge_ab02be668170419a296cc5c485962a07d}{set\+\_\+left}} (\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$)
+void \mbox{\hyperlink{class_markov_1_1_edge_a03eeb872b6fff6aed120f090d3732827}{set\+\_\+left}} (\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$)
 \begin{DoxyCompactList}\small\item\em Set left of this edge. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_markov_1_1_edge_ae0db61f4d345ecbcbeb45e4fb2c2692d}{set\+\_\+right}} (\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$)
+void \mbox{\hyperlink{class_markov_1_1_edge_adef481bf5942f46f298b094ab93101b7}{set\+\_\+right}} (\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$)
 \begin{DoxyCompactList}\small\item\em Set right of this edge. \end{DoxyCompactList}\item 
-uint64\+\_\+t \mbox{\hyperlink{class_markov_1_1_edge_a13e3c20a4e7070c551ef8390cff637ea}{weight}} ()
+uint64\+\_\+t \mbox{\hyperlink{class_markov_1_1_edge_ab6160a5b9c6e8a51fe1ecba063e9402b}{weight}} ()
 \begin{DoxyCompactList}\small\item\em return edge\textquotesingle{}s weight. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$ \mbox{\hyperlink{class_markov_1_1_edge_aeebc3a01e554adeff057806174c2e4a9}{left}} ()
+\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_edge_a642aa92fbeb81971c5ec9d2894d76402}{left}} ()
 \begin{DoxyCompactList}\small\item\em return edge\textquotesingle{}s left \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$ \mbox{\hyperlink{class_markov_1_1_edge_a55863f8509177d053506a2a6a88dc192}{right}} ()
+\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_edge_a876e20dc6d98e046a7503f017cf553f2}{right}} ()
 \begin{DoxyCompactList}\small\item\em return edge\textquotesingle{}s right \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Node\+Storage\+Type$>$\newline
+class Markov\+::\+Edge$<$ Node\+Storage\+Type $>$}
+
 \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} class used to link nodes in the model together. 
 
 Has left, right, and weight of the edge. Edges are {\itshape UNIDIRECTIONAL} in this model. They can only be traversed left to right. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_markov_1_1_edge_a1b7c89aaac5ec09491e13adcf133ae2c}\label{class_markov_1_1_edge_a1b7c89aaac5ec09491e13adcf133ae2c}} 
-\index{Markov::Edge@{Markov::Edge}!adjust@{adjust}}
-\index{adjust@{adjust}!Markov::Edge@{Markov::Edge}}
+\mbox{\Hypertarget{class_markov_1_1_edge_ab36e4f8f7ae37b81966e10929097f2aa}\label{class_markov_1_1_edge_ab36e4f8f7ae37b81966e10929097f2aa}} 
+\index{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!adjust@{adjust}}
+\index{adjust@{adjust}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}}
 \doxysubsubsection{\texorpdfstring{adjust()}{adjust()}}
-{\footnotesize\ttfamily void Markov\+::\+Edge\+::adjust (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{offset }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
+void \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ Node\+Storage\+Type $>$\+::adjust (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{offset }\end{DoxyParamCaption})}
 
 
 
@@ -50,11 +54,12 @@ Adjust the edge weight with offset. Adds the offset parameter to the edge weight
 {\em offset} & -\/ value to be added to the weight \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_markov_1_1_edge_aeebc3a01e554adeff057806174c2e4a9}\label{class_markov_1_1_edge_aeebc3a01e554adeff057806174c2e4a9}} 
-\index{Markov::Edge@{Markov::Edge}!left@{left}}
-\index{left@{left}!Markov::Edge@{Markov::Edge}}
+\mbox{\Hypertarget{class_markov_1_1_edge_a642aa92fbeb81971c5ec9d2894d76402}\label{class_markov_1_1_edge_a642aa92fbeb81971c5ec9d2894d76402}} 
+\index{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!left@{left}}
+\index{left@{left}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}}
 \doxysubsubsection{\texorpdfstring{left()}{left()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$ Markov\+::\+Edge\+::left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
+\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ Node\+Storage\+Type $>$\+::left}
 
 
 
@@ -63,11 +68,12 @@ return edge\textquotesingle{}s left
 \begin{DoxyReturn}{Returns}
 edge\textquotesingle{}s left. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_edge_a7b1dafb9d6e84239e57391e93f76f7b6}\label{class_markov_1_1_edge_a7b1dafb9d6e84239e57391e93f76f7b6}} 
-\index{Markov::Edge@{Markov::Edge}!Markov::Edge@{Markov::Edge}}
-\index{Markov::Edge@{Markov::Edge}!Markov::Edge@{Markov::Edge}}
+\mbox{\Hypertarget{class_markov_1_1_edge_a667f6d97af29300ad9217e80f1e6dae1}\label{class_markov_1_1_edge_a667f6d97af29300ad9217e80f1e6dae1}} 
+\index{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!Markov::Edge@{Markov::Edge}}
+\index{Markov::Edge@{Markov::Edge}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}}
 \doxysubsubsection{\texorpdfstring{Markov::Edge()}{Markov::Edge()}}
-{\footnotesize\ttfamily Markov\+::\+Edge\+::\+Markov\+::\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$}]{\+\_\+left,  }\item[{\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$}]{\+\_\+right }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ Node\+Storage\+Type $>$\+::\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$}]{\+\_\+left,  }\item[{\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$}]{\+\_\+right }\end{DoxyParamCaption})}
 
 
 
@@ -80,11 +86,12 @@ Constructor. Initialize edge with given right and left.
 {\em \+\_\+right} & -\/ Right node of this edge. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_markov_1_1_edge_a55863f8509177d053506a2a6a88dc192}\label{class_markov_1_1_edge_a55863f8509177d053506a2a6a88dc192}} 
-\index{Markov::Edge@{Markov::Edge}!right@{right}}
-\index{right@{right}!Markov::Edge@{Markov::Edge}}
+\mbox{\Hypertarget{class_markov_1_1_edge_a876e20dc6d98e046a7503f017cf553f2}\label{class_markov_1_1_edge_a876e20dc6d98e046a7503f017cf553f2}} 
+\index{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!right@{right}}
+\index{right@{right}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}}
 \doxysubsubsection{\texorpdfstring{right()}{right()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$ Markov\+::\+Edge\+::right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
+\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ Node\+Storage\+Type $>$\+::right}
 
 
 
@@ -93,11 +100,12 @@ return edge\textquotesingle{}s right
 \begin{DoxyReturn}{Returns}
 edge\textquotesingle{}s right. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_edge_ab02be668170419a296cc5c485962a07d}\label{class_markov_1_1_edge_ab02be668170419a296cc5c485962a07d}} 
-\index{Markov::Edge@{Markov::Edge}!set\_left@{set\_left}}
-\index{set\_left@{set\_left}!Markov::Edge@{Markov::Edge}}
+\mbox{\Hypertarget{class_markov_1_1_edge_a03eeb872b6fff6aed120f090d3732827}\label{class_markov_1_1_edge_a03eeb872b6fff6aed120f090d3732827}} 
+\index{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!set\_left@{set\_left}}
+\index{set\_left@{set\_left}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}}
 \doxysubsubsection{\texorpdfstring{set\_left()}{set\_left()}}
-{\footnotesize\ttfamily void Markov\+::\+Edge\+::set\+\_\+left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
+void \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ Node\+Storage\+Type $>$\+::set\+\_\+left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$}]{n }\end{DoxyParamCaption})}
 
 
 
@@ -108,11 +116,12 @@ Set left of this edge.
 {\em node} & -\/ \mbox{\hyperlink{class_markov_1_1_node}{Node}} to be linked with. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_markov_1_1_edge_ae0db61f4d345ecbcbeb45e4fb2c2692d}\label{class_markov_1_1_edge_ae0db61f4d345ecbcbeb45e4fb2c2692d}} 
-\index{Markov::Edge@{Markov::Edge}!set\_right@{set\_right}}
-\index{set\_right@{set\_right}!Markov::Edge@{Markov::Edge}}
+\mbox{\Hypertarget{class_markov_1_1_edge_adef481bf5942f46f298b094ab93101b7}\label{class_markov_1_1_edge_adef481bf5942f46f298b094ab93101b7}} 
+\index{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!set\_right@{set\_right}}
+\index{set\_right@{set\_right}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}}
 \doxysubsubsection{\texorpdfstring{set\_right()}{set\_right()}}
-{\footnotesize\ttfamily void Markov\+::\+Edge\+::set\+\_\+right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
+void \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ Node\+Storage\+Type $>$\+::set\+\_\+right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$}]{n }\end{DoxyParamCaption})}
 
 
 
@@ -123,11 +132,12 @@ Set right of this edge.
 {\em node} & -\/ \mbox{\hyperlink{class_markov_1_1_node}{Node}} to be linked with. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_markov_1_1_edge_a92a6697d909efeee8938c4fb85df2c75}\label{class_markov_1_1_edge_a92a6697d909efeee8938c4fb85df2c75}} 
-\index{Markov::Edge@{Markov::Edge}!traverse@{traverse}}
-\index{traverse@{traverse}!Markov::Edge@{Markov::Edge}}
+\mbox{\Hypertarget{class_markov_1_1_edge_adaa67349cf3b42e4c012d2247aa40c92}\label{class_markov_1_1_edge_adaa67349cf3b42e4c012d2247aa40c92}} 
+\index{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!traverse@{traverse}}
+\index{traverse@{traverse}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}}
 \doxysubsubsection{\texorpdfstring{traverse()}{traverse()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$ Markov\+::\+Edge\+::traverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
+\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ Node\+Storage\+Type $>$\+::traverse}
 
 
 
@@ -136,11 +146,12 @@ Traverse this edge to right.
 \begin{DoxyReturn}{Returns}
 Right node. If this is a terminator node, return NULL 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_edge_a13e3c20a4e7070c551ef8390cff637ea}\label{class_markov_1_1_edge_a13e3c20a4e7070c551ef8390cff637ea}} 
-\index{Markov::Edge@{Markov::Edge}!weight@{weight}}
-\index{weight@{weight}!Markov::Edge@{Markov::Edge}}
+\mbox{\Hypertarget{class_markov_1_1_edge_ab6160a5b9c6e8a51fe1ecba063e9402b}\label{class_markov_1_1_edge_ab6160a5b9c6e8a51fe1ecba063e9402b}} 
+\index{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!weight@{weight}}
+\index{weight@{weight}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}}
 \doxysubsubsection{\texorpdfstring{weight()}{weight()}}
-{\footnotesize\ttfamily uint64\+\_\+t Markov\+::\+Edge\+::weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ Node\+Storage\+Type $>$\+::weight}
 
 
 

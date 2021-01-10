@@ -1,47 +1,47 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
   <compound refid="class_markov_1_1_edge" kind="class"><name>Markov::Edge</name>
-    <member refid="class_markov_1_1_edge_1a03070e85ea4c6f8ce20b346df9c7ebb4" kind="variable"><name>_left</name></member>
-    <member refid="class_markov_1_1_edge_1ab1789d1a86c5360e98c28b5587185795" kind="variable"><name>_right</name></member>
-    <member refid="class_markov_1_1_edge_1af38ba9baaae84ef3f3ca02affecfca78" kind="variable"><name>_weight</name></member>
-    <member refid="class_markov_1_1_edge_1aa9426b31ca2808bde76ddb2e3ebe9552" kind="function"><name>Markov::Edge</name></member>
-    <member refid="class_markov_1_1_edge_1a7b1dafb9d6e84239e57391e93f76f7b6" kind="function"><name>Markov::Edge</name></member>
-    <member refid="class_markov_1_1_edge_1a1b7c89aaac5ec09491e13adcf133ae2c" kind="function"><name>adjust</name></member>
-    <member refid="class_markov_1_1_edge_1a92a6697d909efeee8938c4fb85df2c75" kind="function"><name>traverse</name></member>
-    <member refid="class_markov_1_1_edge_1ab02be668170419a296cc5c485962a07d" kind="function"><name>set_left</name></member>
-    <member refid="class_markov_1_1_edge_1ae0db61f4d345ecbcbeb45e4fb2c2692d" kind="function"><name>set_right</name></member>
-    <member refid="class_markov_1_1_edge_1a13e3c20a4e7070c551ef8390cff637ea" kind="function"><name>weight</name></member>
-    <member refid="class_markov_1_1_edge_1aeebc3a01e554adeff057806174c2e4a9" kind="function"><name>left</name></member>
-    <member refid="class_markov_1_1_edge_1a55863f8509177d053506a2a6a88dc192" kind="function"><name>right</name></member>
+    <member refid="class_markov_1_1_edge_1a622d63509c6179cec56963d803ad1592" kind="variable"><name>_left</name></member>
+    <member refid="class_markov_1_1_edge_1a1980a59351e80a7ef83fc04707529cfe" kind="variable"><name>_right</name></member>
+    <member refid="class_markov_1_1_edge_1aab02482bfc40357c12aeb5f5ee3cd0a6" kind="variable"><name>_weight</name></member>
+    <member refid="class_markov_1_1_edge_1a36413aeee1084d1e555345d57bf27fdd" kind="function"><name>Markov::Edge</name></member>
+    <member refid="class_markov_1_1_edge_1a667f6d97af29300ad9217e80f1e6dae1" kind="function"><name>Markov::Edge</name></member>
+    <member refid="class_markov_1_1_edge_1ab36e4f8f7ae37b81966e10929097f2aa" kind="function"><name>adjust</name></member>
+    <member refid="class_markov_1_1_edge_1adaa67349cf3b42e4c012d2247aa40c92" kind="function"><name>traverse</name></member>
+    <member refid="class_markov_1_1_edge_1a03eeb872b6fff6aed120f090d3732827" kind="function"><name>set_left</name></member>
+    <member refid="class_markov_1_1_edge_1adef481bf5942f46f298b094ab93101b7" kind="function"><name>set_right</name></member>
+    <member refid="class_markov_1_1_edge_1ab6160a5b9c6e8a51fe1ecba063e9402b" kind="function"><name>weight</name></member>
+    <member refid="class_markov_1_1_edge_1a642aa92fbeb81971c5ec9d2894d76402" kind="function"><name>left</name></member>
+    <member refid="class_markov_1_1_edge_1a876e20dc6d98e046a7503f017cf553f2" kind="function"><name>right</name></member>
   </compound>
   <compound refid="class_markov_passwords_g_u_i" kind="class"><name>MarkovPasswordsGUI</name>
     <member refid="class_markov_passwords_g_u_i_1a225f44e95f722bc3aa3774222eeb9f39" kind="variable"><name>ui</name></member>
     <member refid="class_markov_passwords_g_u_i_1aa923171220140b2ad8e7efc68d95f2dc" kind="function"><name>MarkovPasswordsGUI</name></member>
   </compound>
   <compound refid="class_markov_1_1_model" kind="class"><name>Markov::Model</name>
-    <member refid="class_markov_1_1_model_1a98faa7fcc8a536ac7b74fc53023590b1" kind="variable"><name>nodes</name></member>
-    <member refid="class_markov_1_1_model_1a18da2649be6f2705e28722d322c9472b" kind="variable"><name>starterNode</name></member>
-    <member refid="class_markov_1_1_model_1a7968167ab6a073b7e505e8517ba4aeb3" kind="variable"><name>edges</name></member>
-    <member refid="class_markov_1_1_model_1a01d659097ae6f9113ddc5946f7ce571a" kind="function"><name>RandomWalk</name></member>
-    <member refid="class_markov_1_1_model_1a7c334d47dfa1920e643b02f57ecbec9e" kind="function"><name>adjust</name></member>
-    <member refid="class_markov_1_1_model_1ab290bb76bc62e9b89fd79108354fd35a" kind="function"><name>Import</name></member>
-    <member refid="class_markov_1_1_model_1ae0393c52fb2366209e9763e568ab8563" kind="function"><name>Import</name></member>
-    <member refid="class_markov_1_1_model_1ac36f9c775ac42c295756cb25f22e1c1b" kind="function"><name>Export</name></member>
-    <member refid="class_markov_1_1_model_1a5a40f49b12eff42d6818476a9efc8288" kind="function"><name>Export</name></member>
+    <member refid="class_markov_1_1_model_1ae6e142d545313dcdb87b0ae3618397fa" kind="variable"><name>nodes</name></member>
+    <member refid="class_markov_1_1_model_1aa834ba7bf4fab9141f59940b48adfdac" kind="variable"><name>starterNode</name></member>
+    <member refid="class_markov_1_1_model_1ab6aa821b0186629ec7f460cdc2dfb303" kind="variable"><name>edges</name></member>
+    <member refid="class_markov_1_1_model_1a2e0249e4630353a260e06b8f3a72f5bb" kind="function"><name>RandomWalk</name></member>
+    <member refid="class_markov_1_1_model_1abb14649eb59af2b60d17400e3c1d827b" kind="function"><name>adjust</name></member>
+    <member refid="class_markov_1_1_model_1a379ea9943f9d4c212e1140d4a9af64f5" kind="function"><name>Import</name></member>
+    <member refid="class_markov_1_1_model_1a481a5c1715e3d0f0e459de09b3b3dbf9" kind="function"><name>Import</name></member>
+    <member refid="class_markov_1_1_model_1ae16027a94235d2988ac4be35ea07d939" kind="function"><name>Export</name></member>
+    <member refid="class_markov_1_1_model_1acaa03e8716802bdf6c174c5fc23210dc" kind="function"><name>Export</name></member>
   </compound>
   <compound refid="class_markov_1_1_node" kind="class"><name>Markov::Node</name>
-    <member refid="class_markov_1_1_node_1a149a7d0f09dbeb7df1ad91953c356ed6" kind="variable"><name>_value</name></member>
-    <member refid="class_markov_1_1_node_1a948109a2529baba339026d93dd0928fd" kind="variable"><name>total_edge_weights</name></member>
-    <member refid="class_markov_1_1_node_1a36a8e798a20a6320e0e5ae2738ff00d0" kind="variable"><name>edges</name></member>
-    <member refid="class_markov_1_1_node_1aba8bb96b31d0f036d1831de9725585cf" kind="function"><name>Markov::Node</name></member>
-    <member refid="class_markov_1_1_node_1a01d11553e9eb43a545ea3e4dd7a8c88e" kind="function"><name>Markov::Node</name></member>
-    <member refid="class_markov_1_1_node_1a7e5907628cba10dd188b91b12aee79fd" kind="function"><name>Link</name></member>
-    <member refid="class_markov_1_1_node_1a6e994decf4700b2c3f5e9cdea3d17ef8" kind="function"><name>Link</name></member>
-    <member refid="class_markov_1_1_node_1a4dd3cbabbdad85e8cb8319c4e2901874" kind="function"><name>RandomNext</name></member>
-    <member refid="class_markov_1_1_node_1a152af05fd4ecc276cf0f125cdb62faf9" kind="function"><name>UpdateEdges</name></member>
-    <member refid="class_markov_1_1_node_1a4361cd880979dfe2919d1e7a1cf4b84e" kind="function"><name>findEdge</name></member>
-    <member refid="class_markov_1_1_node_1a29a5636aa6724997c02b55c3d6f72336" kind="function"><name>findEdge</name></member>
-    <member refid="class_markov_1_1_node_1aaaacdb18a5683b5ec76206c2383554fd" kind="function"><name>value</name></member>
+    <member refid="class_markov_1_1_node_1a9851cd33ea466176a5728e3ccea6efed" kind="variable"><name>_value</name></member>
+    <member refid="class_markov_1_1_node_1a734f69786bb586f7f5164b33c1251d55" kind="variable"><name>total_edge_weights</name></member>
+    <member refid="class_markov_1_1_node_1ac70de8ab862a4595bc8e0f51f975d4ce" kind="variable"><name>edges</name></member>
+    <member refid="class_markov_1_1_node_1a09666b914debf751d0d8f0afc028ec53" kind="function"><name>Markov::Node</name></member>
+    <member refid="class_markov_1_1_node_1a2d87cd1f152ee6415225611404dbdfe6" kind="function"><name>Markov::Node</name></member>
+    <member refid="class_markov_1_1_node_1ad0dbf4d37c8c29943c0385b4d87a1988" kind="function"><name>Link</name></member>
+    <member refid="class_markov_1_1_node_1a1f6da105c34126ab5f0ddb1f5907ca02" kind="function"><name>Link</name></member>
+    <member refid="class_markov_1_1_node_1aaed7c8987e805fca2b56d50c7f25d9d1" kind="function"><name>RandomNext</name></member>
+    <member refid="class_markov_1_1_node_1ac9405ba6ae41417c30f79f12bd80cb47" kind="function"><name>UpdateEdges</name></member>
+    <member refid="class_markov_1_1_node_1a1147944cc9a2daa4f3128c4a40978b44" kind="function"><name>findEdge</name></member>
+    <member refid="class_markov_1_1_node_1acdcb964f3fa7cdd7b55cbb8776686f35" kind="function"><name>findEdge</name></member>
+    <member refid="class_markov_1_1_node_1ada4486380ae3e196fb1c24e2ec8325f3" kind="function"><name>value</name></member>
   </compound>
   <compound refid="classterminal" kind="class"><name>terminal</name>
     <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59f" kind="enum"><name>color</name></member>
@@ -90,7 +90,7 @@
   <compound refid="model_8h" kind="file"><name>model.h</name>
   </compound>
   <compound refid="node_8cpp" kind="file"><name>node.cpp</name>
-    <member refid="node_8cpp_1acecf83ee74821079e763289ccec0ee73" kind="function"><name>findVertice</name></member>
+    <member refid="node_8cpp_1a98eb69e5e218c3fc10c5fb3c193e9381" kind="function"><name>findVertice</name></member>
   </compound>
   <compound refid="node_8h" kind="file"><name>node.h</name>
   </compound>

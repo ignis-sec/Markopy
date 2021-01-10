@@ -46,6 +46,7 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
+          <div class="m-doc-template">template&lt;typename storageType&gt;</div>
           <span class="m-breadcrumb"><a href="namespace_markov.html">Markov</a>::<wbr/></span>Node <span class="m-thin">class</span>
         </h1>
         <p>A node class that for the vertices of model. Connected with eachother using <a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>.</p>
@@ -65,12 +66,12 @@
         <section id="typeless-methods">
           <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
           <dl class="m-doc">
-            <dt id="aba8bb96b31d0f036d1831de9725585cf">
-              <span class="m-doc-wrap-bumper"><a href="#aba8bb96b31d0f036d1831de9725585cf" class="m-doc-self">Markov::Node</a>(</span><span class="m-doc-wrap">)</span>
+            <dt id="a09666b914debf751d0d8f0afc028ec53">
+              <span class="m-doc-wrap-bumper"><a href="#a09666b914debf751d0d8f0afc028ec53" class="m-doc-self">Markov::Node</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
             <dd>Default constructor. Creates an empty <a href="class_markov_1_1_node.html" class="m-doc">Node</a>.</dd>
-            <dt id="a01d11553e9eb43a545ea3e4dd7a8c88e">
-              <span class="m-doc-wrap-bumper"><a href="#a01d11553e9eb43a545ea3e4dd7a8c88e" class="m-doc-self">Markov::Node</a>(</span><span class="m-doc-wrap">unsigned char _value)</span>
+            <dt id="a2d87cd1f152ee6415225611404dbdfe6">
+              <span class="m-doc-wrap-bumper"><a href="#a2d87cd1f152ee6415225611404dbdfe6" class="m-doc-self">Markov::Node</a>(</span><span class="m-doc-wrap">storageType _value)</span>
             </dt>
             <dd>Constructor. Creates a <a href="class_markov_1_1_node.html" class="m-doc">Node</a> with no edges and with given value.</dd>
           </dl>
@@ -79,40 +80,43 @@
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a7e5907628cba10dd188b91b12aee79fd" class="m-doc">Link</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>*) -&gt; <a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>*</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#ad0dbf4d37c8c29943c0385b4d87a1988" class="m-doc">Link</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;storageType&gt;*) -&gt; <a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;storageType&gt;*</span>
             </dt>
             <dd>Link this node with another, with this node as its source.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a6e994decf4700b2c3f5e9cdea3d17ef8" class="m-doc">Link</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>*) -&gt; <a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>*</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a1f6da105c34126ab5f0ddb1f5907ca02" class="m-doc">Link</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;storageType&gt;*) -&gt; <a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;storageType&gt;*</span>
             </dt>
             <dd>Link this node with another, with this node as its source.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a4dd3cbabbdad85e8cb8319c4e2901874" class="m-doc">RandomNext</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>*</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#aaed7c8987e805fca2b56d50c7f25d9d1" class="m-doc">RandomNext</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;storageType&gt;*</span>
             </dt>
             <dd>Chose a random node from the list of edges, with regards to its weight, and traverse to that.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a152af05fd4ecc276cf0f125cdb62faf9" class="m-doc">UpdateEdges</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>*) -&gt; bool</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#ac9405ba6ae41417c30f79f12bd80cb47" class="m-doc">UpdateEdges</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;storageType&gt;*) -&gt; bool</span>
             </dt>
             <dd>Insert a new edge to the this.edges.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a4361cd880979dfe2919d1e7a1cf4b84e" class="m-doc">findEdge</a>(</span><span class="m-doc-wrap">char repr) -&gt; <a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>*</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a1147944cc9a2daa4f3128c4a40978b44" class="m-doc">findEdge</a>(</span><span class="m-doc-wrap">storageType repr) -&gt; <a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;storageType&gt;*</span>
             </dt>
             <dd>Find an edge with its character representation.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a29a5636aa6724997c02b55c3d6f72336" class="m-doc">findEdge</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Node</a>* target) -&gt; <a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>*</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#acdcb964f3fa7cdd7b55cbb8776686f35" class="m-doc">findEdge</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Node</a>&lt;storageType&gt;* target) -&gt; <a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;storageType&gt;*</span>
             </dt>
             <dd>Find an edge with its pointer. Avoid unless neccessary because comptutational cost of find by character is cheaper (because of std::map)</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#aaaacdb18a5683b5ec76206c2383554fd" class="m-doc">value</a>(</span><span class="m-doc-wrap">) -&gt; unsigned char</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#ada4486380ae3e196fb1c24e2ec8325f3" class="m-doc">value</a>(</span><span class="m-doc-wrap">) -&gt; unsigned char</span>
             </dt>
             <dd>Return character representation of this node.</dd>
           </dl>
         </section>
         <section>
           <h2>Function documentation</h2>
-          <section class="m-doc-details" id="a7e5907628cba10dd188b91b12aee79fd"><div>
+          <section class="m-doc-details" id="ad0dbf4d37c8c29943c0385b4d87a1988"><div>
             <h3>
-              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>* Markov::<wbr />Node::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7e5907628cba10dd188b91b12aee79fd" class="m-doc-self">Link</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>*)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename storageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;storageType&gt;* Markov::<wbr />Node&lt;storageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ad0dbf4d37c8c29943c0385b4d87a1988" class="m-doc-self">Link</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;storageType&gt;*)</span></span>
             </h3>
             <p>Link this node with another, with this node as its source.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -125,9 +129,12 @@
             </table>
 <p>Creates a new <a href="class_markov_1_1_edge.html" class="m-doc">Edge</a>.</p>
           </div></section>
-          <section class="m-doc-details" id="a6e994decf4700b2c3f5e9cdea3d17ef8"><div>
+          <section class="m-doc-details" id="a1f6da105c34126ab5f0ddb1f5907ca02"><div>
             <h3>
-              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>* Markov::<wbr />Node::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6e994decf4700b2c3f5e9cdea3d17ef8" class="m-doc-self">Link</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>*)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename storageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;storageType&gt;* Markov::<wbr />Node&lt;storageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1f6da105c34126ab5f0ddb1f5907ca02" class="m-doc-self">Link</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;storageType&gt;*)</span></span>
             </h3>
             <p>Link this node with another, with this node as its source.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -140,9 +147,12 @@
             </table>
 <p><em>DOES NOT</em> create a new <a href="class_markov_1_1_edge.html" class="m-doc">Edge</a>.</p>
           </div></section>
-          <section class="m-doc-details" id="a4dd3cbabbdad85e8cb8319c4e2901874"><div>
+          <section class="m-doc-details" id="aaed7c8987e805fca2b56d50c7f25d9d1"><div>
             <h3>
-              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>* Markov::<wbr />Node::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a4dd3cbabbdad85e8cb8319c4e2901874" class="m-doc-self">RandomNext</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename storageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;storageType&gt;* Markov::<wbr />Node&lt;storageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aaed7c8987e805fca2b56d50c7f25d9d1" class="m-doc-self">RandomNext</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
             <p>Chose a random node from the list of edges, with regards to its weight, and traverse to that.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -155,9 +165,12 @@
             </table>
 <p>This operation is done by generating a random number in range of 0-this.total_edge_weights, and then iterating over the list of edges. At each step, weight of the edge is subtracted from the random number, and once it is 0, next node is selected.</p>
           </div></section>
-          <section class="m-doc-details" id="a152af05fd4ecc276cf0f125cdb62faf9"><div>
+          <section class="m-doc-details" id="ac9405ba6ae41417c30f79f12bd80cb47"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">bool Markov::<wbr />Node::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a152af05fd4ecc276cf0f125cdb62faf9" class="m-doc-self">UpdateEdges</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>*)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename storageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">bool Markov::<wbr />Node&lt;storageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac9405ba6ae41417c30f79f12bd80cb47" class="m-doc-self">UpdateEdges</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;storageType&gt;*)</span></span>
             </h3>
             <p>Insert a new edge to the this.edges.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -169,9 +182,12 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-doc-details" id="a4361cd880979dfe2919d1e7a1cf4b84e"><div>
+          <section class="m-doc-details" id="a1147944cc9a2daa4f3128c4a40978b44"><div>
             <h3>
-              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>* Markov::<wbr />Node::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a4361cd880979dfe2919d1e7a1cf4b84e" class="m-doc-self">findEdge</a>(</span><span class="m-doc-wrap">char repr)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename storageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;storageType&gt;* Markov::<wbr />Node&lt;storageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1147944cc9a2daa4f3128c4a40978b44" class="m-doc-self">findEdge</a>(</span><span class="m-doc-wrap">storageType repr)</span></span>
             </h3>
             <p>Find an edge with its character representation.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -192,9 +208,12 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-doc-details" id="a29a5636aa6724997c02b55c3d6f72336"><div>
+          <section class="m-doc-details" id="acdcb964f3fa7cdd7b55cbb8776686f35"><div>
             <h3>
-              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>* Markov::<wbr />Node::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a29a5636aa6724997c02b55c3d6f72336" class="m-doc-self">findEdge</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Node</a>* target)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename storageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;storageType&gt;* Markov::<wbr />Node&lt;storageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#acdcb964f3fa7cdd7b55cbb8776686f35" class="m-doc-self">findEdge</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Node</a>&lt;storageType&gt;* target)</span></span>
             </h3>
             <p>Find an edge with its pointer. Avoid unless neccessary because comptutational cost of find by character is cheaper (because of std::map)</p>
             <table class="m-table m-fullwidth m-flat">
@@ -215,9 +234,12 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-doc-details" id="aaaacdb18a5683b5ec76206c2383554fd"><div>
+          <section class="m-doc-details" id="ada4486380ae3e196fb1c24e2ec8325f3"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">unsigned char Markov::<wbr />Node::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aaaacdb18a5683b5ec76206c2383554fd" class="m-doc-self">value</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename storageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">unsigned char Markov::<wbr />Node&lt;storageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ada4486380ae3e196fb1c24e2ec8325f3" class="m-doc-self">value</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
             <p>Return character representation of this node.</p>
             <table class="m-table m-fullwidth m-flat">

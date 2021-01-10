@@ -2,9 +2,9 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="namespace_markov" kind="namespace" language="C++">
     <compoundname>Markov</compoundname>
+    <innerclass refid="class_markov_1_1_node" prot="public">Markov::Node</innerclass>
     <innerclass refid="class_markov_1_1_edge" prot="public">Markov::Edge</innerclass>
     <innerclass refid="class_markov_1_1_model" prot="public">Markov::Model</innerclass>
-    <innerclass refid="class_markov_1_1_node" prot="public">Markov::Node</innerclass>
     <briefdescription>
 <para>Namespace for model related classes. </para>
     </briefdescription>

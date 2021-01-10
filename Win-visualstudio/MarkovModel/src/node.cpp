@@ -1,5 +1,6 @@
 #include "node.h"
 #include <assert.h>
+
 template <typename storageType>
 Markov::Node<storageType>::Node(storageType _value) {
 	this->_value = _value;

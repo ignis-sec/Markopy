@@ -14,7 +14,7 @@
 \item Includes Markov\+Model.
 \item Will be used to specialize Markov\+Model exclusively for password generation.
 \item Will have functions that help with file operations such as input and output, import export.
-\item As an example, this will read the dataset file, and pass each line to \mbox{\hyperlink{class_markov_1_1_model_a7c334d47dfa1920e643b02f57ecbec9e}{Markov\+::\+Model\+::adjust}} when training.
+\item As an example, this will read the dataset file, and pass each line to \mbox{\hyperlink{class_markov_1_1_model_abb14649eb59af2b60d17400e3c1d827b}{Markov\+::\+Model\+::adjust}} when training.
 \item Basically command line interface for using Markov\+Model.
 \end{DoxyItemize}
 \item \mbox{\hyperlink{class_markov_passwords_g_u_i}{Markov\+Passwords\+GUI}}
@@ -53,10 +53,10 @@ As the model is trained, hidden linguistical patterns start to appear, and our m
 
 With our dataset, without doing any kind of linugistic analysis ourselves, our \mbox{\hyperlink{namespace_markov}{Markov}} Model has highlighted that strings are more likely to start with a, b tends to follow a, and a is likely to be repeated in the string. \hypertarget{index_autotoc_md6}{}\doxysubsection{Import/\+Export}\label{index_autotoc_md6}
 Import and export is done by storing/restoring list of all edges to/from a file. All the edges are traversed and written to the file in the format of \char`\"{}left,weight,right\char`\"{}\hypertarget{index_autotoc_md7}{}\doxysubsection{Training}\label{index_autotoc_md7}
-\mbox{\hyperlink{namespace_markov_passwords}{Markov\+Passwords}} should read input from our dataset file, parse it line by line, and feed it to \mbox{\hyperlink{class_markov_1_1_model_a7c334d47dfa1920e643b02f57ecbec9e}{Markov\+::\+Model\+::adjust}}
+\mbox{\hyperlink{namespace_markov_passwords}{Markov\+Passwords}} should read input from our dataset file, parse it line by line, and feed it to \mbox{\hyperlink{class_markov_1_1_model_abb14649eb59af2b60d17400e3c1d827b}{Markov\+::\+Model\+::adjust}}
 
 Once a training is complete, \mbox{\hyperlink{namespace_markov_passwords}{Markov\+Passwords}} is supposed to export the model to a savefile so that model is not required to train for each run.\hypertarget{index_autotoc_md8}{}\doxysubsection{Generation}\label{index_autotoc_md8}
-Generation is done by invoking \mbox{\hyperlink{class_markov_1_1_model_a01d659097ae6f9113ddc5946f7ce571a}{Markov\+::\+Model\+::\+Random\+Walk}} as many times as neccessary, and writing the result to a file line by line.\hypertarget{index_autotoc_md9}{}\doxysubsection{Testing/\+Cracking}\label{index_autotoc_md9}
+Generation is done by invoking \mbox{\hyperlink{class_markov_1_1_model_a2e0249e4630353a260e06b8f3a72f5bb}{Markov\+::\+Model\+::\+Random\+Walk}} as many times as neccessary, and writing the result to a file line by line.\hypertarget{index_autotoc_md9}{}\doxysubsection{Testing/\+Cracking}\label{index_autotoc_md9}
 Cracking is done {\bfseries{EXTERNALLY}}. Our tool is not going to be responsible for cracking hashes. We are simply going to generate lists of strings, and are going to use 3rd party tools to crack them. Good examples for hash-\/cracking tools are Hashcat and John the ripper. They work with user supplied lists of strings.\hypertarget{index_autotoc_md10}{}\doxysubsection{Reporting \& UI}\label{index_autotoc_md10}
 We are also supposed to collect data from generation/training steps, and process them into useful graphs/charts/tables to help us determine how to improve the program. Some of the useful data to collect are\+:
 \begin{DoxyItemize}

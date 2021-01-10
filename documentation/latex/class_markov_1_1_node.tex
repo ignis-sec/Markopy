@@ -1,5 +1,5 @@
-\hypertarget{class_markov_1_1_node}{}\doxysection{Markov\+::Node Class Reference}
-\label{class_markov_1_1_node}\index{Markov::Node@{Markov::Node}}
+\hypertarget{class_markov_1_1_node}{}\doxysection{Markov\+::Node$<$ storage\+Type $>$ Class Template Reference}
+\label{class_markov_1_1_node}\index{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}}
 
 
 A node class that for the vertices of model. Connected with eachother using \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}.  
@@ -8,56 +8,42 @@ A node class that for the vertices of model. Connected with eachother using \mbo
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_markov_1_1_node_aba8bb96b31d0f036d1831de9725585cf}\label{class_markov_1_1_node_aba8bb96b31d0f036d1831de9725585cf}} 
-\mbox{\hyperlink{class_markov_1_1_node_aba8bb96b31d0f036d1831de9725585cf}{Markov\+::\+Node}} ()
+\mbox{\Hypertarget{class_markov_1_1_node_a09666b914debf751d0d8f0afc028ec53}\label{class_markov_1_1_node_a09666b914debf751d0d8f0afc028ec53}} 
+\mbox{\hyperlink{class_markov_1_1_node_a09666b914debf751d0d8f0afc028ec53}{Markov\+::\+Node}} ()
 \begin{DoxyCompactList}\small\item\em Default constructor. Creates an empty \mbox{\hyperlink{class_markov_1_1_node}{Node}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_node_a01d11553e9eb43a545ea3e4dd7a8c88e}{Markov\+::\+Node}} (unsigned char \+\_\+value)
+\mbox{\hyperlink{class_markov_1_1_node_a2d87cd1f152ee6415225611404dbdfe6}{Markov\+::\+Node}} (storage\+Type \+\_\+value)
 \begin{DoxyCompactList}\small\item\em Constructor. Creates a \mbox{\hyperlink{class_markov_1_1_node}{Node}} with no edges and with given value. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a7e5907628cba10dd188b91b12aee79fd}{Link}} (\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$)
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node_ad0dbf4d37c8c29943c0385b4d87a1988}{Link}} (\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$ $\ast$)
 \begin{DoxyCompactList}\small\item\em Link this node with another, with this node as its source. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a6e994decf4700b2c3f5e9cdea3d17ef8}{Link}} (\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$)
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a1f6da105c34126ab5f0ddb1f5907ca02}{Link}} (\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$)
 \begin{DoxyCompactList}\small\item\em Link this node with another, with this node as its source. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a4dd3cbabbdad85e8cb8319c4e2901874}{Random\+Next}} ()
+\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node_aaed7c8987e805fca2b56d50c7f25d9d1}{Random\+Next}} ()
 \begin{DoxyCompactList}\small\item\em Chose a random node from the list of edges, with regards to its weight, and traverse to that. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_markov_1_1_node_a152af05fd4ecc276cf0f125cdb62faf9}{Update\+Edges}} (\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$)
+bool \mbox{\hyperlink{class_markov_1_1_node_ac9405ba6ae41417c30f79f12bd80cb47}{Update\+Edges}} (\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$)
 \begin{DoxyCompactList}\small\item\em Insert a new edge to the this.\+edges. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a4361cd880979dfe2919d1e7a1cf4b84e}{find\+Edge}} (char repr)
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a1147944cc9a2daa4f3128c4a40978b44}{find\+Edge}} (storage\+Type repr)
 \begin{DoxyCompactList}\small\item\em Find an edge with its character representation. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a29a5636aa6724997c02b55c3d6f72336}{find\+Edge}} (\mbox{\hyperlink{class_markov_1_1_node}{Node}} $\ast$target)
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node_acdcb964f3fa7cdd7b55cbb8776686f35}{find\+Edge}} (\mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ storage\+Type $>$ $\ast$target)
 \begin{DoxyCompactList}\small\item\em Find an edge with its pointer. Avoid unless neccessary because comptutational cost of find by character is cheaper (because of std\+::map) \end{DoxyCompactList}\item 
-unsigned char \mbox{\hyperlink{class_markov_1_1_node_aaaacdb18a5683b5ec76206c2383554fd}{value}} ()
+unsigned char \mbox{\hyperlink{class_markov_1_1_node_ada4486380ae3e196fb1c24e2ec8325f3}{value}} ()
 \begin{DoxyCompactList}\small\item\em Return character representation of this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename storage\+Type$>$\newline
+class Markov\+::\+Node$<$ storage\+Type $>$}
+
 A node class that for the vertices of model. Connected with eachother using \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}. 
 
 This class will {\itshape later be templated to accept other data types than char}. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_markov_1_1_node_a4361cd880979dfe2919d1e7a1cf4b84e}\label{class_markov_1_1_node_a4361cd880979dfe2919d1e7a1cf4b84e}} 
-\index{Markov::Node@{Markov::Node}!findEdge@{findEdge}}
-\index{findEdge@{findEdge}!Markov::Node@{Markov::Node}}
+\mbox{\Hypertarget{class_markov_1_1_node_acdcb964f3fa7cdd7b55cbb8776686f35}\label{class_markov_1_1_node_acdcb964f3fa7cdd7b55cbb8776686f35}} 
+\index{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!findEdge@{findEdge}}
+\index{findEdge@{findEdge}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}}
 \doxysubsubsection{\texorpdfstring{findEdge()}{findEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$\ast$ Markov\+::\+Node\+::find\+Edge (\begin{DoxyParamCaption}\item[{char}]{repr }\end{DoxyParamCaption})}
-
-
-
-Find an edge with its character representation. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em repr} & -\/ character value of the target node. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\mbox{\hyperlink{class_markov_1_1_edge}{Edge}} that is connected between this node, and the target node. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_node_a29a5636aa6724997c02b55c3d6f72336}\label{class_markov_1_1_node_a29a5636aa6724997c02b55c3d6f72336}} 
-\index{Markov::Node@{Markov::Node}!findEdge@{findEdge}}
-\index{findEdge@{findEdge}!Markov::Node@{Markov::Node}}
-\doxysubsubsection{\texorpdfstring{findEdge()}{findEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$\ast$ Markov\+::\+Node\+::find\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_node}{Node}} $\ast$}]{target }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename storage\+Type $>$ \\
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$storage\+Type$>$$\ast$ \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$\+::find\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ storage\+Type $>$ $\ast$}]{target }\end{DoxyParamCaption})}
 
 
 
@@ -71,11 +57,31 @@ Find an edge with its pointer. Avoid unless neccessary because comptutational co
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} that is connected between this node, and the target node. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_node_a6e994decf4700b2c3f5e9cdea3d17ef8}\label{class_markov_1_1_node_a6e994decf4700b2c3f5e9cdea3d17ef8}} 
-\index{Markov::Node@{Markov::Node}!Link@{Link}}
-\index{Link@{Link}!Markov::Node@{Markov::Node}}
+\mbox{\Hypertarget{class_markov_1_1_node_a1147944cc9a2daa4f3128c4a40978b44}\label{class_markov_1_1_node_a1147944cc9a2daa4f3128c4a40978b44}} 
+\index{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!findEdge@{findEdge}}
+\index{findEdge@{findEdge}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}}
+\doxysubsubsection{\texorpdfstring{findEdge()}{findEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename storage\+Type $>$ \\
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$storage\+Type$>$$\ast$ \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$\+::find\+Edge (\begin{DoxyParamCaption}\item[{storage\+Type}]{repr }\end{DoxyParamCaption})}
+
+
+
+Find an edge with its character representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em repr} & -\/ character value of the target node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_markov_1_1_edge}{Edge}} that is connected between this node, and the target node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_node_a1f6da105c34126ab5f0ddb1f5907ca02}\label{class_markov_1_1_node_a1f6da105c34126ab5f0ddb1f5907ca02}} 
+\index{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Link@{Link}}
+\index{Link@{Link}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}}
 \doxysubsubsection{\texorpdfstring{Link()}{Link()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$ Markov\+::\+Node\+::\+Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename storage\+Type $>$ \\
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$\+::Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -89,11 +95,12 @@ Link this node with another, with this node as its source.
 \begin{DoxyReturn}{Returns}
 the same edge as parameter target. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_node_a7e5907628cba10dd188b91b12aee79fd}\label{class_markov_1_1_node_a7e5907628cba10dd188b91b12aee79fd}} 
-\index{Markov::Node@{Markov::Node}!Link@{Link}}
-\index{Link@{Link}!Markov::Node@{Markov::Node}}
+\mbox{\Hypertarget{class_markov_1_1_node_ad0dbf4d37c8c29943c0385b4d87a1988}\label{class_markov_1_1_node_ad0dbf4d37c8c29943c0385b4d87a1988}} 
+\index{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Link@{Link}}
+\index{Link@{Link}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}}
 \doxysubsubsection{\texorpdfstring{Link()}{Link()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$ Markov\+::\+Node\+::\+Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename storage\+Type $>$ \\
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$\+::Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$ $\ast$}]{n }\end{DoxyParamCaption})}
 
 
 
@@ -107,11 +114,12 @@ Creates a new \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}.
 \begin{DoxyReturn}{Returns}
 A new node with left as this, and right as parameter target. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_node_a01d11553e9eb43a545ea3e4dd7a8c88e}\label{class_markov_1_1_node_a01d11553e9eb43a545ea3e4dd7a8c88e}} 
-\index{Markov::Node@{Markov::Node}!Markov::Node@{Markov::Node}}
-\index{Markov::Node@{Markov::Node}!Markov::Node@{Markov::Node}}
+\mbox{\Hypertarget{class_markov_1_1_node_a2d87cd1f152ee6415225611404dbdfe6}\label{class_markov_1_1_node_a2d87cd1f152ee6415225611404dbdfe6}} 
+\index{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Markov::Node@{Markov::Node}}
+\index{Markov::Node@{Markov::Node}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}}
 \doxysubsubsection{\texorpdfstring{Markov::Node()}{Markov::Node()}}
-{\footnotesize\ttfamily Markov\+::\+Node\+::\+Markov\+::\+Node (\begin{DoxyParamCaption}\item[{unsigned char}]{\+\_\+value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename storage\+Type $>$ \\
+\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$\+::\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} (\begin{DoxyParamCaption}\item[{storage\+Type}]{\+\_\+value }\end{DoxyParamCaption})}
 
 
 
@@ -122,11 +130,12 @@ Constructor. Creates a \mbox{\hyperlink{class_markov_1_1_node}{Node}} with no ed
 {\em value} & -\/ Nodes character representation. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_markov_1_1_node_a4dd3cbabbdad85e8cb8319c4e2901874}\label{class_markov_1_1_node_a4dd3cbabbdad85e8cb8319c4e2901874}} 
-\index{Markov::Node@{Markov::Node}!RandomNext@{RandomNext}}
-\index{RandomNext@{RandomNext}!Markov::Node@{Markov::Node}}
+\mbox{\Hypertarget{class_markov_1_1_node_aaed7c8987e805fca2b56d50c7f25d9d1}\label{class_markov_1_1_node_aaed7c8987e805fca2b56d50c7f25d9d1}} 
+\index{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!RandomNext@{RandomNext}}
+\index{RandomNext@{RandomNext}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}}
 \doxysubsubsection{\texorpdfstring{RandomNext()}{RandomNext()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}} $\ast$ Markov\+::\+Node\+::\+Random\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename storage\+Type $>$ \\
+\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$\+::Random\+Next}
 
 
 
@@ -135,11 +144,12 @@ Chose a random node from the list of edges, with regards to its weight, and trav
 This operation is done by generating a random number in range of 0-\/this.\+total\+\_\+edge\+\_\+weights, and then iterating over the list of edges. At each step, weight of the edge is subtracted from the random number, and once it is 0, next node is selected. \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{class_markov_1_1_node}{Node}} that was chosen at weight biased random. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_node_a152af05fd4ecc276cf0f125cdb62faf9}\label{class_markov_1_1_node_a152af05fd4ecc276cf0f125cdb62faf9}} 
-\index{Markov::Node@{Markov::Node}!UpdateEdges@{UpdateEdges}}
-\index{UpdateEdges@{UpdateEdges}!Markov::Node@{Markov::Node}}
+\mbox{\Hypertarget{class_markov_1_1_node_ac9405ba6ae41417c30f79f12bd80cb47}\label{class_markov_1_1_node_ac9405ba6ae41417c30f79f12bd80cb47}} 
+\index{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!UpdateEdges@{UpdateEdges}}
+\index{UpdateEdges@{UpdateEdges}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}}
 \doxysubsubsection{\texorpdfstring{UpdateEdges()}{UpdateEdges()}}
-{\footnotesize\ttfamily bool Markov\+::\+Node\+::\+Update\+Edges (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}} $\ast$}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename storage\+Type $>$ \\
+bool \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$\+::Update\+Edges (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -153,11 +163,12 @@ Insert a new edge to the this.\+edges.
 \begin{DoxyReturn}{Returns}
 true if insertion was successful, false if it fails. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_node_aaaacdb18a5683b5ec76206c2383554fd}\label{class_markov_1_1_node_aaaacdb18a5683b5ec76206c2383554fd}} 
-\index{Markov::Node@{Markov::Node}!value@{value}}
-\index{value@{value}!Markov::Node@{Markov::Node}}
+\mbox{\Hypertarget{class_markov_1_1_node_ada4486380ae3e196fb1c24e2ec8325f3}\label{class_markov_1_1_node_ada4486380ae3e196fb1c24e2ec8325f3}} 
+\index{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!value@{value}}
+\index{value@{value}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}}
 \doxysubsubsection{\texorpdfstring{value()}{value()}}
-{\footnotesize\ttfamily unsigned char Markov\+::\+Node\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename storage\+Type $>$ \\
+unsigned char \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$\+::value}
 
 
 
@@ -170,5 +181,6 @@ character representation at \+\_\+value.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
+D\+:/\+Repositories/\+Markov\+Passwords/\+Win-\/visualstudio/\+Markov\+Model/src/edge.\+h\item 
 D\+:/\+Repositories/\+Markov\+Passwords/\+Win-\/visualstudio/\+Markov\+Model/src/node.\+h\item 
 D\+:/\+Repositories/\+Markov\+Passwords/\+Win-\/visualstudio/\+Markov\+Model/src/node.\+cpp\end{DoxyCompactItemize}

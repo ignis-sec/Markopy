@@ -20,7 +20,7 @@
 <listitem><para>Includes MarkovModel.</para>
 </listitem><listitem><para>Will be used to specialize MarkovModel exclusively for password generation.</para>
 </listitem><listitem><para>Will have functions that help with file operations such as input and output, import export.</para>
-</listitem><listitem><para>As an example, this will read the dataset file, and pass each line to <ref refid="class_markov_1_1_model_1a7c334d47dfa1920e643b02f57ecbec9e" kindref="member">Markov::Model::adjust</ref> when training.</para>
+</listitem><listitem><para>As an example, this will read the dataset file, and pass each line to <ref refid="class_markov_1_1_model_1abb14649eb59af2b60d17400e3c1d827b" kindref="member">Markov::Model::adjust</ref> when training.</para>
 </listitem><listitem><para>Basically command line interface for using MarkovModel.</para>
 </listitem></itemizedlist>
 </para>
@@ -76,12 +76,12 @@
 </sect2>
 <sect2 id="index_1autotoc_md7">
 <title>Training</title>
-<para><ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref> should read input from our dataset file, parse it line by line, and feed it to <ref refid="class_markov_1_1_model_1a7c334d47dfa1920e643b02f57ecbec9e" kindref="member">Markov::Model::adjust</ref></para>
+<para><ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref> should read input from our dataset file, parse it line by line, and feed it to <ref refid="class_markov_1_1_model_1abb14649eb59af2b60d17400e3c1d827b" kindref="member">Markov::Model::adjust</ref></para>
 <para>Once a training is complete, <ref refid="namespace_markov_passwords" kindref="compound">MarkovPasswords</ref> is supposed to export the model to a savefile so that model is not required to train for each run.</para>
 </sect2>
 <sect2 id="index_1autotoc_md8">
 <title>Generation</title>
-<para>Generation is done by invoking <ref refid="class_markov_1_1_model_1a01d659097ae6f9113ddc5946f7ce571a" kindref="member">Markov::Model::RandomWalk</ref> as many times as neccessary, and writing the result to a file line by line.</para>
+<para>Generation is done by invoking <ref refid="class_markov_1_1_model_1a2e0249e4630353a260e06b8f3a72f5bb" kindref="member">Markov::Model::RandomWalk</ref> as many times as neccessary, and writing the result to a file line by line.</para>
 </sect2>
 <sect2 id="index_1autotoc_md9">
 <title>Testing/Cracking</title>

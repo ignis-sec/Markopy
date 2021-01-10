@@ -6,23 +6,12 @@
     <includes local="no">vector</includes>
     <includes local="no">fstream</includes>
     <includes refid="edge_8h" local="yes">edge.h</includes>
-    <includes refid="node_8h" local="yes">node.h</includes>
     <includedby refid="dllmain_8cpp" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/dllmain.cpp</includedby>
     <includedby refid="model_8cpp" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.cpp</includedby>
     <includedby refid="src_2main_8cpp" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/main.cpp</includedby>
     <incdepgraph>
       <node id="6">
         <label>cstdint</label>
-      </node>
-      <node id="7">
-        <label>node.h</label>
-        <link refid="node_8h_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
       </node>
       <node id="2">
         <label>map</label>
@@ -40,8 +29,6 @@
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="5">

@@ -46,6 +46,7 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
+          <div class="m-doc-template">template&lt;typename NodeStorageType&gt;</div>
           <span class="m-breadcrumb"><a href="namespace_markov.html">Markov</a>::<wbr/></span>Model <span class="m-thin">class</span>
         </h1>
         <p>class for the final <a href="namespace_markov.html" class="m-doc">Markov</a> <a href="class_markov_1_1_model.html" class="m-doc">Model</a>, constructed from nodes and edges.</p>
@@ -65,37 +66,40 @@
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a01d659097ae6f9113ddc5946f7ce571a" class="m-doc">RandomWalk</a>(</span><span class="m-doc-wrap">) -&gt; char*</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a2e0249e4630353a260e06b8f3a72f5bb" class="m-doc">RandomWalk</a>(</span><span class="m-doc-wrap">) -&gt; NodeStorageType*</span>
             </dt>
             <dd>Do a random walk on this model. Start from the starter node, invoke RandomNext on current node until terminator node is reached.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">void <a href="#a7c334d47dfa1920e643b02f57ecbec9e" class="m-doc">adjust</a>(</span><span class="m-doc-wrap">char* string,
+              <span class="m-doc-wrap-bumper">void <a href="#abb14649eb59af2b60d17400e3c1d827b" class="m-doc">adjust</a>(</span><span class="m-doc-wrap">NodeStorageType* payload,
               long int occurrence)</span>
             </dt>
             <dd>Adjust the model with a single string. Start from the starter node, and for each character, adjust the edge weight from current node to the next, until NULL character is reached. Then, update the edge weight from current node, to the terminator node.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#ab290bb76bc62e9b89fd79108354fd35a" class="m-doc">Import</a>(</span><span class="m-doc-wrap">std::ifstream*) -&gt; bool</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a379ea9943f9d4c212e1140d4a9af64f5" class="m-doc">Import</a>(</span><span class="m-doc-wrap">std::ifstream*) -&gt; bool</span>
             </dt>
             <dd>Import a file to construct the model.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#ae0393c52fb2366209e9763e568ab8563" class="m-doc">Import</a>(</span><span class="m-doc-wrap">char* filename) -&gt; bool</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a481a5c1715e3d0f0e459de09b3b3dbf9" class="m-doc">Import</a>(</span><span class="m-doc-wrap">char* filename) -&gt; bool</span>
             </dt>
-            <dd>Open a file to import with filename, and call bool <a href="class_markov_1_1_model.html#ab290bb76bc62e9b89fd79108354fd35a" class="m-doc">Markov::<wbr />Model::<wbr />Import</a> with std::ifstream.</dd>
+            <dd>Open a file to import with filename, and call bool <a href="class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5" class="m-doc">Markov::<wbr />Model::<wbr />Import</a> with std::ifstream.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#ac36f9c775ac42c295756cb25f22e1c1b" class="m-doc">Export</a>(</span><span class="m-doc-wrap">std::ofstream*) -&gt; bool</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#ae16027a94235d2988ac4be35ea07d939" class="m-doc">Export</a>(</span><span class="m-doc-wrap">std::ofstream*) -&gt; bool</span>
             </dt>
             <dd>Export a file of the model.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a5a40f49b12eff42d6818476a9efc8288" class="m-doc">Export</a>(</span><span class="m-doc-wrap">char* filename) -&gt; bool</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#acaa03e8716802bdf6c174c5fc23210dc" class="m-doc">Export</a>(</span><span class="m-doc-wrap">char* filename) -&gt; bool</span>
             </dt>
-            <dd>Open a file to export with filename, and call bool <a href="class_markov_1_1_model.html#ac36f9c775ac42c295756cb25f22e1c1b" class="m-doc">Markov::<wbr />Model::<wbr />Export</a> with std::ofstream.</dd>
+            <dd>Open a file to export with filename, and call bool <a href="class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939" class="m-doc">Markov::<wbr />Model::<wbr />Export</a> with std::ofstream.</dd>
           </dl>
         </section>
         <section>
           <h2>Function documentation</h2>
-          <section class="m-doc-details" id="a01d659097ae6f9113ddc5946f7ce571a"><div>
+          <section class="m-doc-details" id="a2e0249e4630353a260e06b8f3a72f5bb"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">char* Markov::<wbr />Model::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a01d659097ae6f9113ddc5946f7ce571a" class="m-doc-self">RandomWalk</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">NodeStorageType* Markov::<wbr />Model&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2e0249e4630353a260e06b8f3a72f5bb" class="m-doc-self">RandomWalk</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
             <p>Do a random walk on this model. Start from the starter node, invoke RandomNext on current node until terminator node is reached.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -107,9 +111,12 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-doc-details" id="a7c334d47dfa1920e643b02f57ecbec9e"><div>
+          <section class="m-doc-details" id="abb14649eb59af2b60d17400e3c1d827b"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">void Markov::<wbr />Model::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7c334d47dfa1920e643b02f57ecbec9e" class="m-doc-self">adjust</a>(</span><span class="m-doc-wrap">char* string,
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void Markov::<wbr />Model&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#abb14649eb59af2b60d17400e3c1d827b" class="m-doc-self">adjust</a>(</span><span class="m-doc-wrap">NodeStorageType* payload,
               long int occurrence)</span></span>
             </h3>
             <p>Adjust the model with a single string. Start from the starter node, and for each character, adjust the edge weight from current node to the next, until NULL character is reached. Then, update the edge weight from current node, to the terminator node.</p>
@@ -119,8 +126,8 @@
               </thead>
               <tbody>
                 <tr>
-                  <td style="width: 1%">string</td>
-                  <td>- String that is passed from the training, and will be used to adjust the model with</td>
+                  <td style="width: 1%">payload</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>occurrence</td>
@@ -129,9 +136,12 @@
               </tbody>
             </table>
           </div></section>
-          <section class="m-doc-details" id="ab290bb76bc62e9b89fd79108354fd35a"><div>
+          <section class="m-doc-details" id="a379ea9943f9d4c212e1140d4a9af64f5"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">bool Markov::<wbr />Model::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab290bb76bc62e9b89fd79108354fd35a" class="m-doc-self">Import</a>(</span><span class="m-doc-wrap">std::ifstream*)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">bool Markov::<wbr />Model&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a379ea9943f9d4c212e1140d4a9af64f5" class="m-doc-self">Import</a>(</span><span class="m-doc-wrap">std::ifstream*)</span></span>
             </h3>
             <p>Import a file to construct the model.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -144,11 +154,14 @@
             </table>
 <p>File contains a list of edges. Format is: Left_repr;weight;right_repr Iterate over this list, and construct nodes and edges accordingly.</p>
           </div></section>
-          <section class="m-doc-details" id="ae0393c52fb2366209e9763e568ab8563"><div>
+          <section class="m-doc-details" id="a481a5c1715e3d0f0e459de09b3b3dbf9"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">bool Markov::<wbr />Model::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae0393c52fb2366209e9763e568ab8563" class="m-doc-self">Import</a>(</span><span class="m-doc-wrap">char* filename)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">bool Markov::<wbr />Model&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a481a5c1715e3d0f0e459de09b3b3dbf9" class="m-doc-self">Import</a>(</span><span class="m-doc-wrap">char* filename)</span></span>
             </h3>
-            <p>Open a file to import with filename, and call bool <a href="class_markov_1_1_model.html#ab290bb76bc62e9b89fd79108354fd35a" class="m-doc">Markov::<wbr />Model::<wbr />Import</a> with std::ifstream.</p>
+            <p>Open a file to import with filename, and call bool <a href="class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5" class="m-doc">Markov::<wbr />Model::<wbr />Import</a> with std::ifstream.</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>
@@ -158,9 +171,12 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-doc-details" id="ac36f9c775ac42c295756cb25f22e1c1b"><div>
+          <section class="m-doc-details" id="ae16027a94235d2988ac4be35ea07d939"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">bool Markov::<wbr />Model::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac36f9c775ac42c295756cb25f22e1c1b" class="m-doc-self">Export</a>(</span><span class="m-doc-wrap">std::ofstream*)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">bool Markov::<wbr />Model&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae16027a94235d2988ac4be35ea07d939" class="m-doc-self">Export</a>(</span><span class="m-doc-wrap">std::ofstream*)</span></span>
             </h3>
             <p>Export a file of the model.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -173,11 +189,14 @@
             </table>
 <p>File contains a list of edges. Format is: Left_repr;weight;right_repr Iterate over this vertices, and their edges, and write them to file.</p>
           </div></section>
-          <section class="m-doc-details" id="a5a40f49b12eff42d6818476a9efc8288"><div>
+          <section class="m-doc-details" id="acaa03e8716802bdf6c174c5fc23210dc"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">bool Markov::<wbr />Model::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5a40f49b12eff42d6818476a9efc8288" class="m-doc-self">Export</a>(</span><span class="m-doc-wrap">char* filename)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">bool Markov::<wbr />Model&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#acaa03e8716802bdf6c174c5fc23210dc" class="m-doc-self">Export</a>(</span><span class="m-doc-wrap">char* filename)</span></span>
             </h3>
-            <p>Open a file to export with filename, and call bool <a href="class_markov_1_1_model.html#ac36f9c775ac42c295756cb25f22e1c1b" class="m-doc">Markov::<wbr />Model::<wbr />Export</a> with std::ofstream.</p>
+            <p>Open a file to export with filename, and call bool <a href="class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939" class="m-doc">Markov::<wbr />Model::<wbr />Export</a> with std::ofstream.</p>
             <table class="m-table m-fullwidth m-flat">
               <tfoot>
                 <tr>

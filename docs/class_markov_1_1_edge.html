@@ -46,6 +46,7 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
+          <div class="m-doc-template">template&lt;typename NodeStorageType&gt;</div>
           <span class="m-breadcrumb"><a href="namespace_markov.html">Markov</a>::<wbr/></span>Edge <span class="m-thin">class</span>
         </h1>
         <p><a href="class_markov_1_1_edge.html" class="m-doc">Edge</a> class used to link nodes in the model together.</p>
@@ -65,13 +66,13 @@
         <section id="typeless-methods">
           <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
           <dl class="m-doc">
-            <dt id="aa9426b31ca2808bde76ddb2e3ebe9552">
-              <span class="m-doc-wrap-bumper"><a href="#aa9426b31ca2808bde76ddb2e3ebe9552" class="m-doc-self">Markov::Edge</a>(</span><span class="m-doc-wrap">)</span>
+            <dt id="a36413aeee1084d1e555345d57bf27fdd">
+              <span class="m-doc-wrap-bumper"><a href="#a36413aeee1084d1e555345d57bf27fdd" class="m-doc-self">Markov::Edge</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
             <dd>Default constructor.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper"><a href="#a7b1dafb9d6e84239e57391e93f76f7b6" class="m-doc">Markov::Edge</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>* _left,
-              <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>* _right)</span>
+              <span class="m-doc-wrap-bumper"><a href="#a667f6d97af29300ad9217e80f1e6dae1" class="m-doc">Markov::Edge</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;* _left,
+              <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;* _right)</span>
             </dt>
             <dd>Constructor. Initialize edge with given right and left.</dd>
           </dl>
@@ -80,41 +81,44 @@
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
             <dt>
-              <span class="m-doc-wrap-bumper">void <a href="#a1b7c89aaac5ec09491e13adcf133ae2c" class="m-doc">adjust</a>(</span><span class="m-doc-wrap">uint64_t offset)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#ab36e4f8f7ae37b81966e10929097f2aa" class="m-doc">adjust</a>(</span><span class="m-doc-wrap">uint64_t offset)</span>
             </dt>
             <dd>Adjust the edge weight with offset. Adds the offset parameter to the edge weight.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a92a6697d909efeee8938c4fb85df2c75" class="m-doc">traverse</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>*</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#adaa67349cf3b42e4c012d2247aa40c92" class="m-doc">traverse</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;*</span>
             </dt>
             <dd>Traverse this edge to right.</dd>
-            <dt id="ab02be668170419a296cc5c485962a07d">
-              <span class="m-doc-wrap-bumper">void <a href="#ab02be668170419a296cc5c485962a07d" class="m-doc-self">set_left</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>*)</span>
+            <dt id="a03eeb872b6fff6aed120f090d3732827">
+              <span class="m-doc-wrap-bumper">void <a href="#a03eeb872b6fff6aed120f090d3732827" class="m-doc-self">set_left</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;*)</span>
             </dt>
             <dd>Set left of this edge.</dd>
-            <dt id="ae0db61f4d345ecbcbeb45e4fb2c2692d">
-              <span class="m-doc-wrap-bumper">void <a href="#ae0db61f4d345ecbcbeb45e4fb2c2692d" class="m-doc-self">set_right</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>*)</span>
+            <dt id="adef481bf5942f46f298b094ab93101b7">
+              <span class="m-doc-wrap-bumper">void <a href="#adef481bf5942f46f298b094ab93101b7" class="m-doc-self">set_right</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;*)</span>
             </dt>
             <dd>Set right of this edge.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a13e3c20a4e7070c551ef8390cff637ea" class="m-doc">weight</a>(</span><span class="m-doc-wrap">) -&gt; uint64_t</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab6160a5b9c6e8a51fe1ecba063e9402b" class="m-doc">weight</a>(</span><span class="m-doc-wrap">) -&gt; uint64_t</span>
             </dt>
             <dd>return edge&#x27;s weight.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#aeebc3a01e554adeff057806174c2e4a9" class="m-doc">left</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>*</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a642aa92fbeb81971c5ec9d2894d76402" class="m-doc">left</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;*</span>
             </dt>
             <dd>return edge&#x27;s left</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a55863f8509177d053506a2a6a88dc192" class="m-doc">right</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>*</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a876e20dc6d98e046a7503f017cf553f2" class="m-doc">right</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;*</span>
             </dt>
             <dd>return edge&#x27;s right</dd>
           </dl>
         </section>
         <section>
           <h2>Function documentation</h2>
-          <section class="m-doc-details" id="a7b1dafb9d6e84239e57391e93f76f7b6"><div>
+          <section class="m-doc-details" id="a667f6d97af29300ad9217e80f1e6dae1"><div>
             <h3>
-              <span class="m-doc-wrap-bumper"> Markov::<wbr />Edge::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7b1dafb9d6e84239e57391e93f76f7b6" class="m-doc-self">Markov::Edge</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>* _left,
-              <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>* _right)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> Markov::<wbr />Edge&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a667f6d97af29300ad9217e80f1e6dae1" class="m-doc-self">Markov::Edge</a>(</span><span class="m-doc-wrap"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;* _left,
+              <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;* _right)</span></span>
             </h3>
             <p>Constructor. Initialize edge with given right and left.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -133,9 +137,12 @@
               </tbody>
             </table>
           </div></section>
-          <section class="m-doc-details" id="a1b7c89aaac5ec09491e13adcf133ae2c"><div>
+          <section class="m-doc-details" id="ab36e4f8f7ae37b81966e10929097f2aa"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">void Markov::<wbr />Edge::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1b7c89aaac5ec09491e13adcf133ae2c" class="m-doc-self">adjust</a>(</span><span class="m-doc-wrap">uint64_t offset)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void Markov::<wbr />Edge&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab36e4f8f7ae37b81966e10929097f2aa" class="m-doc-self">adjust</a>(</span><span class="m-doc-wrap">uint64_t offset)</span></span>
             </h3>
             <p>Adjust the edge weight with offset. Adds the offset parameter to the edge weight.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -150,9 +157,12 @@
               </tbody>
             </table>
           </div></section>
-          <section class="m-doc-details" id="a92a6697d909efeee8938c4fb85df2c75"><div>
+          <section class="m-doc-details" id="adaa67349cf3b42e4c012d2247aa40c92"><div>
             <h3>
-              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>* Markov::<wbr />Edge::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a92a6697d909efeee8938c4fb85df2c75" class="m-doc-self">traverse</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;* Markov::<wbr />Edge&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#adaa67349cf3b42e4c012d2247aa40c92" class="m-doc-self">traverse</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
             <p>Traverse this edge to right.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -164,9 +174,12 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-doc-details" id="a13e3c20a4e7070c551ef8390cff637ea"><div>
+          <section class="m-doc-details" id="ab6160a5b9c6e8a51fe1ecba063e9402b"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">uint64_t Markov::<wbr />Edge::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a13e3c20a4e7070c551ef8390cff637ea" class="m-doc-self">weight</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">uint64_t Markov::<wbr />Edge&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab6160a5b9c6e8a51fe1ecba063e9402b" class="m-doc-self">weight</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
             <p>return edge&#x27;s weight.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -178,9 +191,12 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-doc-details" id="aeebc3a01e554adeff057806174c2e4a9"><div>
+          <section class="m-doc-details" id="a642aa92fbeb81971c5ec9d2894d76402"><div>
             <h3>
-              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>* Markov::<wbr />Edge::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aeebc3a01e554adeff057806174c2e4a9" class="m-doc-self">left</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;* Markov::<wbr />Edge&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a642aa92fbeb81971c5ec9d2894d76402" class="m-doc-self">left</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
             <p>return edge&#x27;s left</p>
             <table class="m-table m-fullwidth m-flat">
@@ -192,9 +208,12 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-doc-details" id="a55863f8509177d053506a2a6a88dc192"><div>
+          <section class="m-doc-details" id="a876e20dc6d98e046a7503f017cf553f2"><div>
             <h3>
-              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>* Markov::<wbr />Edge::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a55863f8509177d053506a2a6a88dc192" class="m-doc-self">right</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;* Markov::<wbr />Edge&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a876e20dc6d98e046a7503f017cf553f2" class="m-doc-self">right</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
             <p>return edge&#x27;s right</p>
             <table class="m-table m-fullwidth m-flat">

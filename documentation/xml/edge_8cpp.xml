@@ -3,40 +3,21 @@
   <compounddef id="edge_8cpp" kind="file" language="C++">
     <compoundname>edge.cpp</compoundname>
     <includes refid="edge_8h" local="yes">edge.h</includes>
-    <includes refid="node_8h" local="yes">node.h</includes>
     <incdepgraph>
       <node id="1">
         <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.cpp</label>
         <link refid="edge_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
       </node>
       <node id="3">
         <label>cstdint</label>
-      </node>
-      <node id="4">
-        <label>node.h</label>
-        <link refid="node_8h_source"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>map</label>
       </node>
       <node id="2">
         <label>edge.h</label>
         <link refid="edge_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>vector</label>
       </node>
     </incdepgraph>
     <briefdescription>

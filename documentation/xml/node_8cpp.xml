@@ -43,17 +43,22 @@
       </node>
     </incdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="node_8cpp_1acecf83ee74821079e763289ccec0ee73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="class_markov_1_1_edge" kindref="compound">Markov::Edge</ref> *</type>
-        <definition>Markov::Edge* findVertice</definition>
-        <argsstring>(Markov::Node *l, Markov::Node *r)</argsstring>
+      <memberdef kind="function" id="node_8cpp_1a98eb69e5e218c3fc10c5fb3c193e9381" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename storageType</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="class_markov_1_1_edge" kindref="compound">Markov::Edge</ref>&lt; storageType &gt; *</type>
+        <definition>Markov::Edge&lt;storageType&gt;* findVertice</definition>
+        <argsstring>(Markov::Node&lt; storageType &gt; *l, Markov::Node&lt; storageType &gt; *r)</argsstring>
         <name>findVertice</name>
         <param>
-          <type><ref refid="class_markov_1_1_node" kindref="compound">Markov::Node</ref> *</type>
+          <type><ref refid="class_markov_1_1_node" kindref="compound">Markov::Node</ref>&lt; storageType &gt; *</type>
           <declname>l</declname>
         </param>
         <param>
-          <type><ref refid="class_markov_1_1_node" kindref="compound">Markov::Node</ref> *</type>
+          <type><ref refid="class_markov_1_1_node" kindref="compound">Markov::Node</ref>&lt; storageType &gt; *</type>
           <declname>r</declname>
         </param>
         <briefdescription>
@@ -62,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp" line="56" column="14" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp" bodystart="56" bodyend="56"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp" line="65" column="14" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp" bodystart="65" bodyend="65"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
