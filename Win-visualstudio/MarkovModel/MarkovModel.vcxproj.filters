@@ -27,7 +27,7 @@
     <ClInclude Include="src\node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\vertex.h">
+    <ClInclude Include="src\edge.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,13 +38,13 @@
     <ClCompile Include="src\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\vertex.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\node.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\edge.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -53,5 +53,5 @@ bool Markov::Node::UpdateEdges(Markov::Edge* v) {
 	return v->traverse();
 }
 
-Markov::Edge* findVertice(Markov::Node* l, Markov::Node* r) {/*TODO*/};
+Markov::Edge* findVertice(Markov::Node* l, Markov::Node* r) {/*TODO*/ return NULL; };
 

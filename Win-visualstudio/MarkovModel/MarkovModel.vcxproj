@@ -240,14 +240,14 @@
     <ClInclude Include="src\model.h" />
     <ClInclude Include="src\node.h" />
     <ClInclude Include="src\pch.h" />
-    <ClInclude Include="src\vertex.h" />
+    <ClInclude Include="src\edge.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\dllmain.cpp" />
     <ClCompile Include="src\model.cpp" />
     <ClCompile Include="src\node.cpp" />
     <ClCompile Include="src\pch.cpp" />
-    <ClCompile Include="src\vertex.cpp" />
+    <ClCompile Include="src\edge.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

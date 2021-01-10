@@ -2,20 +2,21 @@
 #include <fstream>
 #include <assert.h>
 
-bool Markov::Model::Import(std::ifstream* f) {/*TODO*/ }
+bool Markov::Model::Import(std::ifstream* f) {/*TODO*/ return false; }
 
 bool Markov::Model::Import(char* filename) {
 	std::ifstream importfile;
 	importfile.open(filename);
-	this->Import(&importfile);
+	return this->Import(&importfile);
+
 }
 
-bool Markov::Model::Export(std::ofstream* f) {/*TODO*/}
+bool Markov::Model::Export(std::ofstream* f) {/*TODO*/ return false;}
 
 bool Markov::Model::Export(char* filename) {
 	std::ofstream exportfile;
 	exportfile.open(filename);
-	this->Export(&exportfile);
+	return this->Export(&exportfile);
 }
 
 char* Markov::Model::RandomWalk() {
