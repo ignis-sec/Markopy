@@ -23,7 +23,7 @@ template <typename NodeStorageType>
 Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::traverse() {
 	if (this->right()->value() == 0xff) //terminator node
 		return NULL;
-	return _left;
+	return _right;
 }
 
 template <typename NodeStorageType>
