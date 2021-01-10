@@ -25,7 +25,6 @@ namespace Markov {
 		* Start from the starter node, invoke RandomNext on current node until terminator node is reached.
 		* @return Null terminated string that was generated.
 		*/
-
 		NodeStorageType* RandomWalk();
 
 		/** @brief Adjust the model with a single string. 

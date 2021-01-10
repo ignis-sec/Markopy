@@ -39,6 +39,15 @@ public:
 	*/
 	std::ofstream* Save(char* filename);
 
+	/** @brief Call Markov::Model::RandomWalk n times, and collect output.
+	* 
+	* Write the data to this->outputfile
+	* 
+	* @param n - Number of passwords to generate.
+	* @return std::ofstream* of the output file.
+	*/
+	std::ofstream* Generate(unsigned long int n);
+
 private:
 	std::ifstream* datasetFile;
 	std::ofstream* modelSavefile;
