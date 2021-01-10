@@ -19,7 +19,7 @@ unsigned char Markov::Node<storageType>::value() {
 
 template <typename storageType>
 Markov::Edge<storageType>* Markov::Node<storageType>::Link(Markov::Node<storageType>* n) {
-	Markov::Edge *v = new Markov::Edge(this, n);
+	Markov::Edge<storageType> *v = new Markov::Edge<storageType>(this, n);
 	this->UpdateEdges(v);
 	return v;
 }
