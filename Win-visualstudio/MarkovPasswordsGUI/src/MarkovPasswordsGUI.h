@@ -28,4 +28,13 @@ public:
 
 private:
     Ui::MarkovPasswordsGUIClass ui;
+
+
+    //Slots for buttons in GUI.
+public slots:
+
+    void MarkovPasswordsGUI::benchmarkSelected();
+    void MarkovPasswordsGUI::modelvisSelected();
+    void MarkovPasswordsGUI::visualDebugSelected();
+    void MarkovPasswordsGUI::comparisonSelected();
 };
