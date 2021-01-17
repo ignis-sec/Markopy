@@ -17,6 +17,7 @@ Markov::Edge<NodeStorageType>::Edge(Markov::Node<NodeStorageType>* _left, Markov
 template <typename NodeStorageType>
 void Markov::Edge<NodeStorageType>::adjust(uint64_t offset) {
 	this->_weight += offset;
+	this->left()->updateTotalVerticeWeight(offset);
 }
 
 template <typename NodeStorageType>

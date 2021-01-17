@@ -38,7 +38,7 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 	int selection = rand() % this->total_edge_weights;
 	
 	//make absolute, no negative modulus values wanted
-	selection = (selection<0)? selection : selection + this->total_edge_weights;
+	selection = (selection>=0)? selection : selection + this->total_edge_weights;
 
 	//iterate over the Edge map
 	//Subtract the Edge weight from the selection at each Edge
@@ -51,7 +51,7 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 
 	//if this assertion is reached, it means there is an implementation error above
 	assert(true && "This should never be reached (node failed to walk to next)");
-
+	return NULL;
 }
 
 template <typename storageType>
@@ -63,5 +63,10 @@ bool Markov::Node<storageType>::UpdateEdges(Markov::Edge<storageType>* v) {
 
 template <typename storageType>
 Markov::Edge<storageType>* findVertice(Markov::Node<storageType>* l, Markov::Node<storageType>* r) {/*TODO*/ return NULL; };
+
+template <typename storageType>
+void Markov::Node<storageType>::updateTotalVerticeWeight(long int offset) {
+	this->total_edge_weights += offset;
+}
 
  
