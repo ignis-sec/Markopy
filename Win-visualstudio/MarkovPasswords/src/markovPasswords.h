@@ -1,5 +1,5 @@
 
-#include "../../MarkovModel/src/model.h"
+#include "../../MarkovModel/src/MarkovModel.h"
 
 /** @brief Markov::Model with char represented nodes.
 * 
