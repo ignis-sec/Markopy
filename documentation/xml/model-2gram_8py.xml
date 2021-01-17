@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="model-2gram_8py" kind="file" language="Python">
+    <compoundname>model-2gram.py</compoundname>
+    <innernamespace refid="namespacemodel-2gram">model-2gram</innernamespace>
+    <innernamespace refid="namespacemodel">model</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts/model-2gram.py"/>
+  </compounddef>
+</doxygen>

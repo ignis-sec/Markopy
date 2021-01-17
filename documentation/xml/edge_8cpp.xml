@@ -3,6 +3,7 @@
   <compounddef id="edge_8cpp" kind="file" language="C++">
     <compoundname>edge.cpp</compoundname>
     <includes refid="edge_8h" local="yes">edge.h</includes>
+    <includedby refid="_markov_model_8h" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/MarkovModel.h</includedby>
     <incdepgraph>
       <node id="1">
         <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.cpp</label>
@@ -20,6 +21,24 @@
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.cpp</label>
+        <link refid="edge_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/MarkovModel.h</label>
+        <link refid="_markov_model_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/markovPasswords.h</label>
+        <link refid="markov_passwords_8h_source"/>
+      </node>
+    </invincdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

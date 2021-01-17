@@ -6,12 +6,13 @@
     <innerfile refid="edge_8cpp">edge.cpp</innerfile>
     <innerfile refid="edge_8h">edge.h</innerfile>
     <innerfile refid="framework_8h">framework.h</innerfile>
+    <innerfile refid="_markov_model_8h">MarkovModel.h</innerfile>
     <innerfile refid="model_8cpp">model.cpp</innerfile>
     <innerfile refid="model_8h">model.h</innerfile>
     <innerfile refid="node_8cpp">node.cpp</innerfile>
     <innerfile refid="node_8h">node.h</innerfile>
-    <innerfile refid="pch_8cpp">pch.cpp</innerfile>
-    <innerfile refid="pch_8h">pch.h</innerfile>
+    <innerfile refid="_markov_model_2src_2pch_8cpp">pch.cpp</innerfile>
+    <innerfile refid="_markov_model_2src_2pch_8h">pch.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

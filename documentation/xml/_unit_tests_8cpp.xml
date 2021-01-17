@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_unit_tests_8cpp" kind="file" language="C++">
+    <compoundname>UnitTests.cpp</compoundname>
+    <includes refid="_unit_tests_2pch_8h" local="yes">pch.h</includes>
+    <includes local="yes">CppUnitTest.h</includes>
+    <includes refid="_markov_model_8h" local="yes">../MarkovModel/src/MarkovModel.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>../MarkovModel/src/MarkovModel.h</label>
+        <link refid="_markov_model_8h_source"/>
+      </node>
+      <node id="1">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp</label>
+        <link refid="_unit_tests_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CppUnitTest.h</label>
+      </node>
+      <node id="2">
+        <label>pch.h</label>
+        <link refid="_unit_tests_2pch_8h_source"/>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_testing">Testing</innernamespace>
+    <innernamespace refid="namespace_testing_1_1_m_v_p">Testing::MVP</innernamespace>
+    <innernamespace refid="namespace_testing_1_1_m_v_p_1_1_markov_model">Testing::MVP::MarkovModel</innernamespace>
+    <innernamespace refid="namespace_testing_1_1_m_v_p_1_1_markov_passwords">Testing::MVP::MarkovPasswords</innernamespace>
+    <innernamespace refid="namespace_testing_1_1_markov_model">Testing::MarkovModel</innernamespace>
+    <innernamespace refid="namespace_testing_1_1_markov_passwords">Testing::MarkovPasswords</innernamespace>
+    <innernamespace refid="namespace_microsoft_1_1_visual_studio_1_1_cpp_unit_test_framework">Microsoft::VisualStudio::CppUnitTestFramework</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp"/>
+  </compounddef>
+</doxygen>

@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="75" column="13" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" bodystart="75" bodyend="-1"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="87" column="13" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_markov_1_1_node_1a734f69786bb586f7f5164b33c1251d55" prot="private" static="no" mutable="no">
         <type>uint64_t</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="77" column="10" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" bodystart="77" bodyend="-1"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="89" column="10" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_markov_1_1_node_1ac70de8ab862a4595bc8e0f51f975d4ce" prot="private" static="no" mutable="no">
         <type>std::map&lt; storageType, <ref refid="class_markov_1_1_edge" kindref="compound">Markov::Edge</ref>&lt; storageType &gt; * &gt;</type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="83" column="10" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" bodystart="83" bodyend="-1"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="95" column="10" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" bodystart="95" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -203,9 +203,9 @@
         </inbodydescription>
         <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="53" column="6" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp" bodystart="58" bodyend="62"/>
       </memberdef>
-      <memberdef kind="function" id="class_markov_1_1_node_1a1147944cc9a2daa4f3128c4a40978b44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_markov_1_1_node_1aa1768fa91e88a190f7d4cb7bc3cdd82e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_markov_1_1_edge" kindref="compound">Markov::Edge</ref>&lt; storageType &gt; *</type>
-        <definition>Markov::Edge&lt;storageType&gt;* Markov::Node&lt; storageType &gt;::findEdge</definition>
+        <definition>Markov::Edge&lt; storageType &gt; * Markov::Node&lt; storageType &gt;::findEdge</definition>
         <argsstring>(storageType repr)</argsstring>
         <name>findEdge</name>
         <param>
@@ -231,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="59" column="14"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="59" column="14" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp" bodystart="65" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="class_markov_1_1_node_1acdcb964f3fa7cdd7b55cbb8776686f35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_markov_1_1_edge" kindref="compound">Markov::Edge</ref>&lt; storageType &gt; *</type>
@@ -280,6 +280,52 @@
         </inbodydescription>
         <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="70" column="15" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp" bodystart="16" bodyend="18"/>
       </memberdef>
+      <memberdef kind="function" id="class_markov_1_1_node_1a19a448f859ac81d65b8c4ebf8ac6fbd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Markov::Node&lt; storageType &gt;::updateTotalVerticeWeight</definition>
+        <argsstring>(long int offset)</argsstring>
+        <name>updateTotalVerticeWeight</name>
+        <param>
+          <type>long int</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Change total weights with offset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="74" column="6" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_markov_1_1_node_1ad404ccc317ef8413881b8d7b72b4f4f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; storageType, <ref refid="class_markov_1_1_edge" kindref="compound">Markov::Edge</ref>&lt; storageType &gt; * &gt; *</type>
+        <definition>std::map&lt; storageType, Markov::Edge&lt; storageType &gt; * &gt; * Markov::Node&lt; storageType &gt;::Edges</definition>
+        <argsstring>()</argsstring>
+        <name>Edges</name>
+        <briefdescription>
+<para>return edges </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="78" column="10" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_markov_1_1_node_1af5e5e29a5027651b4f3a4d1dd6883f60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t Markov::Node&lt; storageType &gt;::TotalEdgeWeights</definition>
+        <argsstring>()</argsstring>
+        <name>TotalEdgeWeights</name>
+        <briefdescription>
+<para>return total edge weights </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="82" column="10" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp" bodystart="78" bodyend="80"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A node class that for the vertices of model. Connected with eachother using <ref refid="class_markov_1_1_edge" kindref="compound">Markov::Edge</ref>. </para>
@@ -287,11 +333,12 @@
     <detaileddescription>
 <para>This class will <emphasis>later be templated to accept other data types than char</emphasis>. </para>
     </detaileddescription>
-    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="13" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" bodystart="13" bodyend="84"/>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="13" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" bodystart="13" bodyend="96"/>
     <listofallmembers>
       <member refid="class_markov_1_1_node_1a9851cd33ea466176a5728e3ccea6efed" prot="private" virt="non-virtual"><scope>Markov::Node</scope><name>_value</name></member>
       <member refid="class_markov_1_1_node_1ac70de8ab862a4595bc8e0f51f975d4ce" prot="private" virt="non-virtual"><scope>Markov::Node</scope><name>edges</name></member>
-      <member refid="class_markov_1_1_node_1a1147944cc9a2daa4f3128c4a40978b44" prot="public" virt="non-virtual"><scope>Markov::Node</scope><name>findEdge</name></member>
+      <member refid="class_markov_1_1_node_1ad404ccc317ef8413881b8d7b72b4f4f0" prot="public" virt="non-virtual"><scope>Markov::Node</scope><name>Edges</name></member>
+      <member refid="class_markov_1_1_node_1aa1768fa91e88a190f7d4cb7bc3cdd82e" prot="public" virt="non-virtual"><scope>Markov::Node</scope><name>findEdge</name></member>
       <member refid="class_markov_1_1_node_1acdcb964f3fa7cdd7b55cbb8776686f35" prot="public" virt="non-virtual"><scope>Markov::Node</scope><name>findEdge</name></member>
       <member refid="class_markov_1_1_node_1ad0dbf4d37c8c29943c0385b4d87a1988" prot="public" virt="non-virtual"><scope>Markov::Node</scope><name>Link</name></member>
       <member refid="class_markov_1_1_node_1a1f6da105c34126ab5f0ddb1f5907ca02" prot="public" virt="non-virtual"><scope>Markov::Node</scope><name>Link</name></member>
@@ -299,7 +346,9 @@
       <member refid="class_markov_1_1_node_1a2d87cd1f152ee6415225611404dbdfe6" prot="public" virt="non-virtual"><scope>Markov::Node</scope><name>Markov::Node</name></member>
       <member refid="class_markov_1_1_node_1aaed7c8987e805fca2b56d50c7f25d9d1" prot="public" virt="non-virtual"><scope>Markov::Node</scope><name>RandomNext</name></member>
       <member refid="class_markov_1_1_node_1a734f69786bb586f7f5164b33c1251d55" prot="private" virt="non-virtual"><scope>Markov::Node</scope><name>total_edge_weights</name></member>
+      <member refid="class_markov_1_1_node_1af5e5e29a5027651b4f3a4d1dd6883f60" prot="public" virt="non-virtual"><scope>Markov::Node</scope><name>TotalEdgeWeights</name></member>
       <member refid="class_markov_1_1_node_1ac9405ba6ae41417c30f79f12bd80cb47" prot="public" virt="non-virtual"><scope>Markov::Node</scope><name>UpdateEdges</name></member>
+      <member refid="class_markov_1_1_node_1a19a448f859ac81d65b8c4ebf8ac6fbd2" prot="public" virt="non-virtual"><scope>Markov::Node</scope><name>updateTotalVerticeWeight</name></member>
       <member refid="class_markov_1_1_node_1ada4486380ae3e196fb1c24e2ec8325f3" prot="public" virt="non-virtual"><scope>Markov::Node</scope><name>value</name></member>
     </listofallmembers>
   </compounddef>

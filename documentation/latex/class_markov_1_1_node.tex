@@ -21,12 +21,21 @@ A node class that for the vertices of model. Connected with eachother using \mbo
 \begin{DoxyCompactList}\small\item\em Chose a random node from the list of edges, with regards to its weight, and traverse to that. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_markov_1_1_node_ac9405ba6ae41417c30f79f12bd80cb47}{Update\+Edges}} (\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$)
 \begin{DoxyCompactList}\small\item\em Insert a new edge to the this.\+edges. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node_a1147944cc9a2daa4f3128c4a40978b44}{find\+Edge}} (storage\+Type repr)
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node_aa1768fa91e88a190f7d4cb7bc3cdd82e}{find\+Edge}} (storage\+Type repr)
 \begin{DoxyCompactList}\small\item\em Find an edge with its character representation. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node_acdcb964f3fa7cdd7b55cbb8776686f35}{find\+Edge}} (\mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ storage\+Type $>$ $\ast$target)
 \begin{DoxyCompactList}\small\item\em Find an edge with its pointer. Avoid unless neccessary because comptutational cost of find by character is cheaper (because of std\+::map) \end{DoxyCompactList}\item 
 unsigned char \mbox{\hyperlink{class_markov_1_1_node_ada4486380ae3e196fb1c24e2ec8325f3}{value}} ()
-\begin{DoxyCompactList}\small\item\em Return character representation of this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Return character representation of this node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_markov_1_1_node_a19a448f859ac81d65b8c4ebf8ac6fbd2}\label{class_markov_1_1_node_a19a448f859ac81d65b8c4ebf8ac6fbd2}} 
+void \mbox{\hyperlink{class_markov_1_1_node_a19a448f859ac81d65b8c4ebf8ac6fbd2}{update\+Total\+Vertice\+Weight}} (long int offset)
+\begin{DoxyCompactList}\small\item\em Change total weights with offset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}\label{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}} 
+std\+::map$<$ storage\+Type, \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}{Edges}} ()
+\begin{DoxyCompactList}\small\item\em return edges \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_markov_1_1_node_af5e5e29a5027651b4f3a4d1dd6883f60}\label{class_markov_1_1_node_af5e5e29a5027651b4f3a4d1dd6883f60}} 
+uint64\+\_\+t \mbox{\hyperlink{class_markov_1_1_node_af5e5e29a5027651b4f3a4d1dd6883f60}{Total\+Edge\+Weights}} ()
+\begin{DoxyCompactList}\small\item\em return total edge weights \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -57,12 +66,12 @@ Find an edge with its pointer. Avoid unless neccessary because comptutational co
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} that is connected between this node, and the target node. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_node_a1147944cc9a2daa4f3128c4a40978b44}\label{class_markov_1_1_node_a1147944cc9a2daa4f3128c4a40978b44}} 
+\mbox{\Hypertarget{class_markov_1_1_node_aa1768fa91e88a190f7d4cb7bc3cdd82e}\label{class_markov_1_1_node_aa1768fa91e88a190f7d4cb7bc3cdd82e}} 
 \index{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!findEdge@{findEdge}}
 \index{findEdge@{findEdge}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}}
 \doxysubsubsection{\texorpdfstring{findEdge()}{findEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename storage\+Type $>$ \\
-\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$storage\+Type$>$$\ast$ \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$\+::find\+Edge (\begin{DoxyParamCaption}\item[{storage\+Type}]{repr }\end{DoxyParamCaption})}
+\mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$\+::find\+Edge (\begin{DoxyParamCaption}\item[{storage\+Type}]{repr }\end{DoxyParamCaption})}
 
 
 

@@ -42,17 +42,25 @@
     <member refid="class_markov_passwords_g_u_i_1aa923171220140b2ad8e7efc68d95f2dc" kind="function"><name>MarkovPasswordsGUI</name></member>
     <member refid="class_markov_passwords_g_u_i_1af9cd18a960d5eb8982e3034810f0e79d" kind="function"><name>renderHTMLFile</name></member>
     <member refid="class_markov_passwords_g_u_i_1a94c3599da1164e89a3a386314291f3c9" kind="function"><name>loadDataset</name></member>
+    <member refid="class_markov_passwords_g_u_i_1aba0cfb0e2d358651de15ad84862f4307" kind="slot"><name>benchmarkSelected</name></member>
+    <member refid="class_markov_passwords_g_u_i_1a58eeb550499e35dafad90e0407f0783a" kind="slot"><name>modelvisSelected</name></member>
+    <member refid="class_markov_passwords_g_u_i_1ab0111acd2b4fe4da30836cc22a0d79fa" kind="slot"><name>visualDebugSelected</name></member>
+    <member refid="class_markov_passwords_g_u_i_1a269f98a3e34b89fa2adbd1cd1a384302" kind="slot"><name>comparisonSelected</name></member>
   </compound>
   <compound refid="class_markov_1_1_model" kind="class"><name>Markov::Model</name>
     <member refid="class_markov_1_1_model_1ae6e142d545313dcdb87b0ae3618397fa" kind="variable"><name>nodes</name></member>
     <member refid="class_markov_1_1_model_1aa834ba7bf4fab9141f59940b48adfdac" kind="variable"><name>starterNode</name></member>
     <member refid="class_markov_1_1_model_1ab6aa821b0186629ec7f460cdc2dfb303" kind="variable"><name>edges</name></member>
+    <member refid="class_markov_1_1_model_1a593b1dc98082221e3f69636e3a087dfd" kind="function"><name>Markov::Model</name></member>
     <member refid="class_markov_1_1_model_1a2e0249e4630353a260e06b8f3a72f5bb" kind="function"><name>RandomWalk</name></member>
     <member refid="class_markov_1_1_model_1abb14649eb59af2b60d17400e3c1d827b" kind="function"><name>adjust</name></member>
     <member refid="class_markov_1_1_model_1a379ea9943f9d4c212e1140d4a9af64f5" kind="function"><name>Import</name></member>
     <member refid="class_markov_1_1_model_1a481a5c1715e3d0f0e459de09b3b3dbf9" kind="function"><name>Import</name></member>
     <member refid="class_markov_1_1_model_1ae16027a94235d2988ac4be35ea07d939" kind="function"><name>Export</name></member>
     <member refid="class_markov_1_1_model_1acaa03e8716802bdf6c174c5fc23210dc" kind="function"><name>Export</name></member>
+    <member refid="class_markov_1_1_model_1a62954b990ae10a74dcc543682abf3315" kind="function"><name>StarterNode</name></member>
+    <member refid="class_markov_1_1_model_1a647b2a8065393938c84e28b8e0e4874e" kind="function"><name>Edges</name></member>
+    <member refid="class_markov_1_1_model_1acc0161496b713014342e21f6134fce3c" kind="function"><name>Nodes</name></member>
   </compound>
   <compound refid="class_markov_1_1_node" kind="class"><name>Markov::Node</name>
     <member refid="class_markov_1_1_node_1a9851cd33ea466176a5728e3ccea6efed" kind="variable"><name>_value</name></member>
@@ -64,9 +72,12 @@
     <member refid="class_markov_1_1_node_1a1f6da105c34126ab5f0ddb1f5907ca02" kind="function"><name>Link</name></member>
     <member refid="class_markov_1_1_node_1aaed7c8987e805fca2b56d50c7f25d9d1" kind="function"><name>RandomNext</name></member>
     <member refid="class_markov_1_1_node_1ac9405ba6ae41417c30f79f12bd80cb47" kind="function"><name>UpdateEdges</name></member>
-    <member refid="class_markov_1_1_node_1a1147944cc9a2daa4f3128c4a40978b44" kind="function"><name>findEdge</name></member>
+    <member refid="class_markov_1_1_node_1aa1768fa91e88a190f7d4cb7bc3cdd82e" kind="function"><name>findEdge</name></member>
     <member refid="class_markov_1_1_node_1acdcb964f3fa7cdd7b55cbb8776686f35" kind="function"><name>findEdge</name></member>
     <member refid="class_markov_1_1_node_1ada4486380ae3e196fb1c24e2ec8325f3" kind="function"><name>value</name></member>
+    <member refid="class_markov_1_1_node_1a19a448f859ac81d65b8c4ebf8ac6fbd2" kind="function"><name>updateTotalVerticeWeight</name></member>
+    <member refid="class_markov_1_1_node_1ad404ccc317ef8413881b8d7b72b4f4f0" kind="function"><name>Edges</name></member>
+    <member refid="class_markov_1_1_node_1af5e5e29a5027651b4f3a4d1dd6883f60" kind="function"><name>TotalEdgeWeights</name></member>
   </compound>
   <compound refid="classterminal" kind="class"><name>terminal</name>
     <member refid="classterminal_1a9b6dd987e27cfd6f1ed180540659e59f" kind="enum"><name>color</name></member>
@@ -90,6 +101,31 @@
   </compound>
   <compound refid="namespace_markov" kind="namespace"><name>Markov</name>
   </compound>
+  <compound refid="namespace_microsoft_1_1_visual_studio_1_1_cpp_unit_test_framework" kind="namespace"><name>Microsoft::VisualStudio::CppUnitTestFramework</name>
+  </compound>
+  <compound refid="namespacemodel__2gram" kind="namespace"><name>model_2gram</name>
+    <member refid="namespacemodel__2gram_1a68f5dbc2bf9fcf3e68e119c6667d8a6d" kind="variable"><name>alphabet</name></member>
+    <member refid="namespacemodel__2gram_1a31bb083467564de5a58f7d747f3ec75e" kind="variable"><name>file</name></member>
+  </compound>
+  <compound refid="namespace_testing" kind="namespace"><name>Testing</name>
+  </compound>
+  <compound refid="namespace_testing_1_1_markov_model" kind="namespace"><name>Testing::MarkovModel</name>
+    <member refid="namespace_testing_1_1_markov_model_1a2f641a67bea75fff3e4c55c74926132f" kind="function"><name>TEST_CLASS</name></member>
+    <member refid="namespace_testing_1_1_markov_model_1ad59534ad9237abf1a8b09bd7f9263da2" kind="function"><name>TEST_CLASS</name></member>
+    <member refid="namespace_testing_1_1_markov_model_1a84a573ca81cb8cb3db9845b0cdcf06a6" kind="function"><name>TEST_CLASS</name></member>
+  </compound>
+  <compound refid="namespace_testing_1_1_markov_passwords" kind="namespace"><name>Testing::MarkovPasswords</name>
+  </compound>
+  <compound refid="namespace_testing_1_1_m_v_p" kind="namespace"><name>Testing::MVP</name>
+  </compound>
+  <compound refid="namespace_testing_1_1_m_v_p_1_1_markov_model" kind="namespace"><name>Testing::MVP::MarkovModel</name>
+    <member refid="namespace_testing_1_1_m_v_p_1_1_markov_model_1a0e3a45b149abd9dff30adc9b877f94cd" kind="function"><name>TEST_CLASS</name></member>
+    <member refid="namespace_testing_1_1_m_v_p_1_1_markov_model_1a6e9e664c5a60cb3af863f384a47952ce" kind="function"><name>TEST_CLASS</name></member>
+    <member refid="namespace_testing_1_1_m_v_p_1_1_markov_model_1af8b6c0d926618a1037c1f30bfc15b87a" kind="function"><name>TEST_CLASS</name></member>
+  </compound>
+  <compound refid="namespace_testing_1_1_m_v_p_1_1_markov_passwords" kind="namespace"><name>Testing::MVP::MarkovPasswords</name>
+    <member refid="namespace_testing_1_1_m_v_p_1_1_markov_passwords_1abd54eb839c99ec7531516e286d672582" kind="function"><name>TEST_CLASS</name></member>
+  </compound>
   <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
   </compound>
   <compound refid="dllmain_8cpp" kind="file"><name>dllmain.cpp</name>
@@ -103,18 +139,23 @@
   <compound refid="framework_8h" kind="file"><name>framework.h</name>
     <member refid="framework_8h_1ac7bef5d85e3dcd73eef56ad39ffc84a9" kind="define"><name>WIN32_LEAN_AND_MEAN</name></member>
   </compound>
+  <compound refid="_markov_model_8h" kind="file"><name>MarkovModel.h</name>
+  </compound>
   <compound refid="model_8cpp" kind="file"><name>model.cpp</name>
   </compound>
   <compound refid="model_8h" kind="file"><name>model.h</name>
   </compound>
   <compound refid="node_8cpp" kind="file"><name>node.cpp</name>
-    <member refid="node_8cpp_1a98eb69e5e218c3fc10c5fb3c193e9381" kind="function"><name>findVertice</name></member>
   </compound>
   <compound refid="node_8h" kind="file"><name>node.h</name>
   </compound>
-  <compound refid="pch_8cpp" kind="file"><name>pch.cpp</name>
+  <compound refid="_markov_model_2src_2pch_8cpp" kind="file"><name>pch.cpp</name>
   </compound>
-  <compound refid="pch_8h" kind="file"><name>pch.h</name>
+  <compound refid="_unit_tests_2pch_8cpp" kind="file"><name>pch.cpp</name>
+  </compound>
+  <compound refid="_markov_model_2src_2pch_8h" kind="file"><name>pch.h</name>
+  </compound>
+  <compound refid="_unit_tests_2pch_8h" kind="file"><name>pch.h</name>
   </compound>
   <compound refid="argparse_8cpp" kind="file"><name>argparse.cpp</name>
   </compound>
@@ -139,9 +180,13 @@
   </compound>
   <compound refid="markov_passwords_8h" kind="file"><name>markovPasswords.h</name>
   </compound>
+  <compound refid="model__2gram_8py" kind="file"><name>model_2gram.py</name>
+  </compound>
   <compound refid="_markov_passwords_g_u_i_8cpp" kind="file"><name>MarkovPasswordsGUI.cpp</name>
   </compound>
   <compound refid="_markov_passwords_g_u_i_8h" kind="file"><name>MarkovPasswordsGUI.h</name>
+  </compound>
+  <compound refid="_unit_tests_8cpp" kind="file"><name>UnitTests.cpp</name>
   </compound>
   <compound refid="dir_241c2bc72ad6cfbf2c5a3256a2c71fce" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color</name>
   </compound>
@@ -151,11 +196,15 @@
   </compound>
   <compound refid="dir_d8761b00490644d5936b6eb21e4e288c" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswordsGUI</name>
   </compound>
+  <compound refid="dir_c6d20286b5af709bfc9323783bc8e93b" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts</name>
+  </compound>
   <compound refid="dir_ffa355b1424b124a542ac40a271afa58" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src</name>
   </compound>
   <compound refid="dir_7a9d88bf31f17ae786648e15765b88df" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src</name>
   </compound>
   <compound refid="dir_e0b451e42ab690da0f09e7eb9661d287" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswordsGUI/src</name>
+  </compound>
+  <compound refid="dir_32eb3131259f56afc3a32ffc6d63bd7d" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests</name>
   </compound>
   <compound refid="dir_08b7b216d7a6e0cee88ed7ac9ee1ecba" kind="dir"><name>D:/Repositories/MarkovPasswords/Win-visualstudio</name>
   </compound>

@@ -3,6 +3,7 @@
   <compounddef id="dir_7a9d88bf31f17ae786648e15765b88df" kind="dir">
     <compoundname>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src</compoundname>
     <innerdir refid="dir_241c2bc72ad6cfbf2c5a3256a2c71fce">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/color</innerdir>
+    <innerdir refid="dir_c6d20286b5af709bfc9323783bc8e93b">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts</innerdir>
     <innerfile refid="argparse_8cpp">argparse.cpp</innerfile>
     <innerfile refid="argparse_8h">argparse.h</innerfile>
     <innerfile refid="src_2main_8cpp">main.cpp</innerfile>

@@ -6,6 +6,7 @@
     <includes refid="node_8h" local="yes">node.h</includes>
     <includes local="no">fstream</includes>
     <includes local="no">assert.h</includes>
+    <includedby refid="_markov_model_8h" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/MarkovModel.h</includedby>
     <incdepgraph>
       <node id="9">
         <label>assert.h</label>
@@ -40,6 +41,8 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
       </node>
       <node id="6">
         <label>edge.h</label>
@@ -63,6 +66,24 @@
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/MarkovModel.h</label>
+        <link refid="_markov_model_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/markovPasswords.h</label>
+        <link refid="markov_passwords_8h_source"/>
+      </node>
+      <node id="1">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.cpp</label>
+        <link refid="model_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

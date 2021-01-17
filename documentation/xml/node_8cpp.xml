@@ -4,6 +4,7 @@
     <compoundname>node.cpp</compoundname>
     <includes refid="node_8h" local="yes">node.h</includes>
     <includes local="no">assert.h</includes>
+    <includedby refid="_markov_model_8h" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/MarkovModel.h</includedby>
     <incdepgraph>
       <node id="7">
         <label>assert.h</label>
@@ -42,34 +43,24 @@
         <label>vector</label>
       </node>
     </incdepgraph>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="node_8cpp_1a98eb69e5e218c3fc10c5fb3c193e9381" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename storageType</type>
-          </param>
-        </templateparamlist>
-        <type><ref refid="class_markov_1_1_edge" kindref="compound">Markov::Edge</ref>&lt; storageType &gt; *</type>
-        <definition>Markov::Edge&lt;storageType&gt;* findVertice</definition>
-        <argsstring>(Markov::Node&lt; storageType &gt; *l, Markov::Node&lt; storageType &gt; *r)</argsstring>
-        <name>findVertice</name>
-        <param>
-          <type><ref refid="class_markov_1_1_node" kindref="compound">Markov::Node</ref>&lt; storageType &gt; *</type>
-          <declname>l</declname>
-        </param>
-        <param>
-          <type><ref refid="class_markov_1_1_node" kindref="compound">Markov::Node</ref>&lt; storageType &gt; *</type>
-          <declname>r</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp" line="65" column="14" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      </sectiondef>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/MarkovModel.h</label>
+        <link refid="_markov_model_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp</label>
+        <link refid="node_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/markovPasswords.h</label>
+        <link refid="markov_passwords_8h_source"/>
+      </node>
+    </invincdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

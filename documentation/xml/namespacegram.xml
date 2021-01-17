@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacegram" kind="namespace" language="Python">
+    <compoundname>gram</compoundname>
+    <briefdescription>
+<para>-model </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim> @package docstring
+  python script for generating a 2gram models
+</verbatim> </para>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts/2gram-model.py" line="2" column="1"/>
+  </compounddef>
+</doxygen>

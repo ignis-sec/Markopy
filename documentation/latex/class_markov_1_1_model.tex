@@ -8,6 +8,9 @@ class for the final \mbox{\hyperlink{namespace_markov}{Markov}} \mbox{\hyperlink
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_markov_1_1_model_a593b1dc98082221e3f69636e3a087dfd}\label{class_markov_1_1_model_a593b1dc98082221e3f69636e3a087dfd}} 
+\mbox{\hyperlink{class_markov_1_1_model_a593b1dc98082221e3f69636e3a087dfd}{Markov\+::\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Initialize a model with only start and end nodes. \end{DoxyCompactList}\item 
 Node\+Storage\+Type $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a2e0249e4630353a260e06b8f3a72f5bb}{Random\+Walk}} ()
 \begin{DoxyCompactList}\small\item\em Do a random walk on this model. Start from the starter node, invoke Random\+Next on current node until terminator node is reached. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_markov_1_1_model_abb14649eb59af2b60d17400e3c1d827b}{adjust}} (Node\+Storage\+Type $\ast$payload, long int occurrence)
@@ -19,7 +22,15 @@ bool \mbox{\hyperlink{class_markov_1_1_model_a481a5c1715e3d0f0e459de09b3b3dbf9}{
 bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}} (std\+::ofstream $\ast$)
 \begin{DoxyCompactList}\small\item\em Export a file of the model. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_markov_1_1_model_acaa03e8716802bdf6c174c5fc23210dc}{Export}} (char $\ast$filename)
-\begin{DoxyCompactList}\small\item\em Open a file to export with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Markov\+::\+Model\+::\+Export}} with std\+::ofstream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Open a file to export with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Markov\+::\+Model\+::\+Export}} with std\+::ofstream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a62954b990ae10a74dcc543682abf3315}{Starter\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Return starter \mbox{\hyperlink{class_markov_1_1_node}{Node}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_markov_1_1_model_a647b2a8065393938c84e28b8e0e4874e}\label{class_markov_1_1_model_a647b2a8065393938c84e28b8e0e4874e}} 
+std\+::vector$<$ \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ Node\+Storage\+Type $>$ $>$ $\ast$ {\bfseries Edges} ()
+\item 
+\mbox{\Hypertarget{class_markov_1_1_model_acc0161496b713014342e21f6134fce3c}\label{class_markov_1_1_model_acc0161496b713014342e21f6134fce3c}} 
+std\+::map$<$ Node\+Storage\+Type, \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$ $>$ $\ast$ {\bfseries Nodes} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -118,6 +129,20 @@ Do a random walk on this model. Start from the starter node, invoke Random\+Next
 
 \begin{DoxyReturn}{Returns}
 Null terminated string that was generated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_model_a62954b990ae10a74dcc543682abf3315}\label{class_markov_1_1_model_a62954b990ae10a74dcc543682abf3315}} 
+\index{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!StarterNode@{StarterNode}}
+\index{StarterNode@{StarterNode}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}}
+\doxysubsubsection{\texorpdfstring{StarterNode()}{StarterNode()}}
+{\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
+\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$Node\+Storage\+Type$>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Storage\+Type $>$\+::Starter\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return starter \mbox{\hyperlink{class_markov_1_1_node}{Node}}. 
+
+\begin{DoxyReturn}{Returns}
+starter node with 00 value 
 \end{DoxyReturn}
 
 

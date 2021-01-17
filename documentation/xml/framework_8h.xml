@@ -3,7 +3,7 @@
   <compounddef id="framework_8h" kind="file" language="C++">
     <compoundname>framework.h</compoundname>
     <includes local="no">windows.h</includes>
-    <includedby refid="pch_8h" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/pch.h</includedby>
+    <includedby refid="_markov_model_2src_2pch_8h" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/pch.h</includedby>
     <incdepgraph>
       <node id="2">
         <label>windows.h</label>
@@ -24,7 +24,7 @@
       </node>
       <node id="2">
         <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/pch.h</label>
-        <link refid="pch_8h_source"/>
+        <link refid="_markov_model_2src_2pch_8h_source"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">

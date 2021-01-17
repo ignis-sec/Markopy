@@ -56,12 +56,22 @@
             <li>
               Reference
               <ul>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
                 <li><a href="#pub-methods">Public functions</a></li>
               </ul>
             </li>
           </ul>
         </div>
 <p>This class will be <em>templated later to work with other data types than char</em>.</p>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt id="a593b1dc98082221e3f69636e3a087dfd">
+              <span class="m-doc-wrap-bumper"><a href="#a593b1dc98082221e3f69636e3a087dfd" class="m-doc-self">Markov::Model</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd>Initialize a model with only start and end nodes.</dd>
+          </dl>
+        </section>
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
@@ -90,6 +100,18 @@
               <span class="m-doc-wrap-bumper">auto <a href="#acaa03e8716802bdf6c174c5fc23210dc" class="m-doc">Export</a>(</span><span class="m-doc-wrap">char* filename) -&gt; bool</span>
             </dt>
             <dd>Open a file to export with filename, and call bool <a href="class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939" class="m-doc">Markov::<wbr />Model::<wbr />Export</a> with std::ofstream.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a62954b990ae10a74dcc543682abf3315" class="m-doc">StarterNode</a>(</span><span class="m-doc-wrap">) -&gt; <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;*</span>
+            </dt>
+            <dd>Return starter <a href="class_markov_1_1_node.html" class="m-doc">Node</a>.</dd>
+            <dt id="a647b2a8065393938c84e28b8e0e4874e">
+              <span class="m-doc-wrap-bumper">auto <a href="#a647b2a8065393938c84e28b8e0e4874e" class="m-doc-self">Edges</a>(</span><span class="m-doc-wrap">) -&gt; std::vector&lt;<a href="class_markov_1_1_edge.html" class="m-doc">Markov::<wbr />Edge</a>&lt;NodeStorageType&gt;&gt;*</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="acc0161496b713014342e21f6134fce3c">
+              <span class="m-doc-wrap-bumper">auto <a href="#acc0161496b713014342e21f6134fce3c" class="m-doc-self">Nodes</a>(</span><span class="m-doc-wrap">) -&gt; std::map&lt;NodeStorageType, <a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;*&gt;*</span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section>
@@ -202,6 +224,23 @@
                 <tr>
                   <th style="width: 1%">Returns</th>
                   <td>True if successful, False for incomplete models or corrupt file formats</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a62954b990ae10a74dcc543682abf3315"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename NodeStorageType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="class_markov_1_1_node.html" class="m-doc">Markov::<wbr />Node</a>&lt;NodeStorageType&gt;* Markov::<wbr />Model&lt;NodeStorageType&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a62954b990ae10a74dcc543682abf3315" class="m-doc-self">StarterNode</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p>Return starter <a href="class_markov_1_1_node.html" class="m-doc">Node</a>.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>starter node with 00 value</td>
                 </tr>
               </tfoot>
             </table>

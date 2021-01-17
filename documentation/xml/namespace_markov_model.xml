@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_markov_model" kind="namespace" language="C++">
+    <compoundname>MarkovModel</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_unit_tests_8cpp_1a6154cf5a1c0ca4c98022cc07242ea11b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MarkovModel::TEST_CLASS</definition>
+        <argsstring>(Edge)</argsstring>
+        <name>TEST_CLASS</name>
+        <param>
+          <type>Edge</type>
+        </param>
+        <briefdescription>
+<para>Test class for rest of Edge cases. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>send exception on integer underflow</para>
+<para>test integer overflows</para>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="392" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="392" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="_unit_tests_8cpp_1a659869fcab9d8d67ca8b112191cd0fc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MarkovModel::TEST_CLASS</definition>
+        <argsstring>(Node)</argsstring>
+        <name>TEST_CLASS</name>
+        <param>
+          <type>Node</type>
+        </param>
+        <briefdescription>
+<para>Test class for rest of Node cases. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>test RandomNext with 64 bit high values</para>
+<para>test RandomNext with 64 bit high values</para>
+<para>randomNext when no edges are present</para>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="430" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="430" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="_unit_tests_8cpp_1a63e1b03610ef087faf2ff3dc86de9979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MarkovModel::TEST_CLASS</definition>
+        <argsstring>(Model)</argsstring>
+        <name>TEST_CLASS</name>
+        <param>
+          <type>Model</type>
+        </param>
+        <briefdescription>
+<para>Test class for rest of model cases. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="489" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="489" bodyend="507"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="388" column="1"/>
+  </compounddef>
+</doxygen>

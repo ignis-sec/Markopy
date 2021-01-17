@@ -1,14 +1,19 @@
 #!/usr/bin/python3
+""" 
+  python script for generating a 2gram model
+"""
 
 import string
 import re
 
+## @brief password alphabet
 alphabet = string.printable
 alphabet = re.sub('\s', '', alphabet)
 print(f"alphabet={alphabet}")
 #exit()
 
-f = open('../../models/2gram.mdl', "wb")
+## @brief output file handle
+file = open('../../models/2gram.mdl', "wb")
 #tie start nodes
 for sym in alphabet:
 	f.write(f"\x00,0,{sym}\n".encode())

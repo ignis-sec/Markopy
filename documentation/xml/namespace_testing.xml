@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespace_testing" kind="namespace" language="C++">
+    <compoundname>Testing</compoundname>
+    <innernamespace refid="namespace_testing_1_1_markov_model">Testing::MarkovModel</innernamespace>
+    <innernamespace refid="namespace_testing_1_1_markov_passwords">Testing::MarkovPasswords</innernamespace>
+    <innernamespace refid="namespace_testing_1_1_m_v_p">Testing::MVP</innernamespace>
+    <briefdescription>
+<para>Namespace for Microsoft Native Unit <ref refid="namespace_testing" kindref="compound">Testing</ref> Classes. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="10" column="1"/>
+  </compounddef>
+</doxygen>
