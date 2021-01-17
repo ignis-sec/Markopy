@@ -69,6 +69,10 @@ namespace Markov {
 		*/
 		unsigned char value();
 
+		/** @brief Change total weights with offset
+		*/
+		void updateTotalVerticeWeight(long int offset);
+
 	private:
 
 		
