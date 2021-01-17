@@ -244,7 +244,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\dllmain.cpp" />
-    <ClCompile Include="src\MarkovModel.cpp" />
+    <ClCompile Include="src\MarkovModel.h" />
     <ClCompile Include="src\model.cpp" />
     <ClCompile Include="src\node.cpp" />
     <ClCompile Include="src\pch.cpp" />

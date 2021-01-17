@@ -47,7 +47,7 @@
     <ClCompile Include="src\edge.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\MarkovModel.cpp">
+    <ClCompile Include="src\MarkovModel.h">
       <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
