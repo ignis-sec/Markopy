@@ -73,6 +73,14 @@ namespace Markov {
 		*/
 		void updateTotalVerticeWeight(long int offset);
 
+		/** @brief return edges
+		*/
+		std::map<storageType, Markov::Edge<storageType>*>* Edges();
+
+		/** @brief return total edge weights
+		*/
+		uint64_t TotalEdgeWeights();
+
 	private:
 
 		

@@ -68,6 +68,15 @@ namespace Markov {
 		*/
 		bool Export(char* filename);
 
+		/** @brief Return starter Node
+		* @return starter node with 00 value
+		*/
+		Markov::Node<NodeStorageType>* StarterNode(){ return starterNode;}
+
+		std::vector<Markov::Edge<NodeStorageType>>* Edges(){ return &edges;}
+
+		std::map<NodeStorageType, Markov::Node<NodeStorageType>*>* Nodes(){ return &nodes;}
+
 	private:
 		/** @brief Map left is the Nodes value
 		* Map right is the node pointer
