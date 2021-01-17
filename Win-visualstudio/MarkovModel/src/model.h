@@ -8,6 +8,7 @@
 #include <fstream>
 
 #include "edge.h"
+#include "node.h"
 
 /**
 	@brief Namespace for model related classes.
@@ -21,6 +22,10 @@ namespace Markov {
 	class Model {
 	public:
 		
+		/** @brief Initialize a model with only start and end nodes.
+		*/
+		Markov::Model<NodeStorageType>();
+
 		/** @brief Do a random walk on this model. 
 		* Start from the starter node, invoke RandomNext on current node until terminator node is reached.
 		* @return Null terminated string that was generated.

@@ -4,13 +4,19 @@
 #include <assert.h>
 
 template <typename NodeStorageType>
+Markov::Model<NodeStorageType>::Model() {
+	this->starterNode = new Markov::Node<NodeStorageType>(0);
+	this->nodes.insert({ 0, this->starterNode });
+}
+
+template <typename NodeStorageType>
 bool Markov::Model<NodeStorageType>::Import(std::ifstream* f) {/*TODO*/ return false; }
 
 template <typename NodeStorageType>
 bool Markov::Model<NodeStorageType>::Import(char* filename) {
 	std::ifstream importfile;
 	importfile.open(filename);
-	return this->Import<NodeStorageType>(&importfile);
+	return this->Import(&importfile);
 
 }
 
@@ -28,7 +34,7 @@ template <typename NodeStorageType>
 NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk() {
 	Markov::Node<NodeStorageType>* n = this->starterNode;
 	int len = 0;
-	NodeStorageType ret[32] = "";
+	NodeStorageType ret[32];
 	while (n != NULL) {
 		n = n->RandomNext();
 		ret[len++] = n->value();
@@ -38,8 +44,9 @@ NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk() {
 	}
 
 	//null terminate the string
-	ret[len] == '\0';
+	ret[len] == NULL;
 
 	//do something with the generated string
 	return ret; //for now
 }
+
