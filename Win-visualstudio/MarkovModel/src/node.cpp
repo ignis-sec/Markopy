@@ -56,7 +56,7 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 
 template <typename storageType>
 bool Markov::Node<storageType>::UpdateEdges(Markov::Edge<storageType>* v) {
-	this->edges.insert({ v->traverse()->value(), v });
+	this->edges.insert({ v->right()->value(), v });
 	this->total_edge_weights += v->weight();
 	return v->traverse();
 }
