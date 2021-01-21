@@ -59,10 +59,13 @@ int main(int argc, char** argv) {
 
 	char* res;
 	char print[100];
-	for (int i = 0; i < 100; i++) {
+	std::ofstream wordlist;
+	wordlist.open("wordlist.txt");
+	for (int i = 0; i < 5000000; i++) {
 		res = markovPass.RandomWalk();
 		strcpy_s(print,100, (char*)res);
-		std::cout << "Generation result: " << res << std::endl;
+		wordlist << res << "\n";
+		//std::cout << "Generation result: " << res << std::endl;
 		delete res;
 	}
 
