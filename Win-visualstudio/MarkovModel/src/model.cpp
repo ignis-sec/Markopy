@@ -45,10 +45,12 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream *f) {
 		else {
 			targetN = this->nodes.find(target)->second;
 		}
-		e = new Markov::Edge<NodeStorageType>(srcN, targetN);
+		e = srcN->Link(targetN);
 		this->edges.push_back(e);
-
-		//std::cout << srcN->value() << " --" << e->weight() << "--> " << targetN->value() << "\n";
+		
+		//std::cout << int(srcN->value()) << " --" << e->weight() << "--> " << int(targetN->value()) << "\n";
+		
+		
 	}
 
 	std::cout << "Total number of nodes: " << this->nodes.size() << std::endl;
@@ -70,6 +72,7 @@ bool Markov::Model<NodeStorageType>::Export(std::ofstream* f) {
 	Markov::Edge<NodeStorageType>* e;
 	for (std::vector<int>::size_type i = 0; i != this->edges.size(); i++) {
 		e = this->edges[i];
+		std::cout << e->left()->value() << "," << e->weight() << "," << e->right()->value() << "\n";
 		*f << e->left()->value() << "," << e->weight() << "," << e->right()->value() << "\n";
 	}
 
@@ -108,12 +111,15 @@ void Markov::Model<NodeStorageType>::adjust(NodeStorageType* payload, long int o
 	NodeStorageType p = payload[0];
 	Markov::Node<NodeStorageType>* curnode = this->starterNode;
 	Markov::Edge<NodeStorageType> *e;
+	int i = 0;
 	while (p != 0) {
 		e = curnode->findEdge(p);
 		e->adjust(occurrence);
-		curnode = e->traverse();
+		curnode = e->right();
+		p = payload[++i];
 	}
 
-	e = curnode->findEdge(0xff);
+	e = curnode->findEdge('\xff');
+	e->adjust(occurrence);
 	return;
 }

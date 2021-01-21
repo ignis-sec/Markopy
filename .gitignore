@@ -354,3 +354,6 @@ MigrationBackup/
 #documentation/html/
 #documentation/latex/
 #documentation/xml/
+
+
+Win-visualstudio/MarkovPasswords/datasets/*
