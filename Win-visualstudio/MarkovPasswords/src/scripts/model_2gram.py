@@ -13,16 +13,16 @@ print(f"alphabet={alphabet}")
 #exit()
 
 ## @brief output file handle
-file = open('../../models/2gram.mdl', "wb")
+f = open('../../models/2gram.mdl', "wb")
 #tie start nodes
 for sym in alphabet:
-	f.write(f"\x00,0,{sym}\n".encode())
+	f.write(b"\x00,0," + bytes(sym, encoding='ascii') + b"\n")
 
 #tie terminator nodes
 for sym in alphabet:
-	f.write(f"{sym},0,\xff\n".encode())
+	f.write(bytes(sym, encoding='ascii')+ b",0,\xff\n")
 
 #tie internals
 for src in alphabet:
 	for target in alphabet:
-		f.write(f"{src},0,{target}\n".encode())
+		f.write(bytes(src, encoding='ascii') + b",0," + bytes(target, encoding='ascii') + b"\n")
