@@ -6,7 +6,9 @@
     <member refid="struct__program_options_1a9d0ae7932291a1f6909053b778ff6aac" kind="variable"><name>bFailure</name></member>
     <member refid="struct__program_options_1adaff05c1a34f18dd3ade2541823b09e0" kind="variable"><name>importname</name></member>
     <member refid="struct__program_options_1a8d881e7b82ea8ae14cc0aa43f26ded35" kind="variable"><name>exportname</name></member>
+    <member refid="struct__program_options_1a2ed12b6f37496fbe76f12f6a49c5f4f9" kind="variable"><name>outputfilename</name></member>
     <member refid="struct__program_options_1ad2d16addb437376e209d3928bd994f08" kind="variable"><name>datasetname</name></member>
+    <member refid="struct__program_options_1ae7b214163e0019619a309825945f640d" kind="variable"><name>generateN</name></member>
   </compound>
   <compound refid="class_argparse" kind="class"><name>Argparse</name>
     <member refid="class_argparse_1a4c977d7fcdffd09e8437f214f56ac0ac" kind="function"><name>parse</name></member>
@@ -15,7 +17,7 @@
   <compound refid="class_markov_1_1_edge" kind="class"><name>Markov::Edge</name>
     <member refid="class_markov_1_1_edge_1a622d63509c6179cec56963d803ad1592" kind="variable"><name>_left</name></member>
     <member refid="class_markov_1_1_edge_1a1980a59351e80a7ef83fc04707529cfe" kind="variable"><name>_right</name></member>
-    <member refid="class_markov_1_1_edge_1aab02482bfc40357c12aeb5f5ee3cd0a6" kind="variable"><name>_weight</name></member>
+    <member refid="class_markov_1_1_edge_1a5c36d8455140a5fab9a87398a048e1b2" kind="variable"><name>_weight</name></member>
     <member refid="class_markov_1_1_edge_1a36413aeee1084d1e555345d57bf27fdd" kind="function"><name>Markov::Edge</name></member>
     <member refid="class_markov_1_1_edge_1a667f6d97af29300ad9217e80f1e6dae1" kind="function"><name>Markov::Edge</name></member>
     <member refid="class_markov_1_1_edge_1ab36e4f8f7ae37b81966e10929097f2aa" kind="function"><name>adjust</name></member>
@@ -50,21 +52,23 @@
   <compound refid="class_markov_1_1_model" kind="class"><name>Markov::Model</name>
     <member refid="class_markov_1_1_model_1ae6e142d545313dcdb87b0ae3618397fa" kind="variable"><name>nodes</name></member>
     <member refid="class_markov_1_1_model_1aa834ba7bf4fab9141f59940b48adfdac" kind="variable"><name>starterNode</name></member>
-    <member refid="class_markov_1_1_model_1ab6aa821b0186629ec7f460cdc2dfb303" kind="variable"><name>edges</name></member>
+    <member refid="class_markov_1_1_model_1a635b62df8472f1e22444ccbe77f4e962" kind="variable"><name>edges</name></member>
+    <member refid="class_markov_1_1_model_1ac13d29bfd4c08c9b2c00f7b54d53d421" kind="variable"><name>generator</name></member>
+    <member refid="class_markov_1_1_model_1a4c41020aab865272c4c65d4110c9dad6" kind="variable"><name>distribution</name></member>
     <member refid="class_markov_1_1_model_1a593b1dc98082221e3f69636e3a087dfd" kind="function"><name>Markov::Model</name></member>
     <member refid="class_markov_1_1_model_1a2e0249e4630353a260e06b8f3a72f5bb" kind="function"><name>RandomWalk</name></member>
     <member refid="class_markov_1_1_model_1abb14649eb59af2b60d17400e3c1d827b" kind="function"><name>adjust</name></member>
     <member refid="class_markov_1_1_model_1a379ea9943f9d4c212e1140d4a9af64f5" kind="function"><name>Import</name></member>
-    <member refid="class_markov_1_1_model_1a481a5c1715e3d0f0e459de09b3b3dbf9" kind="function"><name>Import</name></member>
+    <member refid="class_markov_1_1_model_1a3f872a3af96a91d4627c1a5d5e66b19a" kind="function"><name>Import</name></member>
     <member refid="class_markov_1_1_model_1ae16027a94235d2988ac4be35ea07d939" kind="function"><name>Export</name></member>
-    <member refid="class_markov_1_1_model_1acaa03e8716802bdf6c174c5fc23210dc" kind="function"><name>Export</name></member>
+    <member refid="class_markov_1_1_model_1af788426a3c41a7838a2aae199e8aef5b" kind="function"><name>Export</name></member>
     <member refid="class_markov_1_1_model_1a62954b990ae10a74dcc543682abf3315" kind="function"><name>StarterNode</name></member>
     <member refid="class_markov_1_1_model_1a647b2a8065393938c84e28b8e0e4874e" kind="function"><name>Edges</name></member>
     <member refid="class_markov_1_1_model_1acc0161496b713014342e21f6134fce3c" kind="function"><name>Nodes</name></member>
   </compound>
   <compound refid="class_markov_1_1_node" kind="class"><name>Markov::Node</name>
     <member refid="class_markov_1_1_node_1a9851cd33ea466176a5728e3ccea6efed" kind="variable"><name>_value</name></member>
-    <member refid="class_markov_1_1_node_1a734f69786bb586f7f5164b33c1251d55" kind="variable"><name>total_edge_weights</name></member>
+    <member refid="class_markov_1_1_node_1ac43197f892af30ba62a2975041941fb4" kind="variable"><name>total_edge_weights</name></member>
     <member refid="class_markov_1_1_node_1ac70de8ab862a4595bc8e0f51f975d4ce" kind="variable"><name>edges</name></member>
     <member refid="class_markov_1_1_node_1a09666b914debf751d0d8f0afc028ec53" kind="function"><name>Markov::Node</name></member>
     <member refid="class_markov_1_1_node_1a2d87cd1f152ee6415225611404dbdfe6" kind="function"><name>Markov::Node</name></member>
@@ -105,7 +109,13 @@
   </compound>
   <compound refid="namespacemodel__2gram" kind="namespace"><name>model_2gram</name>
     <member refid="namespacemodel__2gram_1a68f5dbc2bf9fcf3e68e119c6667d8a6d" kind="variable"><name>alphabet</name></member>
-    <member refid="namespacemodel__2gram_1a31bb083467564de5a58f7d747f3ec75e" kind="variable"><name>file</name></member>
+    <member refid="namespacemodel__2gram_1a2c21010331f2adf96f64d1e90d019e76" kind="variable"><name>f</name></member>
+  </compound>
+  <compound refid="namespacerandom" kind="namespace"><name>random</name>
+  </compound>
+  <compound refid="namespacerandom-model" kind="namespace"><name>random-model</name>
+    <member refid="random-model_8py_1a3c3d503537d1d214563fda6555ee007a" kind="variable"><name>alphabet</name></member>
+    <member refid="random-model_8py_1a108efe62bf68049ee554ceac15fdf72e" kind="variable"><name>f</name></member>
   </compound>
   <compound refid="namespace_testing" kind="namespace"><name>Testing</name>
   </compound>
@@ -124,12 +134,15 @@
     <member refid="namespace_testing_1_1_m_v_p_1_1_markov_model_1af8b6c0d926618a1037c1f30bfc15b87a" kind="function"><name>TEST_CLASS</name></member>
   </compound>
   <compound refid="namespace_testing_1_1_m_v_p_1_1_markov_passwords" kind="namespace"><name>Testing::MVP::MarkovPasswords</name>
-    <member refid="namespace_testing_1_1_m_v_p_1_1_markov_passwords_1abd54eb839c99ec7531516e286d672582" kind="function"><name>TEST_CLASS</name></member>
+    <member refid="namespace_testing_1_1_m_v_p_1_1_markov_passwords_1a84eafe3eab402e44e2a77f9c34e275b0" kind="function"><name>TEST_CLASS</name></member>
   </compound>
   <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
   </compound>
   <compound refid="dllmain_8cpp" kind="file"><name>dllmain.cpp</name>
+    <member refid="dllmain_8cpp_1a7071b0092ad8c5b57d6cc40c5f803df5" kind="variable"><name>rd</name></member>
     <member refid="dllmain_8cpp_1a403b241d46cd59c0803fa962b9a02274" kind="function"><name>__declspec</name></member>
+    <member refid="dllmain_8cpp_1ae378f01023fe21ff5cf93f5149f76781" kind="function"><name>generator</name></member>
+    <member refid="dllmain_8cpp_1ae9bad6eb7ad881f72a214fde0b949159" kind="function"><name>distribution</name></member>
     <member refid="dllmain_8cpp_1a26e64fb39b69bcd9d1274d279f1561b9" kind="function"><name>DllMain</name></member>
   </compound>
   <compound refid="edge_8cpp" kind="file"><name>edge.cpp</name>
@@ -148,6 +161,9 @@
   <compound refid="node_8cpp" kind="file"><name>node.cpp</name>
   </compound>
   <compound refid="node_8h" kind="file"><name>node.h</name>
+    <member refid="node_8h_1a7071b0092ad8c5b57d6cc40c5f803df5" kind="variable"><name>rd</name></member>
+    <member refid="node_8h_1a3587a710956beb3d42b9a4c6a0aa3acd" kind="variable"><name>generator</name></member>
+    <member refid="node_8h_1ad4adc0937b8a5be67385c59141e12a88" kind="variable"><name>distribution</name></member>
   </compound>
   <compound refid="_markov_model_2src_2pch_8cpp" kind="file"><name>pch.cpp</name>
   </compound>
@@ -173,14 +189,21 @@
     <member refid="term_8h_1a6c02121ac817db33ab43d96ca11c1187" kind="function"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="src_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="src_2main_8cpp_1a7071b0092ad8c5b57d6cc40c5f803df5" kind="variable"><name>rd</name></member>
+    <member refid="src_2main_8cpp_1ae378f01023fe21ff5cf93f5149f76781" kind="function"><name>generator</name></member>
+    <member refid="src_2main_8cpp_1ae9bad6eb7ad881f72a214fde0b949159" kind="function"><name>distribution</name></member>
     <member refid="src_2main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="_u_i_2src_2main_8cpp" kind="file"><name>main.cpp</name>
     <member refid="_u_i_2src_2main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
+  <compound refid="markov_passwords_8cpp" kind="file"><name>markovPasswords.cpp</name>
+  </compound>
   <compound refid="markov_passwords_8h" kind="file"><name>markovPasswords.h</name>
   </compound>
   <compound refid="model__2gram_8py" kind="file"><name>model_2gram.py</name>
+  </compound>
+  <compound refid="random-model_8py" kind="file"><name>random-model.py</name>
   </compound>
   <compound refid="_markov_passwords_g_u_i_8cpp" kind="file"><name>MarkovPasswordsGUI.cpp</name>
   </compound>

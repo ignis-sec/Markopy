@@ -22,6 +22,8 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>map</label>
@@ -48,6 +50,9 @@
         <link refid="edge_8h_source"/>
         <childnode refid="6" relation="include">
         </childnode>
+      </node>
+      <node id="8">
+        <label>random</label>
       </node>
       <node id="3">
         <label>vector</label>

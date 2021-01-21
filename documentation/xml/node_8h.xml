@@ -5,6 +5,7 @@
     <includes local="no">vector</includes>
     <includes local="no">map</includes>
     <includes refid="edge_8h" local="yes">edge.h</includes>
+    <includes local="no">random</includes>
     <includedby refid="model_8cpp" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.cpp</includedby>
     <includedby refid="model_8h" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h</includedby>
     <includedby refid="node_8cpp" local="yes">D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.cpp</includedby>
@@ -21,6 +22,8 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>map</label>
@@ -30,6 +33,9 @@
         <link refid="edge_8h_source"/>
         <childnode refid="5" relation="include">
         </childnode>
+      </node>
+      <node id="6">
+        <label>random</label>
       </node>
       <node id="2">
         <label>vector</label>
@@ -49,6 +55,47 @@
     </invincdepgraph>
     <innerclass refid="class_markov_1_1_node" prot="public">Markov::Node</innerclass>
     <innernamespace refid="namespace_markov">Markov</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="node_8h_1a7071b0092ad8c5b57d6cc40c5f803df5" prot="public" static="no" mutable="no">
+        <type>std::random_device</type>
+        <definition>std::random_device rd</definition>
+        <argsstring></argsstring>
+        <name>rd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="7" column="27" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/main.cpp" bodystart="9" bodyend="-1" declfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" declline="7" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="node_8h_1a3587a710956beb3d42b9a4c6a0aa3acd" prot="public" static="no" mutable="no">
+        <type>std::default_random_engine</type>
+        <definition>std::default_random_engine generator</definition>
+        <argsstring></argsstring>
+        <name>generator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="8" column="35" declfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" declline="8" declcolumn="35"/>
+      </memberdef>
+      <memberdef kind="variable" id="node_8h_1ad4adc0937b8a5be67385c59141e12a88" prot="public" static="no" mutable="no">
+        <type>std::uniform_int_distribution&lt; long long unsigned &gt;</type>
+        <definition>std::uniform_int_distribution&lt;long long unsigned&gt; distribution</definition>
+        <argsstring></argsstring>
+        <name>distribution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" line="9" column="38" declfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/node.h" declline="9" declcolumn="38"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

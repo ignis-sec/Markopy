@@ -18,11 +18,11 @@
         </inbodydescription>
         <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts/model_2gram.py" line="10" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts/model_2gram.py" bodystart="10" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="namespacemodel__2gram_1a31bb083467564de5a58f7d747f3ec75e" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespacemodel__2gram_1a2c21010331f2adf96f64d1e90d019e76" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>model_2gram.file</definition>
+        <definition>model_2gram.f</definition>
         <argsstring></argsstring>
-        <name>file</name>
+        <name>f</name>
         <initializer>=  open(&apos;../../models/2gram.mdl&apos;, &quot;wb&quot;)</initializer>
         <briefdescription>
 <para>output file handle </para>

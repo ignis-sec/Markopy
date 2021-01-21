@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="random-model_8py" kind="file" language="Python">
+    <compoundname>random-model.py</compoundname>
+    <innernamespace refid="namespacerandom-model">random-model</innernamespace>
+    <innernamespace refid="namespacerandom">random</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts/random-model.py"/>
+  </compounddef>
+</doxygen>

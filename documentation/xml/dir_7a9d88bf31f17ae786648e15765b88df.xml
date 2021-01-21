@@ -7,6 +7,7 @@
     <innerfile refid="argparse_8cpp">argparse.cpp</innerfile>
     <innerfile refid="argparse_8h">argparse.h</innerfile>
     <innerfile refid="src_2main_8cpp">main.cpp</innerfile>
+    <innerfile refid="markov_passwords_8cpp">markovPasswords.cpp</innerfile>
     <innerfile refid="markov_passwords_8h">markovPasswords.h</innerfile>
     <briefdescription>
     </briefdescription>

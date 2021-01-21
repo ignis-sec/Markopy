@@ -36,9 +36,9 @@
         </inbodydescription>
         <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.h" line="65" column="14" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.h" bodystart="65" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_markov_1_1_edge_1aab02482bfc40357c12aeb5f5ee3cd0a6" prot="private" static="no" mutable="no">
-        <type>uint64_t</type>
-        <definition>uint64_t Markov::Edge&lt; NodeStorageType &gt;::_weight</definition>
+      <memberdef kind="variable" id="class_markov_1_1_edge_1a5c36d8455140a5fab9a87398a048e1b2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Markov::Edge&lt; NodeStorageType &gt;::_weight</definition>
         <argsstring></argsstring>
         <name>_weight</name>
         <briefdescription>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.h" line="66" column="10" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.h" bodystart="66" bodyend="-1"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.h" line="66" column="5" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/edge.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -269,7 +269,7 @@
     <listofallmembers>
       <member refid="class_markov_1_1_edge_1a622d63509c6179cec56963d803ad1592" prot="private" virt="non-virtual"><scope>Markov::Edge</scope><name>_left</name></member>
       <member refid="class_markov_1_1_edge_1a1980a59351e80a7ef83fc04707529cfe" prot="private" virt="non-virtual"><scope>Markov::Edge</scope><name>_right</name></member>
-      <member refid="class_markov_1_1_edge_1aab02482bfc40357c12aeb5f5ee3cd0a6" prot="private" virt="non-virtual"><scope>Markov::Edge</scope><name>_weight</name></member>
+      <member refid="class_markov_1_1_edge_1a5c36d8455140a5fab9a87398a048e1b2" prot="private" virt="non-virtual"><scope>Markov::Edge</scope><name>_weight</name></member>
       <member refid="class_markov_1_1_edge_1ab36e4f8f7ae37b81966e10929097f2aa" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>adjust</name></member>
       <member refid="class_markov_1_1_edge_1a642aa92fbeb81971c5ec9d2894d76402" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>left</name></member>
       <member refid="class_markov_1_1_edge_1a36413aeee1084d1e555345d57bf27fdd" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>Markov::Edge</name></member>

@@ -5,6 +5,7 @@
     <includes refid="_unit_tests_2pch_8h" local="yes">pch.h</includes>
     <includes local="yes">CppUnitTest.h</includes>
     <includes refid="_markov_model_8h" local="yes">../MarkovModel/src/MarkovModel.h</includes>
+    <includes refid="argparse_8cpp" local="yes">../MarkovPasswords/src/argparse.cpp</includes>
     <incdepgraph>
       <node id="4">
         <label>../MarkovModel/src/MarkovModel.h</label>

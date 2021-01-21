@@ -20,7 +20,7 @@
 <para>send exception on integer underflow</para>
 <para>test integer overflows</para>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="398" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="398" bodyend="432"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="490" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="490" bodyend="524"/>
       </memberdef>
       <memberdef kind="function" id="namespace_testing_1_1_markov_model_1ad59534ad9237abf1a8b09bd7f9263da2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -40,7 +40,7 @@
 <para>test RandomNext with 64 bit high values</para>
 <para>randomNext when no edges are present</para>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="436" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="436" bodyend="491"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="528" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="528" bodyend="583"/>
       </memberdef>
       <memberdef kind="function" id="namespace_testing_1_1_markov_model_1a84a573ca81cb8cb3db9845b0cdcf06a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="495" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="495" bodyend="513"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="587" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="587" bodyend="605"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -65,6 +65,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="394" column="1"/>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="486" column="1"/>
   </compounddef>
 </doxygen>

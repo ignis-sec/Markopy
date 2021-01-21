@@ -24,7 +24,7 @@
 <para>test left/right setter</para>
 <para>test negative adjustments</para>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="21" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="21" bodyend="107"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="22" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="22" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="namespace_testing_1_1_m_v_p_1_1_markov_model_1a6e9e664c5a60cb3af863f384a47952ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -54,7 +54,7 @@
 <para>test FindVertice</para>
 <para>test FindVertice</para>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="111" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="111" bodyend="339"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="112" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="112" bodyend="344"/>
       </memberdef>
       <memberdef kind="function" id="namespace_testing_1_1_m_v_p_1_1_markov_model_1af8b6c0d926618a1037c1f30bfc15b87a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -75,7 +75,7 @@
 <para>test export</para>
 <para>test random walk</para>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="343" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="343" bodyend="374"/>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="348" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" bodystart="348" bodyend="379"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -83,6 +83,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="17" column="1"/>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/UnitTests.cpp" line="18" column="1"/>
   </compounddef>
 </doxygen>

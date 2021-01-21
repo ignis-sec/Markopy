@@ -17,11 +17,11 @@ void \mbox{\hyperlink{class_markov_1_1_model_abb14649eb59af2b60d17400e3c1d827b}{
 \begin{DoxyCompactList}\small\item\em Adjust the model with a single string. Start from the starter node, and for each character, adjust the edge weight from current node to the next, until NULL character is reached. Then, update the edge weight from current node, to the terminator node. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}} (std\+::ifstream $\ast$)
 \begin{DoxyCompactList}\small\item\em Import a file to construct the model. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_markov_1_1_model_a481a5c1715e3d0f0e459de09b3b3dbf9}{Import}} (char $\ast$filename)
+bool \mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{Import}} (const char $\ast$filename)
 \begin{DoxyCompactList}\small\item\em Open a file to import with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Markov\+::\+Model\+::\+Import}} with std\+::ifstream. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}} (std\+::ofstream $\ast$)
 \begin{DoxyCompactList}\small\item\em Export a file of the model. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_markov_1_1_model_acaa03e8716802bdf6c174c5fc23210dc}{Export}} (char $\ast$filename)
+bool \mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{Export}} (const char $\ast$filename)
 \begin{DoxyCompactList}\small\item\em Open a file to export with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Markov\+::\+Model\+::\+Export}} with std\+::ofstream. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a62954b990ae10a74dcc543682abf3315}{Starter\+Node}} ()
 \begin{DoxyCompactList}\small\item\em Return starter \mbox{\hyperlink{class_markov_1_1_node}{Node}}. \end{DoxyCompactList}\item 
@@ -60,12 +60,12 @@ Adjust the model with a single string. Start from the starter node, and for each
 {\em occurrence} & -\/ Occurrence of this string. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_markov_1_1_model_acaa03e8716802bdf6c174c5fc23210dc}\label{class_markov_1_1_model_acaa03e8716802bdf6c174c5fc23210dc}} 
+\mbox{\Hypertarget{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}\label{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}} 
 \index{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Export@{Export}}
 \index{Export@{Export}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}}
 \doxysubsubsection{\texorpdfstring{Export()}{Export()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
-bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Storage\+Type $>$\+::Export (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Storage\+Type $>$\+::Export (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
 
 
 
@@ -88,12 +88,12 @@ Export a file of the model.
 File contains a list of edges. Format is\+: Left\+\_\+repr;weight;right\+\_\+repr Iterate over this vertices, and their edges, and write them to file. \begin{DoxyReturn}{Returns}
 True if successful, False for incomplete models. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_model_a481a5c1715e3d0f0e459de09b3b3dbf9}\label{class_markov_1_1_model_a481a5c1715e3d0f0e459de09b3b3dbf9}} 
+\mbox{\Hypertarget{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}\label{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}} 
 \index{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Import@{Import}}
 \index{Import@{Import}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}}
 \doxysubsubsection{\texorpdfstring{Import()}{Import()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
-bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Storage\+Type $>$\+::Import (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Storage\+Type $>$\+::Import (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
 
 
 

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacerandom-model" kind="namespace" language="Python">
+    <compoundname>random-model</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="random-model_8py_1a3c3d503537d1d214563fda6555ee007a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>random-model.alphabet</definition>
+        <argsstring></argsstring>
+        <name>alphabet</name>
+        <initializer>=  string.printable</initializer>
+        <briefdescription>
+<para>password alphabet </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts/random-model.py" line="10" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts/random-model.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="random-model_8py_1a108efe62bf68049ee554ceac15fdf72e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>random-model.f</definition>
+        <argsstring></argsstring>
+        <name>f</name>
+        <initializer>=  open(&apos;../../models/random.mdl&apos;, &quot;wb&quot;)</initializer>
+        <briefdescription>
+<para>output file handle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts/random-model.py" line="16" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts/random-model.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts/random-model.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>
