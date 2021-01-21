@@ -288,9 +288,12 @@ namespace Testing {
 					src->Link(target1);
 					src->Link(target2);
 
+					
 					res = src->findEdge('b');
+					Assert::IsNotNull(res);
 					Assert::AreEqual((unsigned char)'b', res->traverse()->value());
 					res = src->findEdge('c');
+					Assert::IsNotNull(res);
 					Assert::AreEqual((unsigned char)'c', res->traverse()->value());
 
 					delete src;

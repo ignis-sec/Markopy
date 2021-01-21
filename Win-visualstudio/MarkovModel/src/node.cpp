@@ -62,7 +62,9 @@ bool Markov::Node<storageType>::UpdateEdges(Markov::Edge<storageType>* v) {
 }
 
 template <typename storageType>
-Markov::Edge<storageType>* Markov::Node<storageType>::findEdge(storageType repr) {/*TODO*/ return NULL; };
+Markov::Edge<storageType>* Markov::Node<storageType>::findEdge(storageType repr) {
+	return this->edges.find(repr)->second;
+};
 
 template <typename storageType>
 void Markov::Node<storageType>::updateTotalVerticeWeight(long int offset) {
