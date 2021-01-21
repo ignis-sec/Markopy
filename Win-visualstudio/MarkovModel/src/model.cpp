@@ -1,3 +1,4 @@
+#pragma once
 #include "model.h"
 #include "node.h"
 #include <fstream>
@@ -9,6 +10,10 @@ template <typename NodeStorageType>
 Markov::Model<NodeStorageType>::Model() {
 	this->starterNode = new Markov::Node<NodeStorageType>(0);
 	this->nodes.insert({ 0, this->starterNode });
+
+	std::random_device rd;
+	generator = new std::default_random_engine(rd()); 
+	distribution = std::uniform_int_distribution<long unsigned>(0, 0xffffFFFF);
 }
 
 template <typename NodeStorageType>
@@ -46,6 +51,7 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream *f) {
 			targetN = this->nodes.find(target)->second;
 		}
 		e = srcN->Link(targetN);
+		e->adjust(oc);
 		this->edges.push_back(e);
 		
 		//std::cout << int(srcN->value()) << " --" << e->weight() << "--> " << int(targetN->value()) << "\n";
@@ -90,17 +96,23 @@ template <typename NodeStorageType>
 NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk() {
 	Markov::Node<NodeStorageType>* n = this->starterNode;
 	int len = 0;
-	NodeStorageType ret[32];
+	NodeStorageType *ret = new NodeStorageType[64];
+	
 	while (n != NULL) {
 		n = n->RandomNext();
+		//dirty cutoff, needs better solution
+		if (len == 60) break;
+		if (n == NULL) break;
+
+		//std::cout << n->value();
 		ret[len++] = n->value();
 
 		//maximum character length exceeded and stack will overflow.
-		assert(len<32 && "return buffer overflowing, this will segfault if not aborted.");
+		//assert(len<32 && "return buffer overflowing, this will segfault if not aborted.");
 	}
 
 	//null terminate the string
-	ret[len] == NULL;
+	ret[len] = 0x00;
 
 	//do something with the generated string
 	return ret; //for now

@@ -8,6 +8,10 @@ __declspec(dllexport) void dll_loadtest() {
     //cudaTestEntry();
 }
 
+std::random_device rd;
+std::default_random_engine generator(rd());
+std::uniform_int_distribution<long long unsigned> distribution(0, 0xffffFFFF);
+
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
     switch (ul_reason_for_call)

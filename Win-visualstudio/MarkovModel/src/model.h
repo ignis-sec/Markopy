@@ -10,6 +10,8 @@
 #include "edge.h"
 #include "node.h"
 
+
+
 /**
 	@brief Namespace for model related classes.
 */
@@ -89,6 +91,10 @@ namespace Markov {
 		
 		/** @brief A list of all edges in this model. */
 		std::vector<Markov::Edge<NodeStorageType>*> edges;
+
+
+		std::default_random_engine* generator;
+		std::uniform_int_distribution<long unsigned> distribution;
 	};
 
 };

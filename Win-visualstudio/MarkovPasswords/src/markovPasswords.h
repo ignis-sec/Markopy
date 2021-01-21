@@ -1,11 +1,11 @@
-
+#pragma once
 #include "../../MarkovModel/src/MarkovModel.h"
 
 /** @brief Markov::Model with char represented nodes.
 * 
 * Includes wrappers for Markov::Model and additional helper functions to handle file I/O
 */
-class MarkovPasswords : public Markov::Model<unsigned char>{
+class MarkovPasswords : public Markov::Model<char>{
 public:
 
 	/** @brief Initialize the markov model from MarkovModel::Markov::Model

@@ -1,5 +1,9 @@
+#pragma once
 #include "node.h"
 #include <assert.h>
+#include <iostream>
+
+
 
 template <typename storageType>
 Markov::Node<storageType>::Node(storageType _value) {
@@ -35,17 +39,23 @@ template <typename storageType>
 Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 
 	//get a random value in range of total_vertice_weight
-	int selection = rand() % this->total_edge_weights;
+	int rnd = distribution(generator);// distribution(generator);
+	int selection = rnd % this->total_edge_weights;
 	
 	//make absolute, no negative modulus values wanted
-	selection = (selection>=0)? selection : selection + this->total_edge_weights;
+	selection = (selection>=0)? selection : (selection + this->total_edge_weights);
 
 	//iterate over the Edge map
 	//Subtract the Edge weight from the selection at each Edge
 	//when selection goes below 0, pick that node 
 	//(Fast random selection with weight bias)
-	for ( std::pair<const unsigned char,Markov::Edge<storageType>*> const& x : this->edges) {
+	//std::cout << "Rand: " << rnd << "\n";
+	//std::cout << "Total: " << this->total_edge_weights << "\n";
+	//std::cout << "Total edges: " << this->edges.size() << "\n";
+	for ( std::pair<unsigned char,Markov::Edge<storageType>*> const& x : this->edges) {
+		//std::cout << selection << "\n";
 		selection -= x.second->weight();
+		//std::cout << selection << "\n";
 		if (selection < 0) return x.second->traverse();
 	}
 
@@ -57,7 +67,7 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 template <typename storageType>
 bool Markov::Node<storageType>::UpdateEdges(Markov::Edge<storageType>* v) {
 	this->edges.insert({ v->right()->value(), v });
-	this->total_edge_weights += v->weight();
+	//this->total_edge_weights += v->weight();
 	return v->traverse();
 }
 

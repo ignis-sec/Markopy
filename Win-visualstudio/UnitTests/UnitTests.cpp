@@ -239,8 +239,9 @@ namespace Testing {
 
 					Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');
 					Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');
+					Markov::Node<unsigned char>* target2 = new Markov::Node<unsigned char>('c');
 					Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(src, target1);
-					Markov::Edge<unsigned char>* e2 = new Markov::Edge<unsigned char>(src, target1);
+					Markov::Edge<unsigned char>* e2 = new Markov::Edge<unsigned char>(src, target2);
 					e1->adjust(25);
 					src->UpdateEdges(e1);
 					e2->adjust(30);

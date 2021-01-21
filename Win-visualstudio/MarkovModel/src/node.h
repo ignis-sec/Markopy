@@ -2,6 +2,11 @@
 #include <vector>
 #include <map>
 #include "edge.h"
+#include <random>
+
+extern std::random_device rd;
+extern std::default_random_engine generator;
+extern std::uniform_int_distribution<long long unsigned> distribution;
 
 namespace Markov {
 
@@ -81,12 +86,13 @@ namespace Markov {
 		*/
 		uint64_t TotalEdgeWeights();
 
+
 	private:
 
 		
 		storageType _value; /** @brief Character representation of this node. 0 for starter, 0xff for terminator.*/
 
-		uint64_t total_edge_weights;/** @brief Total weights of the vertices, required by RandomNext;*/
+		int total_edge_weights;/** @brief Total weights of the vertices, required by RandomNext;*/
 
 		/** @brief A map of all edges connected to this node, where this node is at the left.
 		* 

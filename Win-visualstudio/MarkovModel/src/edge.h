@@ -63,7 +63,7 @@ namespace Markov {
 	private:
 		Markov::Node<NodeStorageType>* _left; /** @brief source node*/
 		Markov::Node<NodeStorageType>* _right;/** @brief target node*/
-		uint64_t _weight;    /** @brief Edge weight*/
+		int _weight;    /** @brief Edge weight*/
 	};
 
 

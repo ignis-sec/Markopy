@@ -1,16 +1,20 @@
+#pragma once
 #include <iostream>
 #include "color/term.h"
 #include "argparse.h"
-#include "markovPasswords.h"
 #include <string>
 #include <sstream>
+#include "markovPasswords.h"
+
+std::random_device rd;
+std::default_random_engine generator(rd());
+std::uniform_int_distribution<long long unsigned> distribution(0, 0xffffFFFF);
 
 /** @brief Launch CLI tool.
 */
 int main(int argc, char** argv) {
 
 	terminal t;
-
 	
 	ProgramOptions* p  = Argparse::parse(argc, argv);
 
@@ -22,7 +26,7 @@ int main(int argc, char** argv) {
 
 	MarkovPasswords markovPass;
 
-	markovPass.Import("models/2gram.mdl");
+	
 
 	std::ifstream inputfile;
 	inputfile.open("datasets/pwdb.dat", std::ios_base::binary);
@@ -30,6 +34,11 @@ int main(int argc, char** argv) {
 	std::string line;
 	
 	int i = 0;
+	
+	srand(time(NULL));
+	 
+	/* GENERATION
+	markovPass.Import("models/2gram.mdl");
 	std::cout << "0";
 	while (std::getline(inputfile, line, '\n')) {
 		int oc;
@@ -44,7 +53,18 @@ int main(int argc, char** argv) {
 		markovPass.adjust(pass, oc);
 	}
 	markovPass.Export("models/2gram-built.mdl");
+	*/
 
+	markovPass.Import("models/2gram-built.mdl");
+
+	char* res;
+	char print[100];
+	for (int i = 0; i < 100; i++) {
+		res = markovPass.RandomWalk();
+		strcpy_s(print,100, (char*)res);
+		std::cout << "Generation result: " << res << std::endl;
+		delete res;
+	}
 
 	return 0;
 }
