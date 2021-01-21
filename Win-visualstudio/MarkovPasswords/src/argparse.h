@@ -9,7 +9,9 @@ typedef struct _programOptions {
 	bool bFailure;
 	char importname[256];
 	char exportname[256];
+	char outputfilename[256];
 	char datasetname[256];
+	int generateN;
 } ProgramOptions;
 
 

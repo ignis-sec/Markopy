@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 #include "../MarkovModel/src/MarkovModel.h"
+#include "../MarkovPasswords/src/argparse.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -380,9 +381,96 @@ namespace Testing {
 		{
 			/** @brief Test Class for Argparse class
 			*/
-			TEST_CLASS(ArgParse)
+			TEST_CLASS(ArgParser)
 			{
 			public:
+				/** @brief test basic generate
+				*/
+				TEST_METHOD(generate_basic) {
+					int argc = 3;
+					char *argv[] = {"markov.exe", "generate", "-if", "model.mdl", "-of", "passwords.txt", "-n", "100"};
+
+					ProgramOptions *p = Argparse::parse(argc, argv);
+					Assert::IsNotNull(p);
+
+					Assert::AreEqual(p->bImport, true);
+					Assert::AreEqual(p->bExport, false);
+					Assert::AreEqual(p->importname, "model.mdl");
+					Assert::AreEqual(p->outputfilename, "passwords.txt");
+					Assert::AreEqual(p->generateN, 100);
+				}
+
+				/** @brief test basic generate reordered params
+				*/
+				TEST_METHOD(generate_basic_reorder) {
+					int argc = 3;
+					char *argv[] = { "markov.exe", "generate", "-n", "100", "-if", "model.mdl", "-of", "passwords.txt" };
+
+					ProgramOptions* p = Argparse::parse(argc, argv);
+					Assert::IsNotNull(p);
+
+					Assert::AreEqual(p->bImport, true);
+					Assert::AreEqual(p->bExport, false);
+					Assert::AreEqual(p->importname, "model.mdl");
+					Assert::AreEqual(p->outputfilename, "passwords.txt");
+					Assert::AreEqual(p->generateN, 100);
+				}
+
+				/** @brief test basic generate param longnames
+				*/
+				TEST_METHOD(generate_basic_longname) {
+					int argc = 3;
+					char *argv[] = { "markov.exe", "generate", "-n", "100", "--inputfilename", "model.mdl", "--outputfilename", "passwords.txt" };
+
+					ProgramOptions* p = Argparse::parse(argc, argv);
+					Assert::IsNotNull(p);
+
+					Assert::AreEqual(p->bImport, true);
+					Assert::AreEqual(p->bExport, false);
+					Assert::AreEqual(p->importname, "model.mdl");
+					Assert::AreEqual(p->outputfilename, "passwords.txt");
+					Assert::AreEqual(p->generateN, 100);
+				}
+
+				/** @brief test basic generate
+				*/
+				TEST_METHOD(generate_fail_badmethod) {
+					int argc = 3;
+					char *argv[] = { "markov.exe", "junk", "-n", "100", "--inputfilename", "model.mdl", "--outputfilename", "passwords.txt" };
+
+					ProgramOptions* p = Argparse::parse(argc, argv);
+					Assert::IsNull(p);
+				}
+
+				/** @brief test basic generate
+				*/
+				TEST_METHOD(train_basic) {
+					int argc = 3;
+					char *argv[] = { "markov.exe", "train", "-ef", "model.mdl" };
+
+					ProgramOptions* p = Argparse::parse(argc, argv);
+					Assert::IsNotNull(p);
+
+					Assert::AreEqual(p->bImport, false);
+					Assert::AreEqual(p->bExport, true);
+					Assert::AreEqual(p->exportname, "model.mdl");
+
+				}
+
+				/** @brief test basic generate
+				*/
+				TEST_METHOD(train_basic_longname) {
+					int argc = 3;
+					char *argv[] = { "markov.exe", "train", "--exportfilename", "model.mdl" };
+
+					ProgramOptions* p = Argparse::parse(argc, argv);
+					Assert::IsNotNull(p);
+
+					Assert::AreEqual(p->bImport, false);
+					Assert::AreEqual(p->bExport, true);
+					Assert::AreEqual(p->exportname, "model.mdl");
+				}
+
 			};
 
 		}
