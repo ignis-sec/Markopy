@@ -5,7 +5,7 @@
 * 
 * Includes wrappers for Markov::Model and additional helper functions to handle file I/O
 */
-class MarkovPasswords : Markov::Model<char>{
+class MarkovPasswords : public Markov::Model<unsigned char>{
 public:
 
 	/** @brief Initialize the markov model from MarkovModel::Markov::Model

@@ -52,7 +52,7 @@ namespace Markov {
 		/** @brief Open a file to import with filename, and call bool Markov::Model::Import with std::ifstream
 		* @return True if successful, False for incomplete models or corrupt file formats
 		*/
-		bool Import(char* filename);
+		bool Import(const char* filename);
 
 		/** @brief Export a file of the model.
 		*
@@ -66,7 +66,7 @@ namespace Markov {
 		/** @brief Open a file to export with filename, and call bool Markov::Model::Export with std::ofstream
 		* @return True if successful, False for incomplete models or corrupt file formats
 		*/
-		bool Export(char* filename);
+		bool Export(const char* filename);
 
 		/** @brief Return starter Node
 		* @return starter node with 00 value
@@ -88,7 +88,7 @@ namespace Markov {
 
 		
 		/** @brief A list of all edges in this model. */
-		std::vector<Markov::Edge<NodeStorageType>> edges;
+		std::vector<Markov::Edge<NodeStorageType>*> edges;
 	};
 
 };

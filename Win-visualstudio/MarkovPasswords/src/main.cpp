@@ -3,8 +3,6 @@
 #include "color/term.h"
 #include "argparse.h"
 #include "markovPasswords.h"
-#include <fstream>
-
 
 /** @brief Launch CLI tool.
 */
@@ -20,6 +18,10 @@ int main(int argc, char** argv) {
 		Argparse::help();
 	}
 
+
+	MarkovPasswords markovPass;
+
+	markovPass.Import("models/2gram.mdl");
 
 	return 0;
 }
