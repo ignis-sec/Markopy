@@ -53,6 +53,8 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream *f) {
 
 	std::cout << "Total number of nodes: " << this->nodes.size() << std::endl;
 	std::cout << "Total number of edges: " << this->edges.size() << std::endl;
+
+	return true;
 }
 
 template <typename NodeStorageType>
@@ -64,7 +66,15 @@ bool Markov::Model<NodeStorageType>::Import(const char* filename) {
 }
 
 template <typename NodeStorageType>
-bool Markov::Model<NodeStorageType>::Export(std::ofstream* f) {/*TODO*/ return false;}
+bool Markov::Model<NodeStorageType>::Export(std::ofstream* f) {
+	Markov::Edge<NodeStorageType>* e;
+	for (std::vector<int>::size_type i = 0; i != this->edges.size(); i++) {
+		e = this->edges[i];
+		*f << e->left()->value() << "," << e->weight() << "," << e->right()->value() << "\n";
+	}
+
+	return true;
+}
 
 template <typename NodeStorageType>
 bool Markov::Model<NodeStorageType>::Export(const char* filename) {

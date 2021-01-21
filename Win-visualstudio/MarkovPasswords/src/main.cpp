@@ -22,6 +22,7 @@ int main(int argc, char** argv) {
 	MarkovPasswords markovPass;
 
 	markovPass.Import("models/2gram.mdl");
+	markovPass.Export("models/2gram-dup.mdl");
 
 	return 0;
 }
