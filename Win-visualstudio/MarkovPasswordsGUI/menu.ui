@@ -58,7 +58,7 @@ background:white;
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QPushButton" name="Visualizations">
+   <widget class="QPushButton" name="visu">
     <property name="geometry">
      <rect>
       <x>450</x>
