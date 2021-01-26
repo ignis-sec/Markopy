@@ -1,0 +1,80 @@
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+
+	<h2> Benc </h2>
+
+	<div id="chart" style="width:100%; height:100%;"></div>
+	<script>
+
+    document.addEventListener("DOMContentLoaded", function(){
+
+		var options = {
+			series: [{
+				data: [21, 22, 10, 28, 16, 21, 13, 30]
+			}],
+			chart: {
+				height: 350,
+				type: 'bar',
+				events: {
+					click: function (chart, w, e) {
+						// console.log(chart, w, e)
+					}
+				}
+			},
+			colors: colors,
+			plotOptions: {
+				bar: {
+					columnWidth: '45%',
+					distributed: true
+				}
+			},
+			dataLabels: {
+				enabled: false
+			},
+			legend: {
+				show: false
+			},
+			xaxis: {
+				categories: [
+					['John', 'Doe'],
+					['Joe', 'Smith'],
+					['Jake', 'Williams'],
+					'Amber',
+					['Peter', 'Brown'],
+					['Mary', 'Evans'],
+					['David', 'Wilson'],
+					['Lily', 'Roberts'],
+				],
+				labels: {
+					style: {
+						colors: colors,
+						fontSize: '12px'
+					}
+				}
+			}
+		};
+
+		var chart = new ApexCharts(document.querySelector("#chart"), options);
+		chart.render();
+
+
+
+        var resetCssClasses = function(activeEl) {
+        var els = document.querySelectorAll('button')
+        Array.prototype.forEach.call(els, function(el) {
+          el.classList.remove('active')
+        })
+
+        activeEl.target.classList.add('active')
+      }
+
+
+    });
+
+	</script>
+
+</body>
+</html>

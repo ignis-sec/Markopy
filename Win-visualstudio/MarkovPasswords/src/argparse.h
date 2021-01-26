@@ -19,7 +19,7 @@ typedef struct _programOptions {
 */
 static class Argparse {
 public:
-	/** @brief parse cli commands and return 
+	/** @brief parse cli commands and return  
 	* @param argc - Program arguement count
 	* @param argv - Program arguement values array
 	* @return ProgramOptions structure.
