@@ -5,13 +5,11 @@
 
 class menu:public QMainWindow {
 	Q_OBJECT
-
-
 public:
 	menu(QWidget* parent = Q_NULLPTR);
 
 private:
-	Ui::menu ui;
+	Ui::main ui;
 
 public slots:
 	void about();
