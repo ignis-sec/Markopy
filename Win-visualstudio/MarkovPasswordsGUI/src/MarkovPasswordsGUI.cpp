@@ -12,6 +12,7 @@ MarkovPasswordsGUI::MarkovPasswordsGUI(QWidget *parent)
     
     QObject::connect(ui.pushButton, &QPushButton::clicked, this, [this] {benchmarkSelected(); });
     QObject::connect(ui.pushButton_2,&QPushButton::clicked, this, [this] {modelvisSelected(); });
+    QObject::connect(ui.pushButton_4, &QPushButton::clicked, this, [this] {comparisonSelected(); });
 }
 
 
@@ -44,6 +45,20 @@ void MarkovPasswordsGUI::modelvisSelected() {
 
     //get absolute path to the layout html
     std::string layout = "file:///" + std::string(path) + "\\views\\model.htm";
+    std::replace(layout.begin(), layout.end(), '\\', '/');
+    webkit->setUrl(QUrl(layout.c_str()));
+}
+
+void MarkovPasswordsGUI::comparisonSelected() {
+
+    QWebEngineView* webkit = ui.centralWidget->findChild<QWebEngineView*>("chartArea");
+
+    //get working directory
+    char path[255];
+    GetCurrentDirectoryA(255, path);
+
+    //get absolute path to the layout html
+    std::string layout = "file:///" + std::string(path) + "\\views\\comparison.htm";
     std::replace(layout.begin(), layout.end(), '\\', '/');
     webkit->setUrl(QUrl(layout.c_str()));
 }
