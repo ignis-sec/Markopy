@@ -22,7 +22,7 @@ void Argparse::help() {
 	"		import empty_model.mdl and train it with data from stdin. When done, output the model to model.mdl\n"
 	"\n"
 	"	markov.exe -if empty_model.mdl -n 15000 -of wordlist.txt\n"
-	"		import empty_model.mdl and generate\n"
+	"		import empty_model.mdl and generate 15000 words to wordlist.txt\n"
 	
 	 << std::endl;
 }
