@@ -17,6 +17,12 @@ void Argparse::help() {
 	"	-n (generate count)\n"
 	" 		Number of lines to generate\n"
 	"	\n"
+	"Usage:	\n"
+	"	markov.exe -if empty_model.mdl -ef model.mdl\n"
+	"		import empty_model.mdl and train it with data from stdin. When done, output the model to model.mdl\n"
+	"\n"
+	"	markov.exe -if empty_model.mdl -n 15000 -of wordlist.txt\n"
+	"		import empty_model.mdl and generate\n"
 	
 	 << std::endl;
 }
