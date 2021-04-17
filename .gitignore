@@ -358,3 +358,7 @@ MigrationBackup/
 
 
 Win-visualstudio/MarkovPasswords/datasets/*
+
+
+# Sonarqube work directory
+.scannerwork/*
