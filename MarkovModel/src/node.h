@@ -10,7 +10,7 @@ extern std::uniform_int_distribution<long long unsigned> distribution;
 
 namespace Markov {
 
-	/** @brief A node class that for the vertices of model. Connected with eachother using Markov::Edge
+	/** @brief A node class that for the vertices of model. Connected with eachother using Edge
 	* 
 	* This class will *later be templated to accept other data types than char*.
 	*/
@@ -20,12 +20,12 @@ namespace Markov {
 
 		/** @brief Default constructor. Creates an empty Node.
 		*/
-		Markov::Node<storageType>();
+		Node<storageType>();
 		
 		/** @brief Constructor. Creates a Node with no edges and with given value.
 		* @param value - Nodes character representation.
 		*/
-		Markov::Node<storageType>(storageType _value);
+		Node<storageType>(storageType _value);
 
 		/** @brief Link this node with another, with this node as its source.
 		* 
@@ -33,7 +33,7 @@ namespace Markov {
 		* @param target - Target node which will be the right() of new edge.
 		* @return A new node with left as this, and right as parameter target.
 		*/
-		Markov::Edge<storageType>* Link(Markov::Node<storageType>*);
+		Edge<storageType>* Link(Node<storageType>*);
 		
 		/** @brief Link this node with another, with this node as its source.
 		* 
@@ -41,7 +41,7 @@ namespace Markov {
 		* @param Edge - Edge that will accept this node as its left.
 		* @return the same edge as parameter target.
 		*/
-		Markov::Edge<storageType>* Link(Markov::Edge<storageType>*);
+		Edge<storageType>* Link(Edge<storageType>*);
 
 		/** @brief Chose a random node from the list of edges, with regards to its weight, and traverse to that.
 		* 
@@ -49,25 +49,25 @@ namespace Markov {
 		* At each step, weight of the edge is subtracted from the random number, and once it is 0, next node is selected.
 		* @return Node that was chosen at weight biased random.
 		*/
-		Markov::Node<storageType>* RandomNext();
+		Node<storageType>* RandomNext();
 
 		/** @brief Insert a new edge to the this.edges.
 		* @param edge - New edge that will be inserted.
 		* @return true if insertion was successful, false if it fails.
 		*/
-		bool UpdateEdges(Markov::Edge<storageType>*);
+		bool UpdateEdges(Edge<storageType>*);
 		
 		/** @brief Find an edge with its character representation.
 		* @param repr - character value of the target node.
 		* @return Edge that is connected between this node, and the target node.
 		*/
-		Markov::Edge<storageType>* findEdge(storageType repr);
+		Edge<storageType>* findEdge(storageType repr);
 
 		/** @brief Find an edge with its pointer. Avoid unless neccessary because comptutational cost of find by character is cheaper (because of std::map)
 		* @param target - target node.
 		* @return Edge that is connected between this node, and the target node.
 		*/
-		Markov::Edge<storageType>* findEdge(Node<storageType>* target);
+		Edge<storageType>* findEdge(Node<storageType>* target);
 		
 		/** @brief Return character representation of this node.
 		* @return character representation at _value.
@@ -80,7 +80,7 @@ namespace Markov {
 
 		/** @brief return edges
 		*/
-		std::map<storageType, Markov::Edge<storageType>*>* Edges();
+		std::map<storageType, Edge<storageType>*>* Edges();
 
 		/** @brief return total edge weights
 		*/
@@ -98,6 +98,6 @@ namespace Markov {
 		* 
 		* Map is indexed by unsigned char, which is the character representation of the node.
 		*/
-		std::map<storageType, Markov::Edge<storageType>*> edges;
+		std::map<storageType, Edge<storageType>*> edges;
 	};
 };

@@ -26,7 +26,7 @@ namespace Markov {
 		
 		/** @brief Initialize a model with only start and end nodes.
 		*/
-		Markov::Model<NodeStorageType>();
+		Model<NodeStorageType>();
 
 		/** @brief Do a random walk on this model. 
 		* Start from the starter node, invoke RandomNext on current node until terminator node is reached.
@@ -51,7 +51,7 @@ namespace Markov {
 		*/
 		bool Import(std::ifstream*);
 
-		/** @brief Open a file to import with filename, and call bool Markov::Model::Import with std::ifstream
+		/** @brief Open a file to import with filename, and call bool Model::Import with std::ifstream
 		* @return True if successful, False for incomplete models or corrupt file formats
 		*/
 		bool Import(const char* filename);
@@ -65,7 +65,7 @@ namespace Markov {
 		*/
 		bool Export(std::ofstream*);
 
-		/** @brief Open a file to export with filename, and call bool Markov::Model::Export with std::ofstream
+		/** @brief Open a file to export with filename, and call bool Model::Export with std::ofstream
 		* @return True if successful, False for incomplete models or corrupt file formats
 		*/
 		bool Export(const char* filename);
@@ -73,24 +73,24 @@ namespace Markov {
 		/** @brief Return starter Node
 		* @return starter node with 00 value
 		*/
-		Markov::Node<NodeStorageType>* StarterNode(){ return starterNode;}
+		Node<NodeStorageType>* StarterNode(){ return starterNode;}
 
-		std::vector<Markov::Edge<NodeStorageType>>* Edges(){ return &edges;}
+		std::vector<Edge<NodeStorageType>>* Edges(){ return &edges;}
 
-		std::map<NodeStorageType, Markov::Node<NodeStorageType>*>* Nodes(){ return &nodes;}
+		std::map<NodeStorageType, Node<NodeStorageType>*>* Nodes(){ return &nodes;}
 
 	private:
 		/** @brief Map left is the Nodes value
 		* Map right is the node pointer
 		*/
-		std::map<NodeStorageType, Markov::Node<NodeStorageType>*> nodes;
+		std::map<NodeStorageType, Node<NodeStorageType>*> nodes;
 
 		/** @brief Starter Node of this model. */
-		Markov::Node<NodeStorageType>* starterNode;
+		Node<NodeStorageType>* starterNode;
 
 		
 		/** @brief A list of all edges in this model. */
-		std::vector<Markov::Edge<NodeStorageType>*> edges;
+		std::vector<Edge<NodeStorageType>*> edges;
 
 
 		std::default_random_engine* generator;

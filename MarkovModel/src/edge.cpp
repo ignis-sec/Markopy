@@ -1,4 +1,5 @@
 #include "edge.h"
+#include <cstddef>
 
 template <typename NodeStorageType>
 Markov::Edge<NodeStorageType>::Edge() {
