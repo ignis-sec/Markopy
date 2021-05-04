@@ -362,3 +362,6 @@ Win-visualstudio/MarkovPasswords/datasets/*
 
 # Sonarqube work directory
 .scannerwork/*
+
+
+include/*.so

@@ -1,33 +1,70 @@
-CC		:= g++
-C_FLAGS := -Wall -Wextra -g
-
-BIN		:= bin
-MP_SRC	:= $(shell find ./MarkovPasswords/src/ -name '*.cpp') $(shell find ./MarkovModel/src/ -name '*.cpp')
-MM_SRC  := $(shell find ./MarkovModel/src/ -name '*.cpp')
-INCLUDE	:= include
-LIB		:= lib
-
-LIBRARIES	:=
 
 
-MODEL_LIB	:= MarkovModel
-PASSWD_EXEC := Markov
+##############################################################################################################
+#####################################              Global Options            #################################
+##############################################################################################################
 
-all: $(BIN)/$(PASSWD_EXEC)
+# Compiler
+CC            := g++
+#output directory
+BIN            := bin
+#include directory
+INCLUDE        := include
+#Libraries
+LIB            := lib
+LIBRARIES    :=
+
+##############################################################################################################
+#####################################     MarkovPassword project options     #################################
+##############################################################################################################
+
+MP_C_FLAGS  := -Wall -Wextra -g
+MP_EXEC     := Markov
+MP_SRC      := $(shell find ./MarkovPasswords/src/ -name '*.cpp') $(shell find ./MarkovModel/src/ -name '*.cpp')
+
+#build pattern
+$(BIN)/$(MP_EXEC): $(MP_SRC)
+	$(CC) $(MP_C_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)    
 
 
-model: $(BIN)/$(MODEL_LIB)
 
 
-MarkovPasswords:
-	
+##############################################################################################################
+#####################################       MarkovModel project options      #################################
+##############################################################################################################
+MM_SRC_DIR      := MarkovModel/src/
+MM_SRC          := $(shell find $(MM_SRC_DIR) -name '*.cpp')
+MM_OBJS         := $(MM_SRC:%=$(BIN)/%.o)
+MM_DEPS         := $(MM_OBJS:.o=.d)
+MM_LDFLAGS      := -shared 
+MM_C_FLAGS      := $(MM_INC_FLAGS) -MMD -MP
+MM_INC_DIRS     := $(shell find $(MM_SRC_DIR) -type d)
+MM_INC_FLAGS    := $(addprefix -I,$(MM_INC_DIRS))
+MM_LIB          := model.so
 
+$(INCLUDE)/$(MM_LIB): $(MM_OBJS)
+	echo $(MM_OBJS)
+	$(CC) $(MM_OBJS) -o $@ $(MM_LDFLAGS)
+
+# Build step for C++ source
+$(BIN)/%.cpp.o:%.cpp
+	mkdir -p $(dir $@)
+	$(CC) $(MM_C_FLAGS) -c $< -o $@
+
+-include $(MM_DEPS)
+
+##############################################################################################################
+#####################################               Directives               #################################
+##############################################################################################################
+
+.PHONY: all
+all: model mp
+model: $(INCLUDE)/$(MM_LIB)
+
+mp: $(BIN)/$(MP_EXEC)
+
+.PHONY: clean
 clean:
-	$(RM) $(BIN)/*
+	$(RM) -r $(BIN)/*
 
 
-$(BIN)/$(PASSWD_EXEC): $(MP_SRC)
-		$(CC) $(C_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)	
-
-$(BIN)/$(MODEL_LIB): $(MM_SRC)
-		$(CC) $(C_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)
