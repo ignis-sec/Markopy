@@ -4,9 +4,9 @@
 #include <iostream>
 
 
-std::random_device rd;
-std::default_random_engine generator(rd());
-std::uniform_int_distribution<long long unsigned> distribution(0, 0xffffFFFF);
+//std::random_device rd;
+//std::default_random_engine generator(rd());
+//std::uniform_int_distribution<long long unsigned> distribution(0, 0xffffFFFF);
 
 #ifdef _WIN32
 __declspec(dllexport) void dll_loadtest() {
