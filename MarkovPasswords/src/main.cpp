@@ -3,6 +3,7 @@
 #include "color/term.h"
 #include "argparse.h"
 #include <string>
+#include <cstring>
 #include <sstream>
 #include "markovPasswords.h"
 
@@ -63,7 +64,11 @@ int main(int argc, char** argv) {
 	wordlist.open("wordlist.txt");
 	for (int i = 0; i < 5000000; i++) {
 		res = markovPass.RandomWalk();
+#ifdef _WIN32
 		strcpy_s(print,100, (char*)res);
+#else
+		strcpy(print, (char*)res);
+#endif
 		wordlist << res << "\n";
 		//std::cout << "Generation result: " << res << std::endl;
 		delete res;

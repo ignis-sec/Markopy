@@ -17,7 +17,7 @@ typedef struct _programOptions {
 
 /** @brief Parse command line arguements.
 */
-static class Argparse {
+class Argparse {
 public:
 	/** @brief parse cli commands and return  
 	* @param argc - Program arguement count
