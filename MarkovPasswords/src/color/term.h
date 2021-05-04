@@ -1,6 +1,9 @@
 #pragma once
 
+#ifdef _WIN32
 #include <Windows.h>
+#endif
+
 #include <iostream>
 #include <map>
 
@@ -18,10 +21,18 @@ public:
 	* Get references to stdout and stderr handles.
 	*/
 	terminal();
+
+	enum color { RESET, BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, LIGHTGRAY, DARKGRAY, BROWN };
+	#ifdef _WIN32
 	static HANDLE _stdout;
 	static HANDLE _stderr;
-	const enum class color { RESET, BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, LIGHTGRAY, DARKGRAY, BROWN };
 	static std::map<terminal::color, DWORD> colormap;
+	#else
+	static std::map<terminal::color, int> colormap;
+	#endif
+	
+	
+	
 	static std::ostream endl;
 
 
