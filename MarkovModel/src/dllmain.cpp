@@ -4,15 +4,15 @@
 #include <iostream>
 
 
+std::random_device rd;
+std::default_random_engine generator(rd());
+std::uniform_int_distribution<long long unsigned> distribution(0, 0xffffFFFF);
+
 #ifdef _WIN32
 __declspec(dllexport) void dll_loadtest() {
     std::cout << "External function called.\n";
     //cudaTestEntry();
 }
-
-std::random_device rd;
-std::default_random_engine generator(rd());
-std::uniform_int_distribution<long long unsigned> distribution(0, 0xffffFFFF);
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
