@@ -609,6 +609,23 @@ namespace Testing {
 				char* res = (char*)m.RandomWalk();
 				Assert::IsFalse(strcmp(res, "abc"));
 			}
+			TEST_METHOD(functionoal_random_walk_without_any) {
+				Markov::Model<unsigned char> m;
+				Markov::Node<unsigned char>* starter = m.StarterNode();
+				Markov::Node<unsigned char>* a = new Markov::Node<unsigned char>('a');
+				Markov::Node<unsigned char>* b = new Markov::Node<unsigned char>('b');
+				Markov::Node<unsigned char>* c = new Markov::Node<unsigned char>('c');
+				Markov::Node<unsigned char>* end = new Markov::Node<unsigned char>(0xff);
+				Markov::Edge<unsigned char>* res = NULL;
+				starter->Link(a)->adjust(1);
+				a->Link(b)->adjust(1);
+				b->Link(c)->adjust(1);
+				c->Link(end)->adjust(1);
+
+				res = starter->findEdge('D');
+				Assert::IsNull(res);
+
+			}
 		};
 
 	}
