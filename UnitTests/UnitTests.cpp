@@ -395,7 +395,7 @@ namespace Testing {
 				/** @brief test basic generate
 				*/
 				TEST_METHOD(generate_basic) {
-					int argc = 3;
+					int argc = 8;
 					char *argv[] = {"markov.exe", "generate", "-if", "model.mdl", "-of", "passwords.txt", "-n", "100"};
 
 					ProgramOptions *p = Argparse::parse(argc, argv);
@@ -406,12 +406,13 @@ namespace Testing {
 					Assert::AreEqual(p->importname, "model.mdl");
 					Assert::AreEqual(p->outputfilename, "passwords.txt");
 					Assert::AreEqual(p->generateN, 100);
+					
 				}
 
 				/** @brief test basic generate reordered params
 				*/
 				TEST_METHOD(generate_basic_reorder) {
-					int argc = 3;
+					int argc = 8;
 					char *argv[] = { "markov.exe", "generate", "-n", "100", "-if", "model.mdl", "-of", "passwords.txt" };
 
 					ProgramOptions* p = Argparse::parse(argc, argv);
@@ -427,7 +428,7 @@ namespace Testing {
 				/** @brief test basic generate param longnames
 				*/
 				TEST_METHOD(generate_basic_longname) {
-					int argc = 3;
+					int argc = 8;
 					char *argv[] = { "markov.exe", "generate", "-n", "100", "--inputfilename", "model.mdl", "--outputfilename", "passwords.txt" };
 
 					ProgramOptions* p = Argparse::parse(argc, argv);
@@ -443,7 +444,7 @@ namespace Testing {
 				/** @brief test basic generate
 				*/
 				TEST_METHOD(generate_fail_badmethod) {
-					int argc = 3;
+					int argc = 8;
 					char *argv[] = { "markov.exe", "junk", "-n", "100", "--inputfilename", "model.mdl", "--outputfilename", "passwords.txt" };
 
 					ProgramOptions* p = Argparse::parse(argc, argv);
@@ -453,7 +454,7 @@ namespace Testing {
 				/** @brief test basic generate
 				*/
 				TEST_METHOD(train_basic) {
-					int argc = 3;
+					int argc = 4;
 					char *argv[] = { "markov.exe", "train", "-ef", "model.mdl" };
 
 					ProgramOptions* p = Argparse::parse(argc, argv);
@@ -468,7 +469,7 @@ namespace Testing {
 				/** @brief test basic generate
 				*/
 				TEST_METHOD(train_basic_longname) {
-					int argc = 3;
+					int argc = 4;
 					char *argv[] = { "markov.exe", "train", "--exportfilename", "model.mdl" };
 
 					ProgramOptions* p = Argparse::parse(argc, argv);
@@ -478,6 +479,8 @@ namespace Testing {
 					Assert::AreEqual(p->bExport, true);
 					Assert::AreEqual(p->exportname, "model.mdl");
 				}
+
+
 
 			};
 
