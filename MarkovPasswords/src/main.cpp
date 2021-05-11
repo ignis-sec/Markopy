@@ -27,7 +27,8 @@ int main(int argc, char** argv) {
 
 	MarkovPasswords markovPass;
 	markovPass.Import("models/2gram.mdl");
-	markovPass.Train("models/finished.mdl", "datasets/dataset.5.dat", '\t');
+	markovPass.Train("datasets/dataset.5.dat", '\t');
+	markovPass.Export("model/finished.mdl");
 
 	//markovPass.Import("models/finished.mdl");
 	markovPass.Generate(500, "dataset/output.txt");

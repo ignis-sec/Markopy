@@ -31,7 +31,7 @@ public:
 	/** @brief Train the model with the dataset file.
 	* @param dataset - Ifstream* to the dataset. If null, use class member
 	*/
-	void Train(char* exportFileName, char* datasetFileName, char delimiter);
+	void Train(char* datasetFileName, char delimiter);
 
 	/** @brief Export model to file.
 	* @param filename - Export filename.
