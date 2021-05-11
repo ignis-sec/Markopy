@@ -11,7 +11,7 @@ MarkovPasswords::MarkovPasswords(char* filename) {
 	
 	std::ifstream* importFile;
 
-    this->Import("models\2gram.mdl");
+    this->Import(filename);
 	
 	//std::ifstream* newFile(filename);
 	
@@ -46,7 +46,7 @@ void MarkovPasswords::Train(std::ifstream* datasetFile)   {
 		sscanf_s(line.c_str(), "%d\x09%s", &oc, pass);
 		this->adjust(pass, oc);
 	}
-	this->Export("Trained.txt");
+	this->Export(exportFileName);
 	
 }
 
@@ -63,13 +63,13 @@ std::ofstream* MarkovPasswords::Save(char* filename) {
 }
 
 
-std::ofstream MarkovPasswords::Generate(unsigned long int n)  {
+void MarkovPasswords::Generate(unsigned long int n, char* wordlistFileName)  {
 	char* res;
 	char print[100];
 	std::ofstream wordlist;	
 
 	
-	wordlist.open("passwordList.txt");
+	wordlist.open(wordlistFileName);
 	for (int i = 0; i < n; i++) {
 		this->RandomWalk();
 #ifndef _WIN32
@@ -81,5 +81,4 @@ std::ofstream MarkovPasswords::Generate(unsigned long int n)  {
 		wordlist << res << "\n";
 		delete res;
 	}
-	return wordlist;
 }
