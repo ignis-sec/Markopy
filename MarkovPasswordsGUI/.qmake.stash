@@ -20,3 +20,5 @@ QMAKE_CXX.LIBDIRS = \
     "C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\lib\\um\\x64" \
     "C:\\Program Files (x86)\\Windows Kits\\10\\lib\\10.0.18362.0\\ucrt\\x64" \
     "C:\\Program Files (x86)\\Windows Kits\\10\\lib\\10.0.18362.0\\um\\x64"
+QMAKE_LICHECK_TIMESTAMP = "Sat Apr 17"
+QMAKE_LICHECK_TIMESTAMP = "Sun Apr 18"
