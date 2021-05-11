@@ -76,7 +76,7 @@ void MarkovPasswords::Generate(unsigned long int n, char* wordlistFileName)  {
 	
 	wordlist.open(wordlistFileName);
 	for (int i = 0; i < n; i++) {
-		this->RandomWalk();
+		res = this->RandomWalk();
 #ifdef _WIN32
 		strcpy_s(print, 100, (char*)res);
 #else
