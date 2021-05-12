@@ -19,25 +19,25 @@ public:
 	* @param filename - Filename to import
 	* @return Pointer to the constructed model.
 	*/
-	MarkovPasswords(char* filename);
+	MarkovPasswords(const char* filename);
 
 	/** @brief Open dataset file and return the ifstream pointer
 	* @param filename - Filename to open
 	* @return ifstream* to the the dataset file
 	*/
-	std::ifstream* OpenDatasetFile(char* filename);
+	std::ifstream* OpenDatasetFile(const char* filename);
 
 
 	/** @brief Train the model with the dataset file.
 	* @param dataset - Ifstream* to the dataset. If null, use class member
 	*/
-	void Train(char* datasetFileName, char delimiter);
+	void Train(const char* datasetFileName, char delimiter);
 
 	/** @brief Export model to file.
 	* @param filename - Export filename.
 	* @return std::ofstream* of the exported file.
 	*/
-	std::ofstream* Save(char* filename);
+	std::ofstream* Save(const char* filename);
 
 	/** @brief Call Markov::Model::RandomWalk n times, and collect output.
 	* 
@@ -46,7 +46,7 @@ public:
 	* @param n - Number of passwords to generate.
 	* @return std::ofstream* of the output file.
 	*/
-	void Generate(unsigned long int n, char* wordlistFileName);
+	void Generate(unsigned long int n, const char* wordlistFileName);
 
 private:
 	std::ifstream* datasetFile;

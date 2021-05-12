@@ -7,7 +7,7 @@ MarkovPasswords::MarkovPasswords() : Markov::Model<char>(){
 	
 }
 
-MarkovPasswords::MarkovPasswords(char* filename) {
+MarkovPasswords::MarkovPasswords(const char* filename) {
 	
 	std::ifstream* importFile;
 
@@ -19,7 +19,7 @@ MarkovPasswords::MarkovPasswords(char* filename) {
 
 }
 
-std::ifstream* MarkovPasswords::OpenDatasetFile(char* filename){
+std::ifstream* MarkovPasswords::OpenDatasetFile(const char* filename){
 
 	std::ifstream* datasetFile;
 
@@ -32,7 +32,7 @@ std::ifstream* MarkovPasswords::OpenDatasetFile(char* filename){
 }
 
 
-void MarkovPasswords::Train(char* datasetFileName, char delimiter)   {
+void MarkovPasswords::Train(const char* datasetFileName, char delimiter)   {
 	std::ifstream datasetFile;
 	datasetFile.open(datasetFileName, std::ios_base::binary);
 	std::string line;
@@ -56,7 +56,7 @@ void MarkovPasswords::Train(char* datasetFileName, char delimiter)   {
 }
 
 
-std::ofstream* MarkovPasswords::Save(char* filename) {
+std::ofstream* MarkovPasswords::Save(const char* filename) {
 	std::ofstream* exportFile;
 
 	std::ofstream newFile(filename);
@@ -68,7 +68,7 @@ std::ofstream* MarkovPasswords::Save(char* filename) {
 }
 
 
-void MarkovPasswords::Generate(unsigned long int n, char* wordlistFileName)  {
+void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName)  {
 	char* res;
 	char print[100];
 	std::ofstream wordlist;	
