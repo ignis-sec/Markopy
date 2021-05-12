@@ -14,6 +14,9 @@ INCLUDE        := include
 LIB            := lib
 LIBRARIES    :=
 
+#For markopy
+PYTHON_VERSION := $(shell python3 -c "import sys;t='{v[0]}.{v[1]}'.format(v=list(sys.version_info[:2]));sys.stdout.write(t)";) #3.8
+PYTHON_VERSION_ :=$(shell python3 -c "import sys;t='{v[0]}{v[1]}'.format(v=list(sys.version_info[:2]));sys.stdout.write(t)";) #38
 ##############################################################################################################
 #####################################     MarkovPassword project options     #################################
 ##############################################################################################################
@@ -70,14 +73,24 @@ $(BIN)/%.cpp.o:%.cpp
 #####################################            Markopy Options             #################################
 ##############################################################################################################
 
-MPY_C_FLAGS  := -c -FPIC
-MPY_EXEC     := Markov
-MPY_SRC      := Markopy/src/Module/markopy.cpp
-MPY_INCLUDE  := 
-#build pattern
-$(BIN)/$(MP_EXEC): $(MP_SRC)
-	$(CC) $(MP_C_FLAGS) -I$(MPY_INCLUDE) -L$(LIB) $^ -o $@  
+MPY_SRC          := $(shell find MarkovModel/src/ -name '*.cpp') MarkovPasswords/src/markovPasswords.cpp $(shell find Markopy/src/Module/ -name '*.cpp')
+MPY_OBJS         := $(MPY_SRC:%=$(BIN)/%.o)
+MPY_DEPS         := $(MPY_OBJS:.o=.d)
+MPY_LDFLAGS      := -shared -lboost_python$(PYTHON_VERSION_) -lpython$(PYTHON_VERSION)
+MPY_C_FLAGS      := $(MPY_INC_FLAGS) -MMD -MP -fPIC -I/usr/include/python$(PYTHON_VERSION)
+MPY_INC_DIRS     := $(shell find $(MPY_SRC_DIR) -type d)
+MPY_INC_FLAGS    := $(addprefix -I,$(MPY_INC_DIRS))
+MPY_SO           := markopy.so
 
+$(BIN)/$(MPY_SO): $(MPY_OBJS)
+	$(CC) $(MPY_OBJS) -o $@ $(MPY_LDFLAGS)
+
+# Build step for C++ source
+$(BIN)/%.cpp.o:%.cpp
+	mkdir -p $(dir $@)
+	$(CC) $(MPY_C_FLAGS) -c $< -o $@
+
+-include $(MPY_DEPS)
 
 ##############################################################################################################
 #####################################               Directives               #################################
@@ -88,6 +101,8 @@ all: model mp
 model: $(INCLUDE)/$(MM_LIB)
 
 mp: $(BIN)/$(MP_EXEC)
+
+markopy: $(BIN)/$(MPY_SO)
 
 .PHONY: clean
 clean:
