@@ -37,7 +37,7 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream *f) {
 		if (this->nodes.find(src) == this->nodes.end()) {
 			srcN = new Markov::Node<NodeStorageType>(src);
 			this->nodes.insert(std::pair<char, Markov::Node<NodeStorageType>*>(src, srcN));
-			std::cout << "Creating new node at start.\n";
+			//std::cout << "Creating new node at start.\n";
 		}else {
 			srcN = this->nodes.find(src)->second;
 		}
@@ -45,7 +45,7 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream *f) {
 		if (this->nodes.find(target) == this->nodes.end()) {
 			targetN = new Markov::Node<NodeStorageType>(target);
 			this->nodes.insert(std::pair<char, Markov::Node<NodeStorageType>*>(target, targetN));
-			std::cout << "Creating new node at end.\n";
+			//std::cout << "Creating new node at end.\n";
 		}
 		else {
 			targetN = this->nodes.find(target)->second;
@@ -59,8 +59,8 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream *f) {
 		
 	}
 
-	std::cout << "Total number of nodes: " << this->nodes.size() << std::endl;
-	std::cout << "Total number of edges: " << this->edges.size() << std::endl;
+	//std::cout << "Total number of nodes: " << this->nodes.size() << std::endl;
+	//std::cout << "Total number of edges: " << this->edges.size() << std::endl;
 
 	return true;
 }
@@ -78,7 +78,7 @@ bool Markov::Model<NodeStorageType>::Export(std::ofstream* f) {
 	Markov::Edge<NodeStorageType>* e;
 	for (std::vector<int>::size_type i = 0; i != this->edges.size(); i++) {
 		e = this->edges[i];
-		std::cout << e->left()->value() << "," << e->weight() << "," << e->right()->value() << "\n";
+		//std::cout << e->left()->value() << "," << e->weight() << "," << e->right()->value() << "\n";
 		*f << e->left()->value() << "," << e->weight() << "," << e->right()->value() << "\n";
 	}
 
