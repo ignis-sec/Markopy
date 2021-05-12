@@ -66,18 +66,18 @@
           <h2><a href="#pub-types">Public types</a></h2>
           <dl class="m-doc">
             <dt id="a9b6dd987e27cfd6f1ed180540659e59f">
-              <span class="m-doc-wrap-bumper">enum class <a href="#a9b6dd987e27cfd6f1ed180540659e59f" class="m-doc-self">color</a> { </span><span class="m-doc-wrap"><a href="#a9b6dd987e27cfd6f1ed180540659e59fab5859d8721cfdc0312b2838b9c985bc1" class="m-doc">RESET</a>,
-              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa08d0012388564e95c3b4a7407cf04965" class="m-doc">BLACK</a>,
-              <a href="#a9b6dd987e27cfd6f1ed180540659e59faa2d9547b5d3dd9f05984475f7c926da0" class="m-doc">RED</a>,
-              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa9de0e5dd94e861317e74964bed179fa0" class="m-doc">GREEN</a>,
-              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa8a568e5f41b7e4da88fe5c4a00aad34e" class="m-doc">YELLOW</a>,
-              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa1b3e1ee9bff86431dea6b181365ba65f" class="m-doc">BLUE</a>,
-              <a href="#a9b6dd987e27cfd6f1ed180540659e59fac634ffea7195608364671ac52ee59a61" class="m-doc">MAGENTA</a>,
-              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa344dd8cd533280795b9db82ef0c92749" class="m-doc">CYAN</a>,
-              <a href="#a9b6dd987e27cfd6f1ed180540659e59fab5bf627e448384cf3a4c35121ca6008d" class="m-doc">WHITE</a>,
-              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa046c542c1879961609e6d616fdf383f6" class="m-doc">LIGHTGRAY</a>,
-              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa0e1e6fddb3b7f6b796fd388b27dc02ab" class="m-doc">DARKGRAY</a>,
-              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa493cacf6f6a2ae4798b319b8b9ba9488" class="m-doc">BROWN</a> }</span>
+              <span class="m-doc-wrap-bumper">enum <a href="#a9b6dd987e27cfd6f1ed180540659e59f" class="m-doc-self">color</a> { </span><span class="m-doc-wrap"><a href="#a9b6dd987e27cfd6f1ed180540659e59fa75da1cde3c18113e158f0013be82803f" class="m-doc">RESET</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa8ebf959fcd1a93476b567d51b753973c" class="m-doc">BLACK</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa766197ee3ee81e53b27345fec2084d4a" class="m-doc">RED</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59faf316908710643792be47d2e4841e7cf7" class="m-doc">GREEN</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59faf28de6c194a0232e8e53b051d76d79b7" class="m-doc">YELLOW</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa61b0bb46c3901ef4afc0beaa28b761d9" class="m-doc">BLUE</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa3187643ff3569c79adadc59546c2d5eb" class="m-doc">MAGENTA</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fab1ad96cbc610915793de6ce83c40fb42" class="m-doc">CYAN</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fad4c1266dfa09cf60f94c124335158d5e" class="m-doc">WHITE</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa1840c63e38ef8e80d3e2eadf1f9249e8" class="m-doc">LIGHTGRAY</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa8ed4fdb1ce5a5d5eda3a29ea17f94c8c" class="m-doc">DARKGRAY</a>,
+              <a href="#a9b6dd987e27cfd6f1ed180540659e59fa4d3186c82ed0303e203b9d59d628a78b" class="m-doc">BROWN</a> }</span>
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -85,16 +85,8 @@
         <section id="pub-static-attribs">
           <h2><a href="#pub-static-attribs">Public static variables</a></h2>
           <dl class="m-doc">
-            <dt id="ae0b68f4ce491a1784930a66f23fe81b2">
-              static HANDLE <a href="#ae0b68f4ce491a1784930a66f23fe81b2" class="m-doc-self">_stdout</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a60d4fb4f80a1532004d3cd4a427d029a">
-              static HANDLE <a href="#a60d4fb4f80a1532004d3cd4a427d029a" class="m-doc-self">_stderr</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a47ed57552a6357d5b60b5a14d7d8d19b">
-              static std::map&lt;terminal::color, DWORD&gt; <a href="#a47ed57552a6357d5b60b5a14d7d8d19b" class="m-doc-self">colormap</a>
+            <dt id="ad9bec28e28ddcdc6e015beac65873a87">
+              static std::map&lt;terminal::color, int&gt; <a href="#ad9bec28e28ddcdc6e015beac65873a87" class="m-doc-self">colormap</a>
             </dt>
             <dd><span></span></dd>
             <dt id="ac01fc0e2438769940675326f7cc4329d">

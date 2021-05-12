@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_f2808bc6654a688015dbfd486288ae56" kind="dir">
+    <compoundname>/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src</compoundname>
+    <innerfile refid="_u_i_2src_2main_8cpp">main.cpp</innerfile>
+    <innerfile refid="_markov_passwords_g_u_i_8cpp">MarkovPasswordsGUI.cpp</innerfile>
+    <innerfile refid="_markov_passwords_g_u_i_8h">MarkovPasswordsGUI.h</innerfile>
+    <innerfile refid="menu_8cpp">menu.cpp</innerfile>
+    <innerfile refid="menu_8h">menu.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/"/>
+  </compounddef>
+</doxygen>

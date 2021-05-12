@@ -1,31 +1,43 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="_u_i_2src_2main_8cpp" kind="file" language="C++">
     <compoundname>main.cpp</compoundname>
-    <includes refid="_markov_passwords_g_u_i_8h" local="yes">MarkovPasswordsGUI.h</includes>
+    <includes refid="menu_8h" local="yes">menu.h</includes>
     <includes local="no">QtWidgets/QApplication</includes>
+    <includes local="no">QSplashScreen</includes>
+    <includes local="no">QDateTime</includes>
     <incdepgraph>
+      <node id="4">
+        <label>ui_menu.h</label>
+      </node>
+      <node id="7">
+        <label>QDateTime</label>
+      </node>
       <node id="2">
-        <label>MarkovPasswordsGUI.h</label>
-        <link refid="_markov_passwords_g_u_i_8h_source"/>
+        <label>menu.h</label>
+        <link refid="menu_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>ui_MarkovPasswordsGUI.h</label>
-      </node>
-      <node id="3">
-        <label>QtWidgets/QMainWindow</label>
-      </node>
       <node id="1">
-        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswordsGUI/src/main.cpp</label>
+        <label>/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/main.cpp</label>
         <link refid="_u_i_2src_2main_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QtWidgets/QMainWindow</label>
+      </node>
+      <node id="6">
+        <label>QSplashScreen</label>
       </node>
       <node id="5">
         <label>QtWidgets/QApplication</label>
@@ -53,13 +65,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswordsGUI/src/main.cpp" line="7" column="5" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswordsGUI/src/main.cpp" bodystart="7" bodyend="13"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/main.cpp" line="10" column="5" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/main.cpp" bodystart="10" bodyend="30"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswordsGUI/src/main.cpp"/>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/main.cpp"/>
   </compounddef>
 </doxygen>

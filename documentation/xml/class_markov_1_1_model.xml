@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="class_markov_1_1_model" kind="class" language="C++" prot="public">
     <compoundname>Markov::Model</compoundname>
     <includes refid="model_8h" local="no">model.h</includes>
@@ -9,9 +9,9 @@
       </param>
     </templateparamlist>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_markov_1_1_model_1ae6e142d545313dcdb87b0ae3618397fa" prot="private" static="no" mutable="no">
-        <type>std::map&lt; NodeStorageType, <ref refid="class_markov_1_1_node" kindref="compound">Markov::Node</ref>&lt; NodeStorageType &gt; * &gt;</type>
-        <definition>std::map&lt;NodeStorageType, Markov::Node&lt;NodeStorageType&gt;*&gt; Markov::Model&lt; NodeStorageType &gt;::nodes</definition>
+      <memberdef kind="variable" id="class_markov_1_1_model_1aa772f79f444c2971f615df7be5e28bca" prot="private" static="no" mutable="no">
+        <type>std::map&lt; NodeStorageType, <ref refid="class_markov_1_1_node" kindref="compound">Node</ref>&lt; NodeStorageType &gt; * &gt;</type>
+        <definition>std::map&lt;NodeStorageType, Node&lt;NodeStorageType&gt;*&gt; Markov::Model&lt; NodeStorageType &gt;::nodes</definition>
         <argsstring></argsstring>
         <name>nodes</name>
         <briefdescription>
@@ -21,11 +21,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="86" column="10" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" bodystart="86" bodyend="-1"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="86" column="10" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" bodystart="86" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_markov_1_1_model_1aa834ba7bf4fab9141f59940b48adfdac" prot="private" static="no" mutable="no">
-        <type><ref refid="class_markov_1_1_node" kindref="compound">Markov::Node</ref>&lt; NodeStorageType &gt; *</type>
-        <definition>Markov::Node&lt;NodeStorageType&gt;* Markov::Model&lt; NodeStorageType &gt;::starterNode</definition>
+      <memberdef kind="variable" id="class_markov_1_1_model_1ad2d9bf601df78f80076f5d3fbb65fe28" prot="private" static="no" mutable="no">
+        <type><ref refid="class_markov_1_1_node" kindref="compound">Node</ref>&lt; NodeStorageType &gt; *</type>
+        <definition>Node&lt;NodeStorageType&gt;* Markov::Model&lt; NodeStorageType &gt;::starterNode</definition>
         <argsstring></argsstring>
         <name>starterNode</name>
         <briefdescription>
@@ -35,11 +35,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="89" column="14" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" bodystart="89" bodyend="-1"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="89" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" bodystart="89" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_markov_1_1_model_1a635b62df8472f1e22444ccbe77f4e962" prot="private" static="no" mutable="no">
-        <type>std::vector&lt; <ref refid="class_markov_1_1_edge" kindref="compound">Markov::Edge</ref>&lt; NodeStorageType &gt; * &gt;</type>
-        <definition>std::vector&lt;Markov::Edge&lt;NodeStorageType&gt;*&gt; Markov::Model&lt; NodeStorageType &gt;::edges</definition>
+      <memberdef kind="variable" id="class_markov_1_1_model_1a06d54b6e00a7e92b2c3bf72e1bfa560a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_markov_1_1_edge" kindref="compound">Edge</ref>&lt; NodeStorageType &gt; * &gt;</type>
+        <definition>std::vector&lt;Edge&lt;NodeStorageType&gt;*&gt; Markov::Model&lt; NodeStorageType &gt;::edges</definition>
         <argsstring></argsstring>
         <name>edges</name>
         <briefdescription>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="93" column="13" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" bodystart="93" bodyend="-1"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="93" column="13" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_markov_1_1_model_1ac13d29bfd4c08c9b2c00f7b54d53d421" prot="private" static="no" mutable="no">
         <type>std::default_random_engine *</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="96" column="28" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" bodystart="96" bodyend="-1"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="96" column="28" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" bodystart="96" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_markov_1_1_model_1a4c41020aab865272c4c65d4110c9dad6" prot="private" static="no" mutable="no">
         <type>std::uniform_int_distribution&lt; long unsigned &gt;</type>
@@ -75,15 +75,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="97" column="31" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" bodystart="97" bodyend="-1"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="97" column="31" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_markov_1_1_model_1a593b1dc98082221e3f69636e3a087dfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_markov_1_1_model_1ae1d564c132cbf681f10f8ed0dfc772df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>Markov::Model&lt; NodeStorageType &gt;::Markov::Model</definition>
+        <definition>Markov::Model&lt; NodeStorageType &gt;::Model</definition>
         <argsstring>()</argsstring>
-        <name>Markov::Model</name>
+        <name>Model</name>
         <briefdescription>
 <para>Initialize a model with only start and end nodes. </para>
         </briefdescription>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="1" column="0"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="1" column="0" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.cpp" bodystart="10" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="class_markov_1_1_model_1a2e0249e4630353a260e06b8f3a72f5bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>NodeStorageType *</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="35" column="17" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.cpp" bodystart="96" bodyend="119"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="35" column="17" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.cpp" bodystart="96" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="class_markov_1_1_model_1abb14649eb59af2b60d17400e3c1d827b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="43" column="6" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.cpp" bodystart="122" bodyend="137"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="43" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.cpp" bodystart="122" bodyend="137"/>
       </memberdef>
       <memberdef kind="function" id="class_markov_1_1_model_1a379ea9943f9d4c212e1140d4a9af64f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="52" column="6" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.cpp" bodystart="20" bodyend="66"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="52" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.cpp" bodystart="20" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="class_markov_1_1_model_1a3f872a3af96a91d4627c1a5d5e66b19a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -181,7 +181,7 @@
           <declname>filename</declname>
         </param>
         <briefdescription>
-<para>Open a file to import with filename, and call bool <ref refid="class_markov_1_1_model_1a379ea9943f9d4c212e1140d4a9af64f5" kindref="member">Markov::Model::Import</ref> with std::ifstream. </para>
+<para>Open a file to import with filename, and call bool <ref refid="class_markov_1_1_model_1a379ea9943f9d4c212e1140d4a9af64f5" kindref="member">Model::Import</ref> with std::ifstream. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>True if successful, False for incomplete models or corrupt file formats </para>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="57" column="6" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.cpp" bodystart="69" bodyend="74"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="57" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.cpp" bodystart="69" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="class_markov_1_1_model_1ae16027a94235d2988ac4be35ea07d939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="66" column="6" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.cpp" bodystart="77" bodyend="86"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="66" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.cpp" bodystart="77" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="class_markov_1_1_model_1af788426a3c41a7838a2aae199e8aef5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -223,7 +223,7 @@
           <declname>filename</declname>
         </param>
         <briefdescription>
-<para>Open a file to export with filename, and call bool <ref refid="class_markov_1_1_model_1ae16027a94235d2988ac4be35ea07d939" kindref="member">Markov::Model::Export</ref> with std::ofstream. </para>
+<para>Open a file to export with filename, and call bool <ref refid="class_markov_1_1_model_1ae16027a94235d2988ac4be35ea07d939" kindref="member">Model::Export</ref> with std::ofstream. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>True if successful, False for incomplete models or corrupt file formats </para>
@@ -232,11 +232,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="71" column="6" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.cpp" bodystart="89" bodyend="93"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="71" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.cpp" bodystart="89" bodyend="93"/>
       </memberdef>
-      <memberdef kind="function" id="class_markov_1_1_model_1a62954b990ae10a74dcc543682abf3315" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="class_markov_1_1_node" kindref="compound">Markov::Node</ref>&lt; NodeStorageType &gt; *</type>
-        <definition>Markov::Node&lt;NodeStorageType&gt;* Markov::Model&lt; NodeStorageType &gt;::StarterNode</definition>
+      <memberdef kind="function" id="class_markov_1_1_model_1a35cb15a14d034f3365b9d2d3efa1ffc0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_markov_1_1_node" kindref="compound">Node</ref>&lt; NodeStorageType &gt; *</type>
+        <definition>Node&lt;NodeStorageType&gt;* Markov::Model&lt; NodeStorageType &gt;::StarterNode</definition>
         <argsstring>()</argsstring>
         <name>StarterNode</name>
         <briefdescription>
@@ -249,11 +249,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="76" column="14" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" bodystart="76" bodyend="76"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="76" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" bodystart="76" bodyend="76"/>
       </memberdef>
-      <memberdef kind="function" id="class_markov_1_1_model_1a647b2a8065393938c84e28b8e0e4874e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; <ref refid="class_markov_1_1_edge" kindref="compound">Markov::Edge</ref>&lt; NodeStorageType &gt; &gt; *</type>
-        <definition>std::vector&lt;Markov::Edge&lt;NodeStorageType&gt; &gt;* Markov::Model&lt; NodeStorageType &gt;::Edges</definition>
+      <memberdef kind="function" id="class_markov_1_1_model_1a2e08608905d7b042627ea844b08045fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_markov_1_1_edge" kindref="compound">Edge</ref>&lt; NodeStorageType &gt; * &gt; *</type>
+        <definition>std::vector&lt;Edge&lt;NodeStorageType&gt;*&gt;* Markov::Model&lt; NodeStorageType &gt;::Edges</definition>
         <argsstring>()</argsstring>
         <name>Edges</name>
         <briefdescription>
@@ -262,11 +262,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="78" column="13" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" bodystart="78" bodyend="78"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="78" column="13" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" bodystart="78" bodyend="78"/>
       </memberdef>
-      <memberdef kind="function" id="class_markov_1_1_model_1acc0161496b713014342e21f6134fce3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::map&lt; NodeStorageType, <ref refid="class_markov_1_1_node" kindref="compound">Markov::Node</ref>&lt; NodeStorageType &gt; * &gt; *</type>
-        <definition>std::map&lt;NodeStorageType, Markov::Node&lt;NodeStorageType&gt;*&gt;* Markov::Model&lt; NodeStorageType &gt;::Nodes</definition>
+      <memberdef kind="function" id="class_markov_1_1_model_1a71f6df805e340ce96e9dc4ee4ebc6537" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; NodeStorageType, <ref refid="class_markov_1_1_node" kindref="compound">Node</ref>&lt; NodeStorageType &gt; * &gt; *</type>
+        <definition>std::map&lt;NodeStorageType, Node&lt;NodeStorageType&gt;*&gt;* Markov::Model&lt; NodeStorageType &gt;::Nodes</definition>
         <argsstring>()</argsstring>
         <name>Nodes</name>
         <briefdescription>
@@ -275,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="80" column="10" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" bodystart="80" bodyend="80"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="80" column="10" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" bodystart="80" bodyend="80"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -284,23 +284,23 @@
     <detaileddescription>
 <para>This class will be <emphasis>templated later to work with other data types than char</emphasis>. </para>
     </detaileddescription>
-    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" line="24" column="1" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovModel/src/model.h" bodystart="24" bodyend="98"/>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" line="24" column="12" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/model.h" bodystart="24" bodyend="98"/>
     <listofallmembers>
       <member refid="class_markov_1_1_model_1abb14649eb59af2b60d17400e3c1d827b" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>adjust</name></member>
       <member refid="class_markov_1_1_model_1a4c41020aab865272c4c65d4110c9dad6" prot="private" virt="non-virtual"><scope>Markov::Model</scope><name>distribution</name></member>
-      <member refid="class_markov_1_1_model_1a635b62df8472f1e22444ccbe77f4e962" prot="private" virt="non-virtual"><scope>Markov::Model</scope><name>edges</name></member>
-      <member refid="class_markov_1_1_model_1a647b2a8065393938c84e28b8e0e4874e" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>Edges</name></member>
+      <member refid="class_markov_1_1_model_1a06d54b6e00a7e92b2c3bf72e1bfa560a" prot="private" virt="non-virtual"><scope>Markov::Model</scope><name>edges</name></member>
+      <member refid="class_markov_1_1_model_1a2e08608905d7b042627ea844b08045fe" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>Edges</name></member>
       <member refid="class_markov_1_1_model_1ae16027a94235d2988ac4be35ea07d939" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>Export</name></member>
       <member refid="class_markov_1_1_model_1af788426a3c41a7838a2aae199e8aef5b" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>Export</name></member>
       <member refid="class_markov_1_1_model_1ac13d29bfd4c08c9b2c00f7b54d53d421" prot="private" virt="non-virtual"><scope>Markov::Model</scope><name>generator</name></member>
       <member refid="class_markov_1_1_model_1a379ea9943f9d4c212e1140d4a9af64f5" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>Import</name></member>
       <member refid="class_markov_1_1_model_1a3f872a3af96a91d4627c1a5d5e66b19a" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>Import</name></member>
-      <member refid="class_markov_1_1_model_1a593b1dc98082221e3f69636e3a087dfd" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>Markov::Model</name></member>
-      <member refid="class_markov_1_1_model_1ae6e142d545313dcdb87b0ae3618397fa" prot="private" virt="non-virtual"><scope>Markov::Model</scope><name>nodes</name></member>
-      <member refid="class_markov_1_1_model_1acc0161496b713014342e21f6134fce3c" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>Nodes</name></member>
+      <member refid="class_markov_1_1_model_1ae1d564c132cbf681f10f8ed0dfc772df" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>Model</name></member>
+      <member refid="class_markov_1_1_model_1a71f6df805e340ce96e9dc4ee4ebc6537" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>Nodes</name></member>
+      <member refid="class_markov_1_1_model_1aa772f79f444c2971f615df7be5e28bca" prot="private" virt="non-virtual"><scope>Markov::Model</scope><name>nodes</name></member>
       <member refid="class_markov_1_1_model_1a2e0249e4630353a260e06b8f3a72f5bb" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>RandomWalk</name></member>
-      <member refid="class_markov_1_1_model_1aa834ba7bf4fab9141f59940b48adfdac" prot="private" virt="non-virtual"><scope>Markov::Model</scope><name>starterNode</name></member>
-      <member refid="class_markov_1_1_model_1a62954b990ae10a74dcc543682abf3315" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>StarterNode</name></member>
+      <member refid="class_markov_1_1_model_1ad2d9bf601df78f80076f5d3fbb65fe28" prot="private" virt="non-virtual"><scope>Markov::Model</scope><name>starterNode</name></member>
+      <member refid="class_markov_1_1_model_1a35cb15a14d034f3365b9d2d3efa1ffc0" prot="public" virt="non-virtual"><scope>Markov::Model</scope><name>StarterNode</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>
