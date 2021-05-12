@@ -75,7 +75,7 @@ namespace Markov {
 		*/
 		Node<NodeStorageType>* StarterNode(){ return starterNode;}
 
-		std::vector<Edge<NodeStorageType>>* Edges(){ return &edges;}
+		std::vector<Edge<NodeStorageType>*>* Edges(){ return &edges;}
 
 		std::map<NodeStorageType, Node<NodeStorageType>*>* Nodes(){ return &nodes;}
 
@@ -98,3 +98,5 @@ namespace Markov {
 	};
 
 };
+
+
