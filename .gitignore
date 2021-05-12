@@ -357,8 +357,8 @@ MigrationBackup/
 #documentation/xml/
 
 
-Win-visualstudio/MarkovPasswords/datasets/*
-
+datasets/*
+models/*
 
 # Sonarqube work directory
 .scannerwork/*

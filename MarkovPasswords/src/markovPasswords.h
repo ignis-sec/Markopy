@@ -31,7 +31,7 @@ public:
 	/** @brief Train the model with the dataset file.
 	* @param dataset - Ifstream* to the dataset. If null, use class member
 	*/
-	void Train(char* datasetFile);
+	void Train(char* datasetFileName, char delimiter);
 
 	/** @brief Export model to file.
 	* @param filename - Export filename.
@@ -46,7 +46,7 @@ public:
 	* @param n - Number of passwords to generate.
 	* @return std::ofstream* of the output file.
 	*/
-	void Generate(unsigned long int n);
+	void Generate(unsigned long int n, char* wordlistFileName);
 
 private:
 	std::ifstream* datasetFile;
