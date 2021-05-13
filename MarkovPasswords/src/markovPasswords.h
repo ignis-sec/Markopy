@@ -53,3 +53,4 @@ private:
 	std::ofstream* modelSavefile;
 	std::ofstream* outputFile;
 };
+//new line for the code covarage

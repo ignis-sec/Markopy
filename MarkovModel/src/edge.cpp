@@ -54,3 +54,4 @@ Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::right() {
     return this->_right;
 }
 
+//new line for the code covarage

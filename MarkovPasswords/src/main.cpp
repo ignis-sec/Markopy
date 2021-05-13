@@ -40,3 +40,4 @@ int main(int argc, char** argv) {
 	std::cout << "Generation done....\n";
 	return 0;
 }
+//new line for the code covarage

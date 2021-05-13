@@ -135,3 +135,4 @@ void Markov::Model<NodeStorageType>::adjust(const NodeStorageType* payload, long
 	e->adjust(occurrence);
 	return;
 }
+//new line for the code covarage
