@@ -2,8 +2,7 @@
 #include "node.h"
 #include <assert.h>
 #include <iostream>
-
-
+#include <stdexcept> // To use runtime_error
 
 template <typename storageType>
 Markov::Node<storageType>::Node(storageType _value) {
@@ -40,8 +39,23 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 
 	//get a random value in range of total_vertice_weight
 	int rnd = distribution(generator);// distribution(generator);
-	int selection = rnd % this->total_edge_weights; //add division by zero execption handling
-	
+
+	int selection = rnd % this->total_edge_weights; //add division by zero execption handling //replace with next lines while not empty file
+	/*if(this->total_edge_weights==0)
+		throw std::runtime_error("Math error: Attempted to divide by zero\n");
+	try {
+		int selection = rnd % this->total_edge_weights;
+	}
+	catch (std::runtime_error e) {
+
+		// prints that exception has occurred
+		// calls the what function using object of
+		// runtime_error class
+		std::cout << "Exception occurred" << std::endl
+			<< e.what();
+	}*/
+
+
 	//make absolute, no negative modulus values wanted
 	selection = (selection>=0)? selection : (selection + this->total_edge_weights);
 
