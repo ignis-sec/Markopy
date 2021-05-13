@@ -357,8 +357,18 @@ MigrationBackup/
 #documentation/xml/
 
 
-Win-visualstudio/MarkovPasswords/datasets/*
+# Development models and datasets
+datasets/*
+models/*
 
+# Sample datasets
+Markopy/src/CLI/sample_datasets/*
+
+# Build markopy module
+Markopy/src/CLI/markopy.so
 
 # Sonarqube work directory
 .scannerwork/*
+
+# Build shared object files
+include/*.so
