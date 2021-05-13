@@ -46,7 +46,7 @@ public:
 	* @param n - Number of passwords to generate.
 	* @return std::ofstream* of the output file.
 	*/
-	void Generate(unsigned long int n, const char* wordlistFileName);
+	void Generate(unsigned long int n, const char* wordlistFileName, int minLen=6, int maxLen=12);
 
 private:
 	std::ifstream* datasetFile;

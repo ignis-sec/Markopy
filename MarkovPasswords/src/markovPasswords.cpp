@@ -70,7 +70,7 @@ std::ofstream* MarkovPasswords::Save(const char* filename) {
 }
 
 
-void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName)  {
+void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen)  {
 	char* res;
 	char print[100];
 	std::ofstream wordlist;	
@@ -78,7 +78,7 @@ void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName
 	
 	wordlist.open(wordlistFileName);
 	for (int i = 0; i < n; i++) {
-		res = this->RandomWalk();
+		res = this->RandomWalk(minLen, maxLen); 
 #ifdef _WIN32
 		strcpy_s(print, 100, (char*)res);
 #else

@@ -93,16 +93,31 @@ bool Markov::Model<NodeStorageType>::Export(const char* filename) {
 }
 
 template <typename NodeStorageType>
-NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk() {
+NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk(int minSetting, int maxSetting) {  
+	std::cout << "Hello\n";
 	Markov::Node<NodeStorageType>* n = this->starterNode;
 	int len = 0;
 	NodeStorageType *ret = new NodeStorageType[64];
-	
+	Markov::Node<NodeStorageType> *temp_node;
 	while (n != NULL) {
-		n = n->RandomNext();
+		//n = n->RandomNext();
+		temp_node = n->RandomNext();
 		//dirty cutoff, needs better solution
-		if (len == 60) break;
-		if (n == NULL) break;
+		if (len == 60) 
+			break;
+		if (len > maxSetting) {
+			//std::cout<<"MAX ->"<< "node*: " << temp_node << ", len: " << len << "\n";
+			break;
+		}
+			
+		if ((temp_node == NULL) && (len < minSetting)) {
+			//std::cout << "node*: " << temp_node << ", len: " << len << "\n";
+			continue;
+		}	
+
+		if (temp_node == NULL)
+			break;
+		n = temp_node;
 
 		//std::cout << n->NodeValue();
 		ret[len++] = n->NodeValue();
