@@ -1,101 +1,107 @@
 # Markov Passwords
 
-## Projects
-- Markov (MarkovModel)
-    - Compiled to a .lib and .dll file, and not an executable.
-    - Contains the Model, Node and Edge classes. 
-    - Its the backbone of the project and will be the main dependency of MarkovPasswords to work.
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+![GitHub](https://img.shields.io/github/license/FlameOfIgnis/MarkovPasswords?style=for-the-badge)
 
 
-- MarkovPasswords
-    - Includes MarkovModel.
-    - Will be used to specialize MarkovModel exclusively for password generation.
-    - Will have functions that help with file operations such as input and output, import export.
-    - As an example, this will read the dataset file, and pass each line to Markov::Model::adjust when training.
-    - Basically command line interface for using MarkovModel.
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
 
-- MarkovPasswordsGUI
-    - Has the user interface, will be used for performance analysis, debugging, and reporting. 
+  <h3 align="center">Markov Passwords</h3>
 
-
-
-
-# What is a markov model
-
-Below, is the example Markov Model which can generate strings with the alphabet "a,b,c"
-
-![](images/empty_model.png)
-
-
-### Iteration 1
-
-Below is a demonstration of how training will be done. For this example, we are going to adjust the model with string "ab", and our occurrence will be "3"
-From MarkovPasswords, inside the train function, Model::adjust is called with "ab" and "3" parameters.
-
-Now, Model::adjust will iteratively adjust the edge weights accordingly. It starts by adjusting weight between start and "a" node. This is done by calling Edge::adjust of the edge between the nodes.
-
-![](images/model_1.png)
-
-After adjustment, ajust function iterates to the next character, "b", and does the same thing.
-
-![](images/model_2.png)
-
-As this string is finished, it will adjust the final weight, b->"end"
-
-![](images/model_3.png)
-
-### Iteration 2
-
-This time, same procedure will be applied for "bacb" string, with occurrence value of 12.
-
-
-![](images/model_21.png)
-
-![](images/model_22.png)
-
-![](images/model_23.png)
-
-![](images/model_24.png)
-
-![](images/model_25.png)
+  <p align="center">
+   Generate wordlists with markov models.
+    <br />
+    <a href="https://github.com/FlameOfIgnis/MarkovPasswords/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/FlameOfIgnis/MarkovPasswords/pulls">Add a Bug</a>
+  </p>
+</p>
 
 
 
-### Iteration 38271
-
-As the model is trained, hidden linguistical patterns start to appear, and our model looks like this
-![](images/model_30.png)
-
-With our dataset, without doing any kind of linugistic analysis ourselves, our Markov Model has highlighted that strings are more likely to start with a, b tends to follow a, and a is likely to be repeated in the string.
-![](images/model_31.png)
-
-
-
-## Import/Export
-Import and export is done by storing/restoring list of all edges to/from a file. All the edges are traversed and written to the file in the format of "left,weight,right"
-
-
-
-## Training
-
-MarkovPasswords should read input from our dataset file, parse it line by line, and feed it to Markov::Model::adjust
-
-Once a training is complete, MarkovPasswords is supposed to export the model to a savefile so that model is not required to train for each run. 
-
-## Generation
-
-Generation is done by invoking Markov::Model::RandomWalk as many times as neccessary, and writing the result to a file line by line.
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
 
 
-## Testing/Cracking
-Cracking is done **EXTERNALLY**. Our tool is not going to be responsible for cracking hashes. We are simply going to generate lists of strings, and are going to use 3rd party tools to crack them. Good examples for hash-cracking tools are Hashcat and John the ripper. They work with user supplied lists of strings.
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+This project aims to generate wordlists using markov models.
+
+### Built With
+
+* CPP, with dependecies: boost, python3-dev, QT-5.
 
 
-## Reporting & UI
-We are also supposed to collect data from generation/training steps, and process them into useful graphs/charts/tables to help us determine how to improve the program.
-Some of the useful data to collect are:
-- Number of duplicates generated
-- Time taken during training, respective to number of lines in dataset
-- Time taken during generation, respective ot output size
-- Comparison graphs of number of cracked passwords using traditional wordlists, our generated wordlist, and complete incremental approach (where each password is checked one by one like AAAA, AAAB, AAAC, AAAD...)
+## Getting Started
+
+If you'd just like to use the project without contributing, check out the releases page. If you want to build, check out wiki for building the project.
+
+### Prerequisites
+
+##### MarkovModel
+- Make for linux, Visual Studio/MSBuild for Windows.
+
+##### MarkovPasswords
+- Boost.ProgramOptions (tested on 1.76.0)
+
+##### Markopy
+- Boost.Python (tested on 1.76.0)
+- Python development package (tested on python 3.8)
+
+##### MarkovPasswordsGUI
+- QT development environment.
+
+### Installation
+
+See the Wiki Page
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Feel absolutely free to contribute to this project, my artistic skills are complete dogsh*t so if you think you can make the design prettier, you are probably correct.
+
+
+<!-- CONTACT -->
+## Contact
+Twitter - [@ahakcil](https://twitter.com/ahakcil)
+
+
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge
+[contributors-url]: https://github.com/FlameOfIgnis/MarkovPasswords/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge
+[forks-url]: https://github.com/FlameOfIgnis/MarkovPasswords/network/members
+[stars-shield]: https://img.shields.io/github/stars/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge
+[stars-url]: https://github.com/FlameOfIgnis/MarkovPasswords/stargazers
+[issues-shield]: https://img.shields.io/github/issues/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge
+[issues-url]: https://github.com/FlameOfIgnis/MarkovPasswords/issues
+[license-shield]: https://img.shields.io/github/license/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge
+[license-url]: https://github.com/FlameOfIgnis/MarkovPasswords/LICENSE
