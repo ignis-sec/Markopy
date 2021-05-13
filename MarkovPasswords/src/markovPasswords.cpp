@@ -52,7 +52,7 @@ void MarkovPasswords::Train(const char* datasetFileName, char delimiter)   {
 		sscanf(line.c_str(), format_str, &oc, pass);
 #endif
 		//std::cout << "parsed: "<<pass << "," << oc << "\n";
-		this->adjust(pass.c_str(), oc); 
+		this->AdjustEdge(pass.c_str(), oc); 
 	}
 	
 }

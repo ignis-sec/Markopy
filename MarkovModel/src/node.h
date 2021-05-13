@@ -22,32 +22,32 @@ namespace Markov {
 		*/
 		Node<storageType>();
 		
-		/** @brief Constructor. Creates a Node with no edges and with given value.
-		* @param value - Nodes character representation.
+		/** @brief Constructor. Creates a Node with no edges and with given NodeValue.
+		* @param NodeValue - Nodes character representation.
 		*/
 		Node<storageType>(storageType _value);
 
 		/** @brief Link this node with another, with this node as its source.
 		* 
 		* Creates a new Edge.
-		* @param target - Target node which will be the right() of new edge.
-		* @return A new node with left as this, and right as parameter target.
+		* @param target - Target node which will be the RightNode() of new edge.
+		* @return A new node with LeftNode as this, and RightNode as parameter target.
 		*/
 		Edge<storageType>* Link(Node<storageType>*);
 		
 		/** @brief Link this node with another, with this node as its source.
 		* 
 		* *DOES NOT* create a new Edge.
-		* @param Edge - Edge that will accept this node as its left.
+		* @param Edge - Edge that will accept this node as its LeftNode.
 		* @return the same edge as parameter target.
 		*/
 		Edge<storageType>* Link(Edge<storageType>*);
 
-		/** @brief Chose a random node from the list of edges, with regards to its weight, and traverse to that.
+		/** @brief Chose a random node from the list of edges, with regards to its EdgeWeight, and TraverseNode to that.
 		* 
 		* This operation is done by generating a random number in range of 0-this.total_edge_weights, and then iterating over the list of edges.
-		* At each step, weight of the edge is subtracted from the random number, and once it is 0, next node is selected.
-		* @return Node that was chosen at weight biased random.
+		* At each step, EdgeWeight of the edge is subtracted from the random number, and once it is 0, next node is selected.
+		* @return Node that was chosen at EdgeWeight biased random.
 		*/
 		Node<storageType>* RandomNext();
 
@@ -58,25 +58,25 @@ namespace Markov {
 		bool UpdateEdges(Edge<storageType>*);
 		
 		/** @brief Find an edge with its character representation.
-		* @param repr - character value of the target node.
+		* @param repr - character NodeValue of the target node.
 		* @return Edge that is connected between this node, and the target node.
 		*/
-		Edge<storageType>* findEdge(storageType repr);
+		Edge<storageType>* FindEdge(storageType repr);
 
 		/** @brief Find an edge with its pointer. Avoid unless neccessary because comptutational cost of find by character is cheaper (because of std::map)
 		* @param target - target node.
 		* @return Edge that is connected between this node, and the target node.
 		*/
-		Edge<storageType>* findEdge(Node<storageType>* target);
+		Edge<storageType>* FindEdge(Node<storageType>* target);
 		
 		/** @brief Return character representation of this node.
 		* @return character representation at _value.
 		*/
-		unsigned char value();
+		unsigned char NodeValue();
 
 		/** @brief Change total weights with offset
 		*/
-		void updateTotalVerticeWeight(long int offset);
+		void UpdateTotalVerticeWeight(long int offset);
 
 		/** @brief return edges
 		*/
@@ -94,7 +94,7 @@ namespace Markov {
 
 		int total_edge_weights;/** @brief Total weights of the vertices, required by RandomNext;*/
 
-		/** @brief A map of all edges connected to this node, where this node is at the left.
+		/** @brief A map of all edges connected to this node, where this node is at the LeftNode.
 		* 
 		* Map is indexed by unsigned char, which is the character representation of the node.
 		*/

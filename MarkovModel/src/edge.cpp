@@ -15,42 +15,42 @@ Markov::Edge<NodeStorageType>::Edge(Markov::Node<NodeStorageType>* _left, Markov
     this->_right = _right;
     this->_weight = 0;
 }
-//to adjust the edges by the edge with its offset
+//to AdjustEdge the edges by the edge with its offset
 template <typename NodeStorageType>
-void Markov::Edge<NodeStorageType>::adjust(uint64_t offset) {
+void Markov::Edge<NodeStorageType>::AdjustEdge(uint64_t offset) {
     this->_weight += offset;
-    this->left()->updateTotalVerticeWeight(offset);
+    this->LeftNode()->UpdateTotalVerticeWeight(offset);
 }
-//to traverse the node
+//to TraverseNode the node
 template <typename NodeStorageType>
-Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::traverse() {
-    if (this->right()->value() == 0xff) //terminator node
+Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::TraverseNode() {
+    if (this->RightNode()->NodeValue() == 0xff) //terminator node
         return NULL;
     return _right;
 }
-//to set the left of the node
+//to set the LeftNode of the node
 template <typename NodeStorageType>
-void Markov::Edge<NodeStorageType>::set_left(Markov::Node<NodeStorageType>* n) {
+void Markov::Edge<NodeStorageType>::SetLeftEdge(Markov::Node<NodeStorageType>* n) {
     this->_left = n;
 }
-//to set the right of the node
+//to set the RightNode of the node
 template <typename NodeStorageType>
-void Markov::Edge<NodeStorageType>::set_right(Markov::Node<NodeStorageType>* n) {
+void Markov::Edge<NodeStorageType>::SetRightEdge(Markov::Node<NodeStorageType>* n) {
     this->_right = n;
 }
-//to get the weight of the node
+//to get the EdgeWeight of the node
 template <typename NodeStorageType>
-uint64_t Markov::Edge<NodeStorageType>::weight() {
+uint64_t Markov::Edge<NodeStorageType>::EdgeWeight() {
     return this->_weight;
 }
-//to get the left of the node
+//to get the LeftNode of the node
 template <typename NodeStorageType>
-Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::left() {
+Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::LeftNode() {
     return this->_left;
 }
-//to get the right of the node
+//to get the RightNode of the node
 template <typename NodeStorageType>
-Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::right() {
+Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::RightNode() {
     return this->_right;
 }
 

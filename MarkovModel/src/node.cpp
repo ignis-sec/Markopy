@@ -16,7 +16,7 @@ Markov::Node<storageType>::Node() {
 };
 
 template <typename storageType>
-unsigned char Markov::Node<storageType>::value() {
+unsigned char Markov::Node<storageType>::NodeValue() {
 	return _value;
 }
 
@@ -29,7 +29,7 @@ Markov::Edge<storageType>* Markov::Node<storageType>::Link(Markov::Node<storageT
 
 template <typename storageType>
 Markov::Edge<storageType>* Markov::Node<storageType>::Link(Markov::Edge<storageType>* v) {
-	v->set_left(this);
+	v->SetLeftEdge(this);
 	this->UpdateEdges(v);
 	return v;
 }
@@ -37,7 +37,7 @@ Markov::Edge<storageType>* Markov::Node<storageType>::Link(Markov::Edge<storageT
 template <typename storageType>
 Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 
-	//get a random value in range of total_vertice_weight
+	//get a random NodeValue in range of total_vertice_weight
 	int rnd = distribution(generator);// distribution(generator);
 
 	int selection = rnd % this->total_edge_weights; //add division by zero execption handling //replace with next lines while not empty file
@@ -60,17 +60,17 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 	selection = (selection>=0)? selection : (selection + this->total_edge_weights);
 
 	//iterate over the Edge map
-	//Subtract the Edge weight from the selection at each Edge
+	//Subtract the Edge EdgeWeight from the selection at each Edge
 	//when selection goes below 0, pick that node 
-	//(Fast random selection with weight bias)
+	//(Fast random selection with EdgeWeight bias)
 	//std::cout << "Rand: " << rnd << "\n";
 	//std::cout << "Total: " << this->total_edge_weights << "\n";
 	//std::cout << "Total edges: " << this->edges.size() << "\n";
 	for ( std::pair<unsigned char,Markov::Edge<storageType>*> const& x : this->edges) {
 		//std::cout << selection << "\n";
-		selection -= x.second->weight();
+		selection -= x.second->EdgeWeight();
 		//std::cout << selection << "\n";
-		if (selection < 0) return x.second->traverse();
+		if (selection < 0) return x.second->TraverseNode();
 	}
 
 	//if this assertion is reached, it means there is an implementation error above
@@ -80,18 +80,18 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 
 template <typename storageType>
 bool Markov::Node<storageType>::UpdateEdges(Markov::Edge<storageType>* v) {
-	this->edges.insert({ v->right()->value(), v });
-	//this->total_edge_weights += v->weight();
-	return v->traverse();
+	this->edges.insert({ v->RightNode()->NodeValue(), v });
+	//this->total_edge_weights += v->EdgeWeight();
+	return v->TraverseNode();
 }
 
 template <typename storageType>
-Markov::Edge<storageType>* Markov::Node<storageType>::findEdge(storageType repr) {
+Markov::Edge<storageType>* Markov::Node<storageType>::FindEdge(storageType repr) {
 	return this->edges.find(repr)->second;
 };
 
 template <typename storageType>
-void Markov::Node<storageType>::updateTotalVerticeWeight(long int offset) {
+void Markov::Node<storageType>::UpdateTotalVerticeWeight(long int offset) {
 	this->total_edge_weights += offset;
 }
 
