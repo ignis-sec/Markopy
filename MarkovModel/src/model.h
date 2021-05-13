@@ -27,7 +27,7 @@ namespace Markov {
 		/** @brief Initialize a model with only start and end nodes.
 		*/
 		Model<NodeStorageType>();
-
+			
 		/** @brief Do a random walk on this model. 
 		* Start from the starter node, invoke RandomNext on current node until terminator node is reached.
 		* @return Null terminated string that was generated.
@@ -40,7 +40,7 @@ namespace Markov {
 		* @param string - String that is passed from the training, and will be used to adjust the model with
 		* @param occurrence - Occurrence of this string. 
 		*/
-		void adjust(NodeStorageType* payload, long int occurrence);
+		void adjust(const NodeStorageType* payload, long int occurrence);
 
 		/** @brief Import a file to construct the model. 
 		* 

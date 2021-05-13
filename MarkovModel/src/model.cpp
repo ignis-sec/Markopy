@@ -119,7 +119,7 @@ NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk() {
 }
 
 template <typename NodeStorageType>
-void Markov::Model<NodeStorageType>::adjust(NodeStorageType* payload, long int occurrence) {
+void Markov::Model<NodeStorageType>::adjust(const NodeStorageType* payload, long int occurrence) {
 	NodeStorageType p = payload[0];
 	Markov::Node<NodeStorageType>* curnode = this->starterNode;
 	Markov::Edge<NodeStorageType> *e;

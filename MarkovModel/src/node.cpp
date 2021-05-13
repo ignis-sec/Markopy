@@ -40,7 +40,7 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 
 	//get a random value in range of total_vertice_weight
 	int rnd = distribution(generator);// distribution(generator);
-	int selection = rnd % this->total_edge_weights;
+	int selection = rnd % this->total_edge_weights; //add division by zero execption handling
 	
 	//make absolute, no negative modulus values wanted
 	selection = (selection>=0)? selection : (selection + this->total_edge_weights);
