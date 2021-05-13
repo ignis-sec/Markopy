@@ -17,6 +17,10 @@
   <p align="center">
    Generate wordlists with markov models.
     <br />
+    <a href="https://github.com/FlameOfIgnis/MarkovPasswords/wiki">Wiki</a>
+    ·
+    <a href="https://markov.ignis.wtf">Complete documentation</a>
+    ·
     <a href="https://github.com/FlameOfIgnis/MarkovPasswords/issues">Report Bug</a>
     ·
     <a href="https://github.com/FlameOfIgnis/MarkovPasswords/pulls">Add a Bug</a>
@@ -84,8 +88,7 @@ See the Wiki Page
 
 <!-- CONTRIBUTING -->
 ## Contributing
-
-Feel absolutely free to contribute to this project, my artistic skills are complete dogsh*t so if you think you can make the design prettier, you are probably correct.
+Feel free to contribute.
 
 
 <!-- CONTACT -->
