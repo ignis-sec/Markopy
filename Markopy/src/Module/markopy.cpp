@@ -1,7 +1,7 @@
 #pragma once
 #include "../../../MarkovPasswords/src/markovPasswords.h"
 
-
+#define BOOST_PYTHON_STATIC_LIB
 #include <Python.h>
 #include <boost/python.hpp>
 
