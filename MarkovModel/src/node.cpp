@@ -105,6 +105,3 @@ uint64_t Markov::Node<storageType>::TotalEdgeWeights() {
 	return this->total_edge_weights;
 }
 
-
- 
-//new line for the code covarage

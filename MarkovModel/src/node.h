@@ -101,4 +101,4 @@ namespace Markov {
 		std::map<storageType, Edge<storageType>*> edges;
 	};
 };
-//new line for the code covarage
+

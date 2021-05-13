@@ -89,4 +89,4 @@ void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName
 		delete res;
 	}
 }
-//new line for the code covarage
+
