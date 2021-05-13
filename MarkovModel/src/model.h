@@ -2,13 +2,15 @@
  *
  */
 
+
 #pragma once
 #include <map>
 #include <vector>
 #include <fstream>
-
 #include "edge.h"
 #include "node.h"
+
+
 
 
 
@@ -92,11 +94,16 @@ namespace Markov {
 		/** @brief A list of all edges in this model. */
 		std::vector<Edge<NodeStorageType>*> edges;
 
-
+		/** @brief A default generator. */
 		std::default_random_engine* generator;
+
+		/** @brief A uniform distribution. */
 		std::uniform_int_distribution<long unsigned> distribution;
 	};
 
 };
+
+
+
 
 
