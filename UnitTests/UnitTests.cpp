@@ -31,66 +31,66 @@ namespace Testing {
 				*/
 				TEST_METHOD(default_constructor) {
 					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>;
-					Assert::IsNull(e->left());
-					Assert::IsNull(e->right());
+					Assert::IsNull(e->LeftNode());
+					Assert::IsNull(e->RightNode());
 					delete e;
 				}
 
 				/** @brief test linked constructor with two nodes
 				*/
 				TEST_METHOD(linked_constructor) {
-					Markov::Node<unsigned char>* left = new Markov::Node<unsigned char>('l');
-					Markov::Node<unsigned char>* right = new Markov::Node<unsigned char>('r');
-					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(left, right);
-					Assert::IsTrue(left == e->left());
-					Assert::IsTrue(right == e->right());
-					delete left;
-					delete right;
+					Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');
+					Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');
+					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(LeftNode, RightNode);
+					Assert::IsTrue(LeftNode == e->LeftNode());
+					Assert::IsTrue(RightNode == e->RightNode());
+					delete LeftNode;
+					delete RightNode;
 					delete e;
 				}
 
-				/** @brief test adjust function
+				/** @brief test AdjustEdge function
 				*/
-				TEST_METHOD(adjust) {
-					Markov::Node<unsigned char>* left = new Markov::Node<unsigned char>('l');
-					Markov::Node<unsigned char>* right = new Markov::Node<unsigned char>('r');
-					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(left, right);
-					e->adjust(15);
-					Assert::AreEqual(15ull, e->weight());
-					e->adjust(15);
-					Assert::AreEqual(30ull, e->weight());
-					delete left;
-					delete right;
+				TEST_METHOD(AdjustEdge) {
+					Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');
+					Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');
+					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(LeftNode, RightNode);
+					e->AdjustEdge(15);
+					Assert::AreEqual(15ull, e->EdgeWeight());
+					e->AdjustEdge(15);
+					Assert::AreEqual(30ull, e->EdgeWeight());
+					delete LeftNode;
+					delete RightNode;
 					delete e;
 				}
 
-				/** @brief test traverse returning right
+				/** @brief test TraverseNode returning RightNode
 				*/
-				TEST_METHOD(traverse) {
-					Markov::Node<unsigned char>* left = new Markov::Node<unsigned char>('l');
-					Markov::Node<unsigned char>* right = new Markov::Node<unsigned char>('r');
-					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(left, right);
-					Assert::IsTrue(right == e->traverse());
-					delete left;
-					delete right;
+				TEST_METHOD(TraverseNode) {
+					Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');
+					Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');
+					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(LeftNode, RightNode);
+					Assert::IsTrue(RightNode == e->TraverseNode());
+					delete LeftNode;
+					delete RightNode;
 					delete e;
 				}
 
-				/** @brief test left/right setter
+				/** @brief test LeftNode/RightNode setter
 				*/
 				TEST_METHOD(set_left_and_right) {
-					Markov::Node<unsigned char>* left = new Markov::Node<unsigned char>('l');
-					Markov::Node<unsigned char>* right = new Markov::Node<unsigned char>('r');
-					Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(left, right);
+					Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');
+					Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');
+					Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(LeftNode, RightNode);
 
 					Markov::Edge<unsigned char>* e2 = new Markov::Edge<unsigned char>;
-					e2->set_left(left);
-					e2->set_right(right);
+					e2->SetLeftEdge(LeftNode);
+					e2->SetRightEdge(RightNode);
 
-					Assert::IsTrue(e1->left() == e2->left());
-					Assert::IsTrue(e1->right() == e2->right());
-					delete left;
-					delete right;
+					Assert::IsTrue(e1->LeftNode() == e2->LeftNode());
+					Assert::IsTrue(e1->RightNode() == e2->RightNode());
+					delete LeftNode;
+					delete RightNode;
 					delete e1;
 					delete e2;
 				}
@@ -98,15 +98,15 @@ namespace Testing {
 				/** @brief test negative adjustments
 				*/
 				TEST_METHOD(negative_adjust) {
-					Markov::Node<unsigned char>* left = new Markov::Node<unsigned char>('l');
-					Markov::Node<unsigned char>* right = new Markov::Node<unsigned char>('r');
-					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(left, right);
-					e->adjust(15);
-					Assert::AreEqual(15ull, e->weight());
-					e->adjust(-15);
-					Assert::AreEqual(0ull, e->weight());
-					delete left;
-					delete right;
+					Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');
+					Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');
+					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(LeftNode, RightNode);
+					e->AdjustEdge(15);
+					Assert::AreEqual(15ull, e->EdgeWeight());
+					e->AdjustEdge(-15);
+					Assert::AreEqual(0ull, e->EdgeWeight());
+					delete LeftNode;
+					delete RightNode;
 					delete e;
 				}
 			};
@@ -121,7 +121,7 @@ namespace Testing {
 				*/
 				TEST_METHOD(default_constructor) {
 					Markov::Node<unsigned char>* n = new Markov::Node<unsigned char>();
-					Assert::AreEqual((unsigned char)0, n->value());
+					Assert::AreEqual((unsigned char)0, n->NodeValue());
 					delete n;
 				}
 
@@ -132,7 +132,7 @@ namespace Testing {
 					unsigned char test_cases[] = { 'c', 0x00, 0xff, -32 };
 					for (unsigned char tcase : test_cases) {
 						n = new Markov::Node<unsigned char>(tcase);
-						Assert::AreEqual(tcase, n->value());
+						Assert::AreEqual(tcase, n->NodeValue());
 						delete n;
 					}
 				}
@@ -140,27 +140,27 @@ namespace Testing {
 				/** @brief test link function
 				*/
 				TEST_METHOD(link_left) {
-					Markov::Node<unsigned char>* left = new Markov::Node<unsigned char>('l');
-					Markov::Node<unsigned char>* right = new Markov::Node<unsigned char>('r');
+					Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');
+					Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');
 
-					Markov::Edge<unsigned char>* e = left->Link(right);
-					delete left;
-					delete right;
+					Markov::Edge<unsigned char>* e = LeftNode->Link(RightNode);
+					delete LeftNode;
+					delete RightNode;
 					delete e;
 				}
 
 				/** @brief test link function
 				*/
 				TEST_METHOD(link_right) {
-					Markov::Node<unsigned char>* left = new Markov::Node<unsigned char>('l');
-					Markov::Node<unsigned char>* right = new Markov::Node<unsigned char>('r');
+					Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');
+					Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');
 
-					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(NULL, right);
-					left->Link(e);
-					Assert::IsTrue(left == e->left());
-					Assert::IsTrue(right == e->right());
-					delete left;
-					delete right;
+					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(NULL, RightNode);
+					LeftNode->Link(e);
+					Assert::IsTrue(LeftNode == e->LeftNode());
+					Assert::IsTrue(RightNode == e->RightNode());
+					delete LeftNode;
+					delete RightNode;
 					delete e;
 				}
 
@@ -171,7 +171,7 @@ namespace Testing {
 					Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');
 					Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');
 					Markov::Edge<unsigned char>* e = src->Link(target1);
-					e->adjust(15);
+					e->AdjustEdge(15);
 					Markov::Node<unsigned char>* res = src->RandomNext();
 					Assert::IsTrue(res == target1);
 					delete src;
@@ -187,7 +187,7 @@ namespace Testing {
 					Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');
 					Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');
 					Markov::Edge<unsigned char>* e = src->Link(target1);
-					e->adjust(1 << 31);
+					e->AdjustEdge(1 << 31);
 					Markov::Node<unsigned char>* res = src->RandomNext();
 					Assert::IsTrue(res == target1);
 					delete src;
@@ -205,8 +205,8 @@ namespace Testing {
 					Markov::Node<unsigned char>* target2 = new Markov::Node<unsigned char>('c');
 					Markov::Edge<unsigned char>* e1 = src->Link(target1);
 					Markov::Edge<unsigned char>* e2 = src->Link(target2);
-					e1->adjust(1);
-					e2->adjust((unsigned long)(1ull << 31));
+					e1->AdjustEdge(1);
+					e2->AdjustEdge((unsigned long)(1ull << 31));
 					Markov::Node<unsigned char>* res = src->RandomNext();
 					Assert::IsNotNull(res);
 					Assert::IsTrue(res == target2);
@@ -225,8 +225,8 @@ namespace Testing {
 					Markov::Node<unsigned char>* target2 = new Markov::Node<unsigned char>('c');
 					Markov::Edge<unsigned char>* e1 = src->Link(target1);
 					Markov::Edge<unsigned char>* e2 = src->Link(target2);
-					e2->adjust(1);
-					e1->adjust((unsigned long)(1ull << 31));
+					e2->AdjustEdge(1);
+					e1->AdjustEdge((unsigned long)(1ull << 31));
 					Markov::Node<unsigned char>* res = src->RandomNext();
 					Assert::IsNotNull(res);
 					Assert::IsTrue(res == target1);
@@ -246,9 +246,9 @@ namespace Testing {
 					Markov::Node<unsigned char>* target2 = new Markov::Node<unsigned char>('c');
 					Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(src, target1);
 					Markov::Edge<unsigned char>* e2 = new Markov::Edge<unsigned char>(src, target2);
-					e1->adjust(25);
+					e1->AdjustEdge(25);
 					src->UpdateEdges(e1);
-					e2->adjust(30);
+					e2->AdjustEdge(30);
 					src->UpdateEdges(e2);
 
 					Assert::AreEqual((size_t)2, src->Edges()->size());
@@ -268,9 +268,9 @@ namespace Testing {
 					Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');
 					Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(src, target1);
 					Markov::Edge<unsigned char>* e2 = new Markov::Edge<unsigned char>(src, target1);
-					e1->adjust(25);
+					e1->AdjustEdge(25);
 					src->UpdateEdges(e1);
-					e2->adjust(30);
+					e2->AdjustEdge(30);
 					src->UpdateEdges(e2);
 
 					Assert::AreEqual(55ull, src->TotalEdgeWeights());
@@ -294,12 +294,12 @@ namespace Testing {
 					src->Link(target2);
 
 					
-					res = src->findEdge('b');
+					res = src->FindEdge('b');
 					Assert::IsNotNull(res);
-					Assert::AreEqual((unsigned char)'b', res->traverse()->value());
-					res = src->findEdge('c');
+					Assert::AreEqual((unsigned char)'b', res->TraverseNode()->NodeValue());
+					res = src->FindEdge('c');
 					Assert::IsNotNull(res);
-					Assert::AreEqual((unsigned char)'c', res->traverse()->value());
+					Assert::AreEqual((unsigned char)'c', res->TraverseNode()->NodeValue());
 
 					delete src;
 					delete target1;
@@ -317,7 +317,7 @@ namespace Testing {
 						Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');
 						Markov::Edge<unsigned char>* res = NULL;
 
-						res = src->findEdge('b');
+						res = src->FindEdge('b');
 						Assert::IsNull(res);
 
 						delete src;
@@ -337,7 +337,7 @@ namespace Testing {
 					src->Link(target1);
 					src->Link(target2);
 
-					res = src->findEdge('D');
+					res = src->FindEdge('D');
 					Assert::IsNull(res);
 
 					delete src;
@@ -356,7 +356,7 @@ namespace Testing {
 				*/
 				TEST_METHOD(model_constructor) {
 					Markov::Model<unsigned char> m;
-					Assert::AreEqual((unsigned char)'\0', m.StarterNode()->value());
+					Assert::AreEqual((unsigned char)'\0', m.StarterNode()->NodeValue());
 				}
 
 				/** @brief test import
@@ -501,13 +501,13 @@ namespace Testing {
 			*/
 			TEST_METHOD(except_integer_underflow) {
 				auto _underflow_adjust = [] {
-					Markov::Node<unsigned char>* left = new Markov::Node<unsigned char>('l');
-					Markov::Node<unsigned char>* right = new Markov::Node<unsigned char>('r');
-					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(left, right);
-					e->adjust(15);
-					e->adjust(-30);
-					delete left;
-					delete right;
+					Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');
+					Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');
+					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(LeftNode, RightNode);
+					e->AdjustEdge(15);
+					e->AdjustEdge(-30);
+					delete LeftNode;
+					delete RightNode;
 					delete e;
 				};
 				Assert::ExpectException<std::underflow_error>(_underflow_adjust);
@@ -517,13 +517,13 @@ namespace Testing {
 			*/
 			TEST_METHOD(except_integer_overflow) {
 				auto _overflow_adjust = [] {
-					Markov::Node<unsigned char>* left = new Markov::Node<unsigned char>('l');
-					Markov::Node<unsigned char>* right = new Markov::Node<unsigned char>('r');
-					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(left, right);
-					e->adjust(~0ull);
-					e->adjust(1);
-					delete left;
-					delete right;
+					Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');
+					Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');
+					Markov::Edge<unsigned char>* e = new Markov::Edge<unsigned char>(LeftNode, RightNode);
+					e->AdjustEdge(~0ull);
+					e->AdjustEdge(1);
+					delete LeftNode;
+					delete RightNode;
 					delete e;
 				};
 				Assert::ExpectException<std::underflow_error>(_overflow_adjust);
@@ -543,7 +543,7 @@ namespace Testing {
 				Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');
 				Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');
 				Markov::Edge<unsigned char>* e = src->Link(target1);
-				e->adjust((unsigned long)(1ull << 63));
+				e->AdjustEdge((unsigned long)(1ull << 63));
 				Markov::Node<unsigned char>* res = src->RandomNext();
 				Assert::IsTrue(res == target1);
 				delete src;
@@ -559,7 +559,7 @@ namespace Testing {
 				Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');
 				Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');
 				Markov::Edge<unsigned char>* e = src->Link(target1);
-				e->adjust((0xffffFFFF));
+				e->AdjustEdge((0xffffFFFF));
 				Markov::Node<unsigned char>* res = src->RandomNext();
 				Assert::IsTrue(res == target1);
 				delete src;
@@ -601,10 +601,10 @@ namespace Testing {
 				Markov::Node<unsigned char>* b = new Markov::Node<unsigned char>('b');
 				Markov::Node<unsigned char>* c = new Markov::Node<unsigned char>('c');
 				Markov::Node<unsigned char>* end = new Markov::Node<unsigned char>(0xff);
-				starter->Link(a)->adjust(1);
-				a->Link(b)->adjust(1);
-				b->Link(c)->adjust(1);
-				c->Link(end)->adjust(1);
+				starter->Link(a)->AdjustEdge(1);
+				a->Link(b)->AdjustEdge(1);
+				b->Link(c)->AdjustEdge(1);
+				c->Link(end)->AdjustEdge(1);
 
 				char* res = (char*)m.RandomWalk();
 				Assert::IsFalse(strcmp(res, "abc"));
@@ -617,12 +617,12 @@ namespace Testing {
 				Markov::Node<unsigned char>* c = new Markov::Node<unsigned char>('c');
 				Markov::Node<unsigned char>* end = new Markov::Node<unsigned char>(0xff);
 				Markov::Edge<unsigned char>* res = NULL;
-				starter->Link(a)->adjust(1);
-				a->Link(b)->adjust(1);
-				b->Link(c)->adjust(1);
-				c->Link(end)->adjust(1);
+				starter->Link(a)->AdjustEdge(1);
+				a->Link(b)->AdjustEdge(1);
+				b->Link(c)->AdjustEdge(1);
+				c->Link(end)->AdjustEdge(1);
 
-				res = starter->findEdge('D');
+				res = starter->FindEdge('D');
 				Assert::IsNull(res);
 
 			}
@@ -637,3 +637,4 @@ namespace Testing {
 	};
 
 }
+

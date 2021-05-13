@@ -10,3 +10,4 @@ about::about(QWidget* parent)
     ui.setupUi(this);
 
 }
+
