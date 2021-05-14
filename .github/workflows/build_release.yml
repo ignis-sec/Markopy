@@ -1,0 +1,183 @@
+name: Build Release Version
+
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  reversion:
+    name: Bump version and create release
+    runs-on: ubuntu-latest
+    outputs:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+    steps:   
+    - uses: actions/checkout@v2    
+    
+    - name: Bump version and push tag
+      id: tag_version
+      uses: anothrNick/github-tag-action@1.26.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DEFAULT_BUMP: minor
+        VERBOSE: true
+        RELEASE_BRANCHES: main
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.tag_version.outputs.new_tag }} 
+        release_name: Release v${{ steps.tag_version.outputs.new_tag }} 
+        draft: false
+        prerelease: false
+  
+  build_linux:
+    needs: reversion
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+    steps:
+    # Check cache for boost libraries
+    - name: Cache Boost
+      uses: actions/cache@v2
+      id: cache-boost
+      with:
+        path: |
+          /home/runner/boost_1_71_0/stage
+          /home/runner/boost_1_71_0/boost
+        key: 'nix-boost-src-latest-py${{ matrix.python-version }}'
+     
+    # Checkout current commit
+    - uses: actions/checkout@v2
+    
+    # Set up Python 
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    # Link Python includes and libraries
+    - name: Set up libraries for Python ${{ matrix.python-version }}
+      run: |
+        ls -al /opt/hostedtoolcache/Python/${{ matrix.python-version }}*/x64/bin/;
+        cd /opt/hostedtoolcache/Python/${{ matrix.python-version }}*/x64/include;
+        
+        [[ -f "python${{ matrix.python-version }}" ]] || sudo ln -s python${{ matrix.python-version }}m python${{ matrix.python-version }};
+
+        sudo cp -r /opt/hostedtoolcache/Python/${{ matrix.python-version }}*/x64/lib/* /usr/local/lib/;
+        sudo cp -r /opt/hostedtoolcache/Python/${{ matrix.python-version }}*/x64/include/py* /usr/include/;
+        sudo ln -s /usr/include/${{ matrix.python-version }}m /usr/include/${{ matrix.python-version }};
+        
+        [[ -f "/usr/local/lib/libpython${{ matrix.python-version }}.so.1.0" ]] ||  sudo ln -s /usr/local/lib/libpython${{ matrix.python-version }}m.so.1.0 /usr/local/lib/libpython${{ matrix.python-version }}.so.1.0;
+        [[ -f "/usr/local/lib/libpython${{ matrix.python-version }}.so" ]] ||  sudo ln -s /usr/local/lib/libpython${{ matrix.python-version }}m.so /usr/local/lib/libpython${{ matrix.python-version }}.so;
+
+        ls -al /opt/hostedtoolcache/Python/3.6.13/x64/include/ -R;
+    # Setup boost
+    - name: Setup boost
+      if: steps.cache-boost.outputs.cache-hit != 'true'
+      run: |
+        wget https://boostorg.jfrog.io/artifactory/main/release/1.71.0/source/boost_1_71_0.tar.gz -O /home/runner/boost_1_71_0.tar.gz -q;
+        cd /home/runner/;
+        tar -xf /home/runner/boost_1_71_0.tar.gz;
+        cd /home/runner/boost_1_71_0/;
+        ./bootstrap.sh --with-python=$(which python${{ matrix.python-version }}) --with-python-version=${{ matrix.python-version }};
+        sudo ./b2 --with-python --with-program_options stage;
+   
+
+    - name: Link boost libraries
+      run: |
+        sudo cp /home/runner/boost_1_71_0/stage/lib/* /usr/local/lib;
+        ls -al /usr/local/lib;
+        sudo cp -r /home/runner/boost_1_71_0/boost /usr/include/boost;
+ 
+
+    - name:  Check dep
+      run: 
+        pwd;
+        echo ${{ github.ref }};
+        ls -al /usr/include/;
+        ls -al /usr/local/lib/;
+
+    - name: Compile CPP
+      run: make PYTHON_VERSION=${{ matrix.python-version }} all
+
+    - name: Zip built files # This would actually build your project, using zip for an example artifact
+      run: 
+        pwd;
+        echo ${{ github.ref }};
+        ls -al;
+        ls -al bin/;
+        zip --junk-paths linux-python${{ matrix.python-version }}.so.zip Markopy/src/CLI/markopy_cli.py bin/markopy.so;
+    
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.reversion.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./linux-python${{ matrix.python-version }}.so.zip
+        asset_name:   linux-python${{ matrix.python-version }}.so.zip
+        asset_content_type: application/zip
+
+  MSBuild:
+    needs: reversion
+    runs-on: windows-latest
+    strategy:
+        matrix:
+          python-version: [3.8]
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Cache Boost
+      uses: actions/cache@v2
+      id: cache-boost
+      with:
+        path: D:\a\
+        key: 'win-boost-fullcache-1.71-${{ matrix.python-version }}'
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Build Boost
+      id: boost
+      if: steps.cache-boost.outputs.cache-hit != 'true'
+      uses: egor-tensin/build-boost@v1
+      with:
+        version: 1.71.0
+        libraries: program_options python
+        platform: x64
+        configuration: Release
+
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v1
+
+    - name: Restore NuGet packages
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: nuget restore ${{env.SOLUTION_FILE_PATH}}
+
+    - name: Build
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+
+      run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
+
+    - name: Zip built files # This would actually build your project, using zip for an example artifact
+      run: 
+        zip --junk-paths windows-python${{ matrix.python-version }}.pyd.zip Markopy/src/CLI/markopy_cli.py x64/Release/markopy.pyd;
+    
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.reversion.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./linux-python${{ matrix.python-version }}.so.zip
+        asset_name:   linux-python${{ matrix.python-version }}.so.zip
+        asset_content_type: application/zip
