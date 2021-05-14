@@ -1,6 +1,6 @@
-name: C/C++ CI
+name: Build on Linux with G++/make
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:

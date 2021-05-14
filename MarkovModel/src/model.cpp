@@ -37,7 +37,7 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream *f) {
 		if (this->nodes.find(src) == this->nodes.end()) {
 			srcN = new Markov::Node<NodeStorageType>(src);
 			this->nodes.insert(std::pair<char, Markov::Node<NodeStorageType>*>(src, srcN));
-			std::cout << "Creating new node at start.\n";
+			//std::cout << "Creating new node at start.\n";
 		}else {
 			srcN = this->nodes.find(src)->second;
 		}
@@ -45,22 +45,22 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream *f) {
 		if (this->nodes.find(target) == this->nodes.end()) {
 			targetN = new Markov::Node<NodeStorageType>(target);
 			this->nodes.insert(std::pair<char, Markov::Node<NodeStorageType>*>(target, targetN));
-			std::cout << "Creating new node at end.\n";
+			//std::cout << "Creating new node at end.\n";
 		}
 		else {
 			targetN = this->nodes.find(target)->second;
 		}
 		e = srcN->Link(targetN);
-		e->adjust(oc);
+		e->AdjustEdge(oc);
 		this->edges.push_back(e);
 		
-		//std::cout << int(srcN->value()) << " --" << e->weight() << "--> " << int(targetN->value()) << "\n";
+		//std::cout << int(srcN->NodeValue()) << " --" << e->EdgeWeight() << "--> " << int(targetN->NodeValue()) << "\n";
 		
 		
 	}
 
-	std::cout << "Total number of nodes: " << this->nodes.size() << std::endl;
-	std::cout << "Total number of edges: " << this->edges.size() << std::endl;
+	//std::cout << "Total number of nodes: " << this->nodes.size() << std::endl;
+	//std::cout << "Total number of edges: " << this->edges.size() << std::endl;
 
 	return true;
 }
@@ -78,8 +78,8 @@ bool Markov::Model<NodeStorageType>::Export(std::ofstream* f) {
 	Markov::Edge<NodeStorageType>* e;
 	for (std::vector<int>::size_type i = 0; i != this->edges.size(); i++) {
 		e = this->edges[i];
-		std::cout << e->left()->value() << "," << e->weight() << "," << e->right()->value() << "\n";
-		*f << e->left()->value() << "," << e->weight() << "," << e->right()->value() << "\n";
+		//std::cout << e->LeftNode()->NodeValue() << "," << e->EdgeWeight() << "," << e->RightNode()->NodeValue() << "\n";
+		*f << e->LeftNode()->NodeValue() << "," << e->EdgeWeight() << "," << e->RightNode()->NodeValue() << "\n";
 	}
 
 	return true;
@@ -104,8 +104,8 @@ NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk() {
 		if (len == 60) break;
 		if (n == NULL) break;
 
-		//std::cout << n->value();
-		ret[len++] = n->value();
+		//std::cout << n->NodeValue();
+		ret[len++] = n->NodeValue();
 
 		//maximum character length exceeded and stack will overflow.
 		//assert(len<32 && "return buffer overflowing, this will segfault if not aborted.");
@@ -119,19 +119,20 @@ NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk() {
 }
 
 template <typename NodeStorageType>
-void Markov::Model<NodeStorageType>::adjust(NodeStorageType* payload, long int occurrence) {
+void Markov::Model<NodeStorageType>::AdjustEdge(const NodeStorageType* payload, long int occurrence) {
 	NodeStorageType p = payload[0];
 	Markov::Node<NodeStorageType>* curnode = this->starterNode;
 	Markov::Edge<NodeStorageType> *e;
 	int i = 0;
 	while (p != 0) {
-		e = curnode->findEdge(p);
-		e->adjust(occurrence);
-		curnode = e->right();
+		e = curnode->FindEdge(p);
+		e->AdjustEdge(occurrence);
+		curnode = e->RightNode();
 		p = payload[++i];
 	}
 
-	e = curnode->findEdge('\xff');
-	e->adjust(occurrence);
+	e = curnode->FindEdge('\xff');
+	e->AdjustEdge(occurrence);
 	return;
 }
+

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="model__2gram_8py" kind="file" language="Python">
     <compoundname>model_2gram.py</compoundname>
     <innernamespace refid="namespacemodel__2gram">model_2gram</innernamespace>
@@ -7,6 +7,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts/model_2gram.py"/>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/scripts/model_2gram.py"/>
   </compounddef>
 </doxygen>

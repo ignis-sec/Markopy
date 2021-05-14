@@ -38,3 +38,4 @@ public slots:
     void MarkovPasswordsGUI::visualDebugSelected();
     void MarkovPasswordsGUI::comparisonSelected();
 };
+

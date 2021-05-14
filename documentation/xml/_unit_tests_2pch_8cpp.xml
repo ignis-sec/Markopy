@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="_unit_tests_2pch_8cpp" kind="file" language="C++">
     <compoundname>pch.cpp</compoundname>
     <includes refid="_unit_tests_2pch_8h" local="yes">pch.h</includes>
@@ -9,7 +9,7 @@
         <link refid="_unit_tests_2pch_8h_source"/>
       </node>
       <node id="1">
-        <label>D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/pch.cpp</label>
+        <label>/media/ignis/HDD/Repositories/MarkovPasswords/UnitTests/pch.cpp</label>
         <link refid="_unit_tests_2pch_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -19,6 +19,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/UnitTests/pch.cpp"/>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/UnitTests/pch.cpp"/>
   </compounddef>
 </doxygen>

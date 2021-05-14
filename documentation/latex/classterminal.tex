@@ -9,21 +9,21 @@ pretty colors for terminal. Windows Only.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classterminal_a9b6dd987e27cfd6f1ed180540659e59f}\label{classterminal_a9b6dd987e27cfd6f1ed180540659e59f}} 
-enum class {\bfseries color} \{ \newline
-{\bfseries RESET}
-, {\bfseries BLACK}
-, {\bfseries RED}
-, {\bfseries GREEN}
-, \newline
-{\bfseries YELLOW}
-, {\bfseries BLUE}
-, {\bfseries MAGENTA}
-, {\bfseries CYAN}
-, \newline
-{\bfseries WHITE}
-, {\bfseries LIGHTGRAY}
-, {\bfseries DARKGRAY}
-, {\bfseries BROWN}
+enum {\bfseries color} \{ \newline
+{\bfseries R\+E\+S\+ET}, 
+{\bfseries B\+L\+A\+CK}, 
+{\bfseries R\+ED}, 
+{\bfseries G\+R\+E\+EN}, 
+\newline
+{\bfseries Y\+E\+L\+L\+OW}, 
+{\bfseries B\+L\+UE}, 
+{\bfseries M\+A\+G\+E\+N\+TA}, 
+{\bfseries C\+Y\+AN}, 
+\newline
+{\bfseries W\+H\+I\+TE}, 
+{\bfseries L\+I\+G\+H\+T\+G\+R\+AY}, 
+{\bfseries D\+A\+R\+K\+G\+R\+AY}, 
+{\bfseries B\+R\+O\+WN}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
@@ -34,13 +34,7 @@ enum class {\bfseries color} \{ \newline
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classterminal_ae0b68f4ce491a1784930a66f23fe81b2}\label{classterminal_ae0b68f4ce491a1784930a66f23fe81b2}} 
-static HANDLE {\bfseries \+\_\+stdout}
-\item 
-\mbox{\Hypertarget{classterminal_a60d4fb4f80a1532004d3cd4a427d029a}\label{classterminal_a60d4fb4f80a1532004d3cd4a427d029a}} 
-static HANDLE {\bfseries \+\_\+stderr}
-\item 
-static std\+::map$<$ terminal\+::color, DWORD $>$ {\bfseries colormap}
+static std\+::map$<$ terminal\+::color, int $>$ {\bfseries colormap}
 \item 
 \mbox{\Hypertarget{classterminal_ac01fc0e2438769940675326f7cc4329d}\label{classterminal_ac01fc0e2438769940675326f7cc4329d}} 
 static std\+::ostream {\bfseries endl}
@@ -60,27 +54,27 @@ pretty colors for terminal. Windows Only.
 Default constructor. Get references to stdout and stderr handles. 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classterminal_a47ed57552a6357d5b60b5a14d7d8d19b}\label{classterminal_a47ed57552a6357d5b60b5a14d7d8d19b}} 
+\mbox{\Hypertarget{classterminal_ad9bec28e28ddcdc6e015beac65873a87}\label{classterminal_ad9bec28e28ddcdc6e015beac65873a87}} 
 \index{terminal@{terminal}!colormap@{colormap}}
 \index{colormap@{colormap}!terminal@{terminal}}
 \doxysubsubsection{\texorpdfstring{colormap}{colormap}}
-{\footnotesize\ttfamily std\+::map$<$ terminal\+::color, DWORD $>$ terminal\+::colormap\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily std\+::map$<$ terminal\+::color, int $>$ terminal\+::colormap\hspace{0.3cm}{\ttfamily [static]}}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{= \{}
-\DoxyCodeLine{    \{terminal::color::BLACK, 0\},}
-\DoxyCodeLine{    \{terminal::color::BLUE, 1\},}
-\DoxyCodeLine{    \{terminal::color::GREEN, 2\},}
-\DoxyCodeLine{    \{terminal::color::CYAN, 3\},}
-\DoxyCodeLine{    \{terminal::color::RED, 4\},}
-\DoxyCodeLine{    \{terminal::color::MAGENTA, 5\},}
-\DoxyCodeLine{    \{terminal::color::BROWN, 6\},}
-\DoxyCodeLine{    \{terminal::color::LIGHTGRAY, 7\},}
-\DoxyCodeLine{    \{terminal::color::DARKGRAY, 8\},}
-\DoxyCodeLine{    \{terminal::color::YELLOW, 14\},}
-\DoxyCodeLine{    \{terminal::color::WHITE, 15\},}
-\DoxyCodeLine{    \{terminal::color::RESET, 15\},}
+\DoxyCodeLine{    \{terminal::color::BLACK, 30\},}
+\DoxyCodeLine{    \{terminal::color::BLUE, 34\},}
+\DoxyCodeLine{    \{terminal::color::GREEN, 32\},}
+\DoxyCodeLine{    \{terminal::color::CYAN, 36\},}
+\DoxyCodeLine{    \{terminal::color::RED, 31\},}
+\DoxyCodeLine{    \{terminal::color::MAGENTA, 35\},}
+\DoxyCodeLine{    \{terminal::color::BROWN, 0\},}
+\DoxyCodeLine{    \{terminal::color::LIGHTGRAY, 0\},}
+\DoxyCodeLine{    \{terminal::color::DARKGRAY, 0\},}
+\DoxyCodeLine{    \{terminal::color::YELLOW, 33\},}
+\DoxyCodeLine{    \{terminal::color::WHITE, 37\},}
+\DoxyCodeLine{    \{terminal::color::RESET, 0\},}
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
@@ -88,5 +82,5 @@ Default constructor. Get references to stdout and stderr handles.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Repositories/\+Markov\+Passwords/\+Win-\/visualstudio/\+Markov\+Passwords/src/color/term.\+h\item 
-D\+:/\+Repositories/\+Markov\+Passwords/\+Win-\/visualstudio/\+Markov\+Passwords/src/color/term.\+cpp\end{DoxyCompactItemize}
+/media/ignis/\+H\+D\+D/\+Repositories/\+Markov\+Passwords/\+Markov\+Passwords/src/color/term.\+h\item 
+/media/ignis/\+H\+D\+D/\+Repositories/\+Markov\+Passwords/\+Markov\+Passwords/src/color/term.\+cpp\end{DoxyCompactItemize}

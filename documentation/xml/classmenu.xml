@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classmenu" kind="class" language="C++" prot="public">
+    <compoundname>menu</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmenu_1aa544bbde4fd50541c0bcbec3010d04d0" prot="private" static="no" mutable="no">
+        <type>Ui::main</type>
+        <definition>Ui::main menu::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/menu.h" line="12" column="10" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/menu.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmenu_1a19f2bce9cdf1c78eb746e86ab5abf14a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>menu::menu</definition>
+        <argsstring>(QWidget *parent=Q_NULLPTR)</argsstring>
+        <name>menu</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>Q_NULLPTR</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/menu.h" line="9" column="1" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/menu.cpp" bodystart="8" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="classmenu_1a0ca49b20cf34f1349a4489c9ae3e28ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void menu::about</definition>
+        <argsstring>()</argsstring>
+        <name>about</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/menu.h" line="15" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/menu.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="slot" id="classmenu_1ad2fd60ba9ea6b8c4ba0ccb98abe9a651" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void menu::visualization</definition>
+        <argsstring>()</argsstring>
+        <name>visualization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/menu.h" line="16" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/menu.cpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="1">
+        <label>menu</label>
+        <link refid="classmenu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="1">
+        <label>menu</label>
+        <link refid="classmenu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/menu.h" line="6" column="29" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/menu.h" bodystart="6" bodyend="17"/>
+    <listofallmembers>
+      <member refid="classmenu_1a0ca49b20cf34f1349a4489c9ae3e28ca" prot="public" virt="non-virtual"><scope>menu</scope><name>about</name></member>
+      <member refid="classmenu_1a19f2bce9cdf1c78eb746e86ab5abf14a" prot="public" virt="non-virtual"><scope>menu</scope><name>menu</name></member>
+      <member refid="classmenu_1aa544bbde4fd50541c0bcbec3010d04d0" prot="private" virt="non-virtual"><scope>menu</scope><name>ui</name></member>
+      <member refid="classmenu_1ad2fd60ba9ea6b8c4ba0ccb98abe9a651" prot="public" virt="non-virtual"><scope>menu</scope><name>visualization</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

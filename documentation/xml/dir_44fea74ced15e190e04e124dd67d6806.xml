@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_44fea74ced15e190e04e124dd67d6806" kind="dir">
+    <compoundname>/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/scripts</compoundname>
+    <innerfile refid="model__2gram_8py">model_2gram.py</innerfile>
+    <innerfile refid="random-model_8py">random-model.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/scripts/"/>
+  </compounddef>
+</doxygen>
