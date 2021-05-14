@@ -1,19 +1,15 @@
-name: Sonar-scan
+name: Code integrity
 on:
   pull_request:
     branches:
       - dev # or the name of your main branch
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'info'
       tags:
         description: 'Test scenario tags'  
 
 jobs:
-  build:
+  sonar_scan:
     name: Sonar-scan
     runs-on: ubuntu-latest
     steps:
