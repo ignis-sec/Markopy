@@ -1,13 +1,21 @@
-name: Build on Linux with G++/make
+name: Unix Build (Py3.8/boost-latest)
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
-  build:
-
+  build_unix:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        python-version: [3.8]
     steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Setup boost
+      run: sudo apt-get install libboost-python-dev libboost-program-options-dev
     - uses: actions/checkout@v2
     - name: make
       run: make

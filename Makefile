@@ -97,7 +97,7 @@ $(BIN)/%.cpp.o:%.cpp
 ##############################################################################################################
 
 .PHONY: all
-all: model mp
+all: model mp markopy
 model: $(INCLUDE)/$(MM_LIB)
 
 mp: $(BIN)/$(MP_EXEC)
