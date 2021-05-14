@@ -36,11 +36,13 @@ void MarkovPasswords::Train(const char* datasetFileName, char delimiter)   {
 	std::ifstream datasetFile;
 	datasetFile.open(datasetFileName, std::ios_base::binary);
 	std::string line;
+	//std::string pass;
 	char format_str[] ="%d,%s";
 	format_str[2]=delimiter;
 	while (std::getline(datasetFile,line,'\n')) {
 		int oc;
-	    char pass[512];     
+		std::string pass;  //fixed
+	    //char pass[512];  //caused segfault
 		if (line.size() > 100) {
 			line.substr(0, 100);
 		}
@@ -50,7 +52,7 @@ void MarkovPasswords::Train(const char* datasetFileName, char delimiter)   {
 		sscanf(line.c_str(), format_str, &oc, pass);
 #endif
 		//std::cout << "parsed: "<<pass << "," << oc << "\n";
-		this->adjust(pass, oc);
+		this->AdjustEdge(pass.c_str(), oc); 
 	}
 	
 }
@@ -87,3 +89,4 @@ void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName
 		delete res;
 	}
 }
+
