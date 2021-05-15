@@ -27,6 +27,21 @@ PYTHON_VERSION3 :=$(shell python$(PYTHON_VERSION) -c "import sys;t='{v[0]}.{v[1]
 MP_C_FLAGS  := -Wall -Wextra -g
 MP_EXEC     := Markov
 MP_SRC      := $(shell find ./MarkovPasswords/src/ -name '*.cpp') $(shell find ./MarkovModel/src/ -name '*.cpp')
+
+#build pattern
+$(BIN)/$(MP_EXEC): $(MP_SRC)
+	$(CC) $(MP_C_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)    
+
+
+PYTHON_VERSION_ :=$(shell python$(PYTHON_VERSION) -c "import sys;t='{v[0]}{v[1]}'.format(v=list(sys.version_info[:2]));sys.stdout.write(t)";) #38
+PYTHON_VERSION3 :=$(shell python$(PYTHON_VERSION) -c "import sys;t='{v[0]}.{v[1]}.{v[2]}'.format(v=list(sys.version_info[:3]));sys.stdout.write(t)";) #3.8.s2
+##############################################################################################################
+#####################################     MarkovPassword project options     #################################
+##############################################################################################################
+
+MP_C_FLAGS  := -Wall -Wextra -g
+MP_EXEC     := Markov
+MP_SRC      := $(shell find ./MarkovPasswords/src/ -name '*.cpp') $(shell find ./MarkovModel/src/ -name '*.cpp')
 MP_INC 		:= 
 MP_LIB		:= -lboost_program_options
 #build pattern
