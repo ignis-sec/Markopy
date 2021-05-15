@@ -155,13 +155,13 @@ jobs:
         dir D:\a\python${{ matrix.python-version }};
         echo $env:pythonLocation;
         dir $env:pythonLocation\include;
-        Remove-Item -Recurse -Force D:\a\actions-test\boost\stage -ErrorAction Ignore;
+        Remove-Item -Recurse -Force D:\a\MarkovPasswords\boost\stage -ErrorAction Ignore;
 
     - name: Cache Boost
       uses: actions/cache@v2
       id: cache-boost
       with:
-        path: D:\a\actions-test\boost
+        path: D:\a\MarkovPasswords\boost
         key: 'win-boost-1.76-${{ matrix.python-version }}'
 
     - name: Build Boost
@@ -177,14 +177,14 @@ jobs:
     - name: Rename boost static and dynamic libraries
       if: steps.cache-boost.outputs.cache-hit != 'true'
       run: |
-        mkdir D:\a\actions-test\boost\stage\lib
-        dir  D:\a\actions-test\boost;
-        ls -r  D:\a\actions-test\boost\stage;
-        cp D:\a\actions-test\boost\stage\x64\Release\lib\boost_program_options.dll D:\a\actions-test\boost\stage\lib\libboost_program_options-vc142-mt-x64-1_76.dll;
-        cp D:\a\actions-test\boost\stage\x64\Release\lib\boost_program_options.lib D:\a\actions-test\boost\stage\lib\libboost_program_options-vc142-mt-x64-1_76.lib;
+        mkdir D:\a\MarkovPasswords\boost\stage\lib
+        dir  D:\a\MarkovPasswords\boost;
+        ls -r  D:\a\MarkovPasswords\boost\stage;
+        cp D:\a\MarkovPasswords\boost\stage\x64\Release\lib\boost_program_options.dll D:\a\MarkovPasswords\boost\stage\lib\libboost_program_options-vc142-mt-x64-1_76.dll;
+        cp D:\a\MarkovPasswords\boost\stage\x64\Release\lib\boost_program_options.lib D:\a\MarkovPasswords\boost\stage\lib\libboost_program_options-vc142-mt-x64-1_76.lib;
 
-        cp D:\a\actions-test\boost\stage\x64\Release\lib\boost_python${{ matrix.python-file-version }}.dll D:\a\actions-test\boost\stage\lib\libboost_python${{ matrix.python-file-version }}-vc142-mt-x64-1_76.dll;
-        cp D:\a\actions-test\boost\stage\x64\Release\lib\boost_python${{ matrix.python-file-version }}.lib D:\a\actions-test\boost\stage\lib\libboost_python${{ matrix.python-file-version }}-vc142-mt-x64-1_76.lib;
+        cp D:\a\MarkovPasswords\boost\stage\x64\Release\lib\boost_python${{ matrix.python-file-version }}.dll D:\a\MarkovPasswords\boost\stage\lib\libboost_python${{ matrix.python-file-version }}-vc142-mt-x64-1_76.dll;
+        cp D:\a\MarkovPasswords\boost\stage\x64\Release\lib\boost_python${{ matrix.python-file-version }}.lib D:\a\MarkovPasswords\boost\stage\lib\libboost_python${{ matrix.python-file-version }}-vc142-mt-x64-1_76.lib;
 
 
     - name: Add MSBuild to PATH
@@ -199,7 +199,7 @@ jobs:
 
       run: |
         $env:PYTHON_PATH = "D:\a\python${{ matrix.python-version }}";
-        $env:BOOST_ROOT = "D:\a\actions-test\boost";
+        $env:BOOST_ROOT = "D:\a\MarkovPasswords\boost";
         msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
 
     - name: Zip built files # This would actually build your project, using zip for an example artifact
