@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="indexpage" kind="page">
     <compoundname>index</compoundname>
     <title>Markov Passwords</title>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><anchor id="index_1md_D__Repositories_MarkovPasswords_README"/> </para>
 <sect1 id="index_1autotoc_md1">
 <title>Projects</title>
 <para><itemizedlist>
@@ -34,40 +33,40 @@
 <sect1 id="index_1autotoc_md2">
 <title>What is a markov model</title>
 <para>Below, is the example <ref refid="namespace_markov" kindref="compound">Markov</ref> Model which can generate strings with the alphabet &quot;a,b,c&quot;</para>
-<para><image type="html" name="images/empty_model.png" inline="yes"></image>
+<para><image type="html" name="empty_model.png" inline="yes"></image>
 </para>
 <sect3 id="index_1autotoc_md3">
 <title>Iteration 1</title>
 <para>Below is a demonstration of how training will be done. For this example, we are going to adjust the model with string &quot;ab&quot;, and our occurrence will be &quot;3&quot; From <ref refid="class_markov_passwords" kindref="compound">MarkovPasswords</ref>, inside the train function, Model::adjust is called with &quot;ab&quot; and &quot;3&quot; parameters.</para>
 <para>Now, Model::adjust will iteratively adjust the edge weights accordingly. It starts by adjusting weight between start and &quot;a&quot; node. This is done by calling Edge::adjust of the edge between the nodes.</para>
-<para><image type="html" name="images/model_1.png" inline="yes"></image>
+<para><image type="html" name="model_1.png" inline="yes"></image>
 </para>
 <para>After adjustment, ajust function iterates to the next character, &quot;b&quot;, and does the same thing.</para>
-<para><image type="html" name="images/model_2.png" inline="yes"></image>
+<para><image type="html" name="model_2.png" inline="yes"></image>
 </para>
 <para>As this string is finished, it will adjust the final weight, b-&gt;&quot;end&quot;</para>
-<para><image type="html" name="images/model_3.png" inline="yes"></image>
+<para><image type="html" name="model_3.png" inline="yes"></image>
 </para>
 </sect3>
 <sect3 id="index_1autotoc_md4">
 <title>Iteration 2</title>
 <para>This time, same procedure will be applied for &quot;bacb&quot; string, with occurrence value of 12.</para>
-<para><image type="html" name="images/model_21.png" inline="yes"></image>
+<para><image type="html" name="model_21.png" inline="yes"></image>
 </para>
-<para><image type="html" name="images/model_22.png" inline="yes"></image>
+<para><image type="html" name="model_22.png" inline="yes"></image>
 </para>
-<para><image type="html" name="images/model_23.png" inline="yes"></image>
+<para><image type="html" name="model_23.png" inline="yes"></image>
 </para>
-<para><image type="html" name="images/model_24.png" inline="yes"></image>
+<para><image type="html" name="model_24.png" inline="yes"></image>
 </para>
-<para><image type="html" name="images/model_25.png" inline="yes"></image>
+<para><image type="html" name="model_25.png" inline="yes"></image>
 </para>
 </sect3>
 <sect3 id="index_1autotoc_md5">
 <title>Iteration 38271</title>
-<para>As the model is trained, hidden linguistical patterns start to appear, and our model looks like this <image type="html" name="images/model_30.png" inline="yes"></image>
+<para>As the model is trained, hidden linguistical patterns start to appear, and our model looks like this <image type="html" name="model_30.png" inline="yes"></image>
 </para>
-<para>With our dataset, without doing any kind of linugistic analysis ourselves, our <ref refid="namespace_markov" kindref="compound">Markov</ref> Model has highlighted that strings are more likely to start with a, b tends to follow a, and a is likely to be repeated in the string. <image type="html" name="images/model_31.png" inline="yes"></image>
+<para>With our dataset, without doing any kind of linugistic analysis ourselves, our <ref refid="namespace_markov" kindref="compound">Markov</ref> Model has highlighted that strings are more likely to start with a, b tends to follow a, and a is likely to be repeated in the string. <image type="html" name="model_31.png" inline="yes"></image>
 </para>
 </sect3>
 <sect2 id="index_1autotoc_md6">
@@ -99,6 +98,5 @@
 </sect2>
 </sect1>
     </detaileddescription>
-    <location file="D:/Repositories/MarkovPasswords/README.md"/>
   </compounddef>
 </doxygen>

@@ -8,28 +8,28 @@ class for the final \mbox{\hyperlink{namespace_markov}{Markov}} \mbox{\hyperlink
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_markov_1_1_model_a593b1dc98082221e3f69636e3a087dfd}\label{class_markov_1_1_model_a593b1dc98082221e3f69636e3a087dfd}} 
-\mbox{\hyperlink{class_markov_1_1_model_a593b1dc98082221e3f69636e3a087dfd}{Markov\+::\+Model}} ()
+\mbox{\Hypertarget{class_markov_1_1_model_ae1d564c132cbf681f10f8ed0dfc772df}\label{class_markov_1_1_model_ae1d564c132cbf681f10f8ed0dfc772df}} 
+\mbox{\hyperlink{class_markov_1_1_model_ae1d564c132cbf681f10f8ed0dfc772df}{Model}} ()
 \begin{DoxyCompactList}\small\item\em Initialize a model with only start and end nodes. \end{DoxyCompactList}\item 
 Node\+Storage\+Type $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a2e0249e4630353a260e06b8f3a72f5bb}{Random\+Walk}} ()
 \begin{DoxyCompactList}\small\item\em Do a random walk on this model. Start from the starter node, invoke Random\+Next on current node until terminator node is reached. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_markov_1_1_model_abb14649eb59af2b60d17400e3c1d827b}{adjust}} (Node\+Storage\+Type $\ast$payload, long int occurrence)
-\begin{DoxyCompactList}\small\item\em Adjust the model with a single string. Start from the starter node, and for each character, adjust the edge weight from current node to the next, until NULL character is reached. Then, update the edge weight from current node, to the terminator node. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Adjust the model with a single string. Start from the starter node, and for each character, adjust the edge weight from current node to the next, until N\+U\+LL character is reached. Then, update the edge weight from current node, to the terminator node. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}} (std\+::ifstream $\ast$)
 \begin{DoxyCompactList}\small\item\em Import a file to construct the model. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{Import}} (const char $\ast$filename)
-\begin{DoxyCompactList}\small\item\em Open a file to import with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Markov\+::\+Model\+::\+Import}} with std\+::ifstream. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Open a file to import with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Model\+::\+Import}} with std\+::ifstream. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}} (std\+::ofstream $\ast$)
 \begin{DoxyCompactList}\small\item\em Export a file of the model. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{Export}} (const char $\ast$filename)
-\begin{DoxyCompactList}\small\item\em Open a file to export with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Markov\+::\+Model\+::\+Export}} with std\+::ofstream. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a62954b990ae10a74dcc543682abf3315}{Starter\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Open a file to export with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Model\+::\+Export}} with std\+::ofstream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ Node\+Storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}{Starter\+Node}} ()
 \begin{DoxyCompactList}\small\item\em Return starter \mbox{\hyperlink{class_markov_1_1_node}{Node}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_markov_1_1_model_a647b2a8065393938c84e28b8e0e4874e}\label{class_markov_1_1_model_a647b2a8065393938c84e28b8e0e4874e}} 
-std\+::vector$<$ \mbox{\hyperlink{class_markov_1_1_edge}{Markov\+::\+Edge}}$<$ Node\+Storage\+Type $>$ $>$ $\ast$ {\bfseries Edges} ()
+\mbox{\Hypertarget{class_markov_1_1_model_a2e08608905d7b042627ea844b08045fe}\label{class_markov_1_1_model_a2e08608905d7b042627ea844b08045fe}} 
+std\+::vector$<$ \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}$<$ Node\+Storage\+Type $>$ $\ast$ $>$ $\ast$ {\bfseries Edges} ()
 \item 
-\mbox{\Hypertarget{class_markov_1_1_model_acc0161496b713014342e21f6134fce3c}\label{class_markov_1_1_model_acc0161496b713014342e21f6134fce3c}} 
-std\+::map$<$ Node\+Storage\+Type, \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ Node\+Storage\+Type $>$ $\ast$ $>$ $\ast$ {\bfseries Nodes} ()
+\mbox{\Hypertarget{class_markov_1_1_model_a71f6df805e340ce96e9dc4ee4ebc6537}\label{class_markov_1_1_model_a71f6df805e340ce96e9dc4ee4ebc6537}} 
+std\+::map$<$ Node\+Storage\+Type, \mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ Node\+Storage\+Type $>$ $\ast$ $>$ $\ast$ {\bfseries Nodes} ()
 \end{DoxyCompactItemize}
 
 
@@ -51,7 +51,7 @@ void \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Stora
 
 
 
-Adjust the model with a single string. Start from the starter node, and for each character, adjust the edge weight from current node to the next, until NULL character is reached. Then, update the edge weight from current node, to the terminator node. 
+Adjust the model with a single string. Start from the starter node, and for each character, adjust the edge weight from current node to the next, until N\+U\+LL character is reached. Then, update the edge weight from current node, to the terminator node. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -69,7 +69,7 @@ bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Stora
 
 
 
-Open a file to export with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Markov\+::\+Model\+::\+Export}} with std\+::ofstream. 
+Open a file to export with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Model\+::\+Export}} with std\+::ofstream. 
 
 \begin{DoxyReturn}{Returns}
 True if successful, False for incomplete models or corrupt file formats 
@@ -97,7 +97,7 @@ bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Stora
 
 
 
-Open a file to import with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Markov\+::\+Model\+::\+Import}} with std\+::ifstream. 
+Open a file to import with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Model\+::\+Import}} with std\+::ifstream. 
 
 \begin{DoxyReturn}{Returns}
 True if successful, False for incomplete models or corrupt file formats 
@@ -130,12 +130,12 @@ Do a random walk on this model. Start from the starter node, invoke Random\+Next
 \begin{DoxyReturn}{Returns}
 Null terminated string that was generated. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_model_a62954b990ae10a74dcc543682abf3315}\label{class_markov_1_1_model_a62954b990ae10a74dcc543682abf3315}} 
+\mbox{\Hypertarget{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}\label{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}} 
 \index{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!StarterNode@{StarterNode}}
 \index{StarterNode@{StarterNode}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}}
 \doxysubsubsection{\texorpdfstring{StarterNode()}{StarterNode()}}
 {\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
-\mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$Node\+Storage\+Type$>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Storage\+Type $>$\+::Starter\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$Node\+Storage\+Type$>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Storage\+Type $>$\+::Starter\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -148,5 +148,5 @@ starter node with 00 value
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Repositories/\+Markov\+Passwords/\+Win-\/visualstudio/\+Markov\+Model/src/model.\+h\item 
-D\+:/\+Repositories/\+Markov\+Passwords/\+Win-\/visualstudio/\+Markov\+Model/src/model.\+cpp\end{DoxyCompactItemize}
+/media/ignis/\+H\+D\+D/\+Repositories/\+Markov\+Passwords/\+Markov\+Model/src/model.\+h\item 
+/media/ignis/\+H\+D\+D/\+Repositories/\+Markov\+Passwords/\+Markov\+Model/src/model.\+cpp\end{DoxyCompactItemize}
