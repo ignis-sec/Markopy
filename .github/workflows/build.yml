@@ -1,27 +1,67 @@
-name: Build minor version
+name: Check, build and Release
 on:
   push:
     branches:
       - main
-      
+      - dev
+  pull_request:
+    branches:
+      - dev
+env:
+  
+  # Environment variables for building strategy
+  
+  GITHUB_ACTION_WIN_PROJECT: D:\a\MarkovPasswords
+
+  # Solution path
+  SOLUTION_FILE_PATH: ./
+
+  # Configuration type to build. Required for MSBuild
+  BUILD_CONFIGURATION: Release
+
+  # Include directory for MSBuild, python dependencies
+  WIN_INC_DIR: C:\hostedtoolcache\windows\Python\*\
+
 jobs:
+
+  # Increment version depending on the action
+
+  decide_version:
+    name: Decide Next Version
+    runs-on: ubuntu-latest
+    outputs:
+      bump: ${{ steps.core.outputs.bump }}
+      branch: ${{ steps.core.outputs.branch }}
+      prerelease: ${{ steps.core.outputs.prerelease }}
+      draft: ${{ steps.core.outputs.draft }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Decide versioning strategy
+      id: core
+      run: python3 ./.github/action_helpers/build.py version_bump
+
   reversion:
-    name: Bump version and create release
+    needs: decide_version
+    name: Bump Version & Create Release
     runs-on: ubuntu-latest
     outputs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
     steps:   
+
     - uses: actions/checkout@v2    
     
-    - name: Bump version and push tag
+    # Only if its a push to master branch
+    - name: Bump Version
       id: tag_version
       uses: anothrNick/github-tag-action@1.26.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        DEFAULT_BUMP: minor
+        DEFAULT_BUMP: ${{ needs.decide_version.outputs.bump }}
         VERBOSE: true
-        RELEASE_BRANCHES: main
+        RELEASE_BRANCHES: ${{ needs.decide_version.outputs.branch }}
 
+    # Create a new release if its a push to master
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -30,16 +70,30 @@ jobs:
       with:
         tag_name: ${{ steps.tag_version.outputs.new_tag }} 
         release_name: Release v${{ steps.tag_version.outputs.new_tag }} 
-        draft: false
-        prerelease: false
-  
+        draft: ${{ needs.decide_version.outputs.draft }} 
+        prerelease: ${{ needs.decide_version.outputs.prerelease }}
+
+
+  # set the matrix output depending on the build type
+  setup_build_matrix:
+    name: Configure version matrix
+    runs-on: ubuntu-latest
+    outputs:
+      windows_matrix: ${{ steps.core.outputs.windows_matrix }}
+      linux_matrix: ${{ steps.core.outputs.linux_matrix }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Configure Version Matrix for Python
+      id: core
+      run: python3 ./.github/action_helpers/build.py version_matrix
+
   build_linux:
     name: Build All on Linux with Makefile
-    needs: reversion
+    needs: [reversion, setup_build_matrix]
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8, 3.9]
+        python-version: ${{fromJson(needs.setup_build_matrix.outputs.linux_matrix) }}
     steps:
     # Check cache for boost libraries
     - name: Cache Boost
@@ -62,56 +116,22 @@ jobs:
 
     # Link Python includes and libraries
     - name: Set up libraries for Python ${{ matrix.python-version }}
-      run: |
-        ls -al /opt/hostedtoolcache/Python/${{ matrix.python-version }}*/x64/bin/;
-        cd /opt/hostedtoolcache/Python/${{ matrix.python-version }}*/x64/include;
-        
-        [[ -f "python${{ matrix.python-version }}" ]] || sudo ln -s python${{ matrix.python-version }}m python${{ matrix.python-version }};
-
-        sudo cp -r /opt/hostedtoolcache/Python/${{ matrix.python-version }}*/x64/lib/* /usr/local/lib/;
-        sudo cp -r /opt/hostedtoolcache/Python/${{ matrix.python-version }}*/x64/include/py* /usr/include/;
-        sudo ln -s /usr/include/${{ matrix.python-version }}m /usr/include/${{ matrix.python-version }};
-        
-        [[ -f "/usr/local/lib/libpython${{ matrix.python-version }}.so.1.0" ]] ||  sudo ln -s /usr/local/lib/libpython${{ matrix.python-version }}m.so.1.0 /usr/local/lib/libpython${{ matrix.python-version }}.so.1.0;
-        [[ -f "/usr/local/lib/libpython${{ matrix.python-version }}.so" ]] ||  sudo ln -s /usr/local/lib/libpython${{ matrix.python-version }}m.so /usr/local/lib/libpython${{ matrix.python-version }}.so;
-
-        ls -al /opt/hostedtoolcache/Python/3.6.13/x64/include/ -R;
+      run: ./.github/action_helpers/actions_linux_python_libs.sh ${{ matrix.python-version }}
+    
     # Setup boost
     - name: Setup boost
       if: steps.cache-boost.outputs.cache-hit != 'true'
-      run: |
-        wget https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.gz -O /home/runner/boost_1_76_0.tar.gz -q;
-        cd /home/runner/;
-        tar -xf /home/runner/boost_1_76_0.tar.gz;
-        cd /home/runner/boost_1_76_0/;
-        ./bootstrap.sh --with-python=$(which python${{ matrix.python-version }}) --with-python-version=${{ matrix.python-version }};
-        sudo ./b2 --with-python --with-program_options stage;
+      run: ./.github/action_helpers/actions_linux_setup_boost.sh ${{ matrix.python-version }}
    
 
     - name: Link boost libraries
-      run: |
-        sudo cp -r /home/runner/boost_1_76_0/stage/lib/* /usr/local/lib;
-        ls -al /usr/local/lib;
-        sudo cp -r /home/runner/boost_1_76_0/boost /usr/include/boost;
- 
-
-    - name:  Check dep
-      run: 
-        pwd;
-        echo ${{ github.ref }};
-        ls -al /usr/include/;
-        ls -al /usr/local/lib/;
+      run: ./.github/action_helpers/actions_linux_setup_libboost.sh ${{ matrix.python-version }} 
 
     - name: Compile CPP
       run: make PYTHON_VERSION=${{ matrix.python-version }} all
 
     - name: Zip built files # This would actually build your project, using zip for an example artifact
-      run: 
-        pwd;
-        echo ${{ github.ref }};
-        ls -al;
-        ls -al bin/;
-        zip --junk-paths linux-python${{ matrix.python-version }}.so.zip Markopy/src/CLI/markopy_cli.py bin/markopy.so;
+      run: zip --junk-paths linux-python${{ matrix.python-version }}.so.zip Markopy/src/CLI/markopy_cli.py bin/markopy.so;
     
     - name: Upload Release Asset
       id: upload-release-asset 
@@ -124,19 +144,15 @@ jobs:
         asset_name:   linux-python${{ matrix.python-version }}.so.zip
         asset_content_type: application/zip
 
-  MSBuild:
-    name: Build All on Windows with MSBuild
-    needs: reversion
+  MSBuild: 
+    name: Build All on Windows with MSBuild 
+    needs: [reversion, setup_build_matrix]
     runs-on: windows-latest
     strategy:
         fail-fast: false
         max-parallel: 3
-        matrix:
-          include:
-            - python-version: 3.8
-              python-file-version: 38
-            - python-version: 3.9
-              python-file-version: 39
+        matrix: 
+          python-version: ${{ fromJson(needs.setup_build_matrix.outputs.windows_matrix) }}
     steps:
     - uses: actions/checkout@v2
 
@@ -146,23 +162,14 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Link python libraries And clean boost ones
-      run: |
-        which python;
-        mkdir D:\a\python${{ matrix.python-version }};
-
-        Copy-Item -Path $env:pythonLocation\libs -Destination "D:\a\python${{ matrix.python-version }}" -Recurse;
-        Copy-Item -Path $env:pythonLocation\include -Destination "D:\a\python${{ matrix.python-version }}" -Recurse;
-        dir D:\a\python${{ matrix.python-version }};
-        echo $env:pythonLocation;
-        dir $env:pythonLocation\include;
-        Remove-Item -Recurse -Force D:\a\MarkovPasswords\boost\stage -ErrorAction Ignore;
+      run: .\.github\action_helpers\actions_windows_libpython.ps1 -pythonver ${{ matrix.python-version }}
 
     - name: Cache Boost
       uses: actions/cache@v2
       id: cache-boost
       with:
-        path: D:\a\MarkovPasswords\boost
-        key: 'win-boost-1.76-${{ matrix.python-version }}'
+        path: ${{env.GITHUB_ACTION_WIN_PROJECT}}\boost
+        key: 'windows-libboost-1.76-${{ matrix.python-version }}'
 
     - name: Build Boost
       id: boost
@@ -176,17 +183,7 @@ jobs:
 
     - name: Rename boost static and dynamic libraries
       if: steps.cache-boost.outputs.cache-hit != 'true'
-      run: |
-        dir  D:\a\MarkovPasswords\boost;
-        ls -r  D:\a\MarkovPasswords\boost\stage;
-        
-        cp D:\a\MarkovPasswords\boost\stage\x64\Release\lib\boost_program_options.dll D:\a\MarkovPasswords\boost\stage\lib\boost_program_options-vc142-mt-x64-1_76.dll;
-        
-        cp D:\a\MarkovPasswords\boost\stage\x64\Release\lib\boost_program_options.lib D:\a\MarkovPasswords\boost\stage\lib\boost_program_options-vc142-mt-x64-1_76.lib;
-
-        cp D:\a\MarkovPasswords\boost\stage\x64\Release\lib\boost_python${{ matrix.python-file-version }}.dll D:\a\MarkovPasswords\boost\stage\lib\libboost_python${{ matrix.python-file-version }}-vc142-mt-x64-1_76.dll;
-        cp D:\a\MarkovPasswords\boost\stage\x64\Release\lib\boost_python${{ matrix.python-file-version }}.lib D:\a\MarkovPasswords\boost\stage\lib\libboost_python${{ matrix.python-file-version }}-vc142-mt-x64-1_76.lib;
-
+      run: .\.github\action_helpers\actions_windows_libboost.ps1 -pythonver ${{ matrix.python-version }}
 
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1
@@ -200,7 +197,7 @@ jobs:
 
       run: |
         $env:PYTHON_PATH = "D:\a\python${{ matrix.python-version }}";
-        $env:BOOST_ROOT = "D:\a\MarkovPasswords\boost";
+        $env:BOOST_ROOT = "${{env.GITHUB_ACTION_WIN_PROJECT}}\boost";
         msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
 
     - name: Zip built files # This would actually build your project, using zip for an example artifact
@@ -218,3 +215,30 @@ jobs:
         asset_path: ./windows-python${{ matrix.python-version }}.pyd.zip
         asset_name:   windows-python${{ matrix.python-version }}.pyd.zip
         asset_content_type: application/zip
+
+  #Integrity check on pull requests with sonar
+  sonar:
+    if: github.event_name == 'pull_request'
+    name: Code Integrity Check with Sonarqube
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          #ref: TODO: with dispatch input
+      - uses: docker://sonarsource/sonar-scanner-cli:latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+
+  clear_draft:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    name: Clear Draft Releases
+    steps:
+      - name: Delete drafts
+        uses: hugo19941994/delete-draft-releases@v0.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
