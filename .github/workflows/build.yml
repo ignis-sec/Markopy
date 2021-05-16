@@ -206,7 +206,7 @@ jobs:
 
     - name: Zip built files # This would actually build your project, using zip for an example artifact
       run: 
-        powershell "Compress-Archive Markopy/src/CLI/markopy_cli.py,x64/Release/markopy.pyd,${{env.GITHUB_ACTION_WIN_PROJECT}}\boost\stage\lib\libboost_python$a$b-vc142-mt-x64-1_76.lib,${{env.GITHUB_ACTION_WIN_PROJECT}}\boost\stage\lib\libboost_python$a$b-vc142-mt-x64-1_76.dll windows-python${{ matrix.python-version }}.pyd.zip"
+        powershell "Compress-Archive Markopy/src/CLI/markopy_cli.py,x64/Release/markopy.pyd,${{env.GITHUB_ACTION_WIN_PROJECT}}\boost\stage\lib\libboost_python* windows-python${{ matrix.python-version }}.pyd.zip"
 
     
     - name: Upload Release Asset
