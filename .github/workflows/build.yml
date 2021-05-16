@@ -118,7 +118,9 @@ jobs:
 
     # Link Python includes and libraries
     - name: Set up libraries for Python ${{ matrix.python-version }}
-      run: ./.github/action_helpers/actions_linux_python_libs.sh ${{ matrix.python-version }}
+      run: |
+        chmod 755 ./.github/action_helpers/*;
+        ./.github/action_helpers/actions_linux_python_libs.sh ${{ matrix.python-version }}
     
     # Setup boost
     - name: Setup boost
