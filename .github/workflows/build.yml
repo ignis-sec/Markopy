@@ -39,7 +39,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Decide versioning strategy
       id: core
-      run: python3 ./.github/action_helpers/build.py version_bump
+      run: |
+        chmod 755 ./.github/action_helpers/*;
+        python3 ./.github/action_helpers/build.py version_bump
 
   reversion:
     needs: decide_version
