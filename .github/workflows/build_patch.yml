@@ -171,7 +171,7 @@ jobs:
       id: cache-boost
       with:
         path: D:\a\MarkovPasswords\boost
-        key: 'win-boost-1.76-${{ matrix.python-version }}'
+        key: 'win-libboost-1.76-${{ matrix.python-version }}'
 
     - name: Build Boost
       id: boost
