@@ -1,7 +1,8 @@
-#include "CLI.h"
+#include "src\CLI.h"
 #include <fstream>
 #include <Windows.h>
-#include "Train.h"
+#include "src/Train.h"
+
 
 
 
