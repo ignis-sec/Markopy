@@ -15,3 +15,6 @@ cp $env:GITHUB_ACTION_WIN_PROJECT\boost\stage\x64\Release\lib\boost_program_opti
 
 cp $env:GITHUB_ACTION_WIN_PROJECT\boost\stage\x64\Release\lib\boost_python$a$b.dll $env:GITHUB_ACTION_WIN_PROJECT\boost\stage\lib\libboost_python$a$b-vc142-mt-x64-1_76.dll;
 cp $env:GITHUB_ACTION_WIN_PROJECT\boost\stage\x64\Release\lib\boost_python$a$b.lib $env:GITHUB_ACTION_WIN_PROJECT\boost\stage\lib\libboost_python$a$b-vc142-mt-x64-1_76.lib;
+
+cp $env:GITHUB_ACTION_WIN_PROJECT\boost\stage\x64\Release\lib\boost_python$a$b.dll $env:GITHUB_ACTION_WIN_PROJECT\boost\stage\lib\boost_python$a$b.dll;
+
