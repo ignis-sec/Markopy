@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         a.processEvents();
     };
 
-
+    
     CLI w;
     w.show();
     splash.finish(&w);

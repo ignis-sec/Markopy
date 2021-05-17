@@ -1,7 +1,8 @@
 #include "CLI.h"
 #include <fstream>
 #include <Windows.h>
-//#include "Start.h"
+#include "Train.h"
+
 
 
 
@@ -17,13 +18,17 @@ CLI::CLI(QWidget* parent)
 }
 
 void CLI::start() {
-    // Start* w = new Start;
-     //w->show();
-     //this->close();
+    Train* w = new Train;
+    w->show();
+    this->close();
 }
 void CLI::statistics() {
-
+    /*
+    statistic will show
+    */
 }
 void CLI::about() {
-
+    /*
+    about button
+    */
 }
