@@ -3,6 +3,7 @@
 #include <QtWidgets/QApplication>
 #include <QSplashScreen>
 #include < QDateTime > 
+#include "../CLI.h"
 
 
 /** @brief Launch UI.
@@ -22,8 +23,8 @@ int main(int argc, char *argv[])
         a.processEvents();
     };
 
-
-    menu w;
+    
+    CLI w;
     w.show();
     splash.finish(&w);
     return a.exec();
