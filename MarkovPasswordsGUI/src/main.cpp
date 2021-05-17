@@ -3,7 +3,8 @@
 #include <QtWidgets/QApplication>
 #include <QSplashScreen>
 #include < QDateTime > 
-#include "../CLI.h"
+#include "CLI.h"
+
 
 
 /** @brief Launch UI.
