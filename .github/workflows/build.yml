@@ -12,7 +12,6 @@ env:
   # Environment variables for building strategy
   
   GITHUB_ACTION_WIN_PROJECT: D:\a\MarkovPasswords
-
   # Solution path
   SOLUTION_FILE_PATH: ./
 
@@ -135,7 +134,7 @@ jobs:
       run: make PYTHON_VERSION=${{ matrix.python-version }} all
 
     - name: Zip built files # This would actually build your project, using zip for an example artifact
-      run: zip --junk-paths linux-python${{ matrix.python-version }}.so.zip Markopy/src/CLI/markopy_cli.py bin/markopy.so /usr/local/lib/libboost_python38.so.1.76.0 /usr/local/lib/libboost_python38.so;
+      run: zip --junk-paths markopy-linux-py${{ matrix.python-version }}.so.zip Markopy/src/CLI/markopy_cli.py bin/markopy.so /usr/local/lib/libboost_python*.so.1.76.0
     
     - name: Upload Release Asset
       id: upload-release-asset 
@@ -144,8 +143,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ needs.reversion.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-        asset_path: ./linux-python${{ matrix.python-version }}.so.zip
-        asset_name:   linux-python${{ matrix.python-version }}.so.zip
+        asset_path: ./markopy-linux-py${{ matrix.python-version }}.so.zip
+        asset_name:   markopy-linux-py${{ matrix.python-version }}.so.zip
         asset_content_type: application/zip
 
   MSBuild: 
@@ -173,7 +172,7 @@ jobs:
       id: cache-boost
       with:
         path: ${{env.GITHUB_ACTION_WIN_PROJECT}}\boost
-        key: 'windows-libboost-1.76-${{ matrix.python-version }}'
+        key: 'windows-boost-1.76-${{ matrix.python-version }}'
 
     - name: Build Boost
       id: boost
@@ -206,18 +205,18 @@ jobs:
 
     - name: Zip built files # This would actually build your project, using zip for an example artifact
       run: 
-        powershell "Compress-Archive Markopy/src/CLI/markopy_cli.py,x64/Release/markopy.pyd,${{env.GITHUB_ACTION_WIN_PROJECT}}\boost\stage\lib\libboost_python* windows-python${{ matrix.python-version }}.pyd.zip"
+        powershell "Compress-Archive Markopy/src/CLI/markopy_cli.py,x64/Release/markopy.pyd,${{env.GITHUB_ACTION_WIN_PROJECT}}\boost\stage\lib\boost_python*.dll markopy-windows-py${{ matrix.python-version }}.pyd.zip"
 
     
-    - name: Upload Release Asset
+    - name: Upload Markopy Release Assets
       id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ needs.reversion.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-        asset_path: ./windows-python${{ matrix.python-version }}.pyd.zip
-        asset_name:   windows-python${{ matrix.python-version }}.pyd.zip
+        asset_path: ./markopy-windows-py${{ matrix.python-version }}.pyd.zip
+        asset_name:   markopy-windows-py${{ matrix.python-version }}.pyd.zip
         asset_content_type: application/zip
 
   #Integrity check on pull requests with sonar
