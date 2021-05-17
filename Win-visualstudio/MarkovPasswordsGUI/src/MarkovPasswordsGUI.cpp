@@ -2,6 +2,7 @@
 #include <fstream>
 #include <qwebengineview.h>
 #include <Windows.h>
+#include <QtWidgets/QApplication>
 
 
 MarkovPasswordsGUI::MarkovPasswordsGUI(QWidget *parent)

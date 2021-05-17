@@ -1,8 +1,7 @@
-//#include "MarkovPasswordsGUI.h"
-#include "menu.h"
 #include <QtWidgets/QApplication>
 #include <QSplashScreen>
 #include < QDateTime > 
+#include "../Start.h"
 
 
 /** @brief Launch UI.
@@ -23,7 +22,7 @@ int main(int argc, char *argv[])
     };
 
 
-    menu w;
+    Start w;
     w.show();
     splash.finish(&w);
     return a.exec();
