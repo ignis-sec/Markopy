@@ -12,6 +12,6 @@ private:
 	Ui::Train ui;
 
 public slots:
-	void open();
+	void home();
 	void train();
 };
