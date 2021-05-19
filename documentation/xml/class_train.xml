@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_train" kind="class" language="C++" prot="public">
+    <compoundname>Train</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_train_1ab9d321371371f0e7d1d6d644d26d3c9f" prot="private" static="no" mutable="no">
+        <type>Ui::Train</type>
+        <definition>Ui::Train Train::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/Train.h" line="12" column="11" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/Train.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_train_1adffe4f707483b4ede7714fb49e3212e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Train::Train</definition>
+        <argsstring>(QWidget *parent=Q_NULLPTR)</argsstring>
+        <name>Train</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>Q_NULLPTR</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/Train.h" line="9" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_train_1a244f9717df6fc160092e1bb98077bad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Train::home</definition>
+        <argsstring>()</argsstring>
+        <name>home</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/Train.h" line="15" column="6"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_train_1ab899c6e6d163a0bddcd723a58d7b219d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Train::train</definition>
+        <argsstring>()</argsstring>
+        <name>train</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/Train.h" line="16" column="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Train</label>
+        <link refid="class_train"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Train</label>
+        <link refid="class_train"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+    </collaborationgraph>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/Train.h" line="6" column="30" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/Train.h" bodystart="6" bodyend="17"/>
+    <listofallmembers>
+      <member refid="class_train_1a244f9717df6fc160092e1bb98077bad3" prot="public" virt="non-virtual"><scope>Train</scope><name>home</name></member>
+      <member refid="class_train_1ab899c6e6d163a0bddcd723a58d7b219d" prot="public" virt="non-virtual"><scope>Train</scope><name>train</name></member>
+      <member refid="class_train_1adffe4f707483b4ede7714fb49e3212e1" prot="public" virt="non-virtual"><scope>Train</scope><name>Train</name></member>
+      <member refid="class_train_1ab9d321371371f0e7d1d6d644d26d3c9f" prot="private" virt="non-virtual"><scope>Train</scope><name>ui</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
