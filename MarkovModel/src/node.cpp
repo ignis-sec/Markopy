@@ -87,7 +87,9 @@ bool Markov::Node<storageType>::UpdateEdges(Markov::Edge<storageType>* v) {
 
 template <typename storageType>
 Markov::Edge<storageType>* Markov::Node<storageType>::FindEdge(storageType repr) {
-	return this->edges.find(repr)->second;
+	auto e = this->edges.find(repr);
+	if(e==this->edges.end()) return NULL;
+	return e->second;
 };
 
 template <typename storageType>
