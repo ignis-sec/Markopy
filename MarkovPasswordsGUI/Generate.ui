@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Train</class>
- <widget class="QWidget" name="Train">
-  <property name="windowModality">
-   <enum>Qt::NonModal</enum>
-  </property>
+ <class>Generate</class>
+ <widget class="QWidget" name="Generate">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1149</width>
-    <height>809</height>
+    <width>1146</width>
+    <height>715</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
-  </property>
-  <property name="windowOpacity">
-   <double>1.000000000000000</double>
+   <string>Generation</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#Train{
+   <string notr="true">#Generate{
 	background-color:#D2B4DE ;
 
 }
@@ -53,10 +47,10 @@ color:#fff;
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>110</y>
-     <width>931</width>
-     <height>511</height>
+     <x>150</x>
+     <y>70</y>
+     <width>831</width>
+     <height>531</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -65,39 +59,13 @@ color:#fff;
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>80</y>
-      <width>401</width>
-      <height>391</height>
-     </rect>
-    </property>
-    <property name="plainText">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>80</y>
-      <width>401</width>
-      <height>391</height>
-     </rect>
-    </property>
-    <property name="plainText">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>40</y>
-      <width>251</width>
-      <height>31</height>
+      <x>30</x>
+      <y>70</y>
+      <width>141</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -110,9 +78,9 @@ color:#fff;
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>500</x>
-      <y>40</y>
-      <width>251</width>
+      <x>460</x>
+      <y>60</y>
+      <width>231</width>
       <height>31</height>
      </rect>
     </property>
@@ -120,28 +88,57 @@ color:#fff;
      <string notr="true">font-size:15px;</string>
     </property>
     <property name="text">
-     <string>File Contents After Training:</string>
+     <string>After Generating File Contents:</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>371</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#fff;</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>90</y>
+      <width>371</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#fff;</string>
+    </property>
+    <property name="plainText">
+     <string/>
     </property>
    </widget>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>630</y>
-     <width>191</width>
-     <height>81</height>
+     <x>440</x>
+     <y>610</y>
+     <width>271</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
-    <string>Train</string>
+    <string>Start Generate</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>60</y>
+     <x>810</x>
+     <y>20</y>
      <width>161</width>
      <height>41</height>
     </rect>

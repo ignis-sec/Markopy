@@ -1,4 +1,4 @@
-#include "src/Train.h"
+#include "Generate.h"
 #include <fstream>
 #include <Windows.h>
 #include<QFileDialog>
@@ -7,25 +7,24 @@
 #include<QDir>
 #include "src/CLI.h"
 // #include "../MarkovPasswords/src/markovPasswords.cpp"
-
 #include <QtWidgets/QApplication>
 
 
 
-Train::Train(QWidget* parent)
+Generate::Generate(QWidget* parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
 
-    QObject::connect(ui.pushButton, &QPushButton::clicked, this, [this] {train(); });
-    QObject::connect(ui.pushButton_2, &QPushButton::clicked, this, [this] {home(); });
-  /*  std::random_device rd;
-    std::default_random_engine generator(rd());
-    std::uniform_int_distribution<long long unsigned> distribution(0, 0xffffFFFF);
-    */
+    QObject::connect(ui.pushButton, &QPushButton::clicked, this, [this] {generation(); });
+
+    /*  std::random_device rd;
+      std::default_random_engine generator(rd());
+      std::uniform_int_distribution<long long unsigned> distribution(0, 0xffffFFFF);
+      */
 }
 
-void Train::train() {
+void Generate::generation() {
     QString file_name = QFileDialog::getOpenFileName(this, "Open a File", QDir::homePath());
     QFile file(file_name);
 
@@ -41,9 +40,8 @@ void Train::train() {
     file.close();
 }
 
-void Train::home() {
+void Generate::home() {
      CLI* w = new CLI;
      w->show();
      this->close();
 }
-
