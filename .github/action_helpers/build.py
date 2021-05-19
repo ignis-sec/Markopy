@@ -42,7 +42,7 @@ if __name__ == "__main__":
             set_action_outputs(bump="minor", branch="main", prerelease="false", draft="false")
 
         elif(a_type == "patch"):
-            set_action_outputs(bump="patch", branch="<junk>", prerelease="true", draft="false")
+            set_action_outputs(bump="patch", branch="dev", prerelease="true", draft="false")
 
         elif(a_type == "dev"):
             set_action_outputs(bump="patch", branch="<junk>", prerelease="false", draft="true")
