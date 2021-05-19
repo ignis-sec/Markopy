@@ -138,8 +138,11 @@ void Markov::Model<NodeStorageType>::AdjustEdge(const NodeStorageType* payload, 
 	Markov::Node<NodeStorageType>* curnode = this->starterNode;
 	Markov::Edge<NodeStorageType> *e;
 	int i = 0;
+
+	if(p == 0) return;
 	while (p != 0) {
 		e = curnode->FindEdge(p);
+		if(e==NULL) return;
 		e->AdjustEdge(occurrence);
 		curnode = e->RightNode();
 		p = payload[++i];
