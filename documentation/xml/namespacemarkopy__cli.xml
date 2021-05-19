@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacemarkopy__cli" kind="namespace" language="Python">
+    <compoundname>markopy_cli</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="markopy__cli_8py_1a57371c71f08d532cbc8dc5138711329e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>markopy_cli.parser</definition>
+        <argsstring></argsstring>
+        <name>parser</name>
+        <initializer>=  argparse.ArgumentParser(description=&quot;Python wrapper for MarkovPasswords.&quot;,
+epilog=f, formatter_class=argparse.RawTextHelpFormatter)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" line="7" column="1" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="markopy__cli_8py_1a286a154b9b61efb39b244a12bbf5bb80" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>markopy_cli.help</definition>
+        <argsstring></argsstring>
+        <name>help</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" line="21" column="1" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="markopy__cli_8py_1aaa15e546368ecfbb9817fbfebd9a69b3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>markopy_cli.action</definition>
+        <argsstring></argsstring>
+        <name>action</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" line="28" column="1" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="markopy__cli_8py_1a8263be2d219caf76f9e70d2730cb9819" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>markopy_cli.args</definition>
+        <argsstring></argsstring>
+        <name>args</name>
+        <initializer>=  parser.parse_args()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" line="29" column="1" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="markopy__cli_8py_1ac8cbde7dc16f211e7e5ac36ac975b63d" prot="public" static="no" mutable="no">
+        <type>def</type>
+        <definition>markopy_cli.model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <initializer>=  cli_init()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" line="97" column="1" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="markopy__cli_8py_1ada54917921f4d8727df5e47105ac8b2f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>markopy_cli.output_forced</definition>
+        <argsstring></argsstring>
+        <name>output_forced</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" line="103" column="1" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="markopy__cli_8py_1a86b49578bbc112c20f9dc8421403925d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def markopy_cli.cli_init</definition>
+        <argsstring>()</argsstring>
+        <name>cli_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" line="34" column="1" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" bodystart="34" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="markopy__cli_8py_1ad74b16ffe56d7a70ed582a48b6a970a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def markopy_cli.cli_train</definition>
+        <argsstring>(model, output_forced=False)</argsstring>
+        <name>cli_train</name>
+        <param>
+          <type>model</type>
+          <defname>model</defname>
+        </param>
+        <param>
+          <type>output_forced</type>
+          <defname>output_forced</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" line="54" column="1" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" bodystart="54" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="markopy__cli_8py_1a444094be31b7f5a427d589c8393441e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def markopy_cli.cli_generate</definition>
+        <argsstring>(model)</argsstring>
+        <name>cli_generate</name>
+        <param>
+          <type>model</type>
+          <defname>model</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" line="84" column="1" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" bodystart="84" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/CLI/markopy_cli.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

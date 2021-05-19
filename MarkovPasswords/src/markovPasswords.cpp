@@ -7,7 +7,7 @@ MarkovPasswords::MarkovPasswords() : Markov::Model<char>(){
 	
 }
 
-MarkovPasswords::MarkovPasswords(char* filename) {
+MarkovPasswords::MarkovPasswords(const char* filename) {
 	
 	std::ifstream* importFile;
 
@@ -19,7 +19,7 @@ MarkovPasswords::MarkovPasswords(char* filename) {
 
 }
 
-std::ifstream* MarkovPasswords::OpenDatasetFile(char* filename){
+std::ifstream* MarkovPasswords::OpenDatasetFile(const char* filename){
 
 	std::ifstream* datasetFile;
 
@@ -32,31 +32,31 @@ std::ifstream* MarkovPasswords::OpenDatasetFile(char* filename){
 }
 
 
-void MarkovPasswords::Train(char* datasetFileName, char delimiter)   {
+void MarkovPasswords::Train(const char* datasetFileName, char delimiter)   {
 	std::ifstream datasetFile;
 	datasetFile.open(datasetFileName, std::ios_base::binary);
 	std::string line;
+	//std::string pass;
 	char format_str[] ="%d,%s";
 	format_str[2]=delimiter;
 	while (std::getline(datasetFile,line,'\n')) {
 		int oc;
-	    char pass[512];     
 		if (line.size() > 100) {
-			line.substr(0, 100);
+			line = line.substr(0, 100);
 		}
+		char* linebuf = new char[line.length()+5];
 #ifdef _WIN32
-		sscanf_s(line.c_str(), format_str, &oc, pass);
+		sscanf_s(line.c_str(), format_str, &oc, linebuf, line.length()+5);
 #else
-		sscanf(line.c_str(), format_str, &oc, pass);
+		sscanf(line.c_str(), format_str, &oc, linebuf);
 #endif
-		//std::cout << "parsed: "<<pass << "," << oc << "\n";
-		this->adjust(pass, oc);
+		this->AdjustEdge((const char*)linebuf, oc); 
 	}
 	
 }
 
 
-std::ofstream* MarkovPasswords::Save(char* filename) {
+std::ofstream* MarkovPasswords::Save(const char* filename) {
 	std::ofstream* exportFile;
 
 	std::ofstream newFile(filename);
@@ -68,7 +68,7 @@ std::ofstream* MarkovPasswords::Save(char* filename) {
 }
 
 
-void MarkovPasswords::Generate(unsigned long int n, char* wordlistFileName)  {
+void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen)  {
 	char* res;
 	char print[100];
 	std::ofstream wordlist;	
@@ -76,7 +76,7 @@ void MarkovPasswords::Generate(unsigned long int n, char* wordlistFileName)  {
 	
 	wordlist.open(wordlistFileName);
 	for (int i = 0; i < n; i++) {
-		res = this->RandomWalk();
+		res = this->RandomWalk(minLen, maxLen); 
 #ifdef _WIN32
 		strcpy_s(print, 100, (char*)res);
 #else
@@ -87,3 +87,4 @@ void MarkovPasswords::Generate(unsigned long int n, char* wordlistFileName)  {
 		delete res;
 	}
 }
+

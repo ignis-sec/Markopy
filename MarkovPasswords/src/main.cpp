@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 		std::cout << TERM_FAIL << "Arguments Failed to Parse" << std::endl;
 		Argparse::help();
 	}*/
-
+	Argparse a(argc,argv);
 
 	MarkovPasswords markovPass;
 	std::cout << "Importing model.\n";
@@ -40,3 +40,4 @@ int main(int argc, char** argv) {
 	std::cout << "Generation done....\n";
 	return 0;
 }
+

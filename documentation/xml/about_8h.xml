@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="about_8h" kind="file" language="C++">
+    <compoundname>about.h</compoundname>
+    <includes local="no">QtWidgets/QMainWindow</includes>
+    <includes local="yes">ui_about.h</includes>
+    <includes local="no">ui_menu.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>ui_menu.h</label>
+      </node>
+      <node id="1">
+        <label>/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/about.h</label>
+        <link refid="about_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QtWidgets/QMainWindow</label>
+      </node>
+      <node id="3">
+        <label>ui_about.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classabout" prot="public">about</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/about.h"/>
+  </compounddef>
+</doxygen>

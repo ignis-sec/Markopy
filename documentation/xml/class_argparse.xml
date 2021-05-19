@@ -1,8 +1,124 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="class_argparse" kind="class" language="C++" prot="public">
     <compoundname>Argparse</compoundname>
     <includes refid="argparse_8h" local="no">argparse.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_argparse_1a84fb596fcf41a42d7a8f1efec134ee71" prot="private" static="no" mutable="no">
+        <type><ref refid="struct__program_options" kindref="compound">ProgramOptions</ref></type>
+        <definition>ProgramOptions Argparse::po</definition>
+        <argsstring></argsstring>
+        <name>po</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" line="170" column="16" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_argparse_1a0177c358212e5eacf73ffffa4a351c18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Argparse::Argparse</definition>
+        <argsstring>()</argsstring>
+        <name>Argparse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_argparse_1aad0cf7717e8d0ed8e5f0d2bc3245943f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Argparse::Argparse</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>Argparse</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" line="33" column="1" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" bodystart="33" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_argparse_1abebc8072e67341bacc50b8f742f546c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct__program_options" kindref="compound">ProgramOptions</ref></type>
+        <definition>ProgramOptions Argparse::getProgramOptions</definition>
+        <argsstring>(void)</argsstring>
+        <name>getProgramOptions</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" line="136" column="16" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" bodystart="136" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_argparse_1a767e5fce5b87703095b2bbc1eb7d15a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Argparse::setProgramOptions</definition>
+        <argsstring>(bool i, bool e, bool bf, char s, std::string iName, std::string exName, std::string oName, std::string dName, int n)</argsstring>
+        <name>setProgramOptions</name>
+        <param>
+          <type>bool</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bf</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>iName</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>exName</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>oName</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>dName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" line="139" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" bodystart="139" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-static-func">
       <memberdef kind="function" id="class_argparse_1a4c977d7fcdffd09e8437f214f56ac0ac" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct__program_options" kindref="compound">ProgramOptions</ref> *</type>
@@ -18,7 +134,8 @@
           <declname>argv</declname>
         </param>
         <briefdescription>
-<para>parse cli commands and return </para>
+<para>parse cli commands and return <linebreak/>
+ </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -44,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" line="27" column="23" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.cpp" bodystart="4" bodyend="4"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" line="162" column="23" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.cpp" bodystart="4" bodyend="4"/>
       </memberdef>
       <memberdef kind="function" id="class_argparse_1a720195071367bec91ac78bc3ac3dcfa2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -58,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" line="31" column="13" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.cpp" bodystart="6" bodyend="8"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" line="167" column="13" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.cpp" bodystart="6" bodyend="28"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -66,10 +183,15 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" line="20" column="8" bodyfile="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/argparse.h" bodystart="20" bodyend="34"/>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" line="28" column="15" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/argparse.h" bodystart="28" bodyend="171"/>
     <listofallmembers>
+      <member refid="class_argparse_1a0177c358212e5eacf73ffffa4a351c18" prot="public" virt="non-virtual"><scope>Argparse</scope><name>Argparse</name></member>
+      <member refid="class_argparse_1aad0cf7717e8d0ed8e5f0d2bc3245943f" prot="public" virt="non-virtual"><scope>Argparse</scope><name>Argparse</name></member>
+      <member refid="class_argparse_1abebc8072e67341bacc50b8f742f546c3" prot="public" virt="non-virtual"><scope>Argparse</scope><name>getProgramOptions</name></member>
       <member refid="class_argparse_1a720195071367bec91ac78bc3ac3dcfa2" prot="public" virt="non-virtual"><scope>Argparse</scope><name>help</name></member>
       <member refid="class_argparse_1a4c977d7fcdffd09e8437f214f56ac0ac" prot="public" virt="non-virtual"><scope>Argparse</scope><name>parse</name></member>
+      <member refid="class_argparse_1a84fb596fcf41a42d7a8f1efec134ee71" prot="private" virt="non-virtual"><scope>Argparse</scope><name>po</name></member>
+      <member refid="class_argparse_1a767e5fce5b87703095b2bbc1eb7d15a3" prot="public" virt="non-virtual"><scope>Argparse</scope><name>setProgramOptions</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

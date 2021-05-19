@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="namespacerandom" kind="namespace" language="Python">
     <compoundname>random</compoundname>
     <briefdescription>
-<para>-model </para>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>  python script for generating a 2gram model
-</verbatim> </para>
+<para>-model<verbatim>  python script for generating a 2gram model
+</verbatim> <linebreak/>
+ </para>
     </detaileddescription>
-    <location file="D:/Repositories/MarkovPasswords/Win-visualstudio/MarkovPasswords/src/scripts/random-model.py" line="2" column="1"/>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/scripts/random-model.py" line="2" column="1"/>
   </compounddef>
 </doxygen>

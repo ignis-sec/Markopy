@@ -2,13 +2,15 @@
  *
  */
 
+
 #pragma once
 #include <map>
 #include <vector>
 #include <fstream>
-
 #include "edge.h"
 #include "node.h"
+
+
 
 
 
@@ -27,25 +29,25 @@ namespace Markov {
 		/** @brief Initialize a model with only start and end nodes.
 		*/
 		Model<NodeStorageType>();
-
+			
 		/** @brief Do a random walk on this model. 
 		* Start from the starter node, invoke RandomNext on current node until terminator node is reached.
 		* @return Null terminated string that was generated.
 		*/
-		NodeStorageType* RandomWalk();
+		NodeStorageType* RandomWalk(int minSetting, int maxSetting);
 
 		/** @brief Adjust the model with a single string. 
-		* Start from the starter node, and for each character, adjust the edge weight from current node to the next, until NULL character is reached.
-		* Then, update the edge weight from current node, to the terminator node.
-		* @param string - String that is passed from the training, and will be used to adjust the model with
+		* Start from the starter node, and for each character, AdjustEdge the edge EdgeWeight from current node to the next, until NULL character is reached.
+		* Then, update the edge EdgeWeight from current node, to the terminator node.
+		* @param string - String that is passed from the training, and will be used to AdjustEdge the model with
 		* @param occurrence - Occurrence of this string. 
 		*/
-		void adjust(NodeStorageType* payload, long int occurrence);
+		void AdjustEdge(const NodeStorageType* payload, long int occurrence);
 
 		/** @brief Import a file to construct the model. 
 		* 
 		* File contains a list of edges.
-		* Format is: Left_repr;weight;right_repr
+		* Format is: Left_repr;EdgeWeight;right_repr
 		* Iterate over this list, and construct nodes and edges accordingly. 
 		* @return True if successful, False for incomplete models or corrupt file formats
 		*/
@@ -59,7 +61,7 @@ namespace Markov {
 		/** @brief Export a file of the model.
 		*
 		* File contains a list of edges.
-		* Format is: Left_repr;weight;right_repr
+		* Format is: Left_repr;EdgeWeight;right_repr
 		* Iterate over this vertices, and their edges, and write them to file.
 		* @return True if successful, False for incomplete models.
 		*/
@@ -71,7 +73,7 @@ namespace Markov {
 		bool Export(const char* filename);
 
 		/** @brief Return starter Node
-		* @return starter node with 00 value
+		* @return starter node with 00 NodeValue
 		*/
 		Node<NodeStorageType>* StarterNode(){ return starterNode;}
 
@@ -80,8 +82,8 @@ namespace Markov {
 		std::map<NodeStorageType, Node<NodeStorageType>*>* Nodes(){ return &nodes;}
 
 	private:
-		/** @brief Map left is the Nodes value
-		* Map right is the node pointer
+		/** @brief Map LeftNode is the Nodes NodeValue
+		* Map RightNode is the node pointer
 		*/
 		std::map<NodeStorageType, Node<NodeStorageType>*> nodes;
 
@@ -92,11 +94,17 @@ namespace Markov {
 		/** @brief A list of all edges in this model. */
 		std::vector<Edge<NodeStorageType>*> edges;
 
-
+		/** @brief A default generator. */
 		std::default_random_engine* generator;
+
+		/** @brief A uniform distribution. */
 		std::uniform_int_distribution<long unsigned> distribution;
 	};
 
 };
+
+
+
+
 
 

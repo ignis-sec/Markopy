@@ -26,3 +26,4 @@ void Argparse::help() {
 	
 	 << std::endl;
 }
+
