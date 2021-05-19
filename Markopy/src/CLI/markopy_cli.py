@@ -24,6 +24,8 @@ parser.add_argument("-o", "--output",   help="Output model file. This model will
 parser.add_argument("-d", "--dataset",  help="Dataset file to read input from for training. Will be ignored for generation mode.")
 parser.add_argument("-s", "--seperator",help="Seperator character to use with training data.(character between occurrence and value)")
 parser.add_argument("-w", "--wordlist", help="Wordlist file path to export generation results to. Will be ignored for training mode")
+parser.add_argument("--min", default=6, help="Minimum length that is allowed during generation")
+parser.add_argument("--max", default=12,help="Maximum length that is allowed during generation")
 parser.add_argument("-n", "--count",    help="Number of lines to generate. Ignored in training mode.")
 parser.add_argument("-v", "--verbosity",action="count", help="Output verbosity.")
 args = parser.parse_args() 
@@ -89,7 +91,7 @@ def cli_generate(model):
     if(os.path.isfile(args.wordlist)):
         logging.pprint(f"{args.wordlist} exists and will be overwritten.", 1)
 
-    model.Generate(int(args.count), args.wordlist,6,12)
+    model.Generate(int(args.count), args.wordlist, args.min, args.max)
 
 
 
