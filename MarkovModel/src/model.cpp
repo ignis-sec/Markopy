@@ -94,7 +94,6 @@ bool Markov::Model<NodeStorageType>::Export(const char* filename) {
 
 template <typename NodeStorageType>
 NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk(int minSetting, int maxSetting) {  
-	std::cout << "Hello\n";
 	Markov::Node<NodeStorageType>* n = this->starterNode;
 	int len = 0;
 	NodeStorageType *ret = new NodeStorageType[64];
