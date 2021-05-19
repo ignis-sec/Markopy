@@ -4,15 +4,33 @@
     <member refid="struct__program_options_1ad2f314dbe337d2e7e20dfca1d5b7d18a" kind="variable"><name>bImport</name></member>
     <member refid="struct__program_options_1ac556ceadc2ed59b2f2a0a4ce1339dc3f" kind="variable"><name>bExport</name></member>
     <member refid="struct__program_options_1a9d0ae7932291a1f6909053b778ff6aac" kind="variable"><name>bFailure</name></member>
-    <member refid="struct__program_options_1adaff05c1a34f18dd3ade2541823b09e0" kind="variable"><name>importname</name></member>
-    <member refid="struct__program_options_1a8d881e7b82ea8ae14cc0aa43f26ded35" kind="variable"><name>exportname</name></member>
-    <member refid="struct__program_options_1a2ed12b6f37496fbe76f12f6a49c5f4f9" kind="variable"><name>outputfilename</name></member>
-    <member refid="struct__program_options_1ad2d16addb437376e209d3928bd994f08" kind="variable"><name>datasetname</name></member>
+    <member refid="struct__program_options_1ae70f5c97853675abfbb2658ce78addf8" kind="variable"><name>seperator</name></member>
+    <member refid="struct__program_options_1a97c2d382aa865d513413429ea9204af9" kind="variable"><name>importname</name></member>
+    <member refid="struct__program_options_1aed9d58ba4bbf9f71ae5c5d4ee91f12b6" kind="variable"><name>exportname</name></member>
+    <member refid="struct__program_options_1a2020f6fc58576e03423d844c1cba65ec" kind="variable"><name>wordlistname</name></member>
+    <member refid="struct__program_options_1aafcaa767a16e38677667b5ad4f232109" kind="variable"><name>outputfilename</name></member>
+    <member refid="struct__program_options_1ae5e2e6684d1df68308892a085e0c7f4a" kind="variable"><name>datasetname</name></member>
     <member refid="struct__program_options_1ae7b214163e0019619a309825945f640d" kind="variable"><name>generateN</name></member>
   </compound>
+  <compound refid="classabout" kind="class"><name>about</name>
+    <member refid="classabout_1a2fc9fb5fd78a0271e82f34664af4e59c" kind="variable"><name>ui</name></member>
+    <member refid="classabout_1a2d7cd30a50c3e97001c969d61b525fe8" kind="function"><name>about</name></member>
+  </compound>
   <compound refid="class_argparse" kind="class"><name>Argparse</name>
+    <member refid="class_argparse_1a84fb596fcf41a42d7a8f1efec134ee71" kind="variable"><name>po</name></member>
+    <member refid="class_argparse_1a0177c358212e5eacf73ffffa4a351c18" kind="function"><name>Argparse</name></member>
+    <member refid="class_argparse_1aad0cf7717e8d0ed8e5f0d2bc3245943f" kind="function"><name>Argparse</name></member>
+    <member refid="class_argparse_1abebc8072e67341bacc50b8f742f546c3" kind="function"><name>getProgramOptions</name></member>
+    <member refid="class_argparse_1a767e5fce5b87703095b2bbc1eb7d15a3" kind="function"><name>setProgramOptions</name></member>
     <member refid="class_argparse_1a4c977d7fcdffd09e8437f214f56ac0ac" kind="function"><name>parse</name></member>
     <member refid="class_argparse_1a720195071367bec91ac78bc3ac3dcfa2" kind="function"><name>help</name></member>
+  </compound>
+  <compound refid="class_c_l_i" kind="class"><name>CLI</name>
+    <member refid="class_c_l_i_1ad1ba1ba2abd585d07bfc0417b779b8ad" kind="variable"><name>ui</name></member>
+    <member refid="class_c_l_i_1a243dc321535815c5a2cee137296ea4cd" kind="function"><name>CLI</name></member>
+    <member refid="class_c_l_i_1a1492005f186392031bd4d447cb20e975" kind="slot"><name>start</name></member>
+    <member refid="class_c_l_i_1ac67c7423c64d31f976a92b9d95ce18e5" kind="slot"><name>statistics</name></member>
+    <member refid="class_c_l_i_1a80097121fd7134be956f9a141a171084" kind="slot"><name>about</name></member>
   </compound>
   <compound refid="class_markov_1_1_edge" kind="class"><name>Markov::Edge</name>
     <member refid="class_markov_1_1_edge_1a1f636c80a30900dfbfa5b695402cceb9" kind="variable"><name>_left</name></member>
@@ -20,13 +38,13 @@
     <member refid="class_markov_1_1_edge_1a5c36d8455140a5fab9a87398a048e1b2" kind="variable"><name>_weight</name></member>
     <member refid="class_markov_1_1_edge_1a893ea498a247e09b2a7e2424f026a137" kind="function"><name>Edge</name></member>
     <member refid="class_markov_1_1_edge_1a7813ff80fd97d5c0bd4fb339e2e5764b" kind="function"><name>Edge</name></member>
-    <member refid="class_markov_1_1_edge_1ab36e4f8f7ae37b81966e10929097f2aa" kind="function"><name>adjust</name></member>
-    <member refid="class_markov_1_1_edge_1adaa67349cf3b42e4c012d2247aa40c92" kind="function"><name>traverse</name></member>
-    <member refid="class_markov_1_1_edge_1a36103941d3770c2d5b29d19abd7b84ed" kind="function"><name>set_left</name></member>
-    <member refid="class_markov_1_1_edge_1a15eb9b870ab6e8c0a5185520c28ed933" kind="function"><name>set_right</name></member>
-    <member refid="class_markov_1_1_edge_1ab6160a5b9c6e8a51fe1ecba063e9402b" kind="function"><name>weight</name></member>
-    <member refid="class_markov_1_1_edge_1a642aa92fbeb81971c5ec9d2894d76402" kind="function"><name>left</name></member>
-    <member refid="class_markov_1_1_edge_1a876e20dc6d98e046a7503f017cf553f2" kind="function"><name>right</name></member>
+    <member refid="class_markov_1_1_edge_1a967446f716ab4d52265631e5f0f6a898" kind="function"><name>AdjustEdge</name></member>
+    <member refid="class_markov_1_1_edge_1a97e403fa0cf2666b2f142f28372de990" kind="function"><name>TraverseNode</name></member>
+    <member refid="class_markov_1_1_edge_1a174cd2f818b7c929decee6f2bcea7025" kind="function"><name>SetLeftEdge</name></member>
+    <member refid="class_markov_1_1_edge_1add40b694fce402c316540c50d0fd3b3c" kind="function"><name>SetRightEdge</name></member>
+    <member refid="class_markov_1_1_edge_1a2b1e5a6e6f81502cd8ac6b20ed38b677" kind="function"><name>EdgeWeight</name></member>
+    <member refid="class_markov_1_1_edge_1a3975b42a420de76e216d343dca059f88" kind="function"><name>LeftNode</name></member>
+    <member refid="class_markov_1_1_edge_1a2e7d14e46631c85c84f6f8f1dd2949cd" kind="function"><name>RightNode</name></member>
   </compound>
   <compound refid="class_markov_passwords" kind="class"><name>MarkovPasswords</name>
     <member refid="class_markov_passwords_1abb4e3cd729c7ef289ac0e9a8c2a4d208" kind="variable"><name>datasetFile</name></member>
@@ -63,7 +81,7 @@
     <member refid="class_markov_1_1_model_1a4c41020aab865272c4c65d4110c9dad6" kind="variable"><name>distribution</name></member>
     <member refid="class_markov_1_1_model_1ae1d564c132cbf681f10f8ed0dfc772df" kind="function"><name>Model</name></member>
     <member refid="class_markov_1_1_model_1a2e0249e4630353a260e06b8f3a72f5bb" kind="function"><name>RandomWalk</name></member>
-    <member refid="class_markov_1_1_model_1abb14649eb59af2b60d17400e3c1d827b" kind="function"><name>adjust</name></member>
+    <member refid="class_markov_1_1_model_1ad252913f83fa3eb14cc3f9f92c5ee37a" kind="function"><name>AdjustEdge</name></member>
     <member refid="class_markov_1_1_model_1a379ea9943f9d4c212e1140d4a9af64f5" kind="function"><name>Import</name></member>
     <member refid="class_markov_1_1_model_1a3f872a3af96a91d4627c1a5d5e66b19a" kind="function"><name>Import</name></member>
     <member refid="class_markov_1_1_model_1ae16027a94235d2988ac4be35ea07d939" kind="function"><name>Export</name></member>
@@ -82,10 +100,10 @@
     <member refid="class_markov_1_1_node_1a1db7cba480ab9fb41ef8ab53d1eac0f2" kind="function"><name>Link</name></member>
     <member refid="class_markov_1_1_node_1aaed7c8987e805fca2b56d50c7f25d9d1" kind="function"><name>RandomNext</name></member>
     <member refid="class_markov_1_1_node_1a77dbb90420f6199790a4fa986b93f85c" kind="function"><name>UpdateEdges</name></member>
-    <member refid="class_markov_1_1_node_1aa1768fa91e88a190f7d4cb7bc3cdd82e" kind="function"><name>findEdge</name></member>
-    <member refid="class_markov_1_1_node_1ab8bcc5b76df497f5cb6800399a26a87a" kind="function"><name>findEdge</name></member>
-    <member refid="class_markov_1_1_node_1ada4486380ae3e196fb1c24e2ec8325f3" kind="function"><name>value</name></member>
-    <member refid="class_markov_1_1_node_1a19a448f859ac81d65b8c4ebf8ac6fbd2" kind="function"><name>updateTotalVerticeWeight</name></member>
+    <member refid="class_markov_1_1_node_1ad836573fbdec1c6d7e72945f48ed081c" kind="function"><name>FindEdge</name></member>
+    <member refid="class_markov_1_1_node_1adec94acba3fc021a2bbaded53d9e9730" kind="function"><name>FindEdge</name></member>
+    <member refid="class_markov_1_1_node_1ac7cce56376f2a00764f64a0194cbb498" kind="function"><name>NodeValue</name></member>
+    <member refid="class_markov_1_1_node_1ab254a9c976195fcb1cac4d463d030d3c" kind="function"><name>UpdateTotalVerticeWeight</name></member>
     <member refid="class_markov_1_1_node_1ad404ccc317ef8413881b8d7b72b4f4f0" kind="function"><name>Edges</name></member>
     <member refid="class_markov_1_1_node_1af5e5e29a5027651b4f3a4d1dd6883f60" kind="function"><name>TotalEdgeWeights</name></member>
   </compound>
@@ -106,6 +124,12 @@
     <member refid="classterminal_1ad9bec28e28ddcdc6e015beac65873a87" kind="variable"><name>colormap</name></member>
     <member refid="classterminal_1ac01fc0e2438769940675326f7cc4329d" kind="variable"><name>endl</name></member>
     <member refid="classterminal_1a71b8dd29a72fe71918ee3c2085e74eb6" kind="function"><name>terminal</name></member>
+  </compound>
+  <compound refid="class_train" kind="class"><name>Train</name>
+    <member refid="class_train_1ab9d321371371f0e7d1d6d644d26d3c9f" kind="variable"><name>ui</name></member>
+    <member refid="class_train_1adffe4f707483b4ede7714fb49e3212e1" kind="function"><name>Train</name></member>
+    <member refid="class_train_1a244f9717df6fc160092e1bb98077bad3" kind="slot"><name>home</name></member>
+    <member refid="class_train_1ab899c6e6d163a0bddcd723a58d7b219d" kind="slot"><name>train</name></member>
   </compound>
   <compound refid="namespaceboost_1_1python" kind="namespace"><name>boost::python</name>
   </compound>
@@ -156,6 +180,7 @@
   <compound refid="markopy__cli_8py" kind="file"><name>markopy_cli.py</name>
   </compound>
   <compound refid="markopy_8cpp" kind="file"><name>markopy.cpp</name>
+    <member refid="markopy_8cpp_1ab8db71261aa9207d3fb23344c18ce5a7" kind="define"><name>BOOST_PYTHON_STATIC_LIB</name></member>
     <member refid="markopy_8cpp_1a7071b0092ad8c5b57d6cc40c5f803df5" kind="variable"><name>rd</name></member>
     <member refid="markopy_8cpp_1ae378f01023fe21ff5cf93f5149f76781" kind="function"><name>generator</name></member>
     <member refid="markopy_8cpp_1ae9bad6eb7ad881f72a214fde0b949159" kind="function"><name>distribution</name></member>
@@ -194,6 +219,7 @@
   <compound refid="argparse_8cpp" kind="file"><name>argparse.cpp</name>
   </compound>
   <compound refid="argparse_8h" kind="file"><name>argparse.h</name>
+    <member refid="argparse_8h_1a8df2553ea80556a445530460433ac2f5" kind="define"><name>BOOST_ALL_DYN_LINK</name></member>
     <member refid="argparse_8h_1a9d530970d74edd006d44cfd25450183f" kind="typedef"><name>ProgramOptions</name></member>
   </compound>
   <compound refid="term_8cpp" kind="file"><name>term.cpp</name>
@@ -223,6 +249,10 @@
   </compound>
   <compound refid="random-model_8py" kind="file"><name>random-model.py</name>
   </compound>
+  <compound refid="about_8h" kind="file"><name>about.h</name>
+  </compound>
+  <compound refid="_c_l_i_8h" kind="file"><name>CLI.h</name>
+  </compound>
   <compound refid="_markov_passwords_g_u_i_8cpp" kind="file"><name>MarkovPasswordsGUI.cpp</name>
   </compound>
   <compound refid="_markov_passwords_g_u_i_8h" kind="file"><name>MarkovPasswordsGUI.h</name>
@@ -230,6 +260,8 @@
   <compound refid="menu_8cpp" kind="file"><name>menu.cpp</name>
   </compound>
   <compound refid="menu_8h" kind="file"><name>menu.h</name>
+  </compound>
+  <compound refid="_train_8h" kind="file"><name>Train.h</name>
   </compound>
   <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
   </compound>
