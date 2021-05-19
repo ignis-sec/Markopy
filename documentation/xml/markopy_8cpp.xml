@@ -34,6 +34,18 @@
       </node>
     </incdepgraph>
     <innernamespace refid="namespaceboost_1_1python">boost::python</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="markopy_8cpp_1ab8db71261aa9207d3fb23344c18ce5a7" prot="public" static="no">
+        <name>BOOST_PYTHON_STATIC_LIB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/Module/markopy.cpp" line="4" column="9" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/Module/markopy.cpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="var">
       <memberdef kind="variable" id="markopy_8cpp_1a7071b0092ad8c5b57d6cc40c5f803df5" prot="public" static="no" mutable="no">
         <type>std::random_device</type>

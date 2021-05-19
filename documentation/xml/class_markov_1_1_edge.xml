@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="1" column="0" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="5" bodyend="9"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="1" column="0" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="6" bodyend="10"/>
       </memberdef>
       <memberdef kind="function" id="class_markov_1_1_edge_1a7813ff80fd97d5c0bd4fb339e2e5764b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -80,7 +80,7 @@
           <declname>_right</declname>
         </param>
         <briefdescription>
-<para>Constructor. Initialize edge with given right and left. </para>
+<para>Constructor. Initialize edge with given RightNode and LeftNode. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -104,19 +104,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="1" column="0" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="12" bodyend="16"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="1" column="0" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="13" bodyend="17"/>
       </memberdef>
-      <memberdef kind="function" id="class_markov_1_1_edge_1ab36e4f8f7ae37b81966e10929097f2aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_markov_1_1_edge_1a967446f716ab4d52265631e5f0f6a898" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Markov::Edge&lt; NodeStorageType &gt;::adjust</definition>
+        <definition>void Markov::Edge&lt; NodeStorageType &gt;::AdjustEdge</definition>
         <argsstring>(uint64_t offset)</argsstring>
-        <name>adjust</name>
+        <name>AdjustEdge</name>
         <param>
           <type>uint64_t</type>
           <declname>offset</declname>
         </param>
         <briefdescription>
-<para>Adjust the edge weight with offset. Adds the offset parameter to the edge weight. </para>
+<para>Adjust the edge EdgeWeight with offset. Adds the offset parameter to the edge EdgeWeight. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -124,7 +124,7 @@
 <parametername>offset</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>- value to be added to the weight </para>
+<para>- NodeValue to be added to the EdgeWeight </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -132,15 +132,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="32" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="19" bodyend="22"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="32" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="20" bodyend="23"/>
       </memberdef>
-      <memberdef kind="function" id="class_markov_1_1_edge_1adaa67349cf3b42e4c012d2247aa40c92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_markov_1_1_edge_1a97e403fa0cf2666b2f142f28372de990" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_markov_1_1_node" kindref="compound">Node</ref>&lt; NodeStorageType &gt; *</type>
-        <definition>Markov::Node&lt; NodeStorageType &gt; * Markov::Edge&lt; NodeStorageType &gt;::traverse</definition>
+        <definition>Markov::Node&lt; NodeStorageType &gt; * Markov::Edge&lt; NodeStorageType &gt;::TraverseNode</definition>
         <argsstring>()</argsstring>
-        <name>traverse</name>
+        <name>TraverseNode</name>
         <briefdescription>
-<para>Traverse this edge to right. </para>
+<para>Traverse this edge to RightNode. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>Right node. If this is a terminator node, return NULL </para>
@@ -149,19 +149,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="37" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="25" bodyend="29"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="37" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="26" bodyend="30"/>
       </memberdef>
-      <memberdef kind="function" id="class_markov_1_1_edge_1a36103941d3770c2d5b29d19abd7b84ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_markov_1_1_edge_1a174cd2f818b7c929decee6f2bcea7025" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Markov::Edge&lt; NodeStorageType &gt;::set_left</definition>
+        <definition>void Markov::Edge&lt; NodeStorageType &gt;::SetLeftEdge</definition>
         <argsstring>(Node&lt; NodeStorageType &gt; *)</argsstring>
-        <name>set_left</name>
+        <name>SetLeftEdge</name>
         <param>
           <type><ref refid="class_markov_1_1_node" kindref="compound">Node</ref>&lt; NodeStorageType &gt; *</type>
           <defname>n</defname>
         </param>
         <briefdescription>
-<para>Set left of this edge. </para>
+<para>Set LeftNode of this edge. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -177,19 +177,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="42" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="32" bodyend="34"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="42" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="33" bodyend="35"/>
       </memberdef>
-      <memberdef kind="function" id="class_markov_1_1_edge_1a15eb9b870ab6e8c0a5185520c28ed933" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_markov_1_1_edge_1add40b694fce402c316540c50d0fd3b3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Markov::Edge&lt; NodeStorageType &gt;::set_right</definition>
+        <definition>void Markov::Edge&lt; NodeStorageType &gt;::SetRightEdge</definition>
         <argsstring>(Node&lt; NodeStorageType &gt; *)</argsstring>
-        <name>set_right</name>
+        <name>SetRightEdge</name>
         <param>
           <type><ref refid="class_markov_1_1_node" kindref="compound">Node</ref>&lt; NodeStorageType &gt; *</type>
           <defname>n</defname>
         </param>
         <briefdescription>
-<para>Set right of this edge. </para>
+<para>Set RightNode of this edge. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -205,80 +205,80 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="46" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="37" bodyend="39"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="46" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="38" bodyend="40"/>
       </memberdef>
-      <memberdef kind="function" id="class_markov_1_1_edge_1ab6160a5b9c6e8a51fe1ecba063e9402b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_markov_1_1_edge_1a2b1e5a6e6f81502cd8ac6b20ed38b677" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint64_t</type>
-        <definition>uint64_t Markov::Edge&lt; NodeStorageType &gt;::weight</definition>
+        <definition>uint64_t Markov::Edge&lt; NodeStorageType &gt;::EdgeWeight</definition>
         <argsstring>()</argsstring>
-        <name>weight</name>
+        <name>EdgeWeight</name>
         <briefdescription>
-<para>return edge&apos;s weight. </para>
+<para>return edge&apos;s EdgeWeight. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>edge&apos;s weight. </para>
+<para><simplesect kind="return"><para>edge&apos;s EdgeWeight. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="51" column="10" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="42" bodyend="44"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="51" column="10" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="43" bodyend="45"/>
       </memberdef>
-      <memberdef kind="function" id="class_markov_1_1_edge_1a642aa92fbeb81971c5ec9d2894d76402" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_markov_1_1_edge_1a3975b42a420de76e216d343dca059f88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_markov_1_1_node" kindref="compound">Node</ref>&lt; NodeStorageType &gt; *</type>
-        <definition>Markov::Node&lt; NodeStorageType &gt; * Markov::Edge&lt; NodeStorageType &gt;::left</definition>
+        <definition>Markov::Node&lt; NodeStorageType &gt; * Markov::Edge&lt; NodeStorageType &gt;::LeftNode</definition>
         <argsstring>()</argsstring>
-        <name>left</name>
+        <name>LeftNode</name>
         <briefdescription>
-<para>return edge&apos;s left </para>
+<para>return edge&apos;s LeftNode </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>edge&apos;s left. </para>
+<para><simplesect kind="return"><para>edge&apos;s LeftNode. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="56" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="47" bodyend="49"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="56" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="48" bodyend="50"/>
       </memberdef>
-      <memberdef kind="function" id="class_markov_1_1_edge_1a876e20dc6d98e046a7503f017cf553f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_markov_1_1_edge_1a2e7d14e46631c85c84f6f8f1dd2949cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_markov_1_1_node" kindref="compound">Node</ref>&lt; NodeStorageType &gt; *</type>
-        <definition>Markov::Node&lt; NodeStorageType &gt; * Markov::Edge&lt; NodeStorageType &gt;::right</definition>
+        <definition>Markov::Node&lt; NodeStorageType &gt; * Markov::Edge&lt; NodeStorageType &gt;::RightNode</definition>
         <argsstring>()</argsstring>
-        <name>right</name>
+        <name>RightNode</name>
         <briefdescription>
-<para>return edge&apos;s right </para>
+<para>return edge&apos;s RightNode </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>edge&apos;s right. </para>
+<para><simplesect kind="return"><para>edge&apos;s RightNode. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="61" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="52" bodyend="54"/>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="61" column="6" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.cpp" bodystart="53" bodyend="55"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="class_markov_1_1_edge" kindref="compound">Edge</ref> class used to link nodes in the model together. </para>
     </briefdescription>
     <detaileddescription>
-<para>Has left, right, and weight of the edge. Edges are <emphasis>UNIDIRECTIONAL</emphasis> in this model. They can only be traversed left to right. </para>
+<para>Has LeftNode, RightNode, and EdgeWeight of the edge. Edges are <emphasis>UNIDIRECTIONAL</emphasis> in this model. They can only be traversed LeftNode to RightNode. </para>
     </detaileddescription>
     <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" line="15" column="11" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h" bodystart="15" bodyend="67"/>
     <listofallmembers>
       <member refid="class_markov_1_1_edge_1a1f636c80a30900dfbfa5b695402cceb9" prot="private" virt="non-virtual"><scope>Markov::Edge</scope><name>_left</name></member>
       <member refid="class_markov_1_1_edge_1a7f8221d3950f12a673888b3ad60e35b1" prot="private" virt="non-virtual"><scope>Markov::Edge</scope><name>_right</name></member>
       <member refid="class_markov_1_1_edge_1a5c36d8455140a5fab9a87398a048e1b2" prot="private" virt="non-virtual"><scope>Markov::Edge</scope><name>_weight</name></member>
-      <member refid="class_markov_1_1_edge_1ab36e4f8f7ae37b81966e10929097f2aa" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>adjust</name></member>
+      <member refid="class_markov_1_1_edge_1a967446f716ab4d52265631e5f0f6a898" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>AdjustEdge</name></member>
       <member refid="class_markov_1_1_edge_1a893ea498a247e09b2a7e2424f026a137" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>Edge</name></member>
       <member refid="class_markov_1_1_edge_1a7813ff80fd97d5c0bd4fb339e2e5764b" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>Edge</name></member>
-      <member refid="class_markov_1_1_edge_1a642aa92fbeb81971c5ec9d2894d76402" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>left</name></member>
-      <member refid="class_markov_1_1_edge_1a876e20dc6d98e046a7503f017cf553f2" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>right</name></member>
-      <member refid="class_markov_1_1_edge_1a36103941d3770c2d5b29d19abd7b84ed" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>set_left</name></member>
-      <member refid="class_markov_1_1_edge_1a15eb9b870ab6e8c0a5185520c28ed933" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>set_right</name></member>
-      <member refid="class_markov_1_1_edge_1adaa67349cf3b42e4c012d2247aa40c92" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>traverse</name></member>
-      <member refid="class_markov_1_1_edge_1ab6160a5b9c6e8a51fe1ecba063e9402b" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>weight</name></member>
+      <member refid="class_markov_1_1_edge_1a2b1e5a6e6f81502cd8ac6b20ed38b677" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>EdgeWeight</name></member>
+      <member refid="class_markov_1_1_edge_1a3975b42a420de76e216d343dca059f88" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>LeftNode</name></member>
+      <member refid="class_markov_1_1_edge_1a2e7d14e46631c85c84f6f8f1dd2949cd" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>RightNode</name></member>
+      <member refid="class_markov_1_1_edge_1a174cd2f818b7c929decee6f2bcea7025" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>SetLeftEdge</name></member>
+      <member refid="class_markov_1_1_edge_1add40b694fce402c316540c50d0fd3b3c" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>SetRightEdge</name></member>
+      <member refid="class_markov_1_1_edge_1a97e403fa0cf2666b2f142f28372de990" prot="public" virt="non-virtual"><scope>Markov::Edge</scope><name>TraverseNode</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

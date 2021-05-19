@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classabout" kind="class" language="C++" prot="public">
+    <compoundname>about</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classabout_1a2fc9fb5fd78a0271e82f34664af4e59c" prot="private" static="no" mutable="no">
+        <type>Ui::main</type>
+        <definition>Ui:: main about::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/about.h" line="14" column="11" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/about.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classabout_1a2d7cd30a50c3e97001c969d61b525fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>about::about</definition>
+        <argsstring>(QWidget *parent=Q_NULLPTR)</argsstring>
+        <name>about</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>Q_NULLPTR</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/about.h" line="11" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>about</label>
+        <link refid="classabout"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>about</label>
+        <link refid="classabout"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+    </collaborationgraph>
+    <location file="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/about.h" line="8" column="30" bodyfile="/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswordsGUI/src/about.h" bodystart="8" bodyend="16"/>
+    <listofallmembers>
+      <member refid="classabout_1a2d7cd30a50c3e97001c969d61b525fe8" prot="public" virt="non-virtual"><scope>about</scope><name>about</name></member>
+      <member refid="classabout_1a2fc9fb5fd78a0271e82f34664af4e59c" prot="private" virt="non-virtual"><scope>about</scope><name>ui</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
