@@ -22,7 +22,7 @@ parser.add_argument("mode",             help="Operation mode, supported modes: \
 parser.add_argument("input",            help="Input model file. This model will be imported before starting operation.")
 parser.add_argument("-o", "--output",   help="Output model file. This model will be exported when done. Will be ignored for generation mode.")
 parser.add_argument("-d", "--dataset",  help="Dataset file to read input from for training. Will be ignored for generation mode.")
-parser.add_argument("-s", "--seperator",help="Seperator character to use with training data.(character between occurrence and value)")
+parser.add_argument("-s", "--seperator",help="Seperator character to use with training data.(character between occurrence and NodeValue)")
 parser.add_argument("-w", "--wordlist", help="Wordlist file path to export generation results to. Will be ignored for training mode")
 parser.add_argument("-n", "--count",    help="Number of lines to generate. Ignored in training mode.")
 parser.add_argument("-v", "--verbosity",action="count", help="Output verbosity.")
@@ -89,7 +89,7 @@ def cli_generate(model):
     if(os.path.isfile(args.wordlist)):
         logging.pprint(f"{args.wordlist} exists and will be overwritten.", 1)
 
-    model.Generate(int(args.count), args.wordlist)
+    model.Generate(int(args.count), args.wordlist,6,12)
 
 
 
