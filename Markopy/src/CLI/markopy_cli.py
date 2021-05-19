@@ -91,7 +91,7 @@ def cli_generate(model):
     if(os.path.isfile(args.wordlist)):
         logging.pprint(f"{args.wordlist} exists and will be overwritten.", 1)
 
-    model.Generate(int(args.count), args.wordlist, args.min, args.max)
+    model.Generate(int(args.count), args.wordlist, int(args.min), int(args.max))
 
 
 
