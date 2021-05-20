@@ -77,10 +77,10 @@ $(BIN)/%.cpp.o:%.cpp
 #####################################            Markopy Options             #################################
 ##############################################################################################################
 
-MPY_SRC          := $(shell find MarkovModel/src/ -name '*.cpp') MarkovPasswords/src/markovPasswords.cpp $(shell find Markopy/src/Module/ -name '*.cpp')
+MPY_SRC          := $(shell find MarkovModel/src/ -name '*.cpp') MarkovPasswords/src/markovPasswords.cpp MarkovPasswords/src/threadSharedListHandler.cpp $(shell find Markopy/src/Module/ -name '*.cpp')
 MPY_OBJS         := $(MPY_SRC:%=$(BIN)/%.o)
 MPY_DEPS         := $(MPY_OBJS:.o=.d)
-MPY_LDFLAGS      := -shared -lboost_python$(PYTHON_VERSION_) -lpython$(PYTHON_VERSION)
+MPY_LDFLAGS      := -shared -lboost_python$(PYTHON_VERSION_) -lpython$(PYTHON_VERSION) -lpthread
 MPY_C_FLAGS      := $(MPY_INC_FLAGS) -MMD -MP -fPIC -I/usr/include/python$(PYTHON_VERSION)
 MPY_INC_DIRS     := $(shell find $(MPY_SRC_DIR) -type d)
 MPY_INC_FLAGS    := $(addprefix -I,$(MPY_INC_DIRS))
