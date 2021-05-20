@@ -4,6 +4,7 @@
 #include <chrono>
 #include <thread>
 #include <vector>
+#include <mutex>
 
 MarkovPasswords::MarkovPasswords() : Markov::Model<char>(){
 	
@@ -87,13 +88,32 @@ std::ofstream* MarkovPasswords::Save(const char* filename) {
 }
 
 
-void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen)  {
+void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, int threads)  {
 	char* res;
 	char print[100];
 	std::ofstream wordlist;	
-
-	
 	wordlist.open(wordlistFileName);
+	std::mutex mlock;
+	int iterationsPerThread = n/threads;
+	int iterationsCarryOver = n%threads;
+	std::vector<std::thread*> threadsV;
+	for(int i=0;i<threads;i++){
+		threadsV.push_back(new std::thread(&MarkovPasswords::GenerateThread, this, &mlock, iterationsPerThread, &wordlist, minLen, maxLen));
+	}
+
+	for(int i=0;i<threads;i++){
+		threadsV[i]->join();
+		delete threadsV[i];
+	}
+
+	//this->GenerateThread(mlock, iterationsCarryOver, &wordlist, minLen, maxLen);
+	
+}
+
+void MarkovPasswords::GenerateThread(std::mutex *outputLock, unsigned long int n, std::ofstream *wordlist, int minLen, int maxLen)  {
+	char* res;
+	char print[100];
+	
 	for (int i = 0; i < n; i++) {
 		res = this->RandomWalk(minLen, maxLen); 
 #ifdef _WIN32
@@ -101,9 +121,9 @@ void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName
 #else
 		strcpy(print, (char*)res);
 #endif // !_WIN32
-
-		wordlist << res << "\n";
+		outputLock->lock();
+		*wordlist << res << "\n";
+		outputLock->unlock();
 		delete res;
 	}
 }
-
