@@ -43,7 +43,7 @@ MP_C_FLAGS  := -Wall -Wextra -g
 MP_EXEC     := Markov
 MP_SRC      := $(shell find ./MarkovPasswords/src/ -name '*.cpp') $(shell find ./MarkovModel/src/ -name '*.cpp')
 MP_INC 		:= 
-MP_LIB		:= -lboost_program_options
+MP_LIB		:= -lboost_program_options -lpthread
 #build pattern
 $(BIN)/$(MP_EXEC): $(MP_SRC)
 	$(CC) $(MP_C_FLAGS) -I$(MP_INC) -L$(LIB) $^ -o $@ $(MP_LIB)      
