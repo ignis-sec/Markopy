@@ -1,6 +1,9 @@
 #pragma once
 #include "markovPasswords.h"
 #include <string.h>
+#include <chrono>
+#include <thread>
+#include <vector>
 
 MarkovPasswords::MarkovPasswords() : Markov::Model<char>(){
 	
@@ -32,14 +35,31 @@ std::ifstream* MarkovPasswords::OpenDatasetFile(const char* filename){
 }
 
 
-void MarkovPasswords::Train(const char* datasetFileName, char delimiter)   {
-	std::ifstream datasetFile;
-	datasetFile.open(datasetFileName, std::ios_base::binary);
-	std::string line;
-	//std::string pass;
+void MarkovPasswords::Train(const char* datasetFileName, char delimiter, int threads)   {
+	ThreadSharedListHandler listhandler(datasetFileName);
+	auto start = std::chrono::high_resolution_clock::now();
+
+	std::vector<std::thread*> threadsV;
+	for(int i=0;i<threads;i++){
+		threadsV.push_back(new std::thread(&MarkovPasswords::TrainThread, this, &listhandler, datasetFileName, delimiter));
+	}
+
+	for(int i=0;i<threads;i++){
+		threadsV[i]->join();
+		delete threadsV[i];
+	}
+	auto finish = std::chrono::high_resolution_clock::now();
+	std::chrono::duration<double> elapsed = finish - start;
+	std::cout << "Elapsed time: " << elapsed.count() << " s\n";
+
+	
+}
+
+void MarkovPasswords::TrainThread(ThreadSharedListHandler *listhandler, const char* datasetFileName, char delimiter){
 	char format_str[] ="%d,%s";
 	format_str[2]=delimiter;
-	while (std::getline(datasetFile,line,'\n')) {
+	std::string line;
+	while (listhandler->next(&line)) {
 		int oc;
 		if (line.size() > 100) {
 			line = line.substr(0, 100);
@@ -52,7 +72,6 @@ void MarkovPasswords::Train(const char* datasetFileName, char delimiter)   {
 #endif
 		this->AdjustEdge((const char*)linebuf, oc); 
 	}
-	
 }
 
 

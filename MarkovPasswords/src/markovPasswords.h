@@ -1,6 +1,6 @@
 #pragma once
 #include "../../MarkovModel/src/MarkovModel.h"
-
+#include "threadSharedListHandler.h"
 /** @brief Markov::Model with char represented nodes.
 * 
 * Includes wrappers for Markov::Model and additional helper functions to handle file I/O
@@ -29,9 +29,12 @@ public:
 
 
 	/** @brief Train the model with the dataset file.
-	* @param dataset - Ifstream* to the dataset. If null, use class member
+	* @param datasetFileName - Ifstream* to the dataset. If null, use class member
+	* @param delimiter - a character, same as the delimiter in dataset content
 	*/
-	void Train(const char* datasetFileName, char delimiter);
+	void Train(const char* datasetFileName, char delimiter, int threads);
+
+	void TrainThread(ThreadSharedListHandler *listhandler, const char* datasetFileName, char delimiter);
 
 	/** @brief Export model to file.
 	* @param filename - Export filename.

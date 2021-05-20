@@ -27,15 +27,11 @@ int main(int argc, char** argv) {
 
 	MarkovPasswords markovPass;
 	std::cout << "Importing model.\n";
-	//markovPass.Import("models/2gram.mdl");
+	markovPass.Import("models/2gram.mdl");
 	std::cout << "Import done. Training...\n";
-	//markovPass.Train("datasets/dataset.5.dat", '\t');
+	markovPass.Train("datasets/graduation.corpus", '\t', 50);
 	std::cout << "Training done. Exporting to file.\n";
-	//markovPass.Export("models/finished.mdl");
-
-	std::cout << "Exported. Generating....\n";
-	markovPass.Import("models/finished.mdl");
-	markovPass.Generate(500, "datasets/output.txt");
+	markovPass.Export("models/finished2.mdl");
 
 	std::cout << "Generation done....\n";
 	return 0;
