@@ -51,6 +51,7 @@ void MarkovPasswords::Train(const char* datasetFileName, char delimiter)   {
 		sscanf(line.c_str(), format_str, &oc, linebuf);
 #endif
 		this->AdjustEdge((const char*)linebuf, oc); 
+		delete linebuf;
 	}
 	
 }
