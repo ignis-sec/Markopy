@@ -1,6 +1,9 @@
 #pragma once
 #include "markovPasswords.h"
 #include <string.h>
+#include <string>
+
+Markov::Model<char>* junk;
 
 MarkovPasswords::MarkovPasswords() : Markov::Model<char>(){
 	

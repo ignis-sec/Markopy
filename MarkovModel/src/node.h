@@ -1,12 +1,11 @@
 #pragma once
 #include <vector>
 #include <map>
-#include "edge.h"
 #include <random>
-
-extern std::random_device rd;
-extern std::default_random_engine generator;
-extern std::uniform_int_distribution<long long unsigned> distribution;
+#include <assert.h>
+#include <iostream>
+#include <stdexcept> // To use runtime_error
+#include "edge.h"
 
 namespace Markov {
 
@@ -101,4 +100,127 @@ namespace Markov {
 		std::map<storageType, Edge<storageType>*> edges;
 	};
 };
+
+
+inline std::random_device& rd() {
+	static std::random_device _rd;
+	return _rd;
+}
+
+inline std::default_random_engine& generator() {
+	static std::default_random_engine _generator;
+	return _generator;
+}
+
+
+inline std::uniform_int_distribution<long long unsigned>& distribution() {
+	static std::uniform_int_distribution<long long unsigned> _distribution;
+	return _distribution;
+}
+
+
+
+
+template <typename storageType>
+Markov::Node<storageType>::Node(storageType _value) {
+	this->_value = _value;
+};
+
+template <typename storageType>
+Markov::Node<storageType>::Node() {
+	this->_value = 0;
+	this->total_edge_weights = 0;
+};
+
+template <typename storageType>
+unsigned char Markov::Node<storageType>::NodeValue() {
+	return _value;
+}
+
+template <typename storageType>
+Markov::Edge<storageType>* Markov::Node<storageType>::Link(Markov::Node<storageType>* n) {
+	Markov::Edge<storageType>* v = new Markov::Edge<storageType>(this, n);
+	this->UpdateEdges(v);
+	return v;
+}
+
+template <typename storageType>
+Markov::Edge<storageType>* Markov::Node<storageType>::Link(Markov::Edge<storageType>* v) {
+	v->SetLeftEdge(this);
+	this->UpdateEdges(v);
+	return v;
+}
+
+template <typename storageType>
+Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
+
+	//get a random NodeValue in range of total_vertice_weight
+	int rnd = distribution()(generator());// distribution(generator);
+
+	int selection = rnd % this->total_edge_weights; //add division by zero execption handling //replace with next lines while not empty file
+	/*if(this->total_edge_weights==0)
+		throw std::runtime_error("Math error: Attempted to divide by zero\n");
+	try {
+		int selection = rnd % this->total_edge_weights;
+	}
+	catch (std::runtime_error e) {
+
+		// prints that exception has occurred
+		// calls the what function using object of
+		// runtime_error class
+		std::cout << "Exception occurred" << std::endl
+			<< e.what();
+	}*/
+
+
+	//make absolute, no negative modulus values wanted
+	selection = (selection >= 0) ? selection : (selection + this->total_edge_weights);
+
+	//iterate over the Edge map
+	//Subtract the Edge EdgeWeight from the selection at each Edge
+	//when selection goes below 0, pick that node 
+	//(Fast random selection with EdgeWeight bias)
+	//std::cout << "Rand: " << rnd << "\n";
+	//std::cout << "Total: " << this->total_edge_weights << "\n";
+	//std::cout << "Total edges: " << this->edges.size() << "\n";
+	for (std::pair<unsigned char, Markov::Edge<storageType>*> const& x : this->edges) {
+		//std::cout << selection << "\n";
+		selection -= x.second->EdgeWeight();
+		//std::cout << selection << "\n";
+		if (selection < 0) return x.second->TraverseNode();
+	}
+
+	//if this assertion is reached, it means there is an implementation error above
+	assert(true && "This should never be reached (node failed to walk to next)");
+	return NULL;
+}
+
+template <typename storageType>
+bool Markov::Node<storageType>::UpdateEdges(Markov::Edge<storageType>* v) {
+	this->edges.insert({ v->RightNode()->NodeValue(), v });
+	//this->total_edge_weights += v->EdgeWeight();
+	return v->TraverseNode();
+}
+
+template <typename storageType>
+Markov::Edge<storageType>* Markov::Node<storageType>::FindEdge(storageType repr) {
+	auto e = this->edges.find(repr);
+	if (e == this->edges.end()) return NULL;
+	return e->second;
+};
+
+template <typename storageType>
+void Markov::Node<storageType>::UpdateTotalVerticeWeight(long int offset) {
+	this->total_edge_weights += offset;
+}
+
+template <typename storageType>
+std::map<storageType, Markov::Edge<storageType>*>* Markov::Node<storageType>::Edges() {
+	return &(this->edges);
+}
+
+template <typename storageType>
+uint64_t Markov::Node<storageType>::TotalEdgeWeights() {
+	return this->total_edge_weights;
+}
 

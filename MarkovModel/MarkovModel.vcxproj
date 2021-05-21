@@ -112,7 +112,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Model|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)$(Platform)\Release\</OutDir>
-    <IntDir>$(Platform)\Release\</IntDir>
+    <IntDir>$(SolutionDir)$(Platform)\Release\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Lib Model|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -204,7 +204,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);cudart.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <CudaLink>
       <LinkOut>$(IntDir)$(TargetName).device-link.obj</LinkOut>
@@ -221,6 +221,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)MarkovModel\src</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -243,11 +244,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\dllmain.cpp" />
-    <ClCompile Include="src\MarkovModel.h" />
-    <ClCompile Include="src\model.cpp" />
-    <ClCompile Include="src\node.cpp" />
     <ClCompile Include="src\pch.cpp" />
-    <ClCompile Include="src\edge.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
