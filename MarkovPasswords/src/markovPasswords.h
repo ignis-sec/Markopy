@@ -1,5 +1,5 @@
 #pragma once
-#include "../../MarkovModel/src/MarkovModel.h"
+#include "MarkovModel/src/model.h"
 
 /** @brief Markov::Model with char represented nodes.
 * 
