@@ -13,6 +13,7 @@ public:
 private:
 	Ui:: main ui;
 
+	
 };
 
 

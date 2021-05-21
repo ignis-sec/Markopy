@@ -1,6 +1,5 @@
 #include "Generate.h"
 #include <fstream>
-#include <Windows.h>
 #include<QFileDialog>
 #include<QMessageBox>
 #include<QTextStream>
@@ -18,10 +17,6 @@ Generate::Generate(QWidget* parent)
 
     QObject::connect(ui.pushButton, &QPushButton::clicked, this, [this] {generation(); });
 
-    /*  std::random_device rd;
-      std::default_random_engine generator(rd());
-      std::uniform_int_distribution<long long unsigned> distribution(0, 0xffffFFFF);
-      */
 }
 
 void Generate::generation() {
