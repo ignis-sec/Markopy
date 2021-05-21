@@ -112,7 +112,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL Model|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)$(Platform)\Release\</OutDir>
-    <IntDir>$(SolutionDir)$(Platform)\Release\</IntDir>
+    <IntDir>$(SolutionDir)$(Platform)\intermediate\MarkovModel\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Lib Model|x64'">
     <LinkIncremental>false</LinkIncremental>
