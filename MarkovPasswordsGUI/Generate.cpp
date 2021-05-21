@@ -1,6 +1,5 @@
 #include "Generate.h"
 #include <fstream>
-#include <Windows.h>
 #include<QFileDialog>
 #include<QMessageBox>
 #include<QTextStream>

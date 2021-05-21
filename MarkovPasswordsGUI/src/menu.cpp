@@ -1,6 +1,5 @@
 #include "menu.h"
 #include <fstream>
-#include <Windows.h>
 #include "MarkovPasswordsGUI.h"
 #include <QtWidgets/QApplication>
 
