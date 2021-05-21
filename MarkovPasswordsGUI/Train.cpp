@@ -1,6 +1,5 @@
 #include "src/Train.h"
 #include <fstream>
-#include <Windows.h>
 #include<QFileDialog>
 #include<QMessageBox>
 #include<QTextStream>
@@ -48,7 +47,7 @@ void Train::train() {
 
     char a=',';
     MarkovPasswords mp;
-    mp.Train(cstr, a);
+    mp.Train(cstr, a, 10); //please parameterize this hardcoded 10 threads
 
     file.close();
 }
