@@ -27,12 +27,14 @@ PYTHON_VERSION3 :=$(shell python$(PYTHON_VERSION) -c "import sys;t='{v[0]}.{v[1]
 
 MP_C_FLAGS  := -Wall -Wextra -g
 MP_EXEC     := Markov
-MP_SRC      := $(shell find ./MarkovPasswords/src/ -name '*.cpp')
+MP_SRC      := $(shell find ./MarkovPasswords/src/ -name '*.cpp') 
+MP_INC 		:= 
+MP_LIB		:= -lboost_program_options
 MP_INC		:= $(shell pwd)
+
 #build pattern
 $(BIN)/$(MP_EXEC): $(MP_SRC)
-	$(CC) $(MP_C_FLAGS) -I$(MP_INC) -L$(LIB) $^ -o $@ $(LIBRARIES)        
-
+	$(CC) $(MP_C_FLAGS) -I$(MP_INC) -L$(LIB) $^ -o $@ $(MP_LIB) 
 
 ##############################################################################################################
 #####################################       MarkovModel project options      #################################
