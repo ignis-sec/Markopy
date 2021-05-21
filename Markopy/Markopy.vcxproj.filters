@@ -22,9 +22,6 @@
     <Filter Include="Dependencies">
       <UniqueIdentifier>{9fe04840-08b7-4f78-8ae7-6513c3349fd5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Dependencies\MarkovModel">
-      <UniqueIdentifier>{e1af0caf-1390-43cd-b7d4-57fe1d3ff9dd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Dependencies\MarkovPasswords">
       <UniqueIdentifier>{ab5a1a08-ca20-48d3-9c82-4fd5e43bb20a}</UniqueIdentifier>
     </Filter>
@@ -32,15 +29,6 @@
   <ItemGroup>
     <ClCompile Include="src\Module\markopy.cpp">
       <Filter>Source Files\Module</Filter>
-    </ClCompile>
-    <ClCompile Include="..\MarkovModel\src\edge.cpp">
-      <Filter>Dependencies\MarkovModel</Filter>
-    </ClCompile>
-    <ClCompile Include="..\MarkovModel\src\model.cpp">
-      <Filter>Dependencies\MarkovModel</Filter>
-    </ClCompile>
-    <ClCompile Include="..\MarkovModel\src\node.cpp">
-      <Filter>Dependencies\MarkovModel</Filter>
     </ClCompile>
     <ClCompile Include="..\MarkovPasswords\src\markovPasswords.cpp">
       <Filter>Dependencies\MarkovPasswords</Filter>

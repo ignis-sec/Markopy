@@ -5,6 +5,7 @@
 #include <thread>
 #include <vector>
 #include <mutex>
+#include <string>
 
 MarkovPasswords::MarkovPasswords() : Markov::Model<char>(){
 	
@@ -72,6 +73,7 @@ void MarkovPasswords::TrainThread(ThreadSharedListHandler *listhandler, const ch
 		sscanf(line.c_str(), format_str, &oc, linebuf);
 #endif
 		this->AdjustEdge((const char*)linebuf, oc); 
+		delete linebuf;
 	}
 }
 

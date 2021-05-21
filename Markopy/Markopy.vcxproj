@@ -84,6 +84,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetExt>.pyd</TargetExt>
+    <IntDir>$(SolutionDir)$(Platform)\intermediate\Markopy</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -140,7 +141,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(pythonLocation)\include;$(PYTHON_PATH)\include;$(BOOST_ROOT);$(SolutionDir)MarkovModel\src\;$(SolutionDir)\MarkovPasswords\src\;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\MarkovPasswords\src\;$(SolutionDir)MarkovModel\src\;$(pythonLocation)\include;$(PYTHON_PATH)\include;$(BOOST_ROOT);$(SolutionDir)MarkovModel\src\;$(SolutionDir)\MarkovPasswords\src\;</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,9 +154,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\MarkovModel\src\edge.cpp" />
-    <ClCompile Include="..\MarkovModel\src\model.cpp" />
-    <ClCompile Include="..\MarkovModel\src\node.cpp" />
     <ClCompile Include="..\MarkovPasswords\src\markovPasswords.cpp" />
     <ClCompile Include="src\Module\markopy.cpp" />
   </ItemGroup>

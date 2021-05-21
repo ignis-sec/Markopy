@@ -1,6 +1,7 @@
 #pragma once
-#include "../../MarkovModel/src/MarkovModel.h"
 #include "threadSharedListHandler.h"
+#include "MarkovModel/src/model.h"
+
 /** @brief Markov::Model with char represented nodes.
 * 
 * Includes wrappers for Markov::Model and additional helper functions to handle file I/O
