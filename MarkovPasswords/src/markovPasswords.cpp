@@ -113,13 +113,15 @@ void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName
 }
 
 void MarkovPasswords::GenerateThread(std::mutex *outputLock, unsigned long int n, std::ofstream *wordlist, int minLen, int maxLen)  {
-	char* res;
+	char* res = new char[64];
 	if(n==0) return;
+
+	Markov::Random::Marsaglia MarsagliaRandomEngine;
 	for (int i = 0; i < n; i++) {
-		res = this->RandomWalk(minLen, maxLen); 
+		this->RandomWalk(&MarsagliaRandomEngine, minLen, maxLen, res); 
 		outputLock->lock();
 		*wordlist << res << "\n";
 		outputLock->unlock();
-		delete res;
+		//delete res;
 	}
 }

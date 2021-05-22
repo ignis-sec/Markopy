@@ -1,12 +1,11 @@
 #pragma once
 #include <vector>
 #include <map>
-#include <random>
 #include <assert.h>
 #include <iostream>
 #include <stdexcept> // To use runtime_error
 #include "edge.h"
-
+#include "random.h"
 namespace Markov {
 
 	/** @brief A node class that for the vertices of model. Connected with eachother using Edge
@@ -48,7 +47,7 @@ namespace Markov {
 		* At each step, EdgeWeight of the edge is subtracted from the random number, and once it is 0, next node is selected.
 		* @return Node that was chosen at EdgeWeight biased random.
 		*/
-		Node<storageType>* RandomNext();
+		Node<storageType>* RandomNext(Markov::Random::RandomEngine* randomEngine);
 
 		/** @brief Insert a new edge to the this.edges.
 		* @param edge - New edge that will be inserted.
@@ -103,20 +102,9 @@ namespace Markov {
 };
 
 
-inline unsigned long marsagliaRandom(void) {          //period 2^96-1
-	static unsigned long x=123456789, y=362436069, z=521288629;
-	unsigned long t;
-	x ^= x << 16;
-	x ^= x >> 5;
-	x ^= x << 1;
 
-	t = x;
-	x = y;
-	y = z;
-	z = t ^ x ^ y;
 
-	return z;
-}
+
 
 
 
@@ -152,23 +140,18 @@ Markov::Edge<storageType>* Markov::Node<storageType>::Link(Markov::Edge<storageT
 }
 
 template <typename storageType>
-Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
+Markov::Node<storageType>* Markov::Node<storageType>::RandomNext(Markov::Random::RandomEngine* randomEngine) {
 
 	//get a random NodeValue in range of total_vertice_weight
-	long int selection = marsagliaRandom() % this->total_edge_weights;//distribution()(generator());// distribution(generator);
+	long int selection = randomEngine->random() % this->total_edge_weights;//distribution()(generator());// distribution(generator);
 	//make absolute, no negative modulus values wanted
-	selection = (selection >= 0) ? selection : (selection + this->total_edge_weights);
+	//selection = (selection >= 0) ? selection : (selection + this->total_edge_weights);
 
 	for(int i=0;i<this->edgesV.size();i++){
 		selection -= this->edgesV[i]->EdgeWeight();
 		if (selection < 0) return this->edgesV[i]->TraverseNode();
 	}
-	//for (std::pair<unsigned char, Markov::Edge<storageType>*> const& x : this->edges) {
-	//	//std::cout << selection << "\n";
-	//	selection -= x.second->EdgeWeight();
-	//	//std::cout << selection << "\n";
-	//	if (selection < 0) return x.second->TraverseNode();
-	//}
+
 
 	//if this assertion is reached, it means there is an implementation error above
 	assert(true && "This should never be reached (node failed to walk to next)");

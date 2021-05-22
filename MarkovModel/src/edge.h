@@ -58,7 +58,7 @@ namespace Markov {
 		/** @brief return edge's RightNode
 		* @return edge's RightNode.
 		*/
-		Node<NodeStorageType>* RightNode();
+		inline Node<NodeStorageType>* RightNode();
 
 	private:
 		Node<NodeStorageType>* _left; /** @brief source node*/
@@ -118,7 +118,7 @@ Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::LeftNode() {
 }
 //to get the RightNode of the node
 template <typename NodeStorageType>
-Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::RightNode() {
+inline Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::RightNode() {
 	return this->_right;
 }
 

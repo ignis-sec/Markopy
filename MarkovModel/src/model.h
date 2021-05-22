@@ -39,7 +39,7 @@ namespace Markov {
 		* Start from the starter node, invoke RandomNext on current node until terminator node is reached.
 		* @return Null terminated string that was generated.
 		*/
-		NodeStorageType* RandomWalk(int minSetting, int maxSetting);
+		NodeStorageType* RandomWalk(Markov::Random::RandomEngine* randomEngine, int minSetting, int maxSetting, NodeStorageType* buffer);
 
 		/** @brief Adjust the model with a single string. 
 		* Start from the starter node, and for each character, AdjustEdge the edge EdgeWeight from current node to the next, until NULL character is reached.
@@ -195,35 +195,31 @@ bool Markov::Model<NodeStorageType>::Export(const char* filename) {
 }
 
 template <typename NodeStorageType>
-NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk(int minSetting, int maxSetting) {
+NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk(Markov::Random::RandomEngine* randomEngine, int minSetting, int maxSetting, NodeStorageType* buffer) {
 	Markov::Node<NodeStorageType>* n = this->starterNode;
 	int len = 0;
-	NodeStorageType* ret = new NodeStorageType[64];
 	Markov::Node<NodeStorageType>* temp_node;
 	while (n != NULL) {
-		temp_node = n->RandomNext();
-		if (len == 60)
-			break;
+		temp_node = n->RandomNext(randomEngine);
 		if (len > maxSetting) {
 			break;
 		}
-
-		if ((temp_node == NULL) && (len < minSetting)) {
+		else if ((temp_node == NULL) && (len < minSetting)) {
 			continue;
 		}
 
-		if (temp_node == NULL)
+		else if (temp_node == NULL)
 			break;
 		n = temp_node;
 
-		ret[len++] = n->NodeValue();
+		buffer[len++] = n->NodeValue();
 	}
 
 	//null terminate the string
-	ret[len] = 0x00;
+	buffer[len] = 0x00;
 
 	//do something with the generated string
-	return ret; //for now
+	return buffer; //for now
 }
 
 template <typename NodeStorageType>
