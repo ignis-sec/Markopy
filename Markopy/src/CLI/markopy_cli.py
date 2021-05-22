@@ -6,16 +6,16 @@ import os
 
 parser = argparse.ArgumentParser(description="Python wrapper for MarkovPasswords.",
 epilog=f"""Sample runs:
-{__file__} train -i untrained.mdl -d dataset.dat -s "\\t" -o trained.mdl
+{__file__} train untrained.mdl -d dataset.dat -s "\\t" -o trained.mdl
     Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl\n
 
-{__file__} generate -i trained.mdl -n 500 -w output.txt
+{__file__} generate trained.mdl -n 500 -w output.txt
     Import trained.mdl, and generate 500 lines to output.txt
 
-{__file__} combine -i untrained.mdl -d dataset.dat -s "\\t" -n 500 -w output.txt
+{__file__} combine untrained.mdl -d dataset.dat -s "\\t" -n 500 -w output.txt
     Train and immediately generate 500 lines to output.txt. Do not export trained model.
 
-{__file__} combine -i untrained.mdl -d dataset.dat -s "\\t" -n 500 -w output.txt -o trained.mdl
+{__file__} combine untrained.mdl -d dataset.dat -s "\\t" -n 500 -w output.txt -o trained.mdl
     Train and immediately generate 500 lines to output.txt. Export trained model.
 """, formatter_class=argparse.RawTextHelpFormatter)
 parser.add_argument("mode",                             help="Operation mode, supported modes: \"generate\", \"train\" and \"combine\".")
