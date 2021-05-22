@@ -191,18 +191,14 @@ NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk(int minSetting, int 
 	NodeStorageType* ret = new NodeStorageType[64];
 	Markov::Node<NodeStorageType>* temp_node;
 	while (n != NULL) {
-		//n = n->RandomNext();
 		temp_node = n->RandomNext();
-		//dirty cutoff, needs better solution
 		if (len == 60)
 			break;
 		if (len > maxSetting) {
-			//std::cout<<"MAX ->"<< "node*: " << temp_node << ", len: " << len << "\n";
 			break;
 		}
 
 		if ((temp_node == NULL) && (len < minSetting)) {
-			//std::cout << "node*: " << temp_node << ", len: " << len << "\n";
 			continue;
 		}
 
@@ -210,11 +206,7 @@ NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk(int minSetting, int 
 			break;
 		n = temp_node;
 
-		//std::cout << n->NodeValue();
 		ret[len++] = n->NodeValue();
-
-		//maximum character length exceeded and stack will overflow.
-		//assert(len<32 && "return buffer overflowing, this will segfault if not aborted.");
 	}
 
 	//null terminate the string

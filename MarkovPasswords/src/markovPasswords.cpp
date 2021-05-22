@@ -114,15 +114,9 @@ void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName
 
 void MarkovPasswords::GenerateThread(std::mutex *outputLock, unsigned long int n, std::ofstream *wordlist, int minLen, int maxLen)  {
 	char* res;
-	char print[100];
 	
 	for (int i = 0; i < n; i++) {
 		res = this->RandomWalk(minLen, maxLen); 
-#ifdef _WIN32
-		strcpy_s(print, 100, (char*)res);
-#else
-		strcpy(print, (char*)res);
-#endif // !_WIN32
 		outputLock->lock();
 		*wordlist << res << "\n";
 		outputLock->unlock();
