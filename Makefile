@@ -25,7 +25,7 @@ PYTHON_VERSION3 :=$(shell python$(PYTHON_VERSION) -c "import sys;t='{v[0]}.{v[1]
 #####################################     MarkovPassword project options     #################################
 ##############################################################################################################
 
-MP_C_FLAGS  := -Wall -Wextra -g
+MP_C_FLAGS  := -Wall -Wextra -g -Ofast
 MP_EXEC     := Markov
 MP_SRC      := $(shell find ./MarkovPasswords/src/ -name '*.cpp') 
 MP_INC 		:= 
@@ -44,7 +44,7 @@ MM_SRC          := $(shell find $(MM_SRC_DIR) -name '*.cpp')
 MM_OBJS         := $(MM_SRC:%=$(BIN)/%.o)
 MM_DEPS         := $(MM_OBJS:.o=.d)
 MM_LDFLAGS      := -shared 
-MM_C_FLAGS      := $(MM_INC_FLAGS) -MMD -MP
+MM_C_FLAGS      := $(MM_INC_FLAGS) -MMD -MP  -Ofast
 MM_INC_DIRS     := $(shell find $(MM_SRC_DIR) -type d)
 MM_INC_FLAGS    := $(addprefix -I,$(MM_INC_DIRS))
 MM_LIB          := model.so
@@ -69,7 +69,7 @@ MPY_SRC_DIR		 := Markopy/src/
 MPY_OBJS         := $(MPY_SRC:%=$(BIN)/%.o)
 MPY_DEPS         := $(MPY_OBJS:.o=.d)
 MPY_LDFLAGS      := -shared -lboost_python$(PYTHON_VERSION_) -lpython$(PYTHON_VERSION) -lpthread
-MPY_C_FLAGS      := $(MPY_INC_FLAGS) -MMD -MP -fPIC -I/usr/include/python$(PYTHON_VERSION)
+MPY_C_FLAGS      := $(MPY_INC_FLAGS) -MMD -MP -fPIC -I/usr/include/python$(PYTHON_VERSION)  -Ofast
 MPY_INC_DIRS     := $(shell find $(MPY_SRC_DIR) -type d) $(shell pwd)
 MPY_INC_FLAGS    := $(addprefix -I,$(MPY_INC_DIRS))
 MPY_SO           := markopy.so
