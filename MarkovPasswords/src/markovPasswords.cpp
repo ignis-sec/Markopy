@@ -58,11 +58,11 @@ void MarkovPasswords::Train(const char* datasetFileName, char delimiter, int thr
 }
 
 void MarkovPasswords::TrainThread(ThreadSharedListHandler *listhandler, const char* datasetFileName, char delimiter){
-	char format_str[] ="%d,%s";
+	char format_str[] ="%ld,%s";
 	format_str[2]=delimiter;
 	std::string line;
 	while (listhandler->next(&line)) {
-		int oc;
+		long int oc;
 		if (line.size() > 100) {
 			line = line.substr(0, 100);
 		}
@@ -120,7 +120,7 @@ void MarkovPasswords::GenerateThread(std::mutex *outputLock, unsigned long int n
 	for (int i = 0; i < n; i++) {
 		this->RandomWalk(&MarsagliaRandomEngine, minLen, maxLen, res); 
 		outputLock->lock();
-		(*wordlist) << res << "\n";
+		*wordlist << res << "\n";
 		outputLock->unlock();
 	}
 }

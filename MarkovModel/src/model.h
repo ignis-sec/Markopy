@@ -114,15 +114,15 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream* f) {
 
 	char src;
 	char target;
-	int oc;
+	long int oc;
 
 	while (std::getline(*f, cell)) {
 		//std::cout << "cell: " << cell << std::endl;
 		src = cell[0];
 		target = cell[cell.length() - 1];
-		oc = std::atoi(cell.substr(2, cell.length() - 2).c_str());
-
-
+		char* j;
+		oc = std::strtol(cell.substr(2, cell.length() - 2).c_str(),&j,10);
+		//std::cout << oc << "\n";
 		Markov::Node<NodeStorageType>* srcN;
 		Markov::Node<NodeStorageType>* targetN;
 		Markov::Edge<NodeStorageType>* e;
@@ -201,15 +201,17 @@ NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk(Markov::Random::Rand
 	Markov::Node<NodeStorageType>* temp_node;
 	while (true) {
 		temp_node = n->RandomNext(randomEngine);
-		if (len > maxSetting) {
+		if (len >= maxSetting) {
 			break;
 		}
 		else if ((temp_node == NULL) && (len < minSetting)) {
 			continue;
 		}
 
-		else if (temp_node == NULL)
+		else if (temp_node == NULL){
 			break;
+		}
+			
 		n = temp_node;
 
 		buffer[len++] = n->NodeValue();

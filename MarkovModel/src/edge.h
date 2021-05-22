@@ -29,7 +29,7 @@ namespace Markov {
 		* Adds the offset parameter to the edge EdgeWeight.
 		* @param offset - NodeValue to be added to the EdgeWeight
 		*/
-		void AdjustEdge(uint64_t offset);
+		void AdjustEdge(long int offset);
 		
 		/** @brief Traverse this edge to RightNode.
 		* @return Right node. If this is a terminator node, return NULL
@@ -63,7 +63,7 @@ namespace Markov {
 	private:
 		Node<NodeStorageType>* _left; /** @brief source node*/
 		Node<NodeStorageType>* _right;/** @brief target node*/
-		int _weight;    /** @brief Edge EdgeWeight*/
+		long int _weight;    /** @brief Edge EdgeWeight*/
 	};
 
 
@@ -85,7 +85,7 @@ Markov::Edge<NodeStorageType>::Edge(Markov::Node<NodeStorageType>* _left, Markov
 }
 //to AdjustEdge the edges by the edge with its offset
 template <typename NodeStorageType>
-void Markov::Edge<NodeStorageType>::AdjustEdge(uint64_t offset) {
+void Markov::Edge<NodeStorageType>::AdjustEdge(long int offset) {
 	this->_weight += offset;
 	this->LeftNode()->UpdateTotalVerticeWeight(offset);
 }

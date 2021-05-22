@@ -82,7 +82,7 @@ namespace Markov {
 
 		/** @brief return total edge weights
 		*/
-		inline uint64_t TotalEdgeWeights();
+		inline long int TotalEdgeWeights();
 
 
 		std::vector<Edge<storageType>*> edgesV;
@@ -91,7 +91,7 @@ namespace Markov {
 		
 		storageType _value; /** @brief Character representation of this node. 0 for starter, 0xff for terminator.*/
 
-		int total_edge_weights;/** @brief Total weights of the vertices, required by RandomNext;*/
+		long int total_edge_weights;/** @brief Total weights of the vertices, required by RandomNext;*/
 
 		/** @brief A map of all edges connected to this node, where this node is at the LeftNode.
 		* 
@@ -112,12 +112,13 @@ namespace Markov {
 template <typename storageType>
 Markov::Node<storageType>::Node(storageType _value) {
 	this->_value = _value;
+	this->total_edge_weights = 0L;
 };
 
 template <typename storageType>
 Markov::Node<storageType>::Node() {
 	this->_value = 0;
-	this->total_edge_weights = 0;
+	this->total_edge_weights = 0L;
 };
 
 template <typename storageType>
@@ -146,13 +147,13 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext(Markov::Random:
 	long int selection = randomEngine->random() % this->total_edge_weights;//distribution()(generator());// distribution(generator);
 	//make absolute, no negative modulus values wanted
 	//selection = (selection >= 0) ? selection : (selection + this->total_edge_weights);
-
 	for(int i=0;i<this->edgesV.size();i++){
 		selection -= this->edgesV[i]->EdgeWeight();
 		if (selection < 0) return this->edgesV[i]->TraverseNode();
 	}
 
 	//if this assertion is reached, it means there is an implementation error above
+	std::cout << "This should never be reached (node failed to walk to next)\n"; //cant assert from child thread
 	assert(true && "This should never be reached (node failed to walk to next)");
 	return NULL;
 }
@@ -183,7 +184,7 @@ inline std::map<storageType, Markov::Edge<storageType>*>* Markov::Node<storageTy
 }
 
 template <typename storageType>
-inline uint64_t Markov::Node<storageType>::TotalEdgeWeights() {
+inline long int Markov::Node<storageType>::TotalEdgeWeights() {
 	return this->total_edge_weights;
 }
 
