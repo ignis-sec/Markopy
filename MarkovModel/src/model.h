@@ -199,7 +199,7 @@ NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk(Markov::Random::Rand
 	Markov::Node<NodeStorageType>* n = this->starterNode;
 	int len = 0;
 	Markov::Node<NodeStorageType>* temp_node;
-	while (n != NULL) {
+	while (true) {
 		temp_node = n->RandomNext(randomEngine);
 		if (len > maxSetting) {
 			break;

@@ -152,7 +152,6 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext(Markov::Random:
 		if (selection < 0) return this->edgesV[i]->TraverseNode();
 	}
 
-
 	//if this assertion is reached, it means there is an implementation error above
 	assert(true && "This should never be reached (node failed to walk to next)");
 	return NULL;
