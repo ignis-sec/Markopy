@@ -86,6 +86,7 @@ namespace Markov {
 		inline uint64_t TotalEdgeWeights();
 
 
+		std::vector<Edge<storageType>*> edgesV;
 	private:
 
 		
@@ -158,12 +159,16 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 	//make absolute, no negative modulus values wanted
 	selection = (selection >= 0) ? selection : (selection + this->total_edge_weights);
 
-	for (std::pair<unsigned char, Markov::Edge<storageType>*> const& x : this->edges) {
-		//std::cout << selection << "\n";
-		selection -= x.second->EdgeWeight();
-		//std::cout << selection << "\n";
-		if (selection < 0) return x.second->TraverseNode();
+	for(int i=0;i<this->edgesV.size();i++){
+		selection -= this->edgesV[i]->EdgeWeight();
+		if (selection < 0) return this->edgesV[i]->TraverseNode();
 	}
+	//for (std::pair<unsigned char, Markov::Edge<storageType>*> const& x : this->edges) {
+	//	//std::cout << selection << "\n";
+	//	selection -= x.second->EdgeWeight();
+	//	//std::cout << selection << "\n";
+	//	if (selection < 0) return x.second->TraverseNode();
+	//}
 
 	//if this assertion is reached, it means there is an implementation error above
 	assert(true && "This should never be reached (node failed to walk to next)");
@@ -173,6 +178,7 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 template <typename storageType>
 bool Markov::Node<storageType>::UpdateEdges(Markov::Edge<storageType>* v) {
 	this->edges.insert({ v->RightNode()->NodeValue(), v });
+	this->edgesV.push_back(v);
 	//this->total_edge_weights += v->EdgeWeight();
 	return v->TraverseNode();
 }

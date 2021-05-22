@@ -9,6 +9,7 @@
 #include <fstream>
 #include <assert.h>
 #include <string>
+#include <algorithm>
 #include "node.h"
 #include "edge.h"
 
@@ -151,6 +152,15 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream* f) {
 
 	}
 
+	for (std::pair<unsigned char, Markov::Node<NodeStorageType>*> const& x : this->nodes) {
+		//std::cout << "Total edges in EdgesV: " << x.second->edgesV.size() << "\n"; 
+		std::sort (x.second->edgesV.begin(), x.second->edgesV.end(), [](Edge<NodeStorageType> *lhs, Edge<NodeStorageType> *rhs)->bool{
+			return lhs->EdgeWeight() > rhs->EdgeWeight();
+		});
+		//for(int i=0;i<x.second->edgesV.size();i++)
+		//	std::cout << x.second->edgesV[i]->EdgeWeight() << ", ";
+		//std::cout << "\n";
+	}
 	//std::cout << "Total number of nodes: " << this->nodes.size() << std::endl;
 	//std::cout << "Total number of edges: " << this->edges.size() << std::endl;
 

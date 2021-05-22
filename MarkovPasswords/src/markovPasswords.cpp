@@ -108,13 +108,13 @@ void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName
 		delete threadsV[i];
 	}
 
-	//this->GenerateThread(mlock, iterationsCarryOver, &wordlist, minLen, maxLen);
+	this->GenerateThread(&mlock, iterationsCarryOver, &wordlist, minLen, maxLen);
 	
 }
 
 void MarkovPasswords::GenerateThread(std::mutex *outputLock, unsigned long int n, std::ofstream *wordlist, int minLen, int maxLen)  {
 	char* res;
-	
+	if(n==0) return;
 	for (int i = 0; i < n; i++) {
 		res = this->RandomWalk(minLen, maxLen); 
 		outputLock->lock();
