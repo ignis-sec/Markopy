@@ -50,5 +50,8 @@
     <None Include="src\CLI\markopy_cli.py">
       <Filter>Source Files\CLI</Filter>
     </None>
+    <None Include="src\CLI\sample_models\2gram-trained.mdl">
+      <Filter>Source Files\CLI</Filter>
+    </None>
   </ItemGroup>
 </Project>

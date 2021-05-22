@@ -14,8 +14,8 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#Form{
-	background-image: url(:/back/views/hackback.jpg);
+   <string notr="true">#CLI{
+	background-color:#1E8449;
 
 }
 QFrame{

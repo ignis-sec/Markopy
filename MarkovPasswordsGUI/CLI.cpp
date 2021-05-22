@@ -2,10 +2,8 @@
 #include <fstream>
 #include <Windows.h>
 #include "src/Train.h"
-
-
-
-
+#include  "Generate.h"
+#include "src/MarkovPasswordsGUI.h"
 
 CLI::CLI(QWidget* parent)
     : QMainWindow(parent)
@@ -19,14 +17,14 @@ CLI::CLI(QWidget* parent)
 }
 
 void CLI::start() {
-    Train* w = new Train;
+    Generate* w = new Generate;
     w->show();
     this->close();
 }
 void CLI::statistics() {
-    /*
-    statistic will show
-    */
+    MarkovPasswordsGUI* w = new MarkovPasswordsGUI;
+    w->show();
+    this->close();
 }
 void CLI::about() {
     /*

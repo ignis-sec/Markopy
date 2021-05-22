@@ -14,4 +14,5 @@ private:
 public slots:
 	void home();
 	void train();
+	void goGenerate();
 };

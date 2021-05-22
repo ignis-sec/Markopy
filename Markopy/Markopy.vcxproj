@@ -160,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\CLI\markopy_cli.py" />
+    <None Include="src\CLI\sample_models\2gram-trained.mdl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

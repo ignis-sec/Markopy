@@ -68,21 +68,8 @@ color:#fff;
    <widget class="QPlainTextEdit" name="plainTextEdit">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>80</y>
-      <width>401</width>
-      <height>391</height>
-     </rect>
-    </property>
-    <property name="plainText">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>80</y>
+      <x>260</x>
+      <y>40</y>
       <width>401</width>
       <height>391</height>
      </rect>
@@ -94,8 +81,8 @@ color:#fff;
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>40</y>
+      <x>270</x>
+      <y>10</y>
       <width>251</width>
       <height>31</height>
      </rect>
@@ -110,17 +97,17 @@ color:#fff;
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>500</x>
-      <y>40</y>
-      <width>251</width>
+      <x>420</x>
+      <y>470</y>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size:15px;</string>
+     <string notr="true">font-size:22px;</string>
     </property>
     <property name="text">
-     <string>File Contents After Training:</string>
+     <string/>
     </property>
    </widget>
   </widget>
@@ -148,6 +135,19 @@ color:#fff;
    </property>
    <property name="text">
     <string>Home</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>720</y>
+     <width>191</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>GO Generate</string>
    </property>
   </widget>
  </widget>

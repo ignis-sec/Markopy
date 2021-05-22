@@ -9,6 +9,8 @@
 #include "../MarkovPasswords/src/markovPasswords.h"
 
 #include <QtWidgets/QApplication>
+#include "Generate.h"
+
 
 std::random_device rd;
 std::default_random_engine generator(rd());
@@ -23,8 +25,9 @@ Train::Train(QWidget* parent)
 
     QObject::connect(ui.pushButton, &QPushButton::clicked, this, [this] {train(); });
     QObject::connect(ui.pushButton_2, &QPushButton::clicked, this, [this] {home(); });
-
+    QObject::connect(ui.pushButton_3, &QPushButton::clicked, this, [this] {goGenerate(); });
     
+    ui.pushButton_3->setVisible(false);
 
   
 }
@@ -50,9 +53,15 @@ void Train::train() {
     strcpy(cstr, fname.c_str());
 
 
+   
     char a=',';
     MarkovPasswords mp;
+    mp.Import("models/2gram.mdl");
     mp.Train(cstr, a);
+    mp.Export("models/finished.mdl");
+
+    ui.label_2->setText("Training DONE!");
+    ui.pushButton_3->setVisible(true);
 
     file.close();
 }
@@ -62,4 +71,8 @@ void Train::home() {
      w->show();
      this->close();
 }
-
+void Train::goGenerate() {
+    Generate* w = new Generate;
+    w->show();
+    this->close();
+}
