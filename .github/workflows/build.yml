@@ -221,7 +221,7 @@ jobs:
 
   #Integrity check on pull requests with sonar
   sonar:
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     name: Code Integrity Check with Sonarqube
     runs-on: ubuntu-latest
     steps:

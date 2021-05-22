@@ -5,6 +5,7 @@
     <includes refid="node_8h" local="yes">node.h</includes>
     <includes local="no">assert.h</includes>
     <includes local="no">iostream</includes>
+    <includes local="no">stdexcept</includes>
     <includedby refid="_markov_model_8h" local="yes">/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/MarkovModel.h</includedby>
     <incdepgraph>
       <node id="8">
@@ -12,6 +13,9 @@
       </node>
       <node id="6">
         <label>cstdint</label>
+      </node>
+      <node id="10">
+        <label>stdexcept</label>
       </node>
       <node id="4">
         <label>map</label>
@@ -39,6 +43,8 @@
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="3">

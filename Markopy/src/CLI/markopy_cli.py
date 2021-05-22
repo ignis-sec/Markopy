@@ -18,13 +18,16 @@ epilog=f"""Sample runs:
 {__file__} combine -i untrained.mdl -d dataset.dat -s "\\t" -n 500 -w output.txt -o trained.mdl
     Train and immediately generate 500 lines to output.txt. Export trained model.
 """, formatter_class=argparse.RawTextHelpFormatter)
-parser.add_argument("mode",             help="Operation mode, supported modes: \"generate\", \"train\" and \"combine\".")
-parser.add_argument("input",            help="Input model file. This model will be imported before starting operation.")
-parser.add_argument("-o", "--output",   help="Output model file. This model will be exported when done. Will be ignored for generation mode.")
-parser.add_argument("-d", "--dataset",  help="Dataset file to read input from for training. Will be ignored for generation mode.")
-parser.add_argument("-s", "--seperator",help="Seperator character to use with training data.(character between occurrence and value)")
-parser.add_argument("-w", "--wordlist", help="Wordlist file path to export generation results to. Will be ignored for training mode")
-parser.add_argument("-n", "--count",    help="Number of lines to generate. Ignored in training mode.")
+parser.add_argument("mode",                             help="Operation mode, supported modes: \"generate\", \"train\" and \"combine\".")
+parser.add_argument("input",                            help="Input model file. This model will be imported before starting operation.")
+parser.add_argument("-o", "--output",                   help="Output model file. This model will be exported when done. Will be ignored for generation mode.")
+parser.add_argument("-d", "--dataset",                  help="Dataset file to read input from for training. Will be ignored for generation mode.")
+parser.add_argument("-s", "--seperator",                help="Seperator character to use with training data.(character between occurrence and value)")
+parser.add_argument("-w", "--wordlist",                 help="Wordlist file path to export generation results to. Will be ignored for training mode")
+parser.add_argument("--min", default=6,                 help="Minimum length that is allowed during generation")
+parser.add_argument("--max", default=12,                help="Maximum length that is allowed during generation")
+parser.add_argument("-n", "--count",                    help="Number of lines to generate. Ignored in training mode.")
+parser.add_argument("-t", "--threads",default=10,       help="Number of lines to generate. Ignored in training mode.")
 parser.add_argument("-v", "--verbosity",action="count", help="Output verbosity.")
 args = parser.parse_args() 
 
@@ -72,7 +75,7 @@ def cli_train(model, output_forced=False):
         exit(4)
 
     logging.pprint(f'Starting training.', 3)
-    model.Train(args.dataset,args.seperator)
+    model.Train(args.dataset,args.seperator, int(args.threads))
     logging.pprint(f'Training completed.', 2)
 
     if(args.output):
@@ -89,7 +92,7 @@ def cli_generate(model):
     if(os.path.isfile(args.wordlist)):
         logging.pprint(f"{args.wordlist} exists and will be overwritten.", 1)
 
-    model.Generate(int(args.count), args.wordlist)
+    model.Generate(int(args.count), args.wordlist, int(args.min), int(args.max), int(args.threads))
 
 
 

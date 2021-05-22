@@ -1,5 +1,6 @@
 #pragma once
-#include "../../MarkovModel/src/MarkovModel.h"
+#include "threadSharedListHandler.h"
+#include "MarkovModel/src/model.h"
 
 /** @brief Markov::Model with char represented nodes.
 * 
@@ -29,9 +30,12 @@ public:
 
 
 	/** @brief Train the model with the dataset file.
-	* @param dataset - Ifstream* to the dataset. If null, use class member
+	* @param datasetFileName - Ifstream* to the dataset. If null, use class member
+	* @param delimiter - a character, same as the delimiter in dataset content
 	*/
-	void Train(const char* datasetFileName, char delimiter);
+	void Train(const char* datasetFileName, char delimiter, int threads);
+
+	void TrainThread(ThreadSharedListHandler *listhandler, const char* datasetFileName, char delimiter);
 
 	/** @brief Export model to file.
 	* @param filename - Export filename.
@@ -46,7 +50,8 @@ public:
 	* @param n - Number of passwords to generate.
 	* @return std::ofstream* of the output file.
 	*/
-	void Generate(unsigned long int n, const char* wordlistFileName);
+	void Generate(unsigned long int n, const char* wordlistFileName, int minLen=6, int maxLen=12, int threads=20);
+	void GenerateThread(std::mutex *outputLock, unsigned long int n, std::ofstream *wordlist, int minLen, int maxLen);
 
 private:
 	std::ifstream* datasetFile;

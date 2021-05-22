@@ -13,8 +13,8 @@ class for the final \mbox{\hyperlink{namespace_markov}{Markov}} \mbox{\hyperlink
 \begin{DoxyCompactList}\small\item\em Initialize a model with only start and end nodes. \end{DoxyCompactList}\item 
 Node\+Storage\+Type $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a2e0249e4630353a260e06b8f3a72f5bb}{Random\+Walk}} ()
 \begin{DoxyCompactList}\small\item\em Do a random walk on this model. Start from the starter node, invoke Random\+Next on current node until terminator node is reached. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_markov_1_1_model_abb14649eb59af2b60d17400e3c1d827b}{adjust}} (Node\+Storage\+Type $\ast$payload, long int occurrence)
-\begin{DoxyCompactList}\small\item\em Adjust the model with a single string. Start from the starter node, and for each character, adjust the edge weight from current node to the next, until N\+U\+LL character is reached. Then, update the edge weight from current node, to the terminator node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_model_ad252913f83fa3eb14cc3f9f92c5ee37a}{Adjust\+Edge}} (const Node\+Storage\+Type $\ast$payload, long int occurrence)
+\begin{DoxyCompactList}\small\item\em Adjust the model with a single string. Start from the starter node, and for each character, Adjust\+Edge the edge Edge\+Weight from current node to the next, until N\+U\+LL character is reached. Then, update the edge Edge\+Weight from current node, to the terminator node. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}} (std\+::ifstream $\ast$)
 \begin{DoxyCompactList}\small\item\em Import a file to construct the model. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{Import}} (const char $\ast$filename)
@@ -42,20 +42,20 @@ class for the final \mbox{\hyperlink{namespace_markov}{Markov}} \mbox{\hyperlink
 This class will be {\itshape templated later to work with other data types than char}. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_markov_1_1_model_abb14649eb59af2b60d17400e3c1d827b}\label{class_markov_1_1_model_abb14649eb59af2b60d17400e3c1d827b}} 
-\index{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!adjust@{adjust}}
-\index{adjust@{adjust}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}}
-\doxysubsubsection{\texorpdfstring{adjust()}{adjust()}}
+\mbox{\Hypertarget{class_markov_1_1_model_ad252913f83fa3eb14cc3f9f92c5ee37a}\label{class_markov_1_1_model_ad252913f83fa3eb14cc3f9f92c5ee37a}} 
+\index{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!AdjustEdge@{AdjustEdge}}
+\index{AdjustEdge@{AdjustEdge}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}}
+\doxysubsubsection{\texorpdfstring{AdjustEdge()}{AdjustEdge()}}
 {\footnotesize\ttfamily template$<$typename Node\+Storage\+Type $>$ \\
-void \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Storage\+Type $>$\+::adjust (\begin{DoxyParamCaption}\item[{Node\+Storage\+Type $\ast$}]{payload,  }\item[{long int}]{occurrence }\end{DoxyParamCaption})}
+void \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Storage\+Type $>$\+::Adjust\+Edge (\begin{DoxyParamCaption}\item[{const Node\+Storage\+Type $\ast$}]{payload,  }\item[{long int}]{occurrence }\end{DoxyParamCaption})}
 
 
 
-Adjust the model with a single string. Start from the starter node, and for each character, adjust the edge weight from current node to the next, until N\+U\+LL character is reached. Then, update the edge weight from current node, to the terminator node. 
+Adjust the model with a single string. Start from the starter node, and for each character, Adjust\+Edge the edge Edge\+Weight from current node to the next, until N\+U\+LL character is reached. Then, update the edge Edge\+Weight from current node, to the terminator node. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em string} & -\/ String that is passed from the training, and will be used to adjust the model with \\
+{\em string} & -\/ String that is passed from the training, and will be used to Adjust\+Edge the model with \\
 \hline
 {\em occurrence} & -\/ Occurrence of this string. \\
 \hline
@@ -85,7 +85,7 @@ bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Stora
 
 Export a file of the model. 
 
-File contains a list of edges. Format is\+: Left\+\_\+repr;weight;right\+\_\+repr Iterate over this vertices, and their edges, and write them to file. \begin{DoxyReturn}{Returns}
+File contains a list of edges. Format is\+: Left\+\_\+repr;Edge\+Weight;right\+\_\+repr Iterate over this vertices, and their edges, and write them to file. \begin{DoxyReturn}{Returns}
 True if successful, False for incomplete models. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}\label{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}} 
@@ -113,7 +113,7 @@ bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ Node\+Stora
 
 Import a file to construct the model. 
 
-File contains a list of edges. Format is\+: Left\+\_\+repr;weight;right\+\_\+repr Iterate over this list, and construct nodes and edges accordingly. \begin{DoxyReturn}{Returns}
+File contains a list of edges. Format is\+: Left\+\_\+repr;Edge\+Weight;right\+\_\+repr Iterate over this list, and construct nodes and edges accordingly. \begin{DoxyReturn}{Returns}
 True if successful, False for incomplete models or corrupt file formats 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_markov_1_1_model_a2e0249e4630353a260e06b8f3a72f5bb}\label{class_markov_1_1_model_a2e0249e4630353a260e06b8f3a72f5bb}} 
@@ -142,7 +142,7 @@ Null terminated string that was generated.
 Return starter \mbox{\hyperlink{class_markov_1_1_node}{Node}}. 
 
 \begin{DoxyReturn}{Returns}
-starter node with 00 value 
+starter node with 00 Node\+Value 
 \end{DoxyReturn}
 
 

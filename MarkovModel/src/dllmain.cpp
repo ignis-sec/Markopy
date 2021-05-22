@@ -2,10 +2,6 @@
 #include "model.h"
 #include <iostream>
 
-// dllmain.cpp : Defines the entry point for the DLL application.
-//std::random_device rd;
-//std::default_random_engine generator(rd());
-//std::uniform_int_distribution<long long unsigned> distribution(0, 0xffffFFFF);
 
 #ifdef _WIN32
 __declspec(dllexport) void dll_loadtest() {
