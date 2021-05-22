@@ -120,6 +120,23 @@ inline std::uniform_int_distribution<long long unsigned>& distribution() {
 
 
 
+inline unsigned long marsagliaRandom(void) {          //period 2^96-1
+	static unsigned long x=123456789, y=362436069, z=521288629;
+	unsigned long t;
+	x ^= x << 16;
+	x ^= x >> 5;
+	x ^= x << 1;
+
+	t = x;
+	x = y;
+	y = z;
+	z = t ^ x ^ y;
+
+	return z;
+}
+
+
+
 
 template <typename storageType>
 Markov::Node<storageType>::Node(storageType _value) {
@@ -155,7 +172,7 @@ template <typename storageType>
 Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 
 	//get a random NodeValue in range of total_vertice_weight
-	int rnd = distribution()(generator());// distribution(generator);
+	int rnd = marsagliaRandom();//distribution()(generator());// distribution(generator);
 
 	int selection = rnd % this->total_edge_weights; //add division by zero execption handling //replace with next lines while not empty file
 	/*if(this->total_edge_weights==0)
