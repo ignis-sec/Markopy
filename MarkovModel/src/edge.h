@@ -34,7 +34,7 @@ namespace Markov {
 		/** @brief Traverse this edge to RightNode.
 		* @return Right node. If this is a terminator node, return NULL
 		*/
-		Node<NodeStorageType>* TraverseNode();
+		inline Node<NodeStorageType>* TraverseNode();
 
 		/** @brief Set LeftNode of this edge.
 		* @param node - Node to be linked with.
@@ -48,7 +48,7 @@ namespace Markov {
 		/** @brief return edge's EdgeWeight.
 		* @return edge's EdgeWeight.
 		*/
-		uint64_t EdgeWeight();
+		inline uint64_t EdgeWeight();
 
 		/** @brief return edge's LeftNode
 		* @return edge's LeftNode.
@@ -91,7 +91,7 @@ void Markov::Edge<NodeStorageType>::AdjustEdge(uint64_t offset) {
 }
 //to TraverseNode the node
 template <typename NodeStorageType>
-Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::TraverseNode() {
+inline Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::TraverseNode() {
 	if (this->RightNode()->NodeValue() == 0xff) //terminator node
 		return NULL;
 	return _right;
@@ -108,7 +108,7 @@ void Markov::Edge<NodeStorageType>::SetRightEdge(Markov::Node<NodeStorageType>* 
 }
 //to get the EdgeWeight of the node
 template <typename NodeStorageType>
-uint64_t Markov::Edge<NodeStorageType>::EdgeWeight() {
+inline uint64_t Markov::Edge<NodeStorageType>::EdgeWeight() {
 	return this->_weight;
 }
 //to get the LeftNode of the node

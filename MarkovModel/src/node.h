@@ -71,7 +71,7 @@ namespace Markov {
 		/** @brief Return character representation of this node.
 		* @return character representation at _value.
 		*/
-		unsigned char NodeValue();
+		inline unsigned char NodeValue();
 
 		/** @brief Change total weights with offset
 		*/
@@ -79,11 +79,11 @@ namespace Markov {
 
 		/** @brief return edges
 		*/
-		std::map<storageType, Edge<storageType>*>* Edges();
+		inline std::map<storageType, Edge<storageType>*>* Edges();
 
 		/** @brief return total edge weights
 		*/
-		uint64_t TotalEdgeWeights();
+		inline uint64_t TotalEdgeWeights();
 
 
 	private:
@@ -100,24 +100,6 @@ namespace Markov {
 		std::map<storageType, Edge<storageType>*> edges;
 	};
 };
-
-
-inline std::random_device& rd() {
-	static std::random_device _rd;
-	return _rd;
-}
-
-inline std::default_random_engine& generator() {
-	static std::default_random_engine _generator;
-	return _generator;
-}
-
-
-inline std::uniform_int_distribution<long long unsigned>& distribution() {
-	static std::uniform_int_distribution<long long unsigned> _distribution;
-	return _distribution;
-}
-
 
 
 inline unsigned long marsagliaRandom(void) {          //period 2^96-1
@@ -150,7 +132,7 @@ Markov::Node<storageType>::Node() {
 };
 
 template <typename storageType>
-unsigned char Markov::Node<storageType>::NodeValue() {
+inline unsigned char Markov::Node<storageType>::NodeValue() {
 	return _value;
 }
 
@@ -172,34 +154,10 @@ template <typename storageType>
 Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 
 	//get a random NodeValue in range of total_vertice_weight
-	int rnd = marsagliaRandom();//distribution()(generator());// distribution(generator);
-
-	int selection = rnd % this->total_edge_weights; //add division by zero execption handling //replace with next lines while not empty file
-	/*if(this->total_edge_weights==0)
-		throw std::runtime_error("Math error: Attempted to divide by zero\n");
-	try {
-		int selection = rnd % this->total_edge_weights;
-	}
-	catch (std::runtime_error e) {
-
-		// prints that exception has occurred
-		// calls the what function using object of
-		// runtime_error class
-		std::cout << "Exception occurred" << std::endl
-			<< e.what();
-	}*/
-
-
+	long int selection = marsagliaRandom() % this->total_edge_weights;//distribution()(generator());// distribution(generator);
 	//make absolute, no negative modulus values wanted
 	selection = (selection >= 0) ? selection : (selection + this->total_edge_weights);
 
-	//iterate over the Edge map
-	//Subtract the Edge EdgeWeight from the selection at each Edge
-	//when selection goes below 0, pick that node 
-	//(Fast random selection with EdgeWeight bias)
-	//std::cout << "Rand: " << rnd << "\n";
-	//std::cout << "Total: " << this->total_edge_weights << "\n";
-	//std::cout << "Total edges: " << this->edges.size() << "\n";
 	for (std::pair<unsigned char, Markov::Edge<storageType>*> const& x : this->edges) {
 		//std::cout << selection << "\n";
 		selection -= x.second->EdgeWeight();
@@ -232,12 +190,12 @@ void Markov::Node<storageType>::UpdateTotalVerticeWeight(long int offset) {
 }
 
 template <typename storageType>
-std::map<storageType, Markov::Edge<storageType>*>* Markov::Node<storageType>::Edges() {
+inline std::map<storageType, Markov::Edge<storageType>*>* Markov::Node<storageType>::Edges() {
 	return &(this->edges);
 }
 
 template <typename storageType>
-uint64_t Markov::Node<storageType>::TotalEdgeWeights() {
+inline uint64_t Markov::Node<storageType>::TotalEdgeWeights() {
 	return this->total_edge_weights;
 }
 
