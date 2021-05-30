@@ -51,7 +51,7 @@ void Generate::generation() {
     ui.label_6->setText("GENERATING!");
     
     MarkovPasswords mp;
-    mp.Import("C:\\Users\\yunus\\source\\repos\\MarkovPasswordsM\\Markopy\\src\\CLI\\sample_models\\2gram-trained.mdl");
+    mp.Import("Markopy\\src\\CLI\\sample_models\\2gram-trained.mdl");
     mp.Export("C:\\Users\\Yunus\\Desktop\\test.mdl");
     mp.Generate(numberPass,cstr,minLen,maxLen);
 
