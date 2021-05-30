@@ -1,5 +1,4 @@
 #include <fstream>
-#include <Windows.h>
 #include <QtWidgets/QApplication>
 #include "src\about.h"
 

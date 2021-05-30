@@ -5,14 +5,14 @@
 ##############################################################################################################
 
 # Compiler
-CC            := g++
+CC            	:= g++
 #output directory
-BIN            := bin
+BIN            	:= bin
 #include directory
-INCLUDE        := include
+INCLUDE        	:= include
 #Libraries
-LIB            := lib
-LIBRARIES    :=
+LIB            	:= lib
+LIBRARIES    	:=
 
 ifndef PYTHON_VERSION
 PYTHON_VERSION := $(shell python3 -c "import sys;t='{v[0]}.{v[1]}'.format(v=list(sys.version_info[:2]));sys.stdout.write(t)";) #3.8
@@ -20,34 +20,21 @@ endif
 
 PYTHON_VERSION_ :=$(shell python$(PYTHON_VERSION) -c "import sys;t='{v[0]}{v[1]}'.format(v=list(sys.version_info[:2]));sys.stdout.write(t)";) #38
 PYTHON_VERSION3 :=$(shell python$(PYTHON_VERSION) -c "import sys;t='{v[0]}.{v[1]}.{v[2]}'.format(v=list(sys.version_info[:3]));sys.stdout.write(t)";) #3.8.s2
+
 ##############################################################################################################
 #####################################     MarkovPassword project options     #################################
 ##############################################################################################################
 
 MP_C_FLAGS  := -Wall -Wextra -g
 MP_EXEC     := Markov
-MP_SRC      := $(shell find ./MarkovPasswords/src/ -name '*.cpp') $(shell find ./MarkovModel/src/ -name '*.cpp')
-
-#build pattern
-$(BIN)/$(MP_EXEC): $(MP_SRC)
-	$(CC) $(MP_C_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)    
-
-
-PYTHON_VERSION_ :=$(shell python$(PYTHON_VERSION) -c "import sys;t='{v[0]}{v[1]}'.format(v=list(sys.version_info[:2]));sys.stdout.write(t)";) #38
-PYTHON_VERSION3 :=$(shell python$(PYTHON_VERSION) -c "import sys;t='{v[0]}.{v[1]}.{v[2]}'.format(v=list(sys.version_info[:3]));sys.stdout.write(t)";) #3.8.s2
-##############################################################################################################
-#####################################     MarkovPassword project options     #################################
-##############################################################################################################
-
-MP_C_FLAGS  := -Wall -Wextra -g
-MP_EXEC     := Markov
-MP_SRC      := $(shell find ./MarkovPasswords/src/ -name '*.cpp') $(shell find ./MarkovModel/src/ -name '*.cpp')
+MP_SRC      := $(shell find ./MarkovPasswords/src/ -name '*.cpp') 
 MP_INC 		:= 
-MP_LIB		:= -lboost_program_options
+MP_LIB		:= -lboost_program_options -lpthread
+MP_INC		:= $(shell pwd)
+
 #build pattern
 $(BIN)/$(MP_EXEC): $(MP_SRC)
-	$(CC) $(MP_C_FLAGS) -I$(MP_INC) -L$(LIB) $^ -o $@ $(MP_LIB)      
-
+	$(CC) $(MP_C_FLAGS) -I$(MP_INC) -L$(LIB) $^ -o $@ $(MP_LIB) 
 
 ##############################################################################################################
 #####################################       MarkovModel project options      #################################
@@ -77,12 +64,13 @@ $(BIN)/%.cpp.o:%.cpp
 #####################################            Markopy Options             #################################
 ##############################################################################################################
 
-MPY_SRC          := $(shell find MarkovModel/src/ -name '*.cpp') MarkovPasswords/src/markovPasswords.cpp $(shell find Markopy/src/Module/ -name '*.cpp')
+MPY_SRC          := MarkovPasswords/src/markovPasswords.cpp MarkovPasswords/src/threadSharedListHandler.cpp $(shell find Markopy/src/Module/ -name '*.cpp')
+MPY_SRC_DIR		 := Markopy/src/
 MPY_OBJS         := $(MPY_SRC:%=$(BIN)/%.o)
 MPY_DEPS         := $(MPY_OBJS:.o=.d)
-MPY_LDFLAGS      := -shared -lboost_python$(PYTHON_VERSION_) -lpython$(PYTHON_VERSION)
+MPY_LDFLAGS      := -shared -lboost_python$(PYTHON_VERSION_) -lpython$(PYTHON_VERSION) -lpthread
 MPY_C_FLAGS      := $(MPY_INC_FLAGS) -MMD -MP -fPIC -I/usr/include/python$(PYTHON_VERSION)
-MPY_INC_DIRS     := $(shell find $(MPY_SRC_DIR) -type d)
+MPY_INC_DIRS     := $(shell find $(MPY_SRC_DIR) -type d) $(shell pwd)
 MPY_INC_FLAGS    := $(addprefix -I,$(MPY_INC_DIRS))
 MPY_SO           := markopy.so
 
@@ -92,7 +80,7 @@ $(BIN)/$(MPY_SO): $(MPY_OBJS)
 # Build step for C++ source
 $(BIN)/%.cpp.o:%.cpp
 	mkdir -p $(dir $@)
-	$(CC) $(MPY_C_FLAGS) -c $< -o $@
+	$(CC) $(MPY_C_FLAGS) $(MPY_INC_FLAGS) -c $< -o $@
 
 -include $(MPY_DEPS)
 

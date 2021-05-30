@@ -1,20 +1,15 @@
 #include "src/Train.h"
 #include <fstream>
-#include <Windows.h>
 #include<QFileDialog>
 #include<QMessageBox>
 #include<QTextStream>
 #include<QDir>
 #include "src/CLI.h"
-#include "../MarkovPasswords/src/markovPasswords.h"
+#include "MarkovPasswords/src/markovPasswords.h"
 
 #include <QtWidgets/QApplication>
 #include "Generate.h"
 
-
-std::random_device rd;
-std::default_random_engine generator(rd());
-std::uniform_int_distribution<long long unsigned> distribution(0, 0xffffFFFF);
 
 Train::Train(QWidget* parent)
     : QMainWindow(parent)
@@ -57,11 +52,12 @@ void Train::train() {
     char a=',';
     MarkovPasswords mp;
     mp.Import("models/2gram.mdl");
-    mp.Train(cstr, a);
+    mp.Train(cstr, a, 10); //please parameterize this hardcoded 10 threads
     mp.Export("models/finished.mdl");
 
     ui.label_2->setText("Training DONE!");
     ui.pushButton_3->setVisible(true);
+
 
     file.close();
 }

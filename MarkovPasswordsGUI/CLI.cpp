@@ -1,6 +1,5 @@
 #include "src\CLI.h"
 #include <fstream>
-#include <Windows.h>
 #include "src/Train.h"
 #include  "Generate.h"
 #include "src/MarkovPasswordsGUI.h"

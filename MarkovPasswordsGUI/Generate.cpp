@@ -1,6 +1,5 @@
 #include "Generate.h"
 #include <fstream>
-#include <Windows.h>
 #include<QFileDialog>
 #include<QMessageBox>
 #include<QTextStream>
@@ -27,7 +26,7 @@ Generate::Generate(QWidget* parent)
     ui.label_4->setVisible(false);
     ui.label_5->setVisible(false);
 
-    
+
 }
 
 void Generate::generation() {
@@ -51,7 +50,8 @@ void Generate::generation() {
     ui.label_6->setText("GENERATING!");
     
     MarkovPasswords mp;
-    mp.Import("2gram-trained.mdl");
+    mp.Import("C:\\Users\\yunus\\source\\repos\\MarkovPasswordsM\\Markopy\\src\\CLI\\sample_models\\2gram-trained.mdl");
+    mp.Export("C:\\Users\\Yunus\\Desktop\\test.mdl");
     mp.Generate(numberPass,cstr,minLen,maxLen);
 
     if (!file.open(QFile::ReadOnly | QFile::Text)) {
