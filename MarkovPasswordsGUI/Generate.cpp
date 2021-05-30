@@ -51,8 +51,7 @@ void Generate::generation() {
     ui.label_6->setText("GENERATING!");
     
     MarkovPasswords mp;
-    mp.Import("Markopy\\src\\CLI\\sample_models\\2gram-trained.mdl");
-    mp.Export("C:\\Users\\Yunus\\Desktop\\test.mdl");
+    mp.Import("2gram-trained.mdl");
     mp.Generate(numberPass,cstr,minLen,maxLen);
 
     if (!file.open(QFile::ReadOnly | QFile::Text)) {
