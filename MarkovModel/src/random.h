@@ -2,7 +2,9 @@
 
 #include <random>
 #include <iostream>
-namespace Markov::Random{
+
+namespace Markov{
+namespace Random{
 
 class RandomEngine{
 public: 
@@ -52,4 +54,4 @@ private:
 	unsigned long z;
 };
 
-};
+};};
