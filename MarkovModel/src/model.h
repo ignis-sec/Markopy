@@ -9,6 +9,7 @@
 #include <fstream>
 #include <assert.h>
 #include <string>
+#include <algorithm>
 #include "node.h"
 #include "edge.h"
 
@@ -38,7 +39,7 @@ namespace Markov {
 		* Start from the starter node, invoke RandomNext on current node until terminator node is reached.
 		* @return Null terminated string that was generated.
 		*/
-		NodeStorageType* RandomWalk(int minSetting, int maxSetting);
+		NodeStorageType* RandomWalk(Markov::Random::RandomEngine* randomEngine, int minSetting, int maxSetting, NodeStorageType* buffer);
 
 		/** @brief Adjust the model with a single string. 
 		* Start from the starter node, and for each character, AdjustEdge the edge EdgeWeight from current node to the next, until NULL character is reached.
@@ -113,15 +114,15 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream* f) {
 
 	char src;
 	char target;
-	int oc;
+	long int oc;
 
 	while (std::getline(*f, cell)) {
 		//std::cout << "cell: " << cell << std::endl;
 		src = cell[0];
 		target = cell[cell.length() - 1];
-		oc = std::atoi(cell.substr(2, cell.length() - 2).c_str());
-
-
+		char* j;
+		oc = std::strtol(cell.substr(2, cell.length() - 2).c_str(),&j,10);
+		//std::cout << oc << "\n";
 		Markov::Node<NodeStorageType>* srcN;
 		Markov::Node<NodeStorageType>* targetN;
 		Markov::Edge<NodeStorageType>* e;
@@ -151,6 +152,15 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream* f) {
 
 	}
 
+	for (std::pair<unsigned char, Markov::Node<NodeStorageType>*> const& x : this->nodes) {
+		//std::cout << "Total edges in EdgesV: " << x.second->edgesV.size() << "\n"; 
+		std::sort (x.second->edgesV.begin(), x.second->edgesV.end(), [](Edge<NodeStorageType> *lhs, Edge<NodeStorageType> *rhs)->bool{
+			return lhs->EdgeWeight() > rhs->EdgeWeight();
+		});
+		//for(int i=0;i<x.second->edgesV.size();i++)
+		//	std::cout << x.second->edgesV[i]->EdgeWeight() << ", ";
+		//std::cout << "\n";
+	}
 	//std::cout << "Total number of nodes: " << this->nodes.size() << std::endl;
 	//std::cout << "Total number of edges: " << this->edges.size() << std::endl;
 
@@ -185,43 +195,33 @@ bool Markov::Model<NodeStorageType>::Export(const char* filename) {
 }
 
 template <typename NodeStorageType>
-NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk(int minSetting, int maxSetting) {
+NodeStorageType* Markov::Model<NodeStorageType>::RandomWalk(Markov::Random::RandomEngine* randomEngine, int minSetting, int maxSetting, NodeStorageType* buffer) {
 	Markov::Node<NodeStorageType>* n = this->starterNode;
 	int len = 0;
-	NodeStorageType* ret = new NodeStorageType[64];
 	Markov::Node<NodeStorageType>* temp_node;
-	while (n != NULL) {
-		//n = n->RandomNext();
-		temp_node = n->RandomNext();
-		//dirty cutoff, needs better solution
-		if (len == 60)
-			break;
-		if (len > maxSetting) {
-			//std::cout<<"MAX ->"<< "node*: " << temp_node << ", len: " << len << "\n";
+	while (true) {
+		temp_node = n->RandomNext(randomEngine);
+		if (len >= maxSetting) {
 			break;
 		}
-
-		if ((temp_node == NULL) && (len < minSetting)) {
-			//std::cout << "node*: " << temp_node << ", len: " << len << "\n";
+		else if ((temp_node == NULL) && (len < minSetting)) {
 			continue;
 		}
 
-		if (temp_node == NULL)
+		else if (temp_node == NULL){
 			break;
+		}
+			
 		n = temp_node;
 
-		//std::cout << n->NodeValue();
-		ret[len++] = n->NodeValue();
-
-		//maximum character length exceeded and stack will overflow.
-		//assert(len<32 && "return buffer overflowing, this will segfault if not aborted.");
+		buffer[len++] = n->NodeValue();
 	}
 
 	//null terminate the string
-	ret[len] = 0x00;
+	buffer[len] = 0x00;
 
 	//do something with the generated string
-	return ret; //for now
+	return buffer; //for now
 }
 
 template <typename NodeStorageType>

@@ -1,12 +1,11 @@
 #pragma once
 #include <vector>
 #include <map>
-#include <random>
 #include <assert.h>
 #include <iostream>
 #include <stdexcept> // To use runtime_error
 #include "edge.h"
-
+#include "random.h"
 namespace Markov {
 
 	/** @brief A node class that for the vertices of model. Connected with eachother using Edge
@@ -48,7 +47,7 @@ namespace Markov {
 		* At each step, EdgeWeight of the edge is subtracted from the random number, and once it is 0, next node is selected.
 		* @return Node that was chosen at EdgeWeight biased random.
 		*/
-		Node<storageType>* RandomNext();
+		Node<storageType>* RandomNext(Markov::Random::RandomEngine* randomEngine);
 
 		/** @brief Insert a new edge to the this.edges.
 		* @param edge - New edge that will be inserted.
@@ -71,7 +70,7 @@ namespace Markov {
 		/** @brief Return character representation of this node.
 		* @return character representation at _value.
 		*/
-		unsigned char NodeValue();
+		inline unsigned char NodeValue();
 
 		/** @brief Change total weights with offset
 		*/
@@ -79,19 +78,20 @@ namespace Markov {
 
 		/** @brief return edges
 		*/
-		std::map<storageType, Edge<storageType>*>* Edges();
+		inline std::map<storageType, Edge<storageType>*>* Edges();
 
 		/** @brief return total edge weights
 		*/
-		uint64_t TotalEdgeWeights();
+		inline long int TotalEdgeWeights();
 
 
+		std::vector<Edge<storageType>*> edgesV;
 	private:
 
 		
 		storageType _value; /** @brief Character representation of this node. 0 for starter, 0xff for terminator.*/
 
-		int total_edge_weights;/** @brief Total weights of the vertices, required by RandomNext;*/
+		long int total_edge_weights;/** @brief Total weights of the vertices, required by RandomNext;*/
 
 		/** @brief A map of all edges connected to this node, where this node is at the LeftNode.
 		* 
@@ -102,21 +102,9 @@ namespace Markov {
 };
 
 
-inline std::random_device& rd() {
-	static std::random_device _rd;
-	return _rd;
-}
-
-inline std::default_random_engine& generator() {
-	static std::default_random_engine _generator;
-	return _generator;
-}
 
 
-inline std::uniform_int_distribution<long long unsigned>& distribution() {
-	static std::uniform_int_distribution<long long unsigned> _distribution;
-	return _distribution;
-}
+
 
 
 
@@ -124,16 +112,17 @@ inline std::uniform_int_distribution<long long unsigned>& distribution() {
 template <typename storageType>
 Markov::Node<storageType>::Node(storageType _value) {
 	this->_value = _value;
+	this->total_edge_weights = 0L;
 };
 
 template <typename storageType>
 Markov::Node<storageType>::Node() {
 	this->_value = 0;
-	this->total_edge_weights = 0;
+	this->total_edge_weights = 0L;
 };
 
 template <typename storageType>
-unsigned char Markov::Node<storageType>::NodeValue() {
+inline unsigned char Markov::Node<storageType>::NodeValue() {
 	return _value;
 }
 
@@ -152,45 +141,19 @@ Markov::Edge<storageType>* Markov::Node<storageType>::Link(Markov::Edge<storageT
 }
 
 template <typename storageType>
-Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
+Markov::Node<storageType>* Markov::Node<storageType>::RandomNext(Markov::Random::RandomEngine* randomEngine) {
 
 	//get a random NodeValue in range of total_vertice_weight
-	int rnd = distribution()(generator());// distribution(generator);
-
-	int selection = rnd % this->total_edge_weights; //add division by zero execption handling //replace with next lines while not empty file
-	/*if(this->total_edge_weights==0)
-		throw std::runtime_error("Math error: Attempted to divide by zero\n");
-	try {
-		int selection = rnd % this->total_edge_weights;
-	}
-	catch (std::runtime_error e) {
-
-		// prints that exception has occurred
-		// calls the what function using object of
-		// runtime_error class
-		std::cout << "Exception occurred" << std::endl
-			<< e.what();
-	}*/
-
-
+	long int selection = randomEngine->random() % this->total_edge_weights;//distribution()(generator());// distribution(generator);
 	//make absolute, no negative modulus values wanted
-	selection = (selection >= 0) ? selection : (selection + this->total_edge_weights);
-
-	//iterate over the Edge map
-	//Subtract the Edge EdgeWeight from the selection at each Edge
-	//when selection goes below 0, pick that node 
-	//(Fast random selection with EdgeWeight bias)
-	//std::cout << "Rand: " << rnd << "\n";
-	//std::cout << "Total: " << this->total_edge_weights << "\n";
-	//std::cout << "Total edges: " << this->edges.size() << "\n";
-	for (std::pair<unsigned char, Markov::Edge<storageType>*> const& x : this->edges) {
-		//std::cout << selection << "\n";
-		selection -= x.second->EdgeWeight();
-		//std::cout << selection << "\n";
-		if (selection < 0) return x.second->TraverseNode();
+	//selection = (selection >= 0) ? selection : (selection + this->total_edge_weights);
+	for(int i=0;i<this->edgesV.size();i++){
+		selection -= this->edgesV[i]->EdgeWeight();
+		if (selection < 0) return this->edgesV[i]->TraverseNode();
 	}
 
 	//if this assertion is reached, it means there is an implementation error above
+	std::cout << "This should never be reached (node failed to walk to next)\n"; //cant assert from child thread
 	assert(true && "This should never be reached (node failed to walk to next)");
 	return NULL;
 }
@@ -198,6 +161,7 @@ Markov::Node<storageType>* Markov::Node<storageType>::RandomNext() {
 template <typename storageType>
 bool Markov::Node<storageType>::UpdateEdges(Markov::Edge<storageType>* v) {
 	this->edges.insert({ v->RightNode()->NodeValue(), v });
+	this->edgesV.push_back(v);
 	//this->total_edge_weights += v->EdgeWeight();
 	return v->TraverseNode();
 }
@@ -215,12 +179,12 @@ void Markov::Node<storageType>::UpdateTotalVerticeWeight(long int offset) {
 }
 
 template <typename storageType>
-std::map<storageType, Markov::Edge<storageType>*>* Markov::Node<storageType>::Edges() {
+inline std::map<storageType, Markov::Edge<storageType>*>* Markov::Node<storageType>::Edges() {
 	return &(this->edges);
 }
 
 template <typename storageType>
-uint64_t Markov::Node<storageType>::TotalEdgeWeights() {
+inline long int Markov::Node<storageType>::TotalEdgeWeights() {
 	return this->total_edge_weights;
 }
 

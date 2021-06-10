@@ -58,11 +58,11 @@ void MarkovPasswords::Train(const char* datasetFileName, char delimiter, int thr
 }
 
 void MarkovPasswords::TrainThread(ThreadSharedListHandler *listhandler, const char* datasetFileName, char delimiter){
-	char format_str[] ="%d,%s";
+	char format_str[] ="%ld,%s";
 	format_str[2]=delimiter;
 	std::string line;
 	while (listhandler->next(&line)) {
-		int oc;
+		long int oc;
 		if (line.size() > 100) {
 			line = line.substr(0, 100);
 		}
@@ -108,24 +108,19 @@ void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName
 		delete threadsV[i];
 	}
 
-	//this->GenerateThread(mlock, iterationsCarryOver, &wordlist, minLen, maxLen);
+	this->GenerateThread(&mlock, iterationsCarryOver, &wordlist, minLen, maxLen);
 	
 }
 
 void MarkovPasswords::GenerateThread(std::mutex *outputLock, unsigned long int n, std::ofstream *wordlist, int minLen, int maxLen)  {
-	char* res;
-	char print[100];
-	
+	char* res = new char[maxLen+5];
+	if(n==0) return;
+
+	Markov::Random::Marsaglia MarsagliaRandomEngine;
 	for (int i = 0; i < n; i++) {
-		res = this->RandomWalk(minLen, maxLen); 
-#ifdef _WIN32
-		strcpy_s(print, 100, (char*)res);
-#else
-		strcpy(print, (char*)res);
-#endif // !_WIN32
+		this->RandomWalk(&MarsagliaRandomEngine, minLen, maxLen, res); 
 		outputLock->lock();
 		*wordlist << res << "\n";
 		outputLock->unlock();
-		delete res;
 	}
 }
