@@ -1,0 +1,5 @@
+<map id="Markov::Edge::TraverseNode" name="Markov::Edge::TraverseNode">
+<area shape="rect" id="node1" title="Traverse this edge to RightNode." alt="" coords="264,46,472,73"/>
+<area shape="rect" id="node2" href="$namespace_testing_1_1_m_v_p_1_1_markov_model.html#a0e3a45b149abd9dff30adc9b877f94cd" title="Test class for minimal viable Edge." alt="" coords="10,5,211,47"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_node.html#a77dbb90420f6199790a4fa986b93f85c" title="Insert a new edge to the this.edges." alt="" coords="5,71,216,112"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Testing::MarkovModel::TEST_CLASS" name="Testing::MarkovModel::TEST_CLASS">
+<area shape="rect" id="node1" title="Test class for rest of model cases." alt="" coords="5,74,169,115"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_node.html#ad836573fbdec1c6d7e72945f48ed081c" title="Find an edge with its character representation." alt="" coords="235,5,413,32"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_node.html#a0e867cddf6b8dd784c36b12aa820fee9" title="Link this node with another, with this node as its source." alt="" coords="251,56,397,83"/>
+<area shape="rect" id="node4" href="$class_markov_1_1_model.html#aa4a11c6679c998936332f8409ae95375" title="Do a random walk on this model." alt="" coords="217,107,431,133"/>
+<area shape="rect" id="node5" href="$class_markov_1_1_model.html#a35cb15a14d034f3365b9d2d3efa1ffc0" title="Return starter Node." alt="" coords="222,157,426,184"/>
+</map>
