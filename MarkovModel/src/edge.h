@@ -29,12 +29,12 @@ namespace Markov {
 		* Adds the offset parameter to the edge EdgeWeight.
 		* @param offset - NodeValue to be added to the EdgeWeight
 		*/
-		void AdjustEdge(uint64_t offset);
+		void AdjustEdge(long int offset);
 		
 		/** @brief Traverse this edge to RightNode.
 		* @return Right node. If this is a terminator node, return NULL
 		*/
-		Node<NodeStorageType>* TraverseNode();
+		inline Node<NodeStorageType>* TraverseNode();
 
 		/** @brief Set LeftNode of this edge.
 		* @param node - Node to be linked with.
@@ -48,7 +48,7 @@ namespace Markov {
 		/** @brief return edge's EdgeWeight.
 		* @return edge's EdgeWeight.
 		*/
-		uint64_t EdgeWeight();
+		inline uint64_t EdgeWeight();
 
 		/** @brief return edge's LeftNode
 		* @return edge's LeftNode.
@@ -58,12 +58,12 @@ namespace Markov {
 		/** @brief return edge's RightNode
 		* @return edge's RightNode.
 		*/
-		Node<NodeStorageType>* RightNode();
+		inline Node<NodeStorageType>* RightNode();
 
 	private:
 		Node<NodeStorageType>* _left; /** @brief source node*/
 		Node<NodeStorageType>* _right;/** @brief target node*/
-		int _weight;    /** @brief Edge EdgeWeight*/
+		long int _weight;    /** @brief Edge EdgeWeight*/
 	};
 
 
@@ -85,13 +85,13 @@ Markov::Edge<NodeStorageType>::Edge(Markov::Node<NodeStorageType>* _left, Markov
 }
 //to AdjustEdge the edges by the edge with its offset
 template <typename NodeStorageType>
-void Markov::Edge<NodeStorageType>::AdjustEdge(uint64_t offset) {
+void Markov::Edge<NodeStorageType>::AdjustEdge(long int offset) {
 	this->_weight += offset;
 	this->LeftNode()->UpdateTotalVerticeWeight(offset);
 }
 //to TraverseNode the node
 template <typename NodeStorageType>
-Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::TraverseNode() {
+inline Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::TraverseNode() {
 	if (this->RightNode()->NodeValue() == 0xff) //terminator node
 		return NULL;
 	return _right;
@@ -108,7 +108,7 @@ void Markov::Edge<NodeStorageType>::SetRightEdge(Markov::Node<NodeStorageType>* 
 }
 //to get the EdgeWeight of the node
 template <typename NodeStorageType>
-uint64_t Markov::Edge<NodeStorageType>::EdgeWeight() {
+inline uint64_t Markov::Edge<NodeStorageType>::EdgeWeight() {
 	return this->_weight;
 }
 //to get the LeftNode of the node
@@ -118,7 +118,7 @@ Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::LeftNode() {
 }
 //to get the RightNode of the node
 template <typename NodeStorageType>
-Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::RightNode() {
+inline Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::RightNode() {
 	return this->_right;
 }
 
