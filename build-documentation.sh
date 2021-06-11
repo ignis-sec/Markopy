@@ -1,5 +1,7 @@
 #!/bin/bash
 
-python3 documentation/m.css/documentation/doxygen.py documentation/mcss.conf.py
+rm -r docs/*
+cd documentation
 
-cp documentation/images/* docs/images/
+doxygen Doxyfile-Light
+doxygen Doxyfile-Dark

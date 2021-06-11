@@ -43,7 +43,7 @@ void MarkovPasswords::Train(const char* datasetFileName, char delimiter, int thr
 
 	std::vector<std::thread*> threadsV;
 	for(int i=0;i<threads;i++){
-		threadsV.push_back(new std::thread(&MarkovPasswords::TrainThread, this, &listhandler, datasetFileName, delimiter));
+		threadsV.push_back(new std::thread(&MarkovPasswords::TrainThread, this, &listhandler, delimiter));
 	}
 
 	for(int i=0;i<threads;i++){
@@ -54,10 +54,9 @@ void MarkovPasswords::Train(const char* datasetFileName, char delimiter, int thr
 	std::chrono::duration<double> elapsed = finish - start;
 	std::cout << "Elapsed time: " << elapsed.count() << " s\n";
 
-	
 }
 
-void MarkovPasswords::TrainThread(ThreadSharedListHandler *listhandler, const char* datasetFileName, char delimiter){
+void MarkovPasswords::TrainThread(ThreadSharedListHandler *listhandler, char delimiter){
 	char format_str[] ="%ld,%s";
 	format_str[2]=delimiter;
 	std::string line;
