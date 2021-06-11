@@ -4,6 +4,7 @@ var searchData=
   ['datasetfile_34',['datasetFile',['../class_markov_passwords.html#abb4e3cd729c7ef289ac0e9a8c2a4d208',1,'MarkovPasswords']]],
   ['datasetname_35',['datasetname',['../struct__program_options.html#ae5e2e6684d1df68308892a085e0c7f4a',1,'_programOptions']]],
   ['default_36',['default',['../namespacemarkopy__cli.html#a5b14073623d29f92ed097fe814aea085',1,'markopy_cli']]],
-  ['distribution_37',['distribution',['../class_markov_1_1_random_1_1_marsaglia.html#abff682344a034c2823c1560753bceec7',1,'Markov::Random::Marsaglia']]],
-  ['dllmain_2ecpp_38',['dllmain.cpp',['../dllmain_8cpp.html',1,'']]]
+  ['defaultrandomengine_37',['DefaultRandomEngine',['../class_markov_1_1_random_1_1_default_random_engine.html',1,'Markov::Random']]],
+  ['distribution_38',['distribution',['../class_markov_1_1_random_1_1_default_random_engine.html#a53c9c440002ed1adb2b18292ca82d1c9',1,'Markov::Random::DefaultRandomEngine']]],
+  ['dllmain_2ecpp_39',['dllmain.cpp',['../dllmain_8cpp.html',1,'']]]
 ];

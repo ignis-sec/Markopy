@@ -1,0 +1,60 @@
+\hypertarget{class_markov_1_1_random_1_1_mersenne}{}\doxysection{Markov\+::Random\+::Mersenne Class Reference}
+\label{class_markov_1_1_random_1_1_mersenne}\index{Markov::Random::Mersenne@{Markov::Random::Mersenne}}
+
+
+Implementation of \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Mersenne}} Twister Engine.  
+
+
+
+
+{\ttfamily \#include $<$random.\+h$>$}
+
+
+
+Inheritance diagram for Markov\+::Random\+::Mersenne\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{class_markov_1_1_random_1_1_mersenne__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Markov\+::Random\+::Mersenne\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{class_markov_1_1_random_1_1_mersenne__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implementation of \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Mersenne}} Twister Engine. 
+
+This is an implementation of \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Mersenne}} Twister Engine, which is slow but is a good implementation for high entropy pseudorandom.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Using \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Mersenne}} Engine with Random\+Walk 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} model;}
+\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Markov::Random::Mersenne}} MersenneTwisterEngine;}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
+\DoxyCodeLine{    this-\/>RandomWalk(\&MersenneTwisterEngine, 5, 10, res); }
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Generating a random number with \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Marsaglia}} Engine 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Markov::Random::Mersenne}} me;}
+\DoxyCodeLine{std::cout << me.\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_afd4233366727e5c2dd14d7e5c3ebfec1}{random}}();}
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/media/ignis/\+H\+D\+D/\+Repositories/\+Markov\+Passwords/\+Markov\+Model/src/\mbox{\hyperlink{random_8h}{random.\+h}}\end{DoxyCompactItemize}

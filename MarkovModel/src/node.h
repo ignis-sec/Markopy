@@ -10,7 +10,7 @@ namespace Markov {
 
 	/** @brief A node class that for the vertices of model. Connected with eachother using Edge
 	* 
-	* This class will *later be templated to accept other data types than char*.
+	* This class will later be templated to accept other data types than char*.
 	*/
 	template <typename storageType>
 	class Node {

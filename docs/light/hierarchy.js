@@ -18,7 +18,10 @@ var hierarchy =
       [ "Train", "class_train.html", null ]
     ] ],
     [ "Markov::Random::RandomEngine", "class_markov_1_1_random_1_1_random_engine.html", [
-      [ "Markov::Random::Marsaglia", "class_markov_1_1_random_1_1_marsaglia.html", null ]
+      [ "Markov::Random::DefaultRandomEngine", "class_markov_1_1_random_1_1_default_random_engine.html", [
+        [ "Markov::Random::Marsaglia", "class_markov_1_1_random_1_1_marsaglia.html", null ],
+        [ "Markov::Random::Mersenne", "class_markov_1_1_random_1_1_mersenne.html", null ]
+      ] ]
     ] ],
     [ "terminal", "classterminal.html", null ],
     [ "ThreadSharedListHandler", "class_thread_shared_list_handler.html", null ]

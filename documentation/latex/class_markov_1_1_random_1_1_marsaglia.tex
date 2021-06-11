@@ -2,6 +2,11 @@
 \label{class_markov_1_1_random_1_1_marsaglia}\index{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}}
 
 
+Implementation of \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Marsaglia}} \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} Engine.  
+
+
+
+
 {\ttfamily \#include $<$random.\+h$>$}
 
 
@@ -10,7 +15,7 @@ Inheritance diagram for Markov\+::Random\+::Marsaglia\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=259pt]{class_markov_1_1_random_1_1_marsaglia__inherit__graph}
+\includegraphics[width=262pt]{class_markov_1_1_random_1_1_marsaglia__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -19,26 +24,17 @@ Collaboration diagram for Markov\+::Random\+::Marsaglia\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=259pt]{class_markov_1_1_random_1_1_marsaglia__coll__graph}
+\includegraphics[width=262pt]{class_markov_1_1_random_1_1_marsaglia__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_aafadb3ac016ff0dac8df73a93e594e3b}{Marsaglia}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construct \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Marsaglia}} Engine. \end{DoxyCompactList}\item 
 unsigned long \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{random}} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-std\+::random\+\_\+device \& \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a330eaabab178513af890d1959c48761d}{rd}} ()
-\item 
-std\+::default\+\_\+random\+\_\+engine \& \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af7843897ed0fdf9bf6d47c33444ab154}{generator}} ()
-\item 
-std\+::uniform\+\_\+int\+\_\+distribution$<$ long long unsigned $>$ \& \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_abff682344a034c2823c1560753bceec7}{distribution}} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
+\begin{DoxyCompactList}\small\item\em Generate \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} Number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 unsigned long \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}}
@@ -47,7 +43,35 @@ unsigned long \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943
 \item 
 unsigned long \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+Implementation of \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Marsaglia}} \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} Engine. 
+
+This is an implementation of \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Marsaglia}} \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} engine, which for most use cases is a better fit than other solutions. Very simple mathematical formula to generate pseudorandom integer, so its crazy fast.
+
+This implementation of the \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Marsaglia}} Engine is seeded by \mbox{\hyperlink{random_8h}{random.\+h}} default random engine. \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{Random\+Engine}} is only seeded once so its not a performance issue.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Using \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Marsaglia}} Engine with Random\+Walk 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} model;}
+\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
+\DoxyCodeLine{    this-\/>RandomWalk(\&MarsagliaRandomEngine, 5, 10, res); }
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Generating a random number with \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Marsaglia}} Engine 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} me;}
+\DoxyCodeLine{std::cout << me.\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{random}}();}
+\end{DoxyCode}
+ 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_markov_1_1_random_1_1_marsaglia_aafadb3ac016ff0dac8df73a93e594e3b}\label{class_markov_1_1_random_1_1_marsaglia_aafadb3ac016ff0dac8df73a93e594e3b}} 
@@ -56,7 +80,11 @@ unsigned long \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0
 \doxysubsubsection{\texorpdfstring{Marsaglia()}{Marsaglia()}}
 {\footnotesize\ttfamily Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Construct \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Marsaglia}} Engine. 
+
+Initialize x,y and z using the default random engine. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -66,39 +94,6 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_markov_1_1_random_1_1_marsaglia_abff682344a034c2823c1560753bceec7}\label{class_markov_1_1_random_1_1_marsaglia_abff682344a034c2823c1560753bceec7}} 
-\index{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!distribution@{distribution}}
-\index{distribution@{distribution}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}}
-\doxysubsubsection{\texorpdfstring{distribution()}{distribution()}}
-{\footnotesize\ttfamily std\+::uniform\+\_\+int\+\_\+distribution$<$long long unsigned$>$\& Markov\+::\+Random\+::\+Marsaglia\+::distribution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_markov_1_1_random_1_1_marsaglia_abff682344a034c2823c1560753bceec7_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_markov_1_1_random_1_1_marsaglia_af7843897ed0fdf9bf6d47c33444ab154}\label{class_markov_1_1_random_1_1_marsaglia_af7843897ed0fdf9bf6d47c33444ab154}} 
-\index{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!generator@{generator}}
-\index{generator@{generator}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}}
-\doxysubsubsection{\texorpdfstring{generator()}{generator()}}
-{\footnotesize\ttfamily std\+::default\+\_\+random\+\_\+engine\& Markov\+::\+Random\+::\+Marsaglia\+::generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_markov_1_1_random_1_1_marsaglia_af7843897ed0fdf9bf6d47c33444ab154_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_markov_1_1_random_1_1_marsaglia_af7843897ed0fdf9bf6d47c33444ab154_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}\label{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}} 
 \index{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!random@{random}}
 \index{random@{random}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}}
@@ -107,21 +102,15 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Implements \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058}{Markov\+::\+Random\+::\+Random\+Engine}}.
+Generate \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} Number. 
 
-\mbox{\Hypertarget{class_markov_1_1_random_1_1_marsaglia_a330eaabab178513af890d1959c48761d}\label{class_markov_1_1_random_1_1_marsaglia_a330eaabab178513af890d1959c48761d}} 
-\index{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!rd@{rd}}
-\index{rd@{rd}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}}
-\doxysubsubsection{\texorpdfstring{rd()}{rd()}}
-{\footnotesize\ttfamily std\+::random\+\_\+device\& Markov\+::\+Random\+::\+Marsaglia\+::rd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+\begin{DoxyReturn}{Returns}
+random number in long range. 
+\end{DoxyReturn}
 
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_markov_1_1_random_1_1_marsaglia_a330eaabab178513af890d1959c48761d_icgraph}
-\end{center}
-\end{figure}
+
+Reimplemented from \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_afd4233366727e5c2dd14d7e5c3ebfec1}{Markov\+::\+Random\+::\+Default\+Random\+Engine}}.
+
 
 
 \doxysubsection{Member Data Documentation}
@@ -129,19 +118,19 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!x@{x}}
 \index{x@{x}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}}
 \doxysubsubsection{\texorpdfstring{x}{x}}
-{\footnotesize\ttfamily unsigned long Markov\+::\+Random\+::\+Marsaglia\+::x\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily unsigned long Markov\+::\+Random\+::\+Marsaglia\+::x}
 
 \mbox{\Hypertarget{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}\label{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}} 
 \index{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!y@{y}}
 \index{y@{y}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}}
 \doxysubsubsection{\texorpdfstring{y}{y}}
-{\footnotesize\ttfamily unsigned long Markov\+::\+Random\+::\+Marsaglia\+::y\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily unsigned long Markov\+::\+Random\+::\+Marsaglia\+::y}
 
 \mbox{\Hypertarget{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}\label{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}} 
 \index{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!z@{z}}
 \index{z@{z}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}}
 \doxysubsubsection{\texorpdfstring{z}{z}}
-{\footnotesize\ttfamily unsigned long Markov\+::\+Random\+::\+Marsaglia\+::z\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily unsigned long Markov\+::\+Random\+::\+Marsaglia\+::z}
 
 
 

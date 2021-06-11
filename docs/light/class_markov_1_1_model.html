@@ -461,8 +461,8 @@ template&lt;typename NodeStorageType &gt; </div>
 
 <p>Do a random walk on this model. </p>
 <p>Start from the starter node, on each node, invoke RandomNext using the random engine on current node, until terminator node is reached. If terminator node is reached before minimum length criateria is reached, ignore the last selection and re-invoke randomNext</p>
-<p>If maximum length criteria is reached but final node is not, cut off the generation and proceed to the final node. This function takes <a class="el" href="class_markov_1_1_random_1_1_random_engine.html">Markov::Random::RandomEngine</a> as a parameter to generate pseudo random numbers from</p>
-<p>This library is shipped with two random engines, Marsaglia and Mersenne. While mersenne output is higher in entropy, most use cases don't really need super high entropy output, so <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html">Markov::Random::Marsaglia</a> is preferable for better performance.</p>
+<p>If maximum length criteria is reached but final node is not, cut off the generation and proceed to the final node. This function takes <a class="el" href="class_markov_1_1_random_1_1_random_engine.html" title="An abstract class for Random Engine.">Markov::Random::RandomEngine</a> as a parameter to generate pseudo random numbers from</p>
+<p>This library is shipped with two random engines, Marsaglia and Mersenne. While mersenne output is higher in entropy, most use cases don't really need super high entropy output, so <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Markov::Random::Marsaglia</a> is preferable for better performance.</p>
 <p>This function WILL NOT reallocate buffer. Make sure no out of bound writes are happening via maximum length criteria.</p>
 <p><b>Example</b> <b>Use:</b> Generate 10 lines, with 5 to 10 characters, and print the output. Use Marsaglia </p><div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_model.html">Markov::Model&lt;char&gt;</a> model;</div>
 <div class="line"><a class="code" href="class_markov_1_1_model.html#ae1d564c132cbf681f10f8ed0dfc772df">Model</a>.import(<span class="stringliteral">&quot;model.mdl&quot;</span>);</div>
@@ -474,7 +474,7 @@ template&lt;typename NodeStorageType &gt; </div>
 <div class="line"> }</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">randomEngine</td><td><a class="el" href="namespace_markov_1_1_random.html">Random</a> Engine to use for the random walks. For examples, see Markov::Random::Mersenne and <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html">Markov::Random::Marsaglia</a> </td></tr>
+    <tr><td class="paramname">randomEngine</td><td><a class="el" href="namespace_markov_1_1_random.html">Random</a> Engine to use for the random walks. For examples, see <a class="el" href="class_markov_1_1_random_1_1_mersenne.html" title="Implementation of Mersenne Twister Engine.">Markov::Random::Mersenne</a> and <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Markov::Random::Marsaglia</a> </td></tr>
     <tr><td class="paramname">minSetting</td><td>Minimum number of characters to generate </td></tr>
     <tr><td class="paramname">maxSetting</td><td>Maximum number of character to generate </td></tr>
     <tr><td class="paramname">buffer</td><td>buffer to write the result to </td></tr>
@@ -624,7 +624,7 @@ template&lt;typename NodeStorageType &gt; </div>
 <div class="ttc" id="aclass_markov_1_1_model_html_aa4a11c6679c998936332f8409ae95375"><div class="ttname"><a href="class_markov_1_1_model.html#aa4a11c6679c998936332f8409ae95375">Markov::Model::RandomWalk</a></div><div class="ttdeci">NodeStorageType * RandomWalk(Markov::Random::RandomEngine *randomEngine, int minSetting, int maxSetting, NodeStorageType *buffer)</div><div class="ttdoc">Do a random walk on this model.</div><div class="ttdef"><b>Definition:</b> model.h:292</div></div>
 <div class="ttc" id="aclass_markov_1_1_model_html_ae16027a94235d2988ac4be35ea07d939"><div class="ttname"><a href="class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939">Markov::Model::Export</a></div><div class="ttdeci">bool Export(std::ofstream *)</div><div class="ttdoc">Export a file of the model.</div><div class="ttdef"><b>Definition:</b> model.h:273</div></div>
 <div class="ttc" id="aclass_markov_1_1_model_html_ae1d564c132cbf681f10f8ed0dfc772df"><div class="ttname"><a href="class_markov_1_1_model.html#ae1d564c132cbf681f10f8ed0dfc772df">Markov::Model::Model</a></div><div class="ttdeci">Model()</div><div class="ttdoc">Initialize a model with only start and end nodes.</div><div class="ttdef"><b>Definition:</b> model.h:200</div></div>
-<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html">Markov::Random::Marsaglia</a></div><div class="ttdef"><b>Definition:</b> random.h:14</div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html">Markov::Random::Marsaglia</a></div><div class="ttdoc">Implementation of Marsaglia Random Engine.</div><div class="ttdef"><b>Definition:</b> random.h:114</div></div>
 <div class="ttc" id="aclass_markov_1_1_model_html"><div class="ttname"><a href="class_markov_1_1_model.html">Markov::Model&lt; char &gt;</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

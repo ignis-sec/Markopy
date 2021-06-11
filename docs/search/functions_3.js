@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['distribution_232',['distribution',['../class_markov_1_1_random_1_1_marsaglia.html#abff682344a034c2823c1560753bceec7',1,'Markov::Random::Marsaglia']]]
+  ['distribution_236',['distribution',['../class_markov_1_1_random_1_1_default_random_engine.html#a53c9c440002ed1adb2b18292ca82d1c9',1,'Markov::Random::DefaultRandomEngine']]]
 ];
