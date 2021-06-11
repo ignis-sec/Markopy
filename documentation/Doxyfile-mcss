@@ -1,6 +1,0 @@
-@INCLUDE                = Doxyfile
-GENERATE_HTML           = NO
-GENERATE_XML            = YES
-XML_PROGRAMLISTING      = NO
-HTML_OUTPUT             = ../docs
-SHOW_INCLUDE_FILES      = NO

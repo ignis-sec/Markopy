@@ -5,38 +5,85 @@
 Parse command line arguements.  
 
 
+
+
+{\ttfamily \#include $<$argparse.\+h$>$}
+
+
+
+Collaboration diagram for Argparse\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_argparse__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_argparse_aad0cf7717e8d0ed8e5f0d2bc3245943f}\label{class_argparse_aad0cf7717e8d0ed8e5f0d2bc3245943f}} 
-{\bfseries Argparse} (int argc, char $\ast$$\ast$argv)
+\mbox{\hyperlink{class_argparse_a0177c358212e5eacf73ffffa4a351c18}{Argparse}} ()
 \item 
-\mbox{\Hypertarget{class_argparse_abebc8072e67341bacc50b8f742f546c3}\label{class_argparse_abebc8072e67341bacc50b8f742f546c3}} 
-\mbox{\hyperlink{struct__program_options}{Program\+Options}} {\bfseries get\+Program\+Options} (void)
+\mbox{\hyperlink{class_argparse_aad0cf7717e8d0ed8e5f0d2bc3245943f}{Argparse}} (int argc, char $\ast$$\ast$argv)
 \item 
-\mbox{\Hypertarget{class_argparse_a767e5fce5b87703095b2bbc1eb7d15a3}\label{class_argparse_a767e5fce5b87703095b2bbc1eb7d15a3}} 
-void {\bfseries set\+Program\+Options} (bool i, bool e, bool bf, char s, std\+::string i\+Name, std\+::string ex\+Name, std\+::string o\+Name, std\+::string d\+Name, int n)
+\mbox{\hyperlink{argparse_8h_a9d530970d74edd006d44cfd25450183f}{Program\+Options}} \mbox{\hyperlink{class_argparse_abebc8072e67341bacc50b8f742f546c3}{get\+Program\+Options}} (void)
+\item 
+void \mbox{\hyperlink{class_argparse_a767e5fce5b87703095b2bbc1eb7d15a3}{set\+Program\+Options}} (bool i, bool e, bool bf, char s, std\+::string i\+Name, std\+::string ex\+Name, std\+::string o\+Name, std\+::string d\+Name, int n)
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{struct__program_options}{Program\+Options}} $\ast$ \mbox{\hyperlink{class_argparse_a4c977d7fcdffd09e8437f214f56ac0ac}{parse}} (int argc, char $\ast$$\ast$argv)
+static \mbox{\hyperlink{argparse_8h_a9d530970d74edd006d44cfd25450183f}{Program\+Options}} $\ast$ \mbox{\hyperlink{class_argparse_a4c977d7fcdffd09e8437f214f56ac0ac}{parse}} (int argc, char $\ast$$\ast$argv)
 \begin{DoxyCompactList}\small\item\em parse cli commands and return ~\newline
  \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_argparse_a720195071367bec91ac78bc3ac3dcfa2}\label{class_argparse_a720195071367bec91ac78bc3ac3dcfa2}} 
 static void \mbox{\hyperlink{class_argparse_a720195071367bec91ac78bc3ac3dcfa2}{help}} ()
 \begin{DoxyCompactList}\small\item\em Print help string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{argparse_8h_a9d530970d74edd006d44cfd25450183f}{Program\+Options}} \mbox{\hyperlink{class_argparse_a84fb596fcf41a42d7a8f1efec134ee71}{po}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Parse command line arguements. 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_argparse_a0177c358212e5eacf73ffffa4a351c18}\label{class_argparse_a0177c358212e5eacf73ffffa4a351c18}} 
+\index{Argparse@{Argparse}!Argparse@{Argparse}}
+\index{Argparse@{Argparse}!Argparse@{Argparse}}
+\doxysubsubsection{\texorpdfstring{Argparse()}{Argparse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Argparse\+::\+Argparse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_argparse_aad0cf7717e8d0ed8e5f0d2bc3245943f}\label{class_argparse_aad0cf7717e8d0ed8e5f0d2bc3245943f}} 
+\index{Argparse@{Argparse}!Argparse@{Argparse}}
+\index{Argparse@{Argparse}!Argparse@{Argparse}}
+\doxysubsubsection{\texorpdfstring{Argparse()}{Argparse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Argparse\+::\+Argparse (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_argparse_abebc8072e67341bacc50b8f742f546c3}\label{class_argparse_abebc8072e67341bacc50b8f742f546c3}} 
+\index{Argparse@{Argparse}!getProgramOptions@{getProgramOptions}}
+\index{getProgramOptions@{getProgramOptions}!Argparse@{Argparse}}
+\doxysubsubsection{\texorpdfstring{getProgramOptions()}{getProgramOptions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{argparse_8h_a9d530970d74edd006d44cfd25450183f}{Program\+Options}} Argparse\+::get\+Program\+Options (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_argparse_a720195071367bec91ac78bc3ac3dcfa2}\label{class_argparse_a720195071367bec91ac78bc3ac3dcfa2}} 
+\index{Argparse@{Argparse}!help@{help}}
+\index{help@{help}!Argparse@{Argparse}}
+\doxysubsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily void Argparse\+::help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Print help string. 
+
 \mbox{\Hypertarget{class_argparse_a4c977d7fcdffd09e8437f214f56ac0ac}\label{class_argparse_a4c977d7fcdffd09e8437f214f56ac0ac}} 
 \index{Argparse@{Argparse}!parse@{parse}}
 \index{parse@{parse}!Argparse@{Argparse}}
 \doxysubsubsection{\texorpdfstring{parse()}{parse()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct__program_options}{Program\+Options}} $\ast$ Argparse\+::parse (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{argparse_8h_a9d530970d74edd006d44cfd25450183f}{Program\+Options}} $\ast$ Argparse\+::parse (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -53,9 +100,24 @@ parse cli commands and return ~\newline
 \begin{DoxyReturn}{Returns}
 Program\+Options structure. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_argparse_a767e5fce5b87703095b2bbc1eb7d15a3}\label{class_argparse_a767e5fce5b87703095b2bbc1eb7d15a3}} 
+\index{Argparse@{Argparse}!setProgramOptions@{setProgramOptions}}
+\index{setProgramOptions@{setProgramOptions}!Argparse@{Argparse}}
+\doxysubsubsection{\texorpdfstring{setProgramOptions()}{setProgramOptions()}}
+{\footnotesize\ttfamily void Argparse\+::set\+Program\+Options (\begin{DoxyParamCaption}\item[{bool}]{i,  }\item[{bool}]{e,  }\item[{bool}]{bf,  }\item[{char}]{s,  }\item[{std\+::string}]{i\+Name,  }\item[{std\+::string}]{ex\+Name,  }\item[{std\+::string}]{o\+Name,  }\item[{std\+::string}]{d\+Name,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_argparse_a84fb596fcf41a42d7a8f1efec134ee71}\label{class_argparse_a84fb596fcf41a42d7a8f1efec134ee71}} 
+\index{Argparse@{Argparse}!po@{po}}
+\index{po@{po}!Argparse@{Argparse}}
+\doxysubsubsection{\texorpdfstring{po}{po}}
+{\footnotesize\ttfamily \mbox{\hyperlink{argparse_8h_a9d530970d74edd006d44cfd25450183f}{Program\+Options}} Argparse\+::po\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/media/ignis/\+H\+D\+D/\+Repositories/\+Markov\+Passwords/\+Markov\+Passwords/src/argparse.\+h\item 
-/media/ignis/\+H\+D\+D/\+Repositories/\+Markov\+Passwords/\+Markov\+Passwords/src/argparse.\+cpp\end{DoxyCompactItemize}
+/media/ignis/\+H\+D\+D/\+Repositories/\+Markov\+Passwords/\+Markov\+Passwords/src/\mbox{\hyperlink{argparse_8h}{argparse.\+h}}\item 
+/media/ignis/\+H\+D\+D/\+Repositories/\+Markov\+Passwords/\+Markov\+Passwords/src/\mbox{\hyperlink{argparse_8cpp}{argparse.\+cpp}}\end{DoxyCompactItemize}
