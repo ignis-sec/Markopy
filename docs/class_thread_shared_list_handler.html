@@ -145,7 +145,7 @@ Private Attributes</h2></td></tr>
 <div class="line"> </div>
 <div class="line">     std::vector&lt;std::thread*&gt; threadsV;</div>
 <div class="line">     <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;threads;i++){</div>
-<div class="line">         threadsV.push_back(<span class="keyword">new</span> std::thread(&amp;<a class="code" href="class_markov_passwords.html#a586ad24f7340af5e4b1139c8a1eb8590">MarkovPasswords::TrainThread</a>, <span class="keyword">this</span>, &amp;listhandler, datasetFileName, delimiter));</div>
+<div class="line">         threadsV.push_back(<span class="keyword">new</span> std::thread(&amp;<a class="code" href="class_markov_passwords.html#a119837058df933daa767d84fb21ad4ac">MarkovPasswords::TrainThread</a>, <span class="keyword">this</span>, &amp;listhandler, datasetFileName, delimiter));</div>
 <div class="line">     }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;threads;i++){</div>
@@ -158,7 +158,7 @@ Private Attributes</h2></td></tr>
 <div class="line"> </div>
 <div class="line"> }</div>
 <div class="line"> </div>
-<div class="line"> <span class="keywordtype">void</span> <a class="code" href="class_markov_passwords.html#a586ad24f7340af5e4b1139c8a1eb8590">MarkovPasswords::TrainThread</a>(<a class="code" href="class_thread_shared_list_handler.html">ThreadSharedListHandler</a> *listhandler, <span class="keyword">const</span> <span class="keywordtype">char</span>* datasetFileName, <span class="keywordtype">char</span> delimiter){</div>
+<div class="line"> <span class="keywordtype">void</span> <a class="code" href="class_markov_passwords.html#a119837058df933daa767d84fb21ad4ac">MarkovPasswords::TrainThread</a>(<a class="code" href="class_thread_shared_list_handler.html">ThreadSharedListHandler</a> *listhandler, <span class="keyword">const</span> <span class="keywordtype">char</span>* datasetFileName, <span class="keywordtype">char</span> delimiter){</div>
 <div class="line">     <span class="keywordtype">char</span> format_str[] =<span class="stringliteral">&quot;%ld,%s&quot;</span>;</div>
 <div class="line">     format_str[2]=delimiter;</div>
 <div class="line">     std::string line;</div>
@@ -210,7 +210,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_thread_shared_list_handler_a32361c9a5810c0aae30b31fd38779c1e_icgraph.png" border="0" usemap="#class_thread_shared_list_handler_a32361c9a5810c0aae30b31fd38779c1e_icgraph" alt=""/></div>
 <map name="class_thread_shared_list_handler_a32361c9a5810c0aae30b31fd38779c1e_icgraph" id="class_thread_shared_list_handler_a32361c9a5810c0aae30b31fd38779c1e_icgraph">
 <area shape="rect" title="Read the next line from the file." alt="" coords="744,23,931,65"/>
-<area shape="rect" href="class_markov_passwords.html#a586ad24f7340af5e4b1139c8a1eb8590" title=" " alt="" coords="472,31,696,57"/>
+<area shape="rect" href="class_markov_passwords.html#a119837058df933daa767d84fb21ad4ac" title="A single thread invoked by the Train function." alt="" coords="472,31,696,57"/>
 <area shape="rect" href="class_markov_passwords.html#a74fa370b914503d1b67fec91a13b40af" title="Train the model with the dataset file." alt="" coords="245,31,424,57"/>
 <area shape="rect" href="markopy_8cpp.html#a792d1fd5f8144cc57058ba70cc96794e" title=" " alt="" coords="5,5,197,32"/>
 <area shape="rect" href="src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="74,56,129,83"/>
@@ -271,8 +271,8 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_thread_shared_list_handler_html_a32361c9a5810c0aae30b31fd38779c1e"><div class="ttname"><a href="class_thread_shared_list_handler.html#a32361c9a5810c0aae30b31fd38779c1e">ThreadSharedListHandler::next</a></div><div class="ttdeci">bool next(std::string *line)</div><div class="ttdoc">Read the next line from the file.</div><div class="ttdef"><b>Definition:</b> threadSharedListHandler.cpp:10</div></div>
-<div class="ttc" id="aclass_markov_passwords_html_a586ad24f7340af5e4b1139c8a1eb8590"><div class="ttname"><a href="class_markov_passwords.html#a586ad24f7340af5e4b1139c8a1eb8590">MarkovPasswords::TrainThread</a></div><div class="ttdeci">void TrainThread(ThreadSharedListHandler *listhandler, const char *datasetFileName, char delimiter)</div><div class="ttdef"><b>Definition:</b> markovPasswords.cpp:60</div></div>
 <div class="ttc" id="aclass_thread_shared_list_handler_html"><div class="ttname"><a href="class_thread_shared_list_handler.html">ThreadSharedListHandler</a></div><div class="ttdoc">Simple class for managing shared access to file.</div><div class="ttdef"><b>Definition:</b> threadSharedListHandler.h:15</div></div>
+<div class="ttc" id="aclass_markov_passwords_html_a119837058df933daa767d84fb21ad4ac"><div class="ttname"><a href="class_markov_passwords.html#a119837058df933daa767d84fb21ad4ac">MarkovPasswords::TrainThread</a></div><div class="ttdeci">void TrainThread(ThreadSharedListHandler *listhandler, char delimiter)</div><div class="ttdoc">A single thread invoked by the Train function.</div><div class="ttdef"><b>Definition:</b> markovPasswords.cpp:59</div></div>
 <div class="ttc" id="aclass_markov_passwords_html_a74fa370b914503d1b67fec91a13b40af"><div class="ttname"><a href="class_markov_passwords.html#a74fa370b914503d1b67fec91a13b40af">MarkovPasswords::Train</a></div><div class="ttdeci">void Train(const char *datasetFileName, char delimiter, int threads)</div><div class="ttdoc">Train the model with the dataset file.</div><div class="ttdef"><b>Definition:</b> markovPasswords.cpp:40</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
