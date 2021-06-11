@@ -1,0 +1,7 @@
+<map id="Markov::Edge::AdjustEdge" name="Markov::Edge::AdjustEdge">
+<area shape="rect" id="node1" title="Adjust the edge EdgeWeight with offset. Adds the offset parameter to the edge EdgeWeight." alt="" coords="255,111,445,138"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_model.html#ad252913f83fa3eb14cc3f9f92c5ee37a" title="Adjust the model with a single string." alt="" coords="25,5,187,47"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5" title="Import a file to construct the model." alt="" coords="25,71,187,112"/>
+<area shape="rect" id="node4" href="$namespace_testing_1_1_m_v_p_1_1_markov_model.html#a0e3a45b149abd9dff30adc9b877f94cd" title="Test class for minimal viable Edge." alt="" coords="5,136,207,177"/>
+<area shape="rect" id="node5" href="$namespace_testing_1_1_markov_model.html#a2f641a67bea75fff3e4c55c74926132f" title="Test class for rest of Edge cases." alt="" coords="24,201,188,243"/>
+</map>

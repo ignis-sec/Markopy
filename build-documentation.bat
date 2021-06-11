@@ -1,3 +1,4 @@
-python documentation/m.css/documentation/doxygen.py documentation/mcss.conf.py
+cd documentation
 
-cp documentation/images/* docs/images/
+doxygen Doxyfile-Light
+doxygen Doxyfile-Dark

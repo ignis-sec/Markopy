@@ -1,0 +1,6 @@
+<map id="Markov::Node::Link" name="Markov::Node::Link">
+<area shape="rect" id="node1" title="Link this node with another, with this node as its source." alt="" coords="255,78,401,105"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5" title="Import a file to construct the model." alt="" coords="25,5,187,47"/>
+<area shape="rect" id="node3" href="$namespace_testing_1_1_m_v_p_1_1_markov_model.html#a6e9e664c5a60cb3af863f384a47952ce" title="Test class for minimal viable Node." alt="" coords="5,71,207,112"/>
+<area shape="rect" id="node4" href="$namespace_testing_1_1_markov_model.html#ad59534ad9237abf1a8b09bd7f9263da2" title="Test class for rest of Node cases." alt="" coords="24,136,188,177"/>
+</map>
