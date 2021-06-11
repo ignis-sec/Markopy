@@ -2,15 +2,20 @@
 \label{class_thread_shared_list_handler}\index{ThreadSharedListHandler@{ThreadSharedListHandler}}
 
 
+Simple class for managing shared access to file.  
+
+
+
+
 {\ttfamily \#include $<$thread\+Shared\+List\+Handler.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_thread_shared_list_handler_a73cc5799b03ccd1e26b9a670fc6ebf8c}{Thread\+Shared\+List\+Handler}} (const char $\ast$filename)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct the Thread Handler with a filename. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_thread_shared_list_handler_a32361c9a5810c0aae30b31fd38779c1e}{next}} (std\+::string $\ast$line)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read the next line from the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,6 +24,13 @@ std\+::ifstream \mbox{\hyperlink{class_thread_shared_list_handler_a8311206e10dfb
 std\+::mutex \mbox{\hyperlink{class_thread_shared_list_handler_a79990f981fbb1910391d591f69e9a4e6}{mlock}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Simple class for managing shared access to file. 
+
+This class maintains the handover of each line from a file to multiple threads.
+
+When two different threads try to read from the same file while reading a line isn\textquotesingle{}t completed, it can have unexpected results. Line might be split, or might be read twice. This class locks the read action on the list until a line is completed, and then proceeds with the handover. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_thread_shared_list_handler_a73cc5799b03ccd1e26b9a670fc6ebf8c}\label{class_thread_shared_list_handler_a73cc5799b03ccd1e26b9a670fc6ebf8c}} 
@@ -29,6 +41,64 @@ std\+::mutex \mbox{\hyperlink{class_thread_shared_list_handler_a79990f981fbb1910
 
 
 
+Construct the Thread Handler with a filename. 
+
+Simply open the file, and initialize the locks.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Simple file read 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_thread_shared_list_handler}{ThreadSharedListHandler}} listhandler(\textcolor{stringliteral}{"test.txt"});}
+\DoxyCodeLine{std::string line;}
+\DoxyCodeLine{std::cout << listhandler-\/>\mbox{\hyperlink{class_thread_shared_list_handler_a32361c9a5810c0aae30b31fd38779c1e}{next}}(\&line) << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\end{DoxyCode}
+
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Example use case from \mbox{\hyperlink{class_markov_passwords}{Markov\+Passwords}} showing multithreaded access 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_passwords_a74fa370b914503d1b67fec91a13b40af}{MarkovPasswords::Train}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* datasetFileName, \textcolor{keywordtype}{char} delimiter, \textcolor{keywordtype}{int} threads)   \{}
+\DoxyCodeLine{     \mbox{\hyperlink{class_thread_shared_list_handler}{ThreadSharedListHandler}} listhandler(datasetFileName);}
+\DoxyCodeLine{     \textcolor{keyword}{auto} start = std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{}
+\DoxyCodeLine{     std::vector<std::thread*> threadsV;}
+\DoxyCodeLine{     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<threads;i++)\{}
+\DoxyCodeLine{         threadsV.push\_back(\textcolor{keyword}{new} std::thread(\&\mbox{\hyperlink{class_markov_passwords_a586ad24f7340af5e4b1139c8a1eb8590}{MarkovPasswords::TrainThread}}, \textcolor{keyword}{this}, \&listhandler, datasetFileName, delimiter));}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<threads;i++)\{}
+\DoxyCodeLine{         threadsV[i]-\/>join();}
+\DoxyCodeLine{         \textcolor{keyword}{delete} threadsV[i];}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{     \textcolor{keyword}{auto} finish = std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{     std::chrono::duration<double> elapsed = finish -\/ start;}
+\DoxyCodeLine{     std::cout << \textcolor{stringliteral}{"Elapsed time: "} << elapsed.count() << \textcolor{stringliteral}{" s\(\backslash\)n"};}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_passwords_a586ad24f7340af5e4b1139c8a1eb8590}{MarkovPasswords::TrainThread}}(\mbox{\hyperlink{class_thread_shared_list_handler}{ThreadSharedListHandler}} *listhandler, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* datasetFileName, \textcolor{keywordtype}{char} delimiter)\{}
+\DoxyCodeLine{     \textcolor{keywordtype}{char} format\_str[] =\textcolor{stringliteral}{"\%ld,\%s"};}
+\DoxyCodeLine{     format\_str[2]=delimiter;}
+\DoxyCodeLine{     std::string line;}
+\DoxyCodeLine{     \textcolor{keywordflow}{while} (listhandler-\/>\mbox{\hyperlink{class_thread_shared_list_handler_a32361c9a5810c0aae30b31fd38779c1e}{next}}(\&line)) \{}
+\DoxyCodeLine{         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} oc;}
+\DoxyCodeLine{         \textcolor{keywordflow}{if} (line.size() > 100) \{}
+\DoxyCodeLine{             line = line.substr(0, 100);}
+\DoxyCodeLine{         \}}
+\DoxyCodeLine{         \textcolor{keywordtype}{char}* linebuf = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[line.length()+5];}
+\DoxyCodeLine{         sscanf\_s(line.c\_str(), format\_str, \&oc, linebuf, line.length()+5);}
+\DoxyCodeLine{         this-\/>AdjustEdge((\textcolor{keyword}{const} \textcolor{keywordtype}{char}*)linebuf, oc); }
+\DoxyCodeLine{         \textcolor{keyword}{delete} linebuf;}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Filename for the file to manage. \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_thread_shared_list_handler_a32361c9a5810c0aae30b31fd38779c1e}\label{class_thread_shared_list_handler_a32361c9a5810c0aae30b31fd38779c1e}} 
 \index{ThreadSharedListHandler@{ThreadSharedListHandler}!next@{next}}
@@ -36,7 +106,19 @@ std\+::mutex \mbox{\hyperlink{class_thread_shared_list_handler_a79990f981fbb1910
 \doxysubsubsection{\texorpdfstring{next()}{next()}}
 {\footnotesize\ttfamily bool Thread\+Shared\+List\+Handler\+::next (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{line }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Read the next line from the file. 
+
+This action will be blocked until another thread (if any) completes the read operation on the file.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Simple file read 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_thread_shared_list_handler}{ThreadSharedListHandler}} listhandler(\textcolor{stringliteral}{"test.txt"});}
+\DoxyCodeLine{std::string line;}
+\DoxyCodeLine{std::cout << listhandler-\/>\mbox{\hyperlink{class_thread_shared_list_handler_a32361c9a5810c0aae30b31fd38779c1e}{next}}(\&line) << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
