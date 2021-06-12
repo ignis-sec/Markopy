@@ -6,6 +6,22 @@
 #include <vector>
 #include <mutex>
 #include <string>
+#include <signal.h>
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
+
+static volatile int keepRunning = 1;
+
+void intHandler(int dummy) {
+	std::cout << "You wanted this man by presing CTRL-C ! Ok bye.";
+	Sleep(5000);
+	keepRunning = 0;
+	exit(0);
+}
+
 
 MarkovPasswords::MarkovPasswords() : Markov::Model<char>(){
 	
@@ -38,6 +54,7 @@ std::ifstream* MarkovPasswords::OpenDatasetFile(const char* filename){
 
 
 void MarkovPasswords::Train(const char* datasetFileName, char delimiter, int threads)   {
+	signal(SIGINT, intHandler);
 	ThreadSharedListHandler listhandler(datasetFileName);
 	auto start = std::chrono::high_resolution_clock::now();
 
@@ -61,7 +78,7 @@ void MarkovPasswords::TrainThread(ThreadSharedListHandler *listhandler, const ch
 	char format_str[] ="%ld,%s";
 	format_str[2]=delimiter;
 	std::string line;
-	while (listhandler->next(&line)) {
+	while (listhandler->next(&line) && keepRunning) {
 		long int oc;
 		if (line.size() > 100) {
 			line = line.substr(0, 100);
