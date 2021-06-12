@@ -3,7 +3,8 @@
 #include "MarkovModel/src/model.h"
 
 
-
+/** @brief Namespace for the MarkovPasswords API
+*/
 namespace Markov::API{
 
 	/** @brief Markov::Model with char represented nodes. 

@@ -3,6 +3,9 @@
 #include <random>
 #include <iostream>
 
+/**
+	@brief Objects related to RNG
+*/
 namespace Markov::Random{
 
 	/** @brief An abstract class for Random Engine

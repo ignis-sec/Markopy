@@ -4,14 +4,17 @@
 #define BOOST_ALL_DYN_LINK 1
 
 #include <boost/program_options.hpp>
-/** @brief Structure to hold parsed cli arguements.
-	
+/** @brief Structure to hold parsed cli arguements.	
 */
 namespace opt = boost::program_options;
 
-
+/**
+	@brief Namespace for the CLI objects
+*/
 namespace Markov::API::CLI{
 
+	/** @brief Structure to hold parsed cli arguements.	
+	*/
 	typedef struct _programOptions {
 		bool bImport;
 		bool bExport;
@@ -33,6 +36,13 @@ namespace Markov::API::CLI{
 		
 		Argparse();
 		
+		/** @brief Parse command line arguements.
+		 * 
+		 * Parses command line arguements to populate ProgramOptions structure.
+		 * 
+		 * @param argc Number of command line arguements
+		 * @param argv Array of command line parameters
+		*/
 		Argparse(int argc, char** argv) {
 			
 			/*bool bImp;
@@ -136,9 +146,29 @@ namespace Markov::API::CLI{
 
 				//else if (vm.count("train")) std::cout << "train oldu" << std::endl;
 		}
+
+		/** @brief Getter for command line options
+		 * 
+		 * Getter for ProgramOptions populated by the arguement parser
+		 * @returns ProgramOptions structure.
+		*/
 		Markov::API::CLI::ProgramOptions getProgramOptions(void) {
 			return this->po;
 		}
+
+		/** @brief Initialize program options structure.
+		 * 
+		 * @param i boolean, true if import operation is flagged
+		 * @param e boolean, true if export operation is flagged
+		 * @param bf boolean, true if there is something wrong with the command line parameters
+		 * @param s seperator character for the import function
+		 * @param iName import filename
+		 * @param exName export filename
+		 * @param oName output filename
+		 * @param dName corpus filename
+		 * @param n number of passwords to be generated
+		 * 
+		*/
 		void setProgramOptions(bool i, bool e, bool bf, char s, std::string iName, std::string exName, std::string oName, std::string dName, int n) {
 			this->po.bImport = i;
 			this->po.bExport = e;
