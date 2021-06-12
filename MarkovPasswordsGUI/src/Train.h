@@ -2,16 +2,18 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_Train.h"
 
-
-class Train :public QMainWindow {
+namespace Markov::GUI{
+	class Train :public QMainWindow {
 	Q_OBJECT
-public:
-	Train(QWidget* parent = Q_NULLPTR);
+	public:
+		Train(QWidget* parent = Q_NULLPTR);
 
-private:
-	Ui::Train ui;
+	private:
+		Ui::Train ui;
 
-public slots:
-	void home();
-	void train();
+	public slots:
+		void home();
+		void train();
+	};
 };
+
