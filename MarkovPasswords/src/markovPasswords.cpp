@@ -17,7 +17,7 @@ static volatile int keepRunning = 1;
 
 void intHandler(int dummy) {
 	std::cout << "You wanted this man by presing CTRL-C ! Ok bye.";
-	Sleep(5000);
+	//Sleep(5000);
 	keepRunning = 0;
 	exit(0);
 }
