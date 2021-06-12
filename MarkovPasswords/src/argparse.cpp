@@ -1,9 +1,11 @@
 #include "argparse.h"
 #include "color/term.h"
 
-ProgramOptions* Argparse::parse(int argc, char** argv) { return 0; }
+Markov::API::CLI::ProgramOptions* Markov::API::CLI::Argparse::parse(int argc, char** argv) { return 0; }
 
-void Argparse::help() {
+
+
+void Markov::API::CLI::Argparse::help() {
 	std::cout << 
 	"Markov Passwords - Help\n"
 	"Options:\n"

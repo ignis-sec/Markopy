@@ -2,6 +2,7 @@
 #include <fstream>
 #include <mutex>
 
+namespace Markov::API::Concurrency{
 
 /** @brief Simple class for managing shared access to file
  * 
@@ -84,4 +85,6 @@ public:
 private:
     std::ifstream listfile;
     std::mutex mlock;
+};
+
 };

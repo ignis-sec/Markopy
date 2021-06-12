@@ -46,7 +46,7 @@ void Train::train() {
 
 
     char a=',';
-    MarkovPasswords mp;
+    Markov::API::CLI::MarkovPasswords mp;
     mp.Train(cstr, a, 10); //please parameterize this hardcoded 10 threads
 
     file.close();
