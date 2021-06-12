@@ -3,17 +3,22 @@
 #include "ui_about.h"
 #include <ui_menu.h>
 
+/** @brief namespace for MarkovPasswords API GUI wrapper
+*/ 
+namespace Markov::GUI{
 
-
-class about :public QMainWindow {
+	/** @brief QT Class for about page
+	*/ 
+	class about :public QMainWindow {
 	Q_OBJECT
-public:
-	about(QWidget* parent = Q_NULLPTR);
+	public:
+		about(QWidget* parent = Q_NULLPTR);
 
-private:
-	Ui:: main ui;
+	private:
+		Ui:: main ui;
 
-	
+		
+	};
 };
 
 

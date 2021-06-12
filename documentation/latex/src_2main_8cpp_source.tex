@@ -1,0 +1,40 @@
+\hypertarget{src_2main_8cpp_source}{}\doxysection{src/main.cpp}
+\label{src_2main_8cpp_source}\index{main.cpp@{main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{term_8h}{color/term.h}}"}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{argparse_8h}{argparse.h}}"}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{markov_passwords_8h}{markovPasswords.h}}"}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{\Hypertarget{src_2main_8cpp_source_l00013}\mbox{\hyperlink{src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{00013}} \textcolor{keywordtype}{int} \mbox{\hyperlink{src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv) \{}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Markov::API::CLI::Terminal}} t;}
+\DoxyCodeLine{00016     \textcolor{comment}{/*}}
+\DoxyCodeLine{00017 \textcolor{comment}{    ProgramOptions* p  = Argparse::parse(argc, argv);}}
+\DoxyCodeLine{00018 \textcolor{comment}{}}
+\DoxyCodeLine{00019 \textcolor{comment}{    if (p==0 || p-\/>bFailure) \{}}
+\DoxyCodeLine{00020 \textcolor{comment}{        std::cout << TERM\_FAIL << "Arguments Failed to Parse" << std::endl;}}
+\DoxyCodeLine{00021 \textcolor{comment}{        Argparse::help();}}
+\DoxyCodeLine{00022 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{00023     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse}{Markov::API::CLI::Argparse}} a(argc,argv);}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}} markovPass;}
+\DoxyCodeLine{00026     std::cout << \textcolor{stringliteral}{"Importing model.\(\backslash\)n"};}
+\DoxyCodeLine{00027     markovPass.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"models/2gram.mdl"});}
+\DoxyCodeLine{00028     std::cout << \textcolor{stringliteral}{"Import done. Training...\(\backslash\)n"};}
+\DoxyCodeLine{00029     markovPass.\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Train}}(\textcolor{stringliteral}{"datasets/graduation.corpus"}, \textcolor{charliteral}{'\(\backslash\)t'}, 50);}
+\DoxyCodeLine{00030     std::cout << \textcolor{stringliteral}{"Training done. Exporting to file.\(\backslash\)n"};}
+\DoxyCodeLine{00031     markovPass.\mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}}(\textcolor{stringliteral}{"models/finished2.mdl"});}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033     std::cout << \textcolor{stringliteral}{"Generation done....\(\backslash\)n"};}
+\DoxyCodeLine{00034     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00035 \}}
+\DoxyCodeLine{00036 }
+
+\end{DoxyCode}

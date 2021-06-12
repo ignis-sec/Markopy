@@ -1,0 +1,32 @@
+\hypertarget{dllmain_8cpp_source}{}\doxysection{dllmain.\+cpp}
+\label{dllmain_8cpp_source}\index{dllmain.cpp@{dllmain.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_markov_model_2src_2pch_8h}{pch.h}}"}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{model_8h}{model.h}}"}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{00007 \_\_declspec(dllexport) \textcolor{keywordtype}{void} dll\_loadtest() \{}
+\DoxyCodeLine{00008     std::cout << \textcolor{stringliteral}{"External function called.\(\backslash\)n"};}
+\DoxyCodeLine{00009     \textcolor{comment}{//cudaTestEntry();}}
+\DoxyCodeLine{00010 \}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul\_reason\_for\_call, LPVOID lpReserved)}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014     \textcolor{keywordflow}{switch} (ul\_reason\_for\_call)}
+\DoxyCodeLine{00015     \{}
+\DoxyCodeLine{00016     \textcolor{keywordflow}{case} DLL\_PROCESS\_ATTACH:}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{case} DLL\_THREAD\_ATTACH:}
+\DoxyCodeLine{00018     \textcolor{keywordflow}{case} DLL\_THREAD\_DETACH:}
+\DoxyCodeLine{00019     \textcolor{keywordflow}{case} DLL\_PROCESS\_DETACH:}
+\DoxyCodeLine{00020         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00021     \}}
+\DoxyCodeLine{00022     \textcolor{keywordflow}{return} TRUE;}
+\DoxyCodeLine{00023 \}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00026 }
+
+\end{DoxyCode}

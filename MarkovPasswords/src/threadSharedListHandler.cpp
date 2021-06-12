@@ -1,13 +1,13 @@
 #include "threadSharedListHandler.h"
 
 
-ThreadSharedListHandler::ThreadSharedListHandler(const char* filename){
+Markov::API::Concurrency::ThreadSharedListHandler::ThreadSharedListHandler(const char* filename){
     this->listfile;
 	this->listfile.open(filename, std::ios_base::binary);
 }
 
 
-bool ThreadSharedListHandler::next(std::string* line){
+bool Markov::API::Concurrency::ThreadSharedListHandler::next(std::string* line){
     bool res = false;
     this->mlock.lock();
     res = (std::getline(this->listfile,*line,'\n'))? true : false;

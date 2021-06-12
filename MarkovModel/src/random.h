@@ -3,8 +3,10 @@
 #include <random>
 #include <iostream>
 
-namespace Markov{
-namespace Random{
+/**
+	@brief Objects related to RNG
+*/
+namespace Markov::Random{
 
 	/** @brief An abstract class for Random Engine
 	 * 
@@ -174,4 +176,4 @@ namespace Random{
 	};
 
 
-};};
+};

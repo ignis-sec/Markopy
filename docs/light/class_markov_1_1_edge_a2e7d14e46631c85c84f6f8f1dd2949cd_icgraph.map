@@ -1,7 +1,0 @@
-<map id="Markov::Edge::RightNode" name="Markov::Edge::RightNode">
-<area shape="rect" id="node1" title="return edge&#39;s RightNode" alt="" coords="264,111,451,138"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_model.html#ad252913f83fa3eb14cc3f9f92c5ee37a" title="Adjust the model with a single string." alt="" coords="30,5,191,47"/>
-<area shape="rect" id="node3" href="$class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939" title="Export a file of the model." alt="" coords="30,71,191,112"/>
-<area shape="rect" id="node4" href="$namespace_testing_1_1_m_v_p_1_1_markov_model.html#a0e3a45b149abd9dff30adc9b877f94cd" title="Test class for minimal viable Edge." alt="" coords="10,136,211,177"/>
-<area shape="rect" id="node5" href="$class_markov_1_1_node.html#a77dbb90420f6199790a4fa986b93f85c" title="Insert a new edge to the this.edges." alt="" coords="5,201,216,243"/>
-</map>

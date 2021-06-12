@@ -3,6 +3,7 @@
 #include "MarkovPasswordsGUI.h"
 #include <QtWidgets/QApplication>
 
+using namespace Markov::GUI;
 
 menu::menu(QWidget* parent)
     : QMainWindow(parent)

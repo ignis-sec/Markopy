@@ -9,6 +9,8 @@
 
 #include <QtWidgets/QApplication>
 
+using namespace Markov::GUI;
+
 Train::Train(QWidget* parent)
     : QMainWindow(parent)
 {
@@ -46,7 +48,7 @@ void Train::train() {
 
 
     char a=',';
-    MarkovPasswords mp;
+    Markov::API::CLI::MarkovPasswords mp;
     mp.Train(cstr, a, 10); //please parameterize this hardcoded 10 threads
 
     file.close();
