@@ -1,0 +1,23 @@
+\hypertarget{thread_shared_list_handler_8cpp_source}{}\doxysection{thread\+Shared\+List\+Handler.\+cpp}
+\label{thread_shared_list_handler_8cpp_source}\index{threadSharedListHandler.cpp@{threadSharedListHandler.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{thread_shared_list_handler_8h}{threadSharedListHandler.h}}"}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{\Hypertarget{thread_shared_list_handler_8cpp_source_l00004}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292}{00004}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292}{Markov::API::Concurrency::ThreadSharedListHandler::ThreadSharedListHandler}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* filename)\{}
+\DoxyCodeLine{00005     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_ad7bf8372a5de9f5aa9fb10d4f77d7373}{listfile}};}
+\DoxyCodeLine{00006     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_ad7bf8372a5de9f5aa9fb10d4f77d7373}{listfile}}.open(filename, std::ios\_base::binary);}
+\DoxyCodeLine{00007 \}}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{\Hypertarget{thread_shared_list_handler_8cpp_source_l00010}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a068e1a9ff477de23a44c10230df416a5}{00010}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a068e1a9ff477de23a44c10230df416a5}{Markov::API::Concurrency::ThreadSharedListHandler::next}}(std::string* line)\{}
+\DoxyCodeLine{00011     \textcolor{keywordtype}{bool} res = \textcolor{keyword}{false};}
+\DoxyCodeLine{00012     this-\/>mlock.lock();}
+\DoxyCodeLine{00013     res = (std::getline(this-\/>listfile,*line,\textcolor{charliteral}{'\(\backslash\)n'}))? \textcolor{keyword}{true} : \textcolor{keyword}{false};}
+\DoxyCodeLine{00014     this-\/>mlock.unlock();}
+\DoxyCodeLine{00015     }
+\DoxyCodeLine{00016     \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{00017 \}}
+
+\end{DoxyCode}

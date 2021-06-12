@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MarkovPasswords: Markov::Random::RandomEngine Class Reference</title>
+<title>Markopy: Markov::Random::RandomEngine Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,7 +17,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome-dark.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -26,7 +26,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MarkovPasswords
+   <div id="projectname">Markopy
    </div>
    <div id="projectbrief">Utilizing Markov Models for brute forcing attacks</div>
   </td>
@@ -91,21 +91,22 @@ $(document).ready(function(){initNavTree('class_markov_1_1_random_1_1_random_eng
 </div><!--header-->
 <div class="contents">
 
-<p>An abstract class for <a class="el" href="namespace_markov_1_1_random.html">Random</a> Engine.  
+<p>An abstract class for <a class="el" href="namespace_markov_1_1_random.html" title="Objects related to RNG.">Random</a> Engine.  
  <a href="class_markov_1_1_random_1_1_random_engine.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="random_8h_source.html">random.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Markov::Random::RandomEngine:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_markov_1_1_random_1_1_random_engine__inherit__graph.png" border="0" usemap="#_markov_1_1_random_1_1_random_engine_inherit__map" alt="Inheritance graph"/></div>
-<map name="_markov_1_1_random_1_1_random_engine_inherit__map" id="_markov_1_1_random_1_1_random_engine_inherit__map">
-<area shape="rect" title="An abstract class for Random Engine." alt="" coords="101,5,340,32"/>
-<area shape="rect" href="class_markov_1_1_random_1_1_default_random_engine.html" title="Implementation using Random.h default random engine." alt="" coords="99,80,342,121"/>
-<area shape="rect" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine." alt="" coords="5,169,209,196"/>
-<area shape="rect" href="class_markov_1_1_random_1_1_mersenne.html" title="Implementation of Mersenne Twister Engine." alt="" coords="233,169,437,196"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_random_1_1_random_engine__inherit__graph.svg" width="528" height="484"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Collaboration diagram for Markov::Random::RandomEngine:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_random_1_1_random_engine__coll__graph.svg" width="300" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -113,10 +114,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a010d310dfebeacd3d7db7d0958dc1058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An abstract class for <a class="el" href="namespace_markov_1_1_random.html">Random</a> Engine. </p>
+<div class="textblock"><p>An abstract class for <a class="el" href="namespace_markov_1_1_random.html" title="Objects related to RNG.">Random</a> Engine. </p>
 <p>This class is used for generating random numbers, which are used for random walking on the graph.</p>
 <p>Main reason behind allowing different random engines is that some use cases may favor performance, while some favor good random.</p>
 <p><a class="el" href="class_markov_1_1_random_1_1_mersenne.html" title="Implementation of Mersenne Twister Engine.">Mersenne</a> can be used for truer random, while <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Marsaglia</a> can be used for deterministic but fast random. </p>
+
+<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00021">21</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a010d310dfebeacd3d7db7d0958dc1058"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a010d310dfebeacd3d7db7d0958dc1058">&#9670;&nbsp;</a></span>random()</h2>
@@ -142,20 +145,19 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html#a0a56da316d520b80be6b6df6c9e0b537">Markov::Random::Marsaglia</a>, and <a class="el" href="class_markov_1_1_random_1_1_default_random_engine.html#afd4233366727e5c2dd14d7e5c3ebfec1">Markov::Random::DefaultRandomEngine</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="node_8h_source.html#l00221">Markov::Node&lt; NodeStorageType &gt;::RandomNext()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058_icgraph.png" border="0" usemap="#class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058_icgraph" alt=""/></div>
-<map name="class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058_icgraph" id="class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058_icgraph">
-<area shape="rect" title=" " alt="" coords="264,5,503,47"/>
-<area shape="rect" href="class_markov_1_1_node.html#a87224bed22e5da09e0ddb91c681a6b2c" title="Chose a random node from the list of edges, with regards to its EdgeWeight, and TraverseNode to that." alt="" coords="5,5,216,47"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058_icgraph.svg" width="604" height="58"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/<a class="el" href="random_8h_source.html">random.h</a></li>
+<li><a class="el" href="random_8h_source.html">random.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

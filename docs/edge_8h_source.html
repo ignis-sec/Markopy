@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MarkovPasswords: /media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/edge.h Source File</title>
+<title>Markopy: edge.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,7 +17,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome-dark.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -26,7 +26,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MarkovPasswords
+   <div id="projectname">Markopy
    </div>
    <div id="projectbrief">Utilizing Markov Models for brute forcing attacks</div>
   </td>
@@ -91,119 +91,111 @@ $(document).ready(function(){initNavTree('edge_8h_source.html',''); initResizabl
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespace_markov.html">    5</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_markov.html">Markov</a> {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_markov.html">Markov</a> {</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_markov_1_1_node.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_markov_1_1_node.html">Node</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html">   15</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_markov_1_1_edge.html">Edge</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_markov_1_1_edge.html">Edge&lt;NodeStorageType&gt;</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_markov_1_1_edge.html">Edge&lt;NodeStorageType&gt;</a>(<a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a1f636c80a30900dfbfa5b695402cceb9">_left</a>, <a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a7f8221d3950f12a673888b3ad60e35b1">_right</a>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad">AdjustEdge</a>(<span class="keywordtype">long</span> <span class="keywordtype">int</span> offset);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a97e403fa0cf2666b2f142f28372de990">TraverseNode</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_edge.html#a174cd2f818b7c929decee6f2bcea7025">SetLeftEdge</a> (<a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>*);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_edge.html#add40b694fce402c316540c50d0fd3b3c">SetRightEdge</a>(<a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>*);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">inline</span> uint64_t <a class="code" href="class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677">EdgeWeight</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a3975b42a420de76e216d343dca059f88">LeftNode</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd">RightNode</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a1f636c80a30900dfbfa5b695402cceb9">   64</a></span>&#160;        <a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a1f636c80a30900dfbfa5b695402cceb9">_left</a>; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a7f8221d3950f12a673888b3ad60e35b1">   65</a></span>&#160;        <a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a7f8221d3950f12a673888b3ad60e35b1">_right</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a903a989782c2e7e59595eabc80a6b183">   66</a></span>&#160;        <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="class_markov_1_1_edge.html#a903a989782c2e7e59595eabc80a6b183">_weight</a>;    </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    };</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_markov_1_1_edge.html">Edge</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_markov_1_1_edge.html">Edge&lt;NodeStorageType&gt;</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="class_markov_1_1_edge.html">Edge&lt;NodeStorageType&gt;</a>(<a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a1f636c80a30900dfbfa5b695402cceb9">_left</a>, <a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a7f8221d3950f12a673888b3ad60e35b1">_right</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad">AdjustEdge</a>(<span class="keywordtype">long</span> <span class="keywordtype">int</span> offset);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a97e403fa0cf2666b2f142f28372de990">TraverseNode</a>();</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">//default constructor of edge</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a893ea498a247e09b2a7e2424f026a137">   74</a></span>&#160;<a class="code" href="class_markov_1_1_edge.html#a893ea498a247e09b2a7e2424f026a137">Markov::Edge&lt;NodeStorageType&gt;::Edge</a>() {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    this-&gt;_left = NULL;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    this-&gt;_right = NULL;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    this-&gt;_weight = 0;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//constructor of edge</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a7813ff80fd97d5c0bd4fb339e2e5764b">   81</a></span>&#160;<a class="code" href="class_markov_1_1_edge.html#a893ea498a247e09b2a7e2424f026a137">Markov::Edge&lt;NodeStorageType&gt;::Edge</a>(<a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* _left, <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* _right) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    this-&gt;_left = _left;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    this-&gt;_right = _right;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    this-&gt;_weight = 0;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//to AdjustEdge the edges by the edge with its offset</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad">   88</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad">Markov::Edge&lt;NodeStorageType&gt;::AdjustEdge</a>(<span class="keywordtype">long</span> <span class="keywordtype">int</span> offset) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    this-&gt;_weight += offset;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    this-&gt;LeftNode()-&gt;UpdateTotalVerticeWeight(offset);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">//to TraverseNode the node</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a97e403fa0cf2666b2f142f28372de990">   94</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a97e403fa0cf2666b2f142f28372de990">Markov::Edge&lt;NodeStorageType&gt;::TraverseNode</a>() {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span> (this-&gt;RightNode()-&gt;NodeValue() == 0xff) <span class="comment">//terminator node</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> _right;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">//to set the LeftNode of the node</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a174cd2f818b7c929decee6f2bcea7025">  101</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_edge.html#a174cd2f818b7c929decee6f2bcea7025">Markov::Edge&lt;NodeStorageType&gt;::SetLeftEdge</a>(<a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* n) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    this-&gt;_left = n;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">//to set the RightNode of the node</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#add40b694fce402c316540c50d0fd3b3c">  106</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_edge.html#add40b694fce402c316540c50d0fd3b3c">Markov::Edge&lt;NodeStorageType&gt;::SetRightEdge</a>(<a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* n) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    this-&gt;_right = n;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">//to get the EdgeWeight of the node</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677">  111</a></span>&#160;<span class="keyword">inline</span> uint64_t <a class="code" href="class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677">Markov::Edge&lt;NodeStorageType&gt;::EdgeWeight</a>() {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> this-&gt;_weight;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">//to get the LeftNode of the node</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a3975b42a420de76e216d343dca059f88">  116</a></span>&#160;<a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a3975b42a420de76e216d343dca059f88">Markov::Edge&lt;NodeStorageType&gt;::LeftNode</a>() {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> this-&gt;_left;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">//to get the RightNode of the node</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd">  121</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd">Markov::Edge&lt;NodeStorageType&gt;::RightNode</a>() {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> this-&gt;_right;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_edge.html#a174cd2f818b7c929decee6f2bcea7025">SetLeftEdge</a> (<a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>*);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_edge.html#add40b694fce402c316540c50d0fd3b3c">SetRightEdge</a>(<a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>*);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">inline</span> uint64_t <a class="code" href="class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677">EdgeWeight</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a3975b42a420de76e216d343dca059f88">LeftNode</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd">RightNode</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a1f636c80a30900dfbfa5b695402cceb9">   95</a></span>&#160;        <a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a1f636c80a30900dfbfa5b695402cceb9">_left</a>; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a7f8221d3950f12a673888b3ad60e35b1">   96</a></span>&#160;        <a class="code" href="class_markov_1_1_node.html">Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a7f8221d3950f12a673888b3ad60e35b1">_right</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a903a989782c2e7e59595eabc80a6b183">   97</a></span>&#160;        <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="class_markov_1_1_edge.html#a903a989782c2e7e59595eabc80a6b183">_weight</a>;    </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    };</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">//default constructor of edge</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a893ea498a247e09b2a7e2424f026a137">  105</a></span>&#160;<a class="code" href="class_markov_1_1_edge.html#a893ea498a247e09b2a7e2424f026a137">Markov::Edge&lt;NodeStorageType&gt;::Edge</a>() {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    this-&gt;_left = NULL;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    this-&gt;_right = NULL;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    this-&gt;_weight = 0;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">//constructor of edge</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a7813ff80fd97d5c0bd4fb339e2e5764b">  112</a></span>&#160;<a class="code" href="class_markov_1_1_edge.html#a893ea498a247e09b2a7e2424f026a137">Markov::Edge&lt;NodeStorageType&gt;::Edge</a>(<a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* _left, <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* _right) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    this-&gt;_left = _left;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    this-&gt;_right = _right;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    this-&gt;_weight = 0;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">//to AdjustEdge the edges by the edge with its offset</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad">  119</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad">Markov::Edge&lt;NodeStorageType&gt;::AdjustEdge</a>(<span class="keywordtype">long</span> <span class="keywordtype">int</span> offset) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    this-&gt;_weight += offset;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    this-&gt;LeftNode()-&gt;UpdateTotalVerticeWeight(offset);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">//to TraverseNode the node</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a97e403fa0cf2666b2f142f28372de990">  125</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a97e403fa0cf2666b2f142f28372de990">Markov::Edge&lt;NodeStorageType&gt;::TraverseNode</a>() {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">if</span> (this-&gt;RightNode()-&gt;NodeValue() == 0xff) <span class="comment">//terminator node</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">return</span> _right;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">//to set the LeftNode of the node</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a174cd2f818b7c929decee6f2bcea7025">  132</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_edge.html#a174cd2f818b7c929decee6f2bcea7025">Markov::Edge&lt;NodeStorageType&gt;::SetLeftEdge</a>(<a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* n) {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    this-&gt;_left = n;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">//to set the RightNode of the node</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#add40b694fce402c316540c50d0fd3b3c">  137</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_edge.html#add40b694fce402c316540c50d0fd3b3c">Markov::Edge&lt;NodeStorageType&gt;::SetRightEdge</a>(<a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* n) {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    this-&gt;_right = n;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">//to get the EdgeWeight of the node</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677">  142</a></span>&#160;<span class="keyword">inline</span> uint64_t <a class="code" href="class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677">Markov::Edge&lt;NodeStorageType&gt;::EdgeWeight</a>() {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">return</span> this-&gt;_weight;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">//to get the LeftNode of the node</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a3975b42a420de76e216d343dca059f88">  147</a></span>&#160;<a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a3975b42a420de76e216d343dca059f88">Markov::Edge&lt;NodeStorageType&gt;::LeftNode</a>() {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> this-&gt;_left;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">//to get the RightNode of the node</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeStorageType&gt;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd">  152</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;NodeStorageType&gt;</a>* <a class="code" href="class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd">Markov::Edge&lt;NodeStorageType&gt;::RightNode</a>() {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> this-&gt;_right;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="amarkopy_8cpp_html_a792d1fd5f8144cc57058ba70cc96794e"><div class="ttname"><a href="markopy_8cpp.html#a792d1fd5f8144cc57058ba70cc96794e">BOOST_PYTHON_MODULE</a></div><div class="ttdeci">BOOST_PYTHON_MODULE(markopy)</div><div class="ttdef"><b>Definition:</b> markopy.cpp:11</div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html_a174cd2f818b7c929decee6f2bcea7025"><div class="ttname"><a href="class_markov_1_1_edge.html#a174cd2f818b7c929decee6f2bcea7025">Markov::Edge::SetLeftEdge</a></div><div class="ttdeci">void SetLeftEdge(Node&lt; NodeStorageType &gt; *)</div><div class="ttdoc">Set LeftNode of this edge.</div><div class="ttdef"><b>Definition:</b> edge.h:101</div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html_a3975b42a420de76e216d343dca059f88"><div class="ttname"><a href="class_markov_1_1_edge.html#a3975b42a420de76e216d343dca059f88">Markov::Edge::LeftNode</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * LeftNode()</div><div class="ttdoc">return edge's LeftNode</div><div class="ttdef"><b>Definition:</b> edge.h:116</div></div>
-<div class="ttc" id="amodel_8h_html"><div class="ttname"><a href="model_8h.html">model.h</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html_a2e7d14e46631c85c84f6f8f1dd2949cd"><div class="ttname"><a href="class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd">Markov::Edge::RightNode</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * RightNode()</div><div class="ttdoc">return edge's RightNode</div><div class="ttdef"><b>Definition:</b> edge.h:121</div></div>
-<div class="ttc" id="anamespacemarkopy__cli_html_acbad1b17f7d290d7a6b3b87554437e5e"><div class="ttname"><a href="namespacemarkopy__cli.html#acbad1b17f7d290d7a6b3b87554437e5e">markopy_cli.cli_generate</a></div><div class="ttdeci">def cli_generate(model, wordlist, bulk=False)</div><div class="ttdef"><b>Definition:</b> markopy_cli.py:88</div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html_a2b1e5a6e6f81502cd8ac6b20ed38b677"><div class="ttname"><a href="class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677">Markov::Edge::EdgeWeight</a></div><div class="ttdeci">uint64_t EdgeWeight()</div><div class="ttdoc">return edge's EdgeWeight.</div><div class="ttdef"><b>Definition:</b> edge.h:111</div></div>
-<div class="ttc" id="aclass_markov_1_1_node_html"><div class="ttname"><a href="class_markov_1_1_node.html">Markov::Node</a></div><div class="ttdoc">A node class that for the vertices of model. Connected with eachother using Edge.</div><div class="ttdef"><b>Definition:</b> edge.h:8</div></div>
-<div class="ttc" id="aclass_markov_passwords_html_adba2604e18b691066921e70dd347f691"><div class="ttname"><a href="class_markov_passwords.html#adba2604e18b691066921e70dd347f691">MarkovPasswords::Generate</a></div><div class="ttdeci">void Generate(unsigned long int n, const char *wordlistFileName, int minLen=6, int maxLen=12, int threads=20)</div><div class="ttdoc">Call Markov::Model::RandomWalk n times, and collect output.</div><div class="ttdef"><b>Definition:</b> markovPasswords.cpp:92</div></div>
-<div class="ttc" id="aclass_markov_passwords_html"><div class="ttname"><a href="class_markov_passwords.html">MarkovPasswords</a></div><div class="ttdoc">Markov::Model with char represented nodes.</div><div class="ttdef"><b>Definition:</b> markovPasswords.h:12</div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html_aa9d6cc6e631f1b515b4db604c96ad4ad"><div class="ttname"><a href="class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad">Markov::Edge::AdjustEdge</a></div><div class="ttdeci">void AdjustEdge(long int offset)</div><div class="ttdoc">Adjust the edge EdgeWeight with offset. Adds the offset parameter to the edge EdgeWeight.</div><div class="ttdef"><b>Definition:</b> edge.h:88</div></div>
-<div class="ttc" id="anamespace_markov_html"><div class="ttname"><a href="namespace_markov.html">Markov</a></div><div class="ttdoc">Namespace for the markov-model related classes. Contains Model, Node and Edge classes.</div><div class="ttdef"><b>Definition:</b> edge.h:5</div></div>
-<div class="ttc" id="a_markov_model_2src_2pch_8h_html"><div class="ttname"><a href="_markov_model_2src_2pch_8h.html">pch.h</a></div></div>
-<div class="ttc" id="anamespacemarkopy__cli_html_aba737028a4ca1223e06631b16d22da93"><div class="ttname"><a href="namespacemarkopy__cli.html#aba737028a4ca1223e06631b16d22da93">markopy_cli.cli_train</a></div><div class="ttdeci">def cli_train(model, dataset, seperator, output, output_forced=False, bulk=False)</div><div class="ttdef"><b>Definition:</b> markopy_cli.py:58</div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html_a903a989782c2e7e59595eabc80a6b183"><div class="ttname"><a href="class_markov_1_1_edge.html#a903a989782c2e7e59595eabc80a6b183">Markov::Edge::_weight</a></div><div class="ttdeci">long int _weight</div><div class="ttdoc">target node</div><div class="ttdef"><b>Definition:</b> edge.h:66</div></div>
-<div class="ttc" id="anamespacemarkopy__cli_html_ab341d43f9b4452d2015e628bf3c58a9e"><div class="ttname"><a href="namespacemarkopy__cli.html#ab341d43f9b4452d2015e628bf3c58a9e">markopy_cli.cli_init</a></div><div class="ttdeci">def cli_init(input_model)</div><div class="ttdef"><b>Definition:</b> markopy_cli.py:38</div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html_a97e403fa0cf2666b2f142f28372de990"><div class="ttname"><a href="class_markov_1_1_edge.html#a97e403fa0cf2666b2f142f28372de990">Markov::Edge::TraverseNode</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * TraverseNode()</div><div class="ttdoc">Traverse this edge to RightNode.</div><div class="ttdef"><b>Definition:</b> edge.h:94</div></div>
-<div class="ttc" id="aclass_markov_1_1_model_html"><div class="ttname"><a href="class_markov_1_1_model.html">Markov::Model</a></div><div class="ttdoc">class for the final Markov Model, constructed from nodes and edges.</div><div class="ttdef"><b>Definition:</b> model.h:41</div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html_a1f636c80a30900dfbfa5b695402cceb9"><div class="ttname"><a href="class_markov_1_1_edge.html#a1f636c80a30900dfbfa5b695402cceb9">Markov::Edge::_left</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * _left</div><div class="ttdef"><b>Definition:</b> edge.h:64</div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html_a893ea498a247e09b2a7e2424f026a137"><div class="ttname"><a href="class_markov_1_1_edge.html#a893ea498a247e09b2a7e2424f026a137">Markov::Edge::Edge</a></div><div class="ttdeci">Edge()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> edge.h:74</div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html_a7f8221d3950f12a673888b3ad60e35b1"><div class="ttname"><a href="class_markov_1_1_edge.html#a7f8221d3950f12a673888b3ad60e35b1">Markov::Edge::_right</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * _right</div><div class="ttdoc">source node</div><div class="ttdef"><b>Definition:</b> edge.h:65</div></div>
-<div class="ttc" id="aclass_markov_passwords_html_a74fa370b914503d1b67fec91a13b40af"><div class="ttname"><a href="class_markov_passwords.html#a74fa370b914503d1b67fec91a13b40af">MarkovPasswords::Train</a></div><div class="ttdeci">void Train(const char *datasetFileName, char delimiter, int threads)</div><div class="ttdoc">Train the model with the dataset file.</div><div class="ttdef"><b>Definition:</b> markovPasswords.cpp:40</div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html_add40b694fce402c316540c50d0fd3b3c"><div class="ttname"><a href="class_markov_1_1_edge.html#add40b694fce402c316540c50d0fd3b3c">Markov::Edge::SetRightEdge</a></div><div class="ttdeci">void SetRightEdge(Node&lt; NodeStorageType &gt; *)</div><div class="ttdoc">Set RightNode of this edge.</div><div class="ttdef"><b>Definition:</b> edge.h:106</div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html"><div class="ttname"><a href="class_markov_1_1_edge.html">Markov::Edge</a></div><div class="ttdoc">Edge class used to link nodes in the model together.</div><div class="ttdef"><b>Definition:</b> edge.h:15</div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_a174cd2f818b7c929decee6f2bcea7025"><div class="ttname"><a href="class_markov_1_1_edge.html#a174cd2f818b7c929decee6f2bcea7025">Markov::Edge::SetLeftEdge</a></div><div class="ttdeci">void SetLeftEdge(Node&lt; NodeStorageType &gt; *)</div><div class="ttdoc">Set LeftNode of this edge.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00132">edge.h:132</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_a3975b42a420de76e216d343dca059f88"><div class="ttname"><a href="class_markov_1_1_edge.html#a3975b42a420de76e216d343dca059f88">Markov::Edge::LeftNode</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * LeftNode()</div><div class="ttdoc">return edge's LeftNode</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00147">edge.h:147</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_a2e7d14e46631c85c84f6f8f1dd2949cd"><div class="ttname"><a href="class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd">Markov::Edge::RightNode</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * RightNode()</div><div class="ttdoc">return edge's RightNode</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00152">edge.h:152</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_a2b1e5a6e6f81502cd8ac6b20ed38b677"><div class="ttname"><a href="class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677">Markov::Edge::EdgeWeight</a></div><div class="ttdeci">uint64_t EdgeWeight()</div><div class="ttdoc">return edge's EdgeWeight.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00142">edge.h:142</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_node_html"><div class="ttname"><a href="class_markov_1_1_node.html">Markov::Node</a></div><div class="ttdoc">A node class that for the vertices of model. Connected with eachother using Edge.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00008">edge.h:8</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_aa9d6cc6e631f1b515b4db604c96ad4ad"><div class="ttname"><a href="class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad">Markov::Edge::AdjustEdge</a></div><div class="ttdeci">void AdjustEdge(long int offset)</div><div class="ttdoc">Adjust the edge EdgeWeight with offset. Adds the offset parameter to the edge EdgeWeight.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00119">edge.h:119</a></div></div>
+<div class="ttc" id="anamespace_markov_html"><div class="ttname"><a href="namespace_markov.html">Markov</a></div><div class="ttdoc">Namespace for the markov-model related classes. Contains Model, Node and Edge classes.</div><div class="ttdef"><b>Definition:</b> <a href="argparse_8h_source.html#l00014">argparse.h:14</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_a903a989782c2e7e59595eabc80a6b183"><div class="ttname"><a href="class_markov_1_1_edge.html#a903a989782c2e7e59595eabc80a6b183">Markov::Edge::_weight</a></div><div class="ttdeci">long int _weight</div><div class="ttdoc">target node</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00097">edge.h:97</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_a97e403fa0cf2666b2f142f28372de990"><div class="ttname"><a href="class_markov_1_1_edge.html#a97e403fa0cf2666b2f142f28372de990">Markov::Edge::TraverseNode</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * TraverseNode()</div><div class="ttdoc">Traverse this edge to RightNode.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00125">edge.h:125</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_a1f636c80a30900dfbfa5b695402cceb9"><div class="ttname"><a href="class_markov_1_1_edge.html#a1f636c80a30900dfbfa5b695402cceb9">Markov::Edge::_left</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * _left</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00095">edge.h:95</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_a893ea498a247e09b2a7e2424f026a137"><div class="ttname"><a href="class_markov_1_1_edge.html#a893ea498a247e09b2a7e2424f026a137">Markov::Edge::Edge</a></div><div class="ttdeci">Edge()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00105">edge.h:105</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_a7f8221d3950f12a673888b3ad60e35b1"><div class="ttname"><a href="class_markov_1_1_edge.html#a7f8221d3950f12a673888b3ad60e35b1">Markov::Edge::_right</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * _right</div><div class="ttdoc">source node</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00096">edge.h:96</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_add40b694fce402c316540c50d0fd3b3c"><div class="ttname"><a href="class_markov_1_1_edge.html#add40b694fce402c316540c50d0fd3b3c">Markov::Edge::SetRightEdge</a></div><div class="ttdeci">void SetRightEdge(Node&lt; NodeStorageType &gt; *)</div><div class="ttdoc">Set RightNode of this edge.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00137">edge.h:137</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html"><div class="ttname"><a href="class_markov_1_1_edge.html">Markov::Edge</a></div><div class="ttdoc">Edge class used to link nodes in the model together.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00016">edge.h:16</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

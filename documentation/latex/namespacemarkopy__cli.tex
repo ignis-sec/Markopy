@@ -5,9 +5,9 @@
 \item 
 def \mbox{\hyperlink{namespacemarkopy__cli_ab341d43f9b4452d2015e628bf3c58a9e}{cli\+\_\+init}} (input\+\_\+model)
 \item 
-def \mbox{\hyperlink{namespacemarkopy__cli_aba737028a4ca1223e06631b16d22da93}{cli\+\_\+train}} (model, dataset, seperator, output, output\+\_\+forced=False, bulk=False)
+def \mbox{\hyperlink{namespacemarkopy__cli_aba737028a4ca1223e06631b16d22da93}{cli\+\_\+train}} (\mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}}, dataset, seperator, \mbox{\hyperlink{namespacemarkopy__cli_aa14f55efc46124e1a8a70952f361ee55}{output}}, \mbox{\hyperlink{namespacemarkopy__cli_ada54917921f4d8727df5e47105ac8b2f}{output\+\_\+forced}}=False, \mbox{\hyperlink{namespacemarkopy__cli_acccddcbb008bce7b903a6b7b8277d94f}{bulk}}=False)
 \item 
-def \mbox{\hyperlink{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e}{cli\+\_\+generate}} (model, wordlist, bulk=False)
+def \mbox{\hyperlink{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e}{cli\+\_\+generate}} (\mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}}, wordlist, \mbox{\hyperlink{namespacemarkopy__cli_acccddcbb008bce7b903a6b7b8277d94f}{bulk}}=False)
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -21,8 +21,34 @@ def \mbox{\hyperlink{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e}{cl
 \mbox{\hyperlink{namespacemarkopy__cli_aaa15e546368ecfbb9817fbfebd9a69b3}{action}}
 \item 
 \mbox{\hyperlink{namespacemarkopy__cli_a8263be2d219caf76f9e70d2730cb9819}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacemarkopy__cli_a9981bd7881129bd6b325ca2386bb44f1}{corpus\+\_\+list}} = os.\+listdir(args.\+dataset)
+\item 
+def \mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}} = \mbox{\hyperlink{namespacemarkopy__cli_ab341d43f9b4452d2015e628bf3c58a9e}{cli\+\_\+init}}(args.\+input)
+\item 
+\mbox{\hyperlink{namespacemarkopy__cli_a216a948b6356f19bd55e63a73d2fb691}{output\+\_\+file\+\_\+name}} = corpus
+\item 
+string \mbox{\hyperlink{namespacemarkopy__cli_a284278a4b2f6ab3ff0a036390b05ee55}{model\+\_\+extension}} = \char`\"{}\char`\"{}
+\item 
+\mbox{\hyperlink{namespacemarkopy__cli_ada54917921f4d8727df5e47105ac8b2f}{output\+\_\+forced}}
+\item 
+\mbox{\hyperlink{namespacemarkopy__cli_a467e50c1f956acbd27d5cfc8fea0e4f1}{True}}
+\item 
+\mbox{\hyperlink{namespacemarkopy__cli_acccddcbb008bce7b903a6b7b8277d94f}{bulk}}
+\item 
+\mbox{\hyperlink{namespacemarkopy__cli_a7a6da7e2d4058e3a162fc4943f76ef12}{model\+\_\+list}} = os.\+listdir(args.\+input)
+\item 
+\mbox{\hyperlink{namespacemarkopy__cli_a48904b95ac566fdb9625429815010d6c}{model\+\_\+base}} = input
+\item 
+\mbox{\hyperlink{namespacemarkopy__cli_aa14f55efc46124e1a8a70952f361ee55}{output}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}  @namespace Markov::Markopy::Python
+\end{DoxyVerb}
+ ~\newline
+ 
 
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e}\label{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e}} 
@@ -31,39 +57,105 @@ def \mbox{\hyperlink{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e}{cl
 \doxysubsubsection{\texorpdfstring{cli\_generate()}{cli\_generate()}}
 {\footnotesize\ttfamily def markopy\+\_\+cli.\+cli\+\_\+generate (\begin{DoxyParamCaption}\item[{}]{model,  }\item[{}]{wordlist,  }\item[{}]{bulk = {\ttfamily False} }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e_cgraph}
-\end{center}
-\end{figure}
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00114}{114}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114 \textcolor{keyword}{def }\mbox{\hyperlink{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e}{cli\_generate}}(model, wordlist, bulk=False):}
+\DoxyCodeLine{00115     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} (wordlist \textcolor{keywordflow}{or} args.count):}
+\DoxyCodeLine{00116         logging.pprint(\textcolor{stringliteral}{"Generation mode requires -\/w/-\/-\/wordlist and -\/n/-\/-\/count parameters. Exiting."})}
+\DoxyCodeLine{00117         exit(2)}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     \textcolor{keywordflow}{if} (bulk \textcolor{keywordflow}{and} os.path.isfile(wordlist)):}
+\DoxyCodeLine{00120         logging.pprint(f\textcolor{stringliteral}{"\{wordlist\} exists and will be overwritten."}, 1)}
+\DoxyCodeLine{00121     model.Generate(int(args.count), wordlist, int(args.min), int(args.max), int(args.threads))}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123 }
+
+\end{DoxyCode}
 \mbox{\Hypertarget{namespacemarkopy__cli_ab341d43f9b4452d2015e628bf3c58a9e}\label{namespacemarkopy__cli_ab341d43f9b4452d2015e628bf3c58a9e}} 
 \index{markopy\_cli@{markopy\_cli}!cli\_init@{cli\_init}}
 \index{cli\_init@{cli\_init}!markopy\_cli@{markopy\_cli}}
 \doxysubsubsection{\texorpdfstring{cli\_init()}{cli\_init()}}
 {\footnotesize\ttfamily def markopy\+\_\+cli.\+cli\+\_\+init (\begin{DoxyParamCaption}\item[{}]{input\+\_\+model }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacemarkopy__cli_ab341d43f9b4452d2015e628bf3c58a9e_icgraph}
-\end{center}
-\end{figure}
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00061}{61}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061 \textcolor{keyword}{def }\mbox{\hyperlink{namespacemarkopy__cli_ab341d43f9b4452d2015e628bf3c58a9e}{cli\_init}}(input\_model):}
+\DoxyCodeLine{00062     logging.VERBOSITY = 0}
+\DoxyCodeLine{00063     \textcolor{keywordflow}{if} args.verbosity:}
+\DoxyCodeLine{00064         logging.VERBOSITY = args.verbosity}
+\DoxyCodeLine{00065         logging.pprint(f\textcolor{stringliteral}{"Verbosity set to \{args.verbosity\}."}, 2)}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067     logging.pprint(\textcolor{stringliteral}{"Initializing model."}, 1)}
+\DoxyCodeLine{00068     model = markopy.MarkovPasswords()}
+\DoxyCodeLine{00069     logging.pprint(\textcolor{stringliteral}{"Model initialized."}, 2)}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071     logging.pprint(\textcolor{stringliteral}{"Importing model file."}, 1)}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073     \textcolor{keywordflow}{if} (\textcolor{keywordflow}{not} os.path.isfile(input\_model)):}
+\DoxyCodeLine{00074         logging.pprint(f\textcolor{stringliteral}{"Model file at \{input\_model\} not found. Check the file path, or working directory"})}
+\DoxyCodeLine{00075         exit(1)}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077     model.Import(input\_model)}
+\DoxyCodeLine{00078     logging.pprint(\textcolor{stringliteral}{"Model imported successfully."}, 2)}
+\DoxyCodeLine{00079     \textcolor{keywordflow}{return} model}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081 }
+
+\end{DoxyCode}
 \mbox{\Hypertarget{namespacemarkopy__cli_aba737028a4ca1223e06631b16d22da93}\label{namespacemarkopy__cli_aba737028a4ca1223e06631b16d22da93}} 
 \index{markopy\_cli@{markopy\_cli}!cli\_train@{cli\_train}}
 \index{cli\_train@{cli\_train}!markopy\_cli@{markopy\_cli}}
 \doxysubsubsection{\texorpdfstring{cli\_train()}{cli\_train()}}
 {\footnotesize\ttfamily def markopy\+\_\+cli.\+cli\+\_\+train (\begin{DoxyParamCaption}\item[{}]{model,  }\item[{}]{dataset,  }\item[{}]{seperator,  }\item[{}]{output,  }\item[{}]{output\+\_\+forced = {\ttfamily False},  }\item[{}]{bulk = {\ttfamily False} }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacemarkopy__cli_aba737028a4ca1223e06631b16d22da93_icgraph}
-\end{center}
-\end{figure}
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00082}{82}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082 \textcolor{keyword}{def }\mbox{\hyperlink{namespacemarkopy__cli_aba737028a4ca1223e06631b16d22da93}{cli\_train}}(model, dataset, seperator, output, output\_forced=False, bulk=False):}
+\DoxyCodeLine{00083     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} (dataset \textcolor{keywordflow}{and} seperator \textcolor{keywordflow}{and} (output \textcolor{keywordflow}{or} \textcolor{keywordflow}{not} output\_forced)):}
+\DoxyCodeLine{00084         logging.pprint(}
+\DoxyCodeLine{00085             f\textcolor{stringliteral}{"Training mode requires -\/d/-\/-\/dataset\{', -\/o/-\/-\/output' if output\_forced else ''\} and -\/s/-\/-\/seperator parameters. Exiting."})}
+\DoxyCodeLine{00086         exit(2)}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088     \textcolor{keywordflow}{if} (\textcolor{keywordflow}{not} bulk \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(dataset)):}
+\DoxyCodeLine{00089         logging.pprint(f\textcolor{stringliteral}{"\{dataset\} doesn't exists. Check the file path, or working directory"})}
+\DoxyCodeLine{00090         exit(3)}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092     \textcolor{keywordflow}{if} (output \textcolor{keywordflow}{and} os.path.isfile(output)):}
+\DoxyCodeLine{00093         logging.pprint(f\textcolor{stringliteral}{"\{output\} exists and will be overwritten."}, 1)}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095     \textcolor{keywordflow}{if} (seperator == \textcolor{stringliteral}{'\(\backslash\)\(\backslash\)t'}):}
+\DoxyCodeLine{00096         logging.pprint(\textcolor{stringliteral}{"Escaping seperator."}, 3)}
+\DoxyCodeLine{00097         seperator = \textcolor{stringliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099     \textcolor{keywordflow}{if} (len(seperator) != 1):}
+\DoxyCodeLine{00100         logging.pprint(f\textcolor{stringliteral}{'Delimiter must be a single character, and "\{seperator\}" is not accepted.'})}
+\DoxyCodeLine{00101         exit(4)}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     logging.pprint(f\textcolor{stringliteral}{'Starting training.'}, 3)}
+\DoxyCodeLine{00104     model.Train(dataset, seperator, int(args.threads))}
+\DoxyCodeLine{00105     logging.pprint(f\textcolor{stringliteral}{'Training completed.'}, 2)}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107     \textcolor{keywordflow}{if} (output):}
+\DoxyCodeLine{00108         logging.pprint(f\textcolor{stringliteral}{'Exporting model to \{output\}'}, 2)}
+\DoxyCodeLine{00109         model.Export(output)}
+\DoxyCodeLine{00110     \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00111         logging.pprint(f\textcolor{stringliteral}{'Model will not be exported.'}, 1)}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113 }
+
+\end{DoxyCode}
 
 
 \doxysubsection{Variable Documentation}
@@ -73,11 +165,39 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{action}{action}}
 {\footnotesize\ttfamily markopy\+\_\+cli.\+action}
 
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00049}{49}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
 \mbox{\Hypertarget{namespacemarkopy__cli_a8263be2d219caf76f9e70d2730cb9819}\label{namespacemarkopy__cli_a8263be2d219caf76f9e70d2730cb9819}} 
 \index{markopy\_cli@{markopy\_cli}!args@{args}}
 \index{args@{args}!markopy\_cli@{markopy\_cli}}
 \doxysubsubsection{\texorpdfstring{args}{args}}
 {\footnotesize\ttfamily markopy\+\_\+cli.\+args = parser.\+parse\+\_\+args()}
+
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00058}{58}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+\mbox{\Hypertarget{namespacemarkopy__cli_acccddcbb008bce7b903a6b7b8277d94f}\label{namespacemarkopy__cli_acccddcbb008bce7b903a6b7b8277d94f}} 
+\index{markopy\_cli@{markopy\_cli}!bulk@{bulk}}
+\index{bulk@{bulk}!markopy\_cli@{markopy\_cli}}
+\doxysubsubsection{\texorpdfstring{bulk}{bulk}}
+{\footnotesize\ttfamily markopy\+\_\+cli.\+bulk}
+
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00139}{139}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+\mbox{\Hypertarget{namespacemarkopy__cli_a9981bd7881129bd6b325ca2386bb44f1}\label{namespacemarkopy__cli_a9981bd7881129bd6b325ca2386bb44f1}} 
+\index{markopy\_cli@{markopy\_cli}!corpus\_list@{corpus\_list}}
+\index{corpus\_list@{corpus\_list}!markopy\_cli@{markopy\_cli}}
+\doxysubsubsection{\texorpdfstring{corpus\_list}{corpus\_list}}
+{\footnotesize\ttfamily markopy\+\_\+cli.\+corpus\+\_\+list = os.\+listdir(args.\+dataset)}
+
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00130}{130}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
 
 \mbox{\Hypertarget{namespacemarkopy__cli_a5b14073623d29f92ed097fe814aea085}\label{namespacemarkopy__cli_a5b14073623d29f92ed097fe814aea085}} 
 \index{markopy\_cli@{markopy\_cli}!default@{default}}
@@ -85,11 +205,89 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{default}{default}}
 {\footnotesize\ttfamily markopy\+\_\+cli.\+default}
 
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00041}{41}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
 \mbox{\Hypertarget{namespacemarkopy__cli_a286a154b9b61efb39b244a12bbf5bb80}\label{namespacemarkopy__cli_a286a154b9b61efb39b244a12bbf5bb80}} 
 \index{markopy\_cli@{markopy\_cli}!help@{help}}
 \index{help@{help}!markopy\_cli@{markopy\_cli}}
 \doxysubsubsection{\texorpdfstring{help}{help}}
 {\footnotesize\ttfamily markopy\+\_\+cli.\+help}
+
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00027}{27}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+\mbox{\Hypertarget{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}\label{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}} 
+\index{markopy\_cli@{markopy\_cli}!model@{model}}
+\index{model@{model}!markopy\_cli@{markopy\_cli}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily def markopy\+\_\+cli.\+model = \mbox{\hyperlink{namespacemarkopy__cli_ab341d43f9b4452d2015e628bf3c58a9e}{cli\+\_\+init}}(args.\+input)}
+
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00132}{132}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+\mbox{\Hypertarget{namespacemarkopy__cli_a48904b95ac566fdb9625429815010d6c}\label{namespacemarkopy__cli_a48904b95ac566fdb9625429815010d6c}} 
+\index{markopy\_cli@{markopy\_cli}!model\_base@{model\_base}}
+\index{model\_base@{model\_base}!markopy\_cli@{markopy\_cli}}
+\doxysubsubsection{\texorpdfstring{model\_base}{model\_base}}
+{\footnotesize\ttfamily markopy\+\_\+cli.\+model\+\_\+base = input}
+
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00153}{153}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+\mbox{\Hypertarget{namespacemarkopy__cli_a284278a4b2f6ab3ff0a036390b05ee55}\label{namespacemarkopy__cli_a284278a4b2f6ab3ff0a036390b05ee55}} 
+\index{markopy\_cli@{markopy\_cli}!model\_extension@{model\_extension}}
+\index{model\_extension@{model\_extension}!markopy\_cli@{markopy\_cli}}
+\doxysubsubsection{\texorpdfstring{model\_extension}{model\_extension}}
+{\footnotesize\ttfamily markopy\+\_\+cli.\+model\+\_\+extension = \char`\"{}\char`\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00135}{135}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+\mbox{\Hypertarget{namespacemarkopy__cli_a7a6da7e2d4058e3a162fc4943f76ef12}\label{namespacemarkopy__cli_a7a6da7e2d4058e3a162fc4943f76ef12}} 
+\index{markopy\_cli@{markopy\_cli}!model\_list@{model\_list}}
+\index{model\_list@{model\_list}!markopy\_cli@{markopy\_cli}}
+\doxysubsubsection{\texorpdfstring{model\_list}{model\_list}}
+{\footnotesize\ttfamily markopy\+\_\+cli.\+model\+\_\+list = os.\+listdir(args.\+input)}
+
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00147}{147}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+\mbox{\Hypertarget{namespacemarkopy__cli_aa14f55efc46124e1a8a70952f361ee55}\label{namespacemarkopy__cli_aa14f55efc46124e1a8a70952f361ee55}} 
+\index{markopy\_cli@{markopy\_cli}!output@{output}}
+\index{output@{output}!markopy\_cli@{markopy\_cli}}
+\doxysubsubsection{\texorpdfstring{output}{output}}
+{\footnotesize\ttfamily markopy\+\_\+cli.\+output}
+
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00167}{167}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+\mbox{\Hypertarget{namespacemarkopy__cli_a216a948b6356f19bd55e63a73d2fb691}\label{namespacemarkopy__cli_a216a948b6356f19bd55e63a73d2fb691}} 
+\index{markopy\_cli@{markopy\_cli}!output\_file\_name@{output\_file\_name}}
+\index{output\_file\_name@{output\_file\_name}!markopy\_cli@{markopy\_cli}}
+\doxysubsubsection{\texorpdfstring{output\_file\_name}{output\_file\_name}}
+{\footnotesize\ttfamily markopy\+\_\+cli.\+output\+\_\+file\+\_\+name = corpus}
+
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00134}{134}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+\mbox{\Hypertarget{namespacemarkopy__cli_ada54917921f4d8727df5e47105ac8b2f}\label{namespacemarkopy__cli_ada54917921f4d8727df5e47105ac8b2f}} 
+\index{markopy\_cli@{markopy\_cli}!output\_forced@{output\_forced}}
+\index{output\_forced@{output\_forced}!markopy\_cli@{markopy\_cli}}
+\doxysubsubsection{\texorpdfstring{output\_forced}{output\_forced}}
+{\footnotesize\ttfamily markopy\+\_\+cli.\+output\+\_\+forced}
+
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00139}{139}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
 
 \mbox{\Hypertarget{namespacemarkopy__cli_a57371c71f08d532cbc8dc5138711329e}\label{namespacemarkopy__cli_a57371c71f08d532cbc8dc5138711329e}} 
 \index{markopy\_cli@{markopy\_cli}!parser@{parser}}
@@ -99,7 +297,21 @@ Here is the caller graph for this function\+:\nopagebreak
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 =  argparse.ArgumentParser(description=\textcolor{stringliteral}{"Python wrapper for MarkovPasswords."},}
-\DoxyCodeLine{2 epilog=f, formatter\_class=argparse.RawTextHelpFormatter)}
+\DoxyCodeLine{00001 =  argparse.ArgumentParser(description=\textcolor{stringliteral}{"Python wrapper for MarkovPasswords."},}
+\DoxyCodeLine{00002                                  epilog=f, formatter\_class=argparse.RawTextHelpFormatter)}
 
 \end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00012}{12}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+
+\mbox{\Hypertarget{namespacemarkopy__cli_a467e50c1f956acbd27d5cfc8fea0e4f1}\label{namespacemarkopy__cli_a467e50c1f956acbd27d5cfc8fea0e4f1}} 
+\index{markopy\_cli@{markopy\_cli}!True@{True}}
+\index{True@{True}!markopy\_cli@{markopy\_cli}}
+\doxysubsubsection{\texorpdfstring{True}{True}}
+{\footnotesize\ttfamily markopy\+\_\+cli.\+True}
+
+
+
+Definition at line \mbox{\hyperlink{markopy__cli_8py_source_l00139}{139}} of file \mbox{\hyperlink{markopy__cli_8py_source}{markopy\+\_\+cli.\+py}}.
+

@@ -1,6 +1,0 @@
-<map id="Markov::Node::FindEdge" name="Markov::Node::FindEdge">
-<area shape="rect" id="node1" title="Find an edge with its character representation." alt="" coords="255,78,433,105"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_model.html#ad252913f83fa3eb14cc3f9f92c5ee37a" title="Adjust the model with a single string." alt="" coords="25,5,187,47"/>
-<area shape="rect" id="node3" href="$namespace_testing_1_1_m_v_p_1_1_markov_model.html#a6e9e664c5a60cb3af863f384a47952ce" title="Test class for minimal viable Node." alt="" coords="5,71,207,112"/>
-<area shape="rect" id="node4" href="$namespace_testing_1_1_markov_model.html#a84a573ca81cb8cb3db9845b0cdcf06a6" title="Test class for rest of model cases." alt="" coords="24,136,188,177"/>
-</map>

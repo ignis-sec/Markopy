@@ -1,0 +1,24 @@
+\hypertarget{thread_shared_list_handler_8h_source}{}\doxysection{thread\+Shared\+List\+Handler.\+h}
+\label{thread_shared_list_handler_8h_source}\index{threadSharedListHandler.h@{threadSharedListHandler.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{thread_shared_list_handler_8h_source_l00007}\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_concurrency}{00007}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_concurrency}{Markov::API::Concurrency}}\{}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{\Hypertarget{thread_shared_list_handler_8h_source_l00018}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}{00018}} \textcolor{keyword}{class }\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}{ThreadSharedListHandler}}\{}
+\DoxyCodeLine{00019 \textcolor{keyword}{public}:}
+\DoxyCodeLine{00071     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292}{ThreadSharedListHandler}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* filename);}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00085     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a068e1a9ff477de23a44c10230df416a5}{next}}(std::string* line);}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{thread_shared_list_handler_8h_source_l00088}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_ad7bf8372a5de9f5aa9fb10d4f77d7373}{00088}}     std::ifstream \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_ad7bf8372a5de9f5aa9fb10d4f77d7373}{listfile}};}
+\DoxyCodeLine{\Hypertarget{thread_shared_list_handler_8h_source_l00089}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_af95b0f077e162b3cf3c465f6b0dfe525}{00089}}     std::mutex \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_af95b0f077e162b3cf3c465f6b0dfe525}{mlock}};}
+\DoxyCodeLine{00090 \};}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092 \};}
+
+\end{DoxyCode}

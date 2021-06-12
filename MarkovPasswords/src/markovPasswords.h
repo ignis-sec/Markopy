@@ -75,7 +75,6 @@ namespace Markov::API{
 		 * @param minLen - Minimum password length to generate
 		 * @param maxLen - Maximum password length to generate
 		 * @param threads - number of OS threads to spawn
-		 * @return std::ofstream* of the output file.
 		*/
 		void Generate(unsigned long int n, const char* wordlistFileName, int minLen=6, int maxLen=12, int threads=20);
 		

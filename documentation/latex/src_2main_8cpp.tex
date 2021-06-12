@@ -1,5 +1,5 @@
-\hypertarget{src_2main_8cpp}{}\doxysection{/media/ignis/\+H\+D\+D/\+Repositories/\+Markov\+Passwords/\+Markov\+Passwords/src/main.cpp File Reference}
-\label{src_2main_8cpp}\index{/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/main.cpp@{/media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/main.cpp}}
+\hypertarget{src_2main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{src_2main_8cpp}\index{main.cpp@{main.cpp}}
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include \char`\"{}color/term.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}argparse.\+h\char`\"{}}\newline
@@ -7,7 +7,8 @@
 {\ttfamily \#include $<$cstring$>$}\newline
 {\ttfamily \#include $<$sstream$>$}\newline
 {\ttfamily \#include \char`\"{}markov\+Passwords.\+h\char`\"{}}\newline
-Include dependency graph for main.\+cpp\+:\nopagebreak
+Include dependency graph for src/main.cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -18,21 +19,57 @@ Include dependency graph for main.\+cpp\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
-\begin{DoxyCompactList}\small\item\em Launch \mbox{\hyperlink{class_c_l_i}{C\+LI}} tool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Launch C\+LI tool. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
-\index{main.cpp@{main.cpp}!main@{main}}
-\index{main@{main}!main.cpp@{main.cpp}}
+\index{src/main.cpp@{src/main.cpp}!main@{main}}
+\index{main@{main}!src/main.cpp@{src/main.cpp}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
 
 
 
-Launch \mbox{\hyperlink{class_c_l_i}{C\+LI}} tool. 
+Launch C\+LI tool. 
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Definition at line \mbox{\hyperlink{src_2main_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{src_2main_8cpp_source}{src/main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013                                 \{}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Markov::API::CLI::Terminal}} t;}
+\DoxyCodeLine{00016     \textcolor{comment}{/*}}
+\DoxyCodeLine{00017 \textcolor{comment}{    ProgramOptions* p  = Argparse::parse(argc, argv);}}
+\DoxyCodeLine{00018 \textcolor{comment}{}}
+\DoxyCodeLine{00019 \textcolor{comment}{    if (p==0 || p-\/>bFailure) \{}}
+\DoxyCodeLine{00020 \textcolor{comment}{        std::cout << TERM\_FAIL << "Arguments Failed to Parse" << std::endl;}}
+\DoxyCodeLine{00021 \textcolor{comment}{        Argparse::help();}}
+\DoxyCodeLine{00022 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{00023     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse}{Markov::API::CLI::Argparse}} a(argc,argv);}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}} markovPass;}
+\DoxyCodeLine{00026     std::cout << \textcolor{stringliteral}{"Importing model.\(\backslash\)n"};}
+\DoxyCodeLine{00027     markovPass.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"models/2gram.mdl"});}
+\DoxyCodeLine{00028     std::cout << \textcolor{stringliteral}{"Import done. Training...\(\backslash\)n"};}
+\DoxyCodeLine{00029     markovPass.\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Train}}(\textcolor{stringliteral}{"datasets/graduation.corpus"}, \textcolor{charliteral}{'\(\backslash\)t'}, 50);}
+\DoxyCodeLine{00030     std::cout << \textcolor{stringliteral}{"Training done. Exporting to file.\(\backslash\)n"};}
+\DoxyCodeLine{00031     markovPass.\mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}}(\textcolor{stringliteral}{"models/finished2.mdl"});}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033     std::cout << \textcolor{stringliteral}{"Generation done....\(\backslash\)n"};}
+\DoxyCodeLine{00034     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00035 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_8h_source_l00273}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Export()}}, \mbox{\hyperlink{model_8h_source_l00206}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Import()}}, and \mbox{\hyperlink{markov_passwords_8cpp_source_l00040}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
