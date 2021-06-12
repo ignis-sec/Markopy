@@ -4,6 +4,8 @@
 
 
 namespace Markov::GUI{
+	/** @brief QT Generation page class
+	*/ 
 	class Generate :public QMainWindow {
 		Q_OBJECT
 	public:

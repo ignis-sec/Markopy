@@ -3,6 +3,8 @@
 #include "ui_CLI.h"
 
 namespace Markov::GUI{
+	/** @brief QT CLI Class
+	*/ 
 	class CLI :public QMainWindow {
 		Q_OBJECT
 	public:
