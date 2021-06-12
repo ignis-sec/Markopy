@@ -3,6 +3,7 @@
 #include <qwebengineview.h>
 #include <Windows.h>
 
+using namespace Markov::GUI;
 
 MarkovPasswordsGUI::MarkovPasswordsGUI(QWidget *parent)
     : QMainWindow(parent)

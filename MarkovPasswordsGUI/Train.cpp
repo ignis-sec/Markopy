@@ -9,6 +9,8 @@
 
 #include <QtWidgets/QApplication>
 
+using namespace Markov::GUI;
+
 Train::Train(QWidget* parent)
     : QMainWindow(parent)
 {

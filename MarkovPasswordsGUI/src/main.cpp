@@ -5,7 +5,7 @@
 #include < QDateTime > 
 #include "CLI.h"
 
-
+using namespace Markov::GUI;
 
 /** @brief Launch UI.
 */
