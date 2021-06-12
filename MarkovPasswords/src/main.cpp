@@ -12,7 +12,7 @@
 */
 int main(int argc, char** argv) {
 
-	terminal t;
+	Markov::API::CLI::Terminal t;
 	/*
 	ProgramOptions* p  = Argparse::parse(argc, argv);
 
@@ -20,9 +20,9 @@ int main(int argc, char** argv) {
 		std::cout << TERM_FAIL << "Arguments Failed to Parse" << std::endl;
 		Argparse::help();
 	}*/
-	Argparse a(argc,argv);
+	Markov::API::CLI::Argparse a(argc,argv);
 
-	MarkovPasswords markovPass;
+	Markov::API::MarkovPasswords markovPass;
 	std::cout << "Importing model.\n";
 	markovPass.Import("models/2gram.mdl");
 	std::cout << "Import done. Training...\n";
