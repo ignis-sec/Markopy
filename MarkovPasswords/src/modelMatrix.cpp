@@ -1,6 +1,7 @@
 #include "modelMatrix.h"
 #include <map>
 #include <cstring>
+#include <thread>
 
 Markov::API::ModelMatrix::ModelMatrix(){
 
@@ -108,26 +109,25 @@ void Markov::API::ModelMatrix::DumpJSON(){
 }
 
 
-void Markov::API::ModelMatrix::FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, int threads){
+void Markov::API::ModelMatrix::FastRandomWalkThread(std::mutex *mlock, std::ofstream *wordlist, unsigned long int n, int minLen, int maxLen, int id, bool bFileIO){
+    if(n==0) return;
+
     Markov::Random::Marsaglia MarsagliaRandomEngine;
     char* e;
-    std::ofstream wordlist;	
-	wordlist.open(wordlistFileName);
-    char* res = new char[maxLen+5];
+    char *res = new char[maxLen*n];
     int index = 0;
     char next;
     int len=0;
     long int selection;
     char cur;
-	for (int i = 0; i < n; i++) {
-        len=0;
+    long int bufferctr = 0;
+    for (int i = 0; i < n; i++) {
         cur=199;
+        len=0;
         while (true) {
             e = strchr(this->matrixIndex, cur);
             index = e - this->matrixIndex;
-
             selection = MarsagliaRandomEngine.random() % this->totalEdgeWeights[index];
-
             for(int j=0;j<this->matrixSize;j++){
                 selection -= this->valueMatrix[index][j];
                 if (selection < 0){
@@ -135,26 +135,50 @@ void Markov::API::ModelMatrix::FastRandomWalk(unsigned long int n, const char* w
                     break;
                 }
             }
-            res[index] = next;
 
-            if (len >= maxLen) {
-                break;
-            }
-            else if ((next < 0) && (len < minLen)) {
-                continue;
-            }
-
-            else if (next < 0){
-                break;
-            }
-                
+            if (len >= maxLen)  break;
+            else if ((next < 0) && (len < minLen)) continue;
+            else if (next < 0) break;  
             cur = next;
-
-            res[len++] = cur;
+            res[bufferctr + len++] = cur;
         }
+        res[bufferctr + len++] = '\n';
+        bufferctr+=len;
+        
+    }
+    if(bFileIO){
+        mlock->lock();
+        *wordlist << res;
+        mlock->unlock();
+    }else{
+        mlock->lock();
+        std::cout << res;
+        mlock->unlock();
+    }
 
-	    //null terminate the string
-	    res[len] = 0x00;
-		wordlist << res << "\n";
+}
+
+
+void Markov::API::ModelMatrix::FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, int threads, bool bFileIO){
+    
+    std::ofstream wordlist;	
+    if(bFileIO)
+        wordlist.open(wordlistFileName);
+    int iterationsPerThread = n/threads;
+	int iterationsCarryOver = n%threads;
+
+
+	std::vector<std::thread*> threadsV;
+    std::mutex mlock;
+    int id = 0;
+	for(int i=0;i<threads;i++){
+		threadsV.push_back(new std::thread(&Markov::API::ModelMatrix::FastRandomWalkThread, this, &mlock, &wordlist, iterationsPerThread, minLen, maxLen, id, bFileIO));
+        id++;
+	}
+
+	threadsV.push_back(new std::thread(&Markov::API::ModelMatrix::FastRandomWalkThread, this, &mlock, &wordlist, iterationsCarryOver, minLen, maxLen, id, bFileIO));
+
+    for(int i=0;i<threads;i++){
+		threadsV[i]->join();
 	}
 }
