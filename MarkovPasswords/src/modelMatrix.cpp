@@ -155,28 +155,44 @@ void Markov::API::ModelMatrix::FastRandomWalkThread(std::mutex *mlock, std::ofst
         std::cout << res;
         mlock->unlock();
     }
+    delete res;
 
 }
 
 
 void Markov::API::ModelMatrix::FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, int threads, bool bFileIO){
     
+
     std::ofstream wordlist;	
     if(bFileIO)
         wordlist.open(wordlistFileName);
-    int iterationsPerThread = n/threads;
-	int iterationsCarryOver = n%threads;
 
+    std::mutex mlock;
+    if(n<=50000000ull) return this->FastRandomWalkPartition(&mlock, &wordlist, n, minLen, maxLen, bFileIO, threads);
+    else{
+        int numberOfPartitions = n/50000000ull;
+        for(int i=0;i<numberOfPartitions;i++)
+            this->FastRandomWalkPartition(&mlock, &wordlist, 50000000ull, minLen, maxLen, bFileIO, threads);
+    }
+
+
+}
+
+
+void Markov::API::ModelMatrix::FastRandomWalkPartition(std::mutex *mlock, std::ofstream *wordlist, unsigned long int n, int minLen, int maxLen, bool bFileIO, int threads){
+    
+    int iterationsPerThread = n/threads;
+	int iterationsPerThreadCarryOver = n%threads;
 
 	std::vector<std::thread*> threadsV;
-    std::mutex mlock;
+    
     int id = 0;
 	for(int i=0;i<threads;i++){
-		threadsV.push_back(new std::thread(&Markov::API::ModelMatrix::FastRandomWalkThread, this, &mlock, &wordlist, iterationsPerThread, minLen, maxLen, id, bFileIO));
+		threadsV.push_back(new std::thread(&Markov::API::ModelMatrix::FastRandomWalkThread, this, mlock, wordlist, iterationsPerThread, minLen, maxLen, id, bFileIO));
         id++;
 	}
 
-	threadsV.push_back(new std::thread(&Markov::API::ModelMatrix::FastRandomWalkThread, this, &mlock, &wordlist, iterationsCarryOver, minLen, maxLen, id, bFileIO));
+	threadsV.push_back(new std::thread(&Markov::API::ModelMatrix::FastRandomWalkThread, this, mlock, wordlist, iterationsPerThreadCarryOver, minLen, maxLen, id, bFileIO));
 
     for(int i=0;i<threads;i++){
 		threadsV[i]->join();
