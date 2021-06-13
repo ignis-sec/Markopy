@@ -69,10 +69,9 @@ namespace Markov::API{
 		/** @brief Call Markov::Model::RandomWalk n times, and collect output.
 		 * 
 		 * Generate from model and write results to a file. 
-		 * @b DEPRECATED: See Markov::API::MatrixModel::FastRandomWalk for more information. This has been replaced with 
 		 * a much more performance-optimized method. FastRandomWalk will reduce the runtime by %96.5 on average.
 		 * 
-		 * @deprecated
+		 * @deprecated See Markov::API::MatrixModel::FastRandomWalk for more information.
 		 * @param n - Number of passwords to generate.
 		 * @param wordlistFileName - Filename to write to
 		 * @param minLen - Minimum password length to generate

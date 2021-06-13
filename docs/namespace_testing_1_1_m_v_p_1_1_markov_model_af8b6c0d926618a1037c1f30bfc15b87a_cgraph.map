@@ -1,7 +1,3 @@
 <map id="Testing::MVP::MarkovModel::TEST_CLASS" name="Testing::MVP::MarkovModel::TEST_CLASS">
-<area shape="rect" id="node1" title="Test class for minimal viable Model." alt="" coords="5,77,244,123"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939" title="Export a file of the model." alt="" coords="318,5,519,35"/>
-<area shape="rect" id="node3" href="$class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5" title="Import a file to construct the model." alt="" coords="317,59,520,88"/>
-<area shape="rect" id="node4" href="$class_markov_1_1_model.html#aa4a11c6679c998936332f8409ae95375" title="Do a random walk on this model." alt="" coords="292,112,545,141"/>
-<area shape="rect" id="node5" href="$class_markov_1_1_model.html#a35cb15a14d034f3365b9d2d3efa1ffc0" title="Return starter Node." alt="" coords="295,165,542,195"/>
+<area shape="rect" id="node1" title="Test class for minimal viable Model." alt="" coords="5,29,244,76"/>
 </map>

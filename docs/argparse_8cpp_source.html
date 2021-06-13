@@ -87,19 +87,19 @@ $(document).ready(function(){initNavTree('argparse_8cpp_source.html',''); initRe
 <div class="title">argparse.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="argparse_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="argparse_8h.html">argparse.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="term_8h.html">color/term.h</a>&quot;</span></div>
+<a href="argparse_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="argparse_8h.html">&quot;argparse.h&quot;</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;color/term.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#a318af5fbacd5becef2ee72a87ac344da">    4</a></span>&#160;<a class="code" href="struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options.html">Markov::API::CLI::ProgramOptions</a>* <a class="code" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#a318af5fbacd5becef2ee72a87ac344da">Markov::API::CLI::Argparse::parse</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) { <span class="keywordflow">return</span> 0; }</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#a318af5fbacd5becef2ee72a87ac344da">    4</a></span>&#160;Markov::API::<a class="code" href="namespace_markov_1_1_a_p_i_1_1_c_l_i.html">CLI</a>::ProgramOptions* Markov::API::<a class="code" href="namespace_markov_1_1_a_p_i_1_1_c_l_i.html">CLI</a>::<a class="code" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html">Argparse</a>::<a class="code" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#a318af5fbacd5becef2ee72a87ac344da">parse</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) { <span class="keywordflow">return</span> 0; }</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#ac7aaf4edf169e3aab32aca083984d914">    8</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#ac7aaf4edf169e3aab32aca083984d914">Markov::API::CLI::Argparse::help</a>() {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    std::cout &lt;&lt; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#ac7aaf4edf169e3aab32aca083984d914">    8</a></span>&#160;<span class="keywordtype">void</span> Markov::API::<a class="code" href="namespace_markov_1_1_a_p_i_1_1_c_l_i.html">CLI</a>::<a class="code" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html">Argparse</a>::<a class="code" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#ac7aaf4edf169e3aab32aca083984d914">help</a>() {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    std::cout &lt;&lt;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&quot;Markov Passwords - Help\n&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="stringliteral">&quot;Options:\n&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="stringliteral">&quot;   \n&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="stringliteral">&quot;   -of --outputfilename\n&quot;</span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="stringliteral">&quot;   -of --outputfilename\n&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="stringliteral">&quot;       Filename to output the generation results\n&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="stringliteral">&quot;   -ef --exportfilename\n&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="stringliteral">&quot;       filename to export built model to\n&quot;</span></div>
@@ -114,17 +114,15 @@ $(document).ready(function(){initNavTree('argparse_8cpp_source.html',''); initRe
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="stringliteral">&quot;\n&quot;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="stringliteral">&quot;   markov.exe -if empty_model.mdl -n 15000 -of wordlist.txt\n&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="stringliteral">&quot;       import empty_model.mdl and generate 15000 words to wordlist.txt\n&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;     &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aterm_8h_html"><div class="ttname"><a href="term_8h.html">term.h</a></div></div>
-<div class="ttc" id="aargparse_8h_html"><div class="ttname"><a href="argparse_8h.html">argparse.h</a></div></div>
-<div class="ttc" id="astruct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_html"><div class="ttname"><a href="struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options.html">Markov::API::CLI::_programOptions</a></div><div class="ttdoc">Structure to hold parsed cli arguements.</div><div class="ttdef"><b>Definition:</b> <a href="argparse_8h_source.html#l00018">argparse.h:18</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_html"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html">Markov::API::CLI::Argparse</a></div><div class="ttdoc">Parse command line arguements.</div><div class="ttdef"><b>Definition:</b> <a href="argparse_8h_source.html#l00034">argparse.h:34</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_html_ac7aaf4edf169e3aab32aca083984d914"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#ac7aaf4edf169e3aab32aca083984d914">Markov::API::CLI::Argparse::help</a></div><div class="ttdeci">static void help()</div><div class="ttdoc">Print help string.</div><div class="ttdef"><b>Definition:</b> <a href="argparse_8cpp_source.html#l00008">argparse.cpp:8</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_html_a318af5fbacd5becef2ee72a87ac344da"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#a318af5fbacd5becef2ee72a87ac344da">Markov::API::CLI::Argparse::parse</a></div><div class="ttdeci">static Markov::API::CLI::ProgramOptions * parse(int argc, char **argv)</div><div class="ttdoc">parse cli commands and return</div><div class="ttdef"><b>Definition:</b> <a href="argparse_8cpp_source.html#l00004">argparse.cpp:4</a></div></div>
+<div class="ttc" id="anamespace_markov_1_1_a_p_i_1_1_c_l_i_html"><div class="ttname"><a href="namespace_markov_1_1_a_p_i_1_1_c_l_i.html">Markov::API::CLI</a></div><div class="ttdoc">Structure to hold parsed cli arguements.</div><div class="ttdef"><b>Definition:</b> <a href="argparse_8h_source.html#l00014">argparse.h:14</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

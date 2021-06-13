@@ -1,5 +1,0 @@
-<map id="Markov::Edge::SetLeftEdge" name="Markov::Edge::SetLeftEdge">
-<area shape="rect" id="node1" title="Set LeftNode of this edge." alt="" coords="309,50,547,79"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_node.html#a1db7cba480ab9fb41ef8ab53d1eac0f2" title="Link this node with another, with this node as its source." alt="" coords="5,5,261,52"/>
-<area shape="rect" id="node3" href="$namespace_testing_1_1_m_v_p_1_1_markov_model.html#a0e3a45b149abd9dff30adc9b877f94cd" title="Test class for minimal viable Edge." alt="" coords="14,76,253,123"/>
-</map>

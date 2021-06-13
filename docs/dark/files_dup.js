@@ -36,6 +36,10 @@ var files_dup =
       [ "Model", "class_markov_1_1_model.html", "class_markov_1_1_model" ]
     ] ],
     [ "model_2gram.py", "model__2gram_8py.html", "model__2gram_8py" ],
+    [ "modelMatrix.cpp", "model_matrix_8cpp.html", null ],
+    [ "modelMatrix.h", "model_matrix_8h.html", [
+      [ "ModelMatrix", "class_markov_1_1_a_p_i_1_1_model_matrix.html", "class_markov_1_1_a_p_i_1_1_model_matrix" ]
+    ] ],
     [ "node.h", "node_8h.html", [
       [ "Node", "class_markov_1_1_node.html", "class_markov_1_1_node" ]
     ] ],

@@ -4,78 +4,184 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001 }
 \DoxyCodeLine{00002 }
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <random>}}
-\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{random}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{iostream}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00005 }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00009}\mbox{\hyperlink{namespace_markov_1_1_random}{00009}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_markov_1_1_random}{Markov::Random}}\{}
+\DoxyCodeLine{00006 \textcolor{comment}{/**}}
+\DoxyCodeLine{00007 \textcolor{comment}{    @brief Objects related to RNG}}
+\DoxyCodeLine{00008 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00009}\mbox{\hyperlink{namespace_markov_1_1_random}{00009}} \textcolor{keyword}{namespace} Markov::\mbox{\hyperlink{namespace_markov_1_1_random}{Random}}\{}
 \DoxyCodeLine{00010 }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00021}\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{00021}}     \textcolor{keyword}{class }\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{RandomEngine}}\{}
-\DoxyCodeLine{00022     \textcolor{keyword}{public}: }
+\DoxyCodeLine{00011     \textcolor{comment}{/** @brief An abstract class for Random Engine}}
+\DoxyCodeLine{00012 \textcolor{comment}{     * }}
+\DoxyCodeLine{00013 \textcolor{comment}{     * This class is used for generating random numbers, which are used for random walking on the graph.}}
+\DoxyCodeLine{00014 \textcolor{comment}{     * }}
+\DoxyCodeLine{00015 \textcolor{comment}{     * Main reason behind allowing different random engines is that some use cases may favor performance,}}
+\DoxyCodeLine{00016 \textcolor{comment}{     * while some favor good random. }}
+\DoxyCodeLine{00017 \textcolor{comment}{     * }}
+\DoxyCodeLine{00018 \textcolor{comment}{     * Mersenne can be used for truer random, while Marsaglia can be used for deterministic but fast random.}}
+\DoxyCodeLine{00019 \textcolor{comment}{     * }}
+\DoxyCodeLine{00020 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00021}\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{00021}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{RandomEngine}}\{}
+\DoxyCodeLine{00022     \textcolor{keyword}{public}:}
 \DoxyCodeLine{00023         \textcolor{keyword}{virtual} \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058}{random}}() = 0;}
 \DoxyCodeLine{00024     \};}
 \DoxyCodeLine{00025 }
 \DoxyCodeLine{00026 }
 \DoxyCodeLine{00027 }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00052}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{00052}}     \textcolor{keyword}{class }\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{DefaultRandomEngine}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{RandomEngine}}\{}
+\DoxyCodeLine{00028     \textcolor{comment}{/** @brief Implementation using Random.h default random engine}}
+\DoxyCodeLine{00029 \textcolor{comment}{     * }}
+\DoxyCodeLine{00030 \textcolor{comment}{     * This engine is also used by other engines for seeding.}}
+\DoxyCodeLine{00031 \textcolor{comment}{     * }}
+\DoxyCodeLine{00032 \textcolor{comment}{     * }}
+\DoxyCodeLine{00033 \textcolor{comment}{     * @b Example @b Use: Using Default Engine with RandomWalk}}
+\DoxyCodeLine{00034 \textcolor{comment}{     * @code\{.cpp\}}}
+\DoxyCodeLine{00035 \textcolor{comment}{     * Markov::Model<char> model;}}
+\DoxyCodeLine{00036 \textcolor{comment}{     * Model.import("model.mdl");}}
+\DoxyCodeLine{00037 \textcolor{comment}{     * char* res = new char[11];}}
+\DoxyCodeLine{00038 \textcolor{comment}{     * Markov::Random::DefaultRandomEngine randomEngine;}}
+\DoxyCodeLine{00039 \textcolor{comment}{     * for (int i = 0; i < 10; i++) \{}}
+\DoxyCodeLine{00040 \textcolor{comment}{     *      this-\/>RandomWalk(\&randomEngine, 5, 10, res); }}
+\DoxyCodeLine{00041 \textcolor{comment}{     *      std::cout << res << "\(\backslash\)n";}}
+\DoxyCodeLine{00042 \textcolor{comment}{     *  \}}}
+\DoxyCodeLine{00043 \textcolor{comment}{     * @endcode}}
+\DoxyCodeLine{00044 \textcolor{comment}{     * }}
+\DoxyCodeLine{00045 \textcolor{comment}{     * @b Example @b Use: Generating a random number with Marsaglia Engine}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * @code\{.cpp\}}}
+\DoxyCodeLine{00047 \textcolor{comment}{     * Markov::Random::DefaultRandomEngine de;}}
+\DoxyCodeLine{00048 \textcolor{comment}{     * std::cout << de.random();}}
+\DoxyCodeLine{00049 \textcolor{comment}{     * @endcode}}
+\DoxyCodeLine{00050 \textcolor{comment}{     * }}
+\DoxyCodeLine{00051 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00052}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{00052}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{DefaultRandomEngine}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{RandomEngine}}\{}
 \DoxyCodeLine{00053     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054         \textcolor{comment}{/** @brief Generate Random Number}}
+\DoxyCodeLine{00055 \textcolor{comment}{        * @return random number in long range.}}
+\DoxyCodeLine{00056 \textcolor{comment}{        */}}
 \DoxyCodeLine{\Hypertarget{random_8h_source_l00057}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_afd4233366727e5c2dd14d7e5c3ebfec1}{00057}}         \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_afd4233366727e5c2dd14d7e5c3ebfec1}{random}}()\{}
-\DoxyCodeLine{00058             \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}()(this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}());}
+\DoxyCodeLine{00058             \textcolor{keywordflow}{return} \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{)}}(\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{)}});}
 \DoxyCodeLine{00059         \}}
 \DoxyCodeLine{00060     \textcolor{keyword}{protected}:}
 \DoxyCodeLine{00061 }
+\DoxyCodeLine{00062         \textcolor{comment}{/** @brief Default random device for seeding}}
+\DoxyCodeLine{00063 \textcolor{comment}{        * }}
+\DoxyCodeLine{00064 \textcolor{comment}{        */}}
 \DoxyCodeLine{\Hypertarget{random_8h_source_l00065}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}{00065}}         \textcolor{keyword}{inline} std::random\_device\& \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}{rd}}() \{}
 \DoxyCodeLine{00066             \textcolor{keyword}{static} std::random\_device \_rd;}
 \DoxyCodeLine{00067             \textcolor{keywordflow}{return} \_rd;}
 \DoxyCodeLine{00068         \}}
-\DoxyCodeLine{00069         }
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070         \textcolor{comment}{/** @brief Default random engine for seeding}}
+\DoxyCodeLine{00071 \textcolor{comment}{        * }}
+\DoxyCodeLine{00072 \textcolor{comment}{        */}}
 \DoxyCodeLine{\Hypertarget{random_8h_source_l00073}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{00073}}         \textcolor{keyword}{inline} std::default\_random\_engine\& \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}() \{}
-\DoxyCodeLine{00074             \textcolor{keyword}{static} std::default\_random\_engine \_generator(\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}{rd}}()());}
+\DoxyCodeLine{00074             \textcolor{keyword}{static} std::default\_random\_engine \_generator(\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}{rd}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}{)}}());}
 \DoxyCodeLine{00075             \textcolor{keywordflow}{return} \_generator;}
 \DoxyCodeLine{00076         \}}
 \DoxyCodeLine{00077 }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00081}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{00081}}         \textcolor{keyword}{inline} std::uniform\_int\_distribution<long long unsigned>\& \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}() \{}
-\DoxyCodeLine{00082             \textcolor{keyword}{static} std::uniform\_int\_distribution<long long unsigned> \_distribution(0, 0xffffFFFF);}
+\DoxyCodeLine{00078         \textcolor{comment}{/** @brief Distribution schema for seeding.}}
+\DoxyCodeLine{00079 \textcolor{comment}{        * }}
+\DoxyCodeLine{00080 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00081}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{00081}}         \textcolor{keyword}{inline} std::uniform\_int\_distribution<\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{unsigned}>\& \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}() \{}
+\DoxyCodeLine{00082             \textcolor{keyword}{static} std::uniform\_int\_distribution<\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{unsigned}> \_distribution(0, 0xffffFFFF);}
 \DoxyCodeLine{00083             \textcolor{keywordflow}{return} \_distribution;}
 \DoxyCodeLine{00084         \}}
 \DoxyCodeLine{00085 }
 \DoxyCodeLine{00086     \};}
 \DoxyCodeLine{00087 }
 \DoxyCodeLine{00088 }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00116}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{00116}}     \textcolor{keyword}{class }\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Marsaglia}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{DefaultRandomEngine}}\{}
+\DoxyCodeLine{00089     \textcolor{comment}{/** @brief Implementation of Marsaglia Random Engine}}
+\DoxyCodeLine{00090 \textcolor{comment}{     * }}
+\DoxyCodeLine{00091 \textcolor{comment}{     * This is an implementation of Marsaglia Random engine, which for most use cases is a better fit than other solutions.}}
+\DoxyCodeLine{00092 \textcolor{comment}{     * Very simple mathematical formula to generate pseudorandom integer, so its crazy fast.}}
+\DoxyCodeLine{00093 \textcolor{comment}{     * }}
+\DoxyCodeLine{00094 \textcolor{comment}{     * This implementation of the Marsaglia Engine is seeded by random.h default random engine.}}
+\DoxyCodeLine{00095 \textcolor{comment}{     * RandomEngine is only seeded once so its not a performance issue.}}
+\DoxyCodeLine{00096 \textcolor{comment}{     * }}
+\DoxyCodeLine{00097 \textcolor{comment}{     * @b Example @b Use: Using Marsaglia Engine with RandomWalk}}
+\DoxyCodeLine{00098 \textcolor{comment}{     * @code\{.cpp\}}}
+\DoxyCodeLine{00099 \textcolor{comment}{     * Markov::Model<char> model;}}
+\DoxyCodeLine{00100 \textcolor{comment}{     * Model.import("model.mdl");}}
+\DoxyCodeLine{00101 \textcolor{comment}{     * char* res = new char[11];}}
+\DoxyCodeLine{00102 \textcolor{comment}{     * Markov::Random::Marsaglia MarsagliaRandomEngine;}}
+\DoxyCodeLine{00103 \textcolor{comment}{     * for (int i = 0; i < 10; i++) \{}}
+\DoxyCodeLine{00104 \textcolor{comment}{     *      this-\/>RandomWalk(\&MarsagliaRandomEngine, 5, 10, res); }}
+\DoxyCodeLine{00105 \textcolor{comment}{     *      std::cout << res << "\(\backslash\)n";}}
+\DoxyCodeLine{00106 \textcolor{comment}{     *  \}}}
+\DoxyCodeLine{00107 \textcolor{comment}{     * @endcode}}
+\DoxyCodeLine{00108 \textcolor{comment}{     * }}
+\DoxyCodeLine{00109 \textcolor{comment}{     * @b Example @b Use: Generating a random number with Marsaglia Engine}}
+\DoxyCodeLine{00110 \textcolor{comment}{     * @code\{.cpp\}}}
+\DoxyCodeLine{00111 \textcolor{comment}{     * Markov::Random::Marsaglia me;}}
+\DoxyCodeLine{00112 \textcolor{comment}{     * std::cout << me.random();}}
+\DoxyCodeLine{00113 \textcolor{comment}{     * @endcode}}
+\DoxyCodeLine{00114 \textcolor{comment}{     * }}
+\DoxyCodeLine{00115 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00116}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{00116}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Marsaglia}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{DefaultRandomEngine}}\{}
 \DoxyCodeLine{00117     \textcolor{keyword}{public}:}
 \DoxyCodeLine{00118 }
+\DoxyCodeLine{00119         \textcolor{comment}{/** @brief Construct Marsaglia Engine}}
+\DoxyCodeLine{00120 \textcolor{comment}{        * }}
+\DoxyCodeLine{00121 \textcolor{comment}{        * Initialize x,y and z using the default random engine.}}
+\DoxyCodeLine{00122 \textcolor{comment}{        */}}
 \DoxyCodeLine{\Hypertarget{random_8h_source_l00123}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_aafadb3ac016ff0dac8df73a93e594e3b}{00123}}         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_aafadb3ac016ff0dac8df73a93e594e3b}{Marsaglia}}()\{}
-\DoxyCodeLine{00124             this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} = this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}()(this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}());}
-\DoxyCodeLine{00125             this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}} = this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}()(this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}());}
-\DoxyCodeLine{00126             this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}} = this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}()(this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}());}
+\DoxyCodeLine{00124             \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} = \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{)}}(\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{)}});}
+\DoxyCodeLine{00125             \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}} = \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{)}}(\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{)}});}
+\DoxyCodeLine{00126             \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}} = \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{)}}(\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{)}});}
 \DoxyCodeLine{00127             \textcolor{comment}{//std::cout << "x: " << x << ", y: " << y << ", z: " << z << "\(\backslash\)n";}}
 \DoxyCodeLine{00128         \}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00129}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{00129}}         \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{random}}()\{    }
-\DoxyCodeLine{00130             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} t;}
-\DoxyCodeLine{00131             \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} << 16;}
-\DoxyCodeLine{00132             \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} >> 5;}
-\DoxyCodeLine{00133             \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} << 1;}
-\DoxyCodeLine{00134 }
-\DoxyCodeLine{00135             t = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}};}
-\DoxyCodeLine{00136             \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
-\DoxyCodeLine{00137             \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}} = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
-\DoxyCodeLine{00138             \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}} = t \string^ \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^ \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
-\DoxyCodeLine{00139 }
-\DoxyCodeLine{00140             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
-\DoxyCodeLine{00141         \}}
-\DoxyCodeLine{00142     }
-\DoxyCodeLine{00143 }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00144}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{00144}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}};}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00145}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{00145}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00146}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{00146}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
-\DoxyCodeLine{00147     \};}
-\DoxyCodeLine{00148 }
-\DoxyCodeLine{00149 }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00174}\mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{00174}}     \textcolor{keyword}{class }\mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Mersenne}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{DefaultRandomEngine}}\{}
-\DoxyCodeLine{00175 }
-\DoxyCodeLine{00176     \};}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130 }
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00131}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{00131}}     \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{random}}()\{}
+\DoxyCodeLine{00132         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} t;}
+\DoxyCodeLine{00133         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} << 16;}
+\DoxyCodeLine{00134         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} >> 5;}
+\DoxyCodeLine{00135         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} << 1;}
+\DoxyCodeLine{00136 }
+\DoxyCodeLine{00137         t = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}};}
+\DoxyCodeLine{00138         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
+\DoxyCodeLine{00139         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}} = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
+\DoxyCodeLine{00140         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}} = t \string^ \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^ \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
+\DoxyCodeLine{00143     \}}
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00146}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{00146}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}};}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00147}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{00147}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00148}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{00148}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
+\DoxyCodeLine{00149     \};}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151 }
+\DoxyCodeLine{00152     \textcolor{comment}{/** @brief Implementation of Mersenne Twister Engine}}
+\DoxyCodeLine{00153 \textcolor{comment}{     * }}
+\DoxyCodeLine{00154 \textcolor{comment}{     * This is an implementation of Mersenne Twister Engine, which is slow but is a good implementation for high entropy pseudorandom.}}
+\DoxyCodeLine{00155 \textcolor{comment}{     * }}
+\DoxyCodeLine{00156 \textcolor{comment}{     * }}
+\DoxyCodeLine{00157 \textcolor{comment}{     * @b Example @b Use: Using Mersenne Engine with RandomWalk}}
+\DoxyCodeLine{00158 \textcolor{comment}{     * @code\{.cpp\}}}
+\DoxyCodeLine{00159 \textcolor{comment}{     * Markov::Model<char> model;}}
+\DoxyCodeLine{00160 \textcolor{comment}{     * Model.import("model.mdl");}}
+\DoxyCodeLine{00161 \textcolor{comment}{     * char* res = new char[11];}}
+\DoxyCodeLine{00162 \textcolor{comment}{     * Markov::Random::Mersenne MersenneTwisterEngine;}}
+\DoxyCodeLine{00163 \textcolor{comment}{     * for (int i = 0; i < 10; i++) \{}}
+\DoxyCodeLine{00164 \textcolor{comment}{     *      this-\/>RandomWalk(\&MersenneTwisterEngine, 5, 10, res); }}
+\DoxyCodeLine{00165 \textcolor{comment}{     *      std::cout << res << "\(\backslash\)n";}}
+\DoxyCodeLine{00166 \textcolor{comment}{     *  \}}}
+\DoxyCodeLine{00167 \textcolor{comment}{     * @endcode}}
+\DoxyCodeLine{00168 \textcolor{comment}{     * }}
+\DoxyCodeLine{00169 \textcolor{comment}{     * @b Example @b Use: Generating a random number with Marsaglia Engine}}
+\DoxyCodeLine{00170 \textcolor{comment}{     * @code\{.cpp\}}}
+\DoxyCodeLine{00171 \textcolor{comment}{     * Markov::Random::Mersenne me;}}
+\DoxyCodeLine{00172 \textcolor{comment}{     * std::cout << me.random();}}
+\DoxyCodeLine{00173 \textcolor{comment}{     * @endcode}}
+\DoxyCodeLine{00174 \textcolor{comment}{     * }}
+\DoxyCodeLine{00175 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00176}\mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{00176}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Mersenne}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{DefaultRandomEngine}}\{}
 \DoxyCodeLine{00177 }
-\DoxyCodeLine{00178 }
-\DoxyCodeLine{00179 \};}
+\DoxyCodeLine{00178     \};}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{00180 }
+\DoxyCodeLine{00181 \};}
 
 \end{DoxyCode}

@@ -2,16 +2,90 @@
 \label{thread_shared_list_handler_8h_source}\index{threadSharedListHandler.h@{threadSharedListHandler.h}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <fstream>}}
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{string}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{fstream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{mutex}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00004 }
-\DoxyCodeLine{\Hypertarget{thread_shared_list_handler_8h_source_l00007}\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_concurrency}{00007}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_concurrency}{Markov::API::Concurrency}}\{}
+\DoxyCodeLine{00005 \textcolor{comment}{/** @brief Namespace for Concurrency related classes}}
+\DoxyCodeLine{00006 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{thread_shared_list_handler_8h_source_l00007}\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_concurrency}{00007}} \textcolor{keyword}{namespace} Markov::API::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_concurrency}{Concurrency}}\{}
 \DoxyCodeLine{00008 }
-\DoxyCodeLine{\Hypertarget{thread_shared_list_handler_8h_source_l00018}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}{00018}} \textcolor{keyword}{class }\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}{ThreadSharedListHandler}}\{}
+\DoxyCodeLine{00009 \textcolor{comment}{/** @brief Simple class for managing shared access to file}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * }}
+\DoxyCodeLine{00011 \textcolor{comment}{ * This class maintains the handover of each line from a file to multiple threads.}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * }}
+\DoxyCodeLine{00013 \textcolor{comment}{ * When two different threads try to read from the same file while reading a line isn't completed, it can have unexpected results.}}
+\DoxyCodeLine{00014 \textcolor{comment}{ * Line might be split, or might be read twice.}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This class locks the read action on the list until a line is completed, and then proceeds with the handover.}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * }}
+\DoxyCodeLine{00017 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{thread_shared_list_handler_8h_source_l00018}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}{00018}} \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}{ThreadSharedListHandler}}\{}
 \DoxyCodeLine{00019 \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020     \textcolor{comment}{/** @brief Construct the Thread Handler with a filename}}
+\DoxyCodeLine{00021 \textcolor{comment}{     * }}
+\DoxyCodeLine{00022 \textcolor{comment}{     * Simply open the file, and initialize the locks.}}
+\DoxyCodeLine{00023 \textcolor{comment}{     * }}
+\DoxyCodeLine{00024 \textcolor{comment}{     * @b Example @b Use: Simple file read}}
+\DoxyCodeLine{00025 \textcolor{comment}{     * @code\{.cpp\}}}
+\DoxyCodeLine{00026 \textcolor{comment}{     * ThreadSharedListHandler listhandler("test.txt");}}
+\DoxyCodeLine{00027 \textcolor{comment}{     * std::string line;}}
+\DoxyCodeLine{00028 \textcolor{comment}{     * std::cout << listhandler-\/>next(\&line) << "\(\backslash\)n";}}
+\DoxyCodeLine{00029 \textcolor{comment}{     * @endcode}}
+\DoxyCodeLine{00030 \textcolor{comment}{     * }}
+\DoxyCodeLine{00031 \textcolor{comment}{     * @b Example @b Use: Example use case from MarkovPasswords showing multithreaded access}}
+\DoxyCodeLine{00032 \textcolor{comment}{     * @code\{.cpp\}}}
+\DoxyCodeLine{00033 \textcolor{comment}{     *  void MarkovPasswords::Train(const char* datasetFileName, char delimiter, int threads)   \{}}
+\DoxyCodeLine{00034 \textcolor{comment}{     *       ThreadSharedListHandler listhandler(datasetFileName);}}
+\DoxyCodeLine{00035 \textcolor{comment}{     *       auto start = std::chrono::high\_resolution\_clock::now();}}
+\DoxyCodeLine{00036 \textcolor{comment}{     *  }}
+\DoxyCodeLine{00037 \textcolor{comment}{     *       std::vector<std::thread*> threadsV;}}
+\DoxyCodeLine{00038 \textcolor{comment}{     *       for(int i=0;i<threads;i++)\{}}
+\DoxyCodeLine{00039 \textcolor{comment}{     *           threadsV.push\_back(new std::thread(\&MarkovPasswords::TrainThread, this, \&listhandler, datasetFileName, delimiter));}}
+\DoxyCodeLine{00040 \textcolor{comment}{     *       \}}}
+\DoxyCodeLine{00041 \textcolor{comment}{     * }}
+\DoxyCodeLine{00042 \textcolor{comment}{     *      for(int i=0;i<threads;i++)\{}}
+\DoxyCodeLine{00043 \textcolor{comment}{     *           threadsV[i]-\/>join();}}
+\DoxyCodeLine{00044 \textcolor{comment}{     *           delete threadsV[i];}}
+\DoxyCodeLine{00045 \textcolor{comment}{     *       \}}}
+\DoxyCodeLine{00046 \textcolor{comment}{     *       auto finish = std::chrono::high\_resolution\_clock::now();}}
+\DoxyCodeLine{00047 \textcolor{comment}{     *       std::chrono::duration<double> elapsed = finish -\/ start;}}
+\DoxyCodeLine{00048 \textcolor{comment}{     *       std::cout << "Elapsed time: " << elapsed.count() << " s\(\backslash\)n";}}
+\DoxyCodeLine{00049 \textcolor{comment}{     * }}
+\DoxyCodeLine{00050 \textcolor{comment}{     *   \}}}
+\DoxyCodeLine{00051 \textcolor{comment}{     * }}
+\DoxyCodeLine{00052 \textcolor{comment}{     *   void MarkovPasswords::TrainThread(ThreadSharedListHandler *listhandler, const char* datasetFileName, char delimiter)\{}}
+\DoxyCodeLine{00053 \textcolor{comment}{     *       char format\_str[] ="\%ld,\%s";}}
+\DoxyCodeLine{00054 \textcolor{comment}{     *       format\_str[2]=delimiter;}}
+\DoxyCodeLine{00055 \textcolor{comment}{     *       std::string line;}}
+\DoxyCodeLine{00056 \textcolor{comment}{     *       while (listhandler-\/>next(\&line)) \{}}
+\DoxyCodeLine{00057 \textcolor{comment}{     *           long int oc;}}
+\DoxyCodeLine{00058 \textcolor{comment}{     *           if (line.size() > 100) \{}}
+\DoxyCodeLine{00059 \textcolor{comment}{     *               line = line.substr(0, 100);}}
+\DoxyCodeLine{00060 \textcolor{comment}{     *           \}}}
+\DoxyCodeLine{00061 \textcolor{comment}{     *           char* linebuf = new char[line.length()+5];}}
+\DoxyCodeLine{00062 \textcolor{comment}{     *           sscanf\_s(line.c\_str(), format\_str, \&oc, linebuf, line.length()+5);}}
+\DoxyCodeLine{00063 \textcolor{comment}{     *           this-\/>AdjustEdge((const char*)linebuf, oc); }}
+\DoxyCodeLine{00064 \textcolor{comment}{     *           delete linebuf;}}
+\DoxyCodeLine{00065 \textcolor{comment}{     *       \}}}
+\DoxyCodeLine{00066 \textcolor{comment}{     *   \}}}
+\DoxyCodeLine{00067 \textcolor{comment}{     * @endcode}}
+\DoxyCodeLine{00068 \textcolor{comment}{     * }}
+\DoxyCodeLine{00069 \textcolor{comment}{     * @param filename Filename for the file to manage.}}
+\DoxyCodeLine{00070 \textcolor{comment}{    */}}
 \DoxyCodeLine{00071     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292}{ThreadSharedListHandler}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* filename);}
 \DoxyCodeLine{00072 }
+\DoxyCodeLine{00073     \textcolor{comment}{/** @brief Read the next line from the file.}}
+\DoxyCodeLine{00074 \textcolor{comment}{     * }}
+\DoxyCodeLine{00075 \textcolor{comment}{     * This action will be blocked until another thread (if any) completes the read operation on the file.}}
+\DoxyCodeLine{00076 \textcolor{comment}{     * }}
+\DoxyCodeLine{00077 \textcolor{comment}{     * @b Example @b Use: Simple file read}}
+\DoxyCodeLine{00078 \textcolor{comment}{     * @code\{.cpp\}}}
+\DoxyCodeLine{00079 \textcolor{comment}{     * ThreadSharedListHandler listhandler("test.txt");}}
+\DoxyCodeLine{00080 \textcolor{comment}{     * std::string line;}}
+\DoxyCodeLine{00081 \textcolor{comment}{     * std::cout << listhandler-\/>next(\&line) << "\(\backslash\)n";}}
+\DoxyCodeLine{00082 \textcolor{comment}{     * @endcode}}
+\DoxyCodeLine{00083 \textcolor{comment}{     * }}
+\DoxyCodeLine{00084 \textcolor{comment}{    */}}
 \DoxyCodeLine{00085     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a068e1a9ff477de23a44c10230df416a5}{next}}(std::string* line);}
 \DoxyCodeLine{00086 }
 \DoxyCodeLine{00087 \textcolor{keyword}{private}:}

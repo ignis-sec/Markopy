@@ -1,5 +1,4 @@
 <map id="Markov::Model::Import" name="Markov::Model::Import">
-<area shape="rect" id="node1" title="Import a file to construct the model." alt="" coords="292,37,495,67"/>
-<area shape="rect" id="node2" href="$src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="93,5,156,35"/>
-<area shape="rect" id="node3" href="$namespace_testing_1_1_m_v_p_1_1_markov_model.html#af8b6c0d926618a1037c1f30bfc15b87a" title="Test class for minimal viable Model." alt="" coords="5,59,244,106"/>
+<area shape="rect" id="node1" title="Import a file to construct the model." alt="" coords="320,14,523,43"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html#ac3fb665ee48937ca845d930e72e07917" title="Open dataset file and return the ifstream pointer." alt="" coords="5,5,272,52"/>
 </map>

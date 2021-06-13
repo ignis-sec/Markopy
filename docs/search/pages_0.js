@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['markov_20passwords_388',['Markov Passwords',['../index.html',1,'']]]
+  ['deprecated_20list_415',['Deprecated List',['../deprecated.html',1,'']]]
 ];
