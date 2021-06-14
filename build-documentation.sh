@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH:+${CPLUS_INCLUDE_PATH}:}/usr/include/python3.8:$(pwd)"
+export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH:+${CPLUS_INCLUDE_PATH}:}/usr/include/python3.8:/usr/lib/cuda/include:$(pwd)"
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/lib
 #cleanup old documentations
 rm -r docs/*
