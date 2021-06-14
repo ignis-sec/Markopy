@@ -2,12 +2,12 @@
 \label{dllmain_8cpp_source}\index{dllmain.cpp@{dllmain.cpp}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_markov_model_2src_2pch_8h}{pch.h}}"}}
-\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{model_8h}{model.h}}"}}
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_markov_model_2src_2pch_8h}{"pch.h"}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{model_8h}{"model.h"}}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{iostream}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00004 }
 \DoxyCodeLine{00005 }
-\DoxyCodeLine{00006 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef} \textcolor{preprocessor}{\_WIN32}}
 \DoxyCodeLine{00007 \_\_declspec(dllexport) \textcolor{keywordtype}{void} dll\_loadtest() \{}
 \DoxyCodeLine{00008     std::cout << \textcolor{stringliteral}{"External function called.\(\backslash\)n"};}
 \DoxyCodeLine{00009     \textcolor{comment}{//cudaTestEntry();}}
@@ -26,7 +26,6 @@
 \DoxyCodeLine{00022     \textcolor{keywordflow}{return} TRUE;}
 \DoxyCodeLine{00023 \}}
 \DoxyCodeLine{00024 }
-\DoxyCodeLine{00025 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00026 }
+\DoxyCodeLine{00025 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
 
 \end{DoxyCode}

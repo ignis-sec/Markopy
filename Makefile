@@ -6,6 +6,8 @@
 
 # Compiler
 CC            	:= g++
+# Cuda Compiler
+NVCC = nvcc
 #output directory
 BIN            	:= bin
 #include directory
@@ -13,6 +15,8 @@ INCLUDE        	:= include
 #Libraries
 LIB            	:= lib
 LIBRARIES    	:=
+CUDAPATH = /usr/lib/cuda
+
 
 ifndef PYTHON_VERSION
 PYTHON_VERSION := $(shell python3 -c "import sys;t='{v[0]}.{v[1]}'.format(v=list(sys.version_info[:2]));sys.stdout.write(t)";) #3.8
@@ -25,7 +29,7 @@ PYTHON_VERSION3 :=$(shell python$(PYTHON_VERSION) -c "import sys;t='{v[0]}.{v[1]
 #####################################     MarkovPassword project options     #################################
 ##############################################################################################################
 
-MP_C_FLAGS  := -Wall -Wextra -g -Ofast
+MP_C_FLAGS  := -Wall -Wextra -g -Ofast -std=c++17
 MP_EXEC     := Markov
 MP_SRC      := $(shell find ./MarkovPasswords/src/ -name '*.cpp') 
 MP_INC 		:= 
@@ -36,6 +40,22 @@ MP_INC		:= $(shell pwd)
 $(BIN)/$(MP_EXEC): $(MP_SRC)
 	$(CC) $(MP_C_FLAGS) -I$(MP_INC) -L$(LIB) $^ -o $@ $(MP_LIB) 
 
+
+##############################################################################################################
+###################################   CUDAMarkovPassword project options     #################################
+##############################################################################################################
+
+NVCCFLAGS 	:=  -std=c++17 -g -O3 -std=c++17 -L$(CUDAPATH)/lib
+MPC_EXEC    := CUDAMarkov
+MPC_SRC     := $(shell find ./CudaMarkovPasswords/src/ -name '*.cpp')  $(shell find ./CudaMarkovPasswords/src/ -name '*.cu') MarkovPasswords/src/threadSharedListHandler.cpp MarkovPasswords/src/markovPasswords.cpp MarkovPasswords/src/modelMatrix.cpp
+MPC_INC 	:= $(CUDAPATH)/include
+MPC_LIB		:= -lboost_program_options -lpthread -lcuda -lcudart -lm
+MPC_INC		:= $(shell pwd)
+
+#build pattern
+$(BIN)/$(MPC_EXEC): $(MPC_SRC)
+	$(NVCC) $(NVCCFLAGS) -I$(MPC_INC) -L$(LIB) $^ -o $@ $(MPC_LIB) 
+
 ##############################################################################################################
 #####################################       MarkovModel project options      #################################
 ##############################################################################################################
@@ -44,7 +64,7 @@ MM_SRC          := $(shell find $(MM_SRC_DIR) -name '*.cpp')
 MM_OBJS         := $(MM_SRC:%=$(BIN)/%.o)
 MM_DEPS         := $(MM_OBJS:.o=.d)
 MM_LDFLAGS      := -shared 
-MM_C_FLAGS      := $(MM_INC_FLAGS) -MMD -MP  -Ofast
+MM_C_FLAGS      := $(MM_INC_FLAGS) -MMD -MP  -Ofast -std=c++17
 MM_INC_DIRS     := $(shell find $(MM_SRC_DIR) -type d)
 MM_INC_FLAGS    := $(addprefix -I,$(MM_INC_DIRS))
 MM_LIB          := model.so
@@ -69,7 +89,7 @@ MPY_SRC_DIR		 := Markopy/src/
 MPY_OBJS         := $(MPY_SRC:%=$(BIN)/%.o)
 MPY_DEPS         := $(MPY_OBJS:.o=.d)
 MPY_LDFLAGS      := -shared -lboost_python$(PYTHON_VERSION_) -lpython$(PYTHON_VERSION) -lpthread
-MPY_C_FLAGS      := $(MPY_INC_FLAGS) -MMD -MP -fPIC -I/usr/include/python$(PYTHON_VERSION)  -Ofast
+MPY_C_FLAGS      := $(MPY_INC_FLAGS) -MMD -MP -fPIC -I/usr/include/python$(PYTHON_VERSION)  -Ofast -std=c++17
 MPY_INC_DIRS     := $(shell find $(MPY_SRC_DIR) -type d) $(shell pwd)
 MPY_INC_FLAGS    := $(addprefix -I,$(MPY_INC_DIRS))
 MPY_SO           := markopy.so
@@ -90,14 +110,16 @@ $(BIN)/%.cpp.o:%.cpp
 
 .PHONY: all
 all: model mp markopy
-model: $(INCLUDE)/$(MM_LIB)
+model: 		$(INCLUDE)/$(MM_LIB)
 
-mp: $(BIN)/$(MP_EXEC)
+mp: 		$(BIN)/$(MP_EXEC)
 
-markopy: $(BIN)/$(MPY_SO)
+mpcuda: 	$(BIN)/$(MPC_EXEC)
 
-.PHONY: clean
-clean:
-	$(RM) -r $(BIN)/*
+markopy: 	$(BIN)/$(MPY_SO)
+
+.PHONY: 	clean
+
+clean: 		$(RM) -r $(BIN)/*
 
 

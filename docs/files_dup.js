@@ -8,6 +8,12 @@ var files_dup =
     [ "CLI.h", "_c_l_i_8h.html", [
       [ "CLI", "class_markov_1_1_g_u_i_1_1_c_l_i.html", "class_markov_1_1_g_u_i_1_1_c_l_i" ]
     ] ],
+    [ "cudaDeviceController.h", "cuda_device_controller_8h.html", [
+      [ "CUDADeviceController", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller" ]
+    ] ],
+    [ "cudaModelMatrix.h", "cuda_model_matrix_8h.html", [
+      [ "CUDAModelMatrix", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix" ]
+    ] ],
     [ "dllmain.cpp", "dllmain_8cpp.html", null ],
     [ "edge.h", "edge_8h.html", [
       [ "Node", "class_markov_1_1_node.html", "class_markov_1_1_node" ],
@@ -36,6 +42,10 @@ var files_dup =
       [ "Model", "class_markov_1_1_model.html", "class_markov_1_1_model" ]
     ] ],
     [ "model_2gram.py", "model__2gram_8py.html", "model__2gram_8py" ],
+    [ "modelMatrix.cpp", "model_matrix_8cpp.html", null ],
+    [ "modelMatrix.h", "model_matrix_8h.html", [
+      [ "ModelMatrix", "class_markov_1_1_a_p_i_1_1_model_matrix.html", "class_markov_1_1_a_p_i_1_1_model_matrix" ]
+    ] ],
     [ "node.h", "node_8h.html", [
       [ "Node", "class_markov_1_1_node.html", "class_markov_1_1_node" ]
     ] ],

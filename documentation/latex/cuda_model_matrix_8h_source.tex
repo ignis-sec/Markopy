@@ -1,0 +1,68 @@
+\hypertarget{cuda_model_matrix_8h_source}{}\doxysection{cuda\+Model\+Matrix.\+h}
+\label{cuda_model_matrix_8h_source}\index{cudaModelMatrix.h@{cudaModelMatrix.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{"MarkovPasswords/src/modelMatrix.h"}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{cuda_device_controller_8h}{"cudaDeviceController.h"}}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{comment}{/** @brief Namespace for objects requiring CUDA libraries.}}
+\DoxyCodeLine{00005 \textcolor{comment}{*/}}
+\DoxyCodeLine{00006 \textcolor{keyword}{namespace} Markov::API::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}\{}
+\DoxyCodeLine{00007     \textcolor{comment}{/** @brief Extension of Markov::API::ModelMatrix which is modified to run on GPU devices.}}
+\DoxyCodeLine{00008 \textcolor{comment}{     * }}
+\DoxyCodeLine{00009 \textcolor{comment}{     * This implementation only supports Nvidia devices.}}
+\DoxyCodeLine{00010 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00011}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{00011}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{CUDAModelMatrix}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{ModelMatrix}}, \textcolor{keyword}{public} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller}{CUDADeviceController}}\{}
+\DoxyCodeLine{00012     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014         \textcolor{comment}{/** @brief Migrate the class members to the VRAM}}
+\DoxyCodeLine{00015 \textcolor{comment}{         *}}
+\DoxyCodeLine{00016 \textcolor{comment}{         * Cannot be used without calling Markov::API::ModelMatrix::ConstructMatrix at least once.}}
+\DoxyCodeLine{00017 \textcolor{comment}{         * This function will manage the memory allocation and data transfer from CPU RAM to GPU VRAM.}}
+\DoxyCodeLine{00018 \textcolor{comment}{         * }}
+\DoxyCodeLine{00019 \textcolor{comment}{         * Newly allocated VRAM pointers are set in the class member variables.}}
+\DoxyCodeLine{00020 \textcolor{comment}{         * }}
+\DoxyCodeLine{00021 \textcolor{comment}{        */}}
+\DoxyCodeLine{00022         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a5dd552997a32c0cabf3a6cca6fb07b73}{\_\_host\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a5dd552997a32c0cabf3a6cca6fb07b73}{MigrateMatrix}}();}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024         \textcolor{comment}{/** @brief Random walk on the Matrix-\/reduced Markov::Model}}
+\DoxyCodeLine{00025 \textcolor{comment}{         * }}
+\DoxyCodeLine{00026 \textcolor{comment}{         * TODO}}
+\DoxyCodeLine{00027 \textcolor{comment}{         * }}
+\DoxyCodeLine{00028 \textcolor{comment}{         * }}
+\DoxyCodeLine{00029 \textcolor{comment}{         * @param n -\/ Number of passwords to generate.}}
+\DoxyCodeLine{00030 \textcolor{comment}{         * @param wordlistFileName -\/ Filename to write to}}
+\DoxyCodeLine{00031 \textcolor{comment}{         * @param minLen -\/ Minimum password length to generate}}
+\DoxyCodeLine{00032 \textcolor{comment}{         * @param maxLen -\/ Maximum password length to generate}}
+\DoxyCodeLine{00033 \textcolor{comment}{         * @param threads -\/ number of OS threads to spawn}}
+\DoxyCodeLine{00034 \textcolor{comment}{         * @param bFileIO -\/ If false, filename will be ignored and will output to stdout.}}
+\DoxyCodeLine{00035 \textcolor{comment}{         * }}
+\DoxyCodeLine{00036 \textcolor{comment}{         * }}
+\DoxyCodeLine{00037 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00038 \textcolor{comment}{         * Markov::API::ModelMatrix mp;}}
+\DoxyCodeLine{00039 \textcolor{comment}{         * mp.Import("models/finished.mdl");}}
+\DoxyCodeLine{00040 \textcolor{comment}{         * mp.FastRandomWalk(50000000,"./wordlist.txt",6,12,25, true);}}
+\DoxyCodeLine{00041 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00042 \textcolor{comment}{         * }}
+\DoxyCodeLine{00043 \textcolor{comment}{        */}}
+\DoxyCodeLine{00044         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a19862a2611859de8a1b0595d9c6ff42f}{\_\_host\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a19862a2611859de8a1b0595d9c6ff42f}{FastRandomWalk}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a19862a2611859de8a1b0595d9c6ff42f}{n}}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a19862a2611859de8a1b0595d9c6ff42f}{wordlistFileName}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a19862a2611859de8a1b0595d9c6ff42f}{minLen}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a19862a2611859de8a1b0595d9c6ff42f}{maxLen}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a19862a2611859de8a1b0595d9c6ff42f}{threads}}, \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a19862a2611859de8a1b0595d9c6ff42f}{bFileIO}});}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00047         \textcolor{comment}{/** @brief Retrieve the result buffer from CUDA kernel.}}
+\DoxyCodeLine{00048 \textcolor{comment}{         * }}
+\DoxyCodeLine{00049 \textcolor{comment}{         * Done on each partition.}}
+\DoxyCodeLine{00050 \textcolor{comment}{         * }}
+\DoxyCodeLine{00051 \textcolor{comment}{         * }}
+\DoxyCodeLine{00052 \textcolor{comment}{        */}}
+\DoxyCodeLine{00053         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac4af6bbd60ecbe204bfc4d5cdab24004}{\_\_host\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac4af6bbd60ecbe204bfc4d5cdab24004}{RetrieveCudaBuffer}}(\textcolor{comment}{/*TODO*/});}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00057}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a2329ce70d7bc9ea0797079a599dd9170}{00057}}         \textcolor{keywordtype}{char}** \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a2329ce70d7bc9ea0797079a599dd9170}{device\_edgeMatrix}};}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00058}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aef9d4b48f3a4a2957077e0c53f3eab60}{00058}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} **\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aef9d4b48f3a4a2957077e0c53f3eab60}{device\_valueMatrix}};}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00059}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6a252a7c965c218114ad3d1663c4e840}{00059}}         \textcolor{keywordtype}{char} *\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6a252a7c965c218114ad3d1663c4e840}{device\_matrixIndex}};}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00060}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aae5fdd4bdffc7eb2561fb923024d2615}{00060}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} *\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aae5fdd4bdffc7eb2561fb923024d2615}{device\_totalEdgeWeights}};}
+\DoxyCodeLine{00061     \};}
+\DoxyCodeLine{00062 \};}
+
+\end{DoxyCode}

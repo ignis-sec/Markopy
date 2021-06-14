@@ -1,0 +1,107 @@
+\hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller}{}\doxysection{Markov\+::A\+PI\+::C\+U\+DA\+::C\+U\+D\+A\+Device\+Controller Class Reference}
+\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller}\index{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}}
+
+
+Controller class for \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} device.  
+
+
+
+
+{\ttfamily \#include $<$cuda\+Device\+Controller.\+h$>$}
+
+
+
+Inheritance diagram for Markov\+::A\+PI\+::C\+U\+DA\+::C\+U\+D\+A\+Device\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Markov\+::A\+PI\+::C\+U\+DA\+::C\+U\+D\+A\+Device\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}{List\+Cuda\+Devices}} ()
+\begin{DoxyCompactList}\small\item\em List \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} devices in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ int \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}{Cuda\+Check\+Notify\+Err}} (cuda\+Error\+\_\+t \+\_\+status, const char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Check results of the last operation on G\+PU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controller class for \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} device. 
+
+This implementation only supports Nvidia devices. 
+
+Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00009}{9}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}} 
+\index{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaCheckNotifyErr@{CudaCheckNotifyErr}}
+\index{CudaCheckNotifyErr@{CudaCheckNotifyErr}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}}
+\doxysubsubsection{\texorpdfstring{CudaCheckNotifyErr()}{CudaCheckNotifyErr()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ int Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Check\+Notify\+Err (\begin{DoxyParamCaption}\item[{cuda\+Error\+\_\+t}]{\+\_\+status,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Check results of the last operation on G\+PU. 
+
+Check the status returned from cuda\+Malloc/cuda\+Memcpy to find failures.
+
+If a failure occurs, its assumed beyond redemption, and exited. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+status} & Cuda error status to check \\
+\hline
+{\em msg} & Message to print in case of a failure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 if failure. {\bfseries{Example}} {\bfseries{output\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} *da, a = \textcolor{stringliteral}{"test"};}
+\DoxyCodeLine{cudastatus = cudaMalloc((\textcolor{keywordtype}{char} **)\&da, 5*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"Failed to allocate VRAM for *da.\(\backslash\)n"});}
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}} 
+\index{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!ListCudaDevices@{ListCudaDevices}}
+\index{ListCudaDevices@{ListCudaDevices}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}}
+\doxysubsubsection{\texorpdfstring{ListCudaDevices()}{ListCudaDevices()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+List\+Cuda\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+List \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} devices in the system. 
+
+This function will print details of every \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} capable device in the system.
+
+{\bfseries{Example}} {\bfseries{output\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Device Number: 0}
+\DoxyCodeLine{Device name: GeForce RTX 2070}
+\DoxyCodeLine{Memory Clock Rate (KHz): 7001000}
+\DoxyCodeLine{Memory Bus Width (bits): 256}
+\DoxyCodeLine{Peak Memory Bandwidth (GB/s): 448.064}
+\DoxyCodeLine{Max Linear Threads: 1024}
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cuda_device_controller_8h}{cuda\+Device\+Controller.\+h}}\end{DoxyCompactItemize}

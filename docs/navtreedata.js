@@ -50,6 +50,7 @@ var NAVTREE =
         [ "Contact", "index.html#autotoc_md38", null ]
       ] ]
     ] ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -85,7 +86,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_c_l_i_8h.html",
-"markopy__cli_8py.html#acbad1b17f7d290d7a6b3b87554437e5e"
+"class_markov_1_1_random_1_1_marsaglia.html#aafadb3ac016ff0dac8df73a93e594e3b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

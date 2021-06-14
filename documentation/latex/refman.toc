@@ -26,376 +26,472 @@
 \contentsline {subsubsection}{\numberline {1.5.2.4}Simplified Theory}{5}{subsubsection.1.5.2.4}%
 \contentsline {subsection}{\numberline {1.5.3}Contributing}{6}{subsection.1.5.3}%
 \contentsline {subsection}{\numberline {1.5.4}Contact}{6}{subsection.1.5.4}%
-\contentsline {chapter}{\numberline {2}Namespace Index}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Namespace List}{7}{section.2.1}%
-\contentsline {chapter}{\numberline {3}Hierarchical Index}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Class Hierarchy}{9}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Class Index}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Class List}{11}{section.4.1}%
-\contentsline {chapter}{\numberline {5}File Index}{13}{chapter.5}%
-\contentsline {section}{\numberline {5.1}File List}{13}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Namespace Documentation}{15}{chapter.6}%
-\contentsline {section}{\numberline {6.1}markopy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cli Namespace Reference}{15}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{15}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Function Documentation}{15}{subsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.2.1}cli\_generate()}{15}{subsubsection.6.1.2.1}%
-\contentsline {subsubsection}{\numberline {6.1.2.2}cli\_init()}{16}{subsubsection.6.1.2.2}%
-\contentsline {subsubsection}{\numberline {6.1.2.3}cli\_train()}{16}{subsubsection.6.1.2.3}%
-\contentsline {subsection}{\numberline {6.1.3}Variable Documentation}{17}{subsection.6.1.3}%
-\contentsline {subsubsection}{\numberline {6.1.3.1}action}{17}{subsubsection.6.1.3.1}%
-\contentsline {subsubsection}{\numberline {6.1.3.2}args}{17}{subsubsection.6.1.3.2}%
-\contentsline {subsubsection}{\numberline {6.1.3.3}bulk}{17}{subsubsection.6.1.3.3}%
-\contentsline {subsubsection}{\numberline {6.1.3.4}corpus\_list}{17}{subsubsection.6.1.3.4}%
-\contentsline {subsubsection}{\numberline {6.1.3.5}default}{17}{subsubsection.6.1.3.5}%
-\contentsline {subsubsection}{\numberline {6.1.3.6}help}{17}{subsubsection.6.1.3.6}%
-\contentsline {subsubsection}{\numberline {6.1.3.7}model}{17}{subsubsection.6.1.3.7}%
-\contentsline {subsubsection}{\numberline {6.1.3.8}model\_base}{17}{subsubsection.6.1.3.8}%
-\contentsline {subsubsection}{\numberline {6.1.3.9}model\_extension}{18}{subsubsection.6.1.3.9}%
-\contentsline {subsubsection}{\numberline {6.1.3.10}model\_list}{18}{subsubsection.6.1.3.10}%
-\contentsline {subsubsection}{\numberline {6.1.3.11}output}{18}{subsubsection.6.1.3.11}%
-\contentsline {subsubsection}{\numberline {6.1.3.12}output\_file\_name}{18}{subsubsection.6.1.3.12}%
-\contentsline {subsubsection}{\numberline {6.1.3.13}output\_forced}{18}{subsubsection.6.1.3.13}%
-\contentsline {subsubsection}{\numberline {6.1.3.14}parser}{18}{subsubsection.6.1.3.14}%
-\contentsline {subsubsection}{\numberline {6.1.3.15}True}{18}{subsubsection.6.1.3.15}%
-\contentsline {section}{\numberline {6.2}Markov Namespace Reference}{18}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{19}{subsection.6.2.1}%
-\contentsline {section}{\numberline {6.3}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI Namespace Reference}{19}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{19}{subsection.6.3.1}%
-\contentsline {section}{\numberline {6.4}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LI Namespace Reference}{19}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{20}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Typedef Documentation}{20}{subsection.6.4.2}%
-\contentsline {subsubsection}{\numberline {6.4.2.1}ProgramOptions}{20}{subsubsection.6.4.2.1}%
-\contentsline {subsection}{\numberline {6.4.3}Function Documentation}{20}{subsection.6.4.3}%
-\contentsline {subsubsection}{\numberline {6.4.3.1}operator$<$$<$()}{20}{subsubsection.6.4.3.1}%
-\contentsline {section}{\numberline {6.5}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Concurrency Namespace Reference}{20}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{20}{subsection.6.5.1}%
-\contentsline {section}{\numberline {6.6}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI Namespace Reference}{20}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{21}{subsection.6.6.1}%
-\contentsline {section}{\numberline {6.7}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markopy Namespace Reference}{21}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Function Documentation}{21}{subsection.6.7.1}%
-\contentsline {subsubsection}{\numberline {6.7.1.1}BOOST\_PYTHON\_MODULE()}{21}{subsubsection.6.7.1.1}%
-\contentsline {section}{\numberline {6.8}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Random Namespace Reference}{21}{section.6.8}%
-\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{22}{subsection.6.8.1}%
-\contentsline {section}{\numberline {6.9}model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2gram Namespace Reference}{22}{section.6.9}%
-\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{22}{subsection.6.9.1}%
-\contentsline {subsection}{\numberline {6.9.2}Variable Documentation}{22}{subsection.6.9.2}%
-\contentsline {subsubsection}{\numberline {6.9.2.1}alphabet}{22}{subsubsection.6.9.2.1}%
-\contentsline {subsubsection}{\numberline {6.9.2.2}f}{22}{subsubsection.6.9.2.2}%
-\contentsline {section}{\numberline {6.10}random Namespace Reference}{22}{section.6.10}%
-\contentsline {subsection}{\numberline {6.10.1}Detailed Description}{22}{subsection.6.10.1}%
-\contentsline {section}{\numberline {6.11}random-\/model Namespace Reference}{23}{section.6.11}%
-\contentsline {subsection}{\numberline {6.11.1}Variable Documentation}{23}{subsection.6.11.1}%
-\contentsline {subsubsection}{\numberline {6.11.1.1}alphabet}{23}{subsubsection.6.11.1.1}%
-\contentsline {subsubsection}{\numberline {6.11.1.2}f}{23}{subsubsection.6.11.1.2}%
-\contentsline {section}{\numberline {6.12}Testing Namespace Reference}{23}{section.6.12}%
-\contentsline {subsection}{\numberline {6.12.1}Detailed Description}{23}{subsection.6.12.1}%
-\contentsline {section}{\numberline {6.13}Testing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model Namespace Reference}{23}{section.6.13}%
-\contentsline {subsection}{\numberline {6.13.1}Detailed Description}{24}{subsection.6.13.1}%
-\contentsline {subsection}{\numberline {6.13.2}Function Documentation}{24}{subsection.6.13.2}%
-\contentsline {subsubsection}{\numberline {6.13.2.1}TEST\_CLASS()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{24}{subsubsection.6.13.2.1}%
-\contentsline {subsubsection}{\numberline {6.13.2.2}TEST\_CLASS()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{24}{subsubsection.6.13.2.2}%
-\contentsline {subsubsection}{\numberline {6.13.2.3}TEST\_CLASS()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{25}{subsubsection.6.13.2.3}%
-\contentsline {section}{\numberline {6.14}Testing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords Namespace Reference}{26}{section.6.14}%
-\contentsline {subsection}{\numberline {6.14.1}Detailed Description}{26}{subsection.6.14.1}%
-\contentsline {section}{\numberline {6.15}Testing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VP Namespace Reference}{26}{section.6.15}%
-\contentsline {subsection}{\numberline {6.15.1}Detailed Description}{27}{subsection.6.15.1}%
-\contentsline {section}{\numberline {6.16}Testing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VP\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model Namespace Reference}{27}{section.6.16}%
-\contentsline {subsection}{\numberline {6.16.1}Detailed Description}{27}{subsection.6.16.1}%
-\contentsline {subsection}{\numberline {6.16.2}Function Documentation}{27}{subsection.6.16.2}%
-\contentsline {subsubsection}{\numberline {6.16.2.1}TEST\_CLASS()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{27}{subsubsection.6.16.2.1}%
-\contentsline {subsubsection}{\numberline {6.16.2.2}TEST\_CLASS()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{29}{subsubsection.6.16.2.2}%
-\contentsline {subsubsection}{\numberline {6.16.2.3}TEST\_CLASS()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{30}{subsubsection.6.16.2.3}%
-\contentsline {section}{\numberline {6.17}Testing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VP\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords Namespace Reference}{33}{section.6.17}%
-\contentsline {subsection}{\numberline {6.17.1}Detailed Description}{33}{subsection.6.17.1}%
-\contentsline {subsection}{\numberline {6.17.2}Function Documentation}{33}{subsection.6.17.2}%
-\contentsline {subsubsection}{\numberline {6.17.2.1}TEST\_CLASS()}{34}{subsubsection.6.17.2.1}%
-\contentsline {chapter}{\numberline {7}Class Documentation}{37}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}program\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Options Struct Reference}{37}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{39}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Member Data Documentation}{39}{subsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.2.1}bExport}{39}{subsubsection.7.1.2.1}%
-\contentsline {subsubsection}{\numberline {7.1.2.2}bFailure}{39}{subsubsection.7.1.2.2}%
-\contentsline {subsubsection}{\numberline {7.1.2.3}bImport}{39}{subsubsection.7.1.2.3}%
-\contentsline {subsubsection}{\numberline {7.1.2.4}datasetname}{39}{subsubsection.7.1.2.4}%
-\contentsline {subsubsection}{\numberline {7.1.2.5}exportname}{39}{subsubsection.7.1.2.5}%
-\contentsline {subsubsection}{\numberline {7.1.2.6}generateN}{39}{subsubsection.7.1.2.6}%
-\contentsline {subsubsection}{\numberline {7.1.2.7}importname}{39}{subsubsection.7.1.2.7}%
-\contentsline {subsubsection}{\numberline {7.1.2.8}outputfilename}{40}{subsubsection.7.1.2.8}%
-\contentsline {subsubsection}{\numberline {7.1.2.9}seperator}{40}{subsubsection.7.1.2.9}%
-\contentsline {subsubsection}{\numberline {7.1.2.10}wordlistname}{40}{subsubsection.7.1.2.10}%
-\contentsline {section}{\numberline {7.2}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::about Class Reference}{40}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Detailed Description}{41}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Constructor \& Destructor Documentation}{41}{subsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.2.1}about()}{41}{subsubsection.7.2.2.1}%
-\contentsline {subsection}{\numberline {7.2.3}Member Data Documentation}{41}{subsection.7.2.3}%
-\contentsline {subsubsection}{\numberline {7.2.3.1}ui}{41}{subsubsection.7.2.3.1}%
-\contentsline {section}{\numberline {7.3}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Argparse Class Reference}{42}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{43}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Constructor \& Destructor Documentation}{43}{subsection.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.2.1}Argparse()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{43}{subsubsection.7.3.2.1}%
-\contentsline {subsubsection}{\numberline {7.3.2.2}Argparse()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{43}{subsubsection.7.3.2.2}%
-\contentsline {subsection}{\numberline {7.3.3}Member Function Documentation}{45}{subsection.7.3.3}%
-\contentsline {subsubsection}{\numberline {7.3.3.1}getProgramOptions()}{45}{subsubsection.7.3.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.3.2}help()}{45}{subsubsection.7.3.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.3.3}parse()}{45}{subsubsection.7.3.3.3}%
-\contentsline {subsubsection}{\numberline {7.3.3.4}setProgramOptions()}{46}{subsubsection.7.3.3.4}%
-\contentsline {subsection}{\numberline {7.3.4}Member Data Documentation}{47}{subsection.7.3.4}%
-\contentsline {subsubsection}{\numberline {7.3.4.1}po}{47}{subsubsection.7.3.4.1}%
-\contentsline {section}{\numberline {7.4}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LI Class Reference}{47}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{48}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Constructor \& Destructor Documentation}{48}{subsection.7.4.2}%
-\contentsline {subsubsection}{\numberline {7.4.2.1}CLI()}{48}{subsubsection.7.4.2.1}%
-\contentsline {subsection}{\numberline {7.4.3}Member Function Documentation}{48}{subsection.7.4.3}%
-\contentsline {subsubsection}{\numberline {7.4.3.1}about}{49}{subsubsection.7.4.3.1}%
-\contentsline {subsubsection}{\numberline {7.4.3.2}start}{49}{subsubsection.7.4.3.2}%
-\contentsline {subsubsection}{\numberline {7.4.3.3}statistics}{49}{subsubsection.7.4.3.3}%
-\contentsline {subsection}{\numberline {7.4.4}Member Data Documentation}{49}{subsection.7.4.4}%
-\contentsline {subsubsection}{\numberline {7.4.4.1}ui}{49}{subsubsection.7.4.4.1}%
-\contentsline {section}{\numberline {7.5}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Default\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Engine Class Reference}{49}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{51}{subsection.7.5.1}%
-\contentsline {subsection}{\numberline {7.5.2}Member Function Documentation}{51}{subsection.7.5.2}%
-\contentsline {subsubsection}{\numberline {7.5.2.1}distribution()}{51}{subsubsection.7.5.2.1}%
-\contentsline {subsubsection}{\numberline {7.5.2.2}generator()}{52}{subsubsection.7.5.2.2}%
-\contentsline {subsubsection}{\numberline {7.5.2.3}random()}{52}{subsubsection.7.5.2.3}%
-\contentsline {subsubsection}{\numberline {7.5.2.4}rd()}{53}{subsubsection.7.5.2.4}%
-\contentsline {section}{\numberline {7.6}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Edge$<$ Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Storage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{53}{section.7.6}%
-\contentsline {subsection}{\numberline {7.6.1}Detailed Description}{56}{subsection.7.6.1}%
-\contentsline {subsection}{\numberline {7.6.2}Constructor \& Destructor Documentation}{56}{subsection.7.6.2}%
-\contentsline {subsubsection}{\numberline {7.6.2.1}Edge()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{56}{subsubsection.7.6.2.1}%
-\contentsline {subsubsection}{\numberline {7.6.2.2}Edge()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{56}{subsubsection.7.6.2.2}%
-\contentsline {subsection}{\numberline {7.6.3}Member Function Documentation}{56}{subsection.7.6.3}%
-\contentsline {subsubsection}{\numberline {7.6.3.1}AdjustEdge()}{57}{subsubsection.7.6.3.1}%
-\contentsline {subsubsection}{\numberline {7.6.3.2}EdgeWeight()}{57}{subsubsection.7.6.3.2}%
-\contentsline {subsubsection}{\numberline {7.6.3.3}LeftNode()}{58}{subsubsection.7.6.3.3}%
-\contentsline {subsubsection}{\numberline {7.6.3.4}RightNode()}{58}{subsubsection.7.6.3.4}%
-\contentsline {subsubsection}{\numberline {7.6.3.5}SetLeftEdge()}{59}{subsubsection.7.6.3.5}%
-\contentsline {subsubsection}{\numberline {7.6.3.6}SetRightEdge()}{59}{subsubsection.7.6.3.6}%
-\contentsline {subsubsection}{\numberline {7.6.3.7}TraverseNode()}{60}{subsubsection.7.6.3.7}%
-\contentsline {subsection}{\numberline {7.6.4}Member Data Documentation}{61}{subsection.7.6.4}%
-\contentsline {subsubsection}{\numberline {7.6.4.1}\_left}{61}{subsubsection.7.6.4.1}%
-\contentsline {subsubsection}{\numberline {7.6.4.2}\_right}{61}{subsubsection.7.6.4.2}%
-\contentsline {subsubsection}{\numberline {7.6.4.3}\_weight}{61}{subsubsection.7.6.4.3}%
-\contentsline {section}{\numberline {7.7}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords Class Reference}{61}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{64}{subsection.7.7.1}%
-\contentsline {subsection}{\numberline {7.7.2}Constructor \& Destructor Documentation}{65}{subsection.7.7.2}%
-\contentsline {subsubsection}{\numberline {7.7.2.1}MarkovPasswords()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{65}{subsubsection.7.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.7.2.2}MarkovPasswords()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{65}{subsubsection.7.7.2.2}%
-\contentsline {subsection}{\numberline {7.7.3}Member Function Documentation}{65}{subsection.7.7.3}%
-\contentsline {subsubsection}{\numberline {7.7.3.1}AdjustEdge()}{65}{subsubsection.7.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.7.3.2}Edges()}{66}{subsubsection.7.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.7.3.3}Export()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{66}{subsubsection.7.7.3.3}%
-\contentsline {subsubsection}{\numberline {7.7.3.4}Export()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{66}{subsubsection.7.7.3.4}%
-\contentsline {subsubsection}{\numberline {7.7.3.5}Generate()}{67}{subsubsection.7.7.3.5}%
-\contentsline {subsubsection}{\numberline {7.7.3.6}GenerateThread()}{68}{subsubsection.7.7.3.6}%
-\contentsline {subsubsection}{\numberline {7.7.3.7}Import()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{69}{subsubsection.7.7.3.7}%
-\contentsline {subsubsection}{\numberline {7.7.3.8}Import()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{69}{subsubsection.7.7.3.8}%
-\contentsline {subsubsection}{\numberline {7.7.3.9}Nodes()}{70}{subsubsection.7.7.3.9}%
-\contentsline {subsubsection}{\numberline {7.7.3.10}OpenDatasetFile()}{70}{subsubsection.7.7.3.10}%
-\contentsline {subsubsection}{\numberline {7.7.3.11}RandomWalk()}{71}{subsubsection.7.7.3.11}%
-\contentsline {subsubsection}{\numberline {7.7.3.12}Save()}{72}{subsubsection.7.7.3.12}%
-\contentsline {subsubsection}{\numberline {7.7.3.13}StarterNode()}{72}{subsubsection.7.7.3.13}%
-\contentsline {subsubsection}{\numberline {7.7.3.14}Train()}{72}{subsubsection.7.7.3.14}%
-\contentsline {subsubsection}{\numberline {7.7.3.15}TrainThread()}{73}{subsubsection.7.7.3.15}%
-\contentsline {subsection}{\numberline {7.7.4}Member Data Documentation}{74}{subsection.7.7.4}%
-\contentsline {subsubsection}{\numberline {7.7.4.1}datasetFile}{74}{subsubsection.7.7.4.1}%
-\contentsline {subsubsection}{\numberline {7.7.4.2}edges}{74}{subsubsection.7.7.4.2}%
-\contentsline {subsubsection}{\numberline {7.7.4.3}modelSavefile}{74}{subsubsection.7.7.4.3}%
-\contentsline {subsubsection}{\numberline {7.7.4.4}nodes}{74}{subsubsection.7.7.4.4}%
-\contentsline {subsubsection}{\numberline {7.7.4.5}outputFile}{75}{subsubsection.7.7.4.5}%
-\contentsline {subsubsection}{\numberline {7.7.4.6}starterNode}{75}{subsubsection.7.7.4.6}%
-\contentsline {section}{\numberline {7.8}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI Class Reference}{75}{section.7.8}%
-\contentsline {subsection}{\numberline {7.8.1}Detailed Description}{77}{subsection.7.8.1}%
-\contentsline {subsection}{\numberline {7.8.2}Constructor \& Destructor Documentation}{77}{subsection.7.8.2}%
-\contentsline {subsubsection}{\numberline {7.8.2.1}MarkovPasswordsGUI()}{77}{subsubsection.7.8.2.1}%
-\contentsline {subsection}{\numberline {7.8.3}Member Function Documentation}{77}{subsection.7.8.3}%
-\contentsline {subsubsection}{\numberline {7.8.3.1}loadDataset()}{77}{subsubsection.7.8.3.1}%
-\contentsline {subsubsection}{\numberline {7.8.3.2}MarkovPasswordsGUI::benchmarkSelected}{77}{subsubsection.7.8.3.2}%
-\contentsline {subsubsection}{\numberline {7.8.3.3}MarkovPasswordsGUI::comparisonSelected}{77}{subsubsection.7.8.3.3}%
-\contentsline {subsubsection}{\numberline {7.8.3.4}MarkovPasswordsGUI::modelvisSelected}{78}{subsubsection.7.8.3.4}%
-\contentsline {subsubsection}{\numberline {7.8.3.5}MarkovPasswordsGUI::visualDebugSelected}{78}{subsubsection.7.8.3.5}%
-\contentsline {subsubsection}{\numberline {7.8.3.6}renderHTMLFile()}{78}{subsubsection.7.8.3.6}%
-\contentsline {subsection}{\numberline {7.8.4}Member Data Documentation}{78}{subsection.7.8.4}%
-\contentsline {subsubsection}{\numberline {7.8.4.1}ui}{78}{subsubsection.7.8.4.1}%
-\contentsline {section}{\numberline {7.9}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Marsaglia Class Reference}{78}{section.7.9}%
-\contentsline {subsection}{\numberline {7.9.1}Detailed Description}{81}{subsection.7.9.1}%
-\contentsline {subsection}{\numberline {7.9.2}Constructor \& Destructor Documentation}{81}{subsection.7.9.2}%
-\contentsline {subsubsection}{\numberline {7.9.2.1}Marsaglia()}{81}{subsubsection.7.9.2.1}%
-\contentsline {subsection}{\numberline {7.9.3}Member Function Documentation}{81}{subsection.7.9.3}%
-\contentsline {subsubsection}{\numberline {7.9.3.1}distribution()}{81}{subsubsection.7.9.3.1}%
-\contentsline {subsubsection}{\numberline {7.9.3.2}generator()}{82}{subsubsection.7.9.3.2}%
-\contentsline {subsubsection}{\numberline {7.9.3.3}random()}{82}{subsubsection.7.9.3.3}%
-\contentsline {subsubsection}{\numberline {7.9.3.4}rd()}{83}{subsubsection.7.9.3.4}%
-\contentsline {subsection}{\numberline {7.9.4}Member Data Documentation}{83}{subsection.7.9.4}%
-\contentsline {subsubsection}{\numberline {7.9.4.1}x}{83}{subsubsection.7.9.4.1}%
-\contentsline {subsubsection}{\numberline {7.9.4.2}y}{83}{subsubsection.7.9.4.2}%
-\contentsline {subsubsection}{\numberline {7.9.4.3}z}{83}{subsubsection.7.9.4.3}%
-\contentsline {section}{\numberline {7.10}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::menu Class Reference}{84}{section.7.10}%
-\contentsline {subsection}{\numberline {7.10.1}Detailed Description}{85}{subsection.7.10.1}%
-\contentsline {subsection}{\numberline {7.10.2}Constructor \& Destructor Documentation}{85}{subsection.7.10.2}%
-\contentsline {subsubsection}{\numberline {7.10.2.1}menu()}{85}{subsubsection.7.10.2.1}%
-\contentsline {subsection}{\numberline {7.10.3}Member Function Documentation}{85}{subsection.7.10.3}%
-\contentsline {subsubsection}{\numberline {7.10.3.1}about}{85}{subsubsection.7.10.3.1}%
-\contentsline {subsubsection}{\numberline {7.10.3.2}visualization}{85}{subsubsection.7.10.3.2}%
-\contentsline {subsection}{\numberline {7.10.4}Member Data Documentation}{85}{subsection.7.10.4}%
-\contentsline {subsubsection}{\numberline {7.10.4.1}ui}{86}{subsubsection.7.10.4.1}%
-\contentsline {section}{\numberline {7.11}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Mersenne Class Reference}{86}{section.7.11}%
-\contentsline {subsection}{\numberline {7.11.1}Detailed Description}{87}{subsection.7.11.1}%
-\contentsline {subsection}{\numberline {7.11.2}Member Function Documentation}{88}{subsection.7.11.2}%
-\contentsline {subsubsection}{\numberline {7.11.2.1}distribution()}{88}{subsubsection.7.11.2.1}%
-\contentsline {subsubsection}{\numberline {7.11.2.2}generator()}{88}{subsubsection.7.11.2.2}%
-\contentsline {subsubsection}{\numberline {7.11.2.3}random()}{89}{subsubsection.7.11.2.3}%
-\contentsline {subsubsection}{\numberline {7.11.2.4}rd()}{89}{subsubsection.7.11.2.4}%
-\contentsline {section}{\numberline {7.12}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Model$<$ Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Storage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{90}{section.7.12}%
-\contentsline {subsection}{\numberline {7.12.1}Detailed Description}{92}{subsection.7.12.1}%
-\contentsline {subsection}{\numberline {7.12.2}Constructor \& Destructor Documentation}{92}{subsection.7.12.2}%
-\contentsline {subsubsection}{\numberline {7.12.2.1}Model()}{92}{subsubsection.7.12.2.1}%
-\contentsline {subsection}{\numberline {7.12.3}Member Function Documentation}{92}{subsection.7.12.3}%
-\contentsline {subsubsection}{\numberline {7.12.3.1}AdjustEdge()}{93}{subsubsection.7.12.3.1}%
-\contentsline {subsubsection}{\numberline {7.12.3.2}Edges()}{93}{subsubsection.7.12.3.2}%
-\contentsline {subsubsection}{\numberline {7.12.3.3}Export()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{93}{subsubsection.7.12.3.3}%
-\contentsline {subsubsection}{\numberline {7.12.3.4}Export()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{94}{subsubsection.7.12.3.4}%
-\contentsline {subsubsection}{\numberline {7.12.3.5}Import()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{94}{subsubsection.7.12.3.5}%
-\contentsline {subsubsection}{\numberline {7.12.3.6}Import()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{95}{subsubsection.7.12.3.6}%
-\contentsline {subsubsection}{\numberline {7.12.3.7}Nodes()}{96}{subsubsection.7.12.3.7}%
-\contentsline {subsubsection}{\numberline {7.12.3.8}RandomWalk()}{96}{subsubsection.7.12.3.8}%
-\contentsline {subsubsection}{\numberline {7.12.3.9}StarterNode()}{98}{subsubsection.7.12.3.9}%
-\contentsline {subsection}{\numberline {7.12.4}Member Data Documentation}{98}{subsection.7.12.4}%
-\contentsline {subsubsection}{\numberline {7.12.4.1}edges}{98}{subsubsection.7.12.4.1}%
-\contentsline {subsubsection}{\numberline {7.12.4.2}nodes}{98}{subsubsection.7.12.4.2}%
-\contentsline {subsubsection}{\numberline {7.12.4.3}starterNode}{98}{subsubsection.7.12.4.3}%
-\contentsline {section}{\numberline {7.13}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Node$<$ storage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{99}{section.7.13}%
-\contentsline {subsection}{\numberline {7.13.1}Detailed Description}{101}{subsection.7.13.1}%
-\contentsline {subsection}{\numberline {7.13.2}Constructor \& Destructor Documentation}{101}{subsection.7.13.2}%
-\contentsline {subsubsection}{\numberline {7.13.2.1}Node()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{101}{subsubsection.7.13.2.1}%
-\contentsline {subsubsection}{\numberline {7.13.2.2}Node()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{101}{subsubsection.7.13.2.2}%
-\contentsline {subsection}{\numberline {7.13.3}Member Function Documentation}{102}{subsection.7.13.3}%
-\contentsline {subsubsection}{\numberline {7.13.3.1}Edges()}{102}{subsubsection.7.13.3.1}%
-\contentsline {subsubsection}{\numberline {7.13.3.2}FindEdge()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{102}{subsubsection.7.13.3.2}%
-\contentsline {subsubsection}{\numberline {7.13.3.3}FindEdge()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{102}{subsubsection.7.13.3.3}%
-\contentsline {subsubsection}{\numberline {7.13.3.4}Link()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{103}{subsubsection.7.13.3.4}%
-\contentsline {subsubsection}{\numberline {7.13.3.5}Link()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{104}{subsubsection.7.13.3.5}%
-\contentsline {subsubsection}{\numberline {7.13.3.6}NodeValue()}{105}{subsubsection.7.13.3.6}%
-\contentsline {subsubsection}{\numberline {7.13.3.7}RandomNext()}{105}{subsubsection.7.13.3.7}%
-\contentsline {subsubsection}{\numberline {7.13.3.8}TotalEdgeWeights()}{106}{subsubsection.7.13.3.8}%
-\contentsline {subsubsection}{\numberline {7.13.3.9}UpdateEdges()}{107}{subsubsection.7.13.3.9}%
-\contentsline {subsubsection}{\numberline {7.13.3.10}UpdateTotalVerticeWeight()}{107}{subsubsection.7.13.3.10}%
-\contentsline {subsection}{\numberline {7.13.4}Member Data Documentation}{107}{subsection.7.13.4}%
-\contentsline {subsubsection}{\numberline {7.13.4.1}\_value}{108}{subsubsection.7.13.4.1}%
-\contentsline {subsubsection}{\numberline {7.13.4.2}edges}{108}{subsubsection.7.13.4.2}%
-\contentsline {subsubsection}{\numberline {7.13.4.3}edgesV}{108}{subsubsection.7.13.4.3}%
-\contentsline {subsubsection}{\numberline {7.13.4.4}total\_edge\_weights}{108}{subsubsection.7.13.4.4}%
-\contentsline {section}{\numberline {7.14}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Engine Class Reference}{108}{section.7.14}%
-\contentsline {subsection}{\numberline {7.14.1}Detailed Description}{109}{subsection.7.14.1}%
-\contentsline {subsection}{\numberline {7.14.2}Member Function Documentation}{110}{subsection.7.14.2}%
-\contentsline {subsubsection}{\numberline {7.14.2.1}random()}{110}{subsubsection.7.14.2.1}%
-\contentsline {section}{\numberline {7.15}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Terminal Class Reference}{110}{section.7.15}%
-\contentsline {subsection}{\numberline {7.15.1}Detailed Description}{112}{subsection.7.15.1}%
-\contentsline {subsection}{\numberline {7.15.2}Member Enumeration Documentation}{112}{subsection.7.15.2}%
-\contentsline {subsubsection}{\numberline {7.15.2.1}color}{112}{subsubsection.7.15.2.1}%
-\contentsline {subsection}{\numberline {7.15.3}Constructor \& Destructor Documentation}{112}{subsection.7.15.3}%
-\contentsline {subsubsection}{\numberline {7.15.3.1}Terminal()}{112}{subsubsection.7.15.3.1}%
-\contentsline {subsection}{\numberline {7.15.4}Member Data Documentation}{112}{subsection.7.15.4}%
-\contentsline {subsubsection}{\numberline {7.15.4.1}colormap}{113}{subsubsection.7.15.4.1}%
-\contentsline {subsubsection}{\numberline {7.15.4.2}endl}{113}{subsubsection.7.15.4.2}%
-\contentsline {section}{\numberline {7.16}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Concurrency\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shared\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler Class Reference}{113}{section.7.16}%
-\contentsline {subsection}{\numberline {7.16.1}Detailed Description}{115}{subsection.7.16.1}%
-\contentsline {subsection}{\numberline {7.16.2}Constructor \& Destructor Documentation}{115}{subsection.7.16.2}%
-\contentsline {subsubsection}{\numberline {7.16.2.1}ThreadSharedListHandler()}{115}{subsubsection.7.16.2.1}%
-\contentsline {subsection}{\numberline {7.16.3}Member Function Documentation}{116}{subsection.7.16.3}%
-\contentsline {subsubsection}{\numberline {7.16.3.1}next()}{116}{subsubsection.7.16.3.1}%
-\contentsline {subsection}{\numberline {7.16.4}Member Data Documentation}{116}{subsection.7.16.4}%
-\contentsline {subsubsection}{\numberline {7.16.4.1}listfile}{116}{subsubsection.7.16.4.1}%
-\contentsline {subsubsection}{\numberline {7.16.4.2}mlock}{116}{subsubsection.7.16.4.2}%
-\contentsline {section}{\numberline {7.17}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Train Class Reference}{116}{section.7.17}%
-\contentsline {subsection}{\numberline {7.17.1}Detailed Description}{118}{subsection.7.17.1}%
-\contentsline {subsection}{\numberline {7.17.2}Constructor \& Destructor Documentation}{118}{subsection.7.17.2}%
-\contentsline {subsubsection}{\numberline {7.17.2.1}Train()}{118}{subsubsection.7.17.2.1}%
-\contentsline {subsection}{\numberline {7.17.3}Member Function Documentation}{118}{subsection.7.17.3}%
-\contentsline {subsubsection}{\numberline {7.17.3.1}home}{118}{subsubsection.7.17.3.1}%
-\contentsline {subsubsection}{\numberline {7.17.3.2}train}{118}{subsubsection.7.17.3.2}%
-\contentsline {subsection}{\numberline {7.17.4}Member Data Documentation}{118}{subsection.7.17.4}%
-\contentsline {subsubsection}{\numberline {7.17.4.1}ui}{118}{subsubsection.7.17.4.1}%
-\contentsline {chapter}{\numberline {8}File Documentation}{119}{chapter.8}%
-\contentsline {section}{\numberline {8.1}about.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{119}{section.8.1}%
-\contentsline {section}{\numberline {8.2}about.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{119}{section.8.2}%
-\contentsline {section}{\numberline {8.3}argparse.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{120}{section.8.3}%
-\contentsline {section}{\numberline {8.4}argparse.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{120}{section.8.4}%
-\contentsline {section}{\numberline {8.5}argparse.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{120}{section.8.5}%
-\contentsline {subsection}{\numberline {8.5.1}Macro Definition Documentation}{122}{subsection.8.5.1}%
-\contentsline {subsubsection}{\numberline {8.5.1.1}BOOST\_ALL\_DYN\_LINK}{122}{subsubsection.8.5.1.1}%
-\contentsline {section}{\numberline {8.6}argparse.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{122}{section.8.6}%
-\contentsline {section}{\numberline {8.7}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{124}{section.8.7}%
-\contentsline {section}{\numberline {8.8}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{125}{section.8.8}%
-\contentsline {section}{\numberline {8.9}dllmain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{125}{section.8.9}%
-\contentsline {section}{\numberline {8.10}dllmain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{125}{section.8.10}%
-\contentsline {section}{\numberline {8.11}edge.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{126}{section.8.11}%
-\contentsline {section}{\numberline {8.12}edge.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{127}{section.8.12}%
-\contentsline {section}{\numberline {8.13}framework.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{128}{section.8.13}%
-\contentsline {subsection}{\numberline {8.13.1}Macro Definition Documentation}{128}{subsection.8.13.1}%
-\contentsline {subsubsection}{\numberline {8.13.1.1}WIN32\_LEAN\_AND\_MEAN}{128}{subsubsection.8.13.1.1}%
-\contentsline {section}{\numberline {8.14}framework.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{128}{section.8.14}%
-\contentsline {section}{\numberline {8.15}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{129}{section.8.15}%
-\contentsline {subsection}{\numberline {8.15.1}Function Documentation}{129}{subsection.8.15.1}%
-\contentsline {subsubsection}{\numberline {8.15.1.1}main()}{129}{subsubsection.8.15.1.1}%
-\contentsline {section}{\numberline {8.16}src/main.cpp}{130}{section.8.16}%
-\contentsline {section}{\numberline {8.17}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{130}{section.8.17}%
-\contentsline {subsection}{\numberline {8.17.1}Function Documentation}{131}{subsection.8.17.1}%
-\contentsline {subsubsection}{\numberline {8.17.1.1}main()}{131}{subsubsection.8.17.1.1}%
-\contentsline {section}{\numberline {8.18}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I/src/main.cpp}{131}{section.8.18}%
-\contentsline {section}{\numberline {8.19}markopy.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{132}{section.8.19}%
-\contentsline {subsection}{\numberline {8.19.1}Macro Definition Documentation}{133}{subsection.8.19.1}%
-\contentsline {subsubsection}{\numberline {8.19.1.1}BOOST\_PYTHON\_STATIC\_LIB}{133}{subsubsection.8.19.1.1}%
-\contentsline {section}{\numberline {8.20}markopy.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{133}{section.8.20}%
-\contentsline {section}{\numberline {8.21}markopy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cli.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py File Reference}{133}{section.8.21}%
-\contentsline {section}{\numberline {8.22}markopy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cli.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py}{134}{section.8.22}%
-\contentsline {section}{\numberline {8.23}markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{136}{section.8.23}%
-\contentsline {section}{\numberline {8.24}markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{136}{section.8.24}%
-\contentsline {section}{\numberline {8.25}markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{138}{section.8.25}%
-\contentsline {section}{\numberline {8.26}markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{139}{section.8.26}%
-\contentsline {section}{\numberline {8.27}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{140}{section.8.27}%
-\contentsline {section}{\numberline {8.28}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{140}{section.8.28}%
-\contentsline {section}{\numberline {8.29}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{141}{section.8.29}%
-\contentsline {section}{\numberline {8.30}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{142}{section.8.30}%
-\contentsline {section}{\numberline {8.31}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{142}{section.8.31}%
-\contentsline {section}{\numberline {8.32}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{142}{section.8.32}%
-\contentsline {section}{\numberline {8.33}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{143}{section.8.33}%
-\contentsline {section}{\numberline {8.34}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{144}{section.8.34}%
-\contentsline {section}{\numberline {8.35}model.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{144}{section.8.35}%
-\contentsline {section}{\numberline {8.36}model.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{145}{section.8.36}%
-\contentsline {section}{\numberline {8.37}model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2gram.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py File Reference}{148}{section.8.37}%
-\contentsline {section}{\numberline {8.38}model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2gram.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py}{148}{section.8.38}%
-\contentsline {section}{\numberline {8.39}node.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{148}{section.8.39}%
-\contentsline {section}{\numberline {8.40}node.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{149}{section.8.40}%
-\contentsline {section}{\numberline {8.41}pch.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{151}{section.8.41}%
-\contentsline {section}{\numberline {8.42}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model/src/pch.cpp}{151}{section.8.42}%
-\contentsline {section}{\numberline {8.43}pch.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{151}{section.8.43}%
-\contentsline {section}{\numberline {8.44}Unit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tests/pch.cpp}{152}{section.8.44}%
-\contentsline {section}{\numberline {8.45}pch.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{152}{section.8.45}%
-\contentsline {section}{\numberline {8.46}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model/src/pch.h}{153}{section.8.46}%
-\contentsline {section}{\numberline {8.47}pch.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{153}{section.8.47}%
-\contentsline {section}{\numberline {8.48}Unit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tests/pch.h}{153}{section.8.48}%
-\contentsline {section}{\numberline {8.49}random-\/model.py File Reference}{154}{section.8.49}%
-\contentsline {section}{\numberline {8.50}random-\/model.py}{154}{section.8.50}%
-\contentsline {section}{\numberline {8.51}random.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{154}{section.8.51}%
-\contentsline {section}{\numberline {8.52}random.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{156}{section.8.52}%
-\contentsline {section}{\numberline {8.53}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{157}{section.8.53}%
-\contentsline {section}{\numberline {8.54}term.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{157}{section.8.54}%
-\contentsline {subsection}{\numberline {8.54.1}Function Documentation}{157}{subsection.8.54.1}%
-\contentsline {subsubsection}{\numberline {8.54.1.1}operator$<$$<$()}{157}{subsubsection.8.54.1.1}%
-\contentsline {section}{\numberline {8.55}term.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{157}{section.8.55}%
-\contentsline {section}{\numberline {8.56}term.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{158}{section.8.56}%
-\contentsline {subsection}{\numberline {8.56.1}Macro Definition Documentation}{160}{subsection.8.56.1}%
-\contentsline {subsubsection}{\numberline {8.56.1.1}TERM\_FAIL}{160}{subsubsection.8.56.1.1}%
-\contentsline {subsubsection}{\numberline {8.56.1.2}TERM\_INFO}{160}{subsubsection.8.56.1.2}%
-\contentsline {subsubsection}{\numberline {8.56.1.3}TERM\_SUCC}{160}{subsubsection.8.56.1.3}%
-\contentsline {subsubsection}{\numberline {8.56.1.4}TERM\_WARN}{160}{subsubsection.8.56.1.4}%
-\contentsline {section}{\numberline {8.57}term.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{160}{section.8.57}%
-\contentsline {section}{\numberline {8.58}thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shared\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{161}{section.8.58}%
-\contentsline {section}{\numberline {8.59}thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shared\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{161}{section.8.59}%
-\contentsline {section}{\numberline {8.60}thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shared\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{161}{section.8.60}%
-\contentsline {section}{\numberline {8.61}thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shared\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{162}{section.8.61}%
-\contentsline {section}{\numberline {8.62}Train.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{163}{section.8.62}%
-\contentsline {section}{\numberline {8.63}Train.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{163}{section.8.63}%
-\contentsline {section}{\numberline {8.64}Unit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tests.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{164}{section.8.64}%
-\contentsline {section}{\numberline {8.65}Unit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tests.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{165}{section.8.65}%
-\contentsline {chapter}{Index}{173}{section*.237}%
+\contentsline {chapter}{\numberline {2}Deprecated List}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Namespace Index}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Namespace List}{9}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Hierarchical Index}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Class Hierarchy}{11}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Class Index}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Class List}{13}{section.5.1}%
+\contentsline {chapter}{\numberline {6}File Index}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}File List}{15}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Namespace Documentation}{17}{chapter.7}%
+\contentsline {section}{\numberline {7.1}markopy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cli Namespace Reference}{17}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{17}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Function Documentation}{17}{subsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.1}cli\_generate()}{17}{subsubsection.7.1.2.1}%
+\contentsline {subsubsection}{\numberline {7.1.2.2}cli\_init()}{18}{subsubsection.7.1.2.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.3}cli\_train()}{18}{subsubsection.7.1.2.3}%
+\contentsline {subsection}{\numberline {7.1.3}Variable Documentation}{19}{subsection.7.1.3}%
+\contentsline {subsubsection}{\numberline {7.1.3.1}action}{19}{subsubsection.7.1.3.1}%
+\contentsline {subsubsection}{\numberline {7.1.3.2}args}{19}{subsubsection.7.1.3.2}%
+\contentsline {subsubsection}{\numberline {7.1.3.3}bulk}{19}{subsubsection.7.1.3.3}%
+\contentsline {subsubsection}{\numberline {7.1.3.4}corpus\_list}{19}{subsubsection.7.1.3.4}%
+\contentsline {subsubsection}{\numberline {7.1.3.5}default}{19}{subsubsection.7.1.3.5}%
+\contentsline {subsubsection}{\numberline {7.1.3.6}help}{19}{subsubsection.7.1.3.6}%
+\contentsline {subsubsection}{\numberline {7.1.3.7}model}{19}{subsubsection.7.1.3.7}%
+\contentsline {subsubsection}{\numberline {7.1.3.8}model\_base}{19}{subsubsection.7.1.3.8}%
+\contentsline {subsubsection}{\numberline {7.1.3.9}model\_extension}{20}{subsubsection.7.1.3.9}%
+\contentsline {subsubsection}{\numberline {7.1.3.10}model\_list}{20}{subsubsection.7.1.3.10}%
+\contentsline {subsubsection}{\numberline {7.1.3.11}output}{20}{subsubsection.7.1.3.11}%
+\contentsline {subsubsection}{\numberline {7.1.3.12}output\_file\_name}{20}{subsubsection.7.1.3.12}%
+\contentsline {subsubsection}{\numberline {7.1.3.13}output\_forced}{20}{subsubsection.7.1.3.13}%
+\contentsline {subsubsection}{\numberline {7.1.3.14}parser}{20}{subsubsection.7.1.3.14}%
+\contentsline {subsubsection}{\numberline {7.1.3.15}True}{20}{subsubsection.7.1.3.15}%
+\contentsline {section}{\numberline {7.2}Markov Namespace Reference}{20}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Detailed Description}{21}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.3}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI Namespace Reference}{21}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{21}{subsection.7.3.1}%
+\contentsline {section}{\numberline {7.4}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LI Namespace Reference}{21}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{22}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Typedef Documentation}{22}{subsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.2.1}ProgramOptions}{22}{subsubsection.7.4.2.1}%
+\contentsline {subsection}{\numberline {7.4.3}Function Documentation}{22}{subsection.7.4.3}%
+\contentsline {subsubsection}{\numberline {7.4.3.1}operator$<$$<$()}{22}{subsubsection.7.4.3.1}%
+\contentsline {section}{\numberline {7.5}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Concurrency Namespace Reference}{22}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{22}{subsection.7.5.1}%
+\contentsline {section}{\numberline {7.6}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}DA Namespace Reference}{22}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Detailed Description}{23}{subsection.7.6.1}%
+\contentsline {section}{\numberline {7.7}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI Namespace Reference}{23}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{23}{subsection.7.7.1}%
+\contentsline {section}{\numberline {7.8}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markopy Namespace Reference}{23}{section.7.8}%
+\contentsline {subsection}{\numberline {7.8.1}Function Documentation}{23}{subsection.7.8.1}%
+\contentsline {subsubsection}{\numberline {7.8.1.1}BOOST\_PYTHON\_MODULE()}{23}{subsubsection.7.8.1.1}%
+\contentsline {section}{\numberline {7.9}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Random Namespace Reference}{24}{section.7.9}%
+\contentsline {subsection}{\numberline {7.9.1}Detailed Description}{24}{subsection.7.9.1}%
+\contentsline {section}{\numberline {7.10}model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2gram Namespace Reference}{24}{section.7.10}%
+\contentsline {subsection}{\numberline {7.10.1}Detailed Description}{24}{subsection.7.10.1}%
+\contentsline {subsection}{\numberline {7.10.2}Variable Documentation}{24}{subsection.7.10.2}%
+\contentsline {subsubsection}{\numberline {7.10.2.1}alphabet}{25}{subsubsection.7.10.2.1}%
+\contentsline {subsubsection}{\numberline {7.10.2.2}f}{25}{subsubsection.7.10.2.2}%
+\contentsline {section}{\numberline {7.11}random Namespace Reference}{25}{section.7.11}%
+\contentsline {subsection}{\numberline {7.11.1}Detailed Description}{25}{subsection.7.11.1}%
+\contentsline {section}{\numberline {7.12}random-\/model Namespace Reference}{25}{section.7.12}%
+\contentsline {subsection}{\numberline {7.12.1}Variable Documentation}{25}{subsection.7.12.1}%
+\contentsline {subsubsection}{\numberline {7.12.1.1}alphabet}{25}{subsubsection.7.12.1.1}%
+\contentsline {subsubsection}{\numberline {7.12.1.2}f}{25}{subsubsection.7.12.1.2}%
+\contentsline {section}{\numberline {7.13}Testing Namespace Reference}{25}{section.7.13}%
+\contentsline {subsection}{\numberline {7.13.1}Detailed Description}{26}{subsection.7.13.1}%
+\contentsline {section}{\numberline {7.14}Testing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model Namespace Reference}{26}{section.7.14}%
+\contentsline {subsection}{\numberline {7.14.1}Detailed Description}{26}{subsection.7.14.1}%
+\contentsline {subsection}{\numberline {7.14.2}Function Documentation}{26}{subsection.7.14.2}%
+\contentsline {subsubsection}{\numberline {7.14.2.1}TEST\_CLASS()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{26}{subsubsection.7.14.2.1}%
+\contentsline {subsubsection}{\numberline {7.14.2.2}TEST\_CLASS()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{27}{subsubsection.7.14.2.2}%
+\contentsline {subsubsection}{\numberline {7.14.2.3}TEST\_CLASS()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{28}{subsubsection.7.14.2.3}%
+\contentsline {section}{\numberline {7.15}Testing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords Namespace Reference}{29}{section.7.15}%
+\contentsline {subsection}{\numberline {7.15.1}Detailed Description}{29}{subsection.7.15.1}%
+\contentsline {section}{\numberline {7.16}Testing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VP Namespace Reference}{29}{section.7.16}%
+\contentsline {subsection}{\numberline {7.16.1}Detailed Description}{29}{subsection.7.16.1}%
+\contentsline {section}{\numberline {7.17}Testing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VP\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model Namespace Reference}{29}{section.7.17}%
+\contentsline {subsection}{\numberline {7.17.1}Detailed Description}{30}{subsection.7.17.1}%
+\contentsline {subsection}{\numberline {7.17.2}Function Documentation}{30}{subsection.7.17.2}%
+\contentsline {subsubsection}{\numberline {7.17.2.1}TEST\_CLASS()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{30}{subsubsection.7.17.2.1}%
+\contentsline {subsubsection}{\numberline {7.17.2.2}TEST\_CLASS()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{31}{subsubsection.7.17.2.2}%
+\contentsline {subsubsection}{\numberline {7.17.2.3}TEST\_CLASS()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{32}{subsubsection.7.17.2.3}%
+\contentsline {section}{\numberline {7.18}Testing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VP\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords Namespace Reference}{35}{section.7.18}%
+\contentsline {subsection}{\numberline {7.18.1}Detailed Description}{35}{subsection.7.18.1}%
+\contentsline {subsection}{\numberline {7.18.2}Function Documentation}{35}{subsection.7.18.2}%
+\contentsline {subsubsection}{\numberline {7.18.2.1}TEST\_CLASS()}{35}{subsubsection.7.18.2.1}%
+\contentsline {chapter}{\numberline {8}Class Documentation}{39}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}program\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Options Struct Reference}{39}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Detailed Description}{41}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Member Data Documentation}{41}{subsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.2.1}bExport}{41}{subsubsection.8.1.2.1}%
+\contentsline {subsubsection}{\numberline {8.1.2.2}bFailure}{41}{subsubsection.8.1.2.2}%
+\contentsline {subsubsection}{\numberline {8.1.2.3}bImport}{41}{subsubsection.8.1.2.3}%
+\contentsline {subsubsection}{\numberline {8.1.2.4}datasetname}{41}{subsubsection.8.1.2.4}%
+\contentsline {subsubsection}{\numberline {8.1.2.5}exportname}{41}{subsubsection.8.1.2.5}%
+\contentsline {subsubsection}{\numberline {8.1.2.6}generateN}{41}{subsubsection.8.1.2.6}%
+\contentsline {subsubsection}{\numberline {8.1.2.7}importname}{41}{subsubsection.8.1.2.7}%
+\contentsline {subsubsection}{\numberline {8.1.2.8}outputfilename}{42}{subsubsection.8.1.2.8}%
+\contentsline {subsubsection}{\numberline {8.1.2.9}seperator}{42}{subsubsection.8.1.2.9}%
+\contentsline {subsubsection}{\numberline {8.1.2.10}wordlistname}{42}{subsubsection.8.1.2.10}%
+\contentsline {section}{\numberline {8.2}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::about Class Reference}{42}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{43}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Constructor \& Destructor Documentation}{43}{subsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.2.1}about()}{43}{subsubsection.8.2.2.1}%
+\contentsline {subsection}{\numberline {8.2.3}Member Data Documentation}{43}{subsection.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.3.1}ui}{43}{subsubsection.8.2.3.1}%
+\contentsline {section}{\numberline {8.3}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Argparse Class Reference}{44}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Detailed Description}{45}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Constructor \& Destructor Documentation}{45}{subsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.2.1}Argparse()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{45}{subsubsection.8.3.2.1}%
+\contentsline {subsubsection}{\numberline {8.3.2.2}Argparse()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{45}{subsubsection.8.3.2.2}%
+\contentsline {subsection}{\numberline {8.3.3}Member Function Documentation}{47}{subsection.8.3.3}%
+\contentsline {subsubsection}{\numberline {8.3.3.1}getProgramOptions()}{47}{subsubsection.8.3.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.3.2}help()}{47}{subsubsection.8.3.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.3.3}parse()}{48}{subsubsection.8.3.3.3}%
+\contentsline {subsubsection}{\numberline {8.3.3.4}setProgramOptions()}{48}{subsubsection.8.3.3.4}%
+\contentsline {subsection}{\numberline {8.3.4}Member Data Documentation}{49}{subsection.8.3.4}%
+\contentsline {subsubsection}{\numberline {8.3.4.1}po}{49}{subsubsection.8.3.4.1}%
+\contentsline {section}{\numberline {8.4}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LI Class Reference}{49}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Detailed Description}{50}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Constructor \& Destructor Documentation}{50}{subsection.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.2.1}CLI()}{50}{subsubsection.8.4.2.1}%
+\contentsline {subsection}{\numberline {8.4.3}Member Function Documentation}{50}{subsection.8.4.3}%
+\contentsline {subsubsection}{\numberline {8.4.3.1}about}{51}{subsubsection.8.4.3.1}%
+\contentsline {subsubsection}{\numberline {8.4.3.2}start}{51}{subsubsection.8.4.3.2}%
+\contentsline {subsubsection}{\numberline {8.4.3.3}statistics}{51}{subsubsection.8.4.3.3}%
+\contentsline {subsection}{\numberline {8.4.4}Member Data Documentation}{51}{subsection.8.4.4}%
+\contentsline {subsubsection}{\numberline {8.4.4.1}ui}{51}{subsubsection.8.4.4.1}%
+\contentsline {section}{\numberline {8.5}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}DA\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Device\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{51}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Detailed Description}{53}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}Member Function Documentation}{53}{subsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.5.2.1}CudaCheckNotifyErr()}{53}{subsubsection.8.5.2.1}%
+\contentsline {subsubsection}{\numberline {8.5.2.2}ListCudaDevices()}{53}{subsubsection.8.5.2.2}%
+\contentsline {section}{\numberline {8.6}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}DA\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix Class Reference}{53}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Detailed Description}{57}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Member Function Documentation}{57}{subsection.8.6.2}%
+\contentsline {subsubsection}{\numberline {8.6.2.1}AdjustEdge()}{57}{subsubsection.8.6.2.1}%
+\contentsline {subsubsection}{\numberline {8.6.2.2}ConstructMatrix()}{58}{subsubsection.8.6.2.2}%
+\contentsline {subsubsection}{\numberline {8.6.2.3}CudaCheckNotifyErr()}{59}{subsubsection.8.6.2.3}%
+\contentsline {subsubsection}{\numberline {8.6.2.4}DumpJSON()}{60}{subsubsection.8.6.2.4}%
+\contentsline {subsubsection}{\numberline {8.6.2.5}Edges()}{60}{subsubsection.8.6.2.5}%
+\contentsline {subsubsection}{\numberline {8.6.2.6}Export()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{60}{subsubsection.8.6.2.6}%
+\contentsline {subsubsection}{\numberline {8.6.2.7}Export()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{61}{subsubsection.8.6.2.7}%
+\contentsline {subsubsection}{\numberline {8.6.2.8}FastRandomWalk()}{61}{subsubsection.8.6.2.8}%
+\contentsline {subsubsection}{\numberline {8.6.2.9}FastRandomWalkPartition()}{62}{subsubsection.8.6.2.9}%
+\contentsline {subsubsection}{\numberline {8.6.2.10}FastRandomWalkThread()}{63}{subsubsection.8.6.2.10}%
+\contentsline {subsubsection}{\numberline {8.6.2.11}Generate()}{64}{subsubsection.8.6.2.11}%
+\contentsline {subsubsection}{\numberline {8.6.2.12}GenerateThread()}{65}{subsubsection.8.6.2.12}%
+\contentsline {subsubsection}{\numberline {8.6.2.13}Import()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{66}{subsubsection.8.6.2.13}%
+\contentsline {subsubsection}{\numberline {8.6.2.14}Import()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{67}{subsubsection.8.6.2.14}%
+\contentsline {subsubsection}{\numberline {8.6.2.15}ListCudaDevices()}{68}{subsubsection.8.6.2.15}%
+\contentsline {subsubsection}{\numberline {8.6.2.16}MigrateMatrix()}{68}{subsubsection.8.6.2.16}%
+\contentsline {subsubsection}{\numberline {8.6.2.17}Nodes()}{68}{subsubsection.8.6.2.17}%
+\contentsline {subsubsection}{\numberline {8.6.2.18}OpenDatasetFile()}{68}{subsubsection.8.6.2.18}%
+\contentsline {subsubsection}{\numberline {8.6.2.19}RandomWalk()}{69}{subsubsection.8.6.2.19}%
+\contentsline {subsubsection}{\numberline {8.6.2.20}RetrieveCudaBuffer()}{70}{subsubsection.8.6.2.20}%
+\contentsline {subsubsection}{\numberline {8.6.2.21}Save()}{70}{subsubsection.8.6.2.21}%
+\contentsline {subsubsection}{\numberline {8.6.2.22}StarterNode()}{71}{subsubsection.8.6.2.22}%
+\contentsline {subsubsection}{\numberline {8.6.2.23}Train()}{71}{subsubsection.8.6.2.23}%
+\contentsline {subsubsection}{\numberline {8.6.2.24}TrainThread()}{72}{subsubsection.8.6.2.24}%
+\contentsline {subsection}{\numberline {8.6.3}Member Data Documentation}{73}{subsection.8.6.3}%
+\contentsline {subsubsection}{\numberline {8.6.3.1}datasetFile}{73}{subsubsection.8.6.3.1}%
+\contentsline {subsubsection}{\numberline {8.6.3.2}device\_edgeMatrix}{73}{subsubsection.8.6.3.2}%
+\contentsline {subsubsection}{\numberline {8.6.3.3}device\_matrixIndex}{73}{subsubsection.8.6.3.3}%
+\contentsline {subsubsection}{\numberline {8.6.3.4}device\_totalEdgeWeights}{73}{subsubsection.8.6.3.4}%
+\contentsline {subsubsection}{\numberline {8.6.3.5}device\_valueMatrix}{73}{subsubsection.8.6.3.5}%
+\contentsline {subsubsection}{\numberline {8.6.3.6}edgeMatrix}{73}{subsubsection.8.6.3.6}%
+\contentsline {subsubsection}{\numberline {8.6.3.7}edges}{74}{subsubsection.8.6.3.7}%
+\contentsline {subsubsection}{\numberline {8.6.3.8}matrixIndex}{74}{subsubsection.8.6.3.8}%
+\contentsline {subsubsection}{\numberline {8.6.3.9}matrixSize}{74}{subsubsection.8.6.3.9}%
+\contentsline {subsubsection}{\numberline {8.6.3.10}modelSavefile}{74}{subsubsection.8.6.3.10}%
+\contentsline {subsubsection}{\numberline {8.6.3.11}nodes}{74}{subsubsection.8.6.3.11}%
+\contentsline {subsubsection}{\numberline {8.6.3.12}outputFile}{74}{subsubsection.8.6.3.12}%
+\contentsline {subsubsection}{\numberline {8.6.3.13}starterNode}{74}{subsubsection.8.6.3.13}%
+\contentsline {subsubsection}{\numberline {8.6.3.14}totalEdgeWeights}{74}{subsubsection.8.6.3.14}%
+\contentsline {subsubsection}{\numberline {8.6.3.15}valueMatrix}{75}{subsubsection.8.6.3.15}%
+\contentsline {section}{\numberline {8.7}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Default\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Engine Class Reference}{75}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Detailed Description}{76}{subsection.8.7.1}%
+\contentsline {subsection}{\numberline {8.7.2}Member Function Documentation}{77}{subsection.8.7.2}%
+\contentsline {subsubsection}{\numberline {8.7.2.1}distribution()}{77}{subsubsection.8.7.2.1}%
+\contentsline {subsubsection}{\numberline {8.7.2.2}generator()}{77}{subsubsection.8.7.2.2}%
+\contentsline {subsubsection}{\numberline {8.7.2.3}random()}{78}{subsubsection.8.7.2.3}%
+\contentsline {subsubsection}{\numberline {8.7.2.4}rd()}{78}{subsubsection.8.7.2.4}%
+\contentsline {section}{\numberline {8.8}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Edge$<$ Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Storage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{79}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Detailed Description}{81}{subsection.8.8.1}%
+\contentsline {subsection}{\numberline {8.8.2}Constructor \& Destructor Documentation}{81}{subsection.8.8.2}%
+\contentsline {subsubsection}{\numberline {8.8.2.1}Edge()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{81}{subsubsection.8.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.8.2.2}Edge()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{81}{subsubsection.8.8.2.2}%
+\contentsline {subsection}{\numberline {8.8.3}Member Function Documentation}{81}{subsection.8.8.3}%
+\contentsline {subsubsection}{\numberline {8.8.3.1}AdjustEdge()}{82}{subsubsection.8.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.8.3.2}EdgeWeight()}{82}{subsubsection.8.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.8.3.3}LeftNode()}{82}{subsubsection.8.8.3.3}%
+\contentsline {subsubsection}{\numberline {8.8.3.4}RightNode()}{83}{subsubsection.8.8.3.4}%
+\contentsline {subsubsection}{\numberline {8.8.3.5}SetLeftEdge()}{83}{subsubsection.8.8.3.5}%
+\contentsline {subsubsection}{\numberline {8.8.3.6}SetRightEdge()}{83}{subsubsection.8.8.3.6}%
+\contentsline {subsubsection}{\numberline {8.8.3.7}TraverseNode()}{84}{subsubsection.8.8.3.7}%
+\contentsline {subsection}{\numberline {8.8.4}Member Data Documentation}{84}{subsection.8.8.4}%
+\contentsline {subsubsection}{\numberline {8.8.4.1}\_left}{84}{subsubsection.8.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.8.4.2}\_right}{84}{subsubsection.8.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.8.4.3}\_weight}{84}{subsubsection.8.8.4.3}%
+\contentsline {section}{\numberline {8.9}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords Class Reference}{84}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Detailed Description}{87}{subsection.8.9.1}%
+\contentsline {subsection}{\numberline {8.9.2}Constructor \& Destructor Documentation}{88}{subsection.8.9.2}%
+\contentsline {subsubsection}{\numberline {8.9.2.1}MarkovPasswords()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{88}{subsubsection.8.9.2.1}%
+\contentsline {subsubsection}{\numberline {8.9.2.2}MarkovPasswords()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{88}{subsubsection.8.9.2.2}%
+\contentsline {subsection}{\numberline {8.9.3}Member Function Documentation}{88}{subsection.8.9.3}%
+\contentsline {subsubsection}{\numberline {8.9.3.1}AdjustEdge()}{88}{subsubsection.8.9.3.1}%
+\contentsline {subsubsection}{\numberline {8.9.3.2}Edges()}{89}{subsubsection.8.9.3.2}%
+\contentsline {subsubsection}{\numberline {8.9.3.3}Export()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{89}{subsubsection.8.9.3.3}%
+\contentsline {subsubsection}{\numberline {8.9.3.4}Export()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{90}{subsubsection.8.9.3.4}%
+\contentsline {subsubsection}{\numberline {8.9.3.5}Generate()}{90}{subsubsection.8.9.3.5}%
+\contentsline {subsubsection}{\numberline {8.9.3.6}GenerateThread()}{91}{subsubsection.8.9.3.6}%
+\contentsline {subsubsection}{\numberline {8.9.3.7}Import()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{92}{subsubsection.8.9.3.7}%
+\contentsline {subsubsection}{\numberline {8.9.3.8}Import()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{92}{subsubsection.8.9.3.8}%
+\contentsline {subsubsection}{\numberline {8.9.3.9}Nodes()}{93}{subsubsection.8.9.3.9}%
+\contentsline {subsubsection}{\numberline {8.9.3.10}OpenDatasetFile()}{94}{subsubsection.8.9.3.10}%
+\contentsline {subsubsection}{\numberline {8.9.3.11}RandomWalk()}{94}{subsubsection.8.9.3.11}%
+\contentsline {subsubsection}{\numberline {8.9.3.12}Save()}{95}{subsubsection.8.9.3.12}%
+\contentsline {subsubsection}{\numberline {8.9.3.13}StarterNode()}{96}{subsubsection.8.9.3.13}%
+\contentsline {subsubsection}{\numberline {8.9.3.14}Train()}{96}{subsubsection.8.9.3.14}%
+\contentsline {subsubsection}{\numberline {8.9.3.15}TrainThread()}{97}{subsubsection.8.9.3.15}%
+\contentsline {subsection}{\numberline {8.9.4}Member Data Documentation}{98}{subsection.8.9.4}%
+\contentsline {subsubsection}{\numberline {8.9.4.1}datasetFile}{98}{subsubsection.8.9.4.1}%
+\contentsline {subsubsection}{\numberline {8.9.4.2}edges}{98}{subsubsection.8.9.4.2}%
+\contentsline {subsubsection}{\numberline {8.9.4.3}modelSavefile}{98}{subsubsection.8.9.4.3}%
+\contentsline {subsubsection}{\numberline {8.9.4.4}nodes}{98}{subsubsection.8.9.4.4}%
+\contentsline {subsubsection}{\numberline {8.9.4.5}outputFile}{98}{subsubsection.8.9.4.5}%
+\contentsline {subsubsection}{\numberline {8.9.4.6}starterNode}{99}{subsubsection.8.9.4.6}%
+\contentsline {section}{\numberline {8.10}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI Class Reference}{99}{section.8.10}%
+\contentsline {subsection}{\numberline {8.10.1}Detailed Description}{101}{subsection.8.10.1}%
+\contentsline {subsection}{\numberline {8.10.2}Constructor \& Destructor Documentation}{101}{subsection.8.10.2}%
+\contentsline {subsubsection}{\numberline {8.10.2.1}MarkovPasswordsGUI()}{101}{subsubsection.8.10.2.1}%
+\contentsline {subsection}{\numberline {8.10.3}Member Function Documentation}{101}{subsection.8.10.3}%
+\contentsline {subsubsection}{\numberline {8.10.3.1}loadDataset()}{101}{subsubsection.8.10.3.1}%
+\contentsline {subsubsection}{\numberline {8.10.3.2}MarkovPasswordsGUI::benchmarkSelected}{101}{subsubsection.8.10.3.2}%
+\contentsline {subsubsection}{\numberline {8.10.3.3}MarkovPasswordsGUI::comparisonSelected}{101}{subsubsection.8.10.3.3}%
+\contentsline {subsubsection}{\numberline {8.10.3.4}MarkovPasswordsGUI::modelvisSelected}{102}{subsubsection.8.10.3.4}%
+\contentsline {subsubsection}{\numberline {8.10.3.5}MarkovPasswordsGUI::visualDebugSelected}{102}{subsubsection.8.10.3.5}%
+\contentsline {subsubsection}{\numberline {8.10.3.6}renderHTMLFile()}{102}{subsubsection.8.10.3.6}%
+\contentsline {subsection}{\numberline {8.10.4}Member Data Documentation}{102}{subsection.8.10.4}%
+\contentsline {subsubsection}{\numberline {8.10.4.1}ui}{102}{subsubsection.8.10.4.1}%
+\contentsline {section}{\numberline {8.11}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Marsaglia Class Reference}{102}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}Detailed Description}{105}{subsection.8.11.1}%
+\contentsline {subsection}{\numberline {8.11.2}Constructor \& Destructor Documentation}{105}{subsection.8.11.2}%
+\contentsline {subsubsection}{\numberline {8.11.2.1}Marsaglia()}{105}{subsubsection.8.11.2.1}%
+\contentsline {subsection}{\numberline {8.11.3}Member Function Documentation}{105}{subsection.8.11.3}%
+\contentsline {subsubsection}{\numberline {8.11.3.1}distribution()}{105}{subsubsection.8.11.3.1}%
+\contentsline {subsubsection}{\numberline {8.11.3.2}generator()}{106}{subsubsection.8.11.3.2}%
+\contentsline {subsubsection}{\numberline {8.11.3.3}random()}{106}{subsubsection.8.11.3.3}%
+\contentsline {subsubsection}{\numberline {8.11.3.4}rd()}{107}{subsubsection.8.11.3.4}%
+\contentsline {subsection}{\numberline {8.11.4}Member Data Documentation}{107}{subsection.8.11.4}%
+\contentsline {subsubsection}{\numberline {8.11.4.1}x}{107}{subsubsection.8.11.4.1}%
+\contentsline {subsubsection}{\numberline {8.11.4.2}y}{107}{subsubsection.8.11.4.2}%
+\contentsline {subsubsection}{\numberline {8.11.4.3}z}{108}{subsubsection.8.11.4.3}%
+\contentsline {section}{\numberline {8.12}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::menu Class Reference}{108}{section.8.12}%
+\contentsline {subsection}{\numberline {8.12.1}Detailed Description}{109}{subsection.8.12.1}%
+\contentsline {subsection}{\numberline {8.12.2}Constructor \& Destructor Documentation}{109}{subsection.8.12.2}%
+\contentsline {subsubsection}{\numberline {8.12.2.1}menu()}{109}{subsubsection.8.12.2.1}%
+\contentsline {subsection}{\numberline {8.12.3}Member Function Documentation}{110}{subsection.8.12.3}%
+\contentsline {subsubsection}{\numberline {8.12.3.1}about}{110}{subsubsection.8.12.3.1}%
+\contentsline {subsubsection}{\numberline {8.12.3.2}visualization}{110}{subsubsection.8.12.3.2}%
+\contentsline {subsection}{\numberline {8.12.4}Member Data Documentation}{110}{subsection.8.12.4}%
+\contentsline {subsubsection}{\numberline {8.12.4.1}ui}{110}{subsubsection.8.12.4.1}%
+\contentsline {section}{\numberline {8.13}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Mersenne Class Reference}{110}{section.8.13}%
+\contentsline {subsection}{\numberline {8.13.1}Detailed Description}{112}{subsection.8.13.1}%
+\contentsline {subsection}{\numberline {8.13.2}Member Function Documentation}{113}{subsection.8.13.2}%
+\contentsline {subsubsection}{\numberline {8.13.2.1}distribution()}{113}{subsubsection.8.13.2.1}%
+\contentsline {subsubsection}{\numberline {8.13.2.2}generator()}{113}{subsubsection.8.13.2.2}%
+\contentsline {subsubsection}{\numberline {8.13.2.3}random()}{114}{subsubsection.8.13.2.3}%
+\contentsline {subsubsection}{\numberline {8.13.2.4}rd()}{114}{subsubsection.8.13.2.4}%
+\contentsline {section}{\numberline {8.14}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Model$<$ Node\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Storage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{115}{section.8.14}%
+\contentsline {subsection}{\numberline {8.14.1}Detailed Description}{117}{subsection.8.14.1}%
+\contentsline {subsection}{\numberline {8.14.2}Constructor \& Destructor Documentation}{117}{subsection.8.14.2}%
+\contentsline {subsubsection}{\numberline {8.14.2.1}Model()}{117}{subsubsection.8.14.2.1}%
+\contentsline {subsection}{\numberline {8.14.3}Member Function Documentation}{117}{subsection.8.14.3}%
+\contentsline {subsubsection}{\numberline {8.14.3.1}AdjustEdge()}{118}{subsubsection.8.14.3.1}%
+\contentsline {subsubsection}{\numberline {8.14.3.2}Edges()}{118}{subsubsection.8.14.3.2}%
+\contentsline {subsubsection}{\numberline {8.14.3.3}Export()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{119}{subsubsection.8.14.3.3}%
+\contentsline {subsubsection}{\numberline {8.14.3.4}Export()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{119}{subsubsection.8.14.3.4}%
+\contentsline {subsubsection}{\numberline {8.14.3.5}Import()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{120}{subsubsection.8.14.3.5}%
+\contentsline {subsubsection}{\numberline {8.14.3.6}Import()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{120}{subsubsection.8.14.3.6}%
+\contentsline {subsubsection}{\numberline {8.14.3.7}Nodes()}{122}{subsubsection.8.14.3.7}%
+\contentsline {subsubsection}{\numberline {8.14.3.8}RandomWalk()}{122}{subsubsection.8.14.3.8}%
+\contentsline {subsubsection}{\numberline {8.14.3.9}StarterNode()}{123}{subsubsection.8.14.3.9}%
+\contentsline {subsection}{\numberline {8.14.4}Member Data Documentation}{124}{subsection.8.14.4}%
+\contentsline {subsubsection}{\numberline {8.14.4.1}edges}{124}{subsubsection.8.14.4.1}%
+\contentsline {subsubsection}{\numberline {8.14.4.2}nodes}{124}{subsubsection.8.14.4.2}%
+\contentsline {subsubsection}{\numberline {8.14.4.3}starterNode}{124}{subsubsection.8.14.4.3}%
+\contentsline {section}{\numberline {8.15}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix Class Reference}{124}{section.8.15}%
+\contentsline {subsection}{\numberline {8.15.1}Detailed Description}{128}{subsection.8.15.1}%
+\contentsline {subsection}{\numberline {8.15.2}Constructor \& Destructor Documentation}{128}{subsection.8.15.2}%
+\contentsline {subsubsection}{\numberline {8.15.2.1}ModelMatrix()}{128}{subsubsection.8.15.2.1}%
+\contentsline {subsection}{\numberline {8.15.3}Member Function Documentation}{128}{subsection.8.15.3}%
+\contentsline {subsubsection}{\numberline {8.15.3.1}AdjustEdge()}{128}{subsubsection.8.15.3.1}%
+\contentsline {subsubsection}{\numberline {8.15.3.2}ConstructMatrix()}{129}{subsubsection.8.15.3.2}%
+\contentsline {subsubsection}{\numberline {8.15.3.3}DumpJSON()}{130}{subsubsection.8.15.3.3}%
+\contentsline {subsubsection}{\numberline {8.15.3.4}Edges()}{131}{subsubsection.8.15.3.4}%
+\contentsline {subsubsection}{\numberline {8.15.3.5}Export()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{131}{subsubsection.8.15.3.5}%
+\contentsline {subsubsection}{\numberline {8.15.3.6}Export()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{132}{subsubsection.8.15.3.6}%
+\contentsline {subsubsection}{\numberline {8.15.3.7}FastRandomWalk()}{132}{subsubsection.8.15.3.7}%
+\contentsline {subsubsection}{\numberline {8.15.3.8}FastRandomWalkPartition()}{133}{subsubsection.8.15.3.8}%
+\contentsline {subsubsection}{\numberline {8.15.3.9}FastRandomWalkThread()}{134}{subsubsection.8.15.3.9}%
+\contentsline {subsubsection}{\numberline {8.15.3.10}Generate()}{136}{subsubsection.8.15.3.10}%
+\contentsline {subsubsection}{\numberline {8.15.3.11}GenerateThread()}{137}{subsubsection.8.15.3.11}%
+\contentsline {subsubsection}{\numberline {8.15.3.12}Import()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{138}{subsubsection.8.15.3.12}%
+\contentsline {subsubsection}{\numberline {8.15.3.13}Import()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{138}{subsubsection.8.15.3.13}%
+\contentsline {subsubsection}{\numberline {8.15.3.14}Nodes()}{139}{subsubsection.8.15.3.14}%
+\contentsline {subsubsection}{\numberline {8.15.3.15}OpenDatasetFile()}{139}{subsubsection.8.15.3.15}%
+\contentsline {subsubsection}{\numberline {8.15.3.16}RandomWalk()}{140}{subsubsection.8.15.3.16}%
+\contentsline {subsubsection}{\numberline {8.15.3.17}Save()}{141}{subsubsection.8.15.3.17}%
+\contentsline {subsubsection}{\numberline {8.15.3.18}StarterNode()}{142}{subsubsection.8.15.3.18}%
+\contentsline {subsubsection}{\numberline {8.15.3.19}Train()}{142}{subsubsection.8.15.3.19}%
+\contentsline {subsubsection}{\numberline {8.15.3.20}TrainThread()}{143}{subsubsection.8.15.3.20}%
+\contentsline {subsection}{\numberline {8.15.4}Member Data Documentation}{144}{subsection.8.15.4}%
+\contentsline {subsubsection}{\numberline {8.15.4.1}datasetFile}{144}{subsubsection.8.15.4.1}%
+\contentsline {subsubsection}{\numberline {8.15.4.2}edgeMatrix}{144}{subsubsection.8.15.4.2}%
+\contentsline {subsubsection}{\numberline {8.15.4.3}edges}{144}{subsubsection.8.15.4.3}%
+\contentsline {subsubsection}{\numberline {8.15.4.4}matrixIndex}{144}{subsubsection.8.15.4.4}%
+\contentsline {subsubsection}{\numberline {8.15.4.5}matrixSize}{144}{subsubsection.8.15.4.5}%
+\contentsline {subsubsection}{\numberline {8.15.4.6}modelSavefile}{145}{subsubsection.8.15.4.6}%
+\contentsline {subsubsection}{\numberline {8.15.4.7}nodes}{145}{subsubsection.8.15.4.7}%
+\contentsline {subsubsection}{\numberline {8.15.4.8}outputFile}{145}{subsubsection.8.15.4.8}%
+\contentsline {subsubsection}{\numberline {8.15.4.9}starterNode}{145}{subsubsection.8.15.4.9}%
+\contentsline {subsubsection}{\numberline {8.15.4.10}totalEdgeWeights}{145}{subsubsection.8.15.4.10}%
+\contentsline {subsubsection}{\numberline {8.15.4.11}valueMatrix}{145}{subsubsection.8.15.4.11}%
+\contentsline {section}{\numberline {8.16}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Node$<$ storage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{145}{section.8.16}%
+\contentsline {subsection}{\numberline {8.16.1}Detailed Description}{148}{subsection.8.16.1}%
+\contentsline {subsection}{\numberline {8.16.2}Constructor \& Destructor Documentation}{148}{subsection.8.16.2}%
+\contentsline {subsubsection}{\numberline {8.16.2.1}Node()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{148}{subsubsection.8.16.2.1}%
+\contentsline {subsubsection}{\numberline {8.16.2.2}Node()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{148}{subsubsection.8.16.2.2}%
+\contentsline {subsection}{\numberline {8.16.3}Member Function Documentation}{149}{subsection.8.16.3}%
+\contentsline {subsubsection}{\numberline {8.16.3.1}Edges()}{149}{subsubsection.8.16.3.1}%
+\contentsline {subsubsection}{\numberline {8.16.3.2}FindEdge()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{149}{subsubsection.8.16.3.2}%
+\contentsline {subsubsection}{\numberline {8.16.3.3}FindEdge()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{149}{subsubsection.8.16.3.3}%
+\contentsline {subsubsection}{\numberline {8.16.3.4}Link()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{150}{subsubsection.8.16.3.4}%
+\contentsline {subsubsection}{\numberline {8.16.3.5}Link()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{150}{subsubsection.8.16.3.5}%
+\contentsline {subsubsection}{\numberline {8.16.3.6}NodeValue()}{151}{subsubsection.8.16.3.6}%
+\contentsline {subsubsection}{\numberline {8.16.3.7}RandomNext()}{151}{subsubsection.8.16.3.7}%
+\contentsline {subsubsection}{\numberline {8.16.3.8}TotalEdgeWeights()}{152}{subsubsection.8.16.3.8}%
+\contentsline {subsubsection}{\numberline {8.16.3.9}UpdateEdges()}{152}{subsubsection.8.16.3.9}%
+\contentsline {subsubsection}{\numberline {8.16.3.10}UpdateTotalVerticeWeight()}{153}{subsubsection.8.16.3.10}%
+\contentsline {subsection}{\numberline {8.16.4}Member Data Documentation}{153}{subsection.8.16.4}%
+\contentsline {subsubsection}{\numberline {8.16.4.1}\_value}{153}{subsubsection.8.16.4.1}%
+\contentsline {subsubsection}{\numberline {8.16.4.2}edges}{153}{subsubsection.8.16.4.2}%
+\contentsline {subsubsection}{\numberline {8.16.4.3}edgesV}{153}{subsubsection.8.16.4.3}%
+\contentsline {subsubsection}{\numberline {8.16.4.4}total\_edge\_weights}{153}{subsubsection.8.16.4.4}%
+\contentsline {section}{\numberline {8.17}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Engine Class Reference}{154}{section.8.17}%
+\contentsline {subsection}{\numberline {8.17.1}Detailed Description}{155}{subsection.8.17.1}%
+\contentsline {subsection}{\numberline {8.17.2}Member Function Documentation}{155}{subsection.8.17.2}%
+\contentsline {subsubsection}{\numberline {8.17.2.1}random()}{155}{subsubsection.8.17.2.1}%
+\contentsline {section}{\numberline {8.18}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Terminal Class Reference}{155}{section.8.18}%
+\contentsline {subsection}{\numberline {8.18.1}Detailed Description}{157}{subsection.8.18.1}%
+\contentsline {subsection}{\numberline {8.18.2}Member Enumeration Documentation}{157}{subsection.8.18.2}%
+\contentsline {subsubsection}{\numberline {8.18.2.1}color}{157}{subsubsection.8.18.2.1}%
+\contentsline {subsection}{\numberline {8.18.3}Constructor \& Destructor Documentation}{157}{subsection.8.18.3}%
+\contentsline {subsubsection}{\numberline {8.18.3.1}Terminal()}{157}{subsubsection.8.18.3.1}%
+\contentsline {subsection}{\numberline {8.18.4}Member Data Documentation}{157}{subsection.8.18.4}%
+\contentsline {subsubsection}{\numberline {8.18.4.1}colormap}{158}{subsubsection.8.18.4.1}%
+\contentsline {subsubsection}{\numberline {8.18.4.2}endl}{158}{subsubsection.8.18.4.2}%
+\contentsline {section}{\numberline {8.19}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Concurrency\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shared\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler Class Reference}{158}{section.8.19}%
+\contentsline {subsection}{\numberline {8.19.1}Detailed Description}{160}{subsection.8.19.1}%
+\contentsline {subsection}{\numberline {8.19.2}Constructor \& Destructor Documentation}{160}{subsection.8.19.2}%
+\contentsline {subsubsection}{\numberline {8.19.2.1}ThreadSharedListHandler()}{160}{subsubsection.8.19.2.1}%
+\contentsline {subsection}{\numberline {8.19.3}Member Function Documentation}{161}{subsection.8.19.3}%
+\contentsline {subsubsection}{\numberline {8.19.3.1}next()}{161}{subsubsection.8.19.3.1}%
+\contentsline {subsection}{\numberline {8.19.4}Member Data Documentation}{161}{subsection.8.19.4}%
+\contentsline {subsubsection}{\numberline {8.19.4.1}listfile}{161}{subsubsection.8.19.4.1}%
+\contentsline {subsubsection}{\numberline {8.19.4.2}mlock}{161}{subsubsection.8.19.4.2}%
+\contentsline {section}{\numberline {8.20}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Train Class Reference}{162}{section.8.20}%
+\contentsline {subsection}{\numberline {8.20.1}Detailed Description}{163}{subsection.8.20.1}%
+\contentsline {subsection}{\numberline {8.20.2}Constructor \& Destructor Documentation}{163}{subsection.8.20.2}%
+\contentsline {subsubsection}{\numberline {8.20.2.1}Train()}{163}{subsubsection.8.20.2.1}%
+\contentsline {subsection}{\numberline {8.20.3}Member Function Documentation}{163}{subsection.8.20.3}%
+\contentsline {subsubsection}{\numberline {8.20.3.1}home}{163}{subsubsection.8.20.3.1}%
+\contentsline {subsubsection}{\numberline {8.20.3.2}train}{163}{subsubsection.8.20.3.2}%
+\contentsline {subsection}{\numberline {8.20.4}Member Data Documentation}{163}{subsection.8.20.4}%
+\contentsline {subsubsection}{\numberline {8.20.4.1}ui}{163}{subsubsection.8.20.4.1}%
+\contentsline {chapter}{\numberline {9}File Documentation}{165}{chapter.9}%
+\contentsline {section}{\numberline {9.1}about.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{165}{section.9.1}%
+\contentsline {section}{\numberline {9.2}about.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{165}{section.9.2}%
+\contentsline {section}{\numberline {9.3}argparse.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{166}{section.9.3}%
+\contentsline {section}{\numberline {9.4}argparse.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{166}{section.9.4}%
+\contentsline {section}{\numberline {9.5}argparse.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{166}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Macro Definition Documentation}{168}{subsection.9.5.1}%
+\contentsline {subsubsection}{\numberline {9.5.1.1}BOOST\_ALL\_DYN\_LINK}{168}{subsubsection.9.5.1.1}%
+\contentsline {section}{\numberline {9.6}argparse.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{168}{section.9.6}%
+\contentsline {section}{\numberline {9.7}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{170}{section.9.7}%
+\contentsline {section}{\numberline {9.8}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{171}{section.9.8}%
+\contentsline {section}{\numberline {9.9}cuda\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Device\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{172}{section.9.9}%
+\contentsline {section}{\numberline {9.10}cuda\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Device\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{172}{section.9.10}%
+\contentsline {section}{\numberline {9.11}cuda\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{173}{section.9.11}%
+\contentsline {section}{\numberline {9.12}cuda\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{174}{section.9.12}%
+\contentsline {section}{\numberline {9.13}dllmain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{174}{section.9.13}%
+\contentsline {section}{\numberline {9.14}dllmain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{175}{section.9.14}%
+\contentsline {section}{\numberline {9.15}edge.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{175}{section.9.15}%
+\contentsline {section}{\numberline {9.16}edge.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{176}{section.9.16}%
+\contentsline {section}{\numberline {9.17}framework.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{178}{section.9.17}%
+\contentsline {subsection}{\numberline {9.17.1}Macro Definition Documentation}{179}{subsection.9.17.1}%
+\contentsline {subsubsection}{\numberline {9.17.1.1}WIN32\_LEAN\_AND\_MEAN}{179}{subsubsection.9.17.1.1}%
+\contentsline {section}{\numberline {9.18}framework.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{179}{section.9.18}%
+\contentsline {section}{\numberline {9.19}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{179}{section.9.19}%
+\contentsline {subsection}{\numberline {9.19.1}Function Documentation}{179}{subsection.9.19.1}%
+\contentsline {subsubsection}{\numberline {9.19.1.1}main()}{179}{subsubsection.9.19.1.1}%
+\contentsline {section}{\numberline {9.20}src/main.cpp}{180}{section.9.20}%
+\contentsline {section}{\numberline {9.21}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{181}{section.9.21}%
+\contentsline {subsection}{\numberline {9.21.1}Function Documentation}{181}{subsection.9.21.1}%
+\contentsline {subsubsection}{\numberline {9.21.1.1}main()}{181}{subsubsection.9.21.1.1}%
+\contentsline {section}{\numberline {9.22}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I/src/main.cpp}{182}{section.9.22}%
+\contentsline {section}{\numberline {9.23}markopy.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{182}{section.9.23}%
+\contentsline {subsection}{\numberline {9.23.1}Macro Definition Documentation}{183}{subsection.9.23.1}%
+\contentsline {subsubsection}{\numberline {9.23.1.1}BOOST\_PYTHON\_STATIC\_LIB}{183}{subsubsection.9.23.1.1}%
+\contentsline {section}{\numberline {9.24}markopy.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{183}{section.9.24}%
+\contentsline {section}{\numberline {9.25}markopy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cli.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py File Reference}{184}{section.9.25}%
+\contentsline {section}{\numberline {9.26}markopy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cli.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py}{184}{section.9.26}%
+\contentsline {section}{\numberline {9.27}markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{187}{section.9.27}%
+\contentsline {section}{\numberline {9.28}markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{187}{section.9.28}%
+\contentsline {section}{\numberline {9.29}markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{189}{section.9.29}%
+\contentsline {section}{\numberline {9.30}markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{190}{section.9.30}%
+\contentsline {section}{\numberline {9.31}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{191}{section.9.31}%
+\contentsline {section}{\numberline {9.32}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{191}{section.9.32}%
+\contentsline {section}{\numberline {9.33}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{192}{section.9.33}%
+\contentsline {section}{\numberline {9.34}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{193}{section.9.34}%
+\contentsline {section}{\numberline {9.35}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{194}{section.9.35}%
+\contentsline {section}{\numberline {9.36}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{194}{section.9.36}%
+\contentsline {section}{\numberline {9.37}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{195}{section.9.37}%
+\contentsline {section}{\numberline {9.38}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{195}{section.9.38}%
+\contentsline {section}{\numberline {9.39}model.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{196}{section.9.39}%
+\contentsline {section}{\numberline {9.40}model.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{197}{section.9.40}%
+\contentsline {section}{\numberline {9.41}model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2gram.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py File Reference}{201}{section.9.41}%
+\contentsline {section}{\numberline {9.42}model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2gram.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py}{201}{section.9.42}%
+\contentsline {section}{\numberline {9.43}model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{202}{section.9.43}%
+\contentsline {section}{\numberline {9.44}model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{202}{section.9.44}%
+\contentsline {section}{\numberline {9.45}model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{205}{section.9.45}%
+\contentsline {section}{\numberline {9.46}model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{205}{section.9.46}%
+\contentsline {section}{\numberline {9.47}node.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{207}{section.9.47}%
+\contentsline {section}{\numberline {9.48}node.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{208}{section.9.48}%
+\contentsline {section}{\numberline {9.49}pch.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{211}{section.9.49}%
+\contentsline {section}{\numberline {9.50}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model/src/pch.cpp}{212}{section.9.50}%
+\contentsline {section}{\numberline {9.51}pch.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{212}{section.9.51}%
+\contentsline {section}{\numberline {9.52}Unit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tests/pch.cpp}{212}{section.9.52}%
+\contentsline {section}{\numberline {9.53}pch.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{213}{section.9.53}%
+\contentsline {section}{\numberline {9.54}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model/src/pch.h}{213}{section.9.54}%
+\contentsline {section}{\numberline {9.55}pch.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{214}{section.9.55}%
+\contentsline {section}{\numberline {9.56}Unit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tests/pch.h}{214}{section.9.56}%
+\contentsline {section}{\numberline {9.57}random-\/model.py File Reference}{214}{section.9.57}%
+\contentsline {section}{\numberline {9.58}random-\/model.py}{214}{section.9.58}%
+\contentsline {section}{\numberline {9.59}random.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{215}{section.9.59}%
+\contentsline {section}{\numberline {9.60}random.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{216}{section.9.60}%
+\contentsline {section}{\numberline {9.61}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{218}{section.9.61}%
+\contentsline {section}{\numberline {9.62}term.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{218}{section.9.62}%
+\contentsline {subsection}{\numberline {9.62.1}Function Documentation}{219}{subsection.9.62.1}%
+\contentsline {subsubsection}{\numberline {9.62.1.1}operator$<$$<$()}{219}{subsubsection.9.62.1.1}%
+\contentsline {section}{\numberline {9.63}term.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{219}{section.9.63}%
+\contentsline {section}{\numberline {9.64}term.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{220}{section.9.64}%
+\contentsline {subsection}{\numberline {9.64.1}Macro Definition Documentation}{221}{subsection.9.64.1}%
+\contentsline {subsubsection}{\numberline {9.64.1.1}TERM\_FAIL}{221}{subsubsection.9.64.1.1}%
+\contentsline {subsubsection}{\numberline {9.64.1.2}TERM\_INFO}{222}{subsubsection.9.64.1.2}%
+\contentsline {subsubsection}{\numberline {9.64.1.3}TERM\_SUCC}{222}{subsubsection.9.64.1.3}%
+\contentsline {subsubsection}{\numberline {9.64.1.4}TERM\_WARN}{222}{subsubsection.9.64.1.4}%
+\contentsline {section}{\numberline {9.65}term.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{222}{section.9.65}%
+\contentsline {section}{\numberline {9.66}thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shared\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{223}{section.9.66}%
+\contentsline {section}{\numberline {9.67}thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shared\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{223}{section.9.67}%
+\contentsline {section}{\numberline {9.68}thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shared\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{223}{section.9.68}%
+\contentsline {section}{\numberline {9.69}thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shared\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{224}{section.9.69}%
+\contentsline {section}{\numberline {9.70}Train.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{226}{section.9.70}%
+\contentsline {section}{\numberline {9.71}Train.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{226}{section.9.71}%
+\contentsline {section}{\numberline {9.72}Unit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tests.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{227}{section.9.72}%
+\contentsline {section}{\numberline {9.73}Unit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tests.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{228}{section.9.73}%
+\contentsline {chapter}{Index}{237}{section*.308}%

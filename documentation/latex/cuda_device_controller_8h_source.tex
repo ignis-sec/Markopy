@@ -1,0 +1,53 @@
+\hypertarget{cuda_device_controller_8h_source}{}\doxysection{cuda\+Device\+Controller.\+h}
+\label{cuda_device_controller_8h_source}\index{cudaDeviceController.h@{cudaDeviceController.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00002 \textcolor{comment}{/** @brief Namespace for objects requiring CUDA libraries.}}
+\DoxyCodeLine{00003 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{cuda_device_controller_8h_source_l00004}\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{00004}} \textcolor{keyword}{namespace} Markov::API::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}\{}
+\DoxyCodeLine{00005     \textcolor{comment}{/** @brief Controller class for CUDA device}}
+\DoxyCodeLine{00006 \textcolor{comment}{     * }}
+\DoxyCodeLine{00007 \textcolor{comment}{     * This implementation only supports Nvidia devices.}}
+\DoxyCodeLine{00008 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{cuda_device_controller_8h_source_l00009}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller}{00009}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller}{CUDADeviceController}}\{}
+\DoxyCodeLine{00010     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011         \textcolor{comment}{/** @brief List CUDA devices in the system.}}
+\DoxyCodeLine{00012 \textcolor{comment}{         *}}
+\DoxyCodeLine{00013 \textcolor{comment}{         * This function will print details of every CUDA capable device in the system.}}
+\DoxyCodeLine{00014 \textcolor{comment}{         * }}
+\DoxyCodeLine{00015 \textcolor{comment}{         * @b Example @b output:}}
+\DoxyCodeLine{00016 \textcolor{comment}{         * @code\{.txt\}}}
+\DoxyCodeLine{00017 \textcolor{comment}{         * Device Number: 0}}
+\DoxyCodeLine{00018 \textcolor{comment}{         * Device name: GeForce RTX 2070}}
+\DoxyCodeLine{00019 \textcolor{comment}{         * Memory Clock Rate (KHz): 7001000}}
+\DoxyCodeLine{00020 \textcolor{comment}{         * Memory Bus Width (bits): 256}}
+\DoxyCodeLine{00021 \textcolor{comment}{         * Peak Memory Bandwidth (GB/s): 448.064}}
+\DoxyCodeLine{00022 \textcolor{comment}{         * Max Linear Threads: 1024}}
+\DoxyCodeLine{00023 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00024 \textcolor{comment}{        */}}
+\DoxyCodeLine{00025         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}{\_\_host\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}{ListCudaDevices}}();}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00028         \textcolor{comment}{/** @brief Check results of the last operation on GPU.}}
+\DoxyCodeLine{00029 \textcolor{comment}{         * }}
+\DoxyCodeLine{00030 \textcolor{comment}{         * Check the status returned from cudaMalloc/cudaMemcpy to find failures.}}
+\DoxyCodeLine{00031 \textcolor{comment}{         * }}
+\DoxyCodeLine{00032 \textcolor{comment}{         * If a failure occurs, its assumed beyond redemption, and exited.}}
+\DoxyCodeLine{00033 \textcolor{comment}{         * @param \_status Cuda error status to check }}
+\DoxyCodeLine{00034 \textcolor{comment}{         * @param msg Message to print in case of a failure}}
+\DoxyCodeLine{00035 \textcolor{comment}{         * @return 0 if successful, 1 if failure.}}
+\DoxyCodeLine{00036 \textcolor{comment}{         * @b Example @b output:}}
+\DoxyCodeLine{00037 \textcolor{comment}{         * @code\{.txt\}}}
+\DoxyCodeLine{00038 \textcolor{comment}{         * char *da, a = "test";}}
+\DoxyCodeLine{00039 \textcolor{comment}{         * cudastatus = cudaMalloc((char **)\&da, 5*sizeof(char*));}}
+\DoxyCodeLine{00040 \textcolor{comment}{         * CudaCheckNotifyErr(cudastatus, "Failed to allocate VRAM for *da.\(\backslash\)n");}}
+\DoxyCodeLine{00041 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00042 \textcolor{comment}{        */}}
+\DoxyCodeLine{00043         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}{\_\_host\_\_}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}{CudaCheckNotifyErr}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}{cudaError\_t}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}{\_status}}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}{msg}});}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046     \};}
+\DoxyCodeLine{00047 \};}
+
+\end{DoxyCode}

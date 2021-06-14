@@ -96,6 +96,8 @@ $(document).ready(function(){initNavTree('src_2main_8cpp.html',''); initResizabl
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &quot;<a class="el" href="markov_passwords_8h_source.html">markovPasswords.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="model_matrix_8h_source.html">modelMatrix.h</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for src/main.cpp:</div>
 <div class="dyncontent">
@@ -140,36 +142,38 @@ Functions</h2></td></tr>
 
 <p>Launch CLI tool. </p>
 
-<p class="definition">Definition at line <a class="el" href="src_2main_8cpp_source.html#l00013">13</a> of file <a class="el" href="src_2main_8cpp_source.html">src/main.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html">Markov::API::CLI::Terminal</a> t;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    ProgramOptions* p  = Argparse::parse(argc, argv);</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    if (p==0 || p-&gt;bFailure) {</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">        std::cout &lt;&lt; TERM_FAIL &lt;&lt; &quot;Arguments Failed to Parse&quot; &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">        Argparse::help();</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    }*/</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html">Markov::API::CLI::Argparse</a> a(argc,argv);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_markov_1_1_a_p_i_1_1_markov_passwords.html">Markov::API::MarkovPasswords</a> markovPass;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Importing model.\n&quot;</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    markovPass.<a class="code" href="class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5">Import</a>(<span class="stringliteral">&quot;models/2gram.mdl&quot;</span>);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Import done. Training...\n&quot;</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    markovPass.<a class="code" href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#a2fd4423ae3850e258dcb6b11a7feb9b2">Train</a>(<span class="stringliteral">&quot;datasets/graduation.corpus&quot;</span>, <span class="charliteral">&#39;\t&#39;</span>, 50);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Training done. Exporting to file.\n&quot;</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    markovPass.<a class="code" href="class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939">Export</a>(<span class="stringliteral">&quot;models/finished2.mdl&quot;</span>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Generation done....\n&quot;</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="src_2main_8cpp_source.html#l00014">14</a> of file <a class="el" href="src_2main_8cpp_source.html">src/main.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html">Markov::API::CLI::Terminal</a> t;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    ProgramOptions* p  = Argparse::parse(argc, argv);</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    if (p==0 || p-&gt;bFailure) {</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">        std::cout &lt;&lt; TERM_FAIL &lt;&lt; &quot;Arguments Failed to Parse&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        Argparse::help();</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    }*/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html">Markov::API::CLI::Argparse</a> a(argc,argv);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html">Markov::API::ModelMatrix</a> markovPass;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::cerr &lt;&lt; <span class="stringliteral">&quot;Importing model.\n&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    markovPass.<a class="code" href="class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5">Import</a>(<span class="stringliteral">&quot;models/finished.mdl&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::cerr &lt;&lt; <span class="stringliteral">&quot;Import done. \n&quot;</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    markovPass.<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ac1dbc499eda0e0eda3567bce45d17db4">ConstructMatrix</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//markovPass.FastRandomWalk(50000000,&quot;/media/ignis/Stuff/wordlist.txt&quot;,6,12,25, true);</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    markovPass.<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a9e5a9885d48e95b9f5d1ed082d83db24">FastRandomWalk</a>(500000000,<span class="stringliteral">&quot;/media/ignis/Stuff/wordlist2.txt&quot;</span>,6,12,25, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::cerr &lt;&lt; <span class="stringliteral">&quot;Finished in:&quot;</span> &lt;&lt; std::chrono::duration_cast&lt;std::chrono::milliseconds&gt; (end - begin).count() &lt;&lt; <span class="stringliteral">&quot; milliseconds&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="model_8h_source.html#l00273">Markov::Model&lt; NodeStorageType &gt;::Export()</a>, <a class="el" href="model_8h_source.html#l00206">Markov::Model&lt; NodeStorageType &gt;::Import()</a>, and <a class="el" href="markov_passwords_8cpp_source.html#l00040">Markov::API::MarkovPasswords::Train()</a>.</p>
+<p class="reference">References <a class="el" href="argparse_8h_source.html#l00046">Markov::API::CLI::Argparse::Argparse()</a>, <a class="el" href="model_matrix_8cpp_source.html#l00011">Markov::API::ModelMatrix::ConstructMatrix()</a>, <a class="el" href="model_matrix_8cpp_source.html#l00163">Markov::API::ModelMatrix::FastRandomWalk()</a>, and <a class="el" href="model_8h_source.html#l00265">Markov::Model&lt; NodeStorageType &gt;::Import()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.svg" width="100%" height="424"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.svg" width="100%" height="584"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -177,11 +181,11 @@ Here is the call graph for this function:</div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_model_matrix_html_a9e5a9885d48e95b9f5d1ed082d83db24"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a9e5a9885d48e95b9f5d1ed082d83db24">Markov::API::ModelMatrix::FastRandomWalk</a></div><div class="ttdeci">void FastRandomWalk(unsigned long int n, const char *wordlistFileName, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true)</div><div class="ttdoc">Random walk on the Matrix-reduced Markov::Model.</div><div class="ttdef"><b>Definition:</b> <a href="model_matrix_8cpp_source.html#l00163">modelMatrix.cpp:163</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_model_matrix_html"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_model_matrix.html">Markov::API::ModelMatrix</a></div><div class="ttdoc">Class to flatten and reduce Markov::Model to a Matrix.</div><div class="ttdef"><b>Definition:</b> <a href="model_matrix_8h_source.html#l00013">modelMatrix.h:13</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_model_html_a379ea9943f9d4c212e1140d4a9af64f5"><div class="ttname"><a href="class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5">Markov::Model::Import</a></div><div class="ttdeci">bool Import(std::ifstream *)</div><div class="ttdoc">Import a file to construct the model.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00206">model.h:206</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_markov_passwords_html"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_markov_passwords.html">Markov::API::MarkovPasswords</a></div><div class="ttdoc">Markov::Model with char represented nodes.</div><div class="ttdef"><b>Definition:</b> <a href="markov_passwords_8h_source.html#l00017">markovPasswords.h:17</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_model_html_ae16027a94235d2988ac4be35ea07d939"><div class="ttname"><a href="class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939">Markov::Model::Export</a></div><div class="ttdeci">bool Export(std::ofstream *)</div><div class="ttdoc">Export a file of the model.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00273">model.h:273</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_markov_passwords_html_a2fd4423ae3850e258dcb6b11a7feb9b2"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#a2fd4423ae3850e258dcb6b11a7feb9b2">Markov::API::MarkovPasswords::Train</a></div><div class="ttdeci">void Train(const char *datasetFileName, char delimiter, int threads)</div><div class="ttdoc">Train the model with the dataset file.</div><div class="ttdef"><b>Definition:</b> <a href="markov_passwords_8cpp_source.html#l00040">markovPasswords.cpp:40</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_html"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html">Markov::API::CLI::Terminal</a></div><div class="ttdoc">pretty colors for Terminal. Windows Only.</div><div class="ttdef"><b>Definition:</b> <a href="term_8h_source.html#l00018">term.h:18</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_model_matrix_html_ac1dbc499eda0e0eda3567bce45d17db4"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ac1dbc499eda0e0eda3567bce45d17db4">Markov::API::ModelMatrix::ConstructMatrix</a></div><div class="ttdeci">void ConstructMatrix()</div><div class="ttdoc">Construct the related Matrix data for the model.</div><div class="ttdef"><b>Definition:</b> <a href="model_matrix_8cpp_source.html#l00011">modelMatrix.cpp:11</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_html"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html">Markov::API::CLI::Argparse</a></div><div class="ttdoc">Parse command line arguements.</div><div class="ttdef"><b>Definition:</b> <a href="argparse_8h_source.html#l00034">argparse.h:34</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

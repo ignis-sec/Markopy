@@ -87,33 +87,32 @@ $(document).ready(function(){initNavTree('_train_8h_source.html',''); initResiza
 <div class="title">Train.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_train_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QMainWindow&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;ui_Train.h&quot;</span></div>
+<a href="_train_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">QtWidgets</span><span class="preprocessor">/</span><span class="preprocessor">QMainWindow</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;ui_Train.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_markov_1_1_g_u_i.html">Markov::GUI</a>{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace</span> Markov::<a class="code" href="namespace_markov_1_1_g_u_i.html">GUI</a>{</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_markov_1_1_g_u_i_1_1_train.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_markov_1_1_g_u_i_1_1_train.html">Train</a> :<span class="keyword">public</span> QMainWindow {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="comment">/** @brief QT Training page class</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_markov_1_1_g_u_i_1_1_train.html">    9</a></span>&#160;    <span class="keyword">class</span> <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#a7a1f48206baae01e8e658d8d7734bdde">Train</a> :<span class="keyword">public</span> <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#a7a1f48206baae01e8e658d8d7734bdde">QMainWindow</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#a7a1f48206baae01e8e658d8d7734bdde">Q_OBJECT</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#a81b5ca7eb56318ff1cefbc7c228a97cd">Train</a>(QWidget* parent = Q_NULLPTR);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#a7a1f48206baae01e8e658d8d7734bdde">Train</a>(<a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#a7a1f48206baae01e8e658d8d7734bdde">QWidget</a>* <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#a7a1f48206baae01e8e658d8d7734bdde">parent</a> = <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#a7a1f48206baae01e8e658d8d7734bdde">Q_NULLPTR</a>);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_markov_1_1_g_u_i_1_1_train.html#aca81fef5702a620bf650aa8a4c2bdaea">   15</a></span>&#160;        Ui::Train <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#aca81fef5702a620bf650aa8a4c2bdaea">ui</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_markov_1_1_g_u_i_1_1_train.html#aca81fef5702a620bf650aa8a4c2bdaea">   15</a></span>&#160;        <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#aca81fef5702a620bf650aa8a4c2bdaea">Ui</a>::<a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#aca81fef5702a620bf650aa8a4c2bdaea">Train</a> <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#aca81fef5702a620bf650aa8a4c2bdaea">ui</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#a7a1f48206baae01e8e658d8d7734bdde">slots</a>:</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#a7a1f48206baae01e8e658d8d7734bdde">home</a>();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html#a6f74c2948379df5e7f0d8eba96c97fb0">train</a>();</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    };</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespace_markov_1_1_g_u_i_html"><div class="ttname"><a href="namespace_markov_1_1_g_u_i.html">Markov::GUI</a></div><div class="ttdoc">namespace for MarkovPasswords API GUI wrapper</div><div class="ttdef"><b>Definition:</b> <a href="about_8h_source.html#l00008">about.h:8</a></div></div>
+<div class="ttc" id="anamespace_markov_1_1_g_u_i_html"><div class="ttname"><a href="namespace_markov_1_1_g_u_i.html">Markov::GUI</a></div><div class="ttdoc">namespace for MarkovPasswords API GUI wrapper</div><div class="ttdef"><b>Definition:</b> <a href="menu_8h_source.html#l00006">menu.h:6</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_g_u_i_1_1_train_html_aca81fef5702a620bf650aa8a4c2bdaea"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1_train.html#aca81fef5702a620bf650aa8a4c2bdaea">Markov::GUI::Train::ui</a></div><div class="ttdeci">Ui::Train ui</div><div class="ttdef"><b>Definition:</b> <a href="_train_8h_source.html#l00015">Train.h:15</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1_train_html_a81b5ca7eb56318ff1cefbc7c228a97cd"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1_train.html#a81b5ca7eb56318ff1cefbc7c228a97cd">Markov::GUI::Train::Train</a></div><div class="ttdeci">Train(QWidget *parent=Q_NULLPTR)</div></div>
 <div class="ttc" id="aclass_markov_1_1_g_u_i_1_1_train_html_a7a1f48206baae01e8e658d8d7734bdde"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1_train.html#a7a1f48206baae01e8e658d8d7734bdde">Markov::GUI::Train::home</a></div><div class="ttdeci">void home()</div></div>
-<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1_train_html"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1_train.html">Markov::GUI::Train</a></div><div class="ttdoc">QT Training page class.</div><div class="ttdef"><b>Definition:</b> <a href="_train_8h_source.html#l00009">Train.h:9</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_g_u_i_1_1_train_html_a6f74c2948379df5e7f0d8eba96c97fb0"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1_train.html#a6f74c2948379df5e7f0d8eba96c97fb0">Markov::GUI::Train::train</a></div><div class="ttdeci">void train()</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
