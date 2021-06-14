@@ -152,6 +152,9 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>ConstructMatrix()
 : <a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ac1dbc499eda0e0eda3567bce45d17db4">Markov::API::ModelMatrix</a>
 </li>
+<li>CudaCheckNotifyErr()
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#aa79c9cac041d2c53be8d21e903c2aacc">Markov::API::CUDA::CUDADeviceController</a>
+</li>
 <li>CYAN
 : <a class="el" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#abd812d8a82872e9fca1f0df632fa3722a3aa2f2e7a8326d5464a01fdb0161a8e3">Markov::API::CLI::Terminal</a>
 </li>
@@ -167,6 +170,18 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 </li>
 <li>datasetname
 : <a class="el" href="struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options.html#a616de3cae109698c5d0fb6968e0dcc3b">Markov::API::CLI::_programOptions</a>
+</li>
+<li>device_edgeMatrix
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a2329ce70d7bc9ea0797079a599dd9170">Markov::API::CUDA::CUDAModelMatrix</a>
+</li>
+<li>device_matrixIndex
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a6a252a7c965c218114ad3d1663c4e840">Markov::API::CUDA::CUDAModelMatrix</a>
+</li>
+<li>device_totalEdgeWeights
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#aae5fdd4bdffc7eb2561fb923024d2615">Markov::API::CUDA::CUDAModelMatrix</a>
+</li>
+<li>device_valueMatrix
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#aef9d4b48f3a4a2957077e0c53f3eab60">Markov::API::CUDA::CUDAModelMatrix</a>
 </li>
 <li>distribution()
 : <a class="el" href="class_markov_1_1_random_1_1_default_random_engine.html#a53c9c440002ed1adb2b18292ca82d1c9">Markov::Random::DefaultRandomEngine</a>
@@ -216,7 +231,8 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_f"></a>- f -</h3><ul>
 <li>FastRandomWalk()
-: <a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a9e5a9885d48e95b9f5d1ed082d83db24">Markov::API::ModelMatrix</a>
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a19862a2611859de8a1b0595d9c6ff42f">Markov::API::CUDA::CUDAModelMatrix</a>
+, <a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a9e5a9885d48e95b9f5d1ed082d83db24">Markov::API::ModelMatrix</a>
 </li>
 <li>FastRandomWalkPartition()
 : <a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5">Markov::API::ModelMatrix</a>
@@ -282,6 +298,9 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>Link()
 : <a class="el" href="class_markov_1_1_node.html#a0e867cddf6b8dd784c36b12aa820fee9">Markov::Node&lt; storageType &gt;</a>
 </li>
+<li>ListCudaDevices()
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#aa6094d80af47a2557693a3d3005d5013">Markov::API::CUDA::CUDADeviceController</a>
+</li>
 <li>listfile
 : <a class="el" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#ad7bf8372a5de9f5aa9fb10d4f77d7373">Markov::API::Concurrency::ThreadSharedListHandler</a>
 </li>
@@ -324,6 +343,9 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 </li>
 <li>menu()
 : <a class="el" href="class_markov_1_1_g_u_i_1_1menu.html#a19f2bce9cdf1c78eb746e86ab5abf14a">Markov::GUI::menu</a>
+</li>
+<li>MigrateMatrix()
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a5dd552997a32c0cabf3a6cca6fb07b73">Markov::API::CUDA::CUDAModelMatrix</a>
 </li>
 <li>mlock
 : <a class="el" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#af95b0f077e162b3cf3c465f6b0dfe525">Markov::API::Concurrency::ThreadSharedListHandler</a>
@@ -406,6 +428,9 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>RESET
 : <a class="el" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#abd812d8a82872e9fca1f0df632fa3722a72541243294300957260aa5cd4c29a73">Markov::API::CLI::Terminal</a>
 </li>
+<li>RetrieveCudaBuffer()
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ac4af6bbd60ecbe204bfc4d5cdab24004">Markov::API::CUDA::CUDAModelMatrix</a>
+</li>
 <li>RightNode()
 : <a class="el" href="class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd">Markov::Edge&lt; NodeStorageType &gt;</a>
 </li>
@@ -431,11 +456,11 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>start()
 : <a class="el" href="class_markov_1_1_g_u_i_1_1_c_l_i.html#aff8081f3baac288e70163e720a60a1e7">Markov::GUI::CLI</a>
 </li>
-<li>starterNode
-: <a class="el" href="class_markov_1_1_model.html#ad2d9bf601df78f80076f5d3fbb65fe28">Markov::Model&lt; NodeStorageType &gt;</a>
-</li>
 <li>StarterNode()
 : <a class="el" href="class_markov_1_1_model.html#a35cb15a14d034f3365b9d2d3efa1ffc0">Markov::Model&lt; NodeStorageType &gt;</a>
+</li>
+<li>starterNode
+: <a class="el" href="class_markov_1_1_model.html#ad2d9bf601df78f80076f5d3fbb65fe28">Markov::Model&lt; NodeStorageType &gt;</a>
 </li>
 <li>statistics()
 : <a class="el" href="class_markov_1_1_g_u_i_1_1_c_l_i.html#a1695cccf724c76f48e4931e2f636512d">Markov::GUI::CLI</a>

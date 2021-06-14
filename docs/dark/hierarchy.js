@@ -2,13 +2,18 @@ var hierarchy =
 [
     [ "Markov::API::CLI::_programOptions", "struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options.html", null ],
     [ "Markov::API::CLI::Argparse", "class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html", null ],
+    [ "Markov::API::CUDA::CUDADeviceController", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html", [
+      [ "Markov::API::CUDA::CUDAModelMatrix", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html", null ]
+    ] ],
     [ "Markov::Edge< NodeStorageType >", "class_markov_1_1_edge.html", null ],
     [ "Markov::Edge< char >", "class_markov_1_1_edge.html", null ],
     [ "Markov::Edge< storageType >", "class_markov_1_1_edge.html", null ],
     [ "Markov::Model< NodeStorageType >", "class_markov_1_1_model.html", null ],
     [ "Markov::Model< char >", "class_markov_1_1_model.html", [
       [ "Markov::API::MarkovPasswords", "class_markov_1_1_a_p_i_1_1_markov_passwords.html", [
-        [ "Markov::API::ModelMatrix", "class_markov_1_1_a_p_i_1_1_model_matrix.html", null ]
+        [ "Markov::API::ModelMatrix", "class_markov_1_1_a_p_i_1_1_model_matrix.html", [
+          [ "Markov::API::CUDA::CUDAModelMatrix", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html", null ]
+        ] ]
       ] ]
     ] ],
     [ "Markov::Node< storageType >", "class_markov_1_1_node.html", null ],
