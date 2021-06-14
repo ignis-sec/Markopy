@@ -12,7 +12,7 @@ CLI::CLI(QWidget* parent)
     QObject::connect(ui.startButton, &QPushButton::clicked, this, [this] {start(); });
     QObject::connect(ui.commandLinkButton_2, &QPushButton::clicked, this, [this] {statistics(); });
     QObject::connect(ui.commandLinkButton, &QPushButton::clicked, this, [this] {about(); });
-
+     
 }
 
 void CLI::start() {

@@ -7,7 +7,7 @@
 #include "src/CLI.h"
 #include "../MarkovPasswords/src/markovPasswords.h"
 #include <QtWidgets/QApplication>
-
+#include "src/MarkovPasswordsGUI.h"
 
 Generate::Generate(QWidget* parent)
     : QMainWindow(parent)
@@ -15,8 +15,10 @@ Generate::Generate(QWidget* parent)
     ui.setupUi(this);
 
     QObject::connect(ui.pushButton, &QPushButton::clicked, this, [this] {generation(); });
-    QObject::connect(ui.pushButton_2, &QPushButton::clicked, this, [this] {home(); });
+    QObject::connect(ui.pushButton_4, &QPushButton::clicked, this, [this] {home(); });
     QObject::connect(ui.pushButton_3, &QPushButton::clicked, this, [this] {train(); });
+    QObject::connect(ui.pushButton_2, &QPushButton::clicked, this, [this] {vis(); });
+
 
     ui.pushButton->setVisible(false);
     ui.lineEdit->setVisible(false);
@@ -50,7 +52,7 @@ void Generate::generation() {
     ui.label_6->setText("GENERATING!");
     
     MarkovPasswords mp;
-    mp.Import("2gram-trained.mdl");
+    mp.Import("src\\CLI\\sample_models\\2gram-trained.mdl");
 
     mp.Generate(numberPass,cstr,minLen,maxLen);
 
@@ -89,9 +91,9 @@ void Generate::train() {
 
     char a = ',';
     MarkovPasswords mp;
-    mp.Import("models/2gram.mdl");
-    mp.Train(cstr, a);
-    mp.Export("models/finished.mdl");
+    mp.Import("models\\2gram.mdl");
+    mp.Train(cstr, a,10);
+    mp.Export("models\\finished.mdl");
 
 
 
@@ -112,4 +114,9 @@ void Generate::home() {
      CLI* w = new CLI;
      w->show();
      this->close();
+}
+void Generate :: vis() {
+    MarkovPasswordsGUI* w = new MarkovPasswordsGUI;
+    w->show();
+    this->close();
 }

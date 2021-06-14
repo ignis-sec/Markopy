@@ -209,14 +209,14 @@ color:#fff;
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>1380</x>
-     <y>70</y>
+     <x>1390</x>
+     <y>20</y>
      <width>161</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>Home</string>
+    <string>Visualizations</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -233,6 +233,19 @@ color:#fff;
    </property>
    <property name="text">
     <string>SELECT FILES FOR TRAINING MODELS AND GENERATING PASSWORDS!</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>1390</x>
+     <y>70</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Home</string>
    </property>
   </widget>
  </widget>

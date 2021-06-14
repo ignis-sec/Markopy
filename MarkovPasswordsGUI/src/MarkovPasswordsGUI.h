@@ -25,6 +25,8 @@ private:
 public slots:
 
     void MarkovPasswordsGUI::home();
+    void MarkovPasswordsGUI :: pass();
+    void MarkovPasswordsGUI::model();
   
 };
 

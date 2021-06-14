@@ -53,7 +53,7 @@ void Train::train() {
     MarkovPasswords mp;
     mp.Import("models/2gram.mdl");
     mp.Train(cstr, a, 10); //please parameterize this hardcoded 10 threads
-    mp.Export("models/finished.mdl");
+    mp.Export("models/finished.mdl"); 
 
     ui.label_2->setText("Training DONE!");
     ui.pushButton_3->setVisible(true);
