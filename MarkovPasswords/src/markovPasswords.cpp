@@ -23,12 +23,12 @@ void intHandler(int dummy) {
 }
 
 
-MarkovPasswords::MarkovPasswords() : Markov::Model<char>(){
+Markov::API::MarkovPasswords::MarkovPasswords() : Markov::Model<char>(){
 	
 	
 }
 
-MarkovPasswords::MarkovPasswords(const char* filename) {
+Markov::API::MarkovPasswords::MarkovPasswords(const char* filename) {
 	
 	std::ifstream* importFile;
 
@@ -40,7 +40,7 @@ MarkovPasswords::MarkovPasswords(const char* filename) {
 
 }
 
-std::ifstream* MarkovPasswords::OpenDatasetFile(const char* filename){
+std::ifstream* Markov::API::MarkovPasswords::OpenDatasetFile(const char* filename){
 
 	std::ifstream* datasetFile;
 
@@ -53,14 +53,15 @@ std::ifstream* MarkovPasswords::OpenDatasetFile(const char* filename){
 }
 
 
-void MarkovPasswords::Train(const char* datasetFileName, char delimiter, int threads)   {
-	signal(SIGINT, intHandler);
-	ThreadSharedListHandler listhandler(datasetFileName);
+
+void Markov::API::MarkovPasswords::Train(const char* datasetFileName, char delimiter, int threads)   {
+  signal(SIGINT, intHandler);
+	Markov::API::Concurrency::ThreadSharedListHandler listhandler(datasetFileName);
 	auto start = std::chrono::high_resolution_clock::now();
 
 	std::vector<std::thread*> threadsV;
 	for(int i=0;i<threads;i++){
-		threadsV.push_back(new std::thread(&MarkovPasswords::TrainThread, this, &listhandler, datasetFileName, delimiter));
+		threadsV.push_back(new std::thread(&Markov::API::MarkovPasswords::TrainThread, this, &listhandler, delimiter));
 	}
 
 	for(int i=0;i<threads;i++){
@@ -71,10 +72,9 @@ void MarkovPasswords::Train(const char* datasetFileName, char delimiter, int thr
 	std::chrono::duration<double> elapsed = finish - start;
 	std::cout << "Elapsed time: " << elapsed.count() << " s\n";
 
-	
 }
 
-void MarkovPasswords::TrainThread(ThreadSharedListHandler *listhandler, const char* datasetFileName, char delimiter){
+void Markov::API::MarkovPasswords::TrainThread(Markov::API::Concurrency::ThreadSharedListHandler *listhandler, char delimiter){
 	char format_str[] ="%ld,%s";
 	format_str[2]=delimiter;
 	std::string line;
@@ -95,7 +95,7 @@ void MarkovPasswords::TrainThread(ThreadSharedListHandler *listhandler, const ch
 }
 
 
-std::ofstream* MarkovPasswords::Save(const char* filename) {
+std::ofstream* Markov::API::MarkovPasswords::Save(const char* filename) {
 	std::ofstream* exportFile;
 
 	std::ofstream newFile(filename);
@@ -107,7 +107,7 @@ std::ofstream* MarkovPasswords::Save(const char* filename) {
 }
 
 
-void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, int threads)  {
+void Markov::API::MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, int threads)  {
 	char* res;
 	char print[100];
 	std::ofstream wordlist;	
@@ -117,7 +117,7 @@ void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName
 	int iterationsCarryOver = n%threads;
 	std::vector<std::thread*> threadsV;
 	for(int i=0;i<threads;i++){
-		threadsV.push_back(new std::thread(&MarkovPasswords::GenerateThread, this, &mlock, iterationsPerThread, &wordlist, minLen, maxLen));
+		threadsV.push_back(new std::thread(&Markov::API::MarkovPasswords::GenerateThread, this, &mlock, iterationsPerThread, &wordlist, minLen, maxLen));
 	}
 
 	for(int i=0;i<threads;i++){
@@ -129,7 +129,7 @@ void MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName
 	
 }
 
-void MarkovPasswords::GenerateThread(std::mutex *outputLock, unsigned long int n, std::ofstream *wordlist, int minLen, int maxLen)  {
+void Markov::API::MarkovPasswords::GenerateThread(std::mutex *outputLock, unsigned long int n, std::ofstream *wordlist, int minLen, int maxLen)  {
 	char* res = new char[maxLen+5];
 	if(n==0) return;
 

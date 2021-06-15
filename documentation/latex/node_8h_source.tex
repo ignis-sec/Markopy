@@ -1,0 +1,272 @@
+\hypertarget{node_8h_source}{}\doxysection{node.\+h}
+\label{node_8h_source}\index{node.h@{node.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{vector}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{map}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{assert}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{iostream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{stdexcept}\textcolor{preprocessor}{>} \textcolor{comment}{// To use runtime\_error}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{edge_8h}{"edge.h"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{random_8h}{"random.h"}}}
+\DoxyCodeLine{00009 \textcolor{keyword}{namespace} Markov \{}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011     \textcolor{comment}{/** @brief A node class that for the vertices of model. Connected with eachother using Edge}}
+\DoxyCodeLine{00012 \textcolor{comment}{    * }}
+\DoxyCodeLine{00013 \textcolor{comment}{    * This class will later be templated to accept other data types than char*.}}
+\DoxyCodeLine{00014 \textcolor{comment}{    */}}
+\DoxyCodeLine{00015     \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{00016     \textcolor{keyword}{class} Node \{}
+\DoxyCodeLine{00017     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019         \textcolor{comment}{/** @brief Default constructor. Creates an empty Node.}}
+\DoxyCodeLine{00020 \textcolor{comment}{        */}}
+\DoxyCodeLine{00021         Node<storageType>();}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023         \textcolor{comment}{/** @brief Constructor. Creates a Node with no edges and with given NodeValue.}}
+\DoxyCodeLine{00024 \textcolor{comment}{         * @param \_value -\/ Nodes character representation.}}
+\DoxyCodeLine{00025 \textcolor{comment}{         * }}
+\DoxyCodeLine{00026 \textcolor{comment}{         * @b Example @b Use: Construct nodes}}
+\DoxyCodeLine{00027 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00028 \textcolor{comment}{         * Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');}}
+\DoxyCodeLine{00029 \textcolor{comment}{         * Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');}}
+\DoxyCodeLine{00030 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00031 \textcolor{comment}{        */}}
+\DoxyCodeLine{00032         Node<storageType>(storageType \_value);}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034         \textcolor{comment}{/** @brief Link this node with another, with this node as its source.}}
+\DoxyCodeLine{00035 \textcolor{comment}{         * }}
+\DoxyCodeLine{00036 \textcolor{comment}{         * Creates a new Edge.}}
+\DoxyCodeLine{00037 \textcolor{comment}{         * @param target -\/ Target node which will be the RightNode() of new edge.}}
+\DoxyCodeLine{00038 \textcolor{comment}{         * @return A new node with LeftNode as this, and RightNode as parameter target.}}
+\DoxyCodeLine{00039 \textcolor{comment}{         * }}
+\DoxyCodeLine{00040 \textcolor{comment}{         * @b Example @b Use: Construct nodes}}
+\DoxyCodeLine{00041 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00042 \textcolor{comment}{         * Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');}}
+\DoxyCodeLine{00043 \textcolor{comment}{         * Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');}}
+\DoxyCodeLine{00044 \textcolor{comment}{         * Markov::Edge<unsigned char>* e = LeftNode-\/>Link(RightNode);}}
+\DoxyCodeLine{00045 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00046 \textcolor{comment}{        */}}
+\DoxyCodeLine{00047         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(Node<storageType>*);}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049         \textcolor{comment}{/** @brief Link this node with another, with this node as its source.}}
+\DoxyCodeLine{00050 \textcolor{comment}{         * }}
+\DoxyCodeLine{00051 \textcolor{comment}{         * *DOES NOT* create a new Edge.}}
+\DoxyCodeLine{00052 \textcolor{comment}{         * @param Edge -\/ Edge that will accept this node as its LeftNode.}}
+\DoxyCodeLine{00053 \textcolor{comment}{         * @return the same edge as parameter target.}}
+\DoxyCodeLine{00054 \textcolor{comment}{         * }}
+\DoxyCodeLine{00055 \textcolor{comment}{         * @b Example @b Use: Construct and link nodes}}
+\DoxyCodeLine{00056 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00057 \textcolor{comment}{         * Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');}}
+\DoxyCodeLine{00058 \textcolor{comment}{         * Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');}}
+\DoxyCodeLine{00059 \textcolor{comment}{         * Markov::Edge<unsigned char>* e = LeftNode-\/>Link(RightNode);}}
+\DoxyCodeLine{00060 \textcolor{comment}{         * LeftNode-\/>Link(e);}}
+\DoxyCodeLine{00061 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00062 \textcolor{comment}{        */}}
+\DoxyCodeLine{00063         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_a1db7cba480ab9fb41ef8ab53d1eac0f2}{Link}}(Edge<storageType>*);}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065         \textcolor{comment}{/** @brief Chose a random node from the list of edges, with regards to its EdgeWeight, and TraverseNode to that.}}
+\DoxyCodeLine{00066 \textcolor{comment}{         * }}
+\DoxyCodeLine{00067 \textcolor{comment}{         * This operation is done by generating a random number in range of 0-\/this.total\_edge\_weights, and then iterating over the list of edges.}}
+\DoxyCodeLine{00068 \textcolor{comment}{         * At each step, EdgeWeight of the edge is subtracted from the random number, and once it is 0, next node is selected.}}
+\DoxyCodeLine{00069 \textcolor{comment}{         * @return Node that was chosen at EdgeWeight biased random.}}
+\DoxyCodeLine{00070 \textcolor{comment}{         * }}
+\DoxyCodeLine{00071 \textcolor{comment}{         * @b Example @b Use: Use randomNext to do a random walk on the model}}
+\DoxyCodeLine{00072 \textcolor{comment}{         * @code\{.cpp\} }}
+\DoxyCodeLine{00073 \textcolor{comment}{         *  char* buffer[64];}}
+\DoxyCodeLine{00074 \textcolor{comment}{         *  Markov::Model<char> model;}}
+\DoxyCodeLine{00075 \textcolor{comment}{         *  model.Import("model.mdl");}}
+\DoxyCodeLine{00076 \textcolor{comment}{         *  Markov::Node<char>* n = model.starterNode;}}
+\DoxyCodeLine{00077 \textcolor{comment}{         *  int len = 0;}}
+\DoxyCodeLine{00078 \textcolor{comment}{         *  Markov::Node<char>* temp\_node;}}
+\DoxyCodeLine{00079 \textcolor{comment}{         *  while (true) \{}}
+\DoxyCodeLine{00080 \textcolor{comment}{         *      temp\_node = n-\/>RandomNext(randomEngine);}}
+\DoxyCodeLine{00081 \textcolor{comment}{         *      if (len >= maxSetting) \{}}
+\DoxyCodeLine{00082 \textcolor{comment}{         *          break;}}
+\DoxyCodeLine{00083 \textcolor{comment}{         *      \}}}
+\DoxyCodeLine{00084 \textcolor{comment}{         *      else if ((temp\_node == NULL) \&\& (len < minSetting)) \{}}
+\DoxyCodeLine{00085 \textcolor{comment}{         *          continue;}}
+\DoxyCodeLine{00086 \textcolor{comment}{         *      \}}}
+\DoxyCodeLine{00087 \textcolor{comment}{         *}}
+\DoxyCodeLine{00088 \textcolor{comment}{         *      else if (temp\_node == NULL)\{}}
+\DoxyCodeLine{00089 \textcolor{comment}{         *          break;}}
+\DoxyCodeLine{00090 \textcolor{comment}{         *      \}}}
+\DoxyCodeLine{00091 \textcolor{comment}{         *          }}
+\DoxyCodeLine{00092 \textcolor{comment}{         *      n = temp\_node;}}
+\DoxyCodeLine{00093 \textcolor{comment}{         *}}
+\DoxyCodeLine{00094 \textcolor{comment}{         *      buffer[len++] = n-\/>NodeValue();}}
+\DoxyCodeLine{00095 \textcolor{comment}{         *  \}}}
+\DoxyCodeLine{00096 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00097 \textcolor{comment}{        */}}
+\DoxyCodeLine{00098         Node<storageType>* \mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(Markov::\mbox{\hyperlink{namespace_markov_1_1_random}{Random}}::\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{RandomEngine}}* randomEngine);}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100         \textcolor{comment}{/** @brief Insert a new edge to the this.edges.}}
+\DoxyCodeLine{00101 \textcolor{comment}{         * @param edge -\/ New edge that will be inserted.}}
+\DoxyCodeLine{00102 \textcolor{comment}{         * @return true if insertion was successful, false if it fails.}}
+\DoxyCodeLine{00103 \textcolor{comment}{         * }}
+\DoxyCodeLine{00104 \textcolor{comment}{         * @b Example @b Use: Construct and update edges}}
+\DoxyCodeLine{00105 \textcolor{comment}{         * }}
+\DoxyCodeLine{00106 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00107 \textcolor{comment}{         * Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');}}
+\DoxyCodeLine{00108 \textcolor{comment}{         * Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');}}
+\DoxyCodeLine{00109 \textcolor{comment}{         * Markov::Node<unsigned char>* target2 = new Markov::Node<unsigned char>('c');}}
+\DoxyCodeLine{00110 \textcolor{comment}{         * Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(src, target1);}}
+\DoxyCodeLine{00111 \textcolor{comment}{         * Markov::Edge<unsigned char>* e2 = new Markov::Edge<unsigned char>(src, target2);}}
+\DoxyCodeLine{00112 \textcolor{comment}{         * e1-\/>AdjustEdge(25);}}
+\DoxyCodeLine{00113 \textcolor{comment}{         * src-\/>UpdateEdges(e1);}}
+\DoxyCodeLine{00114 \textcolor{comment}{         * e2-\/>AdjustEdge(30);}}
+\DoxyCodeLine{00115 \textcolor{comment}{         * src-\/>UpdateEdges(e2);}}
+\DoxyCodeLine{00116 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00117 \textcolor{comment}{        */}}
+\DoxyCodeLine{00118         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{UpdateEdges}}(Edge<storageType>*);}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120         \textcolor{comment}{/** @brief Find an edge with its character representation.}}
+\DoxyCodeLine{00121 \textcolor{comment}{         * @param repr -\/ character NodeValue of the target node.}}
+\DoxyCodeLine{00122 \textcolor{comment}{         * @return Edge that is connected between this node, and the target node.}}
+\DoxyCodeLine{00123 \textcolor{comment}{         *  }}
+\DoxyCodeLine{00124 \textcolor{comment}{         * @b Example @b Use: Construct and update edges}}
+\DoxyCodeLine{00125 \textcolor{comment}{         * }}
+\DoxyCodeLine{00126 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00127 \textcolor{comment}{         * Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');}}
+\DoxyCodeLine{00128 \textcolor{comment}{         * Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');}}
+\DoxyCodeLine{00129 \textcolor{comment}{         * Markov::Node<unsigned char>* target2 = new Markov::Node<unsigned char>('c');}}
+\DoxyCodeLine{00130 \textcolor{comment}{         * Markov::Edge<unsigned char>* res = NULL;}}
+\DoxyCodeLine{00131 \textcolor{comment}{         * src-\/>Link(target1);}}
+\DoxyCodeLine{00132 \textcolor{comment}{         * src-\/>Link(target2);          }}
+\DoxyCodeLine{00133 \textcolor{comment}{         * res = src-\/>FindEdge('b');}}
+\DoxyCodeLine{00134 \textcolor{comment}{         *  }}
+\DoxyCodeLine{00135 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00136 \textcolor{comment}{         *  }}
+\DoxyCodeLine{00137 \textcolor{comment}{        */}}
+\DoxyCodeLine{00138         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(storageType repr);}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140         \textcolor{comment}{/** @brief Find an edge with its pointer. Avoid unless neccessary because comptutational cost of find by character is cheaper (because of std::map)}}
+\DoxyCodeLine{00141 \textcolor{comment}{        * @param target -\/ target node.}}
+\DoxyCodeLine{00142 \textcolor{comment}{        * @return Edge that is connected between this node, and the target node.}}
+\DoxyCodeLine{00143 \textcolor{comment}{        */}}
+\DoxyCodeLine{00144         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_adec94acba3fc021a2bbaded53d9e9730}{FindEdge}}(Node<storageType>* target);}
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{00146         \textcolor{comment}{/** @brief Return character representation of this node.}}
+\DoxyCodeLine{00147 \textcolor{comment}{        * @return character representation at \_value.}}
+\DoxyCodeLine{00148 \textcolor{comment}{        */}}
+\DoxyCodeLine{00149         \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}();}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151         \textcolor{comment}{/** @brief Change total weights with offset}}
+\DoxyCodeLine{00152 \textcolor{comment}{         * @param offset to adjust the vertice weight with}}
+\DoxyCodeLine{00153 \textcolor{comment}{        */}}
+\DoxyCodeLine{00154         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_node_ab254a9c976195fcb1cac4d463d030d3c}{UpdateTotalVerticeWeight}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} offset);}
+\DoxyCodeLine{00155 }
+\DoxyCodeLine{00156         \textcolor{comment}{/** @brief return edges}}
+\DoxyCodeLine{00157 \textcolor{comment}{        */}}
+\DoxyCodeLine{00158         \textcolor{keyword}{inline} std::map<storageType, Edge<storageType>*>* \mbox{\hyperlink{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}{Edges}}();}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160         \textcolor{comment}{/** @brief return total edge weights}}
+\DoxyCodeLine{00161 \textcolor{comment}{        */}}
+\DoxyCodeLine{00162         \textcolor{keyword}{inline} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_node_a60166d8f501c016de104f48e46bff223}{TotalEdgeWeights}}();}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00165}\mbox{\hyperlink{class_markov_1_1_node_ad2ac18d9abd220dfd90b9df6f92c5d59}{00165}}         std::vector<Edge<storageType>*> \mbox{\hyperlink{class_markov_1_1_node_ad2ac18d9abd220dfd90b9df6f92c5d59}{edgesV}};}
+\DoxyCodeLine{00166     \textcolor{keyword}{private}:}
+\DoxyCodeLine{00167 }
+\DoxyCodeLine{00168 }
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00169}\mbox{\hyperlink{class_markov_1_1_node_a9851cd33ea466176a5728e3ccea6efed}{00169}}         storageType \mbox{\hyperlink{class_markov_1_1_node_a9851cd33ea466176a5728e3ccea6efed}{\_value}}; \textcolor{comment}{/** @brief Character representation of this node. 0 for starter, 0xff for terminator.*/}}
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00171}\mbox{\hyperlink{class_markov_1_1_node_ade384415c5b47dca4990293b8599e6ce}{00171}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_node_ade384415c5b47dca4990293b8599e6ce}{total\_edge\_weights}};\textcolor{comment}{/** @brief Total weights of the vertices, required by RandomNext;*/}}
+\DoxyCodeLine{00172 }
+\DoxyCodeLine{00173         \textcolor{comment}{/** @brief A map of all edges connected to this node, where this node is at the LeftNode.}}
+\DoxyCodeLine{00174 \textcolor{comment}{        * }}
+\DoxyCodeLine{00175 \textcolor{comment}{        * Map is indexed by unsigned char, which is the character representation of the node.}}
+\DoxyCodeLine{00176 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00177}\mbox{\hyperlink{class_markov_1_1_node_ab93adf2f99ab396bdba8eeb6537b21fd}{00177}}         std::map<storageType, Edge<storageType>*> \mbox{\hyperlink{class_markov_1_1_node_ab93adf2f99ab396bdba8eeb6537b21fd}{edges}};}
+\DoxyCodeLine{00178     \};}
+\DoxyCodeLine{00179 \};}
+\DoxyCodeLine{00180 }
+\DoxyCodeLine{00181 }
+\DoxyCodeLine{00182 }
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{00184 }
+\DoxyCodeLine{00185 }
+\DoxyCodeLine{00186 }
+\DoxyCodeLine{00187 }
+\DoxyCodeLine{00188 }
+\DoxyCodeLine{00189 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00190}\mbox{\hyperlink{class_markov_1_1_node_ae89b442197e67a84948ba251f6824ad0}{00190}} Markov::Node<storageType>::Node(storageType \_value) \{}
+\DoxyCodeLine{00191     \textcolor{keyword}{this}-\/>\_value = \_value;}
+\DoxyCodeLine{00192     \textcolor{keyword}{this}-\/>total\_edge\_weights = 0L;}
+\DoxyCodeLine{00193 \};}
+\DoxyCodeLine{00194 }
+\DoxyCodeLine{00195 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00196}\mbox{\hyperlink{class_markov_1_1_node_a29468e9baf4e7cec86116ef3cbcfcb47}{00196}} Markov::Node<storageType>::Node() \{}
+\DoxyCodeLine{00197     \textcolor{keyword}{this}-\/>\_value = 0;}
+\DoxyCodeLine{00198     \textcolor{keyword}{this}-\/>total\_edge\_weights = 0L;}
+\DoxyCodeLine{00199 \};}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00202}\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{00202}} \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Markov::Node<storageType>::\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}() \{}
+\DoxyCodeLine{00203     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_node_a9851cd33ea466176a5728e3ccea6efed}{\_value}};}
+\DoxyCodeLine{00204 \}}
+\DoxyCodeLine{00205 }
+\DoxyCodeLine{00206 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00207}\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{00207}} Markov::Edge<storageType>* Markov::Node<storageType>::\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(Markov::Node<storageType>* n) \{}
+\DoxyCodeLine{00208     Markov::Edge<storageType>* v = \textcolor{keyword}{new} Markov::Edge<storageType>(\textcolor{keyword}{this}, n);}
+\DoxyCodeLine{00209     \textcolor{keyword}{this}-\/>UpdateEdges(v);}
+\DoxyCodeLine{00210     \textcolor{keywordflow}{return} v;}
+\DoxyCodeLine{00211 \}}
+\DoxyCodeLine{00212 }
+\DoxyCodeLine{00213 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00214}\mbox{\hyperlink{class_markov_1_1_node_a1db7cba480ab9fb41ef8ab53d1eac0f2}{00214}} Markov::Edge<storageType>* Markov::Node<storageType>::\mbox{\hyperlink{class_markov_1_1_node_a1db7cba480ab9fb41ef8ab53d1eac0f2}{Link}}(Markov::Edge<storageType>* v) \{}
+\DoxyCodeLine{00215     v-\/>SetLeftEdge(\textcolor{keyword}{this});}
+\DoxyCodeLine{00216     \textcolor{keyword}{this}-\/>UpdateEdges(v);}
+\DoxyCodeLine{00217     \textcolor{keywordflow}{return} v;}
+\DoxyCodeLine{00218 \}}
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{00220 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00221}\mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{00221}} Markov::Node<storageType>* Markov::Node<storageType>::\mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(Markov::\mbox{\hyperlink{namespace_markov_1_1_random}{Random}}::\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{RandomEngine}}* randomEngine) \{}
+\DoxyCodeLine{00222 }
+\DoxyCodeLine{00223     \textcolor{comment}{//get a random NodeValue in range of total\_vertice\_weight}}
+\DoxyCodeLine{00224     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} selection = randomEngine\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058}{random}}\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058}{)}} \% \textcolor{keyword}{this}-\/>total\_edge\_weights;\textcolor{comment}{//distribution()(generator());// distribution(generator);}}
+\DoxyCodeLine{00225     \textcolor{comment}{//make absolute, no negative modulus values wanted}}
+\DoxyCodeLine{00226     \textcolor{comment}{//selection = (selection >= 0) ? selection : (selection + this-\/>total\_edge\_weights);}}
+\DoxyCodeLine{00227     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\textcolor{keyword}{this}-\/>edgesV.size();i++)\{}
+\DoxyCodeLine{00228         selection -\/= \textcolor{keyword}{this}-\/>edgesV[i]-\/>EdgeWeight();}
+\DoxyCodeLine{00229         \textcolor{keywordflow}{if} (selection < 0) \textcolor{keywordflow}{return} \textcolor{keyword}{this}-\/>edgesV[i]-\/>TraverseNode();}
+\DoxyCodeLine{00230     \}}
+\DoxyCodeLine{00231 }
+\DoxyCodeLine{00232     \textcolor{comment}{//if this assertion is reached, it means there is an implementation error above}}
+\DoxyCodeLine{00233     std::cout << \textcolor{stringliteral}{"This should never be reached (node failed to walk to next)\(\backslash\)n"}; \textcolor{comment}{//cant assert from child thread}}
+\DoxyCodeLine{00234     assert(\textcolor{keyword}{true} \&\& \textcolor{stringliteral}{"This should never be reached (node failed to walk to next)"});}
+\DoxyCodeLine{00235     \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{00236 \}}
+\DoxyCodeLine{00237 }
+\DoxyCodeLine{00238 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00239}\mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{00239}} \textcolor{keywordtype}{bool} Markov::Node<storageType>::\mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{UpdateEdges}}(Markov::Edge<storageType>* v) \{}
+\DoxyCodeLine{00240     \textcolor{keyword}{this}-\/>edges.insert(\{ v-\/>RightNode()-\/>NodeValue(), v \});}
+\DoxyCodeLine{00241     \textcolor{keyword}{this}-\/>edgesV.push\_back(v);}
+\DoxyCodeLine{00242     \textcolor{comment}{//this-\/>total\_edge\_weights += v-\/>EdgeWeight();}}
+\DoxyCodeLine{00243     \textcolor{keywordflow}{return} v-\/>TraverseNode();}
+\DoxyCodeLine{00244 \}}
+\DoxyCodeLine{00245 }
+\DoxyCodeLine{00246 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00247}\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{00247}} Markov::Edge<storageType>* Markov::Node<storageType>::\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(storageType repr) \{}
+\DoxyCodeLine{00248     \textcolor{keyword}{auto} e = \textcolor{keyword}{this}-\/>edges.find(repr);}
+\DoxyCodeLine{00249     \textcolor{keywordflow}{if} (e == \textcolor{keyword}{this}-\/>edges.end()) \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{00250     \textcolor{keywordflow}{return} e-\/>second;}
+\DoxyCodeLine{00251 \};}
+\DoxyCodeLine{00252 }
+\DoxyCodeLine{00253 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00254}\mbox{\hyperlink{class_markov_1_1_node_ab254a9c976195fcb1cac4d463d030d3c}{00254}} \textcolor{keywordtype}{void} Markov::Node<storageType>::\mbox{\hyperlink{class_markov_1_1_node_ab254a9c976195fcb1cac4d463d030d3c}{UpdateTotalVerticeWeight}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} offset) \{}
+\DoxyCodeLine{00255     \textcolor{keyword}{this}-\/>total\_edge\_weights += offset;}
+\DoxyCodeLine{00256 \}}
+\DoxyCodeLine{00257 }
+\DoxyCodeLine{00258 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00259}\mbox{\hyperlink{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}{00259}} \textcolor{keyword}{inline} std::map<storageType, Markov::Edge<storageType>*>* Markov::Node<storageType>::\mbox{\hyperlink{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}{Edges}}() \{}
+\DoxyCodeLine{00260     \textcolor{keywordflow}{return} \&(\textcolor{keyword}{this}-\/>edges);}
+\DoxyCodeLine{00261 \}}
+\DoxyCodeLine{00262 }
+\DoxyCodeLine{00263 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00264}\mbox{\hyperlink{class_markov_1_1_node_a60166d8f501c016de104f48e46bff223}{00264}} \textcolor{keyword}{inline} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} Markov::Node<storageType>::\mbox{\hyperlink{class_markov_1_1_node_a60166d8f501c016de104f48e46bff223}{TotalEdgeWeights}}() \{}
+\DoxyCodeLine{00265     \textcolor{keywordflow}{return} \textcolor{keyword}{this}-\/>total\_edge\_weights;}
+\DoxyCodeLine{00266 \}}
+
+\end{DoxyCode}

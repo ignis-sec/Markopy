@@ -10,7 +10,7 @@ namespace Markov {
 
 	/** @brief A node class that for the vertices of model. Connected with eachother using Edge
 	* 
-	* This class will *later be templated to accept other data types than char*.
+	* This class will later be templated to accept other data types than char*.
 	*/
 	template <typename storageType>
 	class Node {
@@ -21,43 +21,119 @@ namespace Markov {
 		Node<storageType>();
 		
 		/** @brief Constructor. Creates a Node with no edges and with given NodeValue.
-		* @param NodeValue - Nodes character representation.
+		 * @param _value - Nodes character representation.
+		 * 
+		 * @b Example @b Use: Construct nodes
+		 * @code{.cpp}
+		 * Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');
+		 * Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');
+		 * @endcode
 		*/
 		Node<storageType>(storageType _value);
 
 		/** @brief Link this node with another, with this node as its source.
-		* 
-		* Creates a new Edge.
-		* @param target - Target node which will be the RightNode() of new edge.
-		* @return A new node with LeftNode as this, and RightNode as parameter target.
+		 * 
+		 * Creates a new Edge.
+		 * @param target - Target node which will be the RightNode() of new edge.
+		 * @return A new node with LeftNode as this, and RightNode as parameter target.
+		 * 
+		 * @b Example @b Use: Construct nodes
+		 * @code{.cpp}
+		 * Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');
+		 * Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');
+		 * Markov::Edge<unsigned char>* e = LeftNode->Link(RightNode);
+		 * @endcode
 		*/
 		Edge<storageType>* Link(Node<storageType>*);
 		
 		/** @brief Link this node with another, with this node as its source.
-		* 
-		* *DOES NOT* create a new Edge.
-		* @param Edge - Edge that will accept this node as its LeftNode.
-		* @return the same edge as parameter target.
+		 * 
+		 * *DOES NOT* create a new Edge.
+		 * @param Edge - Edge that will accept this node as its LeftNode.
+		 * @return the same edge as parameter target.
+		 * 
+		 * @b Example @b Use: Construct and link nodes
+		 * @code{.cpp}
+		 * Markov::Node<unsigned char>* LeftNode = new Markov::Node<unsigned char>('l');
+		 * Markov::Node<unsigned char>* RightNode = new Markov::Node<unsigned char>('r');
+		 * Markov::Edge<unsigned char>* e = LeftNode->Link(RightNode);
+		 * LeftNode->Link(e);
+		 * @endcode
 		*/
 		Edge<storageType>* Link(Edge<storageType>*);
 
 		/** @brief Chose a random node from the list of edges, with regards to its EdgeWeight, and TraverseNode to that.
-		* 
-		* This operation is done by generating a random number in range of 0-this.total_edge_weights, and then iterating over the list of edges.
-		* At each step, EdgeWeight of the edge is subtracted from the random number, and once it is 0, next node is selected.
-		* @return Node that was chosen at EdgeWeight biased random.
+		 * 
+		 * This operation is done by generating a random number in range of 0-this.total_edge_weights, and then iterating over the list of edges.
+		 * At each step, EdgeWeight of the edge is subtracted from the random number, and once it is 0, next node is selected.
+		 * @return Node that was chosen at EdgeWeight biased random.
+		 * 
+		 * @b Example @b Use: Use randomNext to do a random walk on the model
+		 * @code{.cpp} 
+		 *  char* buffer[64];
+		 *  Markov::Model<char> model;
+		 *  model.Import("model.mdl");
+		 * 	Markov::Node<char>* n = model.starterNode;
+		 *	int len = 0;
+		 *	Markov::Node<char>* temp_node;
+		 *	while (true) {
+		 *		temp_node = n->RandomNext(randomEngine);
+		 *		if (len >= maxSetting) {
+		 *			break;
+		 *		}
+		 *		else if ((temp_node == NULL) && (len < minSetting)) {
+		 *			continue;
+		 *		}
+		 *
+		 *		else if (temp_node == NULL){
+		 *			break;
+		 *		}
+		 *			
+		 *		n = temp_node;
+		 *
+		 *		buffer[len++] = n->NodeValue();
+		 *	}
+		 * @endcode
 		*/
 		Node<storageType>* RandomNext(Markov::Random::RandomEngine* randomEngine);
 
 		/** @brief Insert a new edge to the this.edges.
-		* @param edge - New edge that will be inserted.
-		* @return true if insertion was successful, false if it fails.
+		 * @param edge - New edge that will be inserted.
+		 * @return true if insertion was successful, false if it fails.
+         * 
+		 * @b Example @b Use: Construct and update edges
+		 * 
+		 * @code{.cpp}
+		 * Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');
+		 * Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');
+		 * Markov::Node<unsigned char>* target2 = new Markov::Node<unsigned char>('c');
+		 * Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(src, target1);
+		 * Markov::Edge<unsigned char>* e2 = new Markov::Edge<unsigned char>(src, target2);
+		 * e1->AdjustEdge(25);
+		 * src->UpdateEdges(e1);
+		 * e2->AdjustEdge(30);
+		 * src->UpdateEdges(e2);
+		 * @endcode
 		*/
 		bool UpdateEdges(Edge<storageType>*);
 		
 		/** @brief Find an edge with its character representation.
-		* @param repr - character NodeValue of the target node.
-		* @return Edge that is connected between this node, and the target node.
+		 * @param repr - character NodeValue of the target node.
+		 * @return Edge that is connected between this node, and the target node.
+		 *  
+		 * @b Example @b Use: Construct and update edges
+		 * 
+		 * @code{.cpp}
+		 * Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');
+		 * Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');
+		 * Markov::Node<unsigned char>* target2 = new Markov::Node<unsigned char>('c');
+		 * Markov::Edge<unsigned char>* res = NULL;
+		 * src->Link(target1);
+		 * src->Link(target2);			
+ 		 * res = src->FindEdge('b');
+		 *  
+		 * @endcode
+		 *  
 		*/
 		Edge<storageType>* FindEdge(storageType repr);
 
@@ -73,6 +149,7 @@ namespace Markov {
 		inline unsigned char NodeValue();
 
 		/** @brief Change total weights with offset
+		 * @param offset to adjust the vertice weight with
 		*/
 		void UpdateTotalVerticeWeight(long int offset);
 

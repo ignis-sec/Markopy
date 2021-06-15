@@ -1,0 +1,41 @@
+\hypertarget{_u_i_2src_2main_8cpp_source}{}\doxysection{U\+I/src/main.cpp}
+\label{_u_i_2src_2main_8cpp_source}\index{main.cpp@{main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{//\#include "MarkovPasswordsGUI.h"}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{menu_8h}{"menu.h"}}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{QtWidgets}\textcolor{preprocessor}{/}\textcolor{preprocessor}{QApplication}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{QSplashScreen}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<} \textcolor{preprocessor}{QDateTime} \textcolor{preprocessor}{>}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_c_l_i_8h}{"CLI.h"}}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{keyword}{using} \textcolor{keyword}{namespace} Markov::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}};}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \textcolor{comment}{/** @brief Launch UI.}}
+\DoxyCodeLine{00011 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_u_i_2src_2main_8cpp_source_l00012}\mbox{\hyperlink{_u_i_2src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00012}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_u_i_2src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017     QApplication a(argc, argv);}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019     QPixmap loadingPix(\textcolor{stringliteral}{"views/startup.jpg"});}
+\DoxyCodeLine{00020     QSplashScreen splash(loadingPix);}
+\DoxyCodeLine{00021     splash.show();}
+\DoxyCodeLine{00022     QDateTime time = QDateTime::currentDateTime();}
+\DoxyCodeLine{00023     QDateTime currentTime = QDateTime::currentDateTime();   \textcolor{comment}{//Record current time}}
+\DoxyCodeLine{00024     \textcolor{keywordflow}{while} (time.secsTo(currentTime) <= 5)                   \textcolor{comment}{//5 is the number of seconds to delay}}
+\DoxyCodeLine{00025     \{}
+\DoxyCodeLine{00026         currentTime = QDateTime::currentDateTime();}
+\DoxyCodeLine{00027         a.processEvents();}
+\DoxyCodeLine{00028     \};}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_aff8081f3baac288e70163e720a60a1e7}{CLI}} w;}
+\DoxyCodeLine{00032     w.show();}
+\DoxyCodeLine{00033     splash.finish(\&w);}
+\DoxyCodeLine{00034     \textcolor{keywordflow}{return} a.exec();}
+\DoxyCodeLine{00035 \}}
+
+\end{DoxyCode}

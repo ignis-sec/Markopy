@@ -1,0 +1,4 @@
+<map id="Markov::API::CUDA::CUDADeviceController::CudaMalloc2DToFlat" name="Markov::API::CUDA::CUDADeviceController::CudaMalloc2DToFlat">
+<area shape="rect" id="node1" title="Malloc a 2D array in device space." alt="" coords="5,29,205,93"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#abb56db7c9437eb4d71c390fa2b22c738" title="Both malloc and memcpy a 2D array into device VRAM." alt="" coords="253,29,453,93"/>
+</map>

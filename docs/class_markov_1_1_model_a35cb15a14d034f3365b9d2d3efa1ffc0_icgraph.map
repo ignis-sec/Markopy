@@ -1,0 +1,5 @@
+<map id="Markov::Model::StarterNode" name="Markov::Model::StarterNode">
+<area shape="rect" id="node1" title="Return starter Node." alt="" coords="389,14,636,43"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#ac1dbc499eda0e0eda3567bce45d17db4" title="Construct the related Matrix data for the model." alt="" coords="116,5,341,52"/>
+<area shape="rect" id="node3" href="$src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="5,14,68,43"/>
+</map>

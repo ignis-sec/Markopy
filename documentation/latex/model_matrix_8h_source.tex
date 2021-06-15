@@ -1,0 +1,127 @@
+\hypertarget{model_matrix_8h_source}{}\doxysection{model\+Matrix.\+h}
+\label{model_matrix_8h_source}\index{modelMatrix.h@{modelMatrix.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{markov_passwords_8h}{"markovPasswords.h"}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{mutex}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{keyword}{namespace} Markov::API\{}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006     \textcolor{comment}{/** @brief Class to flatten and reduce Markov::Model to a Matrix}}
+\DoxyCodeLine{00007 \textcolor{comment}{     * }}
+\DoxyCodeLine{00008 \textcolor{comment}{     * Matrix level operations can be used for Generation events, with a significant performance optimization at the cost of O(N) memory complexity (O(1) memory space for slow mode)}}
+\DoxyCodeLine{00009 \textcolor{comment}{     * }}
+\DoxyCodeLine{00010 \textcolor{comment}{     * To limit the maximum memory usage, each generation operation is partitioned into 50M chunks for allocation. Threads are sychronized and files are flushed every 50M operations.}}
+\DoxyCodeLine{00011 \textcolor{comment}{     * }}
+\DoxyCodeLine{00012 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00013}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{00013}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{ModelMatrix}} : \textcolor{keyword}{public} Markov::API::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{MarkovPasswords}}\{}
+\DoxyCodeLine{00014     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a4f1d511d5004583aa0703726d81036af}{ModelMatrix}}();}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017         \textcolor{comment}{/** @brief Construct the related Matrix data for the model.}}
+\DoxyCodeLine{00018 \textcolor{comment}{         * }}
+\DoxyCodeLine{00019 \textcolor{comment}{         * This operation can be used after importing/training to allocate and populate the matrix content.}}
+\DoxyCodeLine{00020 \textcolor{comment}{         * }}
+\DoxyCodeLine{00021 \textcolor{comment}{         * this will initialize:}}
+\DoxyCodeLine{00022 \textcolor{comment}{         * char** edgeMatrix -\/> a 2D array of mapping left and right connections of each edge.}}
+\DoxyCodeLine{00023 \textcolor{comment}{         * long int **valueMatrix -\/> a 2D array representing the edge weights.}}
+\DoxyCodeLine{00024 \textcolor{comment}{         * int matrixSize -\/> Size of the matrix, aka total number of nodes.}}
+\DoxyCodeLine{00025 \textcolor{comment}{         * char* matrixIndex -\/> order of nodes in the model}}
+\DoxyCodeLine{00026 \textcolor{comment}{         * long int *totalEdgeWeights -\/> total edge weights of each Node.}}
+\DoxyCodeLine{00027 \textcolor{comment}{        */}}
+\DoxyCodeLine{00028         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ac1dbc499eda0e0eda3567bce45d17db4}{ConstructMatrix}}();}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031         \textcolor{comment}{/** @brief Debug function to dump the model to a JSON file.}}
+\DoxyCodeLine{00032 \textcolor{comment}{         * }}
+\DoxyCodeLine{00033 \textcolor{comment}{         * Might not work 100\%. Not meant for production use.}}
+\DoxyCodeLine{00034 \textcolor{comment}{        */}}
+\DoxyCodeLine{00035         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}{DumpJSON}}();}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038         \textcolor{comment}{/** @brief Random walk on the Matrix-\/reduced Markov::Model}}
+\DoxyCodeLine{00039 \textcolor{comment}{         * }}
+\DoxyCodeLine{00040 \textcolor{comment}{         * This has an O(N) Memory complexity. To limit the maximum usage, requests with n>50M are partitioned using Markov::API::ModelMatrix::FastRandomWalkPartition.}}
+\DoxyCodeLine{00041 \textcolor{comment}{         * }}
+\DoxyCodeLine{00042 \textcolor{comment}{         * If n>50M, threads are going to be synced, files are going to be flushed, and buffers will be reallocated every 50M generations.}}
+\DoxyCodeLine{00043 \textcolor{comment}{         * This comes at a minor performance penalty.}}
+\DoxyCodeLine{00044 \textcolor{comment}{         * }}
+\DoxyCodeLine{00045 \textcolor{comment}{         * While it has the same functionality, this operation reduces Markov::API::MarkovPasswords::Generate runtime by \%96.5}}
+\DoxyCodeLine{00046 \textcolor{comment}{         * }}
+\DoxyCodeLine{00047 \textcolor{comment}{         * This function has deprecated Markov::API::MarkovPasswords::Generate, and will eventually replace it.}}
+\DoxyCodeLine{00048 \textcolor{comment}{         * }}
+\DoxyCodeLine{00049 \textcolor{comment}{         * @param n -\/ Number of passwords to generate.}}
+\DoxyCodeLine{00050 \textcolor{comment}{         * @param wordlistFileName -\/ Filename to write to}}
+\DoxyCodeLine{00051 \textcolor{comment}{         * @param minLen -\/ Minimum password length to generate}}
+\DoxyCodeLine{00052 \textcolor{comment}{         * @param maxLen -\/ Maximum password length to generate}}
+\DoxyCodeLine{00053 \textcolor{comment}{         * @param threads -\/ number of OS threads to spawn}}
+\DoxyCodeLine{00054 \textcolor{comment}{         * @param bFileIO -\/ If false, filename will be ignored and will output to stdout.}}
+\DoxyCodeLine{00055 \textcolor{comment}{         * }}
+\DoxyCodeLine{00056 \textcolor{comment}{         * }}
+\DoxyCodeLine{00057 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00058 \textcolor{comment}{         * Markov::API::ModelMatrix mp;}}
+\DoxyCodeLine{00059 \textcolor{comment}{         * mp.Import("models/finished.mdl");}}
+\DoxyCodeLine{00060 \textcolor{comment}{         * mp.FastRandomWalk(50000000,"./wordlist.txt",6,12,25, true);}}
+\DoxyCodeLine{00061 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00062 \textcolor{comment}{         * }}
+\DoxyCodeLine{00063 \textcolor{comment}{        */}}
+\DoxyCodeLine{00064         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24}{FastRandomWalk}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} n, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* wordlistFileName, \textcolor{keywordtype}{int} minLen=6, \textcolor{keywordtype}{int} maxLen=12, \textcolor{keywordtype}{int} threads=20, \textcolor{keywordtype}{bool} bFileIO=\textcolor{keyword}{true});}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068         \textcolor{comment}{/** @brief A single partition of FastRandomWalk event}}
+\DoxyCodeLine{00069 \textcolor{comment}{         * }}
+\DoxyCodeLine{00070 \textcolor{comment}{         * Since FastRandomWalk has to allocate its output buffer before operation starts and writes data in chunks, }}
+\DoxyCodeLine{00071 \textcolor{comment}{         * large n parameters would lead to huge memory allocations.}}
+\DoxyCodeLine{00072 \textcolor{comment}{         * @b Without @b Partitioning:}}
+\DoxyCodeLine{00073 \textcolor{comment}{         * -\/ 50M results 12 characters max -\/> 550 Mb Memory allocation}}
+\DoxyCodeLine{00074 \textcolor{comment}{         * }}
+\DoxyCodeLine{00075 \textcolor{comment}{         * -\/ 5B results  12 characters max -\/> 55 Gb Memory allocation}}
+\DoxyCodeLine{00076 \textcolor{comment}{         * }}
+\DoxyCodeLine{00077 \textcolor{comment}{         * -\/ 50B results 12 characters max -\/> 550GB Memory allocation}}
+\DoxyCodeLine{00078 \textcolor{comment}{         * }}
+\DoxyCodeLine{00079 \textcolor{comment}{         * Instead, FastRandomWalk is partitioned per 50M generations to limit the top memory need.}}
+\DoxyCodeLine{00080 \textcolor{comment}{         * }}
+\DoxyCodeLine{00081 \textcolor{comment}{         * @param mlock -\/ mutex lock to distribute to child threads}}
+\DoxyCodeLine{00082 \textcolor{comment}{         * @param wordlist -\/ Reference to the wordlist file to write to }}
+\DoxyCodeLine{00083 \textcolor{comment}{         * @param n -\/ Number of passwords to generate.}}
+\DoxyCodeLine{00084 \textcolor{comment}{         * @param wordlistFileName -\/ Filename to write to}}
+\DoxyCodeLine{00085 \textcolor{comment}{         * @param minLen -\/ Minimum password length to generate}}
+\DoxyCodeLine{00086 \textcolor{comment}{         * @param maxLen -\/ Maximum password length to generate}}
+\DoxyCodeLine{00087 \textcolor{comment}{         * @param threads -\/ number of OS threads to spawn}}
+\DoxyCodeLine{00088 \textcolor{comment}{         * @param bFileIO -\/ If false, filename will be ignored and will output to stdout.}}
+\DoxyCodeLine{00089 \textcolor{comment}{         * }}
+\DoxyCodeLine{00090 \textcolor{comment}{         * }}
+\DoxyCodeLine{00091 \textcolor{comment}{        */}}
+\DoxyCodeLine{00092         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{FastRandomWalkPartition}}(std::mutex *mlock, std::ofstream *wordlist, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} n, \textcolor{keywordtype}{int} minLen, \textcolor{keywordtype}{int} maxLen, \textcolor{keywordtype}{bool} bFileIO, \textcolor{keywordtype}{int} threads);}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094         \textcolor{comment}{/** @brief A single thread of a single partition of FastRandomWalk}}
+\DoxyCodeLine{00095 \textcolor{comment}{         * }}
+\DoxyCodeLine{00096 \textcolor{comment}{         * A FastRandomWalkPartition will initiate as many of this function as requested.}}
+\DoxyCodeLine{00097 \textcolor{comment}{         * }}
+\DoxyCodeLine{00098 \textcolor{comment}{         * This function contains the bulk of the generation algorithm.}}
+\DoxyCodeLine{00099 \textcolor{comment}{         * }}
+\DoxyCodeLine{00100 \textcolor{comment}{         * @param mlock -\/ mutex lock to distribute to child threads}}
+\DoxyCodeLine{00101 \textcolor{comment}{         * @param wordlist -\/ Reference to the wordlist file to write to }}
+\DoxyCodeLine{00102 \textcolor{comment}{         * @param n -\/ Number of passwords to generate.}}
+\DoxyCodeLine{00103 \textcolor{comment}{         * @param wordlistFileName -\/ Filename to write to}}
+\DoxyCodeLine{00104 \textcolor{comment}{         * @param minLen -\/ Minimum password length to generate}}
+\DoxyCodeLine{00105 \textcolor{comment}{         * @param maxLen -\/ Maximum password length to generate}}
+\DoxyCodeLine{00106 \textcolor{comment}{         * @param id -\/ @b DEPRECATED Thread id -\/ No longer used}}
+\DoxyCodeLine{00107 \textcolor{comment}{         * @param bFileIO -\/ If false, filename will be ignored and will output to stdout.}}
+\DoxyCodeLine{00108 \textcolor{comment}{         * }}
+\DoxyCodeLine{00109 \textcolor{comment}{         * }}
+\DoxyCodeLine{00110 \textcolor{comment}{        */}}
+\DoxyCodeLine{00111         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}{FastRandomWalkThread}}(std::mutex *mlock, std::ofstream *wordlist, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} n, \textcolor{keywordtype}{int} minLen, \textcolor{keywordtype}{int} maxLen, \textcolor{keywordtype}{int} id, \textcolor{keywordtype}{bool} bFileIO);}
+\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00112}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{00112}}         \textcolor{keywordtype}{char}** \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}};}
+\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00113}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{00113}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} **\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}};}
+\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00114}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{00114}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};}
+\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00115}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{00115}}         \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}};}
+\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00116}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{00116}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} *\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}};}
+\DoxyCodeLine{00117     \};}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121 \};}
+
+\end{DoxyCode}

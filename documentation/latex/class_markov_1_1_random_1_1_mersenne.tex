@@ -1,0 +1,240 @@
+\hypertarget{class_markov_1_1_random_1_1_mersenne}{}\doxysection{Markov\+::Random\+::Mersenne Class Reference}
+\label{class_markov_1_1_random_1_1_mersenne}\index{Markov::Random::Mersenne@{Markov::Random::Mersenne}}
+
+
+Implementation of \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Mersenne}} Twister Engine.  
+
+
+
+
+{\ttfamily \#include $<$random.\+h$>$}
+
+
+
+Inheritance diagram for Markov\+::Random\+::Mersenne\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_markov_1_1_random_1_1_mersenne__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Markov\+::Random\+::Mersenne\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_markov_1_1_random_1_1_mersenne__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_afd4233366727e5c2dd14d7e5c3ebfec1}{random}} ()
+\begin{DoxyCompactList}\small\item\em Generate \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} Number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::random\+\_\+device \& \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}{rd}} ()
+\begin{DoxyCompactList}\small\item\em Default random device for seeding. \end{DoxyCompactList}\item 
+std\+::default\+\_\+random\+\_\+engine \& \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}} ()
+\begin{DoxyCompactList}\small\item\em Default random engine for seeding. \end{DoxyCompactList}\item 
+std\+::uniform\+\_\+int\+\_\+distribution$<$ long long unsigned $>$ \& \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}} ()
+\begin{DoxyCompactList}\small\item\em Distribution schema for seeding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Mersenne}} Twister Engine. 
+
+This is an implementation of \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Mersenne}} Twister Engine, which is slow but is a good implementation for high entropy pseudorandom.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Using \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Mersenne}} Engine with Random\+Walk 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}};}
+\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Markov::Random::Mersenne}} MersenneTwisterEngine;}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
+\DoxyCodeLine{    this-\/>RandomWalk(\&MersenneTwisterEngine, 5, 10, res); }
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Generating a random number with \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Marsaglia}} Engine 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Markov::Random::Mersenne}} me;}
+\DoxyCodeLine{std::cout << me.\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_afd4233366727e5c2dd14d7e5c3ebfec1}{random}}();}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00176}{176}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}\label{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}} 
+\index{Markov::Random::Mersenne@{Markov::Random::Mersenne}!distribution@{distribution}}
+\index{distribution@{distribution}!Markov::Random::Mersenne@{Markov::Random::Mersenne}}
+\doxysubsubsection{\texorpdfstring{distribution()}{distribution()}}
+{\footnotesize\ttfamily std\+::uniform\+\_\+int\+\_\+distribution$<$long long unsigned$>$\& Markov\+::\+Random\+::\+Default\+Random\+Engine\+::distribution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Distribution schema for seeding. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00081}{81}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081                                                                                \{}
+\DoxyCodeLine{00082             \textcolor{keyword}{static} std::uniform\_int\_distribution<long long unsigned> \_distribution(0, 0xffffFFFF);}
+\DoxyCodeLine{00083             \textcolor{keywordflow}{return} \_distribution;}
+\DoxyCodeLine{00084         \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00057}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::random()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}\label{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}} 
+\index{Markov::Random::Mersenne@{Markov::Random::Mersenne}!generator@{generator}}
+\index{generator@{generator}!Markov::Random::Mersenne@{Markov::Random::Mersenne}}
+\doxysubsubsection{\texorpdfstring{generator()}{generator()}}
+{\footnotesize\ttfamily std\+::default\+\_\+random\+\_\+engine\& Markov\+::\+Random\+::\+Default\+Random\+Engine\+::generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Default random engine for seeding. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00073}{73}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073                                                      \{}
+\DoxyCodeLine{00074             \textcolor{keyword}{static} std::default\_random\_engine \_generator(\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}{rd}}()());}
+\DoxyCodeLine{00075             \textcolor{keywordflow}{return} \_generator;}
+\DoxyCodeLine{00076         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{random_8h_source_l00065}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::rd()}}.
+
+
+
+Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00057}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::random()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_random_1_1_default_random_engine_afd4233366727e5c2dd14d7e5c3ebfec1}\label{class_markov_1_1_random_1_1_default_random_engine_afd4233366727e5c2dd14d7e5c3ebfec1}} 
+\index{Markov::Random::Mersenne@{Markov::Random::Mersenne}!random@{random}}
+\index{random@{random}!Markov::Random::Mersenne@{Markov::Random::Mersenne}}
+\doxysubsubsection{\texorpdfstring{random()}{random()}}
+{\footnotesize\ttfamily unsigned long Markov\+::\+Random\+::\+Default\+Random\+Engine\+::random (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Generate \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} Number. 
+
+\begin{DoxyReturn}{Returns}
+random number in long range. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058}{Markov\+::\+Random\+::\+Random\+Engine}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{Markov\+::\+Random\+::\+Marsaglia}}.
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00057}{57}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057                                      \{}
+\DoxyCodeLine{00058             \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}()(this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}());}
+\DoxyCodeLine{00059         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{random_8h_source_l00081}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::distribution()}}, and \mbox{\hyperlink{random_8h_source_l00073}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::generator()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_random_1_1_default_random_engine_afd4233366727e5c2dd14d7e5c3ebfec1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}\label{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}} 
+\index{Markov::Random::Mersenne@{Markov::Random::Mersenne}!rd@{rd}}
+\index{rd@{rd}!Markov::Random::Mersenne@{Markov::Random::Mersenne}}
+\doxysubsubsection{\texorpdfstring{rd()}{rd()}}
+{\footnotesize\ttfamily std\+::random\+\_\+device\& Markov\+::\+Random\+::\+Default\+Random\+Engine\+::rd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Default random device for seeding. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00065}{65}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065                                       \{}
+\DoxyCodeLine{00066             \textcolor{keyword}{static} std::random\_device \_rd;}
+\DoxyCodeLine{00067             \textcolor{keywordflow}{return} \_rd;}
+\DoxyCodeLine{00068         \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{random_8h_source_l00073}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::generator()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{random_8h}{random.\+h}}\end{DoxyCompactItemize}
