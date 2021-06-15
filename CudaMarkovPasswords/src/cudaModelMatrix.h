@@ -21,6 +21,12 @@ namespace Markov::API::CUDA{
 		*/
         __host__ void MigrateMatrix();
 
+        /** @brief Flatten migrated matrix from 2d to 1d
+		 *
+		 * 
+		*/
+        __host__ void FlattenMatrix();
+
         /** @brief Random walk on the Matrix-reduced Markov::Model
          * 
          * TODO
@@ -41,22 +47,31 @@ namespace Markov::API::CUDA{
 		 * @endcode
          * 
 		*/
-        __host__ void FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, int threads, bool bFileIO);
+        __host__ void FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, bool bFileIO);
 
     protected:
-        /** @brief Retrieve the result buffer from CUDA kernel.
-         * 
-         * Done on each partition.
-         * 
-         * 
-		*/
-        __host__ void RetrieveCudaBuffer(/*TODO*/);
 
 
+        __host__ char* AllocVRAMOutputBuffer(long int n, long int singleGenMaxLen, long int CUDAKernelGridSize,long int sizePerGrid);
     private:
-        char** device_edgeMatrix;
-        long int **device_valueMatrix;
+        char* device_edgeMatrix;
+        long int *device_valueMatrix;
         char *device_matrixIndex;
         long int *device_totalEdgeWeights;
+        char* device_outputBuffer;
+        char* outputBuffer;
+
+        char* flatEdgeMatrix;
+        long int* flatValueMatrix;
+
     };
+
+
+    __global__ void FastRandomWalkCUDAKernel(unsigned long int n, int minLen, int maxLen, char* outputBuffer,
+        char* matrixIndex, long int* totalEdgeWeights, long int* valueMatrix, char *edgeMatrix, 
+        int matrixSize, int memoryPerKernelGrid, unsigned long *seed);//, unsigned long mex, unsigned long mey, unsigned long mez);
+
+    __device__ char* strchr(char* p, char c, int s_len);
+    
 };
+
