@@ -1,0 +1,66 @@
+\hypertarget{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{}\doxysection{Markov\+::A\+PI\+::C\+U\+DA\+::Random Namespace Reference}
+\label{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}\index{Markov::API::CUDA::Random@{Markov::API::CUDA::Random}}
+
+
+Namespace for \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} engines operable under {\bfseries{device}} space.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}}
+\begin{DoxyCompactList}\small\item\em Extension of \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} which is capable o working on {\bfseries{device}} space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+device\+\_\+\+\_\+ unsigned long \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_ac44f9c51be54b9b123dca4560482a346}{devrandom}} (unsigned long \&x, unsigned long \&y, unsigned long \&z)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} Generation function operable in {\bfseries{device}} space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Namespace for \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} engines operable under {\bfseries{device}} space. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_ac44f9c51be54b9b123dca4560482a346}\label{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_ac44f9c51be54b9b123dca4560482a346}} 
+\index{Markov::API::CUDA::Random@{Markov::API::CUDA::Random}!devrandom@{devrandom}}
+\index{devrandom@{devrandom}!Markov::API::CUDA::Random@{Markov::API::CUDA::Random}}
+\doxysubsubsection{\texorpdfstring{devrandom()}{devrandom()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+device\+\_\+\+\_\+ unsigned long Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+Random\+::devrandom (\begin{DoxyParamCaption}\item[{unsigned long \&}]{x,  }\item[{unsigned long \&}]{y,  }\item[{unsigned long \&}]{z }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} Generation function operable in {\bfseries{device}} space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & marsaglia internal x. Not constant, (ref) \\
+\hline
+{\em y} & marsaglia internal y. Not constant, (ref) \\
+\hline
+{\em z} & marsaglia internal z. Not constant, (ref) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns z 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{cudarandom_8h_source_l00043}{43}} of file \mbox{\hyperlink{cudarandom_8h_source}{cudarandom.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043                                                                                             \{   }
+\DoxyCodeLine{00044         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} t;}
+\DoxyCodeLine{00045         x \string^= x << 16;}
+\DoxyCodeLine{00046         x \string^= x >> 5;}
+\DoxyCodeLine{00047         x \string^= x << 1;}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049         t = x;}
+\DoxyCodeLine{00050         x = y;}
+\DoxyCodeLine{00051         y = z;}
+\DoxyCodeLine{00052         z = t \string^ x \string^ y;}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054         \textcolor{keywordflow}{return} z;}
+\DoxyCodeLine{00055     \}}
+
+\end{DoxyCode}

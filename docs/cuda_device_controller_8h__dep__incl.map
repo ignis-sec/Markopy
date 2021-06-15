@@ -1,4 +1,5 @@
 <map id="cudaDeviceController.h" name="cudaDeviceController.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,212,35"/>
-<area shape="rect" id="node2" href="$cuda_model_matrix_8h.html" title=" " alt="" coords="21,83,196,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="80,5,287,35"/>
+<area shape="rect" id="node2" href="$cuda_model_matrix_8h.html" title=" " alt="" coords="5,83,180,112"/>
+<area shape="rect" id="node3" href="$cudarandom_8h.html" title=" " alt="" coords="205,83,343,112"/>
 </map>

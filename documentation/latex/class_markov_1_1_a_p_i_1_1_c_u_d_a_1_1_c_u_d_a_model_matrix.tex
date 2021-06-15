@@ -34,12 +34,16 @@ Collaboration diagram for Markov\+::A\+PI\+::C\+U\+DA\+::C\+U\+D\+A\+Model\+Matr
 \item 
 \+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a5dd552997a32c0cabf3a6cca6fb07b73}{Migrate\+Matrix}} ()
 \begin{DoxyCompactList}\small\item\em Migrate the class members to the V\+R\+AM. \end{DoxyCompactList}\item 
-\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a19862a2611859de8a1b0595d9c6ff42f}{Fast\+Random\+Walk}} (unsigned long int n, const char $\ast$wordlist\+File\+Name, int min\+Len, int max\+Len, int threads, bool b\+File\+IO)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} walk on the Matrix-\/reduced \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ae40af2e90f0500e2780a017f0d39f5e5}{Flatten\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Flatten migrated matrix from 2d to 1d. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ae01dd336827730fa767863430654efe4}{Fast\+Random\+Walk}} (unsigned long int n, const char $\ast$wordlist\+File\+Name, int min\+Len, int max\+Len, bool b\+File\+IO)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} walk on the Matrix-\/reduced \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ac1dbc499eda0e0eda3567bce45d17db4}{Construct\+Matrix}} ()
 \begin{DoxyCompactList}\small\item\em Construct the related Matrix data for the model. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}{Dump\+J\+S\+ON}} ()
 \begin{DoxyCompactList}\small\item\em Debug function to dump the model to a J\+S\+ON file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24}{Fast\+Random\+Walk}} (unsigned long int n, const char $\ast$wordlist\+File\+Name, int min\+Len=6, int max\+Len=12, int threads=20, bool b\+File\+IO=true)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} walk on the Matrix-\/reduced \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}. \end{DoxyCompactList}\item 
 std\+::ifstream $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ac3fb665ee48937ca845d930e72e07917}{Open\+Dataset\+File}} (const char $\ast$filename)
 \begin{DoxyCompactList}\small\item\em Open dataset file and return the ifstream pointer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Train}} (const char $\ast$dataset\+File\+Name, char delimiter, int threads)
@@ -65,20 +69,32 @@ bool \mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{
 std\+::vector$<$ \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}$<$ char $>$ $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a2e08608905d7b042627ea844b08045fe}{Edges}} ()
 \begin{DoxyCompactList}\small\item\em Return a vector of all the edges in the model. \end{DoxyCompactList}\item 
 std\+::map$<$ char, \mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ char $>$ $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a71f6df805e340ce96e9dc4ee4ebc6537}{Nodes}} ()
-\begin{DoxyCompactList}\small\item\em Return starter Node. \end{DoxyCompactList}\item 
-\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}{List\+Cuda\+Devices}} ()
+\begin{DoxyCompactList}\small\item\em Return starter Node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_ad1beeb03129fea545cfb18009d2d955f}{List\+Cuda\+Devices}} ()
 \begin{DoxyCompactList}\small\item\em List \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} devices in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac4af6bbd60ecbe204bfc4d5cdab24004}{Retrieve\+Cuda\+Buffer}} ()
-\begin{DoxyCompactList}\small\item\em Retrieve the result buffer from \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} kernel. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ char $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab1ef31ffbad0b0acebbfa2a78c47e349}{Alloc\+V\+R\+A\+M\+Output\+Buffer}} (long int n, long int single\+Gen\+Max\+Len, long int C\+U\+D\+A\+Kernel\+Grid\+Size, long int size\+Per\+Grid)
+\begin{DoxyCompactList}\small\item\em Allocate the output buffer for kernel operation. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{Fast\+Random\+Walk\+Partition}} (std\+::mutex $\ast$mlock, std\+::ofstream $\ast$wordlist, unsigned long int n, int min\+Len, int max\+Len, bool b\+File\+IO, int threads)
 \begin{DoxyCompactList}\small\item\em A single partition of Fast\+Random\+Walk event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}{Fast\+Random\+Walk\+Thread}} (std\+::mutex $\ast$mlock, std\+::ofstream $\ast$wordlist, unsigned long int n, int min\+Len, int max\+Len, int id, bool b\+File\+IO)
-\begin{DoxyCompactList}\small\item\em A single thread of a single partition of Fast\+Random\+Walk. \end{DoxyCompactList}\item 
-\+\_\+\+\_\+host\+\_\+\+\_\+ int \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}{Cuda\+Check\+Notify\+Err}} (cuda\+Error\+\_\+t \+\_\+status, const char $\ast$msg)
-\begin{DoxyCompactList}\small\item\em Check results of the last operation on G\+PU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A single thread of a single partition of Fast\+Random\+Walk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \+\_\+\+\_\+host\+\_\+\+\_\+ int \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{Cuda\+Check\+Notify\+Err}} (cuda\+Error\+\_\+t \+\_\+status, const char $\ast$msg, bool b\+Exit=true)
+\begin{DoxyCompactList}\small\item\em Check results of the last operation on G\+PU. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2}{Cuda\+Malloc2\+D\+To\+Flat}} (T $\ast$$\ast$dst, int row, int col)
+\begin{DoxyCompactList}\small\item\em Malloc a 2D array in device space. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a5bbde3a16fc7a4b8cdf07e72a31c1f54}{Cuda\+Memcpy2\+D\+To\+Flat}} (T $\ast$dst, T $\ast$$\ast$src, int row, int col)
+\begin{DoxyCompactList}\small\item\em Memcpy a 2D array in device space after flattening. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{Cuda\+Migrate2\+D\+Flat}} (T $\ast$$\ast$dst, T $\ast$$\ast$src, int row, int col)
+\begin{DoxyCompactList}\small\item\em Both malloc and memcpy a 2D array into device V\+R\+AM. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -102,13 +118,21 @@ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-char $\ast$$\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a2329ce70d7bc9ea0797079a599dd9170}{device\+\_\+edge\+Matrix}}
+char $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a06672c27d6c96e9f8808f61c6648f191}{device\+\_\+edge\+Matrix}}
 \item 
-long int $\ast$$\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aef9d4b48f3a4a2957077e0c53f3eab60}{device\+\_\+value\+Matrix}}
+long int $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a81e3be9eac6dab929de3b118d9343b27}{device\+\_\+value\+Matrix}}
 \item 
 char $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6a252a7c965c218114ad3d1663c4e840}{device\+\_\+matrix\+Index}}
 \item 
 long int $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aae5fdd4bdffc7eb2561fb923024d2615}{device\+\_\+total\+Edge\+Weights}}
+\item 
+char $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1ec34676837c3cdd5ec2f18a77faec12}{device\+\_\+output\+Buffer}}
+\item 
+char $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a26d0692f6a494ab4a2871142b39ce066}{output\+Buffer}}
+\item 
+char $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6345ea79ce015e2a97d1be91a661449a}{flat\+Edge\+Matrix}}
+\item 
+long int $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_abb65a788e9039a3b46cc5cdc76a11130}{flat\+Value\+Matrix}}
 \item 
 std\+::ifstream $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}{dataset\+File}}
 \item 
@@ -192,6 +216,32 @@ Definition at line \mbox{\hyperlink{model_8h_source_l00322}{322}} of file \mbox{
 \DoxyCodeLine{00340 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab1ef31ffbad0b0acebbfa2a78c47e349}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab1ef31ffbad0b0acebbfa2a78c47e349}} 
+\index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!AllocVRAMOutputBuffer@{AllocVRAMOutputBuffer}}
+\index{AllocVRAMOutputBuffer@{AllocVRAMOutputBuffer}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
+\doxysubsubsection{\texorpdfstring{AllocVRAMOutputBuffer()}{AllocVRAMOutputBuffer()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ char$\ast$ Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::\+Alloc\+V\+R\+A\+M\+Output\+Buffer (\begin{DoxyParamCaption}\item[{long int}]{n,  }\item[{long int}]{single\+Gen\+Max\+Len,  }\item[{long int}]{C\+U\+D\+A\+Kernel\+Grid\+Size,  }\item[{long int}]{size\+Per\+Grid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Allocate the output buffer for kernel operation. 
+
+T\+O\+DO
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ Number of passwords to generate. \\
+\hline
+{\em single\+Gen\+Max\+Len} & -\/ maximum string length for a single generation \\
+\hline
+{\em C\+U\+D\+A\+Kernel\+Grid\+Size} & -\/ Total number of grid members in \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} kernel \\
+\hline
+{\em size\+Per\+Grid} & -\/ Size to allocate per grid member \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the allocation on V\+R\+AM 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_ac1dbc499eda0e0eda3567bce45d17db4}\label{class_markov_1_1_a_p_i_1_1_model_matrix_ac1dbc499eda0e0eda3567bce45d17db4}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!ConstructMatrix@{ConstructMatrix}}
 \index{ConstructMatrix@{ConstructMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
@@ -283,11 +333,11 @@ Here is the caller graph for this function\+:
 \includegraphics[width=332pt]{class_markov_1_1_a_p_i_1_1_model_matrix_ac1dbc499eda0e0eda3567bce45d17db4_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}} 
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!CudaCheckNotifyErr@{CudaCheckNotifyErr}}
 \index{CudaCheckNotifyErr@{CudaCheckNotifyErr}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
 \doxysubsubsection{\texorpdfstring{CudaCheckNotifyErr()}{CudaCheckNotifyErr()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ int Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Check\+Notify\+Err (\begin{DoxyParamCaption}\item[{cuda\+Error\+\_\+t}]{\+\_\+status,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+host\+\_\+\+\_\+ int Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Check\+Notify\+Err (\begin{DoxyParamCaption}\item[{cuda\+Error\+\_\+t}]{\+\_\+status,  }\item[{const char $\ast$}]{msg,  }\item[{bool}]{b\+Exit = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
 
 
 
@@ -307,10 +357,211 @@ If a failure occurs, its assumed beyond redemption, and exited.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{char} *da, a = \textcolor{stringliteral}{"test"};}
 \DoxyCodeLine{cudastatus = cudaMalloc((\textcolor{keywordtype}{char} **)\&da, 5*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
-\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"Failed to allocate VRAM for *da.\(\backslash\)n"});}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"Failed to allocate VRAM for *da.\(\backslash\)n"});}
 \end{DoxyCode}
  
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2}} 
+\index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!CudaMalloc2DToFlat@{CudaMalloc2DToFlat}}
+\index{CudaMalloc2DToFlat@{CudaMalloc2DToFlat}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
+\doxysubsubsection{\texorpdfstring{CudaMalloc2DToFlat()}{CudaMalloc2DToFlat()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Malloc2\+D\+To\+Flat (\begin{DoxyParamCaption}\item[{T $\ast$$\ast$}]{dst,  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Malloc a 2D array in device space. 
+
+This function will allocate enough space on V\+R\+AM for flattened 2D array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & destination pointer \\
+\hline
+{\em row} & row size of the 2d array \\
+\hline
+{\em col} & column size of the 2d array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Error\+\_\+t status of the cuda\+Malloc operation
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{output\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cudaError\_t cudastatus;}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* dst;}
+\DoxyCodeLine{cudastatus = CudaMalloc2DToFlat<char>(\&dst, 5, 15);}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(cudastatus!=cudaSuccess)\{}
+\DoxyCodeLine{    \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00073}{73}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073                                                                                  \{}
+\DoxyCodeLine{00074             cudaError\_t cudastatus = cudaMalloc((T **)dst, row*col*\textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00075             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"cudaMalloc Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00076             \textcolor{keywordflow}{return} cudastatus;}
+\DoxyCodeLine{00077         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a5bbde3a16fc7a4b8cdf07e72a31c1f54}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a5bbde3a16fc7a4b8cdf07e72a31c1f54}} 
+\index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}}
+\index{CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
+\doxysubsubsection{\texorpdfstring{CudaMemcpy2DToFlat()}{CudaMemcpy2DToFlat()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Memcpy2\+D\+To\+Flat (\begin{DoxyParamCaption}\item[{T $\ast$}]{dst,  }\item[{T $\ast$$\ast$}]{src,  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Memcpy a 2D array in device space after flattening. 
+
+Resulting buffer will not be true 2D array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & destination pointer \\
+\hline
+{\em rc} & source pointer \\
+\hline
+{\em row} & row size of the 2d array \\
+\hline
+{\em col} & column size of the 2d array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Error\+\_\+t status of the cuda\+Malloc operation
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{output\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cudaError\_t cudastatus;}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* dst;}
+\DoxyCodeLine{cudastatus = CudaMalloc2DToFlat<char>(\&dst, 5, 15);}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{cudastatus = CudaMemcpy2DToFlat<char>(*dst,src,15,15);}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMemcpy2DToFlat Failed."}, \textcolor{keyword}{false});}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00101}{101}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101                                                                                          \{}
+\DoxyCodeLine{00102             T* tempbuf = \textcolor{keyword}{new} T[row*col];}
+\DoxyCodeLine{00103             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<row;i++)\{}
+\DoxyCodeLine{00104                 memcpy(\&(tempbuf[row*i]), src[i], col);}
+\DoxyCodeLine{00105             \}}
+\DoxyCodeLine{00106             \textcolor{keywordflow}{return} cudaMemcpy(dst, tempbuf, row*col*\textcolor{keyword}{sizeof}(T), cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00107             }
+\DoxyCodeLine{00108         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a5bbde3a16fc7a4b8cdf07e72a31c1f54_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}} 
+\index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!CudaMigrate2DFlat@{CudaMigrate2DFlat}}
+\index{CudaMigrate2DFlat@{CudaMigrate2DFlat}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
+\doxysubsubsection{\texorpdfstring{CudaMigrate2DFlat()}{CudaMigrate2DFlat()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat (\begin{DoxyParamCaption}\item[{T $\ast$$\ast$}]{dst,  }\item[{T $\ast$$\ast$}]{src,  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Both malloc and memcpy a 2D array into device V\+R\+AM. 
+
+Resulting buffer will not be true 2D array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & destination pointer \\
+\hline
+{\em rc} & source pointer \\
+\hline
+{\em row} & row size of the 2d array \\
+\hline
+{\em col} & column size of the 2d array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Error\+\_\+t status of the cuda\+Malloc operation
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{output\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cudaError\_t cudastatus;}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* dst;}
+\DoxyCodeLine{cudastatus = CudaMigrate2DFlat<long int>(}
+\DoxyCodeLine{   \&dst, this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}, this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}, this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}});}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"    Cuda failed to initialize value matrix row."});}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{130}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00130                                                                                          \{}
+\DoxyCodeLine{00131             cudaError\_t cudastatus;}
+\DoxyCodeLine{00132             cudastatus = CudaMalloc2DToFlat<T>(dst, row, col);}
+\DoxyCodeLine{00133             \textcolor{keywordflow}{if}(cudastatus!=cudaSuccess)\{}
+\DoxyCodeLine{00134                 \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00135                 \textcolor{keywordflow}{return} cudastatus;}
+\DoxyCodeLine{00136             \}}
+\DoxyCodeLine{00137             cudastatus = CudaMemcpy2DToFlat<T>(*dst,src,row,col);}
+\DoxyCodeLine{00138             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMemcpy2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00139             \textcolor{keywordflow}{return} cudastatus;}
+\DoxyCodeLine{00140         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat()}}.
+
+
+
+Referenced by \mbox{\hyperlink{cuda_device_controller_8h_source_l00073}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Malloc2\+D\+To\+Flat()}}, \mbox{\hyperlink{cuda_device_controller_8h_source_l00101}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Memcpy2\+D\+To\+Flat()}}, and \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!DumpJSON@{DumpJSON}}
 \index{DumpJSON@{DumpJSON}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
@@ -475,15 +726,15 @@ Definition at line \mbox{\hyperlink{model_8h_source_l00273}{273}} of file \mbox{
 \DoxyCodeLine{00282 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a19862a2611859de8a1b0595d9c6ff42f}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a19862a2611859de8a1b0595d9c6ff42f}} 
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ae01dd336827730fa767863430654efe4}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ae01dd336827730fa767863430654efe4}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FastRandomWalk@{FastRandomWalk}}
 \index{FastRandomWalk@{FastRandomWalk}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
-\doxysubsubsection{\texorpdfstring{FastRandomWalk()}{FastRandomWalk()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::\+Fast\+Random\+Walk (\begin{DoxyParamCaption}\item[{unsigned long int}]{n,  }\item[{const char $\ast$}]{wordlist\+File\+Name,  }\item[{int}]{min\+Len,  }\item[{int}]{max\+Len,  }\item[{int}]{threads,  }\item[{bool}]{b\+File\+IO }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{FastRandomWalk()}{FastRandomWalk()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::\+Fast\+Random\+Walk (\begin{DoxyParamCaption}\item[{unsigned long int}]{n,  }\item[{const char $\ast$}]{wordlist\+File\+Name,  }\item[{int}]{min\+Len,  }\item[{int}]{max\+Len,  }\item[{bool}]{b\+File\+IO }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{namespace_markov_1_1_random}{Random}} walk on the Matrix-\/reduced \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}. 
+\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} walk on the Matrix-\/reduced \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}. 
 
 T\+O\+DO
 
@@ -508,7 +759,95 @@ T\+O\+DO
 \DoxyCodeLine{mp.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"models/finished.mdl"});}
 \DoxyCodeLine{mp.\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24}{FastRandomWalk}}(50000000,\textcolor{stringliteral}{"./wordlist.txt"},6,12,25, \textcolor{keyword}{true});}
 \end{DoxyCode}
- \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}\label{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}} 
+ \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24}} 
+\index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FastRandomWalk@{FastRandomWalk}}
+\index{FastRandomWalk@{FastRandomWalk}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
+\doxysubsubsection{\texorpdfstring{FastRandomWalk()}{FastRandomWalk()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk (\begin{DoxyParamCaption}\item[{unsigned long int}]{n,  }\item[{const char $\ast$}]{wordlist\+File\+Name,  }\item[{int}]{min\+Len = {\ttfamily 6},  }\item[{int}]{max\+Len = {\ttfamily 12},  }\item[{int}]{threads = {\ttfamily 20},  }\item[{bool}]{b\+File\+IO = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} walk on the Matrix-\/reduced \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}. 
+
+This has an O(\+N) Memory complexity. To limit the maximum usage, requests with n$>$50M are partitioned using \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Partition}}.
+
+If n$>$50M, threads are going to be synced, files are going to be flushed, and buffers will be reallocated every 50M generations. This comes at a minor performance penalty.
+
+While it has the same functionality, this operation reduces \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate}} runtime by \%96.\+5
+
+This function has deprecated \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate}}, and will eventually replace it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ Number of passwords to generate. \\
+\hline
+{\em wordlist\+File\+Name} & -\/ Filename to write to \\
+\hline
+{\em min\+Len} & -\/ Minimum password length to generate \\
+\hline
+{\em max\+Len} & -\/ Maximum password length to generate \\
+\hline
+{\em threads} & -\/ number of OS threads to spawn \\
+\hline
+{\em b\+File\+IO} & -\/ If false, filename will be ignored and will output to stdout.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov::API::ModelMatrix}} mp;}
+\DoxyCodeLine{mp.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"models/finished.mdl"});}
+\DoxyCodeLine{mp.\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24}{FastRandomWalk}}(50000000,\textcolor{stringliteral}{"./wordlist.txt"},6,12,25, \textcolor{keyword}{true});}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00163}{163}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00163                                                                                                                                              \{}
+\DoxyCodeLine{00164     }
+\DoxyCodeLine{00165 }
+\DoxyCodeLine{00166     std::ofstream wordlist; }
+\DoxyCodeLine{00167     \textcolor{keywordflow}{if}(bFileIO)}
+\DoxyCodeLine{00168         wordlist.open(wordlistFileName);}
+\DoxyCodeLine{00169 }
+\DoxyCodeLine{00170     std::mutex mlock;}
+\DoxyCodeLine{00171     \textcolor{keywordflow}{if}(n<=50000000ull) \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{FastRandomWalkPartition}}(\&mlock, \&wordlist, n, minLen, maxLen, bFileIO, threads);}
+\DoxyCodeLine{00172     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00173         \textcolor{keywordtype}{int} numberOfPartitions = n/50000000ull;}
+\DoxyCodeLine{00174         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<numberOfPartitions;i++)}
+\DoxyCodeLine{00175             this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{FastRandomWalkPartition}}(\&mlock, \&wordlist, 50000000ull, minLen, maxLen, bFileIO, threads);}
+\DoxyCodeLine{00176     \}}
+\DoxyCodeLine{00177 }
+\DoxyCodeLine{00178 }
+\DoxyCodeLine{00179 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8cpp_source_l00182}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Partition()}}.
+
+
+
+Referenced by \mbox{\hyperlink{src_2main_8cpp_source_l00014}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}\label{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FastRandomWalkPartition@{FastRandomWalkPartition}}
 \index{FastRandomWalkPartition@{FastRandomWalkPartition}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
 \doxysubsubsection{\texorpdfstring{FastRandomWalkPartition()}{FastRandomWalkPartition()}}
@@ -652,7 +991,7 @@ Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00112}{112}} of fi
 \DoxyCodeLine{00125         cur=199;}
 \DoxyCodeLine{00126         len=0;}
 \DoxyCodeLine{00127         \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
-\DoxyCodeLine{00128             e = strchr(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}, cur);}
+\DoxyCodeLine{00128             e = \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{strchr}}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}, cur);}
 \DoxyCodeLine{00129             index = e -\/ this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}};}
 \DoxyCodeLine{00130             selection = MarsagliaRandomEngine.\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{random}}() \% this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}}[index];}
 \DoxyCodeLine{00131             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};j++)\{}
@@ -711,6 +1050,16 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ae40af2e90f0500e2780a017f0d39f5e5}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ae40af2e90f0500e2780a017f0d39f5e5}} 
+\index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FlattenMatrix@{FlattenMatrix}}
+\index{FlattenMatrix@{FlattenMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
+\doxysubsubsection{\texorpdfstring{FlattenMatrix()}{FlattenMatrix()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::\+Flatten\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Flatten migrated matrix from 2d to 1d. 
+
 \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Generate@{Generate}}
 \index{Generate@{Generate}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
@@ -978,11 +1327,11 @@ Definition at line \mbox{\hyperlink{model_8h_source_l00206}{206}} of file \mbox{
 \DoxyCodeLine{00262 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}} 
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_ad1beeb03129fea545cfb18009d2d955f}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_ad1beeb03129fea545cfb18009d2d955f}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!ListCudaDevices@{ListCudaDevices}}
 \index{ListCudaDevices@{ListCudaDevices}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
 \doxysubsubsection{\texorpdfstring{ListCudaDevices()}{ListCudaDevices()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+List\+Cuda\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+host\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+List\+Cuda\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
 
 
 
@@ -1115,7 +1464,7 @@ This function W\+I\+LL N\+OT reallocate buffer. Make sure no out of bound writes
 
 
 \begin{DoxyParams}{Parameters}
-{\em random\+Engine} & \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} Engine to use for the random walks. For examples, see \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Markov\+::\+Random\+::\+Mersenne}} and \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} \\
+{\em random\+Engine} & \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} Engine to use for the random walks. For examples, see \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Markov\+::\+Random\+::\+Mersenne}} and \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} \\
 \hline
 {\em min\+Setting} & Minimum number of characters to generate \\
 \hline
@@ -1163,17 +1512,7 @@ Definition at line \mbox{\hyperlink{model_8h_source_l00292}{292}} of file \mbox{
 \DoxyCodeLine{00319 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac4af6bbd60ecbe204bfc4d5cdab24004}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac4af6bbd60ecbe204bfc4d5cdab24004}} 
-\index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!RetrieveCudaBuffer@{RetrieveCudaBuffer}}
-\index{RetrieveCudaBuffer@{RetrieveCudaBuffer}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
-\doxysubsubsection{\texorpdfstring{RetrieveCudaBuffer()}{RetrieveCudaBuffer()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::\+Retrieve\+Cuda\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Retrieve the result buffer from \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} kernel. 
-
-Done on each partition. \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660}} 
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Save@{Save}}
 \index{Save@{Save}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
 \doxysubsubsection{\texorpdfstring{Save()}{Save()}}
@@ -1399,15 +1738,15 @@ Here is the caller graph for this function\+:
 
 Definition at line \mbox{\hyperlink{markov_passwords_8h_source_l00106}{106}} of file \mbox{\hyperlink{markov_passwords_8h_source}{markov\+Passwords.\+h}}.
 
-\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a2329ce70d7bc9ea0797079a599dd9170}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a2329ce70d7bc9ea0797079a599dd9170}} 
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a06672c27d6c96e9f8808f61c6648f191}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a06672c27d6c96e9f8808f61c6648f191}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_edgeMatrix@{device\_edgeMatrix}}
 \index{device\_edgeMatrix@{device\_edgeMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
 \doxysubsubsection{\texorpdfstring{device\_edgeMatrix}{device\_edgeMatrix}}
-{\footnotesize\ttfamily char$\ast$$\ast$ Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::device\+\_\+edge\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily char$\ast$ Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::device\+\_\+edge\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00057}{57}} of file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
+Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00069}{69}} of file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
 
 \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6a252a7c965c218114ad3d1663c4e840}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6a252a7c965c218114ad3d1663c4e840}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_matrixIndex@{device\_matrixIndex}}
@@ -1417,7 +1756,17 @@ Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00057}{57}} of 
 
 
 
-Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00059}{59}} of file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
+Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00071}{71}} of file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1ec34676837c3cdd5ec2f18a77faec12}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1ec34676837c3cdd5ec2f18a77faec12}} 
+\index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_outputBuffer@{device\_outputBuffer}}
+\index{device\_outputBuffer@{device\_outputBuffer}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
+\doxysubsubsection{\texorpdfstring{device\_outputBuffer}{device\_outputBuffer}}
+{\footnotesize\ttfamily char$\ast$ Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::device\+\_\+output\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00073}{73}} of file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
 
 \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aae5fdd4bdffc7eb2561fb923024d2615}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aae5fdd4bdffc7eb2561fb923024d2615}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_totalEdgeWeights@{device\_totalEdgeWeights}}
@@ -1427,17 +1776,17 @@ Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00059}{59}} of 
 
 
 
-Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00060}{60}} of file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
+Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00072}{72}} of file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
 
-\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aef9d4b48f3a4a2957077e0c53f3eab60}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aef9d4b48f3a4a2957077e0c53f3eab60}} 
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a81e3be9eac6dab929de3b118d9343b27}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a81e3be9eac6dab929de3b118d9343b27}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_valueMatrix@{device\_valueMatrix}}
 \index{device\_valueMatrix@{device\_valueMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
 \doxysubsubsection{\texorpdfstring{device\_valueMatrix}{device\_valueMatrix}}
-{\footnotesize\ttfamily long int$\ast$$\ast$ Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::device\+\_\+value\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily long int$\ast$ Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::device\+\_\+value\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00058}{58}} of file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
+Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00070}{70}} of file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
 
 \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}\label{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!edgeMatrix@{edgeMatrix}}
@@ -1466,6 +1815,26 @@ A list of all edges in this model.
 
 
 Definition at line \mbox{\hyperlink{model_8h_source_l00194}{194}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6345ea79ce015e2a97d1be91a661449a}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6345ea79ce015e2a97d1be91a661449a}} 
+\index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!flatEdgeMatrix@{flatEdgeMatrix}}
+\index{flatEdgeMatrix@{flatEdgeMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
+\doxysubsubsection{\texorpdfstring{flatEdgeMatrix}{flatEdgeMatrix}}
+{\footnotesize\ttfamily char$\ast$ Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::flat\+Edge\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00076}{76}} of file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_abb65a788e9039a3b46cc5cdc76a11130}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_abb65a788e9039a3b46cc5cdc76a11130}} 
+\index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!flatValueMatrix@{flatValueMatrix}}
+\index{flatValueMatrix@{flatValueMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
+\doxysubsubsection{\texorpdfstring{flatValueMatrix}{flatValueMatrix}}
+{\footnotesize\ttfamily long int$\ast$ Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::flat\+Value\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00077}{77}} of file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
 
 \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}\label{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!matrixIndex@{matrixIndex}}
@@ -1518,6 +1887,16 @@ Map Left\+Node is the Nodes Node\+Value Map Right\+Node is the node pointer.
 
 
 Definition at line \mbox{\hyperlink{model_8h_source_l00183}{183}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a26d0692f6a494ab4a2871142b39ce066}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a26d0692f6a494ab4a2871142b39ce066}} 
+\index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!outputBuffer@{outputBuffer}}
+\index{outputBuffer@{outputBuffer}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}}
+\doxysubsubsection{\texorpdfstring{outputBuffer}{outputBuffer}}
+{\footnotesize\ttfamily char$\ast$ Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::output\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cuda_model_matrix_8h_source_l00074}{74}} of file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
 
 \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_ac05e60de64e866027410d4fa1cd03248}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_ac05e60de64e866027410d4fa1cd03248}} 
 \index{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!outputFile@{outputFile}}

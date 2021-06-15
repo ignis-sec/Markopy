@@ -85,7 +85,9 @@ $(document).ready(function(){initNavTree('class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -117,15 +119,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5dd552997a32c0cabf3a6cca6fb07b73"><td class="memItemLeft" align="right" valign="top">__host__ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a5dd552997a32c0cabf3a6cca6fb07b73">MigrateMatrix</a> ()</td></tr>
 <tr class="memdesc:a5dd552997a32c0cabf3a6cca6fb07b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Migrate the class members to the VRAM.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a5dd552997a32c0cabf3a6cca6fb07b73">More...</a><br /></td></tr>
 <tr class="separator:a5dd552997a32c0cabf3a6cca6fb07b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19862a2611859de8a1b0595d9c6ff42f"><td class="memItemLeft" align="right" valign="top">__host__ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a19862a2611859de8a1b0595d9c6ff42f">FastRandomWalk</a> (unsigned long int n, const char *wordlistFileName, int minLen, int maxLen, int threads, bool bFileIO)</td></tr>
-<tr class="memdesc:a19862a2611859de8a1b0595d9c6ff42f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_markov_1_1_random.html" title="Objects related to RNG.">Random</a> walk on the Matrix-reduced <a class="el" href="class_markov_1_1_model.html" title="class for the final Markov Model, constructed from nodes and edges.">Markov::Model</a>.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a19862a2611859de8a1b0595d9c6ff42f">More...</a><br /></td></tr>
-<tr class="separator:a19862a2611859de8a1b0595d9c6ff42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40af2e90f0500e2780a017f0d39f5e5"><td class="memItemLeft" align="right" valign="top">__host__ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ae40af2e90f0500e2780a017f0d39f5e5">FlattenMatrix</a> ()</td></tr>
+<tr class="memdesc:ae40af2e90f0500e2780a017f0d39f5e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flatten migrated matrix from 2d to 1d.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ae40af2e90f0500e2780a017f0d39f5e5">More...</a><br /></td></tr>
+<tr class="separator:ae40af2e90f0500e2780a017f0d39f5e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01dd336827730fa767863430654efe4"><td class="memItemLeft" align="right" valign="top">__host__ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ae01dd336827730fa767863430654efe4">FastRandomWalk</a> (unsigned long int n, const char *wordlistFileName, int minLen, int maxLen, bool bFileIO)</td></tr>
+<tr class="memdesc:ae01dd336827730fa767863430654efe4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random.html" title="Namespace for Random engines operable under device space.">Random</a> walk on the Matrix-reduced <a class="el" href="class_markov_1_1_model.html" title="class for the final Markov Model, constructed from nodes and edges.">Markov::Model</a>.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ae01dd336827730fa767863430654efe4">More...</a><br /></td></tr>
+<tr class="separator:ae01dd336827730fa767863430654efe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1dbc499eda0e0eda3567bce45d17db4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ac1dbc499eda0e0eda3567bce45d17db4">ConstructMatrix</a> ()</td></tr>
 <tr class="memdesc:ac1dbc499eda0e0eda3567bce45d17db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the related Matrix data for the model.  <a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ac1dbc499eda0e0eda3567bce45d17db4">More...</a><br /></td></tr>
 <tr class="separator:ac1dbc499eda0e0eda3567bce45d17db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a405a1c967dfea8d829aa41ad2c14f709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a405a1c967dfea8d829aa41ad2c14f709">DumpJSON</a> ()</td></tr>
 <tr class="memdesc:a405a1c967dfea8d829aa41ad2c14f709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debug function to dump the model to a JSON file.  <a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a405a1c967dfea8d829aa41ad2c14f709">More...</a><br /></td></tr>
 <tr class="separator:a405a1c967dfea8d829aa41ad2c14f709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e5a9885d48e95b9f5d1ed082d83db24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a9e5a9885d48e95b9f5d1ed082d83db24">FastRandomWalk</a> (unsigned long int n, const char *wordlistFileName, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true)</td></tr>
+<tr class="memdesc:a9e5a9885d48e95b9f5d1ed082d83db24"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_markov_1_1_random.html" title="Objects related to RNG.">Random</a> walk on the Matrix-reduced <a class="el" href="class_markov_1_1_model.html" title="class for the final Markov Model, constructed from nodes and edges.">Markov::Model</a>.  <a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a9e5a9885d48e95b9f5d1ed082d83db24">More...</a><br /></td></tr>
+<tr class="separator:a9e5a9885d48e95b9f5d1ed082d83db24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3fb665ee48937ca845d930e72e07917"><td class="memItemLeft" align="right" valign="top">std::ifstream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#ac3fb665ee48937ca845d930e72e07917">OpenDatasetFile</a> (const char *filename)</td></tr>
 <tr class="memdesc:ac3fb665ee48937ca845d930e72e07917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open dataset file and return the ifstream pointer.  <a href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#ac3fb665ee48937ca845d930e72e07917">More...</a><br /></td></tr>
 <tr class="separator:ac3fb665ee48937ca845d930e72e07917"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,24 +173,42 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a71f6df805e340ce96e9dc4ee4ebc6537"><td class="memItemLeft" align="right" valign="top">std::map&lt; char, <a class="el" href="class_markov_1_1_node.html">Node</a>&lt; char &gt; * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_model.html#a71f6df805e340ce96e9dc4ee4ebc6537">Nodes</a> ()</td></tr>
 <tr class="memdesc:a71f6df805e340ce96e9dc4ee4ebc6537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return starter Node.  <a href="class_markov_1_1_model.html#a71f6df805e340ce96e9dc4ee4ebc6537">More...</a><br /></td></tr>
 <tr class="separator:a71f6df805e340ce96e9dc4ee4ebc6537"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6094d80af47a2557693a3d3005d5013"><td class="memItemLeft" align="right" valign="top">__host__ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#aa6094d80af47a2557693a3d3005d5013">ListCudaDevices</a> ()</td></tr>
-<tr class="memdesc:aa6094d80af47a2557693a3d3005d5013"><td class="mdescLeft">&#160;</td><td class="mdescRight">List <a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html" title="Namespace for objects requiring CUDA libraries.">CUDA</a> devices in the system.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#aa6094d80af47a2557693a3d3005d5013">More...</a><br /></td></tr>
-<tr class="separator:aa6094d80af47a2557693a3d3005d5013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ad1beeb03129fea545cfb18009d2d955f"><td class="memItemLeft" align="right" valign="top">static __host__ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#ad1beeb03129fea545cfb18009d2d955f">ListCudaDevices</a> ()</td></tr>
+<tr class="memdesc:ad1beeb03129fea545cfb18009d2d955f"><td class="mdescLeft">&#160;</td><td class="mdescRight">List <a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html" title="Namespace for objects requiring CUDA libraries.">CUDA</a> devices in the system.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#ad1beeb03129fea545cfb18009d2d955f">More...</a><br /></td></tr>
+<tr class="separator:ad1beeb03129fea545cfb18009d2d955f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac4af6bbd60ecbe204bfc4d5cdab24004"><td class="memItemLeft" align="right" valign="top">__host__ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ac4af6bbd60ecbe204bfc4d5cdab24004">RetrieveCudaBuffer</a> ()</td></tr>
-<tr class="memdesc:ac4af6bbd60ecbe204bfc4d5cdab24004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the result buffer from <a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html" title="Namespace for objects requiring CUDA libraries.">CUDA</a> kernel.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ac4af6bbd60ecbe204bfc4d5cdab24004">More...</a><br /></td></tr>
-<tr class="separator:ac4af6bbd60ecbe204bfc4d5cdab24004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1ef31ffbad0b0acebbfa2a78c47e349"><td class="memItemLeft" align="right" valign="top">__host__ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ab1ef31ffbad0b0acebbfa2a78c47e349">AllocVRAMOutputBuffer</a> (long int n, long int singleGenMaxLen, long int CUDAKernelGridSize, long int sizePerGrid)</td></tr>
+<tr class="memdesc:ab1ef31ffbad0b0acebbfa2a78c47e349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate the output buffer for kernel operation.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ab1ef31ffbad0b0acebbfa2a78c47e349">More...</a><br /></td></tr>
+<tr class="separator:ab1ef31ffbad0b0acebbfa2a78c47e349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad775d2e9c35e6f78c53f796df11405b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5">FastRandomWalkPartition</a> (std::mutex *mlock, std::ofstream *wordlist, unsigned long int n, int minLen, int maxLen, bool bFileIO, int threads)</td></tr>
 <tr class="memdesc:ad775d2e9c35e6f78c53f796df11405b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single partition of FastRandomWalk event.  <a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5">More...</a><br /></td></tr>
 <tr class="separator:ad775d2e9c35e6f78c53f796df11405b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96f2885aac69b49b21c66ad5a32514b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a96f2885aac69b49b21c66ad5a32514b9">FastRandomWalkThread</a> (std::mutex *mlock, std::ofstream *wordlist, unsigned long int n, int minLen, int maxLen, int id, bool bFileIO)</td></tr>
 <tr class="memdesc:a96f2885aac69b49b21c66ad5a32514b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single thread of a single partition of FastRandomWalk.  <a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a96f2885aac69b49b21c66ad5a32514b9">More...</a><br /></td></tr>
 <tr class="separator:a96f2885aac69b49b21c66ad5a32514b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa79c9cac041d2c53be8d21e903c2aacc"><td class="memItemLeft" align="right" valign="top">__host__ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#aa79c9cac041d2c53be8d21e903c2aacc">CudaCheckNotifyErr</a> (cudaError_t _status, const char *msg)</td></tr>
-<tr class="memdesc:aa79c9cac041d2c53be8d21e903c2aacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check results of the last operation on GPU.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#aa79c9cac041d2c53be8d21e903c2aacc">More...</a><br /></td></tr>
-<tr class="separator:aa79c9cac041d2c53be8d21e903c2aacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a61c65866ecf7fe229c01fcc0f9c10711"><td class="memItemLeft" align="right" valign="top">static __host__ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711">CudaCheckNotifyErr</a> (cudaError_t _status, const char *msg, bool bExit=true)</td></tr>
+<tr class="memdesc:a61c65866ecf7fe229c01fcc0f9c10711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check results of the last operation on GPU.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711">More...</a><br /></td></tr>
+<tr class="separator:a61c65866ecf7fe229c01fcc0f9c10711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a506aa9d676544d166a21d017ab0aeea2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a506aa9d676544d166a21d017ab0aeea2"><td class="memTemplItemLeft" align="right" valign="top">static __host__ cudaError_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a506aa9d676544d166a21d017ab0aeea2">CudaMalloc2DToFlat</a> (T **dst, int row, int col)</td></tr>
+<tr class="memdesc:a506aa9d676544d166a21d017ab0aeea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Malloc a 2D array in device space.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a506aa9d676544d166a21d017ab0aeea2">More...</a><br /></td></tr>
+<tr class="separator:a506aa9d676544d166a21d017ab0aeea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bbde3a16fc7a4b8cdf07e72a31c1f54"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5bbde3a16fc7a4b8cdf07e72a31c1f54"><td class="memTemplItemLeft" align="right" valign="top">static __host__ cudaError_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a5bbde3a16fc7a4b8cdf07e72a31c1f54">CudaMemcpy2DToFlat</a> (T *dst, T **src, int row, int col)</td></tr>
+<tr class="memdesc:a5bbde3a16fc7a4b8cdf07e72a31c1f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memcpy a 2D array in device space after flattening.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a5bbde3a16fc7a4b8cdf07e72a31c1f54">More...</a><br /></td></tr>
+<tr class="separator:a5bbde3a16fc7a4b8cdf07e72a31c1f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb56db7c9437eb4d71c390fa2b22c738"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:abb56db7c9437eb4d71c390fa2b22c738"><td class="memTemplItemLeft" align="right" valign="top">static __host__ cudaError_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#abb56db7c9437eb4d71c390fa2b22c738">CudaMigrate2DFlat</a> (T **dst, T **src, int row, int col)</td></tr>
+<tr class="memdesc:abb56db7c9437eb4d71c390fa2b22c738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Both malloc and memcpy a 2D array into device VRAM.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#abb56db7c9437eb4d71c390fa2b22c738">More...</a><br /></td></tr>
+<tr class="separator:abb56db7c9437eb4d71c390fa2b22c738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -208,14 +234,22 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a2329ce70d7bc9ea0797079a599dd9170"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a2329ce70d7bc9ea0797079a599dd9170">device_edgeMatrix</a></td></tr>
-<tr class="separator:a2329ce70d7bc9ea0797079a599dd9170"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef9d4b48f3a4a2957077e0c53f3eab60"><td class="memItemLeft" align="right" valign="top">long int **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#aef9d4b48f3a4a2957077e0c53f3eab60">device_valueMatrix</a></td></tr>
-<tr class="separator:aef9d4b48f3a4a2957077e0c53f3eab60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06672c27d6c96e9f8808f61c6648f191"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a06672c27d6c96e9f8808f61c6648f191">device_edgeMatrix</a></td></tr>
+<tr class="separator:a06672c27d6c96e9f8808f61c6648f191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e3be9eac6dab929de3b118d9343b27"><td class="memItemLeft" align="right" valign="top">long int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a81e3be9eac6dab929de3b118d9343b27">device_valueMatrix</a></td></tr>
+<tr class="separator:a81e3be9eac6dab929de3b118d9343b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a252a7c965c218114ad3d1663c4e840"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a6a252a7c965c218114ad3d1663c4e840">device_matrixIndex</a></td></tr>
 <tr class="separator:a6a252a7c965c218114ad3d1663c4e840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae5fdd4bdffc7eb2561fb923024d2615"><td class="memItemLeft" align="right" valign="top">long int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#aae5fdd4bdffc7eb2561fb923024d2615">device_totalEdgeWeights</a></td></tr>
 <tr class="separator:aae5fdd4bdffc7eb2561fb923024d2615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ec34676837c3cdd5ec2f18a77faec12"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a1ec34676837c3cdd5ec2f18a77faec12">device_outputBuffer</a></td></tr>
+<tr class="separator:a1ec34676837c3cdd5ec2f18a77faec12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26d0692f6a494ab4a2871142b39ce066"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a26d0692f6a494ab4a2871142b39ce066">outputBuffer</a></td></tr>
+<tr class="separator:a26d0692f6a494ab4a2871142b39ce066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6345ea79ce015e2a97d1be91a661449a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a6345ea79ce015e2a97d1be91a661449a">flatEdgeMatrix</a></td></tr>
+<tr class="separator:a6345ea79ce015e2a97d1be91a661449a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb65a788e9039a3b46cc5cdc76a11130"><td class="memItemLeft" align="right" valign="top">long int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#abb65a788e9039a3b46cc5cdc76a11130">flatValueMatrix</a></td></tr>
+<tr class="separator:abb65a788e9039a3b46cc5cdc76a11130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4794af67fd4513921fee8ae669f2dd4"><td class="memItemLeft" align="right" valign="top">std::ifstream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#ab4794af67fd4513921fee8ae669f2dd4">datasetFile</a></td></tr>
 <tr class="separator:ab4794af67fd4513921fee8ae669f2dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5f012dcc495dbe769e663d6cb161d6a"><td class="memItemLeft" align="right" valign="top">std::ofstream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#af5f012dcc495dbe769e663d6cb161d6a">modelSavefile</a></td></tr>
@@ -308,6 +342,67 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="ab1ef31ffbad0b0acebbfa2a78c47e349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1ef31ffbad0b0acebbfa2a78c47e349">&#9670;&nbsp;</a></span>AllocVRAMOutputBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">__host__ char* Markov::API::CUDA::CUDAModelMatrix::AllocVRAMOutputBuffer </td>
+          <td>(</td>
+          <td class="paramtype">long int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long int&#160;</td>
+          <td class="paramname"><em>singleGenMaxLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long int&#160;</td>
+          <td class="paramname"><em>CUDAKernelGridSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long int&#160;</td>
+          <td class="paramname"><em>sizePerGrid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate the output buffer for kernel operation. </p>
+<p>TODO</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>- Number of passwords to generate. </td></tr>
+    <tr><td class="paramname">singleGenMaxLen</td><td>- maximum string length for a single generation </td></tr>
+    <tr><td class="paramname">CUDAKernelGridSize</td><td>- Total number of grid members in <a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html" title="Namespace for objects requiring CUDA libraries.">CUDA</a> kernel </td></tr>
+    <tr><td class="paramname">sizePerGrid</td><td>- Size to allocate per grid member </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to the allocation on VRAM </dd></dl>
+
 </div>
 </div>
 <a id="ac1dbc499eda0e0eda3567bce45d17db4"></a>
@@ -404,8 +499,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa79c9cac041d2c53be8d21e903c2aacc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa79c9cac041d2c53be8d21e903c2aacc">&#9670;&nbsp;</a></span>CudaCheckNotifyErr()</h2>
+<a id="a61c65866ecf7fe229c01fcc0f9c10711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c65866ecf7fe229c01fcc0f9c10711">&#9670;&nbsp;</a></span>CudaCheckNotifyErr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -414,7 +509,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">__host__ int Markov::API::CUDA::CUDADeviceController::CudaCheckNotifyErr </td>
+          <td class="memname">static __host__ int Markov::API::CUDA::CUDADeviceController::CudaCheckNotifyErr </td>
           <td>(</td>
           <td class="paramtype">cudaError_t&#160;</td>
           <td class="paramname"><em>_status</em>, </td>
@@ -423,7 +518,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bExit</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -433,7 +534,7 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -449,8 +550,269 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if successful, 1 if failure. <b>Example</b> <b>output:</b> <div class="fragment"><div class="line"><span class="keywordtype">char</span> *da, a = <span class="stringliteral">&quot;test&quot;</span>;</div>
 <div class="line">cudastatus = cudaMalloc((<span class="keywordtype">char</span> **)&amp;da, 5*<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*));</div>
-<div class="line"><a class="code" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#aa79c9cac041d2c53be8d21e903c2aacc">CudaCheckNotifyErr</a>(cudastatus, <span class="stringliteral">&quot;Failed to allocate VRAM for *da.\n&quot;</span>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711">CudaCheckNotifyErr</a>(cudastatus, <span class="stringliteral">&quot;Failed to allocate VRAM for *da.\n&quot;</span>);</div>
 </div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="a506aa9d676544d166a21d017ab0aeea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a506aa9d676544d166a21d017ab0aeea2">&#9670;&nbsp;</a></span>CudaMalloc2DToFlat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static __host__ cudaError_t Markov::API::CUDA::CUDADeviceController::CudaMalloc2DToFlat </td>
+          <td>(</td>
+          <td class="paramtype">T **&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Malloc a 2D array in device space. </p>
+<p>This function will allocate enough space on VRAM for flattened 2D array.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>destination pointer </td></tr>
+    <tr><td class="paramname">row</td><td>row size of the 2d array </td></tr>
+    <tr><td class="paramname">col</td><td>column size of the 2d array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cudaError_t status of the cudaMalloc operation</dd></dl>
+<p><b>Example</b> <b>output:</b> </p><div class="fragment"><div class="line">cudaError_t cudastatus;</div>
+<div class="line"><span class="keywordtype">char</span>* dst;</div>
+<div class="line">cudastatus = CudaMalloc2DToFlat&lt;char&gt;(&amp;dst, 5, 15);</div>
+<div class="line"><span class="keywordflow">if</span>(cudastatus!=cudaSuccess){</div>
+<div class="line">    <a class="code" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711">CudaCheckNotifyErr</a>(cudastatus, <span class="stringliteral">&quot;  CudaMalloc2DToFlat Failed.&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="cuda_device_controller_8h_source.html#l00073">73</a> of file <a class="el" href="cuda_device_controller_8h_source.html">cudaDeviceController.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                                                                 {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            cudaError_t cudastatus = cudaMalloc((T **)dst, row*col*<span class="keyword">sizeof</span>(T));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711">CudaCheckNotifyErr</a>(cudastatus, <span class="stringliteral">&quot;cudaMalloc Failed.&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span> cudastatus;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="cuda_device_controller_8h_source.html#l00130">Markov::API::CUDA::CUDADeviceController::CudaMigrate2DFlat()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2_cgraph.svg" width="459" height="99"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5bbde3a16fc7a4b8cdf07e72a31c1f54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bbde3a16fc7a4b8cdf07e72a31c1f54">&#9670;&nbsp;</a></span>CudaMemcpy2DToFlat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static __host__ cudaError_t Markov::API::CUDA::CUDADeviceController::CudaMemcpy2DToFlat </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T **&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Memcpy a 2D array in device space after flattening. </p>
+<p>Resulting buffer will not be true 2D array.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>destination pointer </td></tr>
+    <tr><td class="paramname">rc</td><td>source pointer </td></tr>
+    <tr><td class="paramname">row</td><td>row size of the 2d array </td></tr>
+    <tr><td class="paramname">col</td><td>column size of the 2d array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cudaError_t status of the cudaMalloc operation</dd></dl>
+<p><b>Example</b> <b>output:</b> </p><div class="fragment"><div class="line">cudaError_t cudastatus;</div>
+<div class="line"><span class="keywordtype">char</span>* dst;</div>
+<div class="line">cudastatus = CudaMalloc2DToFlat&lt;char&gt;(&amp;dst, 5, 15);</div>
+<div class="line"><a class="code" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711">CudaCheckNotifyErr</a>(cudastatus, <span class="stringliteral">&quot;  CudaMalloc2DToFlat Failed.&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line">cudastatus = CudaMemcpy2DToFlat&lt;char&gt;(*dst,src,15,15);</div>
+<div class="line"><a class="code" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711">CudaCheckNotifyErr</a>(cudastatus, <span class="stringliteral">&quot;  CudaMemcpy2DToFlat Failed.&quot;</span>, <span class="keyword">false</span>);</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="cuda_device_controller_8h_source.html#l00101">101</a> of file <a class="el" href="cuda_device_controller_8h_source.html">cudaDeviceController.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                                                                         {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            T* tempbuf = <span class="keyword">new</span> T[row*col];</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;row;i++){</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                memcpy(&amp;(tempbuf[row*i]), src[i], col);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">return</span> cudaMemcpy(dst, tempbuf, row*col*<span class="keyword">sizeof</span>(T), cudaMemcpyHostToDevice);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="cuda_device_controller_8h_source.html#l00130">Markov::API::CUDA::CUDADeviceController::CudaMigrate2DFlat()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a5bbde3a16fc7a4b8cdf07e72a31c1f54_cgraph.svg" width="467" height="99"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abb56db7c9437eb4d71c390fa2b22c738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb56db7c9437eb4d71c390fa2b22c738">&#9670;&nbsp;</a></span>CudaMigrate2DFlat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static __host__ cudaError_t Markov::API::CUDA::CUDADeviceController::CudaMigrate2DFlat </td>
+          <td>(</td>
+          <td class="paramtype">T **&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T **&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Both malloc and memcpy a 2D array into device VRAM. </p>
+<p>Resulting buffer will not be true 2D array.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>destination pointer </td></tr>
+    <tr><td class="paramname">rc</td><td>source pointer </td></tr>
+    <tr><td class="paramname">row</td><td>row size of the 2d array </td></tr>
+    <tr><td class="paramname">col</td><td>column size of the 2d array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cudaError_t status of the cudaMalloc operation</dd></dl>
+<p><b>Example</b> <b>output:</b> </p><div class="fragment"><div class="line">cudaError_t cudastatus;</div>
+<div class="line"><span class="keywordtype">char</span>* dst;</div>
+<div class="line">cudastatus = CudaMigrate2DFlat&lt;long int&gt;(</div>
+<div class="line">   &amp;dst, this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a13399cfee212b026d2ad40af5137f328">valueMatrix</a>, this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a14f867fab1a47f06e59c8679ba4d1207">matrixSize</a>, this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a14f867fab1a47f06e59c8679ba4d1207">matrixSize</a>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711">CudaCheckNotifyErr</a>(cudastatus, <span class="stringliteral">&quot;    Cuda failed to initialize value matrix row.&quot;</span>);</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="cuda_device_controller_8h_source.html#l00130">130</a> of file <a class="el" href="cuda_device_controller_8h_source.html">cudaDeviceController.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                                                                                         {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            cudaError_t cudastatus;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            cudastatus = CudaMalloc2DToFlat&lt;T&gt;(dst, row, col);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">if</span>(cudastatus!=cudaSuccess){</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <a class="code" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711">CudaCheckNotifyErr</a>(cudastatus, <span class="stringliteral">&quot;  CudaMalloc2DToFlat Failed.&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="keywordflow">return</span> cudastatus;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            cudastatus = CudaMemcpy2DToFlat&lt;T&gt;(*dst,src,row,col);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <a class="code" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711">CudaCheckNotifyErr</a>(cudastatus, <span class="stringliteral">&quot;  CudaMemcpy2DToFlat Failed.&quot;</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">return</span> cudastatus;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="cuda_device_controller_8h_source.html#l00130">Markov::API::CUDA::CUDADeviceController::CudaMigrate2DFlat()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="cuda_device_controller_8h_source.html#l00073">Markov::API::CUDA::CUDADeviceController::CudaMalloc2DToFlat()</a>, <a class="el" href="cuda_device_controller_8h_source.html#l00101">Markov::API::CUDA::CUDADeviceController::CudaMemcpy2DToFlat()</a>, and <a class="el" href="cuda_device_controller_8h_source.html#l00130">Markov::API::CUDA::CUDADeviceController::CudaMigrate2DFlat()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738_cgraph.svg" width="211" height="99"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738_icgraph.svg" width="467" height="163"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -650,8 +1012,8 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a19862a2611859de8a1b0595d9c6ff42f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19862a2611859de8a1b0595d9c6ff42f">&#9670;&nbsp;</a></span>FastRandomWalk()</h2>
+<a id="ae01dd336827730fa767863430654efe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae01dd336827730fa767863430654efe4">&#9670;&nbsp;</a></span>FastRandomWalk() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -683,12 +1045,6 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>threads</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>bFileIO</em>&#160;</td>
         </tr>
@@ -700,7 +1056,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="namespace_markov_1_1_random.html" title="Objects related to RNG.">Random</a> walk on the Matrix-reduced <a class="el" href="class_markov_1_1_model.html" title="class for the final Markov Model, constructed from nodes and edges.">Markov::Model</a>. </p>
+<p><a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random.html" title="Namespace for Random engines operable under device space.">Random</a> walk on the Matrix-reduced <a class="el" href="class_markov_1_1_model.html" title="class for the final Markov Model, constructed from nodes and edges.">Markov::Model</a>. </p>
 <p>TODO</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -717,6 +1073,121 @@ Here is the caller graph for this function:</div>
 <div class="line">mp.<a class="code" href="class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5">Import</a>(<span class="stringliteral">&quot;models/finished.mdl&quot;</span>);</div>
 <div class="line">mp.<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a9e5a9885d48e95b9f5d1ed082d83db24">FastRandomWalk</a>(50000000,<span class="stringliteral">&quot;./wordlist.txt&quot;</span>,6,12,25, <span class="keyword">true</span>);</div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a id="a9e5a9885d48e95b9f5d1ed082d83db24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e5a9885d48e95b9f5d1ed082d83db24">&#9670;&nbsp;</a></span>FastRandomWalk() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Markov::API::ModelMatrix::FastRandomWalk </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>wordlistFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minLen</em> = <code>6</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxLen</em> = <code>12</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>threads</em> = <code>20</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bFileIO</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random.html" title="Namespace for Random engines operable under device space.">Random</a> walk on the Matrix-reduced <a class="el" href="class_markov_1_1_model.html" title="class for the final Markov Model, constructed from nodes and edges.">Markov::Model</a>. </p>
+<p>This has an O(N) Memory complexity. To limit the maximum usage, requests with n&gt;50M are partitioned using <a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5" title="A single partition of FastRandomWalk event.">Markov::API::ModelMatrix::FastRandomWalkPartition</a>.</p>
+<p>If n&gt;50M, threads are going to be synced, files are going to be flushed, and buffers will be reallocated every 50M generations. This comes at a minor performance penalty.</p>
+<p>While it has the same functionality, this operation reduces <a class="el" href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#a13886b29051abf3edeed97bd7f985f39" title="Call Markov::Model::RandomWalk n times, and collect output.">Markov::API::MarkovPasswords::Generate</a> runtime by %96.5</p>
+<p>This function has deprecated <a class="el" href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#a13886b29051abf3edeed97bd7f985f39" title="Call Markov::Model::RandomWalk n times, and collect output.">Markov::API::MarkovPasswords::Generate</a>, and will eventually replace it.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>- Number of passwords to generate. </td></tr>
+    <tr><td class="paramname">wordlistFileName</td><td>- Filename to write to </td></tr>
+    <tr><td class="paramname">minLen</td><td>- Minimum password length to generate </td></tr>
+    <tr><td class="paramname">maxLen</td><td>- Maximum password length to generate </td></tr>
+    <tr><td class="paramname">threads</td><td>- number of OS threads to spawn </td></tr>
+    <tr><td class="paramname">bFileIO</td><td>- If false, filename will be ignored and will output to stdout.</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html">Markov::API::ModelMatrix</a> mp;</div>
+<div class="line">mp.<a class="code" href="class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5">Import</a>(<span class="stringliteral">&quot;models/finished.mdl&quot;</span>);</div>
+<div class="line">mp.<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a9e5a9885d48e95b9f5d1ed082d83db24">FastRandomWalk</a>(50000000,<span class="stringliteral">&quot;./wordlist.txt&quot;</span>,6,12,25, <span class="keyword">true</span>);</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="model_matrix_8cpp_source.html#l00163">163</a> of file <a class="el" href="model_matrix_8cpp_source.html">modelMatrix.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                                                                                                                                             {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    std::ofstream wordlist; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">if</span>(bFileIO)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        wordlist.open(wordlistFileName);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    std::mutex mlock;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">if</span>(n&lt;=50000000ull) <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5">FastRandomWalkPartition</a>(&amp;mlock, &amp;wordlist, n, minLen, maxLen, bFileIO, threads);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordtype">int</span> numberOfPartitions = n/50000000ull;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;numberOfPartitions;i++)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5">FastRandomWalkPartition</a>(&amp;mlock, &amp;wordlist, 50000000ull, minLen, maxLen, bFileIO, threads);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="model_matrix_8cpp_source.html#l00182">Markov::API::ModelMatrix::FastRandomWalkPartition()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="src_2main_8cpp_source.html#l00014">main()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24_icgraph.svg" width="347" height="58"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
 </div>
 </div>
 <a id="ad775d2e9c35e6f78c53f796df11405b5"></a>
@@ -941,7 +1412,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        cur=199;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        len=0;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            e = strchr(this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#af01f1dbb05b7b25a69a0c95518549f32">matrixIndex</a>, cur);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            e = <a class="code" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html#a3e74937619866dc763c1f11b923866aa">strchr</a>(this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#af01f1dbb05b7b25a69a0c95518549f32">matrixIndex</a>, cur);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            index = e - this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#af01f1dbb05b7b25a69a0c95518549f32">matrixIndex</a>;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            selection = MarsagliaRandomEngine.<a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a0a56da316d520b80be6b6df6c9e0b537">random</a>() % this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a47bab10980c3117f75909b640a4096df">totalEdgeWeights</a>[index];</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a14f867fab1a47f06e59c8679ba4d1207">matrixSize</a>;j++){</div>
@@ -990,6 +1461,25 @@ Here is the caller graph for this function:</div>
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
+
+</div>
+</div>
+<a id="ae40af2e90f0500e2780a017f0d39f5e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae40af2e90f0500e2780a017f0d39f5e5">&#9670;&nbsp;</a></span>FlattenMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__host__ void Markov::API::CUDA::CUDAModelMatrix::FlattenMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flatten migrated matrix from 2d to 1d. </p>
 
 </div>
 </div>
@@ -1328,8 +1818,8 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="aa6094d80af47a2557693a3d3005d5013"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6094d80af47a2557693a3d3005d5013">&#9670;&nbsp;</a></span>ListCudaDevices()</h2>
+<a id="ad1beeb03129fea545cfb18009d2d955f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1beeb03129fea545cfb18009d2d955f">&#9670;&nbsp;</a></span>ListCudaDevices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1338,7 +1828,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">__host__ void Markov::API::CUDA::CUDADeviceController::ListCudaDevices </td>
+          <td class="memname">static __host__ void Markov::API::CUDA::CUDADeviceController::ListCudaDevices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1346,7 +1836,7 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1531,7 +2021,7 @@ Here is the call graph for this function:</div>
 <div class="line"> }</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">randomEngine</td><td><a class="el" href="namespace_markov_1_1_random.html" title="Objects related to RNG.">Random</a> Engine to use for the random walks. For examples, see <a class="el" href="class_markov_1_1_random_1_1_mersenne.html" title="Implementation of Mersenne Twister Engine.">Markov::Random::Mersenne</a> and <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Markov::Random::Marsaglia</a> </td></tr>
+    <tr><td class="paramname">randomEngine</td><td><a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random.html" title="Namespace for Random engines operable under device space.">Random</a> Engine to use for the random walks. For examples, see <a class="el" href="class_markov_1_1_random_1_1_mersenne.html" title="Implementation of Mersenne Twister Engine.">Markov::Random::Mersenne</a> and <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Markov::Random::Marsaglia</a> </td></tr>
     <tr><td class="paramname">minSetting</td><td>Minimum number of characters to generate </td></tr>
     <tr><td class="paramname">maxSetting</td><td>Maximum number of character to generate </td></tr>
     <tr><td class="paramname">buffer</td><td>buffer to write the result to </td></tr>
@@ -1570,34 +2060,6 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordflow">return</span> buffer; <span class="comment">//for now</span></div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;}</div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="ac4af6bbd60ecbe204bfc4d5cdab24004"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4af6bbd60ecbe204bfc4d5cdab24004">&#9670;&nbsp;</a></span>RetrieveCudaBuffer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">__host__ void Markov::API::CUDA::CUDAModelMatrix::RetrieveCudaBuffer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Retrieve the result buffer from <a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html" title="Namespace for objects requiring CUDA libraries.">CUDA</a> kernel. </p>
-<p>Done on each partition. </p>
-
 </div>
 </div>
 <a id="a4f4997da3a6cd3bd2717ce9759736660"></a>
@@ -1884,8 +2346,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a2329ce70d7bc9ea0797079a599dd9170"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2329ce70d7bc9ea0797079a599dd9170">&#9670;&nbsp;</a></span>device_edgeMatrix</h2>
+<a id="a06672c27d6c96e9f8808f61c6648f191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06672c27d6c96e9f8808f61c6648f191">&#9670;&nbsp;</a></span>device_edgeMatrix</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1894,7 +2356,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char** Markov::API::CUDA::CUDAModelMatrix::device_edgeMatrix</td>
+          <td class="memname">char* Markov::API::CUDA::CUDAModelMatrix::device_edgeMatrix</td>
         </tr>
       </table>
   </td>
@@ -1904,7 +2366,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cuda_model_matrix_8h_source.html#l00057">57</a> of file <a class="el" href="cuda_model_matrix_8h_source.html">cudaModelMatrix.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_model_matrix_8h_source.html#l00069">69</a> of file <a class="el" href="cuda_model_matrix_8h_source.html">cudaModelMatrix.h</a>.</p>
 
 </div>
 </div>
@@ -1928,7 +2390,31 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cuda_model_matrix_8h_source.html#l00059">59</a> of file <a class="el" href="cuda_model_matrix_8h_source.html">cudaModelMatrix.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_model_matrix_8h_source.html#l00071">71</a> of file <a class="el" href="cuda_model_matrix_8h_source.html">cudaModelMatrix.h</a>.</p>
+
+</div>
+</div>
+<a id="a1ec34676837c3cdd5ec2f18a77faec12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ec34676837c3cdd5ec2f18a77faec12">&#9670;&nbsp;</a></span>device_outputBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* Markov::API::CUDA::CUDAModelMatrix::device_outputBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cuda_model_matrix_8h_source.html#l00073">73</a> of file <a class="el" href="cuda_model_matrix_8h_source.html">cudaModelMatrix.h</a>.</p>
 
 </div>
 </div>
@@ -1952,12 +2438,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cuda_model_matrix_8h_source.html#l00060">60</a> of file <a class="el" href="cuda_model_matrix_8h_source.html">cudaModelMatrix.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_model_matrix_8h_source.html#l00072">72</a> of file <a class="el" href="cuda_model_matrix_8h_source.html">cudaModelMatrix.h</a>.</p>
 
 </div>
 </div>
-<a id="aef9d4b48f3a4a2957077e0c53f3eab60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef9d4b48f3a4a2957077e0c53f3eab60">&#9670;&nbsp;</a></span>device_valueMatrix</h2>
+<a id="a81e3be9eac6dab929de3b118d9343b27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e3be9eac6dab929de3b118d9343b27">&#9670;&nbsp;</a></span>device_valueMatrix</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1966,7 +2452,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long int** Markov::API::CUDA::CUDAModelMatrix::device_valueMatrix</td>
+          <td class="memname">long int* Markov::API::CUDA::CUDAModelMatrix::device_valueMatrix</td>
         </tr>
       </table>
   </td>
@@ -1976,7 +2462,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cuda_model_matrix_8h_source.html#l00058">58</a> of file <a class="el" href="cuda_model_matrix_8h_source.html">cudaModelMatrix.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cuda_model_matrix_8h_source.html#l00070">70</a> of file <a class="el" href="cuda_model_matrix_8h_source.html">cudaModelMatrix.h</a>.</p>
 
 </div>
 </div>
@@ -2029,6 +2515,54 @@ Here is the caller graph for this function:</div>
 <p>A list of all edges in this model. </p>
 
 <p class="definition">Definition at line <a class="el" href="model_8h_source.html#l00194">194</a> of file <a class="el" href="model_8h_source.html">model.h</a>.</p>
+
+</div>
+</div>
+<a id="a6345ea79ce015e2a97d1be91a661449a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6345ea79ce015e2a97d1be91a661449a">&#9670;&nbsp;</a></span>flatEdgeMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* Markov::API::CUDA::CUDAModelMatrix::flatEdgeMatrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cuda_model_matrix_8h_source.html#l00076">76</a> of file <a class="el" href="cuda_model_matrix_8h_source.html">cudaModelMatrix.h</a>.</p>
+
+</div>
+</div>
+<a id="abb65a788e9039a3b46cc5cdc76a11130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb65a788e9039a3b46cc5cdc76a11130">&#9670;&nbsp;</a></span>flatValueMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long int* Markov::API::CUDA::CUDAModelMatrix::flatValueMatrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cuda_model_matrix_8h_source.html#l00077">77</a> of file <a class="el" href="cuda_model_matrix_8h_source.html">cudaModelMatrix.h</a>.</p>
 
 </div>
 </div>
@@ -2131,6 +2665,30 @@ Here is the caller graph for this function:</div>
 <p>Map LeftNode is the Nodes NodeValue Map RightNode is the node pointer. </p>
 
 <p class="definition">Definition at line <a class="el" href="model_8h_source.html#l00183">183</a> of file <a class="el" href="model_8h_source.html">model.h</a>.</p>
+
+</div>
+</div>
+<a id="a26d0692f6a494ab4a2871142b39ce066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26d0692f6a494ab4a2871142b39ce066">&#9670;&nbsp;</a></span>outputBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* Markov::API::CUDA::CUDAModelMatrix::outputBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cuda_model_matrix_8h_source.html#l00074">74</a> of file <a class="el" href="cuda_model_matrix_8h_source.html">cudaModelMatrix.h</a>.</p>
 
 </div>
 </div>
@@ -2259,6 +2817,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="aclass_markov_1_1_model_html_aa4a11c6679c998936332f8409ae95375"><div class="ttname"><a href="class_markov_1_1_model.html#aa4a11c6679c998936332f8409ae95375">Markov::Model&lt; char &gt;::RandomWalk</a></div><div class="ttdeci">char * RandomWalk(Markov::Random::RandomEngine *randomEngine, int minSetting, int maxSetting, char *buffer)</div><div class="ttdoc">Do a random walk on this model.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00292">model.h:292</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_model_html_ae16027a94235d2988ac4be35ea07d939"><div class="ttname"><a href="class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939">Markov::Model&lt; char &gt;::Export</a></div><div class="ttdeci">bool Export(std::ofstream *)</div><div class="ttdoc">Export a file of the model.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00273">model.h:273</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_markov_passwords_html_ab4794af67fd4513921fee8ae669f2dd4"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#ab4794af67fd4513921fee8ae669f2dd4">Markov::API::MarkovPasswords::datasetFile</a></div><div class="ttdeci">std::ifstream * datasetFile</div><div class="ttdef"><b>Definition:</b> <a href="markov_passwords_8h_source.html#l00106">markovPasswords.h:106</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_html_a61c65866ecf7fe229c01fcc0f9c10711"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711">Markov::API::CUDA::CUDADeviceController::CudaCheckNotifyErr</a></div><div class="ttdeci">static __host__ int CudaCheckNotifyErr(cudaError_t _status, const char *msg, bool bExit=true)</div><div class="ttdoc">Check results of the last operation on GPU.</div></div>
 <div class="ttc" id="aclass_markov_1_1_node_html"><div class="ttname"><a href="class_markov_1_1_node.html">Markov::Node&lt; NodeStorageType &gt;</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_model_html_a35cb15a14d034f3365b9d2d3efa1ffc0"><div class="ttname"><a href="class_markov_1_1_model.html#a35cb15a14d034f3365b9d2d3efa1ffc0">Markov::Model&lt; char &gt;::StarterNode</a></div><div class="ttdeci">Node&lt; char &gt; * StarterNode()</div><div class="ttdoc">Return starter Node.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00167">model.h:167</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html_a0a56da316d520b80be6b6df6c9e0b537"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html#a0a56da316d520b80be6b6df6c9e0b537">Markov::Random::Marsaglia::random</a></div><div class="ttdeci">unsigned long random()</div><div class="ttdoc">Generate Random Number.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00131">random.h:131</a></div></div>
@@ -2275,11 +2834,12 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_html_a068e1a9ff477de23a44c10230df416a5"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#a068e1a9ff477de23a44c10230df416a5">Markov::API::Concurrency::ThreadSharedListHandler::next</a></div><div class="ttdeci">bool next(std::string *line)</div><div class="ttdoc">Read the next line from the file.</div><div class="ttdef"><b>Definition:</b> <a href="thread_shared_list_handler_8cpp_source.html#l00010">threadSharedListHandler.cpp:10</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_model_matrix_html_a96f2885aac69b49b21c66ad5a32514b9"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a96f2885aac69b49b21c66ad5a32514b9">Markov::API::ModelMatrix::FastRandomWalkThread</a></div><div class="ttdeci">void FastRandomWalkThread(std::mutex *mlock, std::ofstream *wordlist, unsigned long int n, int minLen, int maxLen, int id, bool bFileIO)</div><div class="ttdoc">A single thread of a single partition of FastRandomWalk.</div><div class="ttdef"><b>Definition:</b> <a href="model_matrix_8cpp_source.html#l00112">modelMatrix.cpp:112</a></div></div>
 <div class="ttc" id="anamespacemodel__2gram_html_a2c21010331f2adf96f64d1e90d019e76"><div class="ttname"><a href="namespacemodel__2gram.html#a2c21010331f2adf96f64d1e90d019e76">model_2gram.f</a></div><div class="ttdeci">f</div><div class="ttdoc">output file handle</div><div class="ttdef"><b>Definition:</b> <a href="model__2gram_8py_source.html#l00016">model_2gram.py:16</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_html_aa79c9cac041d2c53be8d21e903c2aacc"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#aa79c9cac041d2c53be8d21e903c2aacc">Markov::API::CUDA::CUDADeviceController::CudaCheckNotifyErr</a></div><div class="ttdeci">__host__ int CudaCheckNotifyErr(cudaError_t _status, const char *msg)</div><div class="ttdoc">Check results of the last operation on GPU.</div></div>
 <div class="ttc" id="aclass_markov_1_1_model_html"><div class="ttname"><a href="class_markov_1_1_model.html">Markov::Model&lt; char &gt;</a></div></div>
+<div class="ttc" id="anamespace_markov_1_1_a_p_i_1_1_c_u_d_a_html_a3e74937619866dc763c1f11b923866aa"><div class="ttname"><a href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html#a3e74937619866dc763c1f11b923866aa">Markov::API::CUDA::strchr</a></div><div class="ttdeci">__device__ char * strchr(char *p, char c, int s_len)</div><div class="ttdoc">srtchr implementation on device space</div></div>
 <div class="ttc" id="aclass_markov_1_1_model_html_aa772f79f444c2971f615df7be5e28bca"><div class="ttname"><a href="class_markov_1_1_model.html#aa772f79f444c2971f615df7be5e28bca">Markov::Model&lt; char &gt;::nodes</a></div><div class="ttdeci">std::map&lt; char, Node&lt; char &gt; * &gt; nodes</div><div class="ttdoc">Map LeftNode is the Nodes NodeValue Map RightNode is the node pointer.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00183">model.h:183</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_model_html_ad2d9bf601df78f80076f5d3fbb65fe28"><div class="ttname"><a href="class_markov_1_1_model.html#ad2d9bf601df78f80076f5d3fbb65fe28">Markov::Model&lt; char &gt;::starterNode</a></div><div class="ttdeci">Node&lt; char &gt; * starterNode</div><div class="ttdoc">Starter Node of this model.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00188">model.h:188</a></div></div>
 <div class="ttc" id="anamespacemarkopy__cli_html_a573dcc41f3a527edb70e831cd8108c78"><div class="ttname"><a href="namespacemarkopy__cli.html#a573dcc41f3a527edb70e831cd8108c78">markopy_cli.model</a></div><div class="ttdeci">def model</div><div class="ttdef"><b>Definition:</b> <a href="markopy__cli_8py_source.html#l00132">markopy_cli.py:132</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_model_matrix_html_ad775d2e9c35e6f78c53f796df11405b5"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5">Markov::API::ModelMatrix::FastRandomWalkPartition</a></div><div class="ttdeci">void FastRandomWalkPartition(std::mutex *mlock, std::ofstream *wordlist, unsigned long int n, int minLen, int maxLen, bool bFileIO, int threads)</div><div class="ttdoc">A single partition of FastRandomWalk event.</div><div class="ttdef"><b>Definition:</b> <a href="model_matrix_8cpp_source.html#l00182">modelMatrix.cpp:182</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_model_matrix_html_af01f1dbb05b7b25a69a0c95518549f32"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#af01f1dbb05b7b25a69a0c95518549f32">Markov::API::ModelMatrix::matrixIndex</a></div><div class="ttdeci">char * matrixIndex</div><div class="ttdef"><b>Definition:</b> <a href="model_matrix_8h_source.html#l00115">modelMatrix.h:115</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_edge_html"><div class="ttname"><a href="class_markov_1_1_edge.html">Markov::Edge</a></div><div class="ttdoc">Edge class used to link nodes in the model together.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00026">model.h:26</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_model_matrix_html_aa05bf3d2838be25198557b9f023d2980"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#aa05bf3d2838be25198557b9f023d2980">Markov::API::ModelMatrix::edgeMatrix</a></div><div class="ttdeci">char ** edgeMatrix</div><div class="ttdef"><b>Definition:</b> <a href="model_matrix_8h_source.html#l00112">modelMatrix.h:112</a></div></div>

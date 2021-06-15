@@ -7,7 +7,7 @@
 #include "cudaModelMatrix.h"
 #include <cuda_runtime_api.h>
 #include <cuda.h>
-#include "device_launch_parameters.h"
+#include <device_launch_parameters.h>
 
 using Markov::API::CUDA::CUDADeviceController;
 
