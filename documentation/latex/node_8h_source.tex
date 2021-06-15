@@ -1,0 +1,142 @@
+\hypertarget{node_8h_source}{}\doxysection{node.\+h}
+\label{node_8h_source}\index{node.h@{node.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include <assert.h>}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#include <stdexcept>} \textcolor{comment}{// To use runtime\_error}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{edge_8h}{edge.h}}"}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{random_8h}{random.h}}"}}
+\DoxyCodeLine{00009 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_markov}{Markov}} \{}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00015     \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{00016     \textcolor{keyword}{class }Node \{}
+\DoxyCodeLine{00017     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00021         Node<storageType>();}
+\DoxyCodeLine{00022         }
+\DoxyCodeLine{00032         Node<storageType>(storageType \mbox{\hyperlink{class_markov_1_1_node_a9851cd33ea466176a5728e3ccea6efed}{\_value}});}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00047         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(Node<storageType>*);}
+\DoxyCodeLine{00048         }
+\DoxyCodeLine{00063         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(Edge<storageType>*);}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00098         Node<storageType>* \mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{Markov::Random::RandomEngine}}* randomEngine);}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00118         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{UpdateEdges}}(Edge<storageType>*);}
+\DoxyCodeLine{00119         }
+\DoxyCodeLine{00138         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(storageType repr);}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00144         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(Node<storageType>* target);}
+\DoxyCodeLine{00145         }
+\DoxyCodeLine{00149         \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}();}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00154         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_node_ab254a9c976195fcb1cac4d463d030d3c}{UpdateTotalVerticeWeight}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} offset);}
+\DoxyCodeLine{00155 }
+\DoxyCodeLine{00158         \textcolor{keyword}{inline} std::map<storageType, Edge<storageType>*>* \mbox{\hyperlink{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}{Edges}}();}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00162         \textcolor{keyword}{inline} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_node_a60166d8f501c016de104f48e46bff223}{TotalEdgeWeights}}();}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00165}\mbox{\hyperlink{class_markov_1_1_node_ad2ac18d9abd220dfd90b9df6f92c5d59}{00165}}         std::vector<Edge<storageType>*> \mbox{\hyperlink{class_markov_1_1_node_ad2ac18d9abd220dfd90b9df6f92c5d59}{edgesV}};}
+\DoxyCodeLine{00166     \textcolor{keyword}{private}:}
+\DoxyCodeLine{00167 }
+\DoxyCodeLine{00168         }
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00169}\mbox{\hyperlink{class_markov_1_1_node_a9851cd33ea466176a5728e3ccea6efed}{00169}}         storageType \mbox{\hyperlink{class_markov_1_1_node_a9851cd33ea466176a5728e3ccea6efed}{\_value}}; }
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00171}\mbox{\hyperlink{class_markov_1_1_node_ade384415c5b47dca4990293b8599e6ce}{00171}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_node_ade384415c5b47dca4990293b8599e6ce}{total\_edge\_weights}};}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00177}\mbox{\hyperlink{class_markov_1_1_node_ab93adf2f99ab396bdba8eeb6537b21fd}{00177}}         std::map<storageType, Edge<storageType>*> \mbox{\hyperlink{class_markov_1_1_node_ab93adf2f99ab396bdba8eeb6537b21fd}{edges}};}
+\DoxyCodeLine{00178     \};}
+\DoxyCodeLine{00179 \};}
+\DoxyCodeLine{00180 }
+\DoxyCodeLine{00181 }
+\DoxyCodeLine{00182 }
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{00184 }
+\DoxyCodeLine{00185 }
+\DoxyCodeLine{00186 }
+\DoxyCodeLine{00187 }
+\DoxyCodeLine{00188 }
+\DoxyCodeLine{00189 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00190}\mbox{\hyperlink{class_markov_1_1_node_ae89b442197e67a84948ba251f6824ad0}{00190}} \mbox{\hyperlink{class_markov_1_1_node_a29468e9baf4e7cec86116ef3cbcfcb47}{Markov::Node<storageType>::Node}}(storageType \_value) \{}
+\DoxyCodeLine{00191     this-\/>\_value = \_value;}
+\DoxyCodeLine{00192     this-\/>total\_edge\_weights = 0L;}
+\DoxyCodeLine{00193 \};}
+\DoxyCodeLine{00194 }
+\DoxyCodeLine{00195 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00196}\mbox{\hyperlink{class_markov_1_1_node_a29468e9baf4e7cec86116ef3cbcfcb47}{00196}} \mbox{\hyperlink{class_markov_1_1_node_a29468e9baf4e7cec86116ef3cbcfcb47}{Markov::Node<storageType>::Node}}() \{}
+\DoxyCodeLine{00197     this-\/>\_value = 0;}
+\DoxyCodeLine{00198     this-\/>total\_edge\_weights = 0L;}
+\DoxyCodeLine{00199 \};}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00202}\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{00202}} \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{Markov::Node<storageType>::NodeValue}}() \{}
+\DoxyCodeLine{00203     \textcolor{keywordflow}{return} \_value;}
+\DoxyCodeLine{00204 \}}
+\DoxyCodeLine{00205 }
+\DoxyCodeLine{00206 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00207}\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{00207}} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<storageType>}}* \mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Markov::Node<storageType>::Link}}(\mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<storageType>}}* n) \{}
+\DoxyCodeLine{00208     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<storageType>}}* v = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<storageType>}}(\textcolor{keyword}{this}, n);}
+\DoxyCodeLine{00209     this-\/>UpdateEdges(v);}
+\DoxyCodeLine{00210     \textcolor{keywordflow}{return} v;}
+\DoxyCodeLine{00211 \}}
+\DoxyCodeLine{00212 }
+\DoxyCodeLine{00213 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00214}\mbox{\hyperlink{class_markov_1_1_node_a1db7cba480ab9fb41ef8ab53d1eac0f2}{00214}} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<storageType>}}* \mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Markov::Node<storageType>::Link}}(\mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<storageType>}}* v) \{}
+\DoxyCodeLine{00215     v-\/>\mbox{\hyperlink{class_markov_1_1_edge_a174cd2f818b7c929decee6f2bcea7025}{SetLeftEdge}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00216     this-\/>UpdateEdges(v);}
+\DoxyCodeLine{00217     \textcolor{keywordflow}{return} v;}
+\DoxyCodeLine{00218 \}}
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{00220 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00221}\mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{00221}} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<storageType>}}* \mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{Markov::Node<storageType>::RandomNext}}(\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{Markov::Random::RandomEngine}}* randomEngine) \{}
+\DoxyCodeLine{00222 }
+\DoxyCodeLine{00223     \textcolor{comment}{//get a random NodeValue in range of total\_vertice\_weight}}
+\DoxyCodeLine{00224     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} selection = randomEngine-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058}{random}}() \% this-\/>total\_edge\_weights;\textcolor{comment}{//distribution()(generator());// distribution(generator);}}
+\DoxyCodeLine{00225     \textcolor{comment}{//make absolute, no negative modulus values wanted}}
+\DoxyCodeLine{00226     \textcolor{comment}{//selection = (selection >= 0) ? selection : (selection + this-\/>total\_edge\_weights);}}
+\DoxyCodeLine{00227     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>edgesV.size();i++)\{}
+\DoxyCodeLine{00228         selection -\/= this-\/>edgesV[i]-\/>EdgeWeight();}
+\DoxyCodeLine{00229         \textcolor{keywordflow}{if} (selection < 0) \textcolor{keywordflow}{return} this-\/>edgesV[i]-\/>TraverseNode();}
+\DoxyCodeLine{00230     \}}
+\DoxyCodeLine{00231 }
+\DoxyCodeLine{00232     \textcolor{comment}{//if this assertion is reached, it means there is an implementation error above}}
+\DoxyCodeLine{00233     std::cout << \textcolor{stringliteral}{"This should never be reached (node failed to walk to next)\(\backslash\)n"}; \textcolor{comment}{//cant assert from child thread}}
+\DoxyCodeLine{00234     assert(\textcolor{keyword}{true} \&\& \textcolor{stringliteral}{"This should never be reached (node failed to walk to next)"});}
+\DoxyCodeLine{00235     \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{00236 \}}
+\DoxyCodeLine{00237 }
+\DoxyCodeLine{00238 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00239}\mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{00239}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{Markov::Node<storageType>::UpdateEdges}}(\mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<storageType>}}* v) \{}
+\DoxyCodeLine{00240     this-\/>edges.insert(\{ v-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}()-\/>NodeValue(), v \});}
+\DoxyCodeLine{00241     this-\/>edgesV.push\_back(v);}
+\DoxyCodeLine{00242     \textcolor{comment}{//this-\/>total\_edge\_weights += v-\/>EdgeWeight();}}
+\DoxyCodeLine{00243     \textcolor{keywordflow}{return} v-\/>\mbox{\hyperlink{class_markov_1_1_edge_a97e403fa0cf2666b2f142f28372de990}{TraverseNode}}();}
+\DoxyCodeLine{00244 \}}
+\DoxyCodeLine{00245 }
+\DoxyCodeLine{00246 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00247}\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{00247}} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<storageType>}}* \mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{Markov::Node<storageType>::FindEdge}}(storageType repr) \{}
+\DoxyCodeLine{00248     \textcolor{keyword}{auto} e = this-\/>edges.find(repr);}
+\DoxyCodeLine{00249     \textcolor{keywordflow}{if} (e == this-\/>edges.end()) \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{00250     \textcolor{keywordflow}{return} e-\/>second;}
+\DoxyCodeLine{00251 \};}
+\DoxyCodeLine{00252 }
+\DoxyCodeLine{00253 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00254}\mbox{\hyperlink{class_markov_1_1_node_ab254a9c976195fcb1cac4d463d030d3c}{00254}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_node_ab254a9c976195fcb1cac4d463d030d3c}{Markov::Node<storageType>::UpdateTotalVerticeWeight}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} offset) \{}
+\DoxyCodeLine{00255     this-\/>total\_edge\_weights += offset;}
+\DoxyCodeLine{00256 \}}
+\DoxyCodeLine{00257 }
+\DoxyCodeLine{00258 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00259}\mbox{\hyperlink{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}{00259}} \textcolor{keyword}{inline} std::map<storageType, Markov::Edge<storageType>*>* \mbox{\hyperlink{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}{Markov::Node<storageType>::Edges}}() \{}
+\DoxyCodeLine{00260     \textcolor{keywordflow}{return} \&(this-\/>edges);}
+\DoxyCodeLine{00261 \}}
+\DoxyCodeLine{00262 }
+\DoxyCodeLine{00263 \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00264}\mbox{\hyperlink{class_markov_1_1_node_a60166d8f501c016de104f48e46bff223}{00264}} \textcolor{keyword}{inline} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_node_a60166d8f501c016de104f48e46bff223}{Markov::Node<storageType>::TotalEdgeWeights}}() \{}
+\DoxyCodeLine{00265     \textcolor{keywordflow}{return} this-\/>total\_edge\_weights;}
+\DoxyCodeLine{00266 \}}
+\DoxyCodeLine{00267 }
+
+\end{DoxyCode}

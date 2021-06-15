@@ -1,0 +1,71 @@
+\hypertarget{namespace_markov_1_1_a_p_i_1_1_c_l_i}{}\doxysection{Markov\+::A\+PI\+::C\+LI Namespace Reference}
+\label{namespace_markov_1_1_a_p_i_1_1_c_l_i}\index{Markov::API::CLI@{Markov::API::CLI}}
+
+
+Structure to hold parsed cli arguements.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options}{\+\_\+program\+Options}}
+\begin{DoxyCompactList}\small\item\em Structure to hold parsed cli arguements. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse}{Argparse}}
+\begin{DoxyCompactList}\small\item\em Parse command line arguements. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Terminal}}
+\begin{DoxyCompactList}\small\item\em pretty colors for \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Terminal}}. Windows Only. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options}{Markov\+::\+A\+P\+I\+::\+C\+L\+I\+::\+\_\+program\+Options}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i_acdf1c80e63d183095fe2956cc38bf042}{Program\+Options}}
+\begin{DoxyCompactList}\small\item\em Structure to hold parsed cli arguements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i_ac91ec1d9a601445bd4e3ee362e3dbd3f}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722}{Markov\+::\+A\+P\+I\+::\+C\+L\+I\+::\+Terminal\+::color}} \&c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure to hold parsed cli arguements. 
+
+Namespace for the \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{C\+LI}} objects 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespace_markov_1_1_a_p_i_1_1_c_l_i_acdf1c80e63d183095fe2956cc38bf042}\label{namespace_markov_1_1_a_p_i_1_1_c_l_i_acdf1c80e63d183095fe2956cc38bf042}} 
+\index{Markov::API::CLI@{Markov::API::CLI}!ProgramOptions@{ProgramOptions}}
+\index{ProgramOptions@{ProgramOptions}!Markov::API::CLI@{Markov::API::CLI}}
+\doxysubsubsection{\texorpdfstring{ProgramOptions}{ProgramOptions}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options}{Markov\+::\+A\+P\+I\+::\+C\+L\+I\+::\+\_\+program\+Options}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i_acdf1c80e63d183095fe2956cc38bf042}{Markov\+::\+A\+P\+I\+::\+C\+L\+I\+::\+Program\+Options}}}
+
+
+
+Structure to hold parsed cli arguements. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_markov_1_1_a_p_i_1_1_c_l_i_ac91ec1d9a601445bd4e3ee362e3dbd3f}\label{namespace_markov_1_1_a_p_i_1_1_c_l_i_ac91ec1d9a601445bd4e3ee362e3dbd3f}} 
+\index{Markov::API::CLI@{Markov::API::CLI}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Markov::API::CLI@{Markov::API::CLI}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& Markov\+::\+A\+P\+I\+::\+C\+L\+I\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722}{Markov\+::\+A\+P\+I\+::\+C\+L\+I\+::\+Terminal\+::color}} \&}]{c }\end{DoxyParamCaption})}
+
+overload for std\+::cout. 
+
+Definition at line \mbox{\hyperlink{term_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{term_8cpp_source}{term.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060                                                                \{}
+\DoxyCodeLine{00061     \textcolor{keywordtype}{char} buf[6];}
+\DoxyCodeLine{00062     sprintf(buf,\textcolor{stringliteral}{"\%d"},Terminal::colormap.find(c)-\/>second);}
+\DoxyCodeLine{00063     os << \textcolor{stringliteral}{"\(\backslash\)e[1;"} << buf << \textcolor{stringliteral}{"m"};}
+\DoxyCodeLine{00064     \textcolor{keywordflow}{return} os;}
+\DoxyCodeLine{00065 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{term_8h_source_l00032}{Markov\+::\+A\+P\+I\+::\+C\+L\+I\+::\+Terminal\+::colormap}}.
+

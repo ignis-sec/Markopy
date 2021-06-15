@@ -3,6 +3,9 @@
 #include "ui_Train.h"
 
 namespace Markov::GUI{
+
+	/** @brief QT Training page class
+	*/ 
 	class Train :public QMainWindow {
 	Q_OBJECT
 	public:

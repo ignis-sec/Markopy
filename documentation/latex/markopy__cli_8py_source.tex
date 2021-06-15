@@ -1,0 +1,184 @@
+\hypertarget{markopy__cli_8py_source}{}\doxysection{markopy\+\_\+cli.\+py}
+\label{markopy__cli_8py_source}\index{markopy\_cli.py@{markopy\_cli.py}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00001}\mbox{\hyperlink{namespacemarkopy__cli}{00001}} \textcolor{comment}{\#!/usr/bin/python3}}
+\DoxyCodeLine{00002 \textcolor{stringliteral}{""" }}
+\DoxyCodeLine{00003 \textcolor{stringliteral}{  @namespace Markov::Markopy::Python}}
+\DoxyCodeLine{00004 \textcolor{stringliteral}{"""}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{keyword}{import} markopy}
+\DoxyCodeLine{00007 \textcolor{keyword}{import} argparse}
+\DoxyCodeLine{00008 \textcolor{keyword}{import} allogate \textcolor{keyword}{as} logging}
+\DoxyCodeLine{00009 \textcolor{keyword}{import} re}
+\DoxyCodeLine{00010 \textcolor{keyword}{import} os}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00012}\mbox{\hyperlink{namespacemarkopy__cli_a57371c71f08d532cbc8dc5138711329e}{00012}} parser = argparse.ArgumentParser(description=\textcolor{stringliteral}{"Python wrapper for MarkovPasswords."},}
+\DoxyCodeLine{00013                                  epilog=f\textcolor{stringliteral}{"""Sample runs:}}
+\DoxyCodeLine{00014 \textcolor{stringliteral}{\{\_\_file\_\_\} train untrained.mdl -\/d dataset.dat -\/s "\(\backslash\)\(\backslash\)t" -\/o trained.mdl}}
+\DoxyCodeLine{00015 \textcolor{stringliteral}{    Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl\(\backslash\)n}}
+\DoxyCodeLine{00016 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00017 \textcolor{stringliteral}{\{\_\_file\_\_\} generate trained.mdl -\/n 500 -\/w output.txt}}
+\DoxyCodeLine{00018 \textcolor{stringliteral}{    Import trained.mdl, and generate 500 lines to output.txt}}
+\DoxyCodeLine{00019 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00020 \textcolor{stringliteral}{\{\_\_file\_\_\} combine untrained.mdl -\/d dataset.dat -\/s "\(\backslash\)\(\backslash\)t" -\/n 500 -\/w output.txt}}
+\DoxyCodeLine{00021 \textcolor{stringliteral}{    Train and immediately generate 500 lines to output.txt. Do not export trained model.}}
+\DoxyCodeLine{00022 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00023 \textcolor{stringliteral}{\{\_\_file\_\_\} combine untrained.mdl -\/d dataset.dat -\/s "\(\backslash\)\(\backslash\)t" -\/n 500 -\/w output.txt -\/o trained.mdl}}
+\DoxyCodeLine{00024 \textcolor{stringliteral}{    Train and immediately generate 500 lines to output.txt. Export trained model.}}
+\DoxyCodeLine{00025 \textcolor{stringliteral}{"""}, formatter\_class=argparse.RawTextHelpFormatter)}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00027}\mbox{\hyperlink{namespacemarkopy__cli_a286a154b9b61efb39b244a12bbf5bb80}{00027}} parser.add\_argument(\textcolor{stringliteral}{"mode"}, help=\textcolor{stringliteral}{"Operation mode, supported modes: \(\backslash\)"generate\(\backslash\)", \(\backslash\)"train\(\backslash\)" and \(\backslash\)"combine\(\backslash\)"."})}
+\DoxyCodeLine{00028 parser.add\_argument(\textcolor{stringliteral}{"input"}, help=\textcolor{stringliteral}{"Input model file. This model will be imported before starting operation.\(\backslash\)n"}}
+\DoxyCodeLine{00029                                   + \textcolor{stringliteral}{"For more information on the file structure for input, check out the wiki page."})}
+\DoxyCodeLine{00030 parser.add\_argument(\textcolor{stringliteral}{"-\/o"}, \textcolor{stringliteral}{"-\/-\/output"},}
+\DoxyCodeLine{00031                     help=\textcolor{stringliteral}{"Output model filename. This model will be exported when done. Will be ignored for generation mode."})}
+\DoxyCodeLine{00032 parser.add\_argument(\textcolor{stringliteral}{"-\/d"}, \textcolor{stringliteral}{"-\/-\/dataset"},}
+\DoxyCodeLine{00033                     help=\textcolor{stringliteral}{"Dataset filename to read input from for training. Will be ignored for generation mode.\(\backslash\)n"}}
+\DoxyCodeLine{00034                     + \textcolor{stringliteral}{"Dataset is occurrence of a string and the string value seperated by a seperator. For more info "}}
+\DoxyCodeLine{00035                     + \textcolor{stringliteral}{"on the dataset file structure, check out the github wiki page."})}
+\DoxyCodeLine{00036 parser.add\_argument(\textcolor{stringliteral}{"-\/s"}, \textcolor{stringliteral}{"-\/-\/seperator"},}
+\DoxyCodeLine{00037                     help=\textcolor{stringliteral}{"Seperator character to use with training data.(character between occurrence and value)\(\backslash\)n"}}
+\DoxyCodeLine{00038                     + \textcolor{stringliteral}{"For more information on dataset/corpus file structure, check out the github wiki."})}
+\DoxyCodeLine{00039 parser.add\_argument(\textcolor{stringliteral}{"-\/w"}, \textcolor{stringliteral}{"-\/-\/wordlist"},}
+\DoxyCodeLine{00040                     help=\textcolor{stringliteral}{"Wordlist filename path to export generation results to. Will be ignored for training mode"})}
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00041}\mbox{\hyperlink{namespacemarkopy__cli_a5b14073623d29f92ed097fe814aea085}{00041}} parser.add\_argument(\textcolor{stringliteral}{"-\/-\/min"}, default=6, help=\textcolor{stringliteral}{"Minimum length that is allowed during generation.\(\backslash\)n"}}
+\DoxyCodeLine{00042                     + \textcolor{stringliteral}{"Any string shorter than this paremeter will retry to continue instead of proceeding to "}}
+\DoxyCodeLine{00043                     + \textcolor{stringliteral}{"finishing node"})}
+\DoxyCodeLine{00044 parser.add\_argument(\textcolor{stringliteral}{"-\/-\/max"}, default=12, help=\textcolor{stringliteral}{"Maximum length that is allowed during generation.\(\backslash\)n"}}
+\DoxyCodeLine{00045                     +\textcolor{stringliteral}{"Any string that does reaches this length are cut off irregardless to their position on the model."})}
+\DoxyCodeLine{00046 parser.add\_argument(\textcolor{stringliteral}{"-\/n"}, \textcolor{stringliteral}{"-\/-\/count"}, help=\textcolor{stringliteral}{"Number of lines to generate. Ignored in training mode."})}
+\DoxyCodeLine{00047 parser.add\_argument(\textcolor{stringliteral}{"-\/t"}, \textcolor{stringliteral}{"-\/-\/threads"}, default=10, help=\textcolor{stringliteral}{"Number of threads to use with training/generation.\(\backslash\)n"}}
+\DoxyCodeLine{00048                     +\textcolor{stringliteral}{"This many OS threads will be created for training/generation functions"})}
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00049}\mbox{\hyperlink{namespacemarkopy__cli_aaa15e546368ecfbb9817fbfebd9a69b3}{00049}} parser.add\_argument(\textcolor{stringliteral}{"-\/v"}, \textcolor{stringliteral}{"-\/-\/verbosity"}, action=\textcolor{stringliteral}{"count"}, help=\textcolor{stringliteral}{"Output verbosity.\(\backslash\)n"}}
+\DoxyCodeLine{00050                     + \textcolor{stringliteral}{"Set verbosity to 1: -\/v\(\backslash\)n"}}
+\DoxyCodeLine{00051                     + \textcolor{stringliteral}{"Set verbosity to 3: -\/vvv\(\backslash\)n"}}
+\DoxyCodeLine{00052                     + \textcolor{stringliteral}{"Print pretty much everything, including caller functions: -\/vvvvvvvvvvvvvvv"})}
+\DoxyCodeLine{00053 parser.add\_argument(\textcolor{stringliteral}{"-\/b"}, \textcolor{stringliteral}{"-\/-\/bulk"}, action=\textcolor{stringliteral}{"store\_true"},}
+\DoxyCodeLine{00054                     help=\textcolor{stringliteral}{"Bulk generate or bulk train every corpus/model in the folder.\(\backslash\)n"}}
+\DoxyCodeLine{00055                     + \textcolor{stringliteral}{"If working on this mode, output/input/dataset parameters should be a folder.\(\backslash\)n"}}
+\DoxyCodeLine{00056                     + \textcolor{stringliteral}{"Selected operation (generate/train) will be applied to each file in the folder, and "}}
+\DoxyCodeLine{00057                     + \textcolor{stringliteral}{"output to the output directory."})}
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00058}\mbox{\hyperlink{namespacemarkopy__cli_a8263be2d219caf76f9e70d2730cb9819}{00058}} args = parser.parse\_args()}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00061}\mbox{\hyperlink{namespacemarkopy__cli_ab341d43f9b4452d2015e628bf3c58a9e}{00061}} \textcolor{keyword}{def }\mbox{\hyperlink{namespacemarkopy__cli_ab341d43f9b4452d2015e628bf3c58a9e}{cli\_init}}(input\_model):}
+\DoxyCodeLine{00062     logging.VERBOSITY = 0}
+\DoxyCodeLine{00063     \textcolor{keywordflow}{if} args.verbosity:}
+\DoxyCodeLine{00064         logging.VERBOSITY = args.verbosity}
+\DoxyCodeLine{00065         logging.pprint(f\textcolor{stringliteral}{"Verbosity set to \{args.verbosity\}."}, 2)}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067     logging.pprint(\textcolor{stringliteral}{"Initializing model."}, 1)}
+\DoxyCodeLine{00068     model = markopy.MarkovPasswords()}
+\DoxyCodeLine{00069     logging.pprint(\textcolor{stringliteral}{"Model initialized."}, 2)}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071     logging.pprint(\textcolor{stringliteral}{"Importing model file."}, 1)}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073     \textcolor{keywordflow}{if} (\textcolor{keywordflow}{not} os.path.isfile(input\_model)):}
+\DoxyCodeLine{00074         logging.pprint(f\textcolor{stringliteral}{"Model file at \{input\_model\} not found. Check the file path, or working directory"})}
+\DoxyCodeLine{00075         exit(1)}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077     model.Import(input\_model)}
+\DoxyCodeLine{00078     logging.pprint(\textcolor{stringliteral}{"Model imported successfully."}, 2)}
+\DoxyCodeLine{00079     \textcolor{keywordflow}{return} model}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00082}\mbox{\hyperlink{namespacemarkopy__cli_aba737028a4ca1223e06631b16d22da93}{00082}} \textcolor{keyword}{def }\mbox{\hyperlink{namespacemarkopy__cli_aba737028a4ca1223e06631b16d22da93}{cli\_train}}(model, dataset, seperator, output, output\_forced=False, bulk=False):}
+\DoxyCodeLine{00083     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} (dataset \textcolor{keywordflow}{and} seperator \textcolor{keywordflow}{and} (output \textcolor{keywordflow}{or} \textcolor{keywordflow}{not} output\_forced)):}
+\DoxyCodeLine{00084         logging.pprint(}
+\DoxyCodeLine{00085             f\textcolor{stringliteral}{"Training mode requires -\/d/-\/-\/dataset\{', -\/o/-\/-\/output' if output\_forced else ''\} and -\/s/-\/-\/seperator parameters. Exiting."})}
+\DoxyCodeLine{00086         exit(2)}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088     \textcolor{keywordflow}{if} (\textcolor{keywordflow}{not} bulk \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(dataset)):}
+\DoxyCodeLine{00089         logging.pprint(f\textcolor{stringliteral}{"\{dataset\} doesn't exists. Check the file path, or working directory"})}
+\DoxyCodeLine{00090         exit(3)}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092     \textcolor{keywordflow}{if} (output \textcolor{keywordflow}{and} os.path.isfile(output)):}
+\DoxyCodeLine{00093         logging.pprint(f\textcolor{stringliteral}{"\{output\} exists and will be overwritten."}, 1)}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095     \textcolor{keywordflow}{if} (seperator == \textcolor{stringliteral}{'\(\backslash\)\(\backslash\)t'}):}
+\DoxyCodeLine{00096         logging.pprint(\textcolor{stringliteral}{"Escaping seperator."}, 3)}
+\DoxyCodeLine{00097         seperator = \textcolor{stringliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099     \textcolor{keywordflow}{if} (len(seperator) != 1):}
+\DoxyCodeLine{00100         logging.pprint(f\textcolor{stringliteral}{'Delimiter must be a single character, and "\{seperator\}" is not accepted.'})}
+\DoxyCodeLine{00101         exit(4)}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     logging.pprint(f\textcolor{stringliteral}{'Starting training.'}, 3)}
+\DoxyCodeLine{00104     model.Train(dataset, seperator, int(args.threads))}
+\DoxyCodeLine{00105     logging.pprint(f\textcolor{stringliteral}{'Training completed.'}, 2)}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107     \textcolor{keywordflow}{if} (output):}
+\DoxyCodeLine{00108         logging.pprint(f\textcolor{stringliteral}{'Exporting model to \{output\}'}, 2)}
+\DoxyCodeLine{00109         model.Export(output)}
+\DoxyCodeLine{00110     \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00111         logging.pprint(f\textcolor{stringliteral}{'Model will not be exported.'}, 1)}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113 }
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00114}\mbox{\hyperlink{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e}{00114}} \textcolor{keyword}{def }\mbox{\hyperlink{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e}{cli\_generate}}(model, wordlist, bulk=False):}
+\DoxyCodeLine{00115     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} (wordlist \textcolor{keywordflow}{or} args.count):}
+\DoxyCodeLine{00116         logging.pprint(\textcolor{stringliteral}{"Generation mode requires -\/w/-\/-\/wordlist and -\/n/-\/-\/count parameters. Exiting."})}
+\DoxyCodeLine{00117         exit(2)}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     \textcolor{keywordflow}{if} (bulk \textcolor{keywordflow}{and} os.path.isfile(wordlist)):}
+\DoxyCodeLine{00120         logging.pprint(f\textcolor{stringliteral}{"\{wordlist\} exists and will be overwritten."}, 1)}
+\DoxyCodeLine{00121     model.Generate(int(args.count), wordlist, int(args.min), int(args.max), int(args.threads))}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123 }
+\DoxyCodeLine{00124 \textcolor{keywordflow}{if} (args.bulk):}
+\DoxyCodeLine{00125     logging.pprint(f\textcolor{stringliteral}{"Bulk mode operation chosen."}, 4)}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127     \textcolor{keywordflow}{if} (args.mode.lower() == \textcolor{stringliteral}{"train"}):}
+\DoxyCodeLine{00128         \textcolor{keywordflow}{if} (os.path.isdir(args.output) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(args.output)) \textcolor{keywordflow}{and} (}
+\DoxyCodeLine{00129                 os.path.isdir(args.dataset) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(args.dataset)):}
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00130}\mbox{\hyperlink{namespacemarkopy__cli_a9981bd7881129bd6b325ca2386bb44f1}{00130}}             corpus\_list = os.listdir(args.dataset)}
+\DoxyCodeLine{00131             \textcolor{keywordflow}{for} corpus \textcolor{keywordflow}{in} corpus\_list:}
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00132}\mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{00132}}                 model = \mbox{\hyperlink{namespacemarkopy__cli_ab341d43f9b4452d2015e628bf3c58a9e}{cli\_init}}(args.input)}
+\DoxyCodeLine{00133                 logging.pprint(f\textcolor{stringliteral}{"Training \{args.input\} with \{corpus\}"}, 2)}
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00134}\mbox{\hyperlink{namespacemarkopy__cli_a216a948b6356f19bd55e63a73d2fb691}{00134}}                 output\_file\_name = corpus}
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00135}\mbox{\hyperlink{namespacemarkopy__cli_a284278a4b2f6ab3ff0a036390b05ee55}{00135}}                 model\_extension = \textcolor{stringliteral}{""}}
+\DoxyCodeLine{00136                 \textcolor{keywordflow}{if} \textcolor{stringliteral}{"."} \textcolor{keywordflow}{in} args.input:}
+\DoxyCodeLine{00137                     model\_extension = args.input.split(\textcolor{stringliteral}{"."})[-\/1]}
+\DoxyCodeLine{00138                 \mbox{\hyperlink{namespacemarkopy__cli_aba737028a4ca1223e06631b16d22da93}{cli\_train}}(model, f\textcolor{stringliteral}{"\{args.dataset\}/\{corpus\}"}, args.seperator,}
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00139}\mbox{\hyperlink{namespacemarkopy__cli_a467e50c1f956acbd27d5cfc8fea0e4f1}{00139}}                           f\textcolor{stringliteral}{"\{args.output\}/\{corpus\}.\{model\_extension\}"}, output\_forced=\textcolor{keyword}{True}, bulk=\textcolor{keyword}{True})}
+\DoxyCodeLine{00140         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00141             logging.pprint(\textcolor{stringliteral}{"In bulk training, output and dataset should be a directory."})}
+\DoxyCodeLine{00142             exit(1)}
+\DoxyCodeLine{00143 }
+\DoxyCodeLine{00144     \textcolor{keywordflow}{elif} (args.mode.lower() == \textcolor{stringliteral}{"generate"}):}
+\DoxyCodeLine{00145         \textcolor{keywordflow}{if} (os.path.isdir(args.wordlist) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(args.wordlist)) \textcolor{keywordflow}{and} (}
+\DoxyCodeLine{00146                 os.path.isdir(args.input) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(args.input)):}
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00147}\mbox{\hyperlink{namespacemarkopy__cli_a7a6da7e2d4058e3a162fc4943f76ef12}{00147}}             model\_list = os.listdir(args.input)}
+\DoxyCodeLine{00148             print(model\_list)}
+\DoxyCodeLine{00149             \textcolor{keywordflow}{for} input \textcolor{keywordflow}{in} model\_list:}
+\DoxyCodeLine{00150                 logging.pprint(f\textcolor{stringliteral}{"Generating from \{args.input\}/\{input\} to \{args.wordlist\}/\{input\}.txt"}, 2)}
+\DoxyCodeLine{00151 }
+\DoxyCodeLine{00152                 model = \mbox{\hyperlink{namespacemarkopy__cli_ab341d43f9b4452d2015e628bf3c58a9e}{cli\_init}}(f\textcolor{stringliteral}{"\{args.input\}/\{input\}"})}
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00153}\mbox{\hyperlink{namespacemarkopy__cli_a48904b95ac566fdb9625429815010d6c}{00153}}                 model\_base = input}
+\DoxyCodeLine{00154                 \textcolor{keywordflow}{if} \textcolor{stringliteral}{"."} \textcolor{keywordflow}{in} args.input:}
+\DoxyCodeLine{00155                     model\_base = input.split(\textcolor{stringliteral}{"."})[1]}
+\DoxyCodeLine{00156                 \mbox{\hyperlink{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e}{cli\_generate}}(model, f\textcolor{stringliteral}{"\{args.wordlist\}/\{model\_base\}.txt"}, bulk=\textcolor{keyword}{True})}
+\DoxyCodeLine{00157         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00158             logging.pprint(\textcolor{stringliteral}{"In bulk generation, input and wordlist should be directory."})}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160 \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00161     model = \mbox{\hyperlink{namespacemarkopy__cli_ab341d43f9b4452d2015e628bf3c58a9e}{cli\_init}}(args.input)}
+\DoxyCodeLine{00162     \textcolor{keywordflow}{if} (args.mode.lower() == \textcolor{stringliteral}{"generate"}):}
+\DoxyCodeLine{00163         \mbox{\hyperlink{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e}{cli\_generate}}(model, args.wordlist)}
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{00165 }
+\DoxyCodeLine{00166     \textcolor{keywordflow}{elif} (args.mode.lower() == \textcolor{stringliteral}{"train"}):}
+\DoxyCodeLine{\Hypertarget{markopy__cli_8py_source_l00167}\mbox{\hyperlink{namespacemarkopy__cli_aa14f55efc46124e1a8a70952f361ee55}{00167}}         \mbox{\hyperlink{namespacemarkopy__cli_aba737028a4ca1223e06631b16d22da93}{cli\_train}}(model, args.dataset, args.seperator, args.output, output\_forced=\textcolor{keyword}{True})}
+\DoxyCodeLine{00168 }
+\DoxyCodeLine{00169 }
+\DoxyCodeLine{00170     \textcolor{keywordflow}{elif} (args.mode.lower() == \textcolor{stringliteral}{"combine"}):}
+\DoxyCodeLine{00171         \mbox{\hyperlink{namespacemarkopy__cli_aba737028a4ca1223e06631b16d22da93}{cli\_train}}(model, args.dataset, args.seperator, args.output)}
+\DoxyCodeLine{00172         \mbox{\hyperlink{namespacemarkopy__cli_acbad1b17f7d290d7a6b3b87554437e5e}{cli\_generate}}(model, args.wordlist)}
+\DoxyCodeLine{00173 }
+\DoxyCodeLine{00174 }
+\DoxyCodeLine{00175     \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00176         logging.pprint(\textcolor{stringliteral}{"Invalid mode arguement given."})}
+\DoxyCodeLine{00177         logging.pprint(\textcolor{stringliteral}{"Accepted modes: 'Generate', 'Train', 'Combine'"})}
+\DoxyCodeLine{00178         exit(5)}
+
+\end{DoxyCode}

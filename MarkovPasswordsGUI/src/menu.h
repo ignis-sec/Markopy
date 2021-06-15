@@ -4,6 +4,8 @@
 
 
 namespace Markov::GUI{
+	/** @brief QT Menu class
+	*/ 
 	class menu:public QMainWindow {
 	Q_OBJECT
 	public:
