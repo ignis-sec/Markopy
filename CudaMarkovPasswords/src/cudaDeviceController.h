@@ -1,4 +1,11 @@
 
+#pragma once
+#include <iostream>
+#include <curand_kernel.h>
+#include <cuda.h>
+#include <cuda_runtime.h>
+#include <device_launch_parameters.h>
+
 /** @brief Namespace for objects requiring CUDA libraries.
 */
 namespace Markov::API::CUDA{
@@ -22,25 +29,46 @@ namespace Markov::API::CUDA{
          * Max Linear Threads: 1024
 		 * @endcode
 		*/
-        __host__ void ListCudaDevices();
+        __host__ static void ListCudaDevices();
 
     protected:
         /** @brief Check results of the last operation on GPU.
-         * 
-         * Check the status returned from cudaMalloc/cudaMemcpy to find failures.
-         * 
-         * If a failure occurs, its assumed beyond redemption, and exited.
-         * @param _status Cuda error status to check 
-         * @param msg Message to print in case of a failure
-         * @return 0 if successful, 1 if failure.
-         * @b Example @b output:
-         * @code{.txt}
-         * char *da, a = "test";
-         * cudastatus = cudaMalloc((char **)&da, 5*sizeof(char*));
-         * CudaCheckNotifyErr(cudastatus, "Failed to allocate VRAM for *da.\n");
+         * 2M for *da.");
 		 * @endcode
 		*/
-        __host__ int CudaCheckNotifyErr(cudaError_t _status, const char* msg);
+        __host__ static int CudaCheckNotifyErr(cudaError_t _status, const char* msg, bool bExit=true);
+
+
+        template <typename T>
+        __host__ static cudaError_t CudaMalloc2DToFlat(T** dst, int row, int col){
+            cudaError_t cudastatus = cudaMalloc((T **)dst, row*col*sizeof(T));
+            CudaCheckNotifyErr(cudastatus, "cudaMalloc Failed.", false);
+            return cudastatus;
+        }
+
+        template <typename T>
+        __host__ static cudaError_t CudaMemcpy2DToFlat(T* dst, T** src, int row, int col){
+            T* tempbuf = new T[row*col];
+            for(int i=0;i<row;i++){
+                memcpy(&(tempbuf[row*i]), src[i], col);
+            }
+            return cudaMemcpy(dst, tempbuf, row*col*sizeof(T), cudaMemcpyHostToDevice);
+            
+        }
+
+        template <typename T>
+        __host__ static cudaError_t CudaMigrate2DFlat(T** dst, T** src, int row, int col){
+            cudaError_t cudastatus;
+            cudastatus = CudaMalloc2DToFlat<T>(dst, row, col);
+            if(cudastatus!=cudaSuccess){
+                CudaCheckNotifyErr(cudastatus, "  CudaMalloc2DToFlat Failed.", false);
+                return cudastatus;
+            }
+            cudastatus = CudaMemcpy2DToFlat<T>(*dst,src,row,col);
+            CudaCheckNotifyErr(cudastatus, "  CudaMemcpy2DToFlat Failed.", false);
+            return cudastatus;
+        }
+        
 
     private:
     };
