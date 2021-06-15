@@ -4,7 +4,7 @@
 
 
 
-
+using namespace Markov::GUI;
 
 CLI::CLI(QWidget* parent)
     : QMainWindow(parent)

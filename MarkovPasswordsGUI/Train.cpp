@@ -11,6 +11,8 @@
 #include "Generate.h"
 
 
+using namespace Markov::GUI;
+
 Train::Train(QWidget* parent)
     : QMainWindow(parent)
 {
@@ -50,7 +52,7 @@ void Train::train() {
 
    
     char a=',';
-    MarkovPasswords mp;
+    Markov::API::CLI::MarkovPasswords mp;
     mp.Import("models/2gram.mdl");
     mp.Train(cstr, a, 10); //please parameterize this hardcoded 10 threads
     mp.Export("models/finished.mdl"); 

@@ -4,6 +4,7 @@
 #include <Windows.h>
 #include "CLI.h"
 
+using namespace Markov::GUI;
 
 MarkovPasswordsGUI::MarkovPasswordsGUI(QWidget *parent)
     : QMainWindow(parent)

@@ -3,17 +3,19 @@
 #include "ui_Generate.h"
 
 
-class Generate :public QMainWindow {
-	Q_OBJECT
-public:
-	Generate(QWidget* parent = Q_NULLPTR);
+namespace Markov::GUI{
+	class Generate :public QMainWindow {
+		Q_OBJECT
+	public:
+		Generate(QWidget* parent = Q_NULLPTR);
 
-private:
-	Ui::Generate ui;
+	private:
+		Ui::Generate ui;
 
-public slots:
-	void home();
-	void generation();
-	void train();
-	void vis();
+	public slots:
+    void home();
+    void generation();
+    void train();
+    void vis();
+	};
 };

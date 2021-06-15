@@ -8,6 +8,8 @@
 #include "../MarkovPasswords/src/markovPasswords.h"
 #include <QtWidgets/QApplication>
 #include "src/MarkovPasswordsGUI.h"
+using namespace Markov::GUI;
+
 
 Generate::Generate(QWidget* parent)
     : QMainWindow(parent)
