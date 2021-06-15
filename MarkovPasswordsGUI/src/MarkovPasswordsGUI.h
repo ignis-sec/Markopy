@@ -4,6 +4,7 @@
 #include "ui_MarkovPasswordsGUI.h"
 
 
+
 namespace Markov::GUI{
     /** @brief Reporting UI.
     *   
@@ -11,22 +12,6 @@ namespace Markov::GUI{
     */
     class MarkovPasswordsGUI : public QMainWindow {
         Q_OBJECT
-
-    public:
-        /** @brief Default QT consturctor.
-        * @param parent - Parent widget.
-        */
-        MarkovPasswordsGUI(QWidget *parent = Q_NULLPTR);
-
-        /** @brief Render a HTML file.
-        * @param filename - Filename of the html file. (relative path to the views folder).
-        */
-        void renderHTMLFile(std::string* filename);
-
-        /** @brief Load a dataset to current view..
-        * @param filename - Filename of the dataset file. (relative path to the views folder).
-        */
-        void loadDataset(std::string* filename);
 
     private:
         Ui::MarkovPasswordsGUIClass ui;
@@ -39,7 +24,14 @@ namespace Markov::GUI{
         void MarkovPasswordsGUI::modelvisSelected();
         void MarkovPasswordsGUI::visualDebugSelected();
         void MarkovPasswordsGUI::comparisonSelected();
-    };
+    
+   
+  public slots:
+
+      void MarkovPasswordsGUI::home();
+      void MarkovPasswordsGUI :: pass();
+      void MarkovPasswordsGUI::model();
+  };
 };
 
 

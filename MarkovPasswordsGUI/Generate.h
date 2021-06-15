@@ -13,7 +13,9 @@ namespace Markov::GUI{
 		Ui::Generate ui;
 
 	public slots:
-		void home();
-		void generation();
+    void home();
+    void generation();
+    void train();
+    void vis();
 	};
 };
