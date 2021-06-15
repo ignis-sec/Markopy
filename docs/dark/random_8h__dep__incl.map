@@ -1,6 +1,7 @@
 <map id="random.h" name="random.h">
-<area shape="rect" id="node1" title=" " alt="" coords="409,5,509,35"/>
+<area shape="rect" id="node1" title=" " alt="" coords="474,5,574,35"/>
 <area shape="rect" id="node2" href="$node_8h.html" title=" " alt="" coords="420,83,497,112"/>
+<area shape="rect" id="node13" href="$cudarandom_8h.html" title=" " alt="" coords="521,83,660,112"/>
 <area shape="rect" id="node3" href="$model_8h.html" title=" " alt="" coords="415,160,502,189"/>
 <area shape="rect" id="node4" href="$markov_passwords_8h.html" title=" " alt="" coords="199,237,377,267"/>
 <area shape="rect" id="node11" href="$dllmain_8cpp.html" title=" " alt="" coords="401,237,516,267"/>

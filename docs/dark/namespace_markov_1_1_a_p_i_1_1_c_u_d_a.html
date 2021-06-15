@@ -84,7 +84,9 @@ $(document).ready(function(){initNavTree('namespace_markov_1_1_a_p_i_1_1_c_u_d_a
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Markov::API::CUDA Namespace Reference</div>  </div>
 </div><!--header-->
@@ -93,6 +95,12 @@ $(document).ready(function(){initNavTree('namespace_markov_1_1_a_p_i_1_1_c_u_d_a
 <p>Namespace for objects requiring <a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html" title="Namespace for objects requiring CUDA libraries.">CUDA</a> libraries.  
 <a href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random.html">Random</a></td></tr>
+<tr class="memdesc:namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for <a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random.html" title="Namespace for Random engines operable under device space.">Random</a> engines operable under <b>device</b> space. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html">CUDADeviceController</a></td></tr>
@@ -101,10 +109,167 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html">CUDAModelMatrix</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extension of <a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html" title="Class to flatten and reduce Markov::Model to a Matrix.">Markov::API::ModelMatrix</a> which is modified to run on GPU devices.  <a href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a67e8dd9b192bc5a7f35b8187f376dccc"><td class="memItemLeft" align="right" valign="top">__global__ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html#a67e8dd9b192bc5a7f35b8187f376dccc">FastRandomWalkCUDAKernel</a> (unsigned long int n, int minLen, int maxLen, char *outputBuffer, char *matrixIndex, long int *totalEdgeWeights, long int *valueMatrix, char *edgeMatrix, int matrixSize, int memoryPerKernelGrid, unsigned long *seed)</td></tr>
+<tr class="memdesc:a67e8dd9b192bc5a7f35b8187f376dccc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html" title="Namespace for objects requiring CUDA libraries.">CUDA</a> kernel for the FastRandomWalk operation.  <a href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html#a67e8dd9b192bc5a7f35b8187f376dccc">More...</a><br /></td></tr>
+<tr class="separator:a67e8dd9b192bc5a7f35b8187f376dccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e74937619866dc763c1f11b923866aa"><td class="memItemLeft" align="right" valign="top">__device__ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html#a3e74937619866dc763c1f11b923866aa">strchr</a> (char *p, char c, int s_len)</td></tr>
+<tr class="memdesc:a3e74937619866dc763c1f11b923866aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">srtchr implementation on <b>device</b> space  <a href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html#a3e74937619866dc763c1f11b923866aa">More...</a><br /></td></tr>
+<tr class="separator:a3e74937619866dc763c1f11b923866aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace for objects requiring <a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html" title="Namespace for objects requiring CUDA libraries.">CUDA</a> libraries. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a67e8dd9b192bc5a7f35b8187f376dccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e8dd9b192bc5a7f35b8187f376dccc">&#9670;&nbsp;</a></span>FastRandomWalkCUDAKernel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__global__ void Markov::API::CUDA::FastRandomWalkCUDAKernel </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>outputBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>matrixIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long int *&#160;</td>
+          <td class="paramname"><em>totalEdgeWeights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long int *&#160;</td>
+          <td class="paramname"><em>valueMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>edgeMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>matrixSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>memoryPerKernelGrid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long *&#160;</td>
+          <td class="paramname"><em>seed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html" title="Namespace for objects requiring CUDA libraries.">CUDA</a> kernel for the FastRandomWalk operation. </p>
+<p>Will be initiated by CPU and continued by GPU (<b>global</b> tag)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>- Number of passwords to generate. </td></tr>
+    <tr><td class="paramname">minlen</td><td>- minimum string length for a single generation </td></tr>
+    <tr><td class="paramname">maxLen</td><td>- maximum string length for a single generation </td></tr>
+    <tr><td class="paramname">outputBuffer</td><td>- VRAM ptr to the output buffer </td></tr>
+    <tr><td class="paramname">matrixIndex</td><td>- VRAM ptr to the matrix indices </td></tr>
+    <tr><td class="paramname">totalEdgeWeights</td><td>- VRAM ptr to the totalEdgeWeights array </td></tr>
+    <tr><td class="paramname">valueMatrix</td><td>- VRAM ptr to the edge weights array </td></tr>
+    <tr><td class="paramname">edgeMatrix</td><td>- VRAM ptr to the edge representations array </td></tr>
+    <tr><td class="paramname">matrixSize</td><td>- Size of the matrix dimensions </td></tr>
+    <tr><td class="paramname">memoryPerKernelGrid</td><td>- Maximum memory usage per kernel grid </td></tr>
+    <tr><td class="paramname">seed</td><td>- seed chunk to generate the random from (generated &amp; used by Marsaglia) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3e74937619866dc763c1f11b923866aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e74937619866dc763c1f11b923866aa">&#9670;&nbsp;</a></span>strchr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__device__ char* Markov::API::CUDA::strchr </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>srtchr implementation on <b>device</b> space </p>
+<p>Fint the first matching index of a string</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>- string to check </td></tr>
+    <tr><td class="paramname">c</td><td>- character to match </td></tr>
+    <tr><td class="paramname">s_len</td><td>- maximum string length </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to the match </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -1,8 +1,4 @@
 #include "cudaDeviceController.h"
-#include <curand_kernel.h>
-#include <cuda.h>
-#include <cuda_runtime.h>
-#include <device_launch_parameters.h>
 #include <iostream>
 
 namespace Markov::API::CUDA{
@@ -22,15 +18,34 @@ namespace Markov::API::CUDA{
         }
     }
 
-    __host__ int Markov::API::CUDA::CUDADeviceController::CudaCheckNotifyErr(cudaError_t _status, const char* msg) {
+    __host__ int Markov::API::CUDA::CUDADeviceController::CudaCheckNotifyErr(cudaError_t _status, const char* msg, bool bExit) {
         if (_status != cudaSuccess) {
-            std::cerr << "\033[1;31m" << _status << ": " << cudaGetErrorString(_status) << "-> "  << msg << "\033[0m" << "\n";
-            cudaDeviceReset();
-            exit(1);
+            std::cerr << "\033[1;31m" << msg  << " -> " << cudaGetErrorString(_status)  << " ("<< _status << ")" << "\033[0m" << "\n";
+            
+            if(bExit) {
+                cudaDeviceReset();
+                exit(1);
+            }
         }
         return 0;
     }
-    __global__ static void FastRandomWalkPartition(unsigned long int n, int minLen, int maxLen, bool bFileIO, int threads){
 
+/*
+    template <typename T>
+    __host__ cudaError_t Markov::API::CUDA::CUDADeviceController::CudaMalloc2DToFlat(T* dst, int row, int col){
+        return  cudaMalloc((T **)&dst, row*col*sizeof(T));
     }
+
+    template <typename T>
+    __host__ cudaError_t Markov::API::CUDA::CUDADeviceController::CudaMemcpy2DToFlat(T* dst, T** src, int row, int col){
+         cudaError_t cudastatus;
+         for(int i=0;i<row;i++){
+            cudastatus = cudaMemcpy(dst + (i*col*sizeof(T)), 
+                src[i], col*sizeof(T), cudaMemcpyHostToDevice);
+            if(cudastatus != cudaSuccess) return cudastatus;
+        }
+        return cudaSuccess;
+    }
+*/
+
 };

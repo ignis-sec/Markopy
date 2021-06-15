@@ -16,7 +16,7 @@ Inheritance diagram for Markov\+::A\+PI\+::C\+U\+DA\+::C\+U\+D\+A\+Device\+Contr
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=253pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller__inherit__graph}
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -26,19 +26,25 @@ Collaboration diagram for Markov\+::A\+PI\+::C\+U\+DA\+::C\+U\+D\+A\+Device\+Con
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=238pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller__coll__graph}
+\includegraphics[width=251pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller__coll__graph}
 \end{center}
 \end{figure}
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}{List\+Cuda\+Devices}} ()
+static \+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_ad1beeb03129fea545cfb18009d2d955f}{List\+Cuda\+Devices}} ()
 \begin{DoxyCompactList}\small\item\em List \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} devices in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions}
+\doxysubsection*{Static Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\+\_\+\+\_\+host\+\_\+\+\_\+ int \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}{Cuda\+Check\+Notify\+Err}} (cuda\+Error\+\_\+t \+\_\+status, const char $\ast$msg)
-\begin{DoxyCompactList}\small\item\em Check results of the last operation on G\+PU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static \+\_\+\+\_\+host\+\_\+\+\_\+ int \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{Cuda\+Check\+Notify\+Err}} (cuda\+Error\+\_\+t \+\_\+status, const char $\ast$msg, bool b\+Exit=true)
+\begin{DoxyCompactList}\small\item\em Check results of the last operation on G\+PU. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2}{Cuda\+Malloc2\+D\+To\+Flat}} (T $\ast$$\ast$dst, int row, int col)
+\begin{DoxyCompactList}\small\item\em Malloc a 2D array in device space. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a5bbde3a16fc7a4b8cdf07e72a31c1f54}{Cuda\+Memcpy2\+D\+To\+Flat}} (T $\ast$dst, T $\ast$$\ast$src, int row, int col)
+\begin{DoxyCompactList}\small\item\em Memcpy a 2D array in device space after flattening. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{Cuda\+Migrate2\+D\+Flat}} (T $\ast$$\ast$dst, T $\ast$$\ast$src, int row, int col)
+\begin{DoxyCompactList}\small\item\em Both malloc and memcpy a 2D array into device V\+R\+AM. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -46,16 +52,16 @@ Controller class for \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\
 
 This implementation only supports Nvidia devices. 
 
-Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00009}{9}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
+Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00016}{16}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}} 
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}} 
 \index{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaCheckNotifyErr@{CudaCheckNotifyErr}}
 \index{CudaCheckNotifyErr@{CudaCheckNotifyErr}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}}
 \doxysubsubsection{\texorpdfstring{CudaCheckNotifyErr()}{CudaCheckNotifyErr()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ int Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Check\+Notify\+Err (\begin{DoxyParamCaption}\item[{cuda\+Error\+\_\+t}]{\+\_\+status,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily static \+\_\+\+\_\+host\+\_\+\+\_\+ int Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Check\+Notify\+Err (\begin{DoxyParamCaption}\item[{cuda\+Error\+\_\+t}]{\+\_\+status,  }\item[{const char $\ast$}]{msg,  }\item[{bool}]{b\+Exit = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
 
 
@@ -75,15 +81,216 @@ If a failure occurs, its assumed beyond redemption, and exited.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{char} *da, a = \textcolor{stringliteral}{"test"};}
 \DoxyCodeLine{cudastatus = cudaMalloc((\textcolor{keywordtype}{char} **)\&da, 5*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
-\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa79c9cac041d2c53be8d21e903c2aacc}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"Failed to allocate VRAM for *da.\(\backslash\)n"});}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"Failed to allocate VRAM for *da.\(\backslash\)n"});}
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}} 
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2}} 
+\index{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaMalloc2DToFlat@{CudaMalloc2DToFlat}}
+\index{CudaMalloc2DToFlat@{CudaMalloc2DToFlat}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}}
+\doxysubsubsection{\texorpdfstring{CudaMalloc2DToFlat()}{CudaMalloc2DToFlat()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Malloc2\+D\+To\+Flat (\begin{DoxyParamCaption}\item[{T $\ast$$\ast$}]{dst,  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Malloc a 2D array in device space. 
+
+This function will allocate enough space on V\+R\+AM for flattened 2D array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & destination pointer \\
+\hline
+{\em row} & row size of the 2d array \\
+\hline
+{\em col} & column size of the 2d array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Error\+\_\+t status of the cuda\+Malloc operation
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{output\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cudaError\_t cudastatus;}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* dst;}
+\DoxyCodeLine{cudastatus = CudaMalloc2DToFlat<char>(\&dst, 5, 15);}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(cudastatus!=cudaSuccess)\{}
+\DoxyCodeLine{    \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00073}{73}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073                                                                                  \{}
+\DoxyCodeLine{00074             cudaError\_t cudastatus = cudaMalloc((T **)dst, row*col*\textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00075             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"cudaMalloc Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00076             \textcolor{keywordflow}{return} cudastatus;}
+\DoxyCodeLine{00077         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{Cuda\+Migrate2\+D\+Flat()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a5bbde3a16fc7a4b8cdf07e72a31c1f54}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a5bbde3a16fc7a4b8cdf07e72a31c1f54}} 
+\index{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}}
+\index{CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}}
+\doxysubsubsection{\texorpdfstring{CudaMemcpy2DToFlat()}{CudaMemcpy2DToFlat()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Memcpy2\+D\+To\+Flat (\begin{DoxyParamCaption}\item[{T $\ast$}]{dst,  }\item[{T $\ast$$\ast$}]{src,  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Memcpy a 2D array in device space after flattening. 
+
+Resulting buffer will not be true 2D array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & destination pointer \\
+\hline
+{\em rc} & source pointer \\
+\hline
+{\em row} & row size of the 2d array \\
+\hline
+{\em col} & column size of the 2d array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Error\+\_\+t status of the cuda\+Malloc operation
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{output\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cudaError\_t cudastatus;}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* dst;}
+\DoxyCodeLine{cudastatus = CudaMalloc2DToFlat<char>(\&dst, 5, 15);}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{cudastatus = CudaMemcpy2DToFlat<char>(*dst,src,15,15);}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMemcpy2DToFlat Failed."}, \textcolor{keyword}{false});}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00101}{101}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101                                                                                          \{}
+\DoxyCodeLine{00102             T* tempbuf = \textcolor{keyword}{new} T[row*col];}
+\DoxyCodeLine{00103             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<row;i++)\{}
+\DoxyCodeLine{00104                 memcpy(\&(tempbuf[row*i]), src[i], col);}
+\DoxyCodeLine{00105             \}}
+\DoxyCodeLine{00106             \textcolor{keywordflow}{return} cudaMemcpy(dst, tempbuf, row*col*\textcolor{keyword}{sizeof}(T), cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00107             }
+\DoxyCodeLine{00108         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{Cuda\+Migrate2\+D\+Flat()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a5bbde3a16fc7a4b8cdf07e72a31c1f54_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}} 
+\index{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaMigrate2DFlat@{CudaMigrate2DFlat}}
+\index{CudaMigrate2DFlat@{CudaMigrate2DFlat}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}}
+\doxysubsubsection{\texorpdfstring{CudaMigrate2DFlat()}{CudaMigrate2DFlat()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat (\begin{DoxyParamCaption}\item[{T $\ast$$\ast$}]{dst,  }\item[{T $\ast$$\ast$}]{src,  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Both malloc and memcpy a 2D array into device V\+R\+AM. 
+
+Resulting buffer will not be true 2D array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & destination pointer \\
+\hline
+{\em rc} & source pointer \\
+\hline
+{\em row} & row size of the 2d array \\
+\hline
+{\em col} & column size of the 2d array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Error\+\_\+t status of the cuda\+Malloc operation
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{output\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cudaError\_t cudastatus;}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* dst;}
+\DoxyCodeLine{cudastatus = CudaMigrate2DFlat<long int>(}
+\DoxyCodeLine{   \&dst, this-\/>valueMatrix, this-\/>matrixSize, this-\/>matrixSize);}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"    Cuda failed to initialize value matrix row."});}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{130}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00130                                                                                          \{}
+\DoxyCodeLine{00131             cudaError\_t cudastatus;}
+\DoxyCodeLine{00132             cudastatus = CudaMalloc2DToFlat<T>(dst, row, col);}
+\DoxyCodeLine{00133             \textcolor{keywordflow}{if}(cudastatus!=cudaSuccess)\{}
+\DoxyCodeLine{00134                 \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00135                 \textcolor{keywordflow}{return} cudastatus;}
+\DoxyCodeLine{00136             \}}
+\DoxyCodeLine{00137             cudastatus = CudaMemcpy2DToFlat<T>(*dst,src,row,col);}
+\DoxyCodeLine{00138             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMemcpy2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00139             \textcolor{keywordflow}{return} cudastatus;}
+\DoxyCodeLine{00140         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{Cuda\+Migrate2\+D\+Flat()}}.
+
+
+
+Referenced by \mbox{\hyperlink{cuda_device_controller_8h_source_l00073}{Cuda\+Malloc2\+D\+To\+Flat()}}, \mbox{\hyperlink{cuda_device_controller_8h_source_l00101}{Cuda\+Memcpy2\+D\+To\+Flat()}}, and \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{Cuda\+Migrate2\+D\+Flat()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_ad1beeb03129fea545cfb18009d2d955f}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_ad1beeb03129fea545cfb18009d2d955f}} 
 \index{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!ListCudaDevices@{ListCudaDevices}}
 \index{ListCudaDevices@{ListCudaDevices}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}}
 \doxysubsubsection{\texorpdfstring{ListCudaDevices()}{ListCudaDevices()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+List\+Cuda\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily static \+\_\+\+\_\+host\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+List\+Cuda\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 

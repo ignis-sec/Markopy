@@ -86,7 +86,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_c_l_i_8h.html",
-"class_markov_1_1_random_1_1_marsaglia.html#aafadb3ac016ff0dac8df73a93e594e3b"
+"class_markov_1_1_node.html#a1db7cba480ab9fb41ef8ab53d1eac0f2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,4 +1,5 @@
 <map id="Markov::API::CUDA::CUDADeviceController" name="Markov::API::CUDA::CUDADeviceController">
-<area shape="rect" id="node1" title="Controller class for CUDA device." alt="" coords="5,5,205,52"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html" title="Extension of Markov::API::ModelMatrix which is modified to run on GPU devices." alt="" coords="14,100,197,147"/>
+<area shape="rect" id="node1" title="Controller class for CUDA device." alt="" coords="99,5,299,52"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html" title="Extension of Markov::API::ModelMatrix which is modified to run on GPU devices." alt="" coords="5,100,188,147"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia.html" title="Extension of Markov::Random::Marsaglia which is capable o working on device space." alt="" coords="212,100,395,147"/>
 </map>
