@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
 
 	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 	std::cerr << "Starting walk. \n";
-	markovPass.FastRandomWalk(5000000000,"/media/ignis/Stuff/wordlist.txt",6,12, false);
+	markovPass.FastRandomWalk(1310720000,"/media/ignis/Stuff/wordlist.txt",6,12, false);
 	//markovPass.FastRandomWalk(500000000,"/media/ignis/Stuff/wordlist2.txt",6,12,25, true);
 	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
 

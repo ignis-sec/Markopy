@@ -2,11 +2,20 @@
 #include "MarkovModel/src/random.h"
 #include "CudaMarkovPasswords/src/cudaDeviceController.h"
 
+/** @brief Namespace for Random engines operable under __device__ space.
+*/
 namespace Markov::API::CUDA::Random{
 
+	/** @brief Extension of Markov::Random::Marsaglia which is capable o working on __device__ space.
+	*/
     class Marsaglia : public Markov::Random::Marsaglia, public CUDADeviceController{
 	public:
 
+		/** @brief Migrate a Marsaglia[] to VRAM as seedChunk
+		 * @param MEarr Array of Marsaglia Engines
+		 * @param gridSize GridSize of the CUDA Kernel, aka size of array
+		 * @returns pointer to the resulting seed chunk in device VRAM.
+		*/
 		static unsigned long* MigrateToVRAM(Markov::API::CUDA::Random::Marsaglia *MEarr, long int gridSize){
 			cudaError_t cudastatus;
 			unsigned long* seedChunk;
@@ -25,6 +34,12 @@ namespace Markov::API::CUDA::Random{
 		}
 	};
 
+	/** @brief Marsaglia Random Generation function operable in __device__ space
+	 * @param x marsaglia internal x. Not constant, (ref)
+	 * @param y marsaglia internal y. Not constant, (ref)
+	 * @param z marsaglia internal z. Not constant, (ref)
+	 * @returns returns z
+	*/
 	__device__ unsigned long devrandom(unsigned long &x, unsigned long &y, unsigned long &z){	
 		unsigned long t;
 		x ^= x << 16;

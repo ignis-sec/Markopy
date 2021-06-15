@@ -51,7 +51,19 @@ namespace Markov::API::CUDA{
 
     protected:
 
-
+        /** @brief Allocate the output buffer for kernel operation
+         * 
+         * TODO
+		 * 
+		 * 
+		 * @param n - Number of passwords to generate.
+		 * @param singleGenMaxLen - maximum string length for a single generation
+		 * @param CUDAKernelGridSize - Total number of grid members in CUDA kernel
+		 * @param sizePerGrid - Size to allocate per grid member
+         * @return pointer to the allocation on VRAM
+         * 
+         * 
+		*/
         __host__ char* AllocVRAMOutputBuffer(long int n, long int singleGenMaxLen, long int CUDAKernelGridSize,long int sizePerGrid);
     private:
         char* device_edgeMatrix;
@@ -66,11 +78,41 @@ namespace Markov::API::CUDA{
 
     };
 
-
+    /** @brief CUDA kernel for the FastRandomWalk operation
+     * 
+     * Will be initiated by CPU and continued by GPU (__global__ tag)
+     * 
+     * 
+     * @param n - Number of passwords to generate.
+     * @param minlen - minimum string length for a single generation
+     * @param maxLen - maximum string length for a single generation
+     * @param outputBuffer - VRAM ptr to the output buffer
+     * @param matrixIndex - VRAM ptr to the matrix indices
+     * @param totalEdgeWeights - VRAM ptr to the totalEdgeWeights array
+     * @param valueMatrix - VRAM ptr to the edge weights array
+     * @param edgeMatrix - VRAM ptr to the edge representations array
+     * @param matrixSize - Size of the matrix dimensions
+     * @param memoryPerKernelGrid - Maximum memory usage per kernel grid
+     * @param seed - seed chunk to generate the random from (generated & used by Marsaglia)
+     * 
+     * 
+     * 
+    */
     __global__ void FastRandomWalkCUDAKernel(unsigned long int n, int minLen, int maxLen, char* outputBuffer,
         char* matrixIndex, long int* totalEdgeWeights, long int* valueMatrix, char *edgeMatrix, 
         int matrixSize, int memoryPerKernelGrid, unsigned long *seed);//, unsigned long mex, unsigned long mey, unsigned long mez);
+    
 
+    /** @brief srtchr implementation on __device__ space
+     * 
+     * Fint the first matching index of a string
+     * 
+     * 
+     * @param p - string to check
+     * @param c - character to match
+     * @param s_len - maximum string length
+     * @returns pointer to the match
+    */
     __device__ char* strchr(char* p, char c, int s_len);
     
 };
