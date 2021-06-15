@@ -1,67 +1,70 @@
 \begin{theindex}
 
   \item {\_left}
-    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{61}
+    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{95}
   \item {\_right}
-    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{61}
+    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{95}
   \item {\_value}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{130}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{173}
   \item {\_weight}
-    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{61}
+    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{95}
 
   \indexspace
 
   \item {about}
-    \subitem {Markov::GUI::about}, \hyperpage{43}
-    \subitem {Markov::GUI::CLI}, \hyperpage{50}
-    \subitem {Markov::GUI::menu}, \hyperpage{87}
-  \item {about.h}, \hyperpage{141}
+    \subitem {Markov::GUI::about}, \hyperpage{45}
+    \subitem {Markov::GUI::CLI}, \hyperpage{52}
+    \subitem {Markov::GUI::menu}, \hyperpage{130}
+  \item {about.h}, \hyperpage{185}
   \item {action}
     \subitem {markopy\_cli}, \hyperpage{19}
   \item {AdjustEdge}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{65}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{105}
-    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{58}
-    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{94}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{63}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{99}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{148}
+    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{92}
+    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{137}
+  \item {AllocVRAMOutputBuffer}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{63}
   \item {alphabet}
-    \subitem {model\_2gram}, \hyperpage{24}
-    \subitem {random-\/model}, \hyperpage{25}
+    \subitem {model\_2gram}, \hyperpage{27}
+    \subitem {random-\/model}, \hyperpage{27}
   \item {Argparse}
-    \subitem {Markov::API::CLI::Argparse}, \hyperpage{45}
-  \item {argparse.cpp}, \hyperpage{142}
-  \item {argparse.h}, \hyperpage{142}, \hyperpage{144}
-    \subitem {BOOST\_ALL\_DYN\_LINK}, \hyperpage{144}
+    \subitem {Markov::API::CLI::Argparse}, \hyperpage{47}
+  \item {argparse.cpp}, \hyperpage{186}
+  \item {argparse.h}, \hyperpage{186}, \hyperpage{188}
+    \subitem {BOOST\_ALL\_DYN\_LINK}, \hyperpage{188}
   \item {args}
     \subitem {markopy\_cli}, \hyperpage{19}
 
   \indexspace
 
   \item {bExport}
-    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{41}
+    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{43}
   \item {bFailure}
-    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{41}
+    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{43}
   \item {bImport}
-    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{41}
+    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{43}
   \item {BLACK}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
   \item {BLUE}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
   \item {BOOST\_ALL\_DYN\_LINK}
-    \subitem {argparse.h}, \hyperpage{144}
+    \subitem {argparse.h}, \hyperpage{188}
   \item {BOOST\_PYTHON\_MODULE}
-    \subitem {Markov::Markopy}, \hyperpage{23}
+    \subitem {Markov::Markopy}, \hyperpage{25}
   \item {BOOST\_PYTHON\_STATIC\_LIB}
-    \subitem {markopy.cpp}, \hyperpage{157}
+    \subitem {markopy.cpp}, \hyperpage{207}
   \item {BROWN}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
   \item {bulk}
     \subitem {markopy\_cli}, \hyperpage{19}
 
   \indexspace
 
   \item {CLI}
-    \subitem {Markov::GUI::CLI}, \hyperpage{50}
-  \item {CLI.h}, \hyperpage{146, 147}
+    \subitem {Markov::GUI::CLI}, \hyperpage{52}
+  \item {CLI.h}, \hyperpage{190, 191}
   \item {cli\_generate}
     \subitem {markopy\_cli}, \hyperpage{17}
   \item {cli\_init}
@@ -69,141 +72,200 @@
   \item {cli\_train}
     \subitem {markopy\_cli}, \hyperpage{18}
   \item {color}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
   \item {colormap}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
   \item {ConstructMatrix}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{106}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{64}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{149}
   \item {corpus\_list}
     \subitem {markopy\_cli}, \hyperpage{19}
+  \item {CudaCheckNotifyErr}
+    \subitem {Markov::API::CUDA::CUDADeviceController}, \hyperpage{55}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{65}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{116}
+  \item {cudaDeviceController.h}, \hyperpage{192, 193}
+  \item {CudaMalloc2DToFlat}
+    \subitem {Markov::API::CUDA::CUDADeviceController}, \hyperpage{55}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{65}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{116}
+  \item {CudaMemcpy2DToFlat}
+    \subitem {Markov::API::CUDA::CUDADeviceController}, \hyperpage{56}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{66}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{117}
+  \item {CudaMigrate2DFlat}
+    \subitem {Markov::API::CUDA::CUDADeviceController}, \hyperpage{57}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{67}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{118}
+  \item {cudaModelMatrix.h}, \hyperpage{194, 195}
+  \item {cudarandom.h}, \hyperpage{197}
   \item {CYAN}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
 
   \indexspace
 
   \item {DARKGRAY}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
   \item {datasetFile}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{75}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{121}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{83}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{109}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{164}
   \item {datasetname}
-    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{41}
+    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{43}
   \item {default}
     \subitem {markopy\_cli}, \hyperpage{19}
+  \item {device\_edgeMatrix}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{83}
+  \item {device\_matrixIndex}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{83}
+  \item {device\_outputBuffer}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{83}
+  \item {device\_totalEdgeWeights}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{83}
+  \item {device\_valueMatrix}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{83}
+  \item {devrandom}
+    \subitem {Markov::API::CUDA::Random}, \hyperpage{24}
   \item {distribution}
-    \subitem {Markov::Random::DefaultRandomEngine}, \hyperpage{53}
-    \subitem {Markov::Random::Marsaglia}, \hyperpage{82}
-    \subitem {Markov::Random::Mersenne}, \hyperpage{90}
-  \item {dllmain.cpp}, \hyperpage{148}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{119}
+    \subitem {Markov::Random::DefaultRandomEngine}, \hyperpage{88}
+    \subitem {Markov::Random::Marsaglia}, \hyperpage{125}
+    \subitem {Markov::Random::Mersenne}, \hyperpage{133}
+  \item {dllmain.cpp}, \hyperpage{198, 199}
   \item {DumpJSON}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{107}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{68}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{150}
 
   \indexspace
 
   \item {Edge}
-    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{58}
-  \item {edge.h}, \hyperpage{148, 149}
+    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{92}
+  \item {edge.h}, \hyperpage{199, 200}
   \item {edgeMatrix}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{121}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{83}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{164}
   \item {Edges}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{66}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{108}
-    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{95}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{126}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{69}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{100}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{151}
+    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{138}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{169}
   \item {edges}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{75}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{121}
-    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{101}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{130}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{84}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{109}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{164}
+    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{144}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{173}
   \item {edgesV}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{130}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{173}
   \item {EdgeWeight}
-    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{59}
+    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{93}
   \item {endl}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{135}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{178}
   \item {Export}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{66}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{108}
-    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{95, 96}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{69, 70}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{100}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{151}
+    \subitem {Markov::Model$<$ NodeStorageType $>$}, 
+		\hyperpage{138, 139}
   \item {exportname}
-    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{41}
+    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{43}
 
   \indexspace
 
   \item {f}
-    \subitem {model\_2gram}, \hyperpage{24}
-    \subitem {random-\/model}, \hyperpage{25}
+    \subitem {model\_2gram}, \hyperpage{27}
+    \subitem {random-\/model}, \hyperpage{27}
   \item {FastRandomWalk}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{109}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{70, 71}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{152}
+  \item {FastRandomWalkCUDAKernel}
+    \subitem {Markov::API::CUDA}, \hyperpage{23}
   \item {FastRandomWalkPartition}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{110}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{72}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{153}
   \item {FastRandomWalkThread}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{111}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{73}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{154}
   \item {FindEdge}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{126}
-  \item {framework.h}, \hyperpage{152}
-    \subitem {WIN32\_LEAN\_AND\_MEAN}, \hyperpage{152}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{169}
+  \item {flatEdgeMatrix}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{84}
+  \item {FlattenMatrix}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{74}
+  \item {flatValueMatrix}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{84}
+  \item {framework.h}, \hyperpage{202, 203}
+    \subitem {WIN32\_LEAN\_AND\_MEAN}, \hyperpage{203}
 
   \indexspace
 
   \item {Generate}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{67}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{113}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{75}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{101}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{156}
   \item {generateN}
-    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{41}
+    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{43}
   \item {GenerateThread}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{68}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{114}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{76}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{102}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{157}
   \item {generator}
-    \subitem {Markov::Random::DefaultRandomEngine}, \hyperpage{53}
-    \subitem {Markov::Random::Marsaglia}, \hyperpage{83}
-    \subitem {Markov::Random::Mersenne}, \hyperpage{90}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{120}
+    \subitem {Markov::Random::DefaultRandomEngine}, \hyperpage{88}
+    \subitem {Markov::Random::Marsaglia}, \hyperpage{126}
+    \subitem {Markov::Random::Mersenne}, \hyperpage{133}
   \item {getProgramOptions}
-    \subitem {Markov::API::CLI::Argparse}, \hyperpage{47}
+    \subitem {Markov::API::CLI::Argparse}, \hyperpage{49}
   \item {GREEN}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
 
   \indexspace
 
   \item {help}
     \subitem {markopy\_cli}, \hyperpage{19}
-    \subitem {Markov::API::CLI::Argparse}, \hyperpage{47}
+    \subitem {Markov::API::CLI::Argparse}, \hyperpage{49}
   \item {home}
-    \subitem {Markov::GUI::Train}, \hyperpage{140}
+    \subitem {Markov::GUI::Train}, \hyperpage{183}
 
   \indexspace
 
   \item {Import}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{69}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{115}
-    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{97}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{77}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{103}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{158}
+    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{140}
   \item {importname}
-    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{41}
+    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{43}
 
   \indexspace
 
   \item {LeftNode}
-    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{59}
+    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{93}
   \item {LIGHTGRAY}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
   \item {Link}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{127}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{170}
+  \item {ListCudaDevices}
+    \subitem {Markov::API::CUDA::CUDADeviceController}, \hyperpage{58}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{78}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{120}
   \item {listfile}
     \subitem {Markov::API::Concurrency::ThreadSharedListHandler}, 
-		\hyperpage{138}
+		\hyperpage{181}
   \item {loadDataset}
-    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{78}
+    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{112}
 
   \indexspace
 
   \item {MAGENTA}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
   \item {main}
-    \subitem {src/main.cpp}, \hyperpage{153}
-    \subitem {UI/src/main.cpp}, \hyperpage{155}
-  \item {main.cpp}, \hyperpage{152}, \hyperpage{154}, \hyperpage{156}
-  \item {markopy.cpp}, \hyperpage{156, 157}
-    \subitem {BOOST\_PYTHON\_STATIC\_LIB}, \hyperpage{157}
+    \subitem {src/main.cpp}, \hyperpage{203}
+    \subitem {UI/src/main.cpp}, \hyperpage{205}
+  \item {main.cpp}, \hyperpage{203--206}
+  \item {markopy.cpp}, \hyperpage{206, 207}
+    \subitem {BOOST\_PYTHON\_STATIC\_LIB}, \hyperpage{207}
   \item {markopy\_cli}, \hyperpage{17}
     \subitem {action}, \hyperpage{19}
     \subitem {args}, \hyperpage{19}
@@ -223,235 +285,312 @@
     \subitem {output\_forced}, \hyperpage{20}
     \subitem {parser}, \hyperpage{20}
     \subitem {True}, \hyperpage{20}
-  \item {markopy\_cli.py}, \hyperpage{157, 158}
+  \item {markopy\_cli.py}, \hyperpage{208}
   \item {Markov}, \hyperpage{20}
   \item {Markov::API}, \hyperpage{21}
   \item {Markov::API::CLI}, \hyperpage{21}
     \subitem {operator$<$$<$}, \hyperpage{22}
     \subitem {ProgramOptions}, \hyperpage{22}
-  \item {Markov::API::CLI::\_programOptions}, \hyperpage{39}
-    \subitem {bExport}, \hyperpage{41}
-    \subitem {bFailure}, \hyperpage{41}
-    \subitem {bImport}, \hyperpage{41}
-    \subitem {datasetname}, \hyperpage{41}
-    \subitem {exportname}, \hyperpage{41}
-    \subitem {generateN}, \hyperpage{41}
-    \subitem {importname}, \hyperpage{41}
-    \subitem {outputfilename}, \hyperpage{41}
-    \subitem {seperator}, \hyperpage{42}
-    \subitem {wordlistname}, \hyperpage{42}
-  \item {Markov::API::CLI::Argparse}, \hyperpage{44}
-    \subitem {Argparse}, \hyperpage{45}
-    \subitem {getProgramOptions}, \hyperpage{47}
-    \subitem {help}, \hyperpage{47}
-    \subitem {parse}, \hyperpage{48}
-    \subitem {po}, \hyperpage{49}
-    \subitem {setProgramOptions}, \hyperpage{48}
-  \item {Markov::API::CLI::Terminal}, \hyperpage{132}
-    \subitem {BLACK}, \hyperpage{134}
-    \subitem {BLUE}, \hyperpage{134}
-    \subitem {BROWN}, \hyperpage{134}
-    \subitem {color}, \hyperpage{134}
-    \subitem {colormap}, \hyperpage{134}
-    \subitem {CYAN}, \hyperpage{134}
-    \subitem {DARKGRAY}, \hyperpage{134}
-    \subitem {endl}, \hyperpage{135}
-    \subitem {GREEN}, \hyperpage{134}
-    \subitem {LIGHTGRAY}, \hyperpage{134}
-    \subitem {MAGENTA}, \hyperpage{134}
-    \subitem {RED}, \hyperpage{134}
-    \subitem {RESET}, \hyperpage{134}
-    \subitem {Terminal}, \hyperpage{134}
-    \subitem {WHITE}, \hyperpage{134}
-    \subitem {YELLOW}, \hyperpage{134}
+  \item {Markov::API::CLI::\_programOptions}, \hyperpage{41}
+    \subitem {bExport}, \hyperpage{43}
+    \subitem {bFailure}, \hyperpage{43}
+    \subitem {bImport}, \hyperpage{43}
+    \subitem {datasetname}, \hyperpage{43}
+    \subitem {exportname}, \hyperpage{43}
+    \subitem {generateN}, \hyperpage{43}
+    \subitem {importname}, \hyperpage{43}
+    \subitem {outputfilename}, \hyperpage{43}
+    \subitem {seperator}, \hyperpage{44}
+    \subitem {wordlistname}, \hyperpage{44}
+  \item {Markov::API::CLI::Argparse}, \hyperpage{46}
+    \subitem {Argparse}, \hyperpage{47}
+    \subitem {getProgramOptions}, \hyperpage{49}
+    \subitem {help}, \hyperpage{49}
+    \subitem {parse}, \hyperpage{50}
+    \subitem {po}, \hyperpage{51}
+    \subitem {setProgramOptions}, \hyperpage{50}
+  \item {Markov::API::CLI::Terminal}, \hyperpage{175}
+    \subitem {BLACK}, \hyperpage{177}
+    \subitem {BLUE}, \hyperpage{177}
+    \subitem {BROWN}, \hyperpage{177}
+    \subitem {color}, \hyperpage{177}
+    \subitem {colormap}, \hyperpage{177}
+    \subitem {CYAN}, \hyperpage{177}
+    \subitem {DARKGRAY}, \hyperpage{177}
+    \subitem {endl}, \hyperpage{178}
+    \subitem {GREEN}, \hyperpage{177}
+    \subitem {LIGHTGRAY}, \hyperpage{177}
+    \subitem {MAGENTA}, \hyperpage{177}
+    \subitem {RED}, \hyperpage{177}
+    \subitem {RESET}, \hyperpage{177}
+    \subitem {Terminal}, \hyperpage{177}
+    \subitem {WHITE}, \hyperpage{177}
+    \subitem {YELLOW}, \hyperpage{177}
   \item {Markov::API::Concurrency}, \hyperpage{22}
   \item {Markov::API::Concurrency::ThreadSharedListHandler}, 
-		\hyperpage{135}
-    \subitem {listfile}, \hyperpage{138}
-    \subitem {mlock}, \hyperpage{138}
-    \subitem {next}, \hyperpage{138}
-    \subitem {ThreadSharedListHandler}, \hyperpage{137}
-  \item {Markov::API::MarkovPasswords}, \hyperpage{61}
-    \subitem {AdjustEdge}, \hyperpage{65}
-    \subitem {datasetFile}, \hyperpage{75}
-    \subitem {Edges}, \hyperpage{66}
-    \subitem {edges}, \hyperpage{75}
-    \subitem {Export}, \hyperpage{66}
-    \subitem {Generate}, \hyperpage{67}
-    \subitem {GenerateThread}, \hyperpage{68}
-    \subitem {Import}, \hyperpage{69}
-    \subitem {MarkovPasswords}, \hyperpage{65}
-    \subitem {modelSavefile}, \hyperpage{75}
-    \subitem {Nodes}, \hyperpage{70}
-    \subitem {nodes}, \hyperpage{75}
-    \subitem {OpenDatasetFile}, \hyperpage{70}
-    \subitem {outputFile}, \hyperpage{75}
-    \subitem {RandomWalk}, \hyperpage{71}
-    \subitem {Save}, \hyperpage{72}
-    \subitem {StarterNode}, \hyperpage{73}
-    \subitem {starterNode}, \hyperpage{75}
-    \subitem {Train}, \hyperpage{73}
-    \subitem {TrainThread}, \hyperpage{74}
-  \item {Markov::API::ModelMatrix}, \hyperpage{101}
-    \subitem {AdjustEdge}, \hyperpage{105}
-    \subitem {ConstructMatrix}, \hyperpage{106}
-    \subitem {datasetFile}, \hyperpage{121}
-    \subitem {DumpJSON}, \hyperpage{107}
-    \subitem {edgeMatrix}, \hyperpage{121}
-    \subitem {Edges}, \hyperpage{108}
-    \subitem {edges}, \hyperpage{121}
-    \subitem {Export}, \hyperpage{108}
-    \subitem {FastRandomWalk}, \hyperpage{109}
-    \subitem {FastRandomWalkPartition}, \hyperpage{110}
-    \subitem {FastRandomWalkThread}, \hyperpage{111}
-    \subitem {Generate}, \hyperpage{113}
-    \subitem {GenerateThread}, \hyperpage{114}
-    \subitem {Import}, \hyperpage{115}
-    \subitem {matrixIndex}, \hyperpage{121}
-    \subitem {matrixSize}, \hyperpage{121}
-    \subitem {ModelMatrix}, \hyperpage{105}
-    \subitem {modelSavefile}, \hyperpage{121}
-    \subitem {Nodes}, \hyperpage{116}
-    \subitem {nodes}, \hyperpage{122}
-    \subitem {OpenDatasetFile}, \hyperpage{116}
-    \subitem {outputFile}, \hyperpage{122}
-    \subitem {RandomWalk}, \hyperpage{117}
-    \subitem {Save}, \hyperpage{118}
-    \subitem {StarterNode}, \hyperpage{119}
-    \subitem {starterNode}, \hyperpage{122}
-    \subitem {totalEdgeWeights}, \hyperpage{122}
-    \subitem {Train}, \hyperpage{119}
-    \subitem {TrainThread}, \hyperpage{120}
-    \subitem {valueMatrix}, \hyperpage{122}
-  \item {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{55}
-    \subitem {\_left}, \hyperpage{61}
-    \subitem {\_right}, \hyperpage{61}
-    \subitem {\_weight}, \hyperpage{61}
-    \subitem {AdjustEdge}, \hyperpage{58}
-    \subitem {Edge}, \hyperpage{58}
-    \subitem {EdgeWeight}, \hyperpage{59}
-    \subitem {LeftNode}, \hyperpage{59}
-    \subitem {RightNode}, \hyperpage{59}
-    \subitem {SetLeftEdge}, \hyperpage{60}
-    \subitem {SetRightEdge}, \hyperpage{60}
-    \subitem {TraverseNode}, \hyperpage{60}
-  \item {Markov::GUI}, \hyperpage{22}
-  \item {Markov::GUI::about}, \hyperpage{42}
-    \subitem {about}, \hyperpage{43}
-    \subitem {ui}, \hyperpage{43}
-  \item {Markov::GUI::CLI}, \hyperpage{49}
-    \subitem {about}, \hyperpage{50}
-    \subitem {CLI}, \hyperpage{50}
-    \subitem {start}, \hyperpage{51}
-    \subitem {statistics}, \hyperpage{51}
-    \subitem {ui}, \hyperpage{51}
-  \item {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{76}
-    \subitem {loadDataset}, \hyperpage{78}
-    \subitem {MarkovPasswordsGUI}, \hyperpage{78}
-    \subitem {MarkovPasswordsGUI::benchmarkSelected}, \hyperpage{78}
-    \subitem {MarkovPasswordsGUI::comparisonSelected}, \hyperpage{78}
-    \subitem {MarkovPasswordsGUI::modelvisSelected}, \hyperpage{78}
-    \subitem {MarkovPasswordsGUI::visualDebugSelected}, \hyperpage{79}
-    \subitem {renderHTMLFile}, \hyperpage{79}
-    \subitem {ui}, \hyperpage{79}
-  \item {Markov::GUI::menu}, \hyperpage{85}
-    \subitem {about}, \hyperpage{87}
-    \subitem {menu}, \hyperpage{86}
-    \subitem {ui}, \hyperpage{87}
-    \subitem {visualization}, \hyperpage{87}
-  \item {Markov::GUI::Train}, \hyperpage{139}
-    \subitem {home}, \hyperpage{140}
-    \subitem {Train}, \hyperpage{140}
-    \subitem {train}, \hyperpage{140}
-    \subitem {ui}, \hyperpage{140}
-  \item {Markov::Markopy}, \hyperpage{23}
-    \subitem {BOOST\_PYTHON\_MODULE}, \hyperpage{23}
-  \item {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{92}
-    \subitem {AdjustEdge}, \hyperpage{94}
-    \subitem {Edges}, \hyperpage{95}
-    \subitem {edges}, \hyperpage{101}
-    \subitem {Export}, \hyperpage{95, 96}
-    \subitem {Import}, \hyperpage{97}
-    \subitem {Model}, \hyperpage{94}
-    \subitem {Nodes}, \hyperpage{99}
-    \subitem {nodes}, \hyperpage{101}
-    \subitem {RandomWalk}, \hyperpage{99}
-    \subitem {StarterNode}, \hyperpage{100}
-    \subitem {starterNode}, \hyperpage{101}
-  \item {Markov::Node$<$ storageType $>$}, \hyperpage{122}
-    \subitem {\_value}, \hyperpage{130}
-    \subitem {Edges}, \hyperpage{126}
-    \subitem {edges}, \hyperpage{130}
-    \subitem {edgesV}, \hyperpage{130}
-    \subitem {FindEdge}, \hyperpage{126}
-    \subitem {Link}, \hyperpage{127}
-    \subitem {Node}, \hyperpage{125}
-    \subitem {NodeValue}, \hyperpage{128}
-    \subitem {RandomNext}, \hyperpage{128}
-    \subitem {total\_edge\_weights}, \hyperpage{130}
-    \subitem {TotalEdgeWeights}, \hyperpage{129}
-    \subitem {UpdateEdges}, \hyperpage{129}
-    \subitem {UpdateTotalVerticeWeight}, \hyperpage{130}
-  \item {Markov::Random}, \hyperpage{24}
-  \item {Markov::Random::DefaultRandomEngine}, \hyperpage{51}
-    \subitem {distribution}, \hyperpage{53}
-    \subitem {generator}, \hyperpage{53}
-    \subitem {random}, \hyperpage{54}
-    \subitem {rd}, \hyperpage{54}
-  \item {Markov::Random::Marsaglia}, \hyperpage{79}
-    \subitem {distribution}, \hyperpage{82}
-    \subitem {generator}, \hyperpage{83}
-    \subitem {Marsaglia}, \hyperpage{82}
-    \subitem {random}, \hyperpage{83}
-    \subitem {rd}, \hyperpage{84}
-    \subitem {x}, \hyperpage{84}
-    \subitem {y}, \hyperpage{84}
-    \subitem {z}, \hyperpage{85}
-  \item {Markov::Random::Mersenne}, \hyperpage{87}
-    \subitem {distribution}, \hyperpage{90}
-    \subitem {generator}, \hyperpage{90}
-    \subitem {random}, \hyperpage{91}
-    \subitem {rd}, \hyperpage{91}
-  \item {Markov::Random::RandomEngine}, \hyperpage{131}
-    \subitem {random}, \hyperpage{132}
+		\hyperpage{178}
+    \subitem {listfile}, \hyperpage{181}
+    \subitem {mlock}, \hyperpage{181}
+    \subitem {next}, \hyperpage{181}
+    \subitem {ThreadSharedListHandler}, \hyperpage{180}
+  \item {Markov::API::CUDA}, \hyperpage{22}
+    \subitem {FastRandomWalkCUDAKernel}, \hyperpage{23}
+    \subitem {strchr}, \hyperpage{24}
+  \item {Markov::API::CUDA::CUDADeviceController}, \hyperpage{53}
+    \subitem {CudaCheckNotifyErr}, \hyperpage{55}
+    \subitem {CudaMalloc2DToFlat}, \hyperpage{55}
+    \subitem {CudaMemcpy2DToFlat}, \hyperpage{56}
+    \subitem {CudaMigrate2DFlat}, \hyperpage{57}
+    \subitem {ListCudaDevices}, \hyperpage{58}
+  \item {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{59}
+    \subitem {AdjustEdge}, \hyperpage{63}
+    \subitem {AllocVRAMOutputBuffer}, \hyperpage{63}
+    \subitem {ConstructMatrix}, \hyperpage{64}
+    \subitem {CudaCheckNotifyErr}, \hyperpage{65}
+    \subitem {CudaMalloc2DToFlat}, \hyperpage{65}
+    \subitem {CudaMemcpy2DToFlat}, \hyperpage{66}
+    \subitem {CudaMigrate2DFlat}, \hyperpage{67}
+    \subitem {datasetFile}, \hyperpage{83}
+    \subitem {device\_edgeMatrix}, \hyperpage{83}
+    \subitem {device\_matrixIndex}, \hyperpage{83}
+    \subitem {device\_outputBuffer}, \hyperpage{83}
+    \subitem {device\_totalEdgeWeights}, \hyperpage{83}
+    \subitem {device\_valueMatrix}, \hyperpage{83}
+    \subitem {DumpJSON}, \hyperpage{68}
+    \subitem {edgeMatrix}, \hyperpage{83}
+    \subitem {Edges}, \hyperpage{69}
+    \subitem {edges}, \hyperpage{84}
+    \subitem {Export}, \hyperpage{69, 70}
+    \subitem {FastRandomWalk}, \hyperpage{70, 71}
+    \subitem {FastRandomWalkPartition}, \hyperpage{72}
+    \subitem {FastRandomWalkThread}, \hyperpage{73}
+    \subitem {flatEdgeMatrix}, \hyperpage{84}
+    \subitem {FlattenMatrix}, \hyperpage{74}
+    \subitem {flatValueMatrix}, \hyperpage{84}
+    \subitem {Generate}, \hyperpage{75}
+    \subitem {GenerateThread}, \hyperpage{76}
+    \subitem {Import}, \hyperpage{77}
+    \subitem {ListCudaDevices}, \hyperpage{78}
+    \subitem {matrixIndex}, \hyperpage{84}
+    \subitem {matrixSize}, \hyperpage{84}
+    \subitem {MigrateMatrix}, \hyperpage{78}
+    \subitem {modelSavefile}, \hyperpage{84}
+    \subitem {Nodes}, \hyperpage{78}
+    \subitem {nodes}, \hyperpage{84}
+    \subitem {OpenDatasetFile}, \hyperpage{78}
+    \subitem {outputBuffer}, \hyperpage{84}
+    \subitem {outputFile}, \hyperpage{85}
+    \subitem {RandomWalk}, \hyperpage{79}
+    \subitem {Save}, \hyperpage{80}
+    \subitem {StarterNode}, \hyperpage{81}
+    \subitem {starterNode}, \hyperpage{85}
+    \subitem {totalEdgeWeights}, \hyperpage{85}
+    \subitem {Train}, \hyperpage{81}
+    \subitem {TrainThread}, \hyperpage{82}
+    \subitem {valueMatrix}, \hyperpage{85}
+  \item {Markov::API::CUDA::Random}, \hyperpage{24}
+    \subitem {devrandom}, \hyperpage{24}
+  \item {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{113}
+    \subitem {CudaCheckNotifyErr}, \hyperpage{116}
+    \subitem {CudaMalloc2DToFlat}, \hyperpage{116}
+    \subitem {CudaMemcpy2DToFlat}, \hyperpage{117}
+    \subitem {CudaMigrate2DFlat}, \hyperpage{118}
+    \subitem {distribution}, \hyperpage{119}
+    \subitem {generator}, \hyperpage{120}
+    \subitem {ListCudaDevices}, \hyperpage{120}
+    \subitem {MigrateToVRAM}, \hyperpage{121}
+    \subitem {random}, \hyperpage{121}
+    \subitem {rd}, \hyperpage{122}
+    \subitem {x}, \hyperpage{122}
+    \subitem {y}, \hyperpage{122}
+    \subitem {z}, \hyperpage{122}
+  \item {Markov::API::MarkovPasswords}, \hyperpage{95}
+    \subitem {AdjustEdge}, \hyperpage{99}
+    \subitem {datasetFile}, \hyperpage{109}
+    \subitem {Edges}, \hyperpage{100}
+    \subitem {edges}, \hyperpage{109}
+    \subitem {Export}, \hyperpage{100}
+    \subitem {Generate}, \hyperpage{101}
+    \subitem {GenerateThread}, \hyperpage{102}
+    \subitem {Import}, \hyperpage{103}
+    \subitem {MarkovPasswords}, \hyperpage{99}
+    \subitem {modelSavefile}, \hyperpage{109}
+    \subitem {Nodes}, \hyperpage{104}
+    \subitem {nodes}, \hyperpage{109}
+    \subitem {OpenDatasetFile}, \hyperpage{104}
+    \subitem {outputFile}, \hyperpage{109}
+    \subitem {RandomWalk}, \hyperpage{105}
+    \subitem {Save}, \hyperpage{106}
+    \subitem {StarterNode}, \hyperpage{107}
+    \subitem {starterNode}, \hyperpage{109}
+    \subitem {Train}, \hyperpage{107}
+    \subitem {TrainThread}, \hyperpage{108}
+  \item {Markov::API::ModelMatrix}, \hyperpage{144}
+    \subitem {AdjustEdge}, \hyperpage{148}
+    \subitem {ConstructMatrix}, \hyperpage{149}
+    \subitem {datasetFile}, \hyperpage{164}
+    \subitem {DumpJSON}, \hyperpage{150}
+    \subitem {edgeMatrix}, \hyperpage{164}
+    \subitem {Edges}, \hyperpage{151}
+    \subitem {edges}, \hyperpage{164}
+    \subitem {Export}, \hyperpage{151}
+    \subitem {FastRandomWalk}, \hyperpage{152}
+    \subitem {FastRandomWalkPartition}, \hyperpage{153}
+    \subitem {FastRandomWalkThread}, \hyperpage{154}
+    \subitem {Generate}, \hyperpage{156}
+    \subitem {GenerateThread}, \hyperpage{157}
+    \subitem {Import}, \hyperpage{158}
+    \subitem {matrixIndex}, \hyperpage{164}
+    \subitem {matrixSize}, \hyperpage{164}
+    \subitem {ModelMatrix}, \hyperpage{148}
+    \subitem {modelSavefile}, \hyperpage{164}
+    \subitem {Nodes}, \hyperpage{159}
+    \subitem {nodes}, \hyperpage{165}
+    \subitem {OpenDatasetFile}, \hyperpage{159}
+    \subitem {outputFile}, \hyperpage{165}
+    \subitem {RandomWalk}, \hyperpage{160}
+    \subitem {Save}, \hyperpage{161}
+    \subitem {StarterNode}, \hyperpage{162}
+    \subitem {starterNode}, \hyperpage{165}
+    \subitem {totalEdgeWeights}, \hyperpage{165}
+    \subitem {Train}, \hyperpage{162}
+    \subitem {TrainThread}, \hyperpage{163}
+    \subitem {valueMatrix}, \hyperpage{165}
+  \item {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{90}
+    \subitem {\_left}, \hyperpage{95}
+    \subitem {\_right}, \hyperpage{95}
+    \subitem {\_weight}, \hyperpage{95}
+    \subitem {AdjustEdge}, \hyperpage{92}
+    \subitem {Edge}, \hyperpage{92}
+    \subitem {EdgeWeight}, \hyperpage{93}
+    \subitem {LeftNode}, \hyperpage{93}
+    \subitem {RightNode}, \hyperpage{93}
+    \subitem {SetLeftEdge}, \hyperpage{94}
+    \subitem {SetRightEdge}, \hyperpage{94}
+    \subitem {TraverseNode}, \hyperpage{94}
+  \item {Markov::GUI}, \hyperpage{25}
+  \item {Markov::GUI::about}, \hyperpage{44}
+    \subitem {about}, \hyperpage{45}
+    \subitem {ui}, \hyperpage{45}
+  \item {Markov::GUI::CLI}, \hyperpage{51}
+    \subitem {about}, \hyperpage{52}
+    \subitem {CLI}, \hyperpage{52}
+    \subitem {start}, \hyperpage{53}
+    \subitem {statistics}, \hyperpage{53}
+    \subitem {ui}, \hyperpage{53}
+  \item {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{110}
+    \subitem {loadDataset}, \hyperpage{112}
+    \subitem {MarkovPasswordsGUI}, \hyperpage{112}
+    \subitem {MarkovPasswordsGUI::benchmarkSelected}, \hyperpage{112}
+    \subitem {MarkovPasswordsGUI::comparisonSelected}, \hyperpage{112}
+    \subitem {MarkovPasswordsGUI::modelvisSelected}, \hyperpage{112}
+    \subitem {MarkovPasswordsGUI::visualDebugSelected}, \hyperpage{113}
+    \subitem {renderHTMLFile}, \hyperpage{113}
+    \subitem {ui}, \hyperpage{113}
+  \item {Markov::GUI::menu}, \hyperpage{128}
+    \subitem {about}, \hyperpage{130}
+    \subitem {menu}, \hyperpage{129}
+    \subitem {ui}, \hyperpage{130}
+    \subitem {visualization}, \hyperpage{130}
+  \item {Markov::GUI::Train}, \hyperpage{182}
+    \subitem {home}, \hyperpage{183}
+    \subitem {Train}, \hyperpage{183}
+    \subitem {train}, \hyperpage{183}
+    \subitem {ui}, \hyperpage{183}
+  \item {Markov::Markopy}, \hyperpage{25}
+    \subitem {BOOST\_PYTHON\_MODULE}, \hyperpage{25}
+  \item {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{135}
+    \subitem {AdjustEdge}, \hyperpage{137}
+    \subitem {Edges}, \hyperpage{138}
+    \subitem {edges}, \hyperpage{144}
+    \subitem {Export}, \hyperpage{138, 139}
+    \subitem {Import}, \hyperpage{140}
+    \subitem {Model}, \hyperpage{137}
+    \subitem {Nodes}, \hyperpage{142}
+    \subitem {nodes}, \hyperpage{144}
+    \subitem {RandomWalk}, \hyperpage{142}
+    \subitem {StarterNode}, \hyperpage{143}
+    \subitem {starterNode}, \hyperpage{144}
+  \item {Markov::Node$<$ storageType $>$}, \hyperpage{165}
+    \subitem {\_value}, \hyperpage{173}
+    \subitem {Edges}, \hyperpage{169}
+    \subitem {edges}, \hyperpage{173}
+    \subitem {edgesV}, \hyperpage{173}
+    \subitem {FindEdge}, \hyperpage{169}
+    \subitem {Link}, \hyperpage{170}
+    \subitem {Node}, \hyperpage{168}
+    \subitem {NodeValue}, \hyperpage{171}
+    \subitem {RandomNext}, \hyperpage{171}
+    \subitem {total\_edge\_weights}, \hyperpage{173}
+    \subitem {TotalEdgeWeights}, \hyperpage{172}
+    \subitem {UpdateEdges}, \hyperpage{172}
+    \subitem {UpdateTotalVerticeWeight}, \hyperpage{173}
+  \item {Markov::Random}, \hyperpage{26}
+  \item {Markov::Random::DefaultRandomEngine}, \hyperpage{85}
+    \subitem {distribution}, \hyperpage{88}
+    \subitem {generator}, \hyperpage{88}
+    \subitem {random}, \hyperpage{89}
+    \subitem {rd}, \hyperpage{89}
+  \item {Markov::Random::Marsaglia}, \hyperpage{123}
+    \subitem {distribution}, \hyperpage{125}
+    \subitem {generator}, \hyperpage{126}
+    \subitem {Marsaglia}, \hyperpage{125}
+    \subitem {random}, \hyperpage{126}
+    \subitem {rd}, \hyperpage{127}
+    \subitem {x}, \hyperpage{127}
+    \subitem {y}, \hyperpage{127}
+    \subitem {z}, \hyperpage{128}
+  \item {Markov::Random::Mersenne}, \hyperpage{130}
+    \subitem {distribution}, \hyperpage{133}
+    \subitem {generator}, \hyperpage{133}
+    \subitem {random}, \hyperpage{134}
+    \subitem {rd}, \hyperpage{134}
+  \item {Markov::Random::RandomEngine}, \hyperpage{174}
+    \subitem {random}, \hyperpage{175}
   \item {MarkovPasswords}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{65}
-  \item {markovPasswords.cpp}, \hyperpage{160, 161}
-  \item {markovPasswords.h}, \hyperpage{162, 163}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{99}
+  \item {markovPasswords.cpp}, \hyperpage{211}
+  \item {markovPasswords.h}, \hyperpage{213, 214}
   \item {MarkovPasswordsGUI}
-    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{78}
-  \item {MarkovPasswordsGUI.cpp}, \hyperpage{165}
-  \item {MarkovPasswordsGUI.h}, \hyperpage{166, 167}
+    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{112}
+  \item {MarkovPasswordsGUI.cpp}, \hyperpage{215}
+  \item {MarkovPasswordsGUI.h}, \hyperpage{216, 217}
   \item {MarkovPasswordsGUI::benchmarkSelected}
-    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{78}
+    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{112}
   \item {MarkovPasswordsGUI::comparisonSelected}
-    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{78}
+    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{112}
   \item {MarkovPasswordsGUI::modelvisSelected}
-    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{78}
+    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{112}
   \item {MarkovPasswordsGUI::visualDebugSelected}
-    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{79}
+    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{113}
   \item {Marsaglia}
-    \subitem {Markov::Random::Marsaglia}, \hyperpage{82}
+    \subitem {Markov::Random::Marsaglia}, \hyperpage{125}
   \item {matrixIndex}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{121}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{84}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{164}
   \item {matrixSize}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{121}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{84}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{164}
   \item {menu}
-    \subitem {Markov::GUI::menu}, \hyperpage{86}
-  \item {menu.cpp}, \hyperpage{168}
-  \item {menu.h}, \hyperpage{168, 169}
+    \subitem {Markov::GUI::menu}, \hyperpage{129}
+  \item {menu.cpp}, \hyperpage{218}
+  \item {menu.h}, \hyperpage{219}
+  \item {MigrateMatrix}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{78}
+  \item {MigrateToVRAM}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{121}
   \item {mlock}
     \subitem {Markov::API::Concurrency::ThreadSharedListHandler}, 
-		\hyperpage{138}
+		\hyperpage{181}
   \item {Model}
-    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{94}
+    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{137}
   \item {model}
     \subitem {markopy\_cli}, \hyperpage{19}
-  \item {model.h}, \hyperpage{170, 171}
-  \item {model\_2gram}, \hyperpage{24}
-    \subitem {alphabet}, \hyperpage{24}
-    \subitem {f}, \hyperpage{24}
-  \item {model\_2gram.py}, \hyperpage{175}
+  \item {model.h}, \hyperpage{220, 221}
+  \item {model\_2gram}, \hyperpage{26}
+    \subitem {alphabet}, \hyperpage{27}
+    \subitem {f}, \hyperpage{27}
+  \item {model\_2gram.py}, \hyperpage{225}
   \item {model\_base}
     \subitem {markopy\_cli}, \hyperpage{19}
   \item {model\_extension}
@@ -459,230 +598,252 @@
   \item {model\_list}
     \subitem {markopy\_cli}, \hyperpage{20}
   \item {ModelMatrix}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{105}
-  \item {modelMatrix.cpp}, \hyperpage{176}
-  \item {modelMatrix.h}, \hyperpage{178, 179}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{148}
+  \item {modelMatrix.cpp}, \hyperpage{226}
+  \item {modelMatrix.h}, \hyperpage{229}
   \item {modelSavefile}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{75}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{121}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{84}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{109}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{164}
 
   \indexspace
 
   \item {next}
     \subitem {Markov::API::Concurrency::ThreadSharedListHandler}, 
-		\hyperpage{138}
+		\hyperpage{181}
   \item {Node}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{125}
-  \item {node.h}, \hyperpage{181, 182}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{168}
+  \item {node.h}, \hyperpage{231, 232}
   \item {Nodes}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{70}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{116}
-    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{99}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{78}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{104}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{159}
+    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{142}
   \item {nodes}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{75}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{122}
-    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{101}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{84}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{109}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{165}
+    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{144}
   \item {NodeValue}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{128}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{171}
 
   \indexspace
 
   \item {OpenDatasetFile}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{70}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{116}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{78}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{104}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{159}
   \item {operator$<$$<$}
     \subitem {Markov::API::CLI}, \hyperpage{22}
-    \subitem {term.cpp}, \hyperpage{193}
+    \subitem {term.cpp}, \hyperpage{243}
   \item {output}
     \subitem {markopy\_cli}, \hyperpage{20}
   \item {output\_file\_name}
     \subitem {markopy\_cli}, \hyperpage{20}
   \item {output\_forced}
     \subitem {markopy\_cli}, \hyperpage{20}
+  \item {outputBuffer}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{84}
   \item {outputFile}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{75}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{122}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{85}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{109}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{165}
   \item {outputfilename}
-    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{41}
+    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{43}
 
   \indexspace
 
   \item {parse}
-    \subitem {Markov::API::CLI::Argparse}, \hyperpage{48}
+    \subitem {Markov::API::CLI::Argparse}, \hyperpage{50}
   \item {parser}
     \subitem {markopy\_cli}, \hyperpage{20}
-  \item {pch.cpp}, \hyperpage{185, 186}
-  \item {pch.h}, \hyperpage{187, 188}
+  \item {pch.cpp}, \hyperpage{235, 236}
+  \item {pch.h}, \hyperpage{237, 238}
   \item {po}
-    \subitem {Markov::API::CLI::Argparse}, \hyperpage{49}
+    \subitem {Markov::API::CLI::Argparse}, \hyperpage{51}
   \item {ProgramOptions}
     \subitem {Markov::API::CLI}, \hyperpage{22}
 
   \indexspace
 
-  \item {random}, \hyperpage{25}
-    \subitem {Markov::Random::DefaultRandomEngine}, \hyperpage{54}
-    \subitem {Markov::Random::Marsaglia}, \hyperpage{83}
-    \subitem {Markov::Random::Mersenne}, \hyperpage{91}
-    \subitem {Markov::Random::RandomEngine}, \hyperpage{132}
-  \item {random-\/model}, \hyperpage{25}
-    \subitem {alphabet}, \hyperpage{25}
-    \subitem {f}, \hyperpage{25}
-  \item {random-\/model.py}, \hyperpage{188}
-  \item {random.h}, \hyperpage{189, 190}
+  \item {random}, \hyperpage{27}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{121}
+    \subitem {Markov::Random::DefaultRandomEngine}, \hyperpage{89}
+    \subitem {Markov::Random::Marsaglia}, \hyperpage{126}
+    \subitem {Markov::Random::Mersenne}, \hyperpage{134}
+    \subitem {Markov::Random::RandomEngine}, \hyperpage{175}
+  \item {random-\/model}, \hyperpage{27}
+    \subitem {alphabet}, \hyperpage{27}
+    \subitem {f}, \hyperpage{27}
+  \item {random-\/model.py}, \hyperpage{238}
+  \item {random.h}, \hyperpage{239, 240}
   \item {RandomNext}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{128}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{171}
   \item {RandomWalk}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{71}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{117}
-    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{99}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{79}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{105}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{160}
+    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{142}
   \item {rd}
-    \subitem {Markov::Random::DefaultRandomEngine}, \hyperpage{54}
-    \subitem {Markov::Random::Marsaglia}, \hyperpage{84}
-    \subitem {Markov::Random::Mersenne}, \hyperpage{91}
-  \item {README.md}, \hyperpage{192}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{122}
+    \subitem {Markov::Random::DefaultRandomEngine}, \hyperpage{89}
+    \subitem {Markov::Random::Marsaglia}, \hyperpage{127}
+    \subitem {Markov::Random::Mersenne}, \hyperpage{134}
+  \item {README.md}, \hyperpage{242}
   \item {RED}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
   \item {renderHTMLFile}
-    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{79}
+    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{113}
   \item {RESET}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
   \item {RightNode}
-    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{59}
+    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{93}
 
   \indexspace
 
   \item {Save}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{72}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{118}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{80}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{106}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{161}
   \item {seperator}
-    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{42}
+    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{44}
   \item {SetLeftEdge}
-    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{60}
+    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{94}
   \item {setProgramOptions}
-    \subitem {Markov::API::CLI::Argparse}, \hyperpage{48}
+    \subitem {Markov::API::CLI::Argparse}, \hyperpage{50}
   \item {SetRightEdge}
-    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{60}
+    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{94}
   \item {src/main.cpp}
-    \subitem {main}, \hyperpage{153}
+    \subitem {main}, \hyperpage{203}
   \item {start}
-    \subitem {Markov::GUI::CLI}, \hyperpage{51}
+    \subitem {Markov::GUI::CLI}, \hyperpage{53}
   \item {StarterNode}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{73}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{119}
-    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{100}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{81}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{107}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{162}
+    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{143}
   \item {starterNode}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{75}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{122}
-    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{101}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{85}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{109}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{165}
+    \subitem {Markov::Model$<$ NodeStorageType $>$}, \hyperpage{144}
   \item {statistics}
-    \subitem {Markov::GUI::CLI}, \hyperpage{51}
+    \subitem {Markov::GUI::CLI}, \hyperpage{53}
+  \item {strchr}
+    \subitem {Markov::API::CUDA}, \hyperpage{24}
 
   \indexspace
 
-  \item {term.cpp}, \hyperpage{192, 193}
-    \subitem {operator$<$$<$}, \hyperpage{193}
-  \item {term.h}, \hyperpage{194}, \hyperpage{196}
-    \subitem {TERM\_FAIL}, \hyperpage{195}
-    \subitem {TERM\_INFO}, \hyperpage{195}
-    \subitem {TERM\_SUCC}, \hyperpage{196}
-    \subitem {TERM\_WARN}, \hyperpage{196}
+  \item {term.cpp}, \hyperpage{242, 243}
+    \subitem {operator$<$$<$}, \hyperpage{243}
+  \item {term.h}, \hyperpage{244}, \hyperpage{246}
+    \subitem {TERM\_FAIL}, \hyperpage{245}
+    \subitem {TERM\_INFO}, \hyperpage{245}
+    \subitem {TERM\_SUCC}, \hyperpage{246}
+    \subitem {TERM\_WARN}, \hyperpage{246}
   \item {TERM\_FAIL}
-    \subitem {term.h}, \hyperpage{195}
+    \subitem {term.h}, \hyperpage{245}
   \item {TERM\_INFO}
-    \subitem {term.h}, \hyperpage{195}
+    \subitem {term.h}, \hyperpage{245}
   \item {TERM\_SUCC}
-    \subitem {term.h}, \hyperpage{196}
+    \subitem {term.h}, \hyperpage{246}
   \item {TERM\_WARN}
-    \subitem {term.h}, \hyperpage{196}
+    \subitem {term.h}, \hyperpage{246}
   \item {Terminal}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
   \item {TEST\_CLASS}
-    \subitem {Testing::MarkovModel}, \hyperpage{26--28}
-    \subitem {Testing::MVP::MarkovModel}, \hyperpage{30--32}
-    \subitem {Testing::MVP::MarkovPasswords}, \hyperpage{35}
-  \item {Testing}, \hyperpage{25}
-  \item {Testing::MarkovModel}, \hyperpage{25}
-    \subitem {TEST\_CLASS}, \hyperpage{26--28}
-  \item {Testing::MarkovPasswords}, \hyperpage{29}
-  \item {Testing::MVP}, \hyperpage{29}
-  \item {Testing::MVP::MarkovModel}, \hyperpage{29}
-    \subitem {TEST\_CLASS}, \hyperpage{30--32}
-  \item {Testing::MVP::MarkovPasswords}, \hyperpage{35}
-    \subitem {TEST\_CLASS}, \hyperpage{35}
+    \subitem {Testing::MarkovModel}, \hyperpage{28--30}
+    \subitem {Testing::MVP::MarkovModel}, \hyperpage{32--34}
+    \subitem {Testing::MVP::MarkovPasswords}, \hyperpage{37}
+  \item {Testing}, \hyperpage{28}
+  \item {Testing::MarkovModel}, \hyperpage{28}
+    \subitem {TEST\_CLASS}, \hyperpage{28--30}
+  \item {Testing::MarkovPasswords}, \hyperpage{31}
+  \item {Testing::MVP}, \hyperpage{31}
+  \item {Testing::MVP::MarkovModel}, \hyperpage{31}
+    \subitem {TEST\_CLASS}, \hyperpage{32--34}
+  \item {Testing::MVP::MarkovPasswords}, \hyperpage{37}
+    \subitem {TEST\_CLASS}, \hyperpage{37}
   \item {ThreadSharedListHandler}
     \subitem {Markov::API::Concurrency::ThreadSharedListHandler}, 
-		\hyperpage{137}
-  \item {threadSharedListHandler.cpp}, \hyperpage{197}
-  \item {threadSharedListHandler.h}, \hyperpage{197, 198}
+		\hyperpage{180}
+  \item {threadSharedListHandler.cpp}, \hyperpage{247}
+  \item {threadSharedListHandler.h}, \hyperpage{247, 248}
   \item {total\_edge\_weights}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{130}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{173}
   \item {TotalEdgeWeights}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{129}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{172}
   \item {totalEdgeWeights}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{122}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{85}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{165}
   \item {Train}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{73}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{119}
-    \subitem {Markov::GUI::Train}, \hyperpage{140}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{81}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{107}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{162}
+    \subitem {Markov::GUI::Train}, \hyperpage{183}
   \item {train}
-    \subitem {Markov::GUI::Train}, \hyperpage{140}
-  \item {Train.h}, \hyperpage{200}
+    \subitem {Markov::GUI::Train}, \hyperpage{183}
+  \item {Train.h}, \hyperpage{250}
   \item {TrainThread}
-    \subitem {Markov::API::MarkovPasswords}, \hyperpage{74}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{120}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{82}
+    \subitem {Markov::API::MarkovPasswords}, \hyperpage{108}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{163}
   \item {TraverseNode}
-    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{60}
+    \subitem {Markov::Edge$<$ NodeStorageType $>$}, \hyperpage{94}
   \item {True}
     \subitem {markopy\_cli}, \hyperpage{20}
 
   \indexspace
 
   \item {ui}
-    \subitem {Markov::GUI::about}, \hyperpage{43}
-    \subitem {Markov::GUI::CLI}, \hyperpage{51}
-    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{79}
-    \subitem {Markov::GUI::menu}, \hyperpage{87}
-    \subitem {Markov::GUI::Train}, \hyperpage{140}
+    \subitem {Markov::GUI::about}, \hyperpage{45}
+    \subitem {Markov::GUI::CLI}, \hyperpage{53}
+    \subitem {Markov::GUI::MarkovPasswordsGUI}, \hyperpage{113}
+    \subitem {Markov::GUI::menu}, \hyperpage{130}
+    \subitem {Markov::GUI::Train}, \hyperpage{183}
   \item {UI/src/main.cpp}
-    \subitem {main}, \hyperpage{155}
-  \item {UnitTests.cpp}, \hyperpage{201, 202}
+    \subitem {main}, \hyperpage{205}
+  \item {UnitTests.cpp}, \hyperpage{251, 252}
   \item {UpdateEdges}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{129}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{172}
   \item {UpdateTotalVerticeWeight}
-    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{130}
+    \subitem {Markov::Node$<$ storageType $>$}, \hyperpage{173}
 
   \indexspace
 
   \item {valueMatrix}
-    \subitem {Markov::API::ModelMatrix}, \hyperpage{122}
+    \subitem {Markov::API::CUDA::CUDAModelMatrix}, \hyperpage{85}
+    \subitem {Markov::API::ModelMatrix}, \hyperpage{165}
   \item {visualization}
-    \subitem {Markov::GUI::menu}, \hyperpage{87}
+    \subitem {Markov::GUI::menu}, \hyperpage{130}
 
   \indexspace
 
   \item {WHITE}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
   \item {WIN32\_LEAN\_AND\_MEAN}
-    \subitem {framework.h}, \hyperpage{152}
+    \subitem {framework.h}, \hyperpage{203}
   \item {wordlistname}
-    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{42}
+    \subitem {Markov::API::CLI::\_programOptions}, \hyperpage{44}
 
   \indexspace
 
   \item {x}
-    \subitem {Markov::Random::Marsaglia}, \hyperpage{84}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{122}
+    \subitem {Markov::Random::Marsaglia}, \hyperpage{127}
 
   \indexspace
 
   \item {y}
-    \subitem {Markov::Random::Marsaglia}, \hyperpage{84}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{122}
+    \subitem {Markov::Random::Marsaglia}, \hyperpage{127}
   \item {YELLOW}
-    \subitem {Markov::API::CLI::Terminal}, \hyperpage{134}
+    \subitem {Markov::API::CLI::Terminal}, \hyperpage{177}
 
   \indexspace
 
   \item {z}
-    \subitem {Markov::Random::Marsaglia}, \hyperpage{85}
+    \subitem {Markov::API::CUDA::Random::Marsaglia}, \hyperpage{122}
+    \subitem {Markov::Random::Marsaglia}, \hyperpage{128}
 
 \end{theindex}

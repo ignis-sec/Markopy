@@ -1,13 +1,15 @@
 <map id="random.h" name="random.h">
-<area shape="rect" id="node1" title=" " alt="" coords="377,5,477,35"/>
-<area shape="rect" id="node2" href="$node_8h.html" title=" " alt="" coords="388,83,465,112"/>
-<area shape="rect" id="node3" href="$model_8h.html" title=" " alt="" coords="383,160,470,189"/>
-<area shape="rect" id="node4" href="$markov_passwords_8h.html" title=" " alt="" coords="167,237,345,267"/>
-<area shape="rect" id="node10" href="$dllmain_8cpp.html" title=" " alt="" coords="369,237,484,267"/>
-<area shape="rect" id="node11" href="$_unit_tests_8cpp.html" title=" " alt="" coords="509,237,635,267"/>
+<area shape="rect" id="node1" title=" " alt="" coords="474,5,574,35"/>
+<area shape="rect" id="node2" href="$node_8h.html" title=" " alt="" coords="420,83,497,112"/>
+<area shape="rect" id="node13" href="$cudarandom_8h.html" title=" " alt="" coords="521,83,660,112"/>
+<area shape="rect" id="node3" href="$model_8h.html" title=" " alt="" coords="415,160,502,189"/>
+<area shape="rect" id="node4" href="$markov_passwords_8h.html" title=" " alt="" coords="199,237,377,267"/>
+<area shape="rect" id="node11" href="$dllmain_8cpp.html" title=" " alt="" coords="401,237,516,267"/>
+<area shape="rect" id="node12" href="$_unit_tests_8cpp.html" title=" " alt="" coords="541,237,667,267"/>
 <area shape="rect" id="node5" href="$src_2main_8cpp.html" title=" " alt="" coords="5,392,101,421"/>
-<area shape="rect" id="node6" href="$model_matrix_8h.html" title=" " alt="" coords="91,315,229,344"/>
-<area shape="rect" id="node8" href="$markov_passwords_8cpp.html" title=" " alt="" coords="253,315,451,344"/>
-<area shape="rect" id="node9" href="$markopy_8cpp.html" title=" " alt="" coords="476,315,601,344"/>
+<area shape="rect" id="node6" href="$model_matrix_8h.html" title=" " alt="" coords="123,315,261,344"/>
+<area shape="rect" id="node9" href="$markov_passwords_8cpp.html" title=" " alt="" coords="285,315,483,344"/>
+<area shape="rect" id="node10" href="$markopy_8cpp.html" title=" " alt="" coords="508,315,633,344"/>
 <area shape="rect" id="node7" href="$model_matrix_8cpp.html" title=" " alt="" coords="126,392,282,421"/>
+<area shape="rect" id="node8" href="$cuda_model_matrix_8h.html" title=" " alt="" coords="306,392,481,421"/>
 </map>

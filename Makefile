@@ -6,6 +6,8 @@
 
 # Compiler
 CC            	:= g++
+# Cuda Compiler
+NVCC 			:= nvcc
 #output directory
 BIN            	:= bin
 #include directory
@@ -13,6 +15,8 @@ INCLUDE        	:= include
 #Libraries
 LIB            	:= lib
 LIBRARIES    	:=
+CUDAPATH = /usr/lib/cuda11.0
+
 
 ifndef PYTHON_VERSION
 PYTHON_VERSION := $(shell python3 -c "import sys;t='{v[0]}.{v[1]}'.format(v=list(sys.version_info[:2]));sys.stdout.write(t)";) #3.8
@@ -35,6 +39,22 @@ MP_INC		:= $(shell pwd)
 #build pattern
 $(BIN)/$(MP_EXEC): $(MP_SRC)
 	$(CC) $(MP_C_FLAGS) -I$(MP_INC) -L$(LIB) $^ -o $@ $(MP_LIB) 
+
+
+##############################################################################################################
+###################################   CUDAMarkovPassword project options     #################################
+##############################################################################################################
+
+NVCCFLAGS 	:= -std=c++17 -g -O3 -L$(CUDAPATH)/lib
+MPC_EXEC    := CUDAMarkov
+MPC_SRC     := $(shell find ./CudaMarkovPasswords/src/ -name '*.cpp')  $(shell find ./CudaMarkovPasswords/src/ -name '*.cu') MarkovPasswords/src/threadSharedListHandler.cpp MarkovPasswords/src/markovPasswords.cpp MarkovPasswords/src/modelMatrix.cpp
+MPC_INC 	:= $(CUDAPATH)/include
+MPC_LIB		:= -lboost_program_options -lpthread -lcuda -lcudart -lm
+MPC_INC		:= $(shell pwd)
+
+#build pattern
+$(BIN)/$(MPC_EXEC): $(MPC_SRC)
+	$(NVCC) $(NVCCFLAGS) -I$(MPC_INC) -L$(LIB) $^ -o $@ $(MPC_LIB) 
 
 ##############################################################################################################
 #####################################       MarkovModel project options      #################################
@@ -90,14 +110,16 @@ $(BIN)/%.cpp.o:%.cpp
 
 .PHONY: all
 all: model mp markopy
-model: $(INCLUDE)/$(MM_LIB)
+model: 		$(INCLUDE)/$(MM_LIB)
 
-mp: $(BIN)/$(MP_EXEC)
+mp: 		$(BIN)/$(MP_EXEC)
 
-markopy: $(BIN)/$(MPY_SO)
+mpcuda: 	$(BIN)/$(MPC_EXEC)
 
-.PHONY: clean
-clean:
-	$(RM) -r $(BIN)/*
+markopy: 	$(BIN)/$(MPY_SO)
+
+.PHONY: 	clean
+
+clean: 		$(RM) -r $(BIN)/*
 
 

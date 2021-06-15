@@ -8,6 +8,11 @@ var files_dup =
     [ "CLI.h", "_c_l_i_8h.html", [
       [ "CLI", "class_markov_1_1_g_u_i_1_1_c_l_i.html", "class_markov_1_1_g_u_i_1_1_c_l_i" ]
     ] ],
+    [ "cudaDeviceController.h", "cuda_device_controller_8h.html", [
+      [ "CUDADeviceController", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller" ]
+    ] ],
+    [ "cudaModelMatrix.h", "cuda_model_matrix_8h.html", "cuda_model_matrix_8h" ],
+    [ "cudarandom.h", "cudarandom_8h.html", "cudarandom_8h" ],
     [ "dllmain.cpp", "dllmain_8cpp.html", null ],
     [ "edge.h", "edge_8h.html", [
       [ "Node", "class_markov_1_1_node.html", "class_markov_1_1_node" ],
