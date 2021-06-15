@@ -1,5 +1,6 @@
 <map id="Markov::Model::RandomWalk" name="Markov::Model::RandomWalk">
-<area shape="rect" id="node1" title="Do a random walk on this model." alt="" coords="292,50,545,79"/>
-<area shape="rect" id="node2" href="$namespace_testing_1_1_m_v_p_1_1_markov_model.html#af8b6c0d926618a1037c1f30bfc15b87a" title="Test class for minimal viable Model." alt="" coords="5,5,244,52"/>
-<area shape="rect" id="node3" href="$namespace_testing_1_1_markov_model.html#a84a573ca81cb8cb3db9845b0cdcf06a6" title="Test class for rest of model cases." alt="" coords="28,76,221,123"/>
+<area shape="rect" id="node1" title="Do a random walk on this model." alt="" coords="909,14,1163,43"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html#ac2703ec2d5c97adaf8d205000ca34756" title="A single thread invoked by the Generate function." alt="" coords="595,5,861,52"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html#a13886b29051abf3edeed97bd7f985f39" title="Call Markov::Model::RandomWalk n times, and collect output." alt="" coords="280,5,547,52"/>
+<area shape="rect" id="node4" href="$namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" title=" " alt="" coords="5,5,232,52"/>
 </map>

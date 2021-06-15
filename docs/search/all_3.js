@@ -7,6 +7,7 @@ var searchData=
   ['cli_5ftrain_28',['cli_train',['../namespacemarkopy__cli.html#aba737028a4ca1223e06631b16d22da93',1,'markopy_cli']]],
   ['color_29',['color',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#abd812d8a82872e9fca1f0df632fa3722',1,'Markov::API::CLI::Terminal']]],
   ['colormap_30',['colormap',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#a296cac1426f648e426bd77fd3bcaf79d',1,'Markov::API::CLI::Terminal']]],
-  ['corpus_5flist_31',['corpus_list',['../namespacemarkopy__cli.html#a9981bd7881129bd6b325ca2386bb44f1',1,'markopy_cli']]],
-  ['cyan_32',['CYAN',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#abd812d8a82872e9fca1f0df632fa3722a3aa2f2e7a8326d5464a01fdb0161a8e3',1,'Markov::API::CLI::Terminal']]]
+  ['constructmatrix_31',['ConstructMatrix',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#ac1dbc499eda0e0eda3567bce45d17db4',1,'Markov::API::ModelMatrix']]],
+  ['corpus_5flist_32',['corpus_list',['../namespacemarkopy__cli.html#a9981bd7881129bd6b325ca2386bb44f1',1,'markopy_cli']]],
+  ['cyan_33',['CYAN',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#abd812d8a82872e9fca1f0df632fa3722a3aa2f2e7a8326d5464a01fdb0161a8e3',1,'Markov::API::CLI::Terminal']]]
 ];

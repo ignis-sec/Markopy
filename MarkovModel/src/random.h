@@ -126,19 +126,21 @@ namespace Markov::Random{
 			this->z = this->distribution()(this->generator());
 			//std::cout << "x: " << x << ", y: " << y << ", z: " << z << "\n";
 		}
-		inline unsigned long random(){	
-			unsigned long t;
-			x ^= x << 16;
-			x ^= x >> 5;
-			x ^= x << 1;
 
-			t = x;
-			x = y;
-			y = z;
-			z = t ^ x ^ y;
 
-			return z;
-		}
+	inline unsigned long random(){	
+		unsigned long t;
+		x ^= x << 16;
+		x ^= x >> 5;
+		x ^= x << 1;
+
+		t = x;
+		x = y;
+		y = z;
+		z = t ^ x ^ y;
+
+		return z;
+	}
 	
 
 		unsigned long x;

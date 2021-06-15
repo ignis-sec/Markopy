@@ -2,45 +2,51 @@
 \label{term_8h_source}\index{term.h@{term.h}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
 \DoxyCodeLine{00002 }
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#ifdef \_WIN32}}
-\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include <Windows.h>}}
-\DoxyCodeLine{00005 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef} \textcolor{preprocessor}{\_WIN32}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{Windows}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
 \DoxyCodeLine{00006 }
-\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include <iostream>}}
-\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{iostream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{map}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00009 }
-\DoxyCodeLine{\Hypertarget{term_8h_source_l00010}\mbox{\hyperlink{term_8h_af9c20a7b067ad05ca6726489ff9d7559}{00010}} \textcolor{preprocessor}{\#define TERM\_FAIL "[" << Markov::API::CLI::Terminal::color::RED << "+" << Markov::API::CLI::Terminal::color::RESET << "] "}}
-\DoxyCodeLine{\Hypertarget{term_8h_source_l00011}\mbox{\hyperlink{term_8h_ab4aa9c34956736274020c42f469deaf6}{00011}} \textcolor{preprocessor}{\#define TERM\_INFO "[" << Markov::API::CLI::Terminal::color::BLUE << "+" << Markov::API::CLI::Terminal::color::RESET << "] "}}
-\DoxyCodeLine{\Hypertarget{term_8h_source_l00012}\mbox{\hyperlink{term_8h_a5a6f93c930291485c408f5c786cd376b}{00012}} \textcolor{preprocessor}{\#define TERM\_WARN "[" << Markov::API::CLI::Terminal::color::YELLOW << "+" << Markov::API::CLI::Terminal::color::RESET << "] "}}
-\DoxyCodeLine{\Hypertarget{term_8h_source_l00013}\mbox{\hyperlink{term_8h_a76a5663c1e3272efc11781b931390996}{00013}} \textcolor{preprocessor}{\#define TERM\_SUCC "[" << Markov::API::CLI::Terminal::color::GREEN << "+" << Markov::API::CLI::Terminal::color::RESET << "] "}}
+\DoxyCodeLine{\Hypertarget{term_8h_source_l00010}\mbox{\hyperlink{term_8h_af9c20a7b067ad05ca6726489ff9d7559}{00010}} \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define} \textcolor{preprocessor}{TERM\_FAIL} \textcolor{stringliteral}{"["} \textcolor{preprocessor}{<<} \textcolor{preprocessor}{Markov}\textcolor{preprocessor}{::}\textcolor{preprocessor}{API}\textcolor{preprocessor}{::}\textcolor{preprocessor}{CLI}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Terminal}\textcolor{preprocessor}{::}\textcolor{preprocessor}{color}\textcolor{preprocessor}{::}\textcolor{preprocessor}{RED} \textcolor{preprocessor}{<<} \textcolor{stringliteral}{"+"} \textcolor{preprocessor}{<<} \textcolor{preprocessor}{Markov}\textcolor{preprocessor}{::}\textcolor{preprocessor}{API}\textcolor{preprocessor}{::}\textcolor{preprocessor}{CLI}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Terminal}\textcolor{preprocessor}{::}\textcolor{preprocessor}{color}\textcolor{preprocessor}{::}\textcolor{preprocessor}{RESET} \textcolor{preprocessor}{<<} \textcolor{stringliteral}{"] "}}
+\DoxyCodeLine{\Hypertarget{term_8h_source_l00011}\mbox{\hyperlink{term_8h_ab4aa9c34956736274020c42f469deaf6}{00011}} \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define} \textcolor{preprocessor}{TERM\_INFO} \textcolor{stringliteral}{"["} \textcolor{preprocessor}{<<} \textcolor{preprocessor}{Markov}\textcolor{preprocessor}{::}\textcolor{preprocessor}{API}\textcolor{preprocessor}{::}\textcolor{preprocessor}{CLI}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Terminal}\textcolor{preprocessor}{::}\textcolor{preprocessor}{color}\textcolor{preprocessor}{::}\textcolor{preprocessor}{BLUE} \textcolor{preprocessor}{<<} \textcolor{stringliteral}{"+"} \textcolor{preprocessor}{<<} \textcolor{preprocessor}{Markov}\textcolor{preprocessor}{::}\textcolor{preprocessor}{API}\textcolor{preprocessor}{::}\textcolor{preprocessor}{CLI}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Terminal}\textcolor{preprocessor}{::}\textcolor{preprocessor}{color}\textcolor{preprocessor}{::}\textcolor{preprocessor}{RESET} \textcolor{preprocessor}{<<} \textcolor{stringliteral}{"] "}}
+\DoxyCodeLine{\Hypertarget{term_8h_source_l00012}\mbox{\hyperlink{term_8h_a5a6f93c930291485c408f5c786cd376b}{00012}} \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define} \textcolor{preprocessor}{TERM\_WARN} \textcolor{stringliteral}{"["} \textcolor{preprocessor}{<<} \textcolor{preprocessor}{Markov}\textcolor{preprocessor}{::}\textcolor{preprocessor}{API}\textcolor{preprocessor}{::}\textcolor{preprocessor}{CLI}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Terminal}\textcolor{preprocessor}{::}\textcolor{preprocessor}{color}\textcolor{preprocessor}{::}\textcolor{preprocessor}{YELLOW} \textcolor{preprocessor}{<<} \textcolor{stringliteral}{"+"} \textcolor{preprocessor}{<<} \textcolor{preprocessor}{Markov}\textcolor{preprocessor}{::}\textcolor{preprocessor}{API}\textcolor{preprocessor}{::}\textcolor{preprocessor}{CLI}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Terminal}\textcolor{preprocessor}{::}\textcolor{preprocessor}{color}\textcolor{preprocessor}{::}\textcolor{preprocessor}{RESET} \textcolor{preprocessor}{<<} \textcolor{stringliteral}{"] "}}
+\DoxyCodeLine{\Hypertarget{term_8h_source_l00013}\mbox{\hyperlink{term_8h_a76a5663c1e3272efc11781b931390996}{00013}} \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define} \textcolor{preprocessor}{TERM\_SUCC} \textcolor{stringliteral}{"["} \textcolor{preprocessor}{<<} \textcolor{preprocessor}{Markov}\textcolor{preprocessor}{::}\textcolor{preprocessor}{API}\textcolor{preprocessor}{::}\textcolor{preprocessor}{CLI}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Terminal}\textcolor{preprocessor}{::}\textcolor{preprocessor}{color}\textcolor{preprocessor}{::}\textcolor{preprocessor}{GREEN} \textcolor{preprocessor}{<<} \textcolor{stringliteral}{"+"} \textcolor{preprocessor}{<<} \textcolor{preprocessor}{Markov}\textcolor{preprocessor}{::}\textcolor{preprocessor}{API}\textcolor{preprocessor}{::}\textcolor{preprocessor}{CLI}\textcolor{preprocessor}{::}\textcolor{preprocessor}{Terminal}\textcolor{preprocessor}{::}\textcolor{preprocessor}{color}\textcolor{preprocessor}{::}\textcolor{preprocessor}{RESET} \textcolor{preprocessor}{<<} \textcolor{stringliteral}{"] "}}
 \DoxyCodeLine{00014 }
-\DoxyCodeLine{00015 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{Markov::API::CLI}}\{}
-\DoxyCodeLine{\Hypertarget{term_8h_source_l00018}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{00018}}     \textcolor{keyword}{class }\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Terminal}} \{}
+\DoxyCodeLine{00015 \textcolor{keyword}{namespace} Markov::API::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{CLI}}\{}
+\DoxyCodeLine{00016     \textcolor{comment}{/** @brief pretty colors for Terminal. Windows Only.}}
+\DoxyCodeLine{00017 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{term_8h_source_l00018}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{00018}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Terminal}} \{}
 \DoxyCodeLine{00019     \textcolor{keyword}{public}:}
 \DoxyCodeLine{00020 }
+\DoxyCodeLine{00021         \textcolor{comment}{/** Default constructor.}}
+\DoxyCodeLine{00022 \textcolor{comment}{        * Get references to stdout and stderr handles.}}
+\DoxyCodeLine{00023 \textcolor{comment}{        */}}
 \DoxyCodeLine{00024         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_aa448509b5aa1ece53c3d86385655be0e}{Terminal}}();}
 \DoxyCodeLine{00025 }
 \DoxyCodeLine{\Hypertarget{term_8h_source_l00026}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722a548120dd90d58555e1511dbf278691e8}{00026}}         \textcolor{keyword}{enum} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722}{color}} \{ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722a72541243294300957260aa5cd4c29a73}{RESET}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722a55b9aaebc4ed72084f1aeef0ea11da84}{BLACK}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722a8eb4747060ac24837b460a58065670e5}{RED}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722ad71ce8c3674c5d083be3d75f94213a8c}{GREEN}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722a548120dd90d58555e1511dbf278691e8}{YELLOW}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722aedab7bc0ba841ef4eb76ce8ec1e61341}{BLUE}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722a2202ef26e54a5230dd8c6b90b0fe999a}{MAGENTA}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722a3aa2f2e7a8326d5464a01fdb0161a8e3}{CYAN}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722a0aea73ba6a6c3140649e157f7d4893de}{WHITE}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722a4542a9eca0952a97b3ff7441fbaa197e}{LIGHTGRAY}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722a253297cf5f01d0db8855641e5ca43b3f}{DARKGRAY}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722a062ddef9cd8c1be703a4434299078607}{BROWN}} \};}
-\DoxyCodeLine{00027 \textcolor{preprocessor}{        \#ifdef \_WIN32}}
-\DoxyCodeLine{00028         \textcolor{keyword}{static} HANDLE \_stdout;}
-\DoxyCodeLine{00029         \textcolor{keyword}{static} HANDLE \_stderr;}
-\DoxyCodeLine{00030         \textcolor{keyword}{static} std::map<Markov::API::CLI::Terminal::color, DWORD> \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_a296cac1426f648e426bd77fd3bcaf79d}{colormap}};}
-\DoxyCodeLine{00031 \textcolor{preprocessor}{        \#else}}
-\DoxyCodeLine{\Hypertarget{term_8h_source_l00032}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_a296cac1426f648e426bd77fd3bcaf79d}{00032}}         \textcolor{keyword}{static} std::map<Markov::API::CLI::Terminal::color, int> \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_a296cac1426f648e426bd77fd3bcaf79d}{colormap}};}
-\DoxyCodeLine{00033 \textcolor{preprocessor}{        \#endif}}
-\DoxyCodeLine{00034         }
-\DoxyCodeLine{00035         }
-\DoxyCodeLine{00036         }
+\DoxyCodeLine{00027         \textcolor{preprocessor}{\#}\textcolor{preprocessor}{ifdef} \textcolor{preprocessor}{\_WIN32}}
+\DoxyCodeLine{00028         \textcolor{keyword}{static} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{HANDLE}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{\_stdout}};}
+\DoxyCodeLine{00029         \textcolor{keyword}{static} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{HANDLE}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{\_stderr}};}
+\DoxyCodeLine{00030         \textcolor{keyword}{static} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{std}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{map}}<\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Markov}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{API}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{CLI}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Terminal}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{color}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{DWORD}}> \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{colormap}};}
+\DoxyCodeLine{00031         \textcolor{preprocessor}{\#}\textcolor{preprocessor}{else}}
+\DoxyCodeLine{\Hypertarget{term_8h_source_l00032}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_a296cac1426f648e426bd77fd3bcaf79d}{00032}}         \textcolor{keyword}{static} std::map<Markov::API::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{CLI}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Terminal}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722}{color}}, \textcolor{keywordtype}{int}> \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_a296cac1426f648e426bd77fd3bcaf79d}{colormap}};}
+\DoxyCodeLine{00033         \textcolor{preprocessor}{\#}\textcolor{preprocessor}{endif}}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036 }
 \DoxyCodeLine{\Hypertarget{term_8h_source_l00037}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_ab72d1691fc22916298e2e26ee2e8a4da}{00037}}         \textcolor{keyword}{static} std::ostream \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_ab72d1691fc22916298e2e26ee2e8a4da}{endl}};}
 \DoxyCodeLine{00038 }
 \DoxyCodeLine{00039 }
 \DoxyCodeLine{00040     \};}
 \DoxyCodeLine{00041 }
-\DoxyCodeLine{00044     std::ostream\& \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i_ac91ec1d9a601445bd4e3ee362e3dbd3f}{operator<<}}(std::ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722}{Markov::API::CLI::Terminal::color}}\& c);}
+\DoxyCodeLine{00042     \textcolor{comment}{/** overload for std::cout. }}
+\DoxyCodeLine{00043 \textcolor{comment}{    */}}
+\DoxyCodeLine{00044     std::ostream\& operator<<(std::ostream\& os, \textcolor{keyword}{const} Markov::API::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{CLI}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Terminal}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722}{color}}\& c);}
 \DoxyCodeLine{00045 }
 \DoxyCodeLine{00046 \}}
-\DoxyCodeLine{00047 }
 
 \end{DoxyCode}

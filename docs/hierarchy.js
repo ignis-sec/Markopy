@@ -7,7 +7,9 @@ var hierarchy =
     [ "Markov::Edge< storageType >", "class_markov_1_1_edge.html", null ],
     [ "Markov::Model< NodeStorageType >", "class_markov_1_1_model.html", null ],
     [ "Markov::Model< char >", "class_markov_1_1_model.html", [
-      [ "Markov::API::MarkovPasswords", "class_markov_1_1_a_p_i_1_1_markov_passwords.html", null ]
+      [ "Markov::API::MarkovPasswords", "class_markov_1_1_a_p_i_1_1_markov_passwords.html", [
+        [ "Markov::API::ModelMatrix", "class_markov_1_1_a_p_i_1_1_model_matrix.html", null ]
+      ] ]
     ] ],
     [ "Markov::Node< storageType >", "class_markov_1_1_node.html", null ],
     [ "Markov::Node< char >", "class_markov_1_1_node.html", null ],

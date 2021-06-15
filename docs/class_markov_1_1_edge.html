@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('class_markov_1_1_edge.html',''); initR
 <p><a class="el" href="class_markov_1_1_edge.html" title="Edge class used to link nodes in the model together.">Edge</a> class used to link nodes in the model together.  
  <a href="class_markov_1_1_edge.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="edge_8h_source.html">edge.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="model_8h_source.html">model.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Markov::Edge&lt; NodeStorageType &gt;:</div>
 <div class="dyncontent">
@@ -157,7 +157,7 @@ class Markov::Edge&lt; NodeStorageType &gt;</h3>
 <p><a class="el" href="class_markov_1_1_edge.html" title="Edge class used to link nodes in the model together.">Edge</a> class used to link nodes in the model together. </p>
 <p>Has LeftNode, RightNode, and EdgeWeight of the edge. Edges are <em>UNIDIRECTIONAL</em> in this model. They can only be traversed LeftNode to RightNode. </p>
 
-<p class="definition">Definition at line <a class="el" href="edge_8h_source.html#l00016">16</a> of file <a class="el" href="edge_8h_source.html">edge.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="model_8h_source.html#l00026">26</a> of file <a class="el" href="model_8h_source.html">model.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a893ea498a247e09b2a7e2424f026a137"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a893ea498a247e09b2a7e2424f026a137">&#9670;&nbsp;</a></span>Edge() <span class="overload">[1/2]</span></h2>
@@ -271,14 +271,6 @@ template&lt;typename NodeStorageType &gt; </div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_edge.html#a3975b42a420de76e216d343dca059f88">LeftNode</a>()-&gt;<a class="code" href="class_markov_1_1_node.html#ab254a9c976195fcb1cac4d463d030d3c">UpdateTotalVerticeWeight</a>(offset);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="model_8h_source.html#l00322">Markov::Model&lt; char &gt;::AdjustEdge()</a>, <a class="el" href="model_8h_source.html#l00206">Markov::Model&lt; char &gt;::Import()</a>, <a class="el" href="_unit_tests_8cpp_source.html#l00021">Testing::MVP::MarkovModel::TEST_CLASS()</a>, and <a class="el" href="_unit_tests_8cpp_source.html#l00492">Testing::MarkovModel::TEST_CLASS()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad_icgraph.svg" width="528" height="270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
 </div>
 </div>
 <a id="a2b1e5a6e6f81502cd8ac6b20ed38b677"></a>
@@ -311,11 +303,11 @@ template&lt;typename NodeStorageType &gt; </div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_markov_1_1_edge.html#a903a989782c2e7e59595eabc80a6b183">_weight</a>;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="model_8h_source.html#l00273">Markov::Model&lt; char &gt;::Export()</a>, and <a class="el" href="_unit_tests_8cpp_source.html#l00021">Testing::MVP::MarkovModel::TEST_CLASS()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="model_matrix_8cpp_source.html#l00011">Markov::API::ModelMatrix::ConstructMatrix()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677_icgraph.svg" width="532" height="128"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677_icgraph.svg" width="630" height="58"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -343,14 +335,6 @@ template&lt;typename NodeStorageType &gt; </div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_markov_1_1_edge.html#a1f636c80a30900dfbfa5b695402cceb9">_left</a>;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="model_8h_source.html#l00273">Markov::Model&lt; char &gt;::Export()</a>, and <a class="el" href="_unit_tests_8cpp_source.html#l00021">Testing::MVP::MarkovModel::TEST_CLASS()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88_icgraph.svg" width="511" height="128"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
 </div>
 </div>
 <a id="a2e7d14e46631c85c84f6f8f1dd2949cd"></a>
@@ -383,11 +367,11 @@ template&lt;typename NodeStorageType &gt; </div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_markov_1_1_edge.html#a7f8221d3950f12a673888b3ad60e35b1">_right</a>;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="model_8h_source.html#l00322">Markov::Model&lt; char &gt;::AdjustEdge()</a>, <a class="el" href="model_8h_source.html#l00273">Markov::Model&lt; char &gt;::Export()</a>, <a class="el" href="_unit_tests_8cpp_source.html#l00021">Testing::MVP::MarkovModel::TEST_CLASS()</a>, and <a class="el" href="node_8h_source.html#l00239">Markov::Node&lt; NodeStorageType &gt;::UpdateEdges()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="model_matrix_8cpp_source.html#l00011">Markov::API::ModelMatrix::ConstructMatrix()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd_icgraph.svg" width="539" height="270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd_icgraph.svg" width="619" height="58"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -424,14 +408,6 @@ template&lt;typename NodeStorageType &gt; </div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_edge.html#a1f636c80a30900dfbfa5b695402cceb9">_left</a> = n;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="node_8h_source.html#l00214">Markov::Node&lt; NodeStorageType &gt;::Link()</a>, and <a class="el" href="_unit_tests_8cpp_source.html#l00021">Testing::MVP::MarkovModel::TEST_CLASS()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_edge_a174cd2f818b7c929decee6f2bcea7025_icgraph.svg" width="552" height="128"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
 </div>
 </div>
 <a id="add40b694fce402c316540c50d0fd3b3c"></a>
@@ -465,14 +441,6 @@ template&lt;typename NodeStorageType &gt; </div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_edge.html#a7f8221d3950f12a673888b3ad60e35b1">_right</a> = n;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="_unit_tests_8cpp_source.html#l00021">Testing::MVP::MarkovModel::TEST_CLASS()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_edge_add40b694fce402c316540c50d0fd3b3c_icgraph.svg" width="546" height="58"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
 </div>
 </div>
 <a id="a97e403fa0cf2666b2f142f28372de990"></a>
@@ -513,14 +481,6 @@ template&lt;typename NodeStorageType &gt; </div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_markov_1_1_edge.html#a7f8221d3950f12a673888b3ad60e35b1">_right</a>;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="_unit_tests_8cpp_source.html#l00021">Testing::MVP::MarkovModel::TEST_CLASS()</a>, and <a class="el" href="node_8h_source.html#l00239">Markov::Node&lt; NodeStorageType &gt;::UpdateEdges()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_edge_a97e403fa0cf2666b2f142f28372de990_icgraph.svg" width="566" height="128"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -576,6 +536,8 @@ template&lt;typename NodeStorageType &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="edge_8h_source.html#l00096">96</a> of file <a class="el" href="edge_8h_source.html">edge.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="edge_8h_source.html#l00125">Markov::Edge&lt; char &gt;::TraverseNode()</a>.</p>
+
 </div>
 </div>
 <a id="a903a989782c2e7e59595eabc80a6b183"></a>
@@ -606,19 +568,20 @@ template&lt;typename NodeStorageType &gt; </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="model_8h_source.html">model.h</a></li>
 <li><a class="el" href="edge_8h_source.html">edge.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_markov_1_1_edge_html_a3975b42a420de76e216d343dca059f88"><div class="ttname"><a href="class_markov_1_1_edge.html#a3975b42a420de76e216d343dca059f88">Markov::Edge::LeftNode</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * LeftNode()</div><div class="ttdoc">return edge's LeftNode</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00147">edge.h:147</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_edge_html_a2e7d14e46631c85c84f6f8f1dd2949cd"><div class="ttname"><a href="class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd">Markov::Edge::RightNode</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * RightNode()</div><div class="ttdoc">return edge's RightNode</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00152">edge.h:152</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_node_html"><div class="ttname"><a href="class_markov_1_1_node.html">Markov::Node</a></div><div class="ttdoc">A node class that for the vertices of model. Connected with eachother using Edge.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00008">edge.h:8</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_node_html"><div class="ttname"><a href="class_markov_1_1_node.html">Markov::Node</a></div><div class="ttdoc">A node class that for the vertices of model. Connected with eachother using Edge.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00023">model.h:23</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_edge_html_aa9d6cc6e631f1b515b4db604c96ad4ad"><div class="ttname"><a href="class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad">Markov::Edge::AdjustEdge</a></div><div class="ttdeci">void AdjustEdge(long int offset)</div><div class="ttdoc">Adjust the edge EdgeWeight with offset. Adds the offset parameter to the edge EdgeWeight.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00119">edge.h:119</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_edge_html_a903a989782c2e7e59595eabc80a6b183"><div class="ttname"><a href="class_markov_1_1_edge.html#a903a989782c2e7e59595eabc80a6b183">Markov::Edge::_weight</a></div><div class="ttdeci">long int _weight</div><div class="ttdoc">target node</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00097">edge.h:97</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_edge_html_a1f636c80a30900dfbfa5b695402cceb9"><div class="ttname"><a href="class_markov_1_1_edge.html#a1f636c80a30900dfbfa5b695402cceb9">Markov::Edge::_left</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * _left</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00095">edge.h:95</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_edge_html_a7f8221d3950f12a673888b3ad60e35b1"><div class="ttname"><a href="class_markov_1_1_edge.html#a7f8221d3950f12a673888b3ad60e35b1">Markov::Edge::_right</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * _right</div><div class="ttdoc">source node</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00096">edge.h:96</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_edge_html"><div class="ttname"><a href="class_markov_1_1_edge.html">Markov::Edge</a></div><div class="ttdoc">Edge class used to link nodes in the model together.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00016">edge.h:16</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html"><div class="ttname"><a href="class_markov_1_1_edge.html">Markov::Edge</a></div><div class="ttdoc">Edge class used to link nodes in the model together.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00026">model.h:26</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_node_html_ab254a9c976195fcb1cac4d463d030d3c"><div class="ttname"><a href="class_markov_1_1_node.html#ab254a9c976195fcb1cac4d463d030d3c">Markov::Node::UpdateTotalVerticeWeight</a></div><div class="ttdeci">void UpdateTotalVerticeWeight(long int offset)</div><div class="ttdoc">Change total weights with offset.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00254">node.h:254</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

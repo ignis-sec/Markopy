@@ -6,7 +6,8 @@
 #include <cstring>
 #include <sstream>
 #include "markovPasswords.h"
-
+#include "modelMatrix.h"
+#include <chrono>
 
 /** @brief Launch CLI tool.
 */
@@ -22,15 +23,17 @@ int main(int argc, char** argv) {
 	}*/
 	Markov::API::CLI::Argparse a(argc,argv);
 
-	Markov::API::MarkovPasswords markovPass;
-	std::cout << "Importing model.\n";
-	markovPass.Import("models/2gram.mdl");
-	std::cout << "Import done. Training...\n";
-	markovPass.Train("datasets/graduation.corpus", '\t', 50);
-	std::cout << "Training done. Exporting to file.\n";
-	markovPass.Export("models/finished2.mdl");
+	Markov::API::ModelMatrix markovPass;
+	std::cerr << "Importing model.\n";
+	markovPass.Import("models/finished.mdl");
+	std::cerr << "Import done. \n";
+	markovPass.ConstructMatrix();
+	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+	//markovPass.FastRandomWalk(50000000,"/media/ignis/Stuff/wordlist.txt",6,12,25, true);
+	markovPass.FastRandomWalk(500000000,"/media/ignis/Stuff/wordlist2.txt",6,12,25, true);
+	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
 
-	std::cout << "Generation done....\n";
+	std::cerr << "Finished in:" << std::chrono::duration_cast<std::chrono::milliseconds> (end - begin).count() << " milliseconds" << std::endl;
 	return 0;
 }
 

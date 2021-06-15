@@ -1,4 +1,5 @@
 <map id="Markov::Node::TotalEdgeWeights" name="Markov::Node::TotalEdgeWeights">
-<area shape="rect" id="node1" title="return total edge weights" alt="" coords="292,14,573,43"/>
-<area shape="rect" id="node2" href="$namespace_testing_1_1_m_v_p_1_1_markov_model.html#a6e9e664c5a60cb3af863f384a47952ce" title="Test class for minimal viable Node." alt="" coords="5,5,244,52"/>
+<area shape="rect" id="node1" title="return total edge weights" alt="" coords="389,14,671,43"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#ac1dbc499eda0e0eda3567bce45d17db4" title="Construct the related Matrix data for the model." alt="" coords="116,5,341,52"/>
+<area shape="rect" id="node3" href="$src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="5,14,68,43"/>
 </map>

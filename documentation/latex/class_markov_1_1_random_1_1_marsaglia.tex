@@ -114,7 +114,7 @@ Definition at line \mbox{\hyperlink{random_8h_source_l00123}{123}} of file \mbox
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{random_8h_source_l00081}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::distribution()}}, \mbox{\hyperlink{random_8h_source_l00073}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::generator()}}, \mbox{\hyperlink{random_8h_source_l00144}{x}}, \mbox{\hyperlink{random_8h_source_l00145}{y}}, and \mbox{\hyperlink{random_8h_source_l00146}{z}}.
+References \mbox{\hyperlink{random_8h_source_l00081}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::distribution()}}, \mbox{\hyperlink{random_8h_source_l00073}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::generator()}}, \mbox{\hyperlink{random_8h_source_l00146}{x}}, \mbox{\hyperlink{random_8h_source_l00147}{y}}, and \mbox{\hyperlink{random_8h_source_l00148}{z}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -226,29 +226,41 @@ Reimplemented from \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_e
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00129}{129}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00131}{131}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00129                                      \{  }
-\DoxyCodeLine{00130             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} t;}
-\DoxyCodeLine{00131             \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} << 16;}
-\DoxyCodeLine{00132             \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} >> 5;}
-\DoxyCodeLine{00133             \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} << 1;}
-\DoxyCodeLine{00134 }
-\DoxyCodeLine{00135             t = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}};}
-\DoxyCodeLine{00136             \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
-\DoxyCodeLine{00137             \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}} = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
-\DoxyCodeLine{00138             \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}} = t \string^ \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^ \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
-\DoxyCodeLine{00139 }
-\DoxyCodeLine{00140             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
-\DoxyCodeLine{00141         \}}
+\DoxyCodeLine{00131                                  \{  }
+\DoxyCodeLine{00132         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} t;}
+\DoxyCodeLine{00133         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} << 16;}
+\DoxyCodeLine{00134         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} >> 5;}
+\DoxyCodeLine{00135         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} << 1;}
+\DoxyCodeLine{00136 }
+\DoxyCodeLine{00137         t = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}};}
+\DoxyCodeLine{00138         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
+\DoxyCodeLine{00139         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}} = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
+\DoxyCodeLine{00140         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}} = t \string^ \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^ \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
+\DoxyCodeLine{00143     \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{random_8h_source_l00144}{x}}, \mbox{\hyperlink{random_8h_source_l00145}{y}}, and \mbox{\hyperlink{random_8h_source_l00146}{z}}.
+References \mbox{\hyperlink{random_8h_source_l00146}{x}}, \mbox{\hyperlink{random_8h_source_l00147}{y}}, and \mbox{\hyperlink{random_8h_source_l00148}{z}}.
 
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00112}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Thread()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}\label{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}} 
 \index{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!rd@{rd}}
 \index{rd@{rd}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}}
@@ -294,11 +306,11 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00144}{144}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00146}{146}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00129}{random()}}.
+Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00131}{random()}}.
 
 \mbox{\Hypertarget{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}\label{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}} 
 \index{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!y@{y}}
@@ -308,11 +320,11 @@ Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Marsaglia()}}, and \mbox
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00145}{145}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00147}{147}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00129}{random()}}.
+Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00131}{random()}}.
 
 \mbox{\Hypertarget{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}\label{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}} 
 \index{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!z@{z}}
@@ -322,11 +334,11 @@ Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Marsaglia()}}, and \mbox
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00146}{146}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00148}{148}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00129}{random()}}.
+Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00131}{random()}}.
 
 
 

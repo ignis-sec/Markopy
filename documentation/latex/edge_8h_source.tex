@@ -2,40 +2,103 @@
 \label{edge_8h_source}\index{edge.h@{edge.h}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <cstdint>}}
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <cstddef>}}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cstdint}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cstddef}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00004 }
-\DoxyCodeLine{00005 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_markov}{Markov}} \{}
+\DoxyCodeLine{00005 \textcolor{keyword}{namespace} Markov \{}
 \DoxyCodeLine{00006 }
 \DoxyCodeLine{00007     \textcolor{keyword}{template} <\textcolor{keyword}{typename} NodeStorageType>}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00008}\mbox{\hyperlink{class_markov_1_1_node}{00008}}     \textcolor{keyword}{class }\mbox{\hyperlink{class_markov_1_1_node}{Node}};}
+\DoxyCodeLine{00008     \textcolor{keyword}{class} Node;}
 \DoxyCodeLine{00009 }
+\DoxyCodeLine{00010     \textcolor{comment}{/** @brief Edge class used to link nodes in the model together.}}
+\DoxyCodeLine{00011 \textcolor{comment}{    * }}
+\DoxyCodeLine{00012 \textcolor{comment}{    Has LeftNode, RightNode, and EdgeWeight of the edge.}}
+\DoxyCodeLine{00013 \textcolor{comment}{    Edges are *UNIDIRECTIONAL* in this model. They can only be traversed LeftNode to RightNode.}}
+\DoxyCodeLine{00014 \textcolor{comment}{    */}}
 \DoxyCodeLine{00015     \textcolor{keyword}{template} <\textcolor{keyword}{typename} NodeStorageType>}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00016}\mbox{\hyperlink{class_markov_1_1_edge}{00016}}     \textcolor{keyword}{class }\mbox{\hyperlink{class_markov_1_1_edge}{Edge}} \{}
+\DoxyCodeLine{00016     \textcolor{keyword}{class} Edge \{}
 \DoxyCodeLine{00017     \textcolor{keyword}{public}:}
-\DoxyCodeLine{00018         }
-\DoxyCodeLine{00021         \mbox{\hyperlink{class_markov_1_1_edge}{Edge<NodeStorageType>}}();}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019         \textcolor{comment}{/** @brief Default constructor. }}
+\DoxyCodeLine{00020 \textcolor{comment}{        */}}
+\DoxyCodeLine{00021         Edge<NodeStorageType>();}
 \DoxyCodeLine{00022 }
-\DoxyCodeLine{00035         \mbox{\hyperlink{class_markov_1_1_edge}{Edge<NodeStorageType>}}(\mbox{\hyperlink{class_markov_1_1_node}{Node<NodeStorageType>}}* \mbox{\hyperlink{class_markov_1_1_edge_a1f636c80a30900dfbfa5b695402cceb9}{\_left}}, \mbox{\hyperlink{class_markov_1_1_node}{Node<NodeStorageType>}}* \mbox{\hyperlink{class_markov_1_1_edge_a7f8221d3950f12a673888b3ad60e35b1}{\_right}});}
-\DoxyCodeLine{00036         }
+\DoxyCodeLine{00023         \textcolor{comment}{/** @brief Constructor. Initialize edge with given RightNode and LeftNode}}
+\DoxyCodeLine{00024 \textcolor{comment}{         * @param \_left -\/ Left node of this edge.}}
+\DoxyCodeLine{00025 \textcolor{comment}{         * @param \_right -\/ Right node of this edge.}}
+\DoxyCodeLine{00026 \textcolor{comment}{         * }}
+\DoxyCodeLine{00027 \textcolor{comment}{         * @b Example @b Use: Construct edge}}
+\DoxyCodeLine{00028 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00029 \textcolor{comment}{         * Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');}}
+\DoxyCodeLine{00030 \textcolor{comment}{         * Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');}}
+\DoxyCodeLine{00031 \textcolor{comment}{         * Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(src, target1);}}
+\DoxyCodeLine{00032 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00033 \textcolor{comment}{         *}}
+\DoxyCodeLine{00034 \textcolor{comment}{        */}}
+\DoxyCodeLine{00035         Edge<NodeStorageType>(Node<NodeStorageType>* \_left, Node<NodeStorageType>* \_right);}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037         \textcolor{comment}{/** @brief Adjust the edge EdgeWeight with offset.}}
+\DoxyCodeLine{00038 \textcolor{comment}{         * Adds the offset parameter to the edge EdgeWeight.}}
+\DoxyCodeLine{00039 \textcolor{comment}{         * @param offset -\/ NodeValue to be added to the EdgeWeight}}
+\DoxyCodeLine{00040 \textcolor{comment}{         * }}
+\DoxyCodeLine{00041 \textcolor{comment}{         * @b Example @b Use: Construct edge}}
+\DoxyCodeLine{00042 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00043 \textcolor{comment}{         * Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');}}
+\DoxyCodeLine{00044 \textcolor{comment}{         * Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');}}
+\DoxyCodeLine{00045 \textcolor{comment}{         * Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(src, target1);}}
+\DoxyCodeLine{00046 \textcolor{comment}{         * }}
+\DoxyCodeLine{00047 \textcolor{comment}{         * e1-\/>AdjustEdge(25);}}
+\DoxyCodeLine{00048 \textcolor{comment}{         * }}
+\DoxyCodeLine{00049 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00050 \textcolor{comment}{        */}}
 \DoxyCodeLine{00051         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} offset);}
-\DoxyCodeLine{00052         }
-\DoxyCodeLine{00068         \textcolor{keyword}{inline} \mbox{\hyperlink{class_markov_1_1_node}{Node<NodeStorageType>}}* \mbox{\hyperlink{class_markov_1_1_edge_a97e403fa0cf2666b2f142f28372de990}{TraverseNode}}();}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053         \textcolor{comment}{/** @brief Traverse this edge to RightNode.}}
+\DoxyCodeLine{00054 \textcolor{comment}{         * @return Right node. If this is a terminator node, return NULL}}
+\DoxyCodeLine{00055 \textcolor{comment}{         * }}
+\DoxyCodeLine{00056 \textcolor{comment}{         * }}
+\DoxyCodeLine{00057 \textcolor{comment}{         * @b Example @b Use: Traverse a node}}
+\DoxyCodeLine{00058 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00059 \textcolor{comment}{         * Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');}}
+\DoxyCodeLine{00060 \textcolor{comment}{         * Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');}}
+\DoxyCodeLine{00061 \textcolor{comment}{         * Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(src, target1);}}
+\DoxyCodeLine{00062 \textcolor{comment}{         * }}
+\DoxyCodeLine{00063 \textcolor{comment}{         * e1-\/>AdjustEdge(25);}}
+\DoxyCodeLine{00064 \textcolor{comment}{         * Markov::Edge<unsigned char>* e2 = e1-\/>traverseNode();}}
+\DoxyCodeLine{00065 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00066 \textcolor{comment}{         * }}
+\DoxyCodeLine{00067 \textcolor{comment}{        */}}
+\DoxyCodeLine{00068         \textcolor{keyword}{inline} Node<NodeStorageType>* \mbox{\hyperlink{class_markov_1_1_edge_a97e403fa0cf2666b2f142f28372de990}{TraverseNode}}();}
 \DoxyCodeLine{00069 }
-\DoxyCodeLine{00073         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_edge_a174cd2f818b7c929decee6f2bcea7025}{SetLeftEdge}} (\mbox{\hyperlink{class_markov_1_1_node}{Node<NodeStorageType>}}*);}
-\DoxyCodeLine{00077         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_edge_add40b694fce402c316540c50d0fd3b3c}{SetRightEdge}}(\mbox{\hyperlink{class_markov_1_1_node}{Node<NodeStorageType>}}*);}
-\DoxyCodeLine{00078         }
+\DoxyCodeLine{00070         \textcolor{comment}{/** @brief Set LeftNode of this edge.}}
+\DoxyCodeLine{00071 \textcolor{comment}{        * @param node -\/ Node to be linked with.}}
+\DoxyCodeLine{00072 \textcolor{comment}{        */}}
+\DoxyCodeLine{00073         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_edge_a174cd2f818b7c929decee6f2bcea7025}{SetLeftEdge}} (Node<NodeStorageType>*);}
+\DoxyCodeLine{00074         \textcolor{comment}{/** @brief Set RightNode of this edge.}}
+\DoxyCodeLine{00075 \textcolor{comment}{        * @param node -\/ Node to be linked with.}}
+\DoxyCodeLine{00076 \textcolor{comment}{        */}}
+\DoxyCodeLine{00077         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_edge_add40b694fce402c316540c50d0fd3b3c}{SetRightEdge}}(Node<NodeStorageType>*);}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079         \textcolor{comment}{/** @brief return edge's EdgeWeight.}}
+\DoxyCodeLine{00080 \textcolor{comment}{        * @return edge's EdgeWeight.}}
+\DoxyCodeLine{00081 \textcolor{comment}{        */}}
 \DoxyCodeLine{00082         \textcolor{keyword}{inline} uint64\_t \mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{EdgeWeight}}();}
 \DoxyCodeLine{00083 }
-\DoxyCodeLine{00087         \mbox{\hyperlink{class_markov_1_1_node}{Node<NodeStorageType>}}* \mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{LeftNode}}();}
+\DoxyCodeLine{00084         \textcolor{comment}{/** @brief return edge's LeftNode}}
+\DoxyCodeLine{00085 \textcolor{comment}{        * @return edge's LeftNode.}}
+\DoxyCodeLine{00086 \textcolor{comment}{        */}}
+\DoxyCodeLine{00087         Node<NodeStorageType>* \mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{LeftNode}}();}
 \DoxyCodeLine{00088 }
-\DoxyCodeLine{00092         \textcolor{keyword}{inline} \mbox{\hyperlink{class_markov_1_1_node}{Node<NodeStorageType>}}* \mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}();}
+\DoxyCodeLine{00089         \textcolor{comment}{/** @brief return edge's RightNode}}
+\DoxyCodeLine{00090 \textcolor{comment}{        * @return edge's RightNode.}}
+\DoxyCodeLine{00091 \textcolor{comment}{        */}}
+\DoxyCodeLine{00092         \textcolor{keyword}{inline} Node<NodeStorageType>* \mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}();}
 \DoxyCodeLine{00093 }
 \DoxyCodeLine{00094     \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00095}\mbox{\hyperlink{class_markov_1_1_edge_a1f636c80a30900dfbfa5b695402cceb9}{00095}}         \mbox{\hyperlink{class_markov_1_1_node}{Node<NodeStorageType>}}* \mbox{\hyperlink{class_markov_1_1_edge_a1f636c80a30900dfbfa5b695402cceb9}{\_left}}; }
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00096}\mbox{\hyperlink{class_markov_1_1_edge_a7f8221d3950f12a673888b3ad60e35b1}{00096}}         \mbox{\hyperlink{class_markov_1_1_node}{Node<NodeStorageType>}}* \mbox{\hyperlink{class_markov_1_1_edge_a7f8221d3950f12a673888b3ad60e35b1}{\_right}};}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00097}\mbox{\hyperlink{class_markov_1_1_edge_a903a989782c2e7e59595eabc80a6b183}{00097}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_edge_a903a989782c2e7e59595eabc80a6b183}{\_weight}};    }
+\DoxyCodeLine{\Hypertarget{edge_8h_source_l00095}\mbox{\hyperlink{class_markov_1_1_edge_a1f636c80a30900dfbfa5b695402cceb9}{00095}}         Node<NodeStorageType>* \mbox{\hyperlink{class_markov_1_1_edge_a1f636c80a30900dfbfa5b695402cceb9}{\_left}}; \textcolor{comment}{/** @brief source node*/}}
+\DoxyCodeLine{\Hypertarget{edge_8h_source_l00096}\mbox{\hyperlink{class_markov_1_1_edge_a7f8221d3950f12a673888b3ad60e35b1}{00096}}         Node<NodeStorageType>* \mbox{\hyperlink{class_markov_1_1_edge_a7f8221d3950f12a673888b3ad60e35b1}{\_right}};\textcolor{comment}{/** @brief target node*/}}
+\DoxyCodeLine{\Hypertarget{edge_8h_source_l00097}\mbox{\hyperlink{class_markov_1_1_edge_a903a989782c2e7e59595eabc80a6b183}{00097}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_edge_a903a989782c2e7e59595eabc80a6b183}{\_weight}};    \textcolor{comment}{/** @brief Edge EdgeWeight*/}}
 \DoxyCodeLine{00098     \};}
 \DoxyCodeLine{00099 }
 \DoxyCodeLine{00100 }
@@ -43,57 +106,55 @@
 \DoxyCodeLine{00102 }
 \DoxyCodeLine{00103 \textcolor{comment}{//default constructor of edge}}
 \DoxyCodeLine{00104 \textcolor{keyword}{template} <\textcolor{keyword}{typename} NodeStorageType>}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00105}\mbox{\hyperlink{class_markov_1_1_edge_a893ea498a247e09b2a7e2424f026a137}{00105}} \mbox{\hyperlink{class_markov_1_1_edge_a893ea498a247e09b2a7e2424f026a137}{Markov::Edge<NodeStorageType>::Edge}}() \{}
-\DoxyCodeLine{00106     this-\/>\_left = NULL;}
-\DoxyCodeLine{00107     this-\/>\_right = NULL;}
-\DoxyCodeLine{00108     this-\/>\_weight = 0;}
+\DoxyCodeLine{\Hypertarget{edge_8h_source_l00105}\mbox{\hyperlink{class_markov_1_1_edge_a893ea498a247e09b2a7e2424f026a137}{00105}} Markov::Edge<NodeStorageType>::Edge() \{}
+\DoxyCodeLine{00106     \textcolor{keyword}{this}-\/>\_left = NULL;}
+\DoxyCodeLine{00107     \textcolor{keyword}{this}-\/>\_right = NULL;}
+\DoxyCodeLine{00108     \textcolor{keyword}{this}-\/>\_weight = 0;}
 \DoxyCodeLine{00109 \}}
 \DoxyCodeLine{00110 \textcolor{comment}{//constructor of edge}}
 \DoxyCodeLine{00111 \textcolor{keyword}{template} <\textcolor{keyword}{typename} NodeStorageType>}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00112}\mbox{\hyperlink{class_markov_1_1_edge_a7813ff80fd97d5c0bd4fb339e2e5764b}{00112}} \mbox{\hyperlink{class_markov_1_1_edge_a893ea498a247e09b2a7e2424f026a137}{Markov::Edge<NodeStorageType>::Edge}}(\mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* \_left, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* \_right) \{}
-\DoxyCodeLine{00113     this-\/>\_left = \_left;}
-\DoxyCodeLine{00114     this-\/>\_right = \_right;}
-\DoxyCodeLine{00115     this-\/>\_weight = 0;}
+\DoxyCodeLine{\Hypertarget{edge_8h_source_l00112}\mbox{\hyperlink{class_markov_1_1_edge_a7813ff80fd97d5c0bd4fb339e2e5764b}{00112}} Markov::Edge<NodeStorageType>::Edge(Markov::Node<NodeStorageType>* \_left, Markov::Node<NodeStorageType>* \_right) \{}
+\DoxyCodeLine{00113     \textcolor{keyword}{this}-\/>\_left = \_left;}
+\DoxyCodeLine{00114     \textcolor{keyword}{this}-\/>\_right = \_right;}
+\DoxyCodeLine{00115     \textcolor{keyword}{this}-\/>\_weight = 0;}
 \DoxyCodeLine{00116 \}}
 \DoxyCodeLine{00117 \textcolor{comment}{//to AdjustEdge the edges by the edge with its offset}}
 \DoxyCodeLine{00118 \textcolor{keyword}{template} <\textcolor{keyword}{typename} NodeStorageType>}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00119}\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{00119}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{Markov::Edge<NodeStorageType>::AdjustEdge}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} offset) \{}
-\DoxyCodeLine{00120     this-\/>\_weight += offset;}
-\DoxyCodeLine{00121     this-\/>LeftNode()-\/>UpdateTotalVerticeWeight(offset);}
+\DoxyCodeLine{\Hypertarget{edge_8h_source_l00119}\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{00119}} \textcolor{keywordtype}{void} Markov::Edge<NodeStorageType>::\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} offset) \{}
+\DoxyCodeLine{00120     \textcolor{keyword}{this}-\/>\_weight += offset;}
+\DoxyCodeLine{00121     \textcolor{keyword}{this}-\/>LeftNode()-\/>UpdateTotalVerticeWeight(offset);}
 \DoxyCodeLine{00122 \}}
 \DoxyCodeLine{00123 \textcolor{comment}{//to TraverseNode the node}}
 \DoxyCodeLine{00124 \textcolor{keyword}{template} <\textcolor{keyword}{typename} NodeStorageType>}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00125}\mbox{\hyperlink{class_markov_1_1_edge_a97e403fa0cf2666b2f142f28372de990}{00125}} \textcolor{keyword}{inline} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* \mbox{\hyperlink{class_markov_1_1_edge_a97e403fa0cf2666b2f142f28372de990}{Markov::Edge<NodeStorageType>::TraverseNode}}() \{}
-\DoxyCodeLine{00126     \textcolor{keywordflow}{if} (this-\/>RightNode()-\/>NodeValue() == 0xff) \textcolor{comment}{//terminator node}}
+\DoxyCodeLine{\Hypertarget{edge_8h_source_l00125}\mbox{\hyperlink{class_markov_1_1_edge_a97e403fa0cf2666b2f142f28372de990}{00125}} \textcolor{keyword}{inline} Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::\mbox{\hyperlink{class_markov_1_1_edge_a97e403fa0cf2666b2f142f28372de990}{TraverseNode}}() \{}
+\DoxyCodeLine{00126     \textcolor{keywordflow}{if} (\textcolor{keyword}{this}-\/>RightNode()-\/>NodeValue() == 0xff) \textcolor{comment}{//terminator node}}
 \DoxyCodeLine{00127         \textcolor{keywordflow}{return} NULL;}
-\DoxyCodeLine{00128     \textcolor{keywordflow}{return} \_right;}
+\DoxyCodeLine{00128     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_edge_a7f8221d3950f12a673888b3ad60e35b1}{\_right}};}
 \DoxyCodeLine{00129 \}}
 \DoxyCodeLine{00130 \textcolor{comment}{//to set the LeftNode of the node}}
 \DoxyCodeLine{00131 \textcolor{keyword}{template} <\textcolor{keyword}{typename} NodeStorageType>}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00132}\mbox{\hyperlink{class_markov_1_1_edge_a174cd2f818b7c929decee6f2bcea7025}{00132}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_edge_a174cd2f818b7c929decee6f2bcea7025}{Markov::Edge<NodeStorageType>::SetLeftEdge}}(\mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* n) \{}
-\DoxyCodeLine{00133     this-\/>\_left = n;}
+\DoxyCodeLine{\Hypertarget{edge_8h_source_l00132}\mbox{\hyperlink{class_markov_1_1_edge_a174cd2f818b7c929decee6f2bcea7025}{00132}} \textcolor{keywordtype}{void} Markov::Edge<NodeStorageType>::\mbox{\hyperlink{class_markov_1_1_edge_a174cd2f818b7c929decee6f2bcea7025}{SetLeftEdge}}(Markov::Node<NodeStorageType>* n) \{}
+\DoxyCodeLine{00133     \textcolor{keyword}{this}-\/>\_left = n;}
 \DoxyCodeLine{00134 \}}
 \DoxyCodeLine{00135 \textcolor{comment}{//to set the RightNode of the node}}
 \DoxyCodeLine{00136 \textcolor{keyword}{template} <\textcolor{keyword}{typename} NodeStorageType>}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00137}\mbox{\hyperlink{class_markov_1_1_edge_add40b694fce402c316540c50d0fd3b3c}{00137}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_edge_add40b694fce402c316540c50d0fd3b3c}{Markov::Edge<NodeStorageType>::SetRightEdge}}(\mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* n) \{}
-\DoxyCodeLine{00138     this-\/>\_right = n;}
+\DoxyCodeLine{\Hypertarget{edge_8h_source_l00137}\mbox{\hyperlink{class_markov_1_1_edge_add40b694fce402c316540c50d0fd3b3c}{00137}} \textcolor{keywordtype}{void} Markov::Edge<NodeStorageType>::\mbox{\hyperlink{class_markov_1_1_edge_add40b694fce402c316540c50d0fd3b3c}{SetRightEdge}}(Markov::Node<NodeStorageType>* n) \{}
+\DoxyCodeLine{00138     \textcolor{keyword}{this}-\/>\_right = n;}
 \DoxyCodeLine{00139 \}}
 \DoxyCodeLine{00140 \textcolor{comment}{//to get the EdgeWeight of the node}}
 \DoxyCodeLine{00141 \textcolor{keyword}{template} <\textcolor{keyword}{typename} NodeStorageType>}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00142}\mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{00142}} \textcolor{keyword}{inline} uint64\_t \mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{Markov::Edge<NodeStorageType>::EdgeWeight}}() \{}
-\DoxyCodeLine{00143     \textcolor{keywordflow}{return} this-\/>\_weight;}
+\DoxyCodeLine{\Hypertarget{edge_8h_source_l00142}\mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{00142}} \textcolor{keyword}{inline} uint64\_t Markov::Edge<NodeStorageType>::\mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{EdgeWeight}}() \{}
+\DoxyCodeLine{00143     \textcolor{keywordflow}{return} \textcolor{keyword}{this}-\/>\_weight;}
 \DoxyCodeLine{00144 \}}
 \DoxyCodeLine{00145 \textcolor{comment}{//to get the LeftNode of the node}}
 \DoxyCodeLine{00146 \textcolor{keyword}{template} <\textcolor{keyword}{typename} NodeStorageType>}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00147}\mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{00147}} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* \mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{Markov::Edge<NodeStorageType>::LeftNode}}() \{}
-\DoxyCodeLine{00148     \textcolor{keywordflow}{return} this-\/>\_left;}
+\DoxyCodeLine{\Hypertarget{edge_8h_source_l00147}\mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{00147}} Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::\mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{LeftNode}}() \{}
+\DoxyCodeLine{00148     \textcolor{keywordflow}{return} \textcolor{keyword}{this}-\/>\_left;}
 \DoxyCodeLine{00149 \}}
 \DoxyCodeLine{00150 \textcolor{comment}{//to get the RightNode of the node}}
 \DoxyCodeLine{00151 \textcolor{keyword}{template} <\textcolor{keyword}{typename} NodeStorageType>}
-\DoxyCodeLine{\Hypertarget{edge_8h_source_l00152}\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{00152}} \textcolor{keyword}{inline} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* \mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{Markov::Edge<NodeStorageType>::RightNode}}() \{}
-\DoxyCodeLine{00153     \textcolor{keywordflow}{return} this-\/>\_right;}
+\DoxyCodeLine{\Hypertarget{edge_8h_source_l00152}\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{00152}} \textcolor{keyword}{inline} Markov::Node<NodeStorageType>* Markov::Edge<NodeStorageType>::\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}() \{}
+\DoxyCodeLine{00153     \textcolor{keywordflow}{return} \textcolor{keyword}{this}-\/>\_right;}
 \DoxyCodeLine{00154 \}}
-\DoxyCodeLine{00155 }
-\DoxyCodeLine{00156 }
 
 \end{DoxyCode}
