@@ -6,6 +6,22 @@
 #include <vector>
 #include <mutex>
 #include <string>
+#include <signal.h>
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
+
+static volatile int keepRunning = 1;
+
+void intHandler(int dummy) {
+	std::cout << "You wanted this man by presing CTRL-C ! Ok bye.";
+	//Sleep(5000);
+	keepRunning = 0;
+	exit(0);
+}
+
 
 Markov::API::MarkovPasswords::MarkovPasswords() : Markov::Model<char>(){
 	
@@ -37,7 +53,9 @@ std::ifstream* Markov::API::MarkovPasswords::OpenDatasetFile(const char* filenam
 }
 
 
+
 void Markov::API::MarkovPasswords::Train(const char* datasetFileName, char delimiter, int threads)   {
+  signal(SIGINT, intHandler);
 	Markov::API::Concurrency::ThreadSharedListHandler listhandler(datasetFileName);
 	auto start = std::chrono::high_resolution_clock::now();
 
@@ -60,14 +78,14 @@ void Markov::API::MarkovPasswords::TrainThread(Markov::API::Concurrency::ThreadS
 	char format_str[] ="%ld,%s";
 	format_str[2]=delimiter;
 	std::string line;
-	while (listhandler->next(&line)) {
+	while (listhandler->next(&line) && keepRunning) {
 		long int oc;
 		if (line.size() > 100) {
 			line = line.substr(0, 100);
 		}
 		char* linebuf = new char[line.length()+5];
 #ifdef _WIN32
-		sscanf_s(line.c_str(), format_str, &oc, linebuf, line.length()+5);
+		sscanf_s(line.c_str(), "%ld,%s", &oc, linebuf, line.length()+5); //<== changed format_str to-> "%ld,%s"
 #else
 		sscanf(line.c_str(), format_str, &oc, linebuf);
 #endif
