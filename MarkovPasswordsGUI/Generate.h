@@ -14,4 +14,6 @@ private:
 public slots:
 	void home();
 	void generation();
+	void train();
+	void vis();
 };
