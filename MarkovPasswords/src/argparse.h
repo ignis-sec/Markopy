@@ -1,7 +1,8 @@
 #include<string>
 #include<iostream>
 
-#define BOOST_ALL_DYN_LINK 1
+//#define BOOST_ALL_DYN_LINK 1
+#define Boost_USE_STATIC_LIBS 1
 
 #include <boost/program_options.hpp>
 /** @brief Structure to hold parsed cli arguements.	
