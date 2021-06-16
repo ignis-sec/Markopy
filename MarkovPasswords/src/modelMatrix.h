@@ -63,7 +63,38 @@ namespace Markov::API{
 		*/
         void FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true);
 
+
+
     protected:
+
+        /** @brief Random walk on the Matrix-reduced Markov::Model
+		 * 
+		 * This has an O(N) Memory complexity. To limit the maximum usage, requests with n>50M are partitioned using Markov::API::ModelMatrix::FastRandomWalkPartition.
+         * 
+         * If n>50M, threads are going to be synced, files are going to be flushed, and buffers will be reallocated every 50M generations.
+         * This comes at a minor performance penalty.
+         * 
+         * While it has the same functionality, this operation reduces Markov::API::MarkovPasswords::Generate runtime by %96.5
+         * 
+         * This function has deprecated Markov::API::MarkovPasswords::Generate, and will eventually replace it.
+		 * 
+		 * @param n - Number of passwords to generate.
+		 * @param wordlistFileName - Filename to write to
+		 * @param minLen - Minimum password length to generate
+		 * @param maxLen - Maximum password length to generate
+		 * @param threads - number of OS threads to spawn
+         * @param bFileIO - If false, filename will be ignored and will output to stdout.
+         * 
+         * 
+         * @code{.cpp}
+		 * Markov::API::ModelMatrix mp;
+		 * mp.Import("models/finished.mdl");
+         * mp.FastRandomWalk(50000000,"./wordlist.txt",6,12,25, true);
+		 * @endcode
+         * 
+		*/
+        void FastRandomWalk(unsigned long int n, std::ofstream *wordlist, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true);
+
 
         /** @brief A single partition of FastRandomWalk event
 		 * 
