@@ -365,7 +365,7 @@ namespace Testing {
 				*/
 				TEST_METHOD(export_filename) {
 					Markov::Model<unsigned char> m;
-					Assert::IsTrue(m.Export("../MarkovPasswords/Models/testcase.mdl")); //aþaðý test case koy
+					Assert::IsTrue(m.Export("../MarkovPasswords/Models/testcase.mdl")); 
 				}
 
 				/** @brief test random walk
