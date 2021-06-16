@@ -66,14 +66,46 @@ namespace Markov::API::CUDA{
 		*/
         __host__ char* AllocVRAMOutputBuffer(long int n, long int singleGenMaxLen, long int CUDAKernelGridSize,long int sizePerGrid);
     private:
+
+        /** 
+			@brief VRAM Address pointer of edge matrix (from modelMatrix.h)
+		*/ 
         char* device_edgeMatrix;
+		
+        /** 
+			@brief VRAM Address pointer of value matrix (from modelMatrix.h)
+		*/ 
         long int *device_valueMatrix;
+		
+        /** 
+			@brief VRAM Address pointer of matrixIndex (from modelMatrix.h)
+		*/ 
         char *device_matrixIndex;
+		
+        /** 
+			@brief VRAM Address pointer of total edge weights (from modelMatrix.h)
+		*/ 
         long int *device_totalEdgeWeights;
+		
+		
+        /** 
+			@brief RandomWalk results in device
+		*/ 		
         char* device_outputBuffer;
+		
+        /** 
+			@brief RandomWalk  results in host
+		*/ 	
         char* outputBuffer;
 
+        /** 
+			@brief Adding Edge matrix end-to-end and resize to 1-D array for better perfomance on traversing
+		*/ 	
         char* flatEdgeMatrix;
+		
+        /** 
+			@brief Adding Value matrix end-to-end and resize to 1-D array for better perfomance on traversing
+		*/ 	
         long int* flatValueMatrix;
 
     };
