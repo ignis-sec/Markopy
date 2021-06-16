@@ -160,4 +160,6 @@ void Markov::API::MarkovPasswords::Buff(char* str, double multiplier){
         }
         i++;
     }
+
+	this->OptimizeEdgeOrder();
 }
