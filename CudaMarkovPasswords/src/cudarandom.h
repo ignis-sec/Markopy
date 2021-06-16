@@ -30,6 +30,8 @@ namespace Markov::API::CUDA::Random{
 			//for(int i=0;i<gridSize*3;i++) std::cout << temp[i] << "\n";
 			cudaMemcpy(seedChunk, temp, gridSize*3*sizeof(unsigned long), cudaMemcpyHostToDevice);
 			CudaCheckNotifyErr(cudastatus, "Failed to memcpy seed buffer.");
+			
+			delete[] temp;
 			return seedChunk;
 		}
 	};
