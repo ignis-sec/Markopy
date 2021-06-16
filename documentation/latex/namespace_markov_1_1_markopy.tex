@@ -1,0 +1,59 @@
+\hypertarget{namespace_markov_1_1_markopy}{}\doxysection{Markov\+::Markopy Namespace Reference}
+\label{namespace_markov_1_1_markopy}\index{Markov::Markopy@{Markov::Markopy}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_markov_1_1_markopy_a379628c09859652215496b63af2bcac9}{B\+O\+O\+S\+T\+\_\+\+P\+Y\+T\+H\+O\+N\+\_\+\+M\+O\+D\+U\+LE}} (markopy)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_markov_1_1_markopy_a379628c09859652215496b63af2bcac9}\label{namespace_markov_1_1_markopy_a379628c09859652215496b63af2bcac9}} 
+\index{Markov::Markopy@{Markov::Markopy}!BOOST\_PYTHON\_MODULE@{BOOST\_PYTHON\_MODULE}}
+\index{BOOST\_PYTHON\_MODULE@{BOOST\_PYTHON\_MODULE}!Markov::Markopy@{Markov::Markopy}}
+\doxysubsubsection{\texorpdfstring{BOOST\_PYTHON\_MODULE()}{BOOST\_PYTHON\_MODULE()}}
+{\footnotesize\ttfamily Markov\+::\+Markopy\+::\+B\+O\+O\+S\+T\+\_\+\+P\+Y\+T\+H\+O\+N\+\_\+\+M\+O\+D\+U\+LE (\begin{DoxyParamCaption}\item[{markopy}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{markopy_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{markopy_8cpp_source}{markopy.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012     \{}
+\DoxyCodeLine{00013         bool (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}}::*Import)(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*) = \&\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>::Import}};}
+\DoxyCodeLine{00014         bool (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}}::*Export)(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*) = \&\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>::Export}};}
+\DoxyCodeLine{00015         class\_<Markov::API::MarkovPasswords>(\textcolor{stringliteral}{"MarkovPasswords"}, init<>())}
+\DoxyCodeLine{00016             .def(init<>())}
+\DoxyCodeLine{00017             .def(\textcolor{stringliteral}{"Train"}, \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Markov::API::MarkovPasswords::Train}}, }
+\DoxyCodeLine{00018             \textcolor{stringliteral}{"Train the model\(\backslash\)n"}}
+\DoxyCodeLine{00019             \textcolor{stringliteral}{"\(\backslash\)n"}}
+\DoxyCodeLine{00020             \textcolor{stringliteral}{":param datasetFileName: Ifstream* to the dataset. If null, use class member\(\backslash\)n"}}
+\DoxyCodeLine{00021             \textcolor{stringliteral}{":param delimiter: a character, same as the delimiter in dataset content\(\backslash\)n"}}
+\DoxyCodeLine{00022             \textcolor{stringliteral}{":param threads: number of OS threads to spawn\(\backslash\)n"})}
+\DoxyCodeLine{00023             .def(\textcolor{stringliteral}{"Generate"}, \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Markov::API::MarkovPasswords::Generate}}, }
+\DoxyCodeLine{00024             \textcolor{stringliteral}{"Generate passwords from a trained model.\(\backslash\)n"}}
+\DoxyCodeLine{00025             \textcolor{stringliteral}{":param n: Ifstream* to the dataset. If null, use class member\(\backslash\)n"}}
+\DoxyCodeLine{00026             \textcolor{stringliteral}{":param wordlistFileName: a character, same as the delimiter in dataset content\(\backslash\)n"}}
+\DoxyCodeLine{00027             \textcolor{stringliteral}{":param minLen: number of OS threads to spawn\(\backslash\)n"}}
+\DoxyCodeLine{00028             \textcolor{stringliteral}{":param maxLen: Ifstream* to the dataset. If null, use class member\(\backslash\)n"}}
+\DoxyCodeLine{00029             \textcolor{stringliteral}{":param threads: a character, same as the delimiter in dataset content\(\backslash\)n"}}
+\DoxyCodeLine{00030             \textcolor{stringliteral}{":param threads: number of OS threads to spawn\(\backslash\)n"})}
+\DoxyCodeLine{00031             .def(\textcolor{stringliteral}{"Import"}, Import, \textcolor{stringliteral}{"Import a model file."})}
+\DoxyCodeLine{00032             .def(\textcolor{stringliteral}{"Export"}, Export, \textcolor{stringliteral}{"Export a model to file."})}
+\DoxyCodeLine{00033         ;}
+\DoxyCodeLine{00034     \};}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_8h_source_l00286}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Export()}}, \mbox{\hyperlink{markov_passwords_8cpp_source_l00110}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate()}}, \mbox{\hyperlink{model_8h_source_l00266}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Import()}}, and \mbox{\hyperlink{markov_passwords_8cpp_source_l00057}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_markov_1_1_markopy_a379628c09859652215496b63af2bcac9_cgraph}
+\end{center}
+\end{figure}

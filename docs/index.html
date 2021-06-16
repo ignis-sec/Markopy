@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MarkovPasswords: Markov Passwords</title>
+<title>Markopy: Markov Passwords</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,7 +17,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome-dark.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -26,7 +26,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MarkovPasswords
+   <div id="projectname">Markopy
    </div>
    <div id="projectbrief">Utilizing Markov Models for brute forcing attacks</div>
   </td>
@@ -243,7 +243,7 @@ Simplified Theory</h3>
 <p>Below, is the example <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Model which can generate strings with the alphabet "a,b,c"</p>
 <p><img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/empty_model.png" alt="" class="inline"/></p>
 <p><a class="anchor" id="autotoc_md33"></a></p><h5>Iteration 1</h5>
-<p>Below is a demonstration of how training will be done. For this example, we are going to adjust the model with string "ab", and our occurrence will be "3" From <a class="el" href="class_markov_passwords.html" title="Markov::Model with char represented nodes.">MarkovPasswords</a>, inside the train function, Model::adjust is called with "ab" and "3" parameters.</p>
+<p>Below is a demonstration of how training will be done. For this example, we are going to adjust the model with string "ab", and our occurrence will be "3" From MarkovPasswords, inside the train function, Model::adjust is called with "ab" and "3" parameters.</p>
 <p>Now, Model::adjust will iteratively adjust the edge weights accordingly. It starts by adjusting weight between start and "a" node. This is done by calling Edge::adjust of the edge between the nodes.</p>
 <p><img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_1.png" alt="" class="inline"/></p>
 <p>After adjustment, ajust function iterates to the next character, "b", and does the same thing.</p>

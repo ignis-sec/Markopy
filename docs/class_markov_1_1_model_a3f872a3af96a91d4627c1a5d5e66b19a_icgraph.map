@@ -1,0 +1,6 @@
+<map id="Markov::Model::Import" name="Markov::Model::Import">
+<area shape="rect" id="node1" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="320,77,523,106"/>
+<area shape="rect" id="node2" href="$namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" title=" " alt="" coords="25,5,252,52"/>
+<area shape="rect" id="node3" href="$src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="107,77,170,106"/>
+<area shape="rect" id="node4" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html#ab7f0caaea1f96d4fdeea126f78d7081f" title="Initialize the markov model from MarkovModel::Markov::Model, with an import file." alt="" coords="5,131,272,177"/>
+</map>

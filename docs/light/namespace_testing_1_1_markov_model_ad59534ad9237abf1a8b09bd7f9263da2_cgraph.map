@@ -1,6 +1,0 @@
-<map id="Testing::MarkovModel::TEST_CLASS" name="Testing::MarkovModel::TEST_CLASS">
-<area shape="rect" id="node1" title="Test class for rest of Node cases." alt="" coords="5,49,169,90"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad" title="Adjust the edge EdgeWeight with offset. Adds the offset parameter to the edge EdgeWeight." alt="" coords="225,5,415,32"/>
-<area shape="rect" id="node3" href="$class_markov_1_1_node.html#a0e867cddf6b8dd784c36b12aa820fee9" title="Link this node with another, with this node as its source." alt="" coords="247,56,393,83"/>
-<area shape="rect" id="node4" href="$class_markov_1_1_node.html#a87224bed22e5da09e0ddb91c681a6b2c" title="Chose a random node from the list of edges, with regards to its EdgeWeight, and TraverseNode to that." alt="" coords="217,107,423,133"/>
-</map>

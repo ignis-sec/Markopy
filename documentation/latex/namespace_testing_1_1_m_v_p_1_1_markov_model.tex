@@ -40,7 +40,94 @@ test Traverse\+Node returning Right\+Node
 
 test Left\+Node/\+Right\+Node setter
 
-test negative adjustmentsHere is the call graph for this function\+:\nopagebreak
+test negative adjustments
+
+Definition at line \mbox{\hyperlink{_unit_tests_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_unit_tests_8cpp_source}{Unit\+Tests.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022             \{}
+\DoxyCodeLine{00023             \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00027                 TEST\_METHOD(default\_constructor) \{}
+\DoxyCodeLine{00028                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}};}
+\DoxyCodeLine{00029                     Assert::IsNull(e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{LeftNode}}());}
+\DoxyCodeLine{00030                     Assert::IsNull(e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}());}
+\DoxyCodeLine{00031                     \textcolor{keyword}{delete} e;}
+\DoxyCodeLine{00032                 \}}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00036                 TEST\_METHOD(linked\_constructor) \{}
+\DoxyCodeLine{00037                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* LeftNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'l'});}
+\DoxyCodeLine{00038                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* RightNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'r'});}
+\DoxyCodeLine{00039                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}(LeftNode, RightNode);}
+\DoxyCodeLine{00040                     Assert::IsTrue(LeftNode == e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{LeftNode}}());}
+\DoxyCodeLine{00041                     Assert::IsTrue(RightNode == e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}());}
+\DoxyCodeLine{00042                     \textcolor{keyword}{delete} LeftNode;}
+\DoxyCodeLine{00043                     \textcolor{keyword}{delete} RightNode;}
+\DoxyCodeLine{00044                     \textcolor{keyword}{delete} e;}
+\DoxyCodeLine{00045                 \}}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00049                 TEST\_METHOD(AdjustEdge) \{}
+\DoxyCodeLine{00050                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* LeftNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'l'});}
+\DoxyCodeLine{00051                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* RightNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'r'});}
+\DoxyCodeLine{00052                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}(LeftNode, RightNode);}
+\DoxyCodeLine{00053                     e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(15);}
+\DoxyCodeLine{00054                     Assert::AreEqual(15ull, e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{EdgeWeight}}());}
+\DoxyCodeLine{00055                     e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(15);}
+\DoxyCodeLine{00056                     Assert::AreEqual(30ull, e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{EdgeWeight}}());}
+\DoxyCodeLine{00057                     \textcolor{keyword}{delete} LeftNode;}
+\DoxyCodeLine{00058                     \textcolor{keyword}{delete} RightNode;}
+\DoxyCodeLine{00059                     \textcolor{keyword}{delete} e;}
+\DoxyCodeLine{00060                 \}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00064                 TEST\_METHOD(TraverseNode) \{}
+\DoxyCodeLine{00065                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* LeftNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'l'});}
+\DoxyCodeLine{00066                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* RightNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'r'});}
+\DoxyCodeLine{00067                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}(LeftNode, RightNode);}
+\DoxyCodeLine{00068                     Assert::IsTrue(RightNode == e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a97e403fa0cf2666b2f142f28372de990}{TraverseNode}}());}
+\DoxyCodeLine{00069                     \textcolor{keyword}{delete} LeftNode;}
+\DoxyCodeLine{00070                     \textcolor{keyword}{delete} RightNode;}
+\DoxyCodeLine{00071                     \textcolor{keyword}{delete} e;}
+\DoxyCodeLine{00072                 \}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00076                 TEST\_METHOD(set\_left\_and\_right) \{}
+\DoxyCodeLine{00077                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* LeftNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'l'});}
+\DoxyCodeLine{00078                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* RightNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'r'});}
+\DoxyCodeLine{00079                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}(LeftNode, RightNode);}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e2 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}};}
+\DoxyCodeLine{00082                     e2-\/>\mbox{\hyperlink{class_markov_1_1_edge_a174cd2f818b7c929decee6f2bcea7025}{SetLeftEdge}}(LeftNode);}
+\DoxyCodeLine{00083                     e2-\/>\mbox{\hyperlink{class_markov_1_1_edge_add40b694fce402c316540c50d0fd3b3c}{SetRightEdge}}(RightNode);}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085                     Assert::IsTrue(e1-\/>\mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{LeftNode}}() == e2-\/>\mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{LeftNode}}());}
+\DoxyCodeLine{00086                     Assert::IsTrue(e1-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}() == e2-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}());}
+\DoxyCodeLine{00087                     \textcolor{keyword}{delete} LeftNode;}
+\DoxyCodeLine{00088                     \textcolor{keyword}{delete} RightNode;}
+\DoxyCodeLine{00089                     \textcolor{keyword}{delete} e1;}
+\DoxyCodeLine{00090                     \textcolor{keyword}{delete} e2;}
+\DoxyCodeLine{00091                 \}}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00095                 TEST\_METHOD(negative\_adjust) \{}
+\DoxyCodeLine{00096                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* LeftNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'l'});}
+\DoxyCodeLine{00097                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* RightNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'r'});}
+\DoxyCodeLine{00098                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}(LeftNode, RightNode);}
+\DoxyCodeLine{00099                     e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(15);}
+\DoxyCodeLine{00100                     Assert::AreEqual(15ull, e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{EdgeWeight}}());}
+\DoxyCodeLine{00101                     e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(-\/15);}
+\DoxyCodeLine{00102                     Assert::AreEqual(0ull, e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{EdgeWeight}}());}
+\DoxyCodeLine{00103                     \textcolor{keyword}{delete} LeftNode;}
+\DoxyCodeLine{00104                     \textcolor{keyword}{delete} RightNode;}
+\DoxyCodeLine{00105                     \textcolor{keyword}{delete} e;}
+\DoxyCodeLine{00106                 \}}
+\DoxyCodeLine{00107             \};}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_unit_tests_8cpp_source_l00347}{T\+E\+S\+T\+\_\+\+C\+L\+A\+S\+S()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -63,11 +150,61 @@ test import
 
 test export
 
-test random walkHere is the call graph for this function\+:\nopagebreak
+test random walk
+
+Definition at line \mbox{\hyperlink{_unit_tests_8cpp_source_l00347}{347}} of file \mbox{\hyperlink{_unit_tests_8cpp_source}{Unit\+Tests.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00348             \{}
+\DoxyCodeLine{00349             \textcolor{keyword}{public}:}
+\DoxyCodeLine{00352                 TEST\_METHOD(model\_constructor) \{}
+\DoxyCodeLine{00353                     \mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<unsigned char>}} m;}
+\DoxyCodeLine{00354                     Assert::AreEqual((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})\textcolor{charliteral}{'\(\backslash\)0'}, m.\mbox{\hyperlink{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}{StarterNode}}()-\/>NodeValue());}
+\DoxyCodeLine{00355                 \}}
+\DoxyCodeLine{00356 }
+\DoxyCodeLine{00359                 TEST\_METHOD(import\_filename) \{}
+\DoxyCodeLine{00360                     \mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<unsigned char>}} m;}
+\DoxyCodeLine{00361                     Assert::IsTrue(m.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"../MarkovPasswords/Models/2gram.mdl"}));}
+\DoxyCodeLine{00362                 \}}
+\DoxyCodeLine{00363 }
+\DoxyCodeLine{00366                 TEST\_METHOD(export\_filename) \{}
+\DoxyCodeLine{00367                     \mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<unsigned char>}} m;}
+\DoxyCodeLine{00368                     Assert::IsTrue(m.\mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}}(\textcolor{stringliteral}{"../MarkovPasswords/Models/testcase.mdl"})); }
+\DoxyCodeLine{00369                 \}}
+\DoxyCodeLine{00370 }
+\DoxyCodeLine{00373                 TEST\_METHOD(random\_walk) \{}
+\DoxyCodeLine{00374                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}[12 + 5];}
+\DoxyCodeLine{00375                     \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{00376                     \mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<unsigned char>}} m;}
+\DoxyCodeLine{00377                     Assert::IsTrue(m.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"../Models/finished2.mdl"}));}
+\DoxyCodeLine{00378                     Assert::IsNotNull(m.\mbox{\hyperlink{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}{RandomWalk}}(\&MarsagliaRandomEngine,1,12,res));}
+\DoxyCodeLine{00379                 \}}
+\DoxyCodeLine{00380             \};}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_unit_tests_8cpp_source_l00347}{T\+E\+S\+T\+\_\+\+C\+L\+A\+S\+S()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_unit_tests_8cpp_source_l00021}{T\+E\+S\+T\+\_\+\+C\+L\+A\+S\+S()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespace_testing_1_1_m_v_p_1_1_markov_model_af8b6c0d926618a1037c1f30bfc15b87a_cgraph}
+\includegraphics[width=259pt]{namespace_testing_1_1_m_v_p_1_1_markov_model_af8b6c0d926618a1037c1f30bfc15b87a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_testing_1_1_m_v_p_1_1_markov_model_af8b6c0d926618a1037c1f30bfc15b87a_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespace_testing_1_1_m_v_p_1_1_markov_model_a6e9e664c5a60cb3af863f384a47952ce}\label{namespace_testing_1_1_m_v_p_1_1_markov_model_a6e9e664c5a60cb3af863f384a47952ce}} 
@@ -104,7 +241,226 @@ test Find\+Vertice
 
 test Find\+Vertice
 
-test Find\+VerticeHere is the call graph for this function\+:\nopagebreak
+test Find\+Vertice
+
+Definition at line \mbox{\hyperlink{_unit_tests_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{_unit_tests_8cpp_source}{Unit\+Tests.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112             \{}
+\DoxyCodeLine{00113             \textcolor{keyword}{public}:}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00117                 TEST\_METHOD(default\_constructor) \{}
+\DoxyCodeLine{00118                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* n = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}();}
+\DoxyCodeLine{00119                     Assert::AreEqual((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})0, n-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}());}
+\DoxyCodeLine{00120                     \textcolor{keyword}{delete} n;}
+\DoxyCodeLine{00121                 \}}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00125                 TEST\_METHOD(uchar\_constructor) \{}
+\DoxyCodeLine{00126                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* n = NULL;}
+\DoxyCodeLine{00127                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} test\_cases[] = \{ \textcolor{charliteral}{'c'}, 0x00, 0xff, -\/32 \};}
+\DoxyCodeLine{00128                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} tcase : test\_cases) \{}
+\DoxyCodeLine{00129                         n = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(tcase);}
+\DoxyCodeLine{00130                         Assert::AreEqual(tcase, n-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}());}
+\DoxyCodeLine{00131                         \textcolor{keyword}{delete} n;}
+\DoxyCodeLine{00132                     \}}
+\DoxyCodeLine{00133                 \}}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{00137                 TEST\_METHOD(link\_left) \{}
+\DoxyCodeLine{00138                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* LeftNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'l'});}
+\DoxyCodeLine{00139                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* RightNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'r'});}
+\DoxyCodeLine{00140 }
+\DoxyCodeLine{00141                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e = LeftNode-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(RightNode);}
+\DoxyCodeLine{00142                     \textcolor{keyword}{delete} LeftNode;}
+\DoxyCodeLine{00143                     \textcolor{keyword}{delete} RightNode;}
+\DoxyCodeLine{00144                     \textcolor{keyword}{delete} e;}
+\DoxyCodeLine{00145                 \}}
+\DoxyCodeLine{00146 }
+\DoxyCodeLine{00149                 TEST\_METHOD(link\_right) \{}
+\DoxyCodeLine{00150                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* LeftNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'l'});}
+\DoxyCodeLine{00151                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* RightNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'r'});}
+\DoxyCodeLine{00152 }
+\DoxyCodeLine{00153                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}(NULL, RightNode);}
+\DoxyCodeLine{00154                     LeftNode-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(e);}
+\DoxyCodeLine{00155                     Assert::IsTrue(LeftNode == e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{LeftNode}}());}
+\DoxyCodeLine{00156                     Assert::IsTrue(RightNode == e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}());}
+\DoxyCodeLine{00157                     \textcolor{keyword}{delete} LeftNode;}
+\DoxyCodeLine{00158                     \textcolor{keyword}{delete} RightNode;}
+\DoxyCodeLine{00159                     \textcolor{keyword}{delete} e;}
+\DoxyCodeLine{00160                 \}}
+\DoxyCodeLine{00161 }
+\DoxyCodeLine{00164                 TEST\_METHOD(rand\_next\_low) \{}
+\DoxyCodeLine{00165                     \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{00166                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* src = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'a'});}
+\DoxyCodeLine{00167                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'b'});}
+\DoxyCodeLine{00168                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e = src-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(target1);}
+\DoxyCodeLine{00169                     e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(15);}
+\DoxyCodeLine{00170                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* res = src-\/>\mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(\&MarsagliaRandomEngine);}
+\DoxyCodeLine{00171                     Assert::IsTrue(res == target1);}
+\DoxyCodeLine{00172                     \textcolor{keyword}{delete} src;}
+\DoxyCodeLine{00173                     \textcolor{keyword}{delete} target1;}
+\DoxyCodeLine{00174                     \textcolor{keyword}{delete} e;}
+\DoxyCodeLine{00175 }
+\DoxyCodeLine{00176                 \}}
+\DoxyCodeLine{00177 }
+\DoxyCodeLine{00180                 TEST\_METHOD(rand\_next\_u32) \{}
+\DoxyCodeLine{00181                     \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{00182                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* src = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'a'});}
+\DoxyCodeLine{00183                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'b'});}
+\DoxyCodeLine{00184                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e = src-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(target1);}
+\DoxyCodeLine{00185                     e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(1 << 31);}
+\DoxyCodeLine{00186                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* res = src-\/>\mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(\&MarsagliaRandomEngine);}
+\DoxyCodeLine{00187                     Assert::IsTrue(res == target1);}
+\DoxyCodeLine{00188                     \textcolor{keyword}{delete} src;}
+\DoxyCodeLine{00189                     \textcolor{keyword}{delete} target1;}
+\DoxyCodeLine{00190                     \textcolor{keyword}{delete} e;}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192                 \}}
+\DoxyCodeLine{00193 }
+\DoxyCodeLine{00196                 TEST\_METHOD(rand\_next\_choice\_1) \{}
+\DoxyCodeLine{00197                     \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{00198                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* src = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'a'});}
+\DoxyCodeLine{00199                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'b'});}
+\DoxyCodeLine{00200                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target2 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'c'});}
+\DoxyCodeLine{00201                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e1 = src-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(target1);}
+\DoxyCodeLine{00202                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e2 = src-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(target2);}
+\DoxyCodeLine{00203                     e1-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(1);}
+\DoxyCodeLine{00204                     e2-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long})(1ull << 31));}
+\DoxyCodeLine{00205                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* res = src-\/>\mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(\&MarsagliaRandomEngine);}
+\DoxyCodeLine{00206                     Assert::IsNotNull(res);}
+\DoxyCodeLine{00207                     Assert::IsTrue(res == target2);}
+\DoxyCodeLine{00208                     \textcolor{keyword}{delete} src;}
+\DoxyCodeLine{00209                     \textcolor{keyword}{delete} target1;}
+\DoxyCodeLine{00210                     \textcolor{keyword}{delete} e1;}
+\DoxyCodeLine{00211                     \textcolor{keyword}{delete} e2;}
+\DoxyCodeLine{00212                 \}}
+\DoxyCodeLine{00213 }
+\DoxyCodeLine{00216                 TEST\_METHOD(rand\_next\_choice\_2) \{}
+\DoxyCodeLine{00217                     \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{00218                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* src = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'a'});}
+\DoxyCodeLine{00219                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'b'});}
+\DoxyCodeLine{00220                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target2 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'c'});}
+\DoxyCodeLine{00221                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e1 = src-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(target1);}
+\DoxyCodeLine{00222                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e2 = src-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(target2);}
+\DoxyCodeLine{00223                     e2-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(1);}
+\DoxyCodeLine{00224                     e1-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long})(1ull << 31));}
+\DoxyCodeLine{00225                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* res = src-\/>\mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(\&MarsagliaRandomEngine);}
+\DoxyCodeLine{00226                     Assert::IsNotNull(res);}
+\DoxyCodeLine{00227                     Assert::IsTrue(res == target1);}
+\DoxyCodeLine{00228                     \textcolor{keyword}{delete} src;}
+\DoxyCodeLine{00229                     \textcolor{keyword}{delete} target1;}
+\DoxyCodeLine{00230                     \textcolor{keyword}{delete} e1;}
+\DoxyCodeLine{00231                     \textcolor{keyword}{delete} e2;}
+\DoxyCodeLine{00232                 \}}
+\DoxyCodeLine{00233 }
+\DoxyCodeLine{00234 }
+\DoxyCodeLine{00237                 TEST\_METHOD(update\_edges\_count) \{}
+\DoxyCodeLine{00238 }
+\DoxyCodeLine{00239                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* src = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'a'});}
+\DoxyCodeLine{00240                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'b'});}
+\DoxyCodeLine{00241                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target2 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'c'});}
+\DoxyCodeLine{00242                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}(src, target1);}
+\DoxyCodeLine{00243                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e2 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}(src, target2);}
+\DoxyCodeLine{00244                     e1-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(25);}
+\DoxyCodeLine{00245                     src-\/>\mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{UpdateEdges}}(e1);}
+\DoxyCodeLine{00246                     e2-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(30);}
+\DoxyCodeLine{00247                     src-\/>\mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{UpdateEdges}}(e2);}
+\DoxyCodeLine{00248 }
+\DoxyCodeLine{00249                     Assert::AreEqual((\textcolor{keywordtype}{size\_t})2, src-\/>\mbox{\hyperlink{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}{Edges}}()-\/>size());}
+\DoxyCodeLine{00250 }
+\DoxyCodeLine{00251                     \textcolor{keyword}{delete} src;}
+\DoxyCodeLine{00252                     \textcolor{keyword}{delete} target1;}
+\DoxyCodeLine{00253                     \textcolor{keyword}{delete} e1;}
+\DoxyCodeLine{00254                     \textcolor{keyword}{delete} e2;}
+\DoxyCodeLine{00255 }
+\DoxyCodeLine{00256                 \}}
+\DoxyCodeLine{00257 }
+\DoxyCodeLine{00260                 TEST\_METHOD(update\_edges\_total) \{}
+\DoxyCodeLine{00261 }
+\DoxyCodeLine{00262                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* src = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'a'});}
+\DoxyCodeLine{00263                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'b'});}
+\DoxyCodeLine{00264                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}(src, target1);}
+\DoxyCodeLine{00265                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e2 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}(src, target1);}
+\DoxyCodeLine{00266                     e1-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(25);}
+\DoxyCodeLine{00267                     src-\/>\mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{UpdateEdges}}(e1);}
+\DoxyCodeLine{00268                     e2-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(30);}
+\DoxyCodeLine{00269                     src-\/>\mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{UpdateEdges}}(e2);}
+\DoxyCodeLine{00270 }
+\DoxyCodeLine{00271                     \textcolor{comment}{//Assert::AreEqual(55ull, src-\/>TotalEdgeWeights());}}
+\DoxyCodeLine{00272 }
+\DoxyCodeLine{00273                     \textcolor{keyword}{delete} src;}
+\DoxyCodeLine{00274                     \textcolor{keyword}{delete} target1;}
+\DoxyCodeLine{00275                     \textcolor{keyword}{delete} e1;}
+\DoxyCodeLine{00276                     \textcolor{keyword}{delete} e2;}
+\DoxyCodeLine{00277                 \}}
+\DoxyCodeLine{00278 }
+\DoxyCodeLine{00279 }
+\DoxyCodeLine{00282                 TEST\_METHOD(find\_vertice) \{}
+\DoxyCodeLine{00283 }
+\DoxyCodeLine{00284                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* src = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'a'});}
+\DoxyCodeLine{00285                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'b'});}
+\DoxyCodeLine{00286                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target2 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'c'});}
+\DoxyCodeLine{00287                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* res = NULL;}
+\DoxyCodeLine{00288                     src-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(target1);}
+\DoxyCodeLine{00289                     src-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(target2);}
+\DoxyCodeLine{00290 }
+\DoxyCodeLine{00291                     }
+\DoxyCodeLine{00292                     res = src-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(\textcolor{charliteral}{'b'});}
+\DoxyCodeLine{00293                     Assert::IsNotNull(res);}
+\DoxyCodeLine{00294                     Assert::AreEqual((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})\textcolor{charliteral}{'b'}, res-\/>\mbox{\hyperlink{class_markov_1_1_edge_a97e403fa0cf2666b2f142f28372de990}{TraverseNode}}()-\/>NodeValue());}
+\DoxyCodeLine{00295                     res = src-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(\textcolor{charliteral}{'c'});}
+\DoxyCodeLine{00296                     Assert::IsNotNull(res);}
+\DoxyCodeLine{00297                     Assert::AreEqual((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})\textcolor{charliteral}{'c'}, res-\/>\mbox{\hyperlink{class_markov_1_1_edge_a97e403fa0cf2666b2f142f28372de990}{TraverseNode}}()-\/>NodeValue());}
+\DoxyCodeLine{00298 }
+\DoxyCodeLine{00299                     \textcolor{keyword}{delete} src;}
+\DoxyCodeLine{00300                     \textcolor{keyword}{delete} target1;}
+\DoxyCodeLine{00301                     \textcolor{keyword}{delete} target2;}
+\DoxyCodeLine{00302 }
+\DoxyCodeLine{00303 }
+\DoxyCodeLine{00304                 \}}
+\DoxyCodeLine{00305 }
+\DoxyCodeLine{00306 }
+\DoxyCodeLine{00309                 TEST\_METHOD(find\_vertice\_without\_any) \{}
+\DoxyCodeLine{00310 }
+\DoxyCodeLine{00311                     \textcolor{keyword}{auto} \_invalid\_next = [] \{}
+\DoxyCodeLine{00312                         \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* src = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'a'});}
+\DoxyCodeLine{00313                         \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* res = NULL;}
+\DoxyCodeLine{00314 }
+\DoxyCodeLine{00315                         res = src-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(\textcolor{charliteral}{'b'});}
+\DoxyCodeLine{00316                         Assert::IsNull(res);}
+\DoxyCodeLine{00317 }
+\DoxyCodeLine{00318                         \textcolor{keyword}{delete} src;}
+\DoxyCodeLine{00319                     \};}
+\DoxyCodeLine{00320 }
+\DoxyCodeLine{00321                     \textcolor{comment}{//Assert::ExpectException<std::logic\_error>(\_invalid\_next);}}
+\DoxyCodeLine{00322                 \}}
+\DoxyCodeLine{00323 }
+\DoxyCodeLine{00326                 TEST\_METHOD(find\_vertice\_nonexistent) \{}
+\DoxyCodeLine{00327 }
+\DoxyCodeLine{00328                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* src = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'a'});}
+\DoxyCodeLine{00329                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'b'});}
+\DoxyCodeLine{00330                     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* target2 = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'c'});}
+\DoxyCodeLine{00331                     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* res = NULL;}
+\DoxyCodeLine{00332                     src-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(target1);}
+\DoxyCodeLine{00333                     src-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(target2);}
+\DoxyCodeLine{00334 }
+\DoxyCodeLine{00335                     res = src-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(\textcolor{charliteral}{'D'});}
+\DoxyCodeLine{00336                     Assert::IsNull(res);}
+\DoxyCodeLine{00337 }
+\DoxyCodeLine{00338                     \textcolor{keyword}{delete} src;}
+\DoxyCodeLine{00339                     \textcolor{keyword}{delete} target1;}
+\DoxyCodeLine{00340                     \textcolor{keyword}{delete} target2;}
+\DoxyCodeLine{00341 }
+\DoxyCodeLine{00342                 \}}
+\DoxyCodeLine{00343             \};}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_unit_tests_8cpp_source_l00347}{T\+E\+S\+T\+\_\+\+C\+L\+A\+S\+S()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

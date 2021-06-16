@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Model Visualization</title>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="vis-network.min.js"></script>
+    <!--<script type="text/javascript" src="file1.js"></script>-->
+</head>
+<body>
+    <p>
+        Model Visualization:
+    </p>
+    <p>
+        <span>
+            Total Record :
+        </span>
+        <span id="RowCount">
+
+        </span>
+    </p>
+    <p>
+        <span>
+            Number of Nodes:
+        </span>
+        <span id="NodeCount">
+
+        </span>
+    </p>
+    <p>
+        <span>
+            Number Of Edges :
+        </span>
+        <span id="EdgeCount">
+
+        </span>
+    </p>
+    <div id="System"></div>
+    <script>
+        var allNodes;
+        var highlightActive = false;
+        var network;
+        var container = document.getElementById("System");
+        var options = {
+            height: "1000px",
+            width: "100%",
+            nodes: {
+                shape: "dot",
+                scaling: {
+                    min: 30,
+                    max: 30,
+                },
+            },
+            edges: {
+                font: {
+                    size: 5,
+                    face: "Tahoma",
+                },
+                color: { inherit: true },
+                width: 0.30,
+                smooth: {
+                    type: "dynamic",
+                },
+                arrows: {
+                    to: {
+                        enabled: false,
+                        imageHeight: 32,
+                        imageWidth: 32,
+                        scaleFactor: 1,
+                        type: "arrow"
+                    },
+                    from: {
+                        enabled: false,
+                        imageHeight: 32,
+                        imageWidth: 32,
+                        scaleFactor: 1,
+                        type: "arrow"
+                    }
+                },
+
+            },
+            interaction: {
+                hideEdgesOnDrag: true,
+                tooltipDelay: 200,
+            },
+            physics: {
+                enabled: false
+            },
+            layout: {
+                randomSeed: 1500,
+                improvedLayout: true,
+                clusterThreshold: 1,
+                hierarchical: {
+                    enabled: false,
+                    levelSeparation: 1050,
+                    nodeSpacing: 1000,
+                    treeSpacing: 2000,
+                    blockShifting: false,
+                    edgeMinimization: false,
+                    parentCentralization: false,
+                    direction: 'DU',        // UD, DU, LR, RL
+                    sortMethod: 'directed',  // hubsize, directed
+                    shakeTowards: 'leaves'  // roots, leaves
+                }
+            }
+        };
+        var nodes = new vis.DataSet();
+        var edges = new vis.DataSet();
+        try {
+            $.ajax({
+                url: "file2.mdl",
+                success: function (data) {
+                    content = data;
+                    try {
+                        var x = 0;
+                        var y = 0;
+                        var rowlist = content.split("\n");
+                        $("#RowCount").html(rowlist.length);
+                        $.each(rowlist, function (index, value) {
+                            var ColumnList = value.split(",");
+                            if (ColumnList.length == 3)
+                            {
+
+
+                            }
+                            else {
+                                var MaxNumber = -1;
+                                var SayiListesi = [0];
+                                var TmpColumnList = [];
+                                $.each(ColumnList, function (index, vl) {
+                                    var Sayi = parseInt(vl);
+                                    if (Sayi > MaxNumber) {
+                                        MaxNumber = Sayi;
+                                    }
+                                })
+                                if (MaxNumber > -1) {
+                                    var PIndex = value.indexOf(MaxNumber.toString());
+                                    if (PIndex > 0) {
+                                        var SoruceNode = value.substring(0, PIndex - 1);
+                                        PIndex += MaxNumber.toString().length;
+                                        var DestinationNode = value.substring(PIndex + 1, value.length);
+                                        if (DestinationNode == ",,")
+                                        {
+                                            DestinationNode = ",";
+                                        }
+                                        TmpColumnList.push(SoruceNode);
+                                        TmpColumnList.push(MaxNumber);
+                                        TmpColumnList.push(DestinationNode);
+                                    }
+                                }
+                                ColumnList = TmpColumnList;
+                            }
+
+
+                            try {
+
+                                ColumnList[0] = ColumnList[0].replace(" ", "");
+                                ColumnList[2] = ColumnList[2].replace(" ", "");
+
+
+								if (ColumnList[0] == " ") {
+									ColumnList[0] = 'blankfirst';
+								}
+								if (ColumnList[0] == "") {
+									ColumnList[0] = 'blankfirst';
+                                }
+
+
+                                if (ColumnList[2] == " ") {
+									ColumnList[2] = 'blanklast';
+								}
+								if (ColumnList[2] == "") {
+									ColumnList[2] = 'blanklast';
+								}
+								
+
+
+        //                        if (index == 0)
+        //                        {
+								//	ColumnList[0] = '_root';
+								//}
+								//if (index == rowlist.length-1) {
+								//	ColumnList[2] = '_end';
+								//}
+                                
+                                ColumnList[0] = ColumnList[0].trim();
+                                var nodekaynak = nodes.get(ColumnList[0]);
+                                if (nodekaynak === null) {
+                                    nodekaynak = {
+                                        id: ColumnList[0].trim(),
+                                        label: ColumnList[0],
+                                        group: -1,
+                                    };
+                                    nodes.add(nodekaynak);
+                                }
+                                ColumnList[2] = ColumnList[2].trim();
+                                var nodehedef = nodes.get(ColumnList[2]);
+                                if (nodehedef === null) {
+                                    nodehedef = {
+                                        id: ColumnList[2].trim(),
+                                        label: ColumnList[2],
+                                        group: -1,
+                                    };
+                                    nodes.add(nodehedef);
+                                }
+
+                                var k = nodekaynak.id;
+                                var h = nodehedef.id;
+                                try {
+                                    var t = ColumnList[1].toString().trim();
+                                } catch (e) {
+                                    console.log(e);
+                                }
+                                var edge = {
+                                    from: k, to: h, title: t, label: t
+                                };
+                                edges.add(edge);
+                            } catch (e) {
+                                console.log(e);
+                            }
+
+                        });
+
+                        x = 0;
+                        y = 0;
+                        var GroupIndex = 0;
+
+
+                        nodes.get().filter(function (value) {
+                            GroupIndex++;
+                            if (value.group == -1 && value.id != "_root") {
+                                var grp = (GroupIndex % 5);
+                                value.group = grp;
+                                x = Math.floor(Math.random() * 2000) + 1;
+                                y = Math.floor(Math.random() * 2000) + 1;
+                                value.x = x;
+                                value.y = y;
+                                var nodenodes = getEdgesOfFromNode(value.id);
+                            }
+                            else {
+                            }
+                        });
+                        $("#NodeCount").html(nodes.length);
+                        $("#EdgeCount").html(edges.length);
+                        var data = {
+                            nodes: nodes,
+                            edges: edges,
+                        };
+                        network = new vis.Network(
+                            container,
+                            data,
+                            options);
+                        network.on("click", neighbourhoodHighlight);
+                        allNodes = nodes.get({ returnType: "Object" });
+                    }
+                    catch (err) {
+                        alert(err.message);
+                    }
+                }
+            });
+        }
+        catch (err) {
+            alert(err.message);
+        }
+
+        function getEdgesOfFromNode(nodeId) {
+            return edges.get().filter(function (edge) {
+                return (edge.from === nodeId);
+            });
+        }
+        function getNode(nodeId) {
+            var snc;
+            nodes.get().filter(function (node) {
+                if ((node.id === nodeId)) {
+                    snc = node;
+                    return snc;
+                };
+            });
+            return snc;
+        }
+
+        function neighbourhoodHighlight(params) {
+            try {
+                // if something is selected:
+                if (params.nodes.length > 0) {
+                    highlightActive = true;
+                    var i, j;
+                    var selectedNode = params.nodes[0];
+                    var nd = getNode(selectedNode);
+                    console.log(nd);
+                    //console.log(params.edges);
+                    var degrees = 2;
+                    // mark all nodes as hard to read.
+                    for (var nodeId in allNodes) {
+                        allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+                        if (allNodes[nodeId].hiddenLabel === undefined) {
+                            allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+                            allNodes[nodeId].label = undefined;
+                        }
+                    }
+                    var connectedNodes = network.getConnectedNodes(selectedNode);
+                    var allConnectedNodes = [];
+
+                    // get the second degree nodes
+                    for (i = 1; i < degrees; i++) {
+                        for (j = 0; j < connectedNodes.length; j++) {
+                            allConnectedNodes = allConnectedNodes.concat(
+                                network.getConnectedNodes(connectedNodes[j])
+                            );
+                        }
+                    }
+
+                    // all second degree nodes get a different color and their label back
+                    for (i = 0; i < allConnectedNodes.length; i++) {
+                        allNodes[allConnectedNodes[i]].color = "rgba(200,200,200,0.5)";
+                        if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+                            allNodes[allConnectedNodes[i]].label =
+                                allNodes[allConnectedNodes[i]].hiddenLabel;
+                            allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+                        }
+                    }
+
+
+                    // all first degree nodes get their own color and their label back
+                    for (i = 0; i < connectedNodes.length; i++) {
+                        allNodes[connectedNodes[i]].color = undefined;
+                        if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+                            allNodes[connectedNodes[i]].label =
+                                allNodes[connectedNodes[i]].hiddenLabel;
+                            allNodes[connectedNodes[i]].hiddenLabel = undefined;
+                        }
+                    }
+
+                    // the main node gets its own color and its label back.
+                    allNodes[selectedNode].color = undefined;
+                    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+                        allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+                        allNodes[selectedNode].hiddenLabel = undefined;
+                    }
+                } else if (highlightActive === true) {
+                    // reset all nodes
+                    for (var nodeId in allNodes) {
+                        allNodes[nodeId].color = undefined;
+                        if (allNodes[nodeId].hiddenLabel !== undefined) {
+                            allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+                            allNodes[nodeId].hiddenLabel = undefined;
+                        }
+                    }
+                    highlightActive = false;
+                }
+
+                // transform the object into an array
+                var updateArray = [];
+                for (nodeId in allNodes) {
+                    if (allNodes.hasOwnProperty(nodeId)) {
+                        updateArray.push(allNodes[nodeId]);
+                    }
+                }
+                nodes.update(updateArray);
+            } catch (e) {
+                alert(e);
+            }
+        }
+    </script>
+</body>
+</html>

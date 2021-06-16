@@ -3,15 +3,19 @@
 #include "ui_menu.h"
 
 
-class menu:public QMainWindow {
+namespace Markov::GUI{
+	/** @brief QT Menu class
+	*/ 
+	class menu:public QMainWindow {
 	Q_OBJECT
-public:
-	menu(QWidget* parent = Q_NULLPTR);
+	public:
+		menu(QWidget* parent = Q_NULLPTR);
 
-private:
-	Ui::main ui;
+	private:
+		Ui::main ui;
 
-public slots:
-	void about();
-	void visualization();
+	public slots:
+		void about();
+		void visualization();
+	};
 };

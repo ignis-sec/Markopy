@@ -1,0 +1,6 @@
+<map id="Markov::API::ModelMatrix::FastRandomWalkThread" name="Markov::API::ModelMatrix::FastRandomWalkThread">
+<area shape="rect" id="node1" title="A single thread of a single partition of FastRandomWalk." alt="" coords="669,5,895,52"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5" title="A single partition of FastRandomWalk event." alt="" coords="389,5,621,52"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#a9e5a9885d48e95b9f5d1ed082d83db24" title="Random walk on the Matrix&#45;reduced Markov::Model." alt="" coords="116,5,341,52"/>
+<area shape="rect" id="node4" href="$src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="5,14,68,43"/>
+</map>

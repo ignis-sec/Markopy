@@ -1,5 +1,0 @@
-<map id="Markov::Model::Export" name="Markov::Model::Export">
-<area shape="rect" id="node1" title="Export a file of the model." alt="" coords="255,35,423,61"/>
-<area shape="rect" id="node2" href="$src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="79,5,133,32"/>
-<area shape="rect" id="node3" href="$namespace_testing_1_1_m_v_p_1_1_markov_model.html#af8b6c0d926618a1037c1f30bfc15b87a" title="Test class for minimal viable Model." alt="" coords="5,57,207,98"/>
-</map>
