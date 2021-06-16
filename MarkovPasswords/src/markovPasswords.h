@@ -109,9 +109,9 @@ namespace Markov::API{
 		 * 
 		*/
 		void GenerateThread(std::mutex *outputLock, unsigned long int n, std::ofstream *wordlist, int minLen, int maxLen);
-		std::ifstream* datasetFile;
-		std::ofstream* modelSavefile;
-		std::ofstream* outputFile;
+		std::ifstream* datasetFile; /** @brief	Dataset file input of our system	*/
+		std::ofstream* modelSavefile; /** @brief	File to save model  of our system	*/
+		std::ofstream* outputFile; /** @brief	Generated output  file  of our system	*/
 	};
 
 

@@ -109,10 +109,30 @@ namespace Markov::API{
          * 
 		*/
         void FastRandomWalkThread(std::mutex *mlock, std::ofstream *wordlist, unsigned long int n, int minLen, int maxLen, int id, bool bFileIO);
-        char** edgeMatrix;
+        
+		/**
+			@brief 2-D Character array for the edge Matrix (The characters of Nodes)
+		*/
+		char** edgeMatrix;
+
+		/**
+			@brief 2-d Integer array for the value Matrix (For the weights of  Edges)
+		*/
         long int **valueMatrix;
+
+		/**
+			@brief to hold Matrix size
+		*/
         int matrixSize;
+
+		/**
+			@brief to hold the Matrix index (To hold the orders of 2-D arrays')
+		*/
         char* matrixIndex;
+
+		/**
+			@brief Array of the Total Edge Weights
+		*/
         long int *totalEdgeWeights;
     };
 

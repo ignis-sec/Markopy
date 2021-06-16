@@ -1,6 +1,6 @@
 This is makeindex, version 2.15 [TeX Live 2019] (kpathsea + Thai support).
-Scanning input file refman.idx....done (534 entries accepted, 0 rejected).
-Sorting entries.......done (5189 comparisons).
-Generating output file refman.ind....done (688 lines written, 0 warnings).
+Scanning input file refman.idx....done (687 entries accepted, 0 rejected).
+Sorting entries........done (6793 comparisons).
+Generating output file refman.ind....done (858 lines written, 0 warnings).
 Output written in refman.ind.
 Transcript written in refman.ilg.

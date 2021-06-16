@@ -91,14 +91,14 @@ Initialize a model with only start and end nodes.
 
 Initialize an empty model with only a starter\+Node Starter node is a special kind of node that has constant 0x00 value, and will be used to initiate the generation execution from. 
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00200}{200}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{model_8h_source_l00201}{201}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00200                                     \{}
-\DoxyCodeLine{00201     this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}(0);}
-\DoxyCodeLine{00202     this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.insert(\{ 0, this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}} \});}
-\DoxyCodeLine{00203 \}}
+\DoxyCodeLine{00201                                     \{}
+\DoxyCodeLine{00202     this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}(0);}
+\DoxyCodeLine{00203     this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.insert(\{ 0, this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}} \});}
+\DoxyCodeLine{00204 \}}
 
 \end{DoxyCode}
 
@@ -138,34 +138,34 @@ This function is used for training purposes, as it can be used for adjusting the
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00322}{322}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{model_8h_source_l00323}{323}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00322                                                                                                  \{}
-\DoxyCodeLine{00323     NodeStorageType p = payload[0];}
-\DoxyCodeLine{00324     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* curnode = this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}};}
-\DoxyCodeLine{00325     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<NodeStorageType>}}* e;}
-\DoxyCodeLine{00326     \textcolor{keywordtype}{int} i = 0;}
-\DoxyCodeLine{00327 }
-\DoxyCodeLine{00328     \textcolor{keywordflow}{if} (p == 0) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00329     \textcolor{keywordflow}{while} (p != 0) \{}
-\DoxyCodeLine{00330         e = curnode-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(p);}
-\DoxyCodeLine{00331         \textcolor{keywordflow}{if} (e == NULL) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00332         e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(occurrence);}
-\DoxyCodeLine{00333         curnode = e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}();}
-\DoxyCodeLine{00334         p = payload[++i];}
-\DoxyCodeLine{00335     \}}
-\DoxyCodeLine{00336 }
-\DoxyCodeLine{00337     e = curnode-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(\textcolor{stringliteral}{'\(\backslash\)xff'});}
-\DoxyCodeLine{00338     e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(occurrence);}
-\DoxyCodeLine{00339     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00340 \}}
+\DoxyCodeLine{00323                                                                                                  \{}
+\DoxyCodeLine{00324     NodeStorageType p = payload[0];}
+\DoxyCodeLine{00325     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* curnode = this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}};}
+\DoxyCodeLine{00326     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<NodeStorageType>}}* e;}
+\DoxyCodeLine{00327     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00328 }
+\DoxyCodeLine{00329     \textcolor{keywordflow}{if} (p == 0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00330     \textcolor{keywordflow}{while} (p != 0) \{}
+\DoxyCodeLine{00331         e = curnode-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(p);}
+\DoxyCodeLine{00332         \textcolor{keywordflow}{if} (e == NULL) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00333         e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(occurrence);}
+\DoxyCodeLine{00334         curnode = e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}();}
+\DoxyCodeLine{00335         p = payload[++i];}
+\DoxyCodeLine{00336     \}}
+\DoxyCodeLine{00337 }
+\DoxyCodeLine{00338     e = curnode-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(\textcolor{stringliteral}{'\(\backslash\)xff'});}
+\DoxyCodeLine{00339     e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(occurrence);}
+\DoxyCodeLine{00340     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00341 \}}
 
 \end{DoxyCode}
 
 
-Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00059}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train\+Thread()}}.
+Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00077}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train\+Thread()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -219,15 +219,15 @@ True if successful, False for incomplete models or corrupt file formats
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00285}{285}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{model_8h_source_l00286}{286}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00285                                                               \{}
-\DoxyCodeLine{00286     std::ofstream exportfile;}
-\DoxyCodeLine{00287     exportfile.open(filename);}
-\DoxyCodeLine{00288     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}}(\&exportfile);}
-\DoxyCodeLine{00289 \}}
+\DoxyCodeLine{00286                                                               \{}
+\DoxyCodeLine{00287     std::ofstream exportfile;}
+\DoxyCodeLine{00288     exportfile.open(filename);}
+\DoxyCodeLine{00289     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}}(\&exportfile);}
+\DoxyCodeLine{00290 \}}
 
 \end{DoxyCode}
 
@@ -266,25 +266,25 @@ True if successful, False for incomplete models.
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00273}{273}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{model_8h_source_l00274}{274}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00273                                                         \{}
-\DoxyCodeLine{00274     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<NodeStorageType>}}* e;}
-\DoxyCodeLine{00275     \textcolor{keywordflow}{for} (std::vector<int>::size\_type i = 0; i != this-\/>\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}.size(); i++) \{}
-\DoxyCodeLine{00276         e = this-\/>\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}[i];}
-\DoxyCodeLine{00277         \textcolor{comment}{//std::cout << e-\/>LeftNode()-\/>NodeValue() << "," << e-\/>EdgeWeight() << "," << e-\/>RightNode()-\/>NodeValue() << "\(\backslash\)n";}}
-\DoxyCodeLine{00278         *\mbox{\hyperlink{namespacemodel__2gram_a2c21010331f2adf96f64d1e90d019e76}{f}} << e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{LeftNode}}()-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}() << \textcolor{stringliteral}{","} << e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{EdgeWeight}}() << \textcolor{stringliteral}{","} << e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}()-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}() << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00279     \}}
-\DoxyCodeLine{00280 }
-\DoxyCodeLine{00281     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{00282 \}}
+\DoxyCodeLine{00274                                                         \{}
+\DoxyCodeLine{00275     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<NodeStorageType>}}* e;}
+\DoxyCodeLine{00276     \textcolor{keywordflow}{for} (std::vector<int>::size\_type i = 0; i != this-\/>\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}.size(); i++) \{}
+\DoxyCodeLine{00277         e = this-\/>\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}[i];}
+\DoxyCodeLine{00278         \textcolor{comment}{//std::cout << e-\/>LeftNode()-\/>NodeValue() << "," << e-\/>EdgeWeight() << "," << e-\/>RightNode()-\/>NodeValue() << "\(\backslash\)n";}}
+\DoxyCodeLine{00279         *\mbox{\hyperlink{namespacemodel__2gram_a2c21010331f2adf96f64d1e90d019e76}{f}} << e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{LeftNode}}()-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}() << \textcolor{stringliteral}{","} << e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{EdgeWeight}}() << \textcolor{stringliteral}{","} << e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}()-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}() << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00280     \}}
+\DoxyCodeLine{00281 }
+\DoxyCodeLine{00282     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00283 \}}
 
 \end{DoxyCode}
 
 
-Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00080}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Save()}}.
+Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00098}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Save()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -315,21 +315,21 @@ True if successful, False for incomplete models or corrupt file formats
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00265}{265}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{model_8h_source_l00266}{266}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00265                                                               \{}
-\DoxyCodeLine{00266     std::ifstream importfile;}
-\DoxyCodeLine{00267     importfile.open(filename);}
-\DoxyCodeLine{00268     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\&importfile);}
-\DoxyCodeLine{00269 }
-\DoxyCodeLine{00270 \}}
+\DoxyCodeLine{00266                                                               \{}
+\DoxyCodeLine{00267     std::ifstream importfile;}
+\DoxyCodeLine{00268     importfile.open(filename);}
+\DoxyCodeLine{00269     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\&importfile);}
+\DoxyCodeLine{00270 }
+\DoxyCodeLine{00271 \}}
 
 \end{DoxyCode}
 
 
-Referenced by \mbox{\hyperlink{markopy_8cpp_source_l00011}{Markov\+::\+Markopy\+::\+B\+O\+O\+S\+T\+\_\+\+P\+Y\+T\+H\+O\+N\+\_\+\+M\+O\+D\+U\+L\+E()}}, \mbox{\hyperlink{src_2main_8cpp_source_l00014}{main()}}, and \mbox{\hyperlink{markov_passwords_8cpp_source_l00015}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Markov\+Passwords()}}.
+Referenced by \mbox{\hyperlink{markopy_8cpp_source_l00011}{Markov\+::\+Markopy\+::\+B\+O\+O\+S\+T\+\_\+\+P\+Y\+T\+H\+O\+N\+\_\+\+M\+O\+D\+U\+L\+E()}}, \mbox{\hyperlink{src_2main_8cpp_source_l00014}{main()}}, and \mbox{\hyperlink{markov_passwords_8cpp_source_l00031}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Markov\+Passwords()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -363,72 +363,72 @@ True if successful, False for incomplete models or corrupt file formats
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00206}{206}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{model_8h_source_l00207}{207}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00206                                                         \{}
-\DoxyCodeLine{00207     std::string cell;}
-\DoxyCodeLine{00208 }
-\DoxyCodeLine{00209     \textcolor{keywordtype}{char} src;}
-\DoxyCodeLine{00210     \textcolor{keywordtype}{char} target;}
-\DoxyCodeLine{00211     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} oc;}
-\DoxyCodeLine{00212 }
-\DoxyCodeLine{00213     \textcolor{keywordflow}{while} (std::getline(*\mbox{\hyperlink{namespacemodel__2gram_a2c21010331f2adf96f64d1e90d019e76}{f}}, cell)) \{}
-\DoxyCodeLine{00214         \textcolor{comment}{//std::cout << "cell: " << cell << std::endl;}}
-\DoxyCodeLine{00215         src = cell[0];}
-\DoxyCodeLine{00216         target = cell[cell.length() -\/ 1];}
-\DoxyCodeLine{00217         \textcolor{keywordtype}{char}* j;}
-\DoxyCodeLine{00218         oc = std::strtol(cell.substr(2, cell.length() -\/ 2).c\_str(),\&j,10);}
-\DoxyCodeLine{00219         \textcolor{comment}{//std::cout << oc << "\(\backslash\)n";}}
-\DoxyCodeLine{00220         \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* srcN;}
-\DoxyCodeLine{00221         \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* targetN;}
-\DoxyCodeLine{00222         \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<NodeStorageType>}}* e;}
-\DoxyCodeLine{00223         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(src) == this-\/>nodes.end()) \{}
-\DoxyCodeLine{00224             srcN = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}(src);}
-\DoxyCodeLine{00225             this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.insert(std::pair<\textcolor{keywordtype}{char}, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}*>(src, srcN));}
-\DoxyCodeLine{00226             \textcolor{comment}{//std::cout << "Creating new node at start.\(\backslash\)n";}}
-\DoxyCodeLine{00227         \}}
-\DoxyCodeLine{00228         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00229             srcN = this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(src)-\/>second;}
-\DoxyCodeLine{00230         \}}
-\DoxyCodeLine{00231 }
-\DoxyCodeLine{00232         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(target) == this-\/>nodes.end()) \{}
-\DoxyCodeLine{00233             targetN = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}(target);}
-\DoxyCodeLine{00234             this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.insert(std::pair<\textcolor{keywordtype}{char}, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}*>(target, targetN));}
-\DoxyCodeLine{00235             \textcolor{comment}{//std::cout << "Creating new node at end.\(\backslash\)n";}}
-\DoxyCodeLine{00236         \}}
-\DoxyCodeLine{00237         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00238             targetN = this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(target)-\/>second;}
-\DoxyCodeLine{00239         \}}
-\DoxyCodeLine{00240         e = srcN-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(targetN);}
-\DoxyCodeLine{00241         e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(oc);}
-\DoxyCodeLine{00242         this-\/>\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}.push\_back(e);}
-\DoxyCodeLine{00243 }
-\DoxyCodeLine{00244         \textcolor{comment}{//std::cout << int(srcN-\/>NodeValue()) << " -\/-\/" << e-\/>EdgeWeight() << "-\/-\/> " << int(targetN-\/>NodeValue()) << "\(\backslash\)n";}}
-\DoxyCodeLine{00245 }
+\DoxyCodeLine{00207                                                         \{}
+\DoxyCodeLine{00208     std::string cell;}
+\DoxyCodeLine{00209 }
+\DoxyCodeLine{00210     \textcolor{keywordtype}{char} src;}
+\DoxyCodeLine{00211     \textcolor{keywordtype}{char} target;}
+\DoxyCodeLine{00212     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} oc;}
+\DoxyCodeLine{00213 }
+\DoxyCodeLine{00214     \textcolor{keywordflow}{while} (std::getline(*\mbox{\hyperlink{namespacemodel__2gram_a2c21010331f2adf96f64d1e90d019e76}{f}}, cell)) \{}
+\DoxyCodeLine{00215         \textcolor{comment}{//std::cout << "cell: " << cell << std::endl;}}
+\DoxyCodeLine{00216         src = cell[0];}
+\DoxyCodeLine{00217         target = cell[cell.length() -\/ 1];}
+\DoxyCodeLine{00218         \textcolor{keywordtype}{char}* j;}
+\DoxyCodeLine{00219         oc = std::strtol(cell.substr(2, cell.length() -\/ 2).c\_str(),\&j,10);}
+\DoxyCodeLine{00220         \textcolor{comment}{//std::cout << oc << "\(\backslash\)n";}}
+\DoxyCodeLine{00221         \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* srcN;}
+\DoxyCodeLine{00222         \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* targetN;}
+\DoxyCodeLine{00223         \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<NodeStorageType>}}* e;}
+\DoxyCodeLine{00224         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(src) == this-\/>nodes.end()) \{}
+\DoxyCodeLine{00225             srcN = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}(src);}
+\DoxyCodeLine{00226             this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.insert(std::pair<\textcolor{keywordtype}{char}, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}*>(src, srcN));}
+\DoxyCodeLine{00227             \textcolor{comment}{//std::cout << "Creating new node at start.\(\backslash\)n";}}
+\DoxyCodeLine{00228         \}}
+\DoxyCodeLine{00229         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00230             srcN = this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(src)-\/>second;}
+\DoxyCodeLine{00231         \}}
+\DoxyCodeLine{00232 }
+\DoxyCodeLine{00233         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(target) == this-\/>nodes.end()) \{}
+\DoxyCodeLine{00234             targetN = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}(target);}
+\DoxyCodeLine{00235             this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.insert(std::pair<\textcolor{keywordtype}{char}, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}*>(target, targetN));}
+\DoxyCodeLine{00236             \textcolor{comment}{//std::cout << "Creating new node at end.\(\backslash\)n";}}
+\DoxyCodeLine{00237         \}}
+\DoxyCodeLine{00238         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00239             targetN = this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(target)-\/>second;}
+\DoxyCodeLine{00240         \}}
+\DoxyCodeLine{00241         e = srcN-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(targetN);}
+\DoxyCodeLine{00242         e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(oc);}
+\DoxyCodeLine{00243         this-\/>\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}.push\_back(e);}
+\DoxyCodeLine{00244 }
+\DoxyCodeLine{00245         \textcolor{comment}{//std::cout << int(srcN-\/>NodeValue()) << " -\/-\/" << e-\/>EdgeWeight() << "-\/-\/> " << int(targetN-\/>NodeValue()) << "\(\backslash\)n";}}
 \DoxyCodeLine{00246 }
-\DoxyCodeLine{00247     \}}
-\DoxyCodeLine{00248 }
-\DoxyCodeLine{00249     \textcolor{keywordflow}{for} (std::pair<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}*> \textcolor{keyword}{const}\& x : this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}) \{}
-\DoxyCodeLine{00250         \textcolor{comment}{//std::cout << "Total edges in EdgesV: " << x.second-\/>edgesV.size() << "\(\backslash\)n"; }}
-\DoxyCodeLine{00251         std::sort (x.second-\/>edgesV.begin(), x.second-\/>edgesV.end(), [](Edge<NodeStorageType> *lhs, Edge<NodeStorageType> *rhs)-\/>bool\{}
-\DoxyCodeLine{00252             return lhs-\/>EdgeWeight() > rhs-\/>EdgeWeight();}
-\DoxyCodeLine{00253         \});}
-\DoxyCodeLine{00254         \textcolor{comment}{//for(int i=0;i<x.second-\/>edgesV.size();i++)}}
-\DoxyCodeLine{00255         \textcolor{comment}{//  std::cout << x.second-\/>edgesV[i]-\/>EdgeWeight() << ", ";}}
-\DoxyCodeLine{00256         \textcolor{comment}{//std::cout << "\(\backslash\)n";}}
-\DoxyCodeLine{00257     \}}
-\DoxyCodeLine{00258     \textcolor{comment}{//std::cout << "Total number of nodes: " << this-\/>nodes.size() << std::endl;}}
-\DoxyCodeLine{00259     \textcolor{comment}{//std::cout << "Total number of edges: " << this-\/>edges.size() << std::endl;}}
-\DoxyCodeLine{00260 }
-\DoxyCodeLine{00261     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{00262 \}}
+\DoxyCodeLine{00247 }
+\DoxyCodeLine{00248     \}}
+\DoxyCodeLine{00249 }
+\DoxyCodeLine{00250     \textcolor{keywordflow}{for} (std::pair<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}*> \textcolor{keyword}{const}\& x : this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}) \{}
+\DoxyCodeLine{00251         \textcolor{comment}{//std::cout << "Total edges in EdgesV: " << x.second-\/>edgesV.size() << "\(\backslash\)n"; }}
+\DoxyCodeLine{00252         std::sort (x.second-\/>edgesV.begin(), x.second-\/>edgesV.end(), [](Edge<NodeStorageType> *lhs, Edge<NodeStorageType> *rhs)-\/>bool\{}
+\DoxyCodeLine{00253             return lhs-\/>EdgeWeight() > rhs-\/>EdgeWeight();}
+\DoxyCodeLine{00254         \});}
+\DoxyCodeLine{00255         \textcolor{comment}{//for(int i=0;i<x.second-\/>edgesV.size();i++)}}
+\DoxyCodeLine{00256         \textcolor{comment}{//  std::cout << x.second-\/>edgesV[i]-\/>EdgeWeight() << ", ";}}
+\DoxyCodeLine{00257         \textcolor{comment}{//std::cout << "\(\backslash\)n";}}
+\DoxyCodeLine{00258     \}}
+\DoxyCodeLine{00259     \textcolor{comment}{//std::cout << "Total number of nodes: " << this-\/>nodes.size() << std::endl;}}
+\DoxyCodeLine{00260     \textcolor{comment}{//std::cout << "Total number of edges: " << this-\/>edges.size() << std::endl;}}
+\DoxyCodeLine{00261 }
+\DoxyCodeLine{00262     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00263 \}}
 
 \end{DoxyCode}
 
 
-Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00027}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Open\+Dataset\+File()}}.
+Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00043}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Open\+Dataset\+File()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -521,43 +521,43 @@ Null terminated string that was generated.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00292}{292}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{model_8h_source_l00293}{293}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00292                                                                                                                                                          \{}
-\DoxyCodeLine{00293     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* n = this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}};}
-\DoxyCodeLine{00294     \textcolor{keywordtype}{int} len = 0;}
-\DoxyCodeLine{00295     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* temp\_node;}
-\DoxyCodeLine{00296     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
-\DoxyCodeLine{00297         temp\_node = n-\/>\mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(randomEngine);}
-\DoxyCodeLine{00298         \textcolor{keywordflow}{if} (len >= maxSetting) \{}
-\DoxyCodeLine{00299             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00300         \}}
-\DoxyCodeLine{00301         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((temp\_node == NULL) \&\& (len < minSetting)) \{}
-\DoxyCodeLine{00302             \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{00303         \}}
-\DoxyCodeLine{00304 }
-\DoxyCodeLine{00305         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (temp\_node == NULL)\{}
-\DoxyCodeLine{00306             \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00307         \}}
-\DoxyCodeLine{00308             }
-\DoxyCodeLine{00309         n = temp\_node;}
-\DoxyCodeLine{00310 }
-\DoxyCodeLine{00311         buffer[len++] = n-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}();}
-\DoxyCodeLine{00312     \}}
-\DoxyCodeLine{00313 }
-\DoxyCodeLine{00314     \textcolor{comment}{//null terminate the string}}
-\DoxyCodeLine{00315     buffer[len] = 0x00;}
-\DoxyCodeLine{00316 }
-\DoxyCodeLine{00317     \textcolor{comment}{//do something with the generated string}}
-\DoxyCodeLine{00318     \textcolor{keywordflow}{return} buffer; \textcolor{comment}{//for now}}
-\DoxyCodeLine{00319 \}}
+\DoxyCodeLine{00293                                                                                                                                                          \{}
+\DoxyCodeLine{00294     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* n = this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}};}
+\DoxyCodeLine{00295     \textcolor{keywordtype}{int} len = 0;}
+\DoxyCodeLine{00296     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* temp\_node;}
+\DoxyCodeLine{00297     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{00298         temp\_node = n-\/>\mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(randomEngine);}
+\DoxyCodeLine{00299         \textcolor{keywordflow}{if} (len >= maxSetting) \{}
+\DoxyCodeLine{00300             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00301         \}}
+\DoxyCodeLine{00302         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((temp\_node == NULL) \&\& (len < minSetting)) \{}
+\DoxyCodeLine{00303             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00304         \}}
+\DoxyCodeLine{00305 }
+\DoxyCodeLine{00306         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (temp\_node == NULL)\{}
+\DoxyCodeLine{00307             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00308         \}}
+\DoxyCodeLine{00309             }
+\DoxyCodeLine{00310         n = temp\_node;}
+\DoxyCodeLine{00311 }
+\DoxyCodeLine{00312         buffer[len++] = n-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}();}
+\DoxyCodeLine{00313     \}}
+\DoxyCodeLine{00314 }
+\DoxyCodeLine{00315     \textcolor{comment}{//null terminate the string}}
+\DoxyCodeLine{00316     buffer[len] = 0x00;}
+\DoxyCodeLine{00317 }
+\DoxyCodeLine{00318     \textcolor{comment}{//do something with the generated string}}
+\DoxyCodeLine{00319     \textcolor{keywordflow}{return} buffer; \textcolor{comment}{//for now}}
+\DoxyCodeLine{00320 \}}
 
 \end{DoxyCode}
 
 
-Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00114}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate\+Thread()}}.
+Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00132}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate\+Thread()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -618,7 +618,7 @@ A list of all edges in this model.
 
 
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00194}{194}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{model_8h_source_l00195}{195}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
 
 
@@ -637,7 +637,7 @@ Map Left\+Node is the Nodes Node\+Value Map Right\+Node is the node pointer.
 
 
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00183}{183}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{model_8h_source_l00184}{184}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
 
 
@@ -656,7 +656,7 @@ Starter \mbox{\hyperlink{class_markov_1_1_node}{Node}} of this model.
 
 
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00188}{188}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{model_8h_source_l00189}{189}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
 
 

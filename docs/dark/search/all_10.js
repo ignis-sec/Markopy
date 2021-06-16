@@ -1,12 +1,15 @@
 var searchData=
 [
-  ['main_2ecpp_151',['main.cpp',['../src_2main_8cpp.html',1,'']]],
-  ['save_152',['Save',['../class_markov_1_1_a_p_i_1_1_markov_passwords.html#a4f4997da3a6cd3bd2717ce9759736660',1,'Markov::API::MarkovPasswords']]],
-  ['seperator_153',['seperator',['../struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options.html#ac558e96f2f1d618782339c27bd0f7abb',1,'Markov::API::CLI::_programOptions']]],
-  ['setleftedge_154',['SetLeftEdge',['../class_markov_1_1_edge.html#a174cd2f818b7c929decee6f2bcea7025',1,'Markov::Edge']]],
-  ['setprogramoptions_155',['setProgramOptions',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#ababd0e2bc5fb360425225b12f70f3836',1,'Markov::API::CLI::Argparse']]],
-  ['setrightedge_156',['SetRightEdge',['../class_markov_1_1_edge.html#add40b694fce402c316540c50d0fd3b3c',1,'Markov::Edge']]],
-  ['start_157',['start',['../class_markov_1_1_g_u_i_1_1_c_l_i.html#aff8081f3baac288e70163e720a60a1e7',1,'Markov::GUI::CLI']]],
-  ['starternode_158',['starterNode',['../class_markov_1_1_model.html#ad2d9bf601df78f80076f5d3fbb65fe28',1,'Markov::Model::starterNode()'],['../class_markov_1_1_model.html#a35cb15a14d034f3365b9d2d3efa1ffc0',1,'Markov::Model::StarterNode()']]],
-  ['statistics_159',['statistics',['../class_markov_1_1_g_u_i_1_1_c_l_i.html#a1695cccf724c76f48e4931e2f636512d',1,'Markov::GUI::CLI']]]
+  ['random_166',['random',['../namespacerandom.html',1,'random'],['../class_markov_1_1_random_1_1_random_engine.html#a010d310dfebeacd3d7db7d0958dc1058',1,'Markov::Random::RandomEngine::random()'],['../class_markov_1_1_random_1_1_default_random_engine.html#afd4233366727e5c2dd14d7e5c3ebfec1',1,'Markov::Random::DefaultRandomEngine::random()'],['../class_markov_1_1_random_1_1_marsaglia.html#a0a56da316d520b80be6b6df6c9e0b537',1,'Markov::Random::Marsaglia::random()']]],
+  ['random_2dmodel_167',['random-model',['../namespacerandom-model.html',1,'']]],
+  ['random_2dmodel_2epy_168',['random-model.py',['../random-model_8py.html',1,'']]],
+  ['random_2eh_169',['random.h',['../random_8h.html',1,'']]],
+  ['randomengine_170',['RandomEngine',['../class_markov_1_1_random_1_1_random_engine.html',1,'Markov::Random']]],
+  ['randomnext_171',['RandomNext',['../class_markov_1_1_node.html#a87224bed22e5da09e0ddb91c681a6b2c',1,'Markov::Node']]],
+  ['randomwalk_172',['RandomWalk',['../class_markov_1_1_model.html#aa4a11c6679c998936332f8409ae95375',1,'Markov::Model']]],
+  ['rd_173',['rd',['../class_markov_1_1_random_1_1_default_random_engine.html#a411c66837939f7f787272f1c6aa78e23',1,'Markov::Random::DefaultRandomEngine']]],
+  ['readme_2emd_174',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['red_175',['RED',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#abd812d8a82872e9fca1f0df632fa3722a8eb4747060ac24837b460a58065670e5',1,'Markov::API::CLI::Terminal']]],
+  ['reset_176',['RESET',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#abd812d8a82872e9fca1f0df632fa3722a72541243294300957260aa5cd4c29a73',1,'Markov::API::CLI::Terminal']]],
+  ['rightnode_177',['RightNode',['../class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd',1,'Markov::Edge']]]
 ];

@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Bar Visualization</title>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="echarts.js"></script>
+</head>
+<body>
+    <p>
+        <span>Total Record : </span><span id="RowCount"></span>
+        <span>Direction :</span>
+        <select id="sdirection">
+            <option value="1"> Yatay</option>
+            <option value="2"> Dikey</option>
+        </select>
+        <span>Mode :</span>
+        <select id="sTheme">
+            <option value="dark"> Dark</option>
+            <option value="light" selected> Light</option>
+        </select>
+    </p>
+
+    <div id="chartContainer" style="height:50000px"></div>
+    <script>
+		
+
+		var nodes = [];
+		var chartContainer = document.getElementById("chartContainer");
+		var theme = 'light';
+		var chart;
+		var datas = []
+		var series = [];
+		var direction = 2;
+		var option;
+		var titletext = "Passwords";
+		var titlesubtext = "500 longest Passwords:";
+        var content = "";
+
+        $.ajax({
+			url: "bar.mdl",
+			dataType: "text",
+			contentType: "application/text; charset=utf-8",
+			success: function (data) {
+				content = data;
+				try {
+					var rowlist = content.split("\n");
+					$("#RowCount").html(rowlist.length);
+                    chart = echarts.init(chartContainer, theme);
+					RenderChart();
+				}
+				catch (err) {
+					alert(err.message);
+				}
+			}
+		});
+
+        function RenderChart() {
+            theme = $("#sTheme").val();
+            direction = $("#sdirection").val();
+            echarts.dispose(chart);
+            chart = echarts.init(chartContainer, theme);
+			try {
+				datas.length = 0;
+				series.length = 0;
+				var rowlist = content.split("\n");
+				$.each(rowlist, function (index, value) {
+					nodes.push({name:value,vl:value.length-1});
+				});
+
+				nodes=nodes.sort(function (a, b) {
+					return parseFloat(a.vl) - parseFloat(b.vl);
+				});
+
+				nodes = nodes.reverse();
+				var count = nodes.length;
+				if (count > 1000)
+				{
+					count = 1000;
+				}
+				for (var i = 0; i < count; i++)
+				{
+					datas.push(nodes[i].name);
+					series.push(nodes[i].vl);
+				}
+				if (direction == 2) {
+					option = {
+						title: {
+							text: titletext,
+							subtext: titlesubtext,
+							sublink: ''
+						},
+						darkMode: true,
+						xAxis: {
+							type: 'category',
+							data: datas
+						},
+						yAxis: {
+							type: 'value'
+						},
+						series: [{
+							label: {
+								show: true,
+								color: '#fff',
+							},
+							data: series,
+							type: 'bar',
+							showBackground: true,
+							backgroundStyle: {
+								color: 'rgba(180, 180, 180, 0.2)'
+							}
+						}]
+					};
+				}
+				if (direction == 1) {
+					option = {
+						title: {
+							text: titletext,
+							subtext: titlesubtext,
+							sublink: ''
+						},
+						darkMode: true,
+						yAxis: {
+							type: 'category',
+							data: datas
+						},
+						xAxis: {
+							type: 'value'
+						},
+						series: [{
+							label: {
+								show: true,
+								color: '#fff',
+							},
+							data: series,
+							type: 'bar',
+							showBackground: true,
+							backgroundStyle: {
+								color: 'rgba(180, 180, 180, 0.2)'
+							}
+						}]
+					};
+				}
+				chart.setOption(option, true);
+			}
+			catch (err) {
+				alert(err.message);
+			}
+        };
+        $("#sdirection").change(function () {
+            RenderChart();
+        });
+
+        $("#sTheme").change(function () {
+            RenderChart();
+        });
+        RenderChart();
+    </script>
+</body>
+</html>

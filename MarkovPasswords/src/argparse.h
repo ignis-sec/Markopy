@@ -13,23 +13,62 @@ namespace opt = boost::program_options;
 */
 namespace Markov::API::CLI{
 
-	/** @brief Structure to hold parsed cli arguements.	
-	*/
+	/** @brief Structure to hold parsed cli arguements.	*/
 	typedef struct _programOptions {
+		/** 
+			@brief Import flag to validate import	
+		*/
 		bool bImport;
+
+		/** 
+			@brief Export flag to validate export	
+		*/
 		bool bExport;
+
+		/** 
+			@brief Failure flag to validate succesfull running	
+		*/
 		bool bFailure;
+
+		/** 
+			@brief Seperator character to use with training data. (character between occurence and value)"	
+		*/
 		char seperator;
+
+		/** 
+			@brief Import name of our model	
+		*/
 		std::string importname;
+
+		/** 
+			@brief Import name of our given wordlist	
+		*/
 		std::string exportname;
+
+		/** 
+			@brief Import name of our given wordlist	
+		*/
 		std::string wordlistname;
+
+		/** 
+			@brief Output name of our generated password list	
+		*/
 		std::string outputfilename;
+
+		/** 
+			@brief The name of the given dataset	
+		*/
 		std::string datasetname;
+
+		/** 
+			@brief Number of passwords to be generated	
+		*/
 		int generateN;
+
 	} ProgramOptions;
 
 
-	/** @brief Parse command line arguements.
+	/** @brief Parse command line arguements 
 	*/
 	class Argparse {
 	public:
@@ -200,6 +239,10 @@ namespace Markov::API::CLI{
 		static void help();
 
 	private:
+		/** 
+			@brief ProgramOptions structure object
+		*/
+
 		Markov::API::CLI::ProgramOptions po;
 	};
 
