@@ -79,6 +79,12 @@ namespace Markov::API{
 		 * @param threads - number of OS threads to spawn
 		*/
 		void Generate(unsigned long int n, const char* wordlistFileName, int minLen=6, int maxLen=12, int threads=20);
+
+		/** @brief Buff expression of some characters in the model
+		* @param str A string containing all the characters to be buffed
+		* @param multiplier A constant value to buff the nodes with.
+		*/
+		void Buff(char* str, double multiplier);
 		
 
 	private:
