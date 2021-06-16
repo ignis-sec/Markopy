@@ -165,14 +165,19 @@ namespace Markov {
 		std::vector<Edge<storageType>*> edgesV;
 	private:
 
-		
-		storageType _value; /** @brief Character representation of this node. 0 for starter, 0xff for terminator.*/
+		/** 
+			@brief Character representation of this node. 0 for starter, 0xff for terminator.
+		*/
+		storageType _value; 
 
-		long int total_edge_weights;/** @brief Total weights of the vertices, required by RandomNext;*/
+		/** 
+			@brief Total weights of the vertices, required by RandomNext
+		*/
+		long int total_edge_weights;
 
-		/** @brief A map of all edges connected to this node, where this node is at the LeftNode.
-		* 
-		* Map is indexed by unsigned char, which is the character representation of the node.
+		/** 
+			@brief A map of all edges connected to this node, where this node is at the LeftNode.
+			* Map is indexed by unsigned char, which is the character representation of the node.
 		*/
 		std::map<storageType, Edge<storageType>*> edges;
 	};

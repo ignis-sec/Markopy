@@ -23,7 +23,7 @@ var files_dup =
     [ "UI/src/main.cpp", "_u_i_2src_2main_8cpp.html", "_u_i_2src_2main_8cpp" ],
     [ "markopy.cpp", "markopy_8cpp.html", "markopy_8cpp" ],
     [ "markopy_cli.py", "markopy__cli_8py.html", "markopy__cli_8py" ],
-    [ "markovPasswords.cpp", "markov_passwords_8cpp.html", null ],
+    [ "markovPasswords.cpp", "markov_passwords_8cpp.html", "markov_passwords_8cpp" ],
     [ "markovPasswords.h", "markov_passwords_8h.html", [
       [ "MarkovPasswords", "class_markov_1_1_a_p_i_1_1_markov_passwords.html", "class_markov_1_1_a_p_i_1_1_markov_passwords" ]
     ] ],

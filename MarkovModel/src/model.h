@@ -177,19 +177,20 @@ namespace Markov {
 		std::map<NodeStorageType, Node<NodeStorageType>*>* Nodes(){ return &nodes;}
 
 	private:
-		/** @brief Map LeftNode is the Nodes NodeValue
-		 * Map RightNode is the node pointer
+		/** 
+			@brief Map LeftNode is the Nodes NodeValue
+			* Map RightNode is the node pointer
 		*/
 		std::map<NodeStorageType, Node<NodeStorageType>*> nodes;
 
-		/** @brief Starter Node of this model. 
-		 * 
+		/** 
+			@brief Starter Node of this model.
 		*/
 		Node<NodeStorageType>* starterNode;
 
 		
-		/** @brief A list of all edges in this model. 
-		 * 
+		/** 
+			@brief A list of all edges in this model. 
 		*/
 		std::vector<Edge<NodeStorageType>*> edges;
 	};

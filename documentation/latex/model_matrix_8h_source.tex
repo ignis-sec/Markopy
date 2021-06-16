@@ -113,15 +113,35 @@
 \DoxyCodeLine{00109 \textcolor{comment}{         * }}
 \DoxyCodeLine{00110 \textcolor{comment}{        */}}
 \DoxyCodeLine{00111         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}{FastRandomWalkThread}}(std::mutex *mlock, std::ofstream *wordlist, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} n, \textcolor{keywordtype}{int} minLen, \textcolor{keywordtype}{int} maxLen, \textcolor{keywordtype}{int} id, \textcolor{keywordtype}{bool} bFileIO);}
-\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00112}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{00112}}         \textcolor{keywordtype}{char}** \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}};}
-\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00113}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{00113}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} **\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}};}
-\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00114}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{00114}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};}
-\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00115}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{00115}}         \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}};}
-\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00116}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{00116}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} *\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}};}
-\DoxyCodeLine{00117     \};}
-\DoxyCodeLine{00118 }
-\DoxyCodeLine{00119 }
-\DoxyCodeLine{00120 }
-\DoxyCodeLine{00121 \};}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113         \textcolor{comment}{/**}}
+\DoxyCodeLine{00114 \textcolor{comment}{            @brief 2-\/D Character array for the edge Matrix (The characters of Nodes)}}
+\DoxyCodeLine{00115 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00116}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{00116}}         \textcolor{keywordtype}{char}** \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}};}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118         \textcolor{comment}{/**}}
+\DoxyCodeLine{00119 \textcolor{comment}{            @brief 2-\/d Integer array for the value Matrix (For the weights of  Edges)}}
+\DoxyCodeLine{00120 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00121}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{00121}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} **\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}};}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123         \textcolor{comment}{/**}}
+\DoxyCodeLine{00124 \textcolor{comment}{            @brief to hold Matrix size}}
+\DoxyCodeLine{00125 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00126}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{00126}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128         \textcolor{comment}{/**}}
+\DoxyCodeLine{00129 \textcolor{comment}{            @brief to hold the Matrix index (To hold the orders of 2-\/D arrays')}}
+\DoxyCodeLine{00130 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00131}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{00131}}         \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}};}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133         \textcolor{comment}{/**}}
+\DoxyCodeLine{00134 \textcolor{comment}{            @brief Array of the Total Edge Weights}}
+\DoxyCodeLine{00135 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{model_matrix_8h_source_l00136}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{00136}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} *\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}};}
+\DoxyCodeLine{00137     \};}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140 }
+\DoxyCodeLine{00141 \};}
 
 \end{DoxyCode}

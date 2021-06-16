@@ -92,9 +92,20 @@ namespace Markov {
 		inline Node<NodeStorageType>* RightNode();
 
 	private:
-		Node<NodeStorageType>* _left; /** @brief source node*/
-		Node<NodeStorageType>* _right;/** @brief target node*/
-		long int _weight;    /** @brief Edge EdgeWeight*/
+		/** 
+			@brief source node 
+		*/
+		Node<NodeStorageType>* _left; 
+
+		/** 
+			@brief target node 
+		*/
+		Node<NodeStorageType>* _right;
+
+		/** @brief
+			Edge Edge Weight 
+		*/
+		long int _weight;
 	};
 
 

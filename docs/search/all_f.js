@@ -1,16 +1,7 @@
 var searchData=
 [
-  ['random_163',['random',['../namespacerandom.html',1,'random'],['../class_markov_1_1_random_1_1_random_engine.html#a010d310dfebeacd3d7db7d0958dc1058',1,'Markov::Random::RandomEngine::random()'],['../class_markov_1_1_random_1_1_default_random_engine.html#afd4233366727e5c2dd14d7e5c3ebfec1',1,'Markov::Random::DefaultRandomEngine::random()'],['../class_markov_1_1_random_1_1_marsaglia.html#a0a56da316d520b80be6b6df6c9e0b537',1,'Markov::Random::Marsaglia::random()']]],
-  ['random_2dmodel_164',['random-model',['../namespacerandom-model.html',1,'']]],
-  ['random_2dmodel_2epy_165',['random-model.py',['../random-model_8py.html',1,'']]],
-  ['random_2eh_166',['random.h',['../random_8h.html',1,'']]],
-  ['randomengine_167',['RandomEngine',['../class_markov_1_1_random_1_1_random_engine.html',1,'Markov::Random']]],
-  ['randomnext_168',['RandomNext',['../class_markov_1_1_node.html#a87224bed22e5da09e0ddb91c681a6b2c',1,'Markov::Node']]],
-  ['randomwalk_169',['RandomWalk',['../class_markov_1_1_model.html#aa4a11c6679c998936332f8409ae95375',1,'Markov::Model']]],
-  ['rd_170',['rd',['../class_markov_1_1_random_1_1_default_random_engine.html#a411c66837939f7f787272f1c6aa78e23',1,'Markov::Random::DefaultRandomEngine']]],
-  ['readme_2emd_171',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['red_172',['RED',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#abd812d8a82872e9fca1f0df632fa3722a8eb4747060ac24837b460a58065670e5',1,'Markov::API::CLI::Terminal']]],
-  ['renderhtmlfile_173',['renderHTMLFile',['../class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i.html#af9cd18a960d5eb8982e3034810f0e79d',1,'Markov::GUI::MarkovPasswordsGUI']]],
-  ['reset_174',['RESET',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#abd812d8a82872e9fca1f0df632fa3722a72541243294300957260aa5cd4c29a73',1,'Markov::API::CLI::Terminal']]],
-  ['rightnode_175',['RightNode',['../class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd',1,'Markov::Edge']]]
+  ['parse_162',['parse',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#a318af5fbacd5becef2ee72a87ac344da',1,'Markov::API::CLI::Argparse']]],
+  ['parser_163',['parser',['../namespacemarkopy__cli.html#a57371c71f08d532cbc8dc5138711329e',1,'markopy_cli']]],
+  ['po_164',['po',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#a7cce367bd032897cc433adf667099a6c',1,'Markov::API::CLI::Argparse']]],
+  ['programoptions_165',['ProgramOptions',['../namespace_markov_1_1_a_p_i_1_1_c_l_i.html#acdf1c80e63d183095fe2956cc38bf042',1,'Markov::API::CLI']]]
 ];
