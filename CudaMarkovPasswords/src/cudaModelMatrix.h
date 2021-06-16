@@ -47,7 +47,7 @@ namespace Markov::API::CUDA{
 		 * @endcode
          * 
 		*/
-        __host__ void FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, bool bFileIO);
+        __host__ void FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, bool bFileIO, bool bInfinite);
 
     protected:
 

@@ -46,7 +46,7 @@ namespace Markov::API::CUDA{
 
 
 
-    __host__ void Markov::API::CUDA::CUDAModelMatrix::FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, bool bFileIO){
+    __host__ void Markov::API::CUDA::CUDAModelMatrix::FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, bool bFileIO, bool bInfinite){
         cudaDeviceProp prop;
         int device=0;
         cudaGetDeviceProperties(&prop, device);
@@ -85,8 +85,9 @@ namespace Markov::API::CUDA{
         Markov::API::CUDA::Random::Marsaglia *MEarr = new Markov::API::CUDA::Random::Marsaglia[cudaGridSize];
         seedChunk = Markov::API::CUDA::Random::Marsaglia::MigrateToVRAM(MEarr, cudaGridSize);
         //std::cout << "Constucted random devices" << std::endl;
-
+        if(bInfinite && !numberOfPartitions) numberOfPartitions=5;
         for(int i=0;i<numberOfPartitions;i++){
+            if(bInfinite) i=0;
             //std::cout << "Running kernel iteration with " << iterationsPerKernelThread << " generations each." << std::endl;
             FastRandomWalkCUDAKernel<<<cudaBlocks,cudaThreads>>>(iterationsPerKernelThread, minLen, maxLen, this->device_outputBuffer, this->device_matrixIndex,
             this->device_totalEdgeWeights, this->device_valueMatrix, this->device_edgeMatrix, this->matrixSize, cudaMemPerGrid, seedChunk);
