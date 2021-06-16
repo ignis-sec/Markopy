@@ -142,7 +142,7 @@ void Markov::API::MarkovPasswords::GenerateThread(std::mutex *outputLock, unsign
 	}
 }
 
-void Markov::API::MarkovPasswords::Buff(char* str, double multiplier){
+void Markov::API::MarkovPasswords::Buff(char* str, double multiplier, bool bDontAdjustSelfLoops, bool bDontAdjustExtendedLoops){
 	std::string buffstr(str);
 	std::map< char, Node< char > * > *nodes;
 	std::map< char, Edge< char > * > *edges;
@@ -152,6 +152,12 @@ void Markov::API::MarkovPasswords::Buff(char* str, double multiplier){
 		edges = node->Edges();
 		for (auto const& [targetrepr, edge] : *edges){
 			if(buffstr.find(targetrepr)!= std::string::npos){
+				if(bDontAdjustSelfLoops && repr==targetrepr) continue;
+				if(bDontAdjustExtendedLoops){
+					if(buffstr.find(repr)!= std::string::npos){
+						continue;
+					}
+				}
 				long int weight = edge->EdgeWeight();
 				weight = weight*multiplier;		
 				edge->AdjustEdge(weight);
