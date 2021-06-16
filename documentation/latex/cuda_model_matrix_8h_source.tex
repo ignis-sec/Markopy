@@ -70,55 +70,87 @@
 \DoxyCodeLine{00066 \textcolor{comment}{        */}}
 \DoxyCodeLine{00067         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab1ef31ffbad0b0acebbfa2a78c47e349}{\_\_host\_\_}} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab1ef31ffbad0b0acebbfa2a78c47e349}{AllocVRAMOutputBuffer}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab1ef31ffbad0b0acebbfa2a78c47e349}{n}}, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab1ef31ffbad0b0acebbfa2a78c47e349}{singleGenMaxLen}}, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab1ef31ffbad0b0acebbfa2a78c47e349}{CUDAKernelGridSize}},\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab1ef31ffbad0b0acebbfa2a78c47e349}{sizePerGrid}});}
 \DoxyCodeLine{00068     \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00069}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a06672c27d6c96e9f8808f61c6648f191}{00069}}         \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a06672c27d6c96e9f8808f61c6648f191}{device\_edgeMatrix}};}
-\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00070}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a81e3be9eac6dab929de3b118d9343b27}{00070}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} *\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a81e3be9eac6dab929de3b118d9343b27}{device\_valueMatrix}};}
-\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00071}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6a252a7c965c218114ad3d1663c4e840}{00071}}         \textcolor{keywordtype}{char} *\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6a252a7c965c218114ad3d1663c4e840}{device\_matrixIndex}};}
-\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00072}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aae5fdd4bdffc7eb2561fb923024d2615}{00072}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} *\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aae5fdd4bdffc7eb2561fb923024d2615}{device\_totalEdgeWeights}};}
-\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00073}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1ec34676837c3cdd5ec2f18a77faec12}{00073}}         \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1ec34676837c3cdd5ec2f18a77faec12}{device\_outputBuffer}};}
-\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00074}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a26d0692f6a494ab4a2871142b39ce066}{00074}}         \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a26d0692f6a494ab4a2871142b39ce066}{outputBuffer}};}
-\DoxyCodeLine{00075 }
-\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00076}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6345ea79ce015e2a97d1be91a661449a}{00076}}         \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6345ea79ce015e2a97d1be91a661449a}{flatEdgeMatrix}};}
-\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00077}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_abb65a788e9039a3b46cc5cdc76a11130}{00077}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_abb65a788e9039a3b46cc5cdc76a11130}{flatValueMatrix}};}
-\DoxyCodeLine{00078 }
-\DoxyCodeLine{00079     \};}
-\DoxyCodeLine{00080 }
-\DoxyCodeLine{00081     \textcolor{comment}{/** @brief CUDA kernel for the FastRandomWalk operation}}
-\DoxyCodeLine{00082 \textcolor{comment}{     * }}
-\DoxyCodeLine{00083 \textcolor{comment}{     * Will be initiated by CPU and continued by GPU (\_\_global\_\_ tag)}}
-\DoxyCodeLine{00084 \textcolor{comment}{     * }}
-\DoxyCodeLine{00085 \textcolor{comment}{     * }}
-\DoxyCodeLine{00086 \textcolor{comment}{     * @param n -\/ Number of passwords to generate.}}
-\DoxyCodeLine{00087 \textcolor{comment}{     * @param minlen -\/ minimum string length for a single generation}}
-\DoxyCodeLine{00088 \textcolor{comment}{     * @param maxLen -\/ maximum string length for a single generation}}
-\DoxyCodeLine{00089 \textcolor{comment}{     * @param outputBuffer -\/ VRAM ptr to the output buffer}}
-\DoxyCodeLine{00090 \textcolor{comment}{     * @param matrixIndex -\/ VRAM ptr to the matrix indices}}
-\DoxyCodeLine{00091 \textcolor{comment}{     * @param totalEdgeWeights -\/ VRAM ptr to the totalEdgeWeights array}}
-\DoxyCodeLine{00092 \textcolor{comment}{     * @param valueMatrix -\/ VRAM ptr to the edge weights array}}
-\DoxyCodeLine{00093 \textcolor{comment}{     * @param edgeMatrix -\/ VRAM ptr to the edge representations array}}
-\DoxyCodeLine{00094 \textcolor{comment}{     * @param matrixSize -\/ Size of the matrix dimensions}}
-\DoxyCodeLine{00095 \textcolor{comment}{     * @param memoryPerKernelGrid -\/ Maximum memory usage per kernel grid}}
-\DoxyCodeLine{00096 \textcolor{comment}{     * @param seed -\/ seed chunk to generate the random from (generated \& used by Marsaglia)}}
-\DoxyCodeLine{00097 \textcolor{comment}{     * }}
-\DoxyCodeLine{00098 \textcolor{comment}{     * }}
-\DoxyCodeLine{00099 \textcolor{comment}{     * }}
-\DoxyCodeLine{00100 \textcolor{comment}{    */}}
-\DoxyCodeLine{00101     \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{\_\_global\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{FastRandomWalkCUDAKernel}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{n}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{minLen}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{maxLen}}, \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{outputBuffer}},}
-\DoxyCodeLine{00102         \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{matrixIndex}}, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{totalEdgeWeights}}, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{valueMatrix}}, \textcolor{keywordtype}{char} *\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{edgeMatrix}},}
-\DoxyCodeLine{00103         \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{matrixSize}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{memoryPerKernelGrid}}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{seed}});\textcolor{comment}{//, unsigned long mex, unsigned long mey, unsigned long mez);}}
-\DoxyCodeLine{00104 }
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070         \textcolor{comment}{/** }}
+\DoxyCodeLine{00071 \textcolor{comment}{            @brief VRAM Address pointer of edge matrix (from modelMatrix.h)}}
+\DoxyCodeLine{00072 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00073}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a06672c27d6c96e9f8808f61c6648f191}{00073}}         \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a06672c27d6c96e9f8808f61c6648f191}{device\_edgeMatrix}};}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{00075         \textcolor{comment}{/** }}
+\DoxyCodeLine{00076 \textcolor{comment}{            @brief VRAM Address pointer of value matrix (from modelMatrix.h)}}
+\DoxyCodeLine{00077 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00078}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a81e3be9eac6dab929de3b118d9343b27}{00078}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} *\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a81e3be9eac6dab929de3b118d9343b27}{device\_valueMatrix}};}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080         \textcolor{comment}{/** }}
+\DoxyCodeLine{00081 \textcolor{comment}{            @brief VRAM Address pointer of matrixIndex (from modelMatrix.h)}}
+\DoxyCodeLine{00082 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00083}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6a252a7c965c218114ad3d1663c4e840}{00083}}         \textcolor{keywordtype}{char} *\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6a252a7c965c218114ad3d1663c4e840}{device\_matrixIndex}};}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085         \textcolor{comment}{/** }}
+\DoxyCodeLine{00086 \textcolor{comment}{            @brief VRAM Address pointer of total edge weights (from modelMatrix.h)}}
+\DoxyCodeLine{00087 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00088}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aae5fdd4bdffc7eb2561fb923024d2615}{00088}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} *\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aae5fdd4bdffc7eb2561fb923024d2615}{device\_totalEdgeWeights}};}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00091         \textcolor{comment}{/** }}
+\DoxyCodeLine{00092 \textcolor{comment}{            @brief RandomWalk results in device}}
+\DoxyCodeLine{00093 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00094}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1ec34676837c3cdd5ec2f18a77faec12}{00094}}         \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1ec34676837c3cdd5ec2f18a77faec12}{device\_outputBuffer}};}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096         \textcolor{comment}{/** }}
+\DoxyCodeLine{00097 \textcolor{comment}{            @brief RandomWalk  results in host}}
+\DoxyCodeLine{00098 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00099}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a26d0692f6a494ab4a2871142b39ce066}{00099}}         \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a26d0692f6a494ab4a2871142b39ce066}{outputBuffer}};}
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101         \textcolor{comment}{/** }}
+\DoxyCodeLine{00102 \textcolor{comment}{            @brief Adding Edge matrix end-\/to-\/end and resize to 1-\/D array for better perfomance on traversing}}
+\DoxyCodeLine{00103 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00104}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6345ea79ce015e2a97d1be91a661449a}{00104}}         \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6345ea79ce015e2a97d1be91a661449a}{flatEdgeMatrix}};}
 \DoxyCodeLine{00105 }
-\DoxyCodeLine{00106     \textcolor{comment}{/** @brief srtchr implementation on \_\_device\_\_ space}}
-\DoxyCodeLine{00107 \textcolor{comment}{     * }}
-\DoxyCodeLine{00108 \textcolor{comment}{     * Fint the first matching index of a string}}
-\DoxyCodeLine{00109 \textcolor{comment}{     * }}
-\DoxyCodeLine{00110 \textcolor{comment}{     * }}
-\DoxyCodeLine{00111 \textcolor{comment}{     * @param p -\/ string to check}}
-\DoxyCodeLine{00112 \textcolor{comment}{     * @param c -\/ character to match}}
-\DoxyCodeLine{00113 \textcolor{comment}{     * @param s\_len -\/ maximum string length}}
-\DoxyCodeLine{00114 \textcolor{comment}{     * @returns pointer to the match}}
-\DoxyCodeLine{00115 \textcolor{comment}{    */}}
-\DoxyCodeLine{00116     \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{\_\_device\_\_}} \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{strchr}}(\textcolor{keywordtype}{char}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{p}}, \textcolor{keywordtype}{char} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{c}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{s\_len}});}
-\DoxyCodeLine{00117 }
-\DoxyCodeLine{00118 \};}
+\DoxyCodeLine{00106         \textcolor{comment}{/** }}
+\DoxyCodeLine{00107 \textcolor{comment}{            @brief Adding Value matrix end-\/to-\/end and resize to 1-\/D array for better perfomance on traversing}}
+\DoxyCodeLine{00108 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8h_source_l00109}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_abb65a788e9039a3b46cc5cdc76a11130}{00109}}         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_abb65a788e9039a3b46cc5cdc76a11130}{flatValueMatrix}};}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111     \};}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113     \textcolor{comment}{/** @brief CUDA kernel for the FastRandomWalk operation}}
+\DoxyCodeLine{00114 \textcolor{comment}{     * }}
+\DoxyCodeLine{00115 \textcolor{comment}{     * Will be initiated by CPU and continued by GPU (\_\_global\_\_ tag)}}
+\DoxyCodeLine{00116 \textcolor{comment}{     * }}
+\DoxyCodeLine{00117 \textcolor{comment}{     * }}
+\DoxyCodeLine{00118 \textcolor{comment}{     * @param n -\/ Number of passwords to generate.}}
+\DoxyCodeLine{00119 \textcolor{comment}{     * @param minlen -\/ minimum string length for a single generation}}
+\DoxyCodeLine{00120 \textcolor{comment}{     * @param maxLen -\/ maximum string length for a single generation}}
+\DoxyCodeLine{00121 \textcolor{comment}{     * @param outputBuffer -\/ VRAM ptr to the output buffer}}
+\DoxyCodeLine{00122 \textcolor{comment}{     * @param matrixIndex -\/ VRAM ptr to the matrix indices}}
+\DoxyCodeLine{00123 \textcolor{comment}{     * @param totalEdgeWeights -\/ VRAM ptr to the totalEdgeWeights array}}
+\DoxyCodeLine{00124 \textcolor{comment}{     * @param valueMatrix -\/ VRAM ptr to the edge weights array}}
+\DoxyCodeLine{00125 \textcolor{comment}{     * @param edgeMatrix -\/ VRAM ptr to the edge representations array}}
+\DoxyCodeLine{00126 \textcolor{comment}{     * @param matrixSize -\/ Size of the matrix dimensions}}
+\DoxyCodeLine{00127 \textcolor{comment}{     * @param memoryPerKernelGrid -\/ Maximum memory usage per kernel grid}}
+\DoxyCodeLine{00128 \textcolor{comment}{     * @param seed -\/ seed chunk to generate the random from (generated \& used by Marsaglia)}}
+\DoxyCodeLine{00129 \textcolor{comment}{     * }}
+\DoxyCodeLine{00130 \textcolor{comment}{     * }}
+\DoxyCodeLine{00131 \textcolor{comment}{     * }}
+\DoxyCodeLine{00132 \textcolor{comment}{    */}}
+\DoxyCodeLine{00133     \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{\_\_global\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{FastRandomWalkCUDAKernel}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{n}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{minLen}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{maxLen}}, \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{outputBuffer}},}
+\DoxyCodeLine{00134         \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{matrixIndex}}, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{totalEdgeWeights}}, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{valueMatrix}}, \textcolor{keywordtype}{char} *\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{edgeMatrix}},}
+\DoxyCodeLine{00135         \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{matrixSize}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{memoryPerKernelGrid}}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{seed}});\textcolor{comment}{//, unsigned long mex, unsigned long mey, unsigned long mez);}}
+\DoxyCodeLine{00136 }
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138     \textcolor{comment}{/** @brief srtchr implementation on \_\_device\_\_ space}}
+\DoxyCodeLine{00139 \textcolor{comment}{     * }}
+\DoxyCodeLine{00140 \textcolor{comment}{     * Fint the first matching index of a string}}
+\DoxyCodeLine{00141 \textcolor{comment}{     * }}
+\DoxyCodeLine{00142 \textcolor{comment}{     * }}
+\DoxyCodeLine{00143 \textcolor{comment}{     * @param p -\/ string to check}}
+\DoxyCodeLine{00144 \textcolor{comment}{     * @param c -\/ character to match}}
+\DoxyCodeLine{00145 \textcolor{comment}{     * @param s\_len -\/ maximum string length}}
+\DoxyCodeLine{00146 \textcolor{comment}{     * @returns pointer to the match}}
+\DoxyCodeLine{00147 \textcolor{comment}{    */}}
+\DoxyCodeLine{00148     \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{\_\_device\_\_}} \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{strchr}}(\textcolor{keywordtype}{char}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{p}}, \textcolor{keywordtype}{char} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{c}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{s\_len}});}
+\DoxyCodeLine{00149 }
+\DoxyCodeLine{00150 \};}
 
 \end{DoxyCode}
