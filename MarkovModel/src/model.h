@@ -179,7 +179,7 @@ namespace Markov {
 		/** @brief Sort edges of all nodes in the model ordered by edge weights
 		 * 
 		*/
-		void Markov::Model<NodeStorageType>::OptimizeEdgeOrder();
+		void OptimizeEdgeOrder();
 
 	private:
 		/** 
