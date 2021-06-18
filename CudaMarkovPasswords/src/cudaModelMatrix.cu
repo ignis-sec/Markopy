@@ -58,8 +58,8 @@ namespace Markov::API::CUDA{
 
 
         cudaBlocks = 1024;
-        cudaThreads = 128;
-        iterationsPerKernelThread = 400;
+        cudaThreads = 256;
+        iterationsPerKernelThread = 100;
         alternatingKernels = 2;
         totalOutputPerKernel = (long int)cudaBlocks*(long int)cudaThreads*iterationsPerKernelThread;
         totalOutputPerSync= totalOutputPerKernel*alternatingKernels;
