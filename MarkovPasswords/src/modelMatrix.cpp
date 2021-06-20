@@ -4,11 +4,23 @@
 #include <thread>
 
 Markov::API::ModelMatrix::ModelMatrix(){
-
+    this->ready = false;
 }
 
+void Markov::API::ModelMatrix::Import(const char *filename){
+    this->DeallocateMatrix();
+    this->Markov::API::MarkovPasswords::Import(filename);
+    this->ConstructMatrix();
+}
 
-void Markov::API::ModelMatrix::ConstructMatrix(){
+void Markov::API::ModelMatrix::Train(const char *datasetFileName, char delimiter, int threads){
+    this->DeallocateMatrix();
+    this->Markov::API::MarkovPasswords::Train(datasetFileName,delimiter,threads);
+    this->ConstructMatrix();
+}
+
+bool Markov::API::ModelMatrix::ConstructMatrix(){
+    if(this->ready) return false;
     this->matrixSize = this->StarterNode()->edgesV.size() + 2;
 
     this->matrixIndex = new char[this->matrixSize];
@@ -52,10 +64,30 @@ void Markov::API::ModelMatrix::ConstructMatrix(){
         }
         i++;
     }
-
+    this->ready = true;
+    return true;
     //this->DumpJSON();
 }
 
+bool Markov::API::ModelMatrix::DeallocateMatrix(){
+    if(!this->ready) return false;
+    delete[] this->matrixIndex;
+    delete[] this->totalEdgeWeights;
+
+    for(int i=0;i<this->matrixSize;i++){
+        delete[] this->edgeMatrix[i];
+    }
+    delete[] this->edgeMatrix;
+
+    for(int i=0;i<this->matrixSize;i++){
+        delete[] this->valueMatrix[i];
+    }
+    delete[] this->valueMatrix;
+
+    this->matrixSize = -1;
+    this->ready = false;
+    return true;
+}
 
 void Markov::API::ModelMatrix::DumpJSON(){
 
