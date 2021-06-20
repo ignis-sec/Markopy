@@ -20,14 +20,13 @@ namespace Markov::Markopy{
             .def("Import", Import, "Import a model file.")
             .def("Export", Export, "Export a model to file.")
         ;
-        bool (Markov::API::ModelMatrix:: * Import1)(const char*) = &Markov::Model<char>::Import;
-        bool (Markov::API::ModelMatrix:: * Export1)(const char*) = &Markov::Model<char>::Export;
+
         class_<Markov::API::ModelMatrix>("ModelMatrix", init<>())
             
             .def(init<>())
             .def("Train", &Markov::API::ModelMatrix::Train)
-            .def("Import", Import1, "Import a model file.")
-            .def("Export", Export1, "Export a model to file.")
+            .def("Import", &Markov::API::ModelMatrix::Import, "Import a model file.")
+            .def("Export", Export, "Export a model to file.")
             .def("ConstructMatrix",&Markov::API::ModelMatrix::ConstructMatrix)
             .def("DumpJSON",&Markov::API::ModelMatrix::DumpJSON)
             .def("FastRandomWalk",&Markov::API::ModelMatrix::FastRandomWalk)
