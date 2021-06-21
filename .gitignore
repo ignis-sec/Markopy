@@ -3,7 +3,6 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-*.txt
 # User-specific files
 *.rsuser
 *.suo
@@ -379,7 +378,6 @@ nvsight/*
 
 
 #cmake ignores
-CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
 CMakeScripts
@@ -390,3 +388,7 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
+
+
+#library files
+lib/*
