@@ -393,4 +393,4 @@ _deps
 #library files
 lib/*
 
-out/build/*
+out/**/*
