@@ -8,12 +8,12 @@ namespace Markov::API::CUDA{
         for (int i = 0; i < nDevices; i++) {
             cudaDeviceProp prop;
             cudaGetDeviceProperties(&prop, i);
-            std::cout << "Device Number: " <<  i  << "\n";
-            std::cout << "Device name: " << prop.name << "\n";
-            std::cout << "Memory Clock Rate (KHz): " << prop.memoryClockRate << "\n";
-            std::cout << "Memory Bus Width (bits): " << prop.memoryBusWidth << "\n";
-            std::cout << "Peak Memory Bandwidth (GB/s): " << 2.0 * prop.memoryClockRate * (prop.memoryBusWidth / 8) / 1.0e6 << "\n";
-            std::cout << "Max Linear Threads: " << prop.maxThreadsDim[0] << "\n";
+            std::cerr << "Device Number: " <<  i  << "\n";
+            std::cerr << "Device name: " << prop.name << "\n";
+            std::cerr << "Memory Clock Rate (KHz): " << prop.memoryClockRate << "\n";
+            std::cerr << "Memory Bus Width (bits): " << prop.memoryBusWidth << "\n";
+            std::cerr << "Peak Memory Bandwidth (GB/s): " << 2.0 * prop.memoryClockRate * (prop.memoryBusWidth / 8) / 1.0e6 << "\n";
+            std::cerr << "Max Linear Threads: " << prop.maxThreadsDim[0] << "\n";
             
         }
     }

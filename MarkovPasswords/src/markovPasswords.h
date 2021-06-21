@@ -79,6 +79,14 @@ namespace Markov::API{
 		 * @param threads - number of OS threads to spawn
 		*/
 		void Generate(unsigned long int n, const char* wordlistFileName, int minLen=6, int maxLen=12, int threads=20);
+
+		/** @brief Buff expression of some characters in the model
+		 * @param str A string containing all the characters to be buffed
+		 * @param multiplier A constant value to buff the nodes with.
+         * @param bDontAdjustSelfEdges Do not adjust weights if target node is same as source node
+		 * @param bDontAdjustExtendedLoops Do not adjust if both source and target nodes are in first parameter
+		*/
+		void Buff(const char* str, double multiplier, bool bDontAdjustSelfLoops=true, bool bDontAdjustExtendedLoops=false);
 		
 
 	private:

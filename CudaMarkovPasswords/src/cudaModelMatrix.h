@@ -1,5 +1,9 @@
 #include "MarkovPasswords/src/modelMatrix.h"
 #include "cudaDeviceController.h"   
+#include <curand_kernel.h>
+#include <cuda.h>
+#include <cuda_runtime.h>
+#include <device_launch_parameters.h>
 
 /** @brief Namespace for objects requiring CUDA libraries.
 */
@@ -47,7 +51,7 @@ namespace Markov::API::CUDA{
 		 * @endcode
          * 
 		*/
-        __host__ void FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, bool bFileIO);
+        __host__ void FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, bool bFileIO, bool bInfinite);
 
     protected:
 
@@ -65,6 +69,13 @@ namespace Markov::API::CUDA{
          * 
 		*/
         __host__ char* AllocVRAMOutputBuffer(long int n, long int singleGenMaxLen, long int CUDAKernelGridSize,long int sizePerGrid);
+
+        __host__ void LaunchAsyncKernel(int kernelID, int minLen, int maxLen);
+
+        __host__ void prepKernelMemoryChannel(int numberOfStreams);
+
+        __host__ void GatherAsyncKernelOutput(int kernelID, bool bFileIO, std::ofstream &wordlist);
+
     private:
 
         /** 
@@ -87,16 +98,15 @@ namespace Markov::API::CUDA{
 		*/ 
         long int *device_totalEdgeWeights;
 		
-		
         /** 
 			@brief RandomWalk results in device
 		*/ 		
-        char* device_outputBuffer;
+        char** device_outputBuffer;
 		
         /** 
 			@brief RandomWalk  results in host
 		*/ 	
-        char* outputBuffer;
+        char** outputBuffer;
 
         /** 
 			@brief Adding Edge matrix end-to-end and resize to 1-D array for better perfomance on traversing
@@ -106,7 +116,23 @@ namespace Markov::API::CUDA{
         /** 
 			@brief Adding Value matrix end-to-end and resize to 1-D array for better perfomance on traversing
 		*/ 	
-        long int* flatValueMatrix;
+        long int* flatValueMatrix; 
+
+        int cudaBlocks;
+        int cudaThreads;
+        int iterationsPerKernelThread;
+        long int totalOutputPerSync;
+        long int totalOutputPerKernel;
+        int numberOfPartitions;
+        int cudaGridSize;
+        int cudaMemPerGrid;
+        long int cudaPerKernelAllocationSize;
+
+        int alternatingKernels;
+
+        unsigned long**  device_seeds;
+
+        cudaStream_t *cudastreams;
 
     };
 

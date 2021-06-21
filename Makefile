@@ -45,7 +45,7 @@ $(BIN)/$(MP_EXEC): $(MP_SRC)
 ###################################   CUDAMarkovPassword project options     #################################
 ##############################################################################################################
 
-NVCCFLAGS 	:= -std=c++17 -g -O3 -L$(CUDAPATH)/lib
+NVCCFLAGS 	:= -std=c++17 -g -O3 -Xptxas "--allow-expensive-optimizations true --opt-level 3" -L$(CUDAPATH)/lib
 MPC_EXEC    := CUDAMarkov
 MPC_SRC     := $(shell find ./CudaMarkovPasswords/src/ -name '*.cpp')  $(shell find ./CudaMarkovPasswords/src/ -name '*.cu') MarkovPasswords/src/threadSharedListHandler.cpp MarkovPasswords/src/markovPasswords.cpp MarkovPasswords/src/modelMatrix.cpp
 MPC_INC 	:= $(CUDAPATH)/include

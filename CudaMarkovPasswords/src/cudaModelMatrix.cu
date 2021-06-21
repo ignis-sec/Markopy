@@ -1,8 +1,4 @@
 #include "cudaModelMatrix.h"
-#include <curand_kernel.h>
-#include <cuda.h>
-#include <cuda_runtime.h>
-#include <device_launch_parameters.h>
 #include "CudaMarkovPasswords/src/cudarandom.h"
 
 using Markov::API::CUDA::CUDADeviceController;
@@ -36,17 +32,17 @@ namespace Markov::API::CUDA{
 
     }
 
-    __host__ char*  Markov::API::CUDA::CUDAModelMatrix::AllocVRAMOutputBuffer(long int n, long int singleGenMaxLen, long int CUDAKernelGridSize,long int sizePerGrid){
+    /*__host__ char*  Markov::API::CUDA::CUDAModelMatrix::AllocVRAMOutputBuffer(long int n, long int singleGenMaxLen, long int CUDAKernelGridSize,long int sizePerGrid){
         cudaError_t cudastatus;
-        cudastatus = cudaMalloc((char **)&this->device_outputBuffer, CUDAKernelGridSize*sizePerGrid);
+        cudastatus = cudaMalloc((char **)&this->device_outputBuffer1, CUDAKernelGridSize*sizePerGrid);
         CudaCheckNotifyErr(cudastatus, "Failed to allocate VRAM buffer. (Possibly out of VRAM.)");
         
-        return this->device_outputBuffer;
-    }
+        return this->device_outputBuffer1;
+    }*/
 
 
 
-    __host__ void Markov::API::CUDA::CUDAModelMatrix::FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, bool bFileIO){
+    __host__ void Markov::API::CUDA::CUDAModelMatrix::FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, bool bFileIO, bool bInfinite){
         cudaDeviceProp prop;
         int device=0;
         cudaGetDeviceProperties(&prop, device);
@@ -61,70 +57,132 @@ namespace Markov::API::CUDA{
             wordlist.open(wordlistFileName);
 
 
-        int cudaBlocks = 128;
-        int cudaThreads = 1024;
-        int iterationsPerKernelThread = 500;
-        long int totalOutputPerKernel = (long int)cudaBlocks*(long int)cudaThreads*iterationsPerKernelThread;
-
-        //if(n<=totalOutputPerKernel) return FastRandomWalkCUDAKernel<<<1,1>>>(n, minLen, maxLen);
-        //else{
-        char* buffer;
-        int numberOfPartitions = n/totalOutputPerKernel;
-        int cudaGridSize = cudaBlocks*cudaThreads;
+        cudaBlocks = 1024;
+        cudaThreads = 256;
+        iterationsPerKernelThread = 100;
+        alternatingKernels = 2;
+        totalOutputPerKernel = (long int)cudaBlocks*(long int)cudaThreads*iterationsPerKernelThread;
+        totalOutputPerSync= totalOutputPerKernel*alternatingKernels;
+        numberOfPartitions = n/totalOutputPerSync;
+        cudaGridSize = cudaBlocks*cudaThreads;
+        cudaMemPerGrid = (maxLen+2)*iterationsPerKernelThread;
+        cudaPerKernelAllocationSize = cudaGridSize*cudaMemPerGrid;
+        this->prepKernelMemoryChannel(alternatingKernels);
         
-        int cudaMemPerGrid = (maxLen+5)*iterationsPerKernelThread;
+        unsigned long int leftover = n - (totalOutputPerSync*numberOfPartitions);
 
-        //this->AllocVRAMOutputBuffer(n,maxLen,cudaGridSize, cudaMemPerGrid);
-        //std::cout << "Allocated output VRAM." << std::endl;
-        
-        buffer = new char[cudaGridSize*cudaMemPerGrid];
-        cudaMalloc((char**)&this->device_outputBuffer, cudaGridSize*cudaMemPerGrid);
-        //std::cout << "Allocated output RAM." << std::endl;
-        
-        unsigned long *seedChunk;        
-        Markov::API::CUDA::Random::Marsaglia *MEarr = new Markov::API::CUDA::Random::Marsaglia[cudaGridSize];
-        seedChunk = Markov::API::CUDA::Random::Marsaglia::MigrateToVRAM(MEarr, cudaGridSize);
-        //std::cout << "Constucted random devices" << std::endl;
+        if(bInfinite && !numberOfPartitions) numberOfPartitions=5;
+        std::cerr << cudaPerKernelAllocationSize << "\n";
 
-        for(int i=0;i<numberOfPartitions;i++){
-            //std::cout << "Running kernel iteration with " << iterationsPerKernelThread << " generations each." << std::endl;
-            FastRandomWalkCUDAKernel<<<cudaBlocks,cudaThreads>>>(iterationsPerKernelThread, minLen, maxLen, this->device_outputBuffer, this->device_matrixIndex,
-            this->device_totalEdgeWeights, this->device_valueMatrix, this->device_edgeMatrix, this->matrixSize, cudaMemPerGrid, seedChunk);
+        if(n%totalOutputPerSync) std::cerr << "For optimization, request outputs muliples of "<< totalOutputPerSync << ".\n";
+
+        //start kernelID 1
+        this->LaunchAsyncKernel(1, minLen, maxLen);
+
+        for(int i=1;i<numberOfPartitions;i++){
+            if(bInfinite) i=0;
+
+            //wait kernelID1 to finish, and start kernelID 0
+            cudaStreamSynchronize(this->cudastreams[1]);
+            this->LaunchAsyncKernel(0, minLen, maxLen);
+
+            //start memcpy from kernel 1 (block until done)
+            this->GatherAsyncKernelOutput(1, bFileIO, wordlist);
             
-            //std::cout << "Waiting kernel to finish." << std::endl;
-            //std::cout << "Iteration done. Retrieving output buffer." << std::endl;
-            //cudaDeviceSynchronize();
-            cudaMemcpy(buffer,this->device_outputBuffer,cudaGridSize*cudaMemPerGrid, cudaMemcpyDeviceToHost);
-            if(bFileIO){
-                for(long int j=0;j<cudaGridSize*cudaMemPerGrid;j+=cudaMemPerGrid){
-                    wordlist << &buffer[j];
-                }
-            }else{
-                for(long int j=0;j<cudaGridSize*cudaMemPerGrid;j+=cudaMemPerGrid){
-                    std::cout << &buffer[j];
-                }
+            //wait kernelID 0 to finish, then start kernelID1
+            cudaStreamSynchronize(this->cudastreams[0]);
+            this->LaunchAsyncKernel(1, minLen, maxLen);
+
+            //start memcpy from kernel 0 (block until done)
+            this->GatherAsyncKernelOutput(0, bFileIO, wordlist);
+            
+        }
+
+        //wait kernelID1 to finish, and start kernelID 0
+        cudaStreamSynchronize(this->cudastreams[1]);
+        this->LaunchAsyncKernel(0, minLen, maxLen);
+        this->GatherAsyncKernelOutput(1, bFileIO, wordlist);
+        cudaStreamSynchronize(this->cudastreams[0]);
+        this->GatherAsyncKernelOutput(0, bFileIO, wordlist);
+
+        
+        if(!leftover) return;
+        alternatingKernels=1;
+        std::cerr << "Remaining line count (" << leftover << ") is lower than partition. Adjusting CUDA workload..\n";
+        this->iterationsPerKernelThread = leftover/cudaGridSize;
+        this->LaunchAsyncKernel(0, minLen, maxLen);
+        cudaStreamSynchronize(this->cudastreams[0]);
+        this->GatherAsyncKernelOutput(0, bFileIO, wordlist);
+        
+        leftover -= this->iterationsPerKernelThread*cudaGridSize;
+        if(!leftover) return;
+
+        std::cerr << "Remaining line count (" << leftover << ") is lower than minimum possible. Handing over to CPU generation.\n";
+        this->iterationsPerKernelThread = leftover/cudaGridSize;
+
+        leftover -= this->iterationsPerKernelThread;
+
+        if(!leftover) return;
+        std::cerr << "Remaining " << leftover << " lines are absolutely not worth printing.\n";
+        Markov::API::ModelMatrix::ConstructMatrix();
+        Markov::API::ModelMatrix::FastRandomWalk(leftover, &wordlist, minLen, maxLen, 1, bFileIO);
+
+    }
+    
+    __host__ void Markov::API::CUDA::CUDAModelMatrix::prepKernelMemoryChannel(int numberOfStreams){
+        
+        this->cudastreams = new cudaStream_t[numberOfStreams];
+        for(int i=0;i<numberOfStreams;i++)
+            cudaStreamCreate(&this->cudastreams[i]);
+
+        this-> outputBuffer = new char*[numberOfStreams];
+        for(int i=0;i<numberOfStreams;i++)
+            this->outputBuffer[i]= new char[cudaPerKernelAllocationSize];
+
+        cudaError_t cudastatus;
+        this-> device_outputBuffer = new char*[numberOfStreams];
+            for(int i=0;i<numberOfStreams;i++){
+                cudastatus = cudaMalloc((char**)&(device_outputBuffer[i]), cudaPerKernelAllocationSize);
+                CudaCheckNotifyErr(cudastatus, "Failed to establish memory channel. Possibly out of VRAM?");
             }
-            
-        }   
 
+        this-> device_seeds = new unsigned long*[numberOfStreams];
+        for(int i=0;i<numberOfStreams;i++){
+            Markov::API::CUDA::Random::Marsaglia *MEarr = new Markov::API::CUDA::Random::Marsaglia[cudaGridSize];
+            this->device_seeds[i] = Markov::API::CUDA::Random::Marsaglia::MigrateToVRAM(MEarr, cudaGridSize);
+            delete[] MEarr;
+        }
 
+    }
+
+    __host__ void Markov::API::CUDA::CUDAModelMatrix::LaunchAsyncKernel(int kernelID, int minLen, int maxLen){
+
+        //if(kernelID == 0);// cudaStreamSynchronize(this->cudastreams[2]);
+        //else cudaStreamSynchronize(this->cudastreams[kernelID-1]);
+        FastRandomWalkCUDAKernel<<<cudaBlocks,cudaThreads,0, this->cudastreams[kernelID]>>>(iterationsPerKernelThread, minLen, maxLen, this->device_outputBuffer[kernelID], this->device_matrixIndex,
+            this->device_totalEdgeWeights, this->device_valueMatrix, this->device_edgeMatrix, this->matrixSize, cudaMemPerGrid, this->device_seeds[kernelID]);
+        //std::cerr << "Started kernel" << kernelID << "\n";
+    }
+
+    __host__ void Markov::API::CUDA::CUDAModelMatrix::GatherAsyncKernelOutput(int kernelID, bool bFileIO, std::ofstream &wordlist){     
+        cudaMemcpy(this->outputBuffer[kernelID],this->device_outputBuffer[kernelID],cudaPerKernelAllocationSize, cudaMemcpyDeviceToHost);
+        //std::cerr << "Kernel" << kernelID << " output copied\n";
+        if(bFileIO){
+            for(long int j=0;j<cudaPerKernelAllocationSize;j+=cudaMemPerGrid){
+                wordlist << &this->outputBuffer[kernelID][j];
+            }
+        }else{
+            for(long int j=0;j<cudaPerKernelAllocationSize;j+=cudaMemPerGrid){
+                std::cout << &this->outputBuffer[kernelID][j];
+            }
+        }
     }
 
     __global__ void FastRandomWalkCUDAKernel(unsigned long int n, int minLen, int maxLen, char* outputBuffer,
     char* matrixIndex, long int* totalEdgeWeights, long int* valueMatrix, char *edgeMatrix, int matrixSize, int memoryPerKernelGrid, unsigned long *seed){
+        
         int kernelWorkerIndex = threadIdx.x + blockIdx.x * blockDim.x;
-        //outputBuffer[kernelWorkerIndex]='a'+kernelWorkerIndex;
-        /*for(int i=0;i<96;i++){
-            for(int j=0;j<96;j++){
-                if(edgeMatrix[96*i+j]!='\0')
-                    outputBuffer[96*i+j] = edgeMatrix[96*i+j];
-                else outputBuffer[96*i+j] = '0';
-            }   
-            outputBuffer[96*(i+1)] = '\n';
-        }*/
-        
-        //return;
-        
+
         if(n==0) return;
 
         char* e;
@@ -134,11 +192,11 @@ namespace Markov::API::CUDA{
         long int selection;
         char cur;
         long int bufferctr = 0;
-        long int x,y,z,t;
+        unsigned long int *x,*y,*z,t;
         char* res = &outputBuffer[kernelWorkerIndex*memoryPerKernelGrid];
-        x=seed[kernelWorkerIndex*3];
-        y=seed[kernelWorkerIndex*3+1];
-        z=seed[kernelWorkerIndex*3+2];
+        x=&seed[kernelWorkerIndex*3];
+        y=&seed[kernelWorkerIndex*3+1];
+        z=&seed[kernelWorkerIndex*3+2];
         for (int i = 0; i < n; i++) {
             cur=199;
             len=0;
@@ -149,15 +207,15 @@ namespace Markov::API::CUDA{
                     seed[kernelWorkerIndex*3],
                     seed[kernelWorkerIndex*3+1],
                     seed[kernelWorkerIndex*3+2]) % totalEdgeWeights[index];*/
-                x ^= x << 16;
-                x ^= x >> 5;
-                x ^= x << 1;
+                *x ^= *x << 16;
+                *x ^= *x >> 5;
+                *x ^= *x << 1;
 
-                t = x;
-                x = y;
-                y = z;
-                z = t ^ x ^ y;
-                selection = z % totalEdgeWeights[index];
+                t = *x;
+                *x = *y;
+                *y = *z;
+                *z = t ^ *x ^ *y;
+                selection = *z % totalEdgeWeights[index];
             for(int j=0;j<matrixSize-1;j++){
                     selection -= valueMatrix[index*matrixSize + j];
                     if (selection < 0){

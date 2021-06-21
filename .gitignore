@@ -372,3 +372,5 @@ Markopy/src/CLI/markopy.so
 
 # Build shared object files
 include/*.so
+
+nvsight/*
