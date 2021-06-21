@@ -373,4 +373,20 @@ Markopy/src/CLI/markopy.so
 # Build shared object files
 include/*.so
 
+#cuda performance reports
 nvsight/*
+
+
+
+#cmake ignores
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
