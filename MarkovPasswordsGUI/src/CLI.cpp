@@ -1,12 +1,12 @@
-#include "src\CLI.h"
+#include "CLI.h"
 #include <fstream>
-#include "src/Train.h"
+#include "Train.h"
 
 
 
 using namespace Markov::GUI;
 
-CLI::CLI(QWidget* parent)
+Markov::GUI::CLI::CLI(QWidget* parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
@@ -17,17 +17,17 @@ CLI::CLI(QWidget* parent)
      
 }
 
-void CLI::start() {
+void Markov::GUI::CLI::start() {
     Train* w = new Train;
     w->show();
     this->close();
 }
-void CLI::statistics() {
+void Markov::GUI::CLI::statistics() {
     /*
     statistic will show
     */
 }
-void CLI::about() {
+void Markov::GUI::CLI::about() {
     /*
     about button
     */

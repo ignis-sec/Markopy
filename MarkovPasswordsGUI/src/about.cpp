@@ -1,6 +1,6 @@
 #include <fstream>
 #include <QtWidgets/QApplication>
-#include "src\about.h"
+#include "about.h"
 
 using namespace Markov::GUI;
 

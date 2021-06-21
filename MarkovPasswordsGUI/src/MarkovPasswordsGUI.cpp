@@ -6,9 +6,7 @@
 
 using namespace Markov::GUI;
 
-MarkovPasswordsGUI::MarkovPasswordsGUI(QWidget *parent)
-    : QMainWindow(parent)
-{
+Markov::GUI::MarkovPasswordsGUI::MarkovPasswordsGUI(QWidget *parent) : QMainWindow(parent){
     ui.setupUi(this);
 
 

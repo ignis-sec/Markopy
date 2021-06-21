@@ -3,22 +3,28 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/out/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/out/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/out/lib)
 
-# TODO: Add tests and install targets if needed.
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+include_directories(${PROJECT_SOURCE_DIR})
+link_directories(${PROJECT_SOURCE_DIR}/out/lib)
 
-##############################################################################################################
-#####################################       MarkovAPI project options        #################################
-##############################################################################################################
 
 
 file(GLOB_RECURSE MPLIB_FILES
-     "MarkovAPI/src/*.h"
-     "MarkovAPI/src/*.cpp"
-     "MarkovModel/src/*.h"
+     "src/*.h"
+     "src/*.cpp"
+     "../MarkovModel/src/*.h"
 )
-
-add_library(markov SHARED ${MPLIB_FILES} )
+if (WIN32)
+    add_library(markov STATIC ${MPLIB_FILES} )
+else()
+    add_library(markov SHARED ${MPLIB_FILES} )
+endif()
 
 set(MPLIB_CPP_FLAGS "${MPLIB_C_FLAGS} -std=c++17")
 

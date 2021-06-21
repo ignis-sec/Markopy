@@ -4,10 +4,10 @@
 #include<QMessageBox>
 #include<QTextStream>
 #include<QDir>
-#include "src/CLI.h"
-#include "../MarkovPasswords/src/markovPasswords.h"
+#include "CLI.h"
+#include "MarkovAPI/src/markovPasswords.h"
 #include <QtWidgets/QApplication>
-#include "src/MarkovPasswordsGUI.h"
+#include "MarkovPasswordsGUI.h"
 using namespace Markov::GUI;
 
 
@@ -53,7 +53,7 @@ void Generate::generation() {
     
     ui.label_6->setText("GENERATING!");
     
-    MarkovPasswords mp;
+    Markov::API::MarkovPasswords mp;
     mp.Import("src\\CLI\\sample_models\\2gram-trained.mdl");
 
     mp.Generate(numberPass,cstr,minLen,maxLen);
@@ -92,7 +92,7 @@ void Generate::train() {
 
 
     char a = ',';
-    MarkovPasswords mp;
+    Markov::API::MarkovPasswords mp;
     mp.Import("models\\2gram.mdl");
     mp.Train(cstr, a,10);
     mp.Export("models\\finished.mdl");

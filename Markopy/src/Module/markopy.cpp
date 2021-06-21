@@ -1,7 +1,10 @@
-#define BOOST_PYTHON_STATIC_LIB
+
+#define BOOST_ALL_STATIC_LIB 1
+#define BOOST_PYTHON_STATIC_LIB 1
 #include <Python.h>
 #include <boost/python.hpp>
 #include <MarkovAPI/src/modelMatrix.h>
+
 
 using namespace boost::python;
 
