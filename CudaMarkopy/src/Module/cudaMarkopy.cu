@@ -1,16 +1,15 @@
-#pragma once
-
 #define BOOST_PYTHON_STATIC_LIB
 #include <Python.h>
 #include <boost/python.hpp>
-#include <MarkovPasswords/src/modelMatrix.h>
+#include "CudaMarkovAPI/src/cudaModelMatrix.h"
 
 using namespace boost::python;
 
-namespace Markov::Markopy{
-    BOOST_PYTHON_MODULE(markopy)
+namespace Markov::Markopy::CUDA{
+    BOOST_PYTHON_MODULE(cudamarkopy)
     {
-
+        bool (Markov::API::MarkovPasswords::*Export)(const char*) = &Markov::Model<char>::Export;
+        void (Markov::API::CUDA::CUDAModelMatrix::*FastRandomWalk)(unsigned long int, const char*, int, int, bool, bool) = &Markov::API::CUDA::CUDAModelMatrix::FastRandomWalk;
 
         class_<Markov::API::CUDA::CUDAModelMatrix>("CUDAModelMatrix", init<>())
             
@@ -20,7 +19,7 @@ namespace Markov::Markopy{
             .def("Export", Export, "Export a model to file.")
             .def("ConstructMatrix",&Markov::API::ModelMatrix::ConstructMatrix)
             .def("DumpJSON",&Markov::API::ModelMatrix::DumpJSON)
-            .def("FastRandomWalk",&Markov::API::CUDAModelMatrix::FastRandomWalk)
+            .def("FastRandomWalk", FastRandomWalk)
             ;
     };
 };
