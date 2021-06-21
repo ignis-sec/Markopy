@@ -1,5 +1,9 @@
 #include "cudaDeviceController.h"
 #include <iostream>
+#include <curand_kernel.h>
+#include <cuda.h>
+#include <cuda_runtime.h>
+#include <device_launch_parameters.h>
 
 namespace Markov::API::CUDA{
     __host__ void Markov::API::CUDA::CUDADeviceController::ListCudaDevices() { //list cuda Capable devices on host.

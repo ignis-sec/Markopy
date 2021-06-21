@@ -1,10 +1,6 @@
 
 #pragma once
 #include <iostream>
-#include <curand_kernel.h>
-#include <cuda.h>
-#include <cuda_runtime.h>
-#include <device_launch_parameters.h>
 
 /** @brief Namespace for objects requiring CUDA libraries.
 */
