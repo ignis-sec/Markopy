@@ -17,13 +17,13 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 ##############################################################################################################
 #####################################       MarkovModel project options      #################################
 ##############################################################################################################
-
+#Header only library now
 
 
 
 
 ##############################################################################################################
-#####################################     MarkovPassword project options     #################################
+#####################################       MarkovAPI project options        #################################
 ##############################################################################################################
 
 
@@ -35,14 +35,10 @@ file(GLOB_RECURSE MPLIB_FILES
 
 add_library(markov SHARED ${MPLIB_FILES} )
 
-#SET(MPLIB_C_FLAGS "${SGX_COMMON_CFLAGS} -nostdinc -fvisibility=hidden -fpie -ffunction-sections -fdata-sections -fstack-protector-strong")
 set(MPLIB_CPP_FLAGS "${MPLIB_C_FLAGS} -std=c++17")
 
 set(MPLIB_LINK_FLAGS "${SGX_COMMON_CFLAGS}")
 
-#SET(Link_Lib "${Trts_Library_Name} sgx_tstdc sgx_tcxx ${Crypto_Library_Name} ${Service_Library_Name} ")
-
-#SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${MPLIB_LINK_FLAGS}")
 set_target_properties(markov PROPERTIES COMPILE_FLAGS "${MPLIB_CPP_FLAGS}")
 set_target_properties(markov PROPERTIES LINK_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${MPLIB_LINK_FLAGS}")
 set_target_properties(markov PROPERTIES LINKER_LANGUAGE CXX)
@@ -62,12 +58,9 @@ file(GLOB_RECURSE MP_FILES
 
 add_executable(markovp ${MP_FILES} )
 
-#SET(MP_C_FLAGS "${SGX_COMMON_CFLAGS} -nostdinc -fvisibility=hidden -fpie -ffunction-sections -fdata-sections -fstack-protector-strong")
 set(MP_CPP_FLAGS "${MP_C_FLAGS} -std=c++17")
 
 set(MP_LINK_FLAGS "${SGX_COMMON_CFLAGS}")
-
-#SET(Link_Lib "${Trts_Library_Name} sgx_tstdc sgx_tcxx ${Crypto_Library_Name} ${Service_Library_Name} ")
 
 set_target_properties(markovp PROPERTIES COMPILE_FLAGS "${MP_CPP_FLAGS}")
 set_target_properties(markovp PROPERTIES LINK_FLAGS "${MP_LINK_FLAGS}")
@@ -80,4 +73,37 @@ target_link_libraries(markovp Boost::program_options)
 target_link_libraries(markovp Threads::Threads)
 target_link_libraries(markovp markov)
 
+
+
+
+##############################################################################################################
+#####################################     Markopy project options            #################################
+##############################################################################################################
+
+
+
+file(GLOB_RECURSE MPY_FILES
+     "Markopy/src/Module/*.h"
+     "Markopy/src/Module/*.cpp"
+)
+
+add_library(markopy SHARED ${MPY_FILES} )
+find_package(Threads REQUIRED)
+find_package(Boost 1.71.0 COMPONENTS python REQUIRED)
+find_package(PythonLibs REQUIRED)
+
+
+set(MPY_CPP_FLAGS "${MP_C_FLAGS} -std=c++17")
+set(MPY_LINK_FLAGS "${SGX_COMMON_CFLAGS}")
+
+set_target_properties(markopy PROPERTIES COMPILE_FLAGS "${MPY_CPP_FLAGS}")
+set_target_properties(markopy PROPERTIES LINK_FLAGS "${MPY_LINK_FLAGS}")
+set_target_properties(markopy PROPERTIES LINKER_LANGUAGE CXX)
+
+set_target_properties(markopy PROPERTIES PREFIX "")
+target_include_directories(markopy PUBLIC ${PYTHON_INCLUDE_DIRS})
+target_link_libraries(markopy ${PYTHON_LIBRARIES})
+target_link_libraries(markopy Boost::python)
+target_link_libraries(markopy Threads::Threads)
+target_link_libraries(markopy markov)
 

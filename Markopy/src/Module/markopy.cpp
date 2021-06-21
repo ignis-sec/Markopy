@@ -1,7 +1,7 @@
 #define BOOST_PYTHON_STATIC_LIB
 #include <Python.h>
 #include <boost/python.hpp>
-#include <MarkovPasswords/src/modelMatrix.h>
+#include <MarkovAPI/src/modelMatrix.h>
 
 using namespace boost::python;
 

@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named markopy
+
+# Build rule for target.
+markopy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 markopy
+.PHONY : markopy
+
+# fast build rule for target.
+markopy/fast:
+	$(MAKE) -f CMakeFiles/markopy.dir/build.make CMakeFiles/markopy.dir/build
+.PHONY : markopy/fast
+
+#=============================================================================
 # Target rules for targets named markovp
 
 # Build rule for target.
@@ -135,6 +148,33 @@ markov: cmake_check_build_system
 markov/fast:
 	$(MAKE) -f CMakeFiles/markov.dir/build.make CMakeFiles/markov.dir/build
 .PHONY : markov/fast
+
+Markopy/src/Module/markopy.o: Markopy/src/Module/markopy.cpp.o
+
+.PHONY : Markopy/src/Module/markopy.o
+
+# target to build an object file
+Markopy/src/Module/markopy.cpp.o:
+	$(MAKE) -f CMakeFiles/markopy.dir/build.make CMakeFiles/markopy.dir/Markopy/src/Module/markopy.cpp.o
+.PHONY : Markopy/src/Module/markopy.cpp.o
+
+Markopy/src/Module/markopy.i: Markopy/src/Module/markopy.cpp.i
+
+.PHONY : Markopy/src/Module/markopy.i
+
+# target to preprocess a source file
+Markopy/src/Module/markopy.cpp.i:
+	$(MAKE) -f CMakeFiles/markopy.dir/build.make CMakeFiles/markopy.dir/Markopy/src/Module/markopy.cpp.i
+.PHONY : Markopy/src/Module/markopy.cpp.i
+
+Markopy/src/Module/markopy.s: Markopy/src/Module/markopy.cpp.s
+
+.PHONY : Markopy/src/Module/markopy.s
+
+# target to generate assembly for a file
+Markopy/src/Module/markopy.cpp.s:
+	$(MAKE) -f CMakeFiles/markopy.dir/build.make CMakeFiles/markopy.dir/Markopy/src/Module/markopy.cpp.s
+.PHONY : Markopy/src/Module/markopy.cpp.s
 
 MarkovAPI/src/markovPasswords.o: MarkovAPI/src/markovPasswords.cpp.o
 
@@ -304,10 +344,14 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... markopy"
 	@echo "... edit_cache"
 	@echo "... markovp"
 	@echo "... rebuild_cache"
 	@echo "... markov"
+	@echo "... Markopy/src/Module/markopy.o"
+	@echo "... Markopy/src/Module/markopy.i"
+	@echo "... Markopy/src/Module/markopy.s"
 	@echo "... MarkovAPI/src/markovPasswords.o"
 	@echo "... MarkovAPI/src/markovPasswords.i"
 	@echo "... MarkovAPI/src/markovPasswords.s"
