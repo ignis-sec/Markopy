@@ -176,20 +176,26 @@ namespace Markov {
 		*/
 		std::map<NodeStorageType, Node<NodeStorageType>*>* Nodes(){ return &nodes;}
 
+		/** @brief Sort edges of all nodes in the model ordered by edge weights
+		 * 
+		*/
+		void OptimizeEdgeOrder();
+
 	private:
-		/** @brief Map LeftNode is the Nodes NodeValue
-		 * Map RightNode is the node pointer
+		/** 
+			@brief Map LeftNode is the Nodes NodeValue
+			* Map RightNode is the node pointer
 		*/
 		std::map<NodeStorageType, Node<NodeStorageType>*> nodes;
 
-		/** @brief Starter Node of this model. 
-		 * 
+		/** 
+			@brief Starter Node of this model.
 		*/
 		Node<NodeStorageType>* starterNode;
 
 		
-		/** @brief A list of all edges in this model. 
-		 * 
+		/** 
+			@brief A list of all edges in this model. 
 		*/
 		std::vector<Edge<NodeStorageType>*> edges;
 	};
@@ -246,6 +252,13 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream* f) {
 
 	}
 
+	this->OptimizeEdgeOrder();
+
+	return true;
+}
+
+template <typename NodeStorageType>
+void Markov::Model<NodeStorageType>::OptimizeEdgeOrder(){
 	for (std::pair<unsigned char, Markov::Node<NodeStorageType>*> const& x : this->nodes) {
 		//std::cout << "Total edges in EdgesV: " << x.second->edgesV.size() << "\n"; 
 		std::sort (x.second->edgesV.begin(), x.second->edgesV.end(), [](Edge<NodeStorageType> *lhs, Edge<NodeStorageType> *rhs)->bool{
@@ -257,8 +270,6 @@ bool Markov::Model<NodeStorageType>::Import(std::ifstream* f) {
 	}
 	//std::cout << "Total number of nodes: " << this->nodes.size() << std::endl;
 	//std::cout << "Total number of edges: " << this->edges.size() << std::endl;
-
-	return true;
 }
 
 template <typename NodeStorageType>

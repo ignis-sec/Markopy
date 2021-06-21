@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MarkovPasswords: /media/ignis/HDD/Repositories/MarkovPasswords/MarkovPasswords/src/main.cpp File Reference</title>
+<title>Markopy: main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,7 +17,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome-dark.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -26,7 +26,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MarkovPasswords
+   <div id="projectname">Markopy
    </div>
    <div id="projectbrief">Utilizing Markov Models for brute forcing attacks</div>
   </td>
@@ -86,7 +86,7 @@ $(document).ready(function(){initNavTree('src_2main_8cpp.html',''); initResizabl
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">main.cpp File Reference</div>  </div>
+<div class="title">src/main.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
@@ -96,42 +96,21 @@ $(document).ready(function(){initNavTree('src_2main_8cpp.html',''); initResizabl
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &quot;<a class="el" href="markov_passwords_8h_source.html">markovPasswords.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="model_matrix_8h_source.html">modelMatrix.h</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for main.cpp:</div>
+Include dependency graph for src/main.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="src_2main_8cpp__incl.png" border="0" usemap="#_2media_2ignis_2_h_d_d_2_repositories_2_markov_passwords_2_markov_passwords_2src_2main_8cpp" alt=""/></div>
-<map name="_2media_2ignis_2_h_d_d_2_repositories_2_markov_passwords_2_markov_passwords_2src_2main_8cpp" id="_2media_2ignis_2_h_d_d_2_repositories_2_markov_passwords_2_markov_passwords_2src_2main_8cpp">
-<area shape="rect" title=" " alt="" coords="275,5,539,61"/>
-<area shape="rect" title=" " alt="" coords="141,408,221,435"/>
-<area shape="rect" href="term_8h.html" title=" " alt="" coords="43,259,144,285"/>
-<area shape="rect" href="argparse_8h.html" title=" " alt="" coords="276,184,367,211"/>
-<area shape="rect" title=" " alt="" coords="443,259,501,285"/>
-<area shape="rect" title=" " alt="" coords="620,109,687,136"/>
-<area shape="rect" title=" " alt="" coords="711,109,785,136"/>
-<area shape="rect" href="markov_passwords_8h.html" title=" " alt="" coords="444,109,596,136"/>
-<area shape="rect" title=" " alt="" coords="516,333,567,360"/>
-<area shape="rect" title=" " alt="" coords="219,259,419,285"/>
-<area shape="rect" href="thread_shared_list_handler_8h.html" title=" " alt="" coords="449,184,644,211"/>
-<area shape="rect" href="model_8h.html" title=" " alt="" coords="701,184,891,211"/>
-<area shape="rect" title=" " alt="" coords="614,259,687,285"/>
-<area shape="rect" title=" " alt="" coords="525,259,589,285"/>
-<area shape="rect" title=" " alt="" coords="861,333,923,360"/>
-<area shape="rect" title=" " alt="" coords="948,333,1023,360"/>
-<area shape="rect" title=" " alt="" coords="853,259,939,285"/>
-<area shape="rect" href="node_8h.html" title=" " alt="" coords="763,259,829,285"/>
-<area shape="rect" href="edge_8h.html" title=" " alt="" coords="1047,333,1113,360"/>
-<area shape="rect" title=" " alt="" coords="642,333,729,360"/>
-<area shape="rect" href="random_8h.html" title=" " alt="" coords="753,333,837,360"/>
-<area shape="rect" title=" " alt="" coords="1000,408,1067,435"/>
-<area shape="rect" title=" " alt="" coords="1091,408,1162,435"/>
-<area shape="rect" title=" " alt="" coords="759,408,831,435"/>
-</map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="src_2main_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
-</div><table class="memberdecls">
+</div>
+</div>
+<p><a href="src_2main_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
-<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launch <a class="el" href="class_c_l_i.html">CLI</a> tool.  <a href="src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">More...</a><br /></td></tr>
+<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launch CLI tool.  <a href="src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">More...</a><br /></td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -161,26 +140,58 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Launch <a class="el" href="class_c_l_i.html">CLI</a> tool. </p>
+<p>Launch CLI tool. </p>
+
+<p class="definition">Definition at line <a class="el" href="src_2main_8cpp_source.html#l00014">14</a> of file <a class="el" href="src_2main_8cpp_source.html">src/main.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html">Markov::API::CLI::Terminal</a> t;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    ProgramOptions* p  = Argparse::parse(argc, argv);</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    if (p==0 || p-&gt;bFailure) {</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">        std::cout &lt;&lt; TERM_FAIL &lt;&lt; &quot;Arguments Failed to Parse&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        Argparse::help();</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    }*/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html">Markov::API::CLI::Argparse</a> a(argc,argv);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html">Markov::API::ModelMatrix</a> mp;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    mp.<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#aeba8bb79aa4dc2cfeda310f34b7c9427">Import</a>(<span class="stringliteral">&quot;Markopy/src/CLI/sample_models/2gram.mdl&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    mp.<a class="code" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#af42d40d7a5c80f0dfe126a574a17f423">Train</a>(<span class="stringliteral">&quot;datasets/graduation.corpus&quot;</span>, <span class="charliteral">&#39;\t&#39;</span>, 1);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    mp.<a class="code" href="class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939">Export</a>(<span class="stringliteral">&quot;test.mdl&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> 0;<span class="comment">/*</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    std::cerr &lt;&lt; &quot;Importing model.\n&quot;;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    markovPass.Import(&quot;models/finished.mdl&quot;);</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    std::cerr &lt;&lt; &quot;Import done. \n&quot;;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    markovPass.ConstructMatrix();</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    //markovPass.FastRandomWalk(50000000,&quot;/media/ignis/Stuff/wordlist.txt&quot;,6,12,25, true);</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    markovPass.FastRandomWalk(500000000,&quot;/media/ignis/Stuff/wordlist2.txt&quot;,6,12,25, true);</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">    std::cerr &lt;&lt; &quot;Finished in:&quot; &lt;&lt; std::chrono::duration_cast&lt;std::chrono::milliseconds&gt; (end - begin).count() &lt;&lt; &quot; milliseconds&quot; &lt;&lt; std::endl;*/</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="argparse_8h_source.html#l00086">Markov::API::CLI::Argparse::Argparse()</a>, <a class="el" href="model_8h_source.html#l00286">Markov::Model&lt; NodeStorageType &gt;::Export()</a>, <a class="el" href="model_matrix_8cpp_source.html#l00010">Markov::API::ModelMatrix::Import()</a>, and <a class="el" href="model_matrix_8cpp_source.html#l00016">Markov::API::ModelMatrix::Train()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
-<map name="src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
-<area shape="rect" title="Launch CLI tool." alt="" coords="5,56,60,83"/>
-<area shape="rect" href="class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939" title="Export a file of the model." alt="" coords="113,5,281,32"/>
-<area shape="rect" href="class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5" title="Import a file to construct the model." alt="" coords="113,56,282,83"/>
-<area shape="rect" href="class_markov_passwords.html#a74fa370b914503d1b67fec91a13b40af" title="Train the model with the dataset file." alt="" coords="108,107,287,133"/>
-<area shape="rect" href="class_markov_passwords.html#a119837058df933daa767d84fb21ad4ac" title="A single thread invoked by the Train function." alt="" coords="335,107,559,133"/>
-<area shape="rect" href="class_markov_1_1_model.html#ad252913f83fa3eb14cc3f9f92c5ee37a" title="Adjust the model with a single string." alt="" coords="619,66,781,107"/>
-<area shape="rect" href="class_thread_shared_list_handler.html#a32361c9a5810c0aae30b31fd38779c1e" title="Read the next line from the file." alt="" coords="607,131,793,173"/>
-</map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_model_matrix_html_aeba8bb79aa4dc2cfeda310f34b7c9427"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#aeba8bb79aa4dc2cfeda310f34b7c9427">Markov::API::ModelMatrix::Import</a></div><div class="ttdeci">void Import(const char *filename)</div><div class="ttdoc">Open a file to import with filename, and call bool Model::Import with std::ifstream.</div><div class="ttdef"><b>Definition:</b> <a href="model_matrix_8cpp_source.html#l00010">modelMatrix.cpp:10</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_model_matrix_html"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_model_matrix.html">Markov::API::ModelMatrix</a></div><div class="ttdoc">Class to flatten and reduce Markov::Model to a Matrix.</div><div class="ttdef"><b>Definition:</b> <a href="model_matrix_8h_source.html#l00013">modelMatrix.h:13</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_model_html_ae16027a94235d2988ac4be35ea07d939"><div class="ttname"><a href="class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939">Markov::Model::Export</a></div><div class="ttdeci">bool Export(std::ofstream *)</div><div class="ttdoc">Export a file of the model.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00274">model.h:274</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_html"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html">Markov::API::CLI::Terminal</a></div><div class="ttdoc">pretty colors for Terminal. Windows Only.</div><div class="ttdef"><b>Definition:</b> <a href="term_8h_source.html#l00018">term.h:18</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_html"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html">Markov::API::CLI::Argparse</a></div><div class="ttdoc">Parse command line arguements.</div><div class="ttdef"><b>Definition:</b> <a href="argparse_8h_source.html#l00074">argparse.h:74</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_model_matrix_html_af42d40d7a5c80f0dfe126a574a17f423"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_model_matrix.html#af42d40d7a5c80f0dfe126a574a17f423">Markov::API::ModelMatrix::Train</a></div><div class="ttdeci">void Train(const char *datasetFileName, char delimiter, int threads)</div><div class="ttdoc">Train the model with the dataset file.</div><div class="ttdef"><b>Definition:</b> <a href="model_matrix_8cpp_source.html#l00016">modelMatrix.cpp:16</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

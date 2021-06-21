@@ -1,0 +1,31 @@
+\hypertarget{menu_8cpp_source}{}\doxysection{menu.\+cpp}
+\label{menu_8cpp_source}\index{menu.cpp@{menu.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{menu_8h}{"menu.h"}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{fstream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_markov_passwords_g_u_i_8h}{"MarkovPasswordsGUI.h"}}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{QtWidgets}\textcolor{preprocessor}{/}\textcolor{preprocessor}{QApplication}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{keyword}{using} \textcolor{keyword}{namespace} Markov::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}};}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{\Hypertarget{menu_8cpp_source_l00008}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1menu_a19f2bce9cdf1c78eb746e86ab5abf14a}{00008}} menu::menu(QWidget* parent)}
+\DoxyCodeLine{00009     : QMainWindow(parent)}
+\DoxyCodeLine{00010 \{}
+\DoxyCodeLine{00011     ui.setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014     \textcolor{comment}{//QObject::connect(ui.pushButton, \&QPushButton::clicked, this, [this] \{about(); \});}}
+\DoxyCodeLine{00015     QObject::connect(ui.visu, \&QPushButton::clicked, \textcolor{keyword}{this}, [\textcolor{keyword}{this}] \{visualization(); \});}
+\DoxyCodeLine{00016 \}}
+\DoxyCodeLine{\Hypertarget{menu_8cpp_source_l00017}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1menu_a0ca49b20cf34f1349a4489c9ae3e28ca}{00017}} \textcolor{keywordtype}{void} menu::about() \{}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020 \}}
+\DoxyCodeLine{\Hypertarget{menu_8cpp_source_l00021}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1menu_ad2fd60ba9ea6b8c4ba0ccb98abe9a651}{00021}} \textcolor{keywordtype}{void} menu::visualization() \{}
+\DoxyCodeLine{00022     MarkovPasswordsGUI* w = \textcolor{keyword}{new} MarkovPasswordsGUI;}
+\DoxyCodeLine{00023     w-\/>show();}
+\DoxyCodeLine{00024     \textcolor{keyword}{this}-\/>close();}
+\DoxyCodeLine{00025 \}}
+
+\end{DoxyCode}

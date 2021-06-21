@@ -1,0 +1,139 @@
+\hypertarget{class_markov_1_1_g_u_i_1_1menu}{}\doxysection{Markov\+::G\+UI\+::menu Class Reference}
+\label{class_markov_1_1_g_u_i_1_1menu}\index{Markov::GUI::menu@{Markov::GUI::menu}}
+
+
+QT Menu class.  
+
+
+
+
+{\ttfamily \#include $<$menu.\+h$>$}
+
+
+
+Inheritance diagram for Markov\+::G\+UI\+::menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{class_markov_1_1_g_u_i_1_1menu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Markov\+::G\+UI\+::menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{class_markov_1_1_g_u_i_1_1menu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1menu_a0ca49b20cf34f1349a4489c9ae3e28ca}{about}} ()
+\item 
+void \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1menu_ad2fd60ba9ea6b8c4ba0ccb98abe9a651}{visualization}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1menu_a19f2bce9cdf1c78eb746e86ab5abf14a}{menu}} (Q\+Widget $\ast$parent=Q\+\_\+\+N\+U\+L\+L\+P\+TR)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_u_i_2src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{Ui\+::main}} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1menu_aae1ad64c4ab9413e1494e1d8d30aa1f4}{ui}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+QT Menu class. 
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00009}{9}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_markov_1_1_g_u_i_1_1menu_a19f2bce9cdf1c78eb746e86ab5abf14a}\label{class_markov_1_1_g_u_i_1_1menu_a19f2bce9cdf1c78eb746e86ab5abf14a}} 
+\index{Markov::GUI::menu@{Markov::GUI::menu}!menu@{menu}}
+\index{menu@{menu}!Markov::GUI::menu@{Markov::GUI::menu}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily menu\+::menu (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily Q\+\_\+NULLPTR} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{menu_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{menu_8cpp_source}{menu.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009     : QMainWindow(parent)}
+\DoxyCodeLine{00010 \{}
+\DoxyCodeLine{00011     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1menu_aae1ad64c4ab9413e1494e1d8d30aa1f4}{ui}}.setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{00012     }
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014     \textcolor{comment}{//QObject::connect(ui.pushButton, \&QPushButton::clicked, this, [this] \{about(); \});}}
+\DoxyCodeLine{00015     QObject::connect(\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1menu_aae1ad64c4ab9413e1494e1d8d30aa1f4}{ui}}.visu, \&QPushButton::clicked, \textcolor{keyword}{this}, [\textcolor{keyword}{this}] \{visualization(); \});}
+\DoxyCodeLine{00016 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_markov_1_1_g_u_i_1_1menu_a0ca49b20cf34f1349a4489c9ae3e28ca}\label{class_markov_1_1_g_u_i_1_1menu_a0ca49b20cf34f1349a4489c9ae3e28ca}} 
+\index{Markov::GUI::menu@{Markov::GUI::menu}!about@{about}}
+\index{about@{about}!Markov::GUI::menu@{Markov::GUI::menu}}
+\doxysubsubsection{\texorpdfstring{about}{about}}
+{\footnotesize\ttfamily void menu\+::about (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line \mbox{\hyperlink{menu_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{menu_8cpp_source}{menu.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017                  \{}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019    }
+\DoxyCodeLine{00020 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_g_u_i_1_1menu_ad2fd60ba9ea6b8c4ba0ccb98abe9a651}\label{class_markov_1_1_g_u_i_1_1menu_ad2fd60ba9ea6b8c4ba0ccb98abe9a651}} 
+\index{Markov::GUI::menu@{Markov::GUI::menu}!visualization@{visualization}}
+\index{visualization@{visualization}!Markov::GUI::menu@{Markov::GUI::menu}}
+\doxysubsubsection{\texorpdfstring{visualization}{visualization}}
+{\footnotesize\ttfamily void menu\+::visualization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Definition at line \mbox{\hyperlink{menu_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{menu_8cpp_source}{menu.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021                          \{}
+\DoxyCodeLine{00022     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i}{MarkovPasswordsGUI}}* w = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i}{MarkovPasswordsGUI}};}
+\DoxyCodeLine{00023     w-\/>show();}
+\DoxyCodeLine{00024     this-\/>close();}
+\DoxyCodeLine{00025 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_markov_1_1_g_u_i_1_1menu_aae1ad64c4ab9413e1494e1d8d30aa1f4}\label{class_markov_1_1_g_u_i_1_1menu_aae1ad64c4ab9413e1494e1d8d30aa1f4}} 
+\index{Markov::GUI::menu@{Markov::GUI::menu}!ui@{ui}}
+\index{ui@{ui}!Markov::GUI::menu@{Markov::GUI::menu}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_u_i_2src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{Ui\+::main}} Markov\+::\+G\+U\+I\+::menu\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00015}{15}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{menu_8h}{menu.\+h}}\item 
+\mbox{\hyperlink{menu_8cpp}{menu.\+cpp}}\end{DoxyCompactItemize}

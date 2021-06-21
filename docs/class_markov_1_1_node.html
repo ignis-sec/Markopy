@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MarkovPasswords: Markov::Node&lt; storageType &gt; Class Template Reference</title>
+<title>Markopy: Markov::Node&lt; storageType &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,7 +17,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome-dark.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -26,7 +26,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MarkovPasswords
+   <div id="projectname">Markopy
    </div>
    <div id="projectbrief">Utilizing Markov Models for brute forcing attacks</div>
   </td>
@@ -96,17 +96,19 @@ $(document).ready(function(){initNavTree('class_markov_1_1_node.html',''); initR
 <p>A node class that for the vertices of model. Connected with eachother using <a class="el" href="class_markov_1_1_edge.html" title="Edge class used to link nodes in the model together.">Edge</a>.  
  <a href="class_markov_1_1_node.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="edge_8h_source.html">edge.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="model_8h_source.html">model.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Markov::Node&lt; storageType &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_markov_1_1_node__inherit__graph.png" border="0" usemap="#_markov_1_1_node_3_01storage_type_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="_markov_1_1_node_3_01storage_type_01_4_inherit__map" id="_markov_1_1_node_3_01storage_type_01_4_inherit__map">
-<area shape="rect" title="A node class that for the vertices of model. Connected with eachother using Edge." alt="" coords="87,5,308,32"/>
-<area shape="rect" href="class_markov_1_1_node.html" title=" " alt="" coords="5,102,176,129"/>
-<area shape="rect" href="class_markov_1_1_node.html" title=" " alt="" coords="200,95,411,136"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_node__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Collaboration diagram for Markov::Node&lt; storageType &gt;:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_node__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -155,12 +157,13 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a9851cd33ea466176a5728e3ccea6efed"><td class="memItemLeft" align="right" valign="top">storageType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_node.html#a9851cd33ea466176a5728e3ccea6efed">_value</a></td></tr>
+<tr class="memdesc:a9851cd33ea466176a5728e3ccea6efed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character representation of this node. 0 for starter, 0xff for terminator.  <a href="class_markov_1_1_node.html#a9851cd33ea466176a5728e3ccea6efed">More...</a><br /></td></tr>
 <tr class="separator:a9851cd33ea466176a5728e3ccea6efed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade384415c5b47dca4990293b8599e6ce"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce">total_edge_weights</a></td></tr>
-<tr class="memdesc:ade384415c5b47dca4990293b8599e6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character representation of this node. 0 for starter, 0xff for terminator.  <a href="class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce">More...</a><br /></td></tr>
+<tr class="memdesc:ade384415c5b47dca4990293b8599e6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total weights of the vertices, required by RandomNext.  <a href="class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce">More...</a><br /></td></tr>
 <tr class="separator:ade384415c5b47dca4990293b8599e6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab93adf2f99ab396bdba8eeb6537b21fd"><td class="memItemLeft" align="right" valign="top">std::map&lt; storageType, <a class="el" href="class_markov_1_1_edge.html">Edge</a>&lt; storageType &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_node.html#ab93adf2f99ab396bdba8eeb6537b21fd">edges</a></td></tr>
-<tr class="memdesc:ab93adf2f99ab396bdba8eeb6537b21fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total weights of the vertices, required by RandomNext;.  <a href="class_markov_1_1_node.html#ab93adf2f99ab396bdba8eeb6537b21fd">More...</a><br /></td></tr>
+<tr class="memdesc:ab93adf2f99ab396bdba8eeb6537b21fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map of all edges connected to this node, where this node is at the LeftNode. Map is indexed by unsigned char, which is the character representation of the node.  <a href="class_markov_1_1_node.html#ab93adf2f99ab396bdba8eeb6537b21fd">More...</a><br /></td></tr>
 <tr class="separator:ab93adf2f99ab396bdba8eeb6537b21fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -169,6 +172,8 @@ class Markov::Node&lt; storageType &gt;</h3>
 
 <p>A node class that for the vertices of model. Connected with eachother using <a class="el" href="class_markov_1_1_edge.html" title="Edge class used to link nodes in the model together.">Edge</a>. </p>
 <p>This class will later be templated to accept other data types than char*. </p>
+
+<p class="definition">Definition at line <a class="el" href="model_8h_source.html#l00023">23</a> of file <a class="el" href="model_8h_source.html">model.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a29468e9baf4e7cec86116ef3cbcfcb47"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29468e9baf4e7cec86116ef3cbcfcb47">&#9670;&nbsp;</a></span>Node() <span class="overload">[1/2]</span></h2>
@@ -186,6 +191,12 @@ template&lt;typename storageType &gt; </div>
 
 <p>Default constructor. Creates an empty <a class="el" href="class_markov_1_1_node.html" title="A node class that for the vertices of model. Connected with eachother using Edge.">Node</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00201">201</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                              {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_node.html#a9851cd33ea466176a5728e3ccea6efed">_value</a> = 0;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce">total_edge_weights</a> = 0L;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;};</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae89b442197e67a84948ba251f6824ad0"></a>
@@ -209,11 +220,19 @@ template&lt;typename storageType &gt; </div>
 <p>Constructor. Creates a <a class="el" href="class_markov_1_1_node.html" title="A node class that for the vertices of model. Connected with eachother using Edge.">Node</a> with no edges and with given NodeValue. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">NodeValue</td><td>- Nodes character representation. </td></tr>
+    <tr><td class="paramname">_value</td><td>- Nodes character representation.</td></tr>
   </table>
   </dd>
 </dl>
-
+<p><b>Example</b> <b>Use:</b> Construct nodes </p><div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>* LeftNode = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>(<span class="charliteral">&#39;l&#39;</span>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>* RightNode = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>(<span class="charliteral">&#39;r&#39;</span>);</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00195">195</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                                                {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_node.html#a9851cd33ea466176a5728e3ccea6efed">_value</a> = <a class="code" href="class_markov_1_1_node.html#a9851cd33ea466176a5728e3ccea6efed">_value</a>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce">total_edge_weights</a> = 0L;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;};</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -240,16 +259,12 @@ template&lt;typename storageType &gt; </div>
 </div><div class="memdoc">
 
 <p>return edges </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0_icgraph.png" border="0" usemap="#class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0_icgraph" alt=""/></div>
-<map name="class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0_icgraph" id="class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0_icgraph">
-<area shape="rect" title="return edges" alt="" coords="255,13,413,39"/>
-<area shape="rect" href="namespace_testing_1_1_m_v_p_1_1_markov_model.html#a6e9e664c5a60cb3af863f384a47952ce" title="Test class for minimal viable Node." alt="" coords="5,5,207,47"/>
-</map>
-</div>
 
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00264">264</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                                                                                     {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">return</span> &amp;(this-&gt;<a class="code" href="class_markov_1_1_node.html#ab93adf2f99ab396bdba8eeb6537b21fd">edges</a>);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adec94acba3fc021a2bbaded53d9e9730"></a>
@@ -306,19 +321,23 @@ template&lt;typename storageType &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_markov_1_1_edge.html" title="Edge class used to link nodes in the model together.">Edge</a> that is connected between this node, and the target node. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c_icgraph.png" border="0" usemap="#class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c_icgraph" alt=""/></div>
-<map name="class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c_icgraph" id="class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c_icgraph">
-<area shape="rect" title="Find an edge with its character representation." alt="" coords="255,78,433,105"/>
-<area shape="rect" href="class_markov_1_1_model.html#ad252913f83fa3eb14cc3f9f92c5ee37a" title="Adjust the model with a single string." alt="" coords="25,5,187,47"/>
-<area shape="rect" href="namespace_testing_1_1_m_v_p_1_1_markov_model.html#a6e9e664c5a60cb3af863f384a47952ce" title="Test class for minimal viable Node." alt="" coords="5,71,207,112"/>
-<area shape="rect" href="namespace_testing_1_1_markov_model.html#a84a573ca81cb8cb3db9845b0cdcf06a6" title="Test class for rest of model cases." alt="" coords="24,136,188,177"/>
-</map>
-</div>
-
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_markov_1_1_edge.html" title="Edge class used to link nodes in the model together.">Edge</a> that is connected between this node, and the target node.</dd></dl>
+<p><b>Example</b> <b>Use:</b> Construct and update edges</p>
+<div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>* src = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>(<span class="charliteral">&#39;a&#39;</span>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>* target1 = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>(<span class="charliteral">&#39;b&#39;</span>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>* target2 = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>(<span class="charliteral">&#39;c&#39;</span>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_edge.html">Markov::Edge&lt;unsigned char&gt;</a>* res = NULL;</div>
+<div class="line">src-&gt;<a class="code" href="class_markov_1_1_node.html#a0e867cddf6b8dd784c36b12aa820fee9">Link</a>(target1);</div>
+<div class="line">src-&gt;<a class="code" href="class_markov_1_1_node.html#a0e867cddf6b8dd784c36b12aa820fee9">Link</a>(target2);         </div>
+<div class="line">res = src-&gt;<a class="code" href="class_markov_1_1_node.html#ad836573fbdec1c6d7e72945f48ed081c">FindEdge</a>(<span class="charliteral">&#39;b&#39;</span>);</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00252">252</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                                                                           {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">auto</span> e = this-&gt;<a class="code" href="class_markov_1_1_node.html#ab93adf2f99ab396bdba8eeb6537b21fd">edges</a>.find(repr);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">if</span> (e == this-&gt;<a class="code" href="class_markov_1_1_node.html#ab93adf2f99ab396bdba8eeb6537b21fd">edges</a>.end()) <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">return</span> e-&gt;second;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;};</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1db7cba480ab9fb41ef8ab53d1eac0f2"></a>
@@ -346,8 +365,19 @@ template&lt;typename storageType &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the same edge as parameter target. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>the same edge as parameter target.</dd></dl>
+<p><b>Example</b> <b>Use:</b> Construct and link nodes </p><div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>* LeftNode = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>(<span class="charliteral">&#39;l&#39;</span>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>* RightNode = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>(<span class="charliteral">&#39;r&#39;</span>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_edge.html">Markov::Edge&lt;unsigned char&gt;</a>* e = LeftNode-&gt;<a class="code" href="class_markov_1_1_node.html#a0e867cddf6b8dd784c36b12aa820fee9">Link</a>(RightNode);</div>
+<div class="line">LeftNode-&gt;<a class="code" href="class_markov_1_1_node.html#a0e867cddf6b8dd784c36b12aa820fee9">Link</a>(e);</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00219">219</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                                                                                 {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    v-&gt;<a class="code" href="class_markov_1_1_edge.html#a174cd2f818b7c929decee6f2bcea7025">SetLeftEdge</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_node.html#a77dbb90420f6199790a4fa986b93f85c">UpdateEdges</a>(v);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">return</span> v;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0e867cddf6b8dd784c36b12aa820fee9"></a>
@@ -375,19 +405,18 @@ template&lt;typename storageType &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new node with LeftNode as this, and RightNode as parameter target. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9_icgraph.png" border="0" usemap="#class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9_icgraph" alt=""/></div>
-<map name="class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9_icgraph" id="class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9_icgraph">
-<area shape="rect" title="Link this node with another, with this node as its source." alt="" coords="255,78,401,105"/>
-<area shape="rect" href="class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5" title="Import a file to construct the model." alt="" coords="25,5,187,47"/>
-<area shape="rect" href="namespace_testing_1_1_m_v_p_1_1_markov_model.html#a6e9e664c5a60cb3af863f384a47952ce" title="Test class for minimal viable Node." alt="" coords="5,71,207,112"/>
-<area shape="rect" href="namespace_testing_1_1_markov_model.html#ad59534ad9237abf1a8b09bd7f9263da2" title="Test class for rest of Node cases." alt="" coords="24,136,188,177"/>
-</map>
-</div>
-
+<dl class="section return"><dt>Returns</dt><dd>A new node with LeftNode as this, and RightNode as parameter target.</dd></dl>
+<p><b>Example</b> <b>Use:</b> Construct nodes </p><div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>* LeftNode = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>(<span class="charliteral">&#39;l&#39;</span>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>* RightNode = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>(<span class="charliteral">&#39;r&#39;</span>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_edge.html">Markov::Edge&lt;unsigned char&gt;</a>* e = LeftNode-&gt;<a class="code" href="class_markov_1_1_node.html#a0e867cddf6b8dd784c36b12aa820fee9">Link</a>(RightNode);</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00212">212</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                                                                 {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <a class="code" href="class_markov_1_1_edge.html">Markov::Edge&lt;storageType&gt;</a>* v = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_edge.html">Markov::Edge&lt;storageType&gt;</a>(<span class="keyword">this</span>, n);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_node.html#a77dbb90420f6199790a4fa986b93f85c">UpdateEdges</a>(v);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">return</span> v;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac7cce56376f2a00764f64a0194cbb498"></a>
@@ -414,16 +443,18 @@ template&lt;typename storageType &gt; </div>
 
 <p>Return character representation of this node. </p>
 <dl class="section return"><dt>Returns</dt><dd>character representation at _value. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00207">207</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                                                        {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_markov_1_1_node.html#a9851cd33ea466176a5728e3ccea6efed">_value</a>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="model_matrix_8cpp_source.html#l00022">Markov::API::ModelMatrix::ConstructMatrix()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498_icgraph.png" border="0" usemap="#class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498_icgraph" alt=""/></div>
-<map name="class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498_icgraph" id="class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498_icgraph">
-<area shape="rect" title="Return character representation of this node." alt="" coords="255,78,445,105"/>
-<area shape="rect" href="class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939" title="Export a file of the model." alt="" coords="25,5,187,47"/>
-<area shape="rect" href="class_markov_1_1_model.html#aa4a11c6679c998936332f8409ae95375" title="Do a random walk on this model." alt="" coords="25,71,187,112"/>
-<area shape="rect" href="namespace_testing_1_1_m_v_p_1_1_markov_model.html#a6e9e664c5a60cb3af863f384a47952ce" title="Test class for minimal viable Node." alt="" coords="5,136,207,177"/>
-</map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498_icgraph.svg" width="100%" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -447,19 +478,49 @@ template&lt;typename storageType &gt; </div>
 </div><div class="memdoc">
 
 <p>Chose a random node from the list of edges, with regards to its EdgeWeight, and TraverseNode to that. </p>
-<p>This operation is done by generating a random number in range of 0-this.total_edge_weights, and then iterating over the list of edges. At each step, EdgeWeight of the edge is subtracted from the random number, and once it is 0, next node is selected. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_markov_1_1_node.html" title="A node class that for the vertices of model. Connected with eachother using Edge.">Node</a> that was chosen at EdgeWeight biased random. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c_icgraph.png" border="0" usemap="#class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c_icgraph" alt=""/></div>
-<map name="class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c_icgraph" id="class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c_icgraph">
-<area shape="rect" title="Chose a random node from the list of edges, with regards to its EdgeWeight, and TraverseNode to that." alt="" coords="255,78,460,105"/>
-<area shape="rect" href="class_markov_1_1_model.html#aa4a11c6679c998936332f8409ae95375" title="Do a random walk on this model." alt="" coords="25,5,187,47"/>
-<area shape="rect" href="namespace_testing_1_1_m_v_p_1_1_markov_model.html#a6e9e664c5a60cb3af863f384a47952ce" title="Test class for minimal viable Node." alt="" coords="5,71,207,112"/>
-<area shape="rect" href="namespace_testing_1_1_markov_model.html#ad59534ad9237abf1a8b09bd7f9263da2" title="Test class for rest of Node cases." alt="" coords="24,136,188,177"/>
-</map>
-</div>
-
+<p>This operation is done by generating a random number in range of 0-this.total_edge_weights, and then iterating over the list of edges. At each step, EdgeWeight of the edge is subtracted from the random number, and once it is 0, next node is selected. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_markov_1_1_node.html" title="A node class that for the vertices of model. Connected with eachother using Edge.">Node</a> that was chosen at EdgeWeight biased random.</dd></dl>
+<p><b>Example</b> <b>Use:</b> Use randomNext to do a random walk on the model </p><div class="fragment"><div class="line"><span class="keywordtype">char</span>* buffer[64];</div>
+<div class="line"><a class="code" href="class_markov_1_1_model.html">Markov::Model&lt;char&gt;</a> <a class="code" href="namespacemarkopy__cli.html#a573dcc41f3a527edb70e831cd8108c78">model</a>;</div>
+<div class="line"><a class="code" href="namespacemarkopy__cli.html#a573dcc41f3a527edb70e831cd8108c78">model</a>.Import(<span class="stringliteral">&quot;model.mdl&quot;</span>);</div>
+<div class="line">   <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;char&gt;</a>* n = <a class="code" href="namespacemarkopy__cli.html#a573dcc41f3a527edb70e831cd8108c78">model</a>.starterNode;</div>
+<div class="line"><span class="keywordtype">int</span> len = 0;</div>
+<div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;char&gt;</a>* temp_node;</div>
+<div class="line"><span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line">   temp_node = n-&gt;<a class="code" href="class_markov_1_1_node.html#a87224bed22e5da09e0ddb91c681a6b2c">RandomNext</a>(randomEngine);</div>
+<div class="line">   <span class="keywordflow">if</span> (len &gt;= maxSetting) {</div>
+<div class="line">       <span class="keywordflow">break</span>;</div>
+<div class="line">   }</div>
+<div class="line">   <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((temp_node == NULL) &amp;&amp; (len &lt; minSetting)) {</div>
+<div class="line">       <span class="keywordflow">continue</span>;</div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="keywordflow">else</span> <span class="keywordflow">if</span> (temp_node == NULL){</div>
+<div class="line">       <span class="keywordflow">break</span>;</div>
+<div class="line">   }</div>
+<div class="line">       </div>
+<div class="line">   n = temp_node;</div>
+<div class="line"> </div>
+<div class="line">   buffer[len++] = n-&gt;<a class="code" href="class_markov_1_1_node.html#ac7cce56376f2a00764f64a0194cbb498">NodeValue</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00226">226</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                                                                                                   {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="comment">//get a random NodeValue in range of total_vertice_weight</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> selection = randomEngine-&gt;<a class="code" href="class_markov_1_1_random_1_1_random_engine.html#a010d310dfebeacd3d7db7d0958dc1058">random</a>() % this-&gt;<a class="code" href="class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce">total_edge_weights</a>;<span class="comment">//distribution()(generator());// distribution(generator);</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="comment">//make absolute, no negative modulus values wanted</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="comment">//selection = (selection &gt;= 0) ? selection : (selection + this-&gt;total_edge_weights);</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;this-&gt;<a class="code" href="class_markov_1_1_node.html#ad2ac18d9abd220dfd90b9df6f92c5d59">edgesV</a>.size();i++){</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        selection -= this-&gt;<a class="code" href="class_markov_1_1_node.html#ad2ac18d9abd220dfd90b9df6f92c5d59">edgesV</a>[i]-&gt;EdgeWeight();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">if</span> (selection &lt; 0) <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_markov_1_1_node.html#ad2ac18d9abd220dfd90b9df6f92c5d59">edgesV</a>[i]-&gt;TraverseNode();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="comment">//if this assertion is reached, it means there is an implementation error above</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;This should never be reached (node failed to walk to next)\n&quot;</span>; <span class="comment">//cant assert from child thread</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    assert(<span class="keyword">true</span> &amp;&amp; <span class="stringliteral">&quot;This should never be reached (node failed to walk to next)&quot;</span>);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a60166d8f501c016de104f48e46bff223"></a>
@@ -485,14 +546,18 @@ template&lt;typename storageType &gt; </div>
 </div><div class="memdoc">
 
 <p>return total edge weights </p>
+
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00269">269</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                                          {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce">total_edge_weights</a>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="model_matrix_8cpp_source.html#l00022">Markov::API::ModelMatrix::ConstructMatrix()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_markov_1_1_node_a60166d8f501c016de104f48e46bff223_icgraph.png" border="0" usemap="#class_markov_1_1_node_a60166d8f501c016de104f48e46bff223_icgraph" alt=""/></div>
-<map name="class_markov_1_1_node_a60166d8f501c016de104f48e46bff223_icgraph" id="class_markov_1_1_node_a60166d8f501c016de104f48e46bff223_icgraph">
-<area shape="rect" title="return total edge weights" alt="" coords="255,13,491,39"/>
-<area shape="rect" href="namespace_testing_1_1_m_v_p_1_1_markov_model.html#a6e9e664c5a60cb3af863f384a47952ce" title="Test class for minimal viable Node." alt="" coords="5,5,207,47"/>
-</map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_node_a60166d8f501c016de104f48e46bff223_icgraph.svg" width="100%" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -522,17 +587,26 @@ template&lt;typename storageType &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if insertion was successful, false if it fails. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c_icgraph.png" border="0" usemap="#class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c_icgraph" alt=""/></div>
-<map name="class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c_icgraph" id="class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c_icgraph">
-<area shape="rect" title="Insert a new edge to the this.edges." alt="" coords="255,13,461,39"/>
-<area shape="rect" href="namespace_testing_1_1_m_v_p_1_1_markov_model.html#a6e9e664c5a60cb3af863f384a47952ce" title="Test class for minimal viable Node." alt="" coords="5,5,207,47"/>
-</map>
-</div>
-
+<dl class="section return"><dt>Returns</dt><dd>true if insertion was successful, false if it fails.</dd></dl>
+<p><b>Example</b> <b>Use:</b> Construct and update edges</p>
+<div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>* src = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>(<span class="charliteral">&#39;a&#39;</span>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>* target1 = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>(<span class="charliteral">&#39;b&#39;</span>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>* target2 = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_node.html">Markov::Node&lt;unsigned char&gt;</a>(<span class="charliteral">&#39;c&#39;</span>);</div>
+<div class="line"><a class="code" href="class_markov_1_1_edge.html">Markov::Edge&lt;unsigned char&gt;</a>* e1 = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_edge.html">Markov::Edge&lt;unsigned char&gt;</a>(src, target1);</div>
+<div class="line"><a class="code" href="class_markov_1_1_edge.html">Markov::Edge&lt;unsigned char&gt;</a>* e2 = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_edge.html">Markov::Edge&lt;unsigned char&gt;</a>(src, target2);</div>
+<div class="line">e1-&gt;<a class="code" href="class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad">AdjustEdge</a>(25);</div>
+<div class="line">src-&gt;<a class="code" href="class_markov_1_1_node.html#a77dbb90420f6199790a4fa986b93f85c">UpdateEdges</a>(e1);</div>
+<div class="line">e2-&gt;<a class="code" href="class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad">AdjustEdge</a>(30);</div>
+<div class="line">src-&gt;<a class="code" href="class_markov_1_1_node.html#a77dbb90420f6199790a4fa986b93f85c">UpdateEdges</a>(e2);</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00244">244</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                                                                    {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_node.html#ab93adf2f99ab396bdba8eeb6537b21fd">edges</a>.insert({ v-&gt;<a class="code" href="class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd">RightNode</a>()-&gt;<a class="code" href="class_markov_1_1_node.html#ac7cce56376f2a00764f64a0194cbb498">NodeValue</a>(), v });</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_node.html#ad2ac18d9abd220dfd90b9df6f92c5d59">edgesV</a>.push_back(v);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="comment">//this-&gt;total_edge_weights += v-&gt;EdgeWeight();</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">return</span> v-&gt;<a class="code" href="class_markov_1_1_edge.html#a97e403fa0cf2666b2f142f28372de990">TraverseNode</a>();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab254a9c976195fcb1cac4d463d030d3c"></a>
@@ -554,7 +628,18 @@ template&lt;typename storageType &gt; </div>
 </div><div class="memdoc">
 
 <p>Change total weights with offset. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>to adjust the vertice weight with </td></tr>
+  </table>
+  </dd>
+</dl>
 
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00259">259</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce">total_edge_weights</a> += offset;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -580,6 +665,12 @@ template&lt;typename storageType &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Character representation of this node. 0 for starter, 0xff for terminator. </p>
+
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00171">171</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="node_8h_source.html#l00207">Markov::Node&lt; NodeStorageType &gt;::NodeValue()</a>.</p>
+
 </div>
 </div>
 <a id="ab93adf2f99ab396bdba8eeb6537b21fd"></a>
@@ -604,9 +695,9 @@ template&lt;typename storageType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Total weights of the vertices, required by RandomNext;. </p>
-<p>A map of all edges connected to this node, where this node is at the LeftNode.</p>
-<p>Map is indexed by unsigned char, which is the character representation of the node. </p>
+<p>A map of all edges connected to this node, where this node is at the LeftNode. Map is indexed by unsigned char, which is the character representation of the node. </p>
+
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00182">182</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
 
 </div>
 </div>
@@ -623,6 +714,8 @@ template&lt;typename storageType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00165">165</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
 
 </div>
 </div>
@@ -648,16 +741,36 @@ template&lt;typename storageType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Character representation of this node. 0 for starter, 0xff for terminator. </p>
+<p>Total weights of the vertices, required by RandomNext. </p>
+
+<p class="definition">Definition at line <a class="el" href="node_8h_source.html#l00176">176</a> of file <a class="el" href="node_8h_source.html">node.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/<a class="el" href="edge_8h_source.html">edge.h</a></li>
-<li>/media/ignis/HDD/Repositories/MarkovPasswords/MarkovModel/src/<a class="el" href="node_8h_source.html">node.h</a></li>
+<li><a class="el" href="model_8h_source.html">model.h</a></li>
+<li><a class="el" href="node_8h_source.html">node.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_markov_1_1_node_html_a9851cd33ea466176a5728e3ccea6efed"><div class="ttname"><a href="class_markov_1_1_node.html#a9851cd33ea466176a5728e3ccea6efed">Markov::Node::_value</a></div><div class="ttdeci">storageType _value</div><div class="ttdoc">Character representation of this node. 0 for starter, 0xff for terminator.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00171">node.h:171</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_a174cd2f818b7c929decee6f2bcea7025"><div class="ttname"><a href="class_markov_1_1_edge.html#a174cd2f818b7c929decee6f2bcea7025">Markov::Edge::SetLeftEdge</a></div><div class="ttdeci">void SetLeftEdge(Node&lt; NodeStorageType &gt; *)</div><div class="ttdoc">Set LeftNode of this edge.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00143">edge.h:143</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_node_html_a87224bed22e5da09e0ddb91c681a6b2c"><div class="ttname"><a href="class_markov_1_1_node.html#a87224bed22e5da09e0ddb91c681a6b2c">Markov::Node::RandomNext</a></div><div class="ttdeci">Node&lt; storageType &gt; * RandomNext(Markov::Random::RandomEngine *randomEngine)</div><div class="ttdoc">Chose a random node from the list of edges, with regards to its EdgeWeight, and TraverseNode to that.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00226">node.h:226</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_a2e7d14e46631c85c84f6f8f1dd2949cd"><div class="ttname"><a href="class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd">Markov::Edge::RightNode</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * RightNode()</div><div class="ttdoc">return edge's RightNode</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00163">edge.h:163</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_node_html_ad2ac18d9abd220dfd90b9df6f92c5d59"><div class="ttname"><a href="class_markov_1_1_node.html#ad2ac18d9abd220dfd90b9df6f92c5d59">Markov::Node::edgesV</a></div><div class="ttdeci">std::vector&lt; Edge&lt; storageType &gt; * &gt; edgesV</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00165">node.h:165</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_node_html_ab93adf2f99ab396bdba8eeb6537b21fd"><div class="ttname"><a href="class_markov_1_1_node.html#ab93adf2f99ab396bdba8eeb6537b21fd">Markov::Node::edges</a></div><div class="ttdeci">std::map&lt; storageType, Edge&lt; storageType &gt; * &gt; edges</div><div class="ttdoc">A map of all edges connected to this node, where this node is at the LeftNode. Map is indexed by unsi...</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00182">node.h:182</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_node_html"><div class="ttname"><a href="class_markov_1_1_node.html">Markov::Node</a></div><div class="ttdoc">A node class that for the vertices of model. Connected with eachother using Edge.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00023">model.h:23</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_random_engine_html_a010d310dfebeacd3d7db7d0958dc1058"><div class="ttname"><a href="class_markov_1_1_random_1_1_random_engine.html#a010d310dfebeacd3d7db7d0958dc1058">Markov::Random::RandomEngine::random</a></div><div class="ttdeci">virtual unsigned long random()=0</div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_aa9d6cc6e631f1b515b4db604c96ad4ad"><div class="ttname"><a href="class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad">Markov::Edge::AdjustEdge</a></div><div class="ttdeci">void AdjustEdge(long int offset)</div><div class="ttdoc">Adjust the edge EdgeWeight with offset. Adds the offset parameter to the edge EdgeWeight.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00130">edge.h:130</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_node_html_a0e867cddf6b8dd784c36b12aa820fee9"><div class="ttname"><a href="class_markov_1_1_node.html#a0e867cddf6b8dd784c36b12aa820fee9">Markov::Node::Link</a></div><div class="ttdeci">Edge&lt; storageType &gt; * Link(Node&lt; storageType &gt; *)</div><div class="ttdoc">Link this node with another, with this node as its source.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00212">node.h:212</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_node_html_ac7cce56376f2a00764f64a0194cbb498"><div class="ttname"><a href="class_markov_1_1_node.html#ac7cce56376f2a00764f64a0194cbb498">Markov::Node::NodeValue</a></div><div class="ttdeci">unsigned char NodeValue()</div><div class="ttdoc">Return character representation of this node.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00207">node.h:207</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_node_html_ad836573fbdec1c6d7e72945f48ed081c"><div class="ttname"><a href="class_markov_1_1_node.html#ad836573fbdec1c6d7e72945f48ed081c">Markov::Node::FindEdge</a></div><div class="ttdeci">Edge&lt; storageType &gt; * FindEdge(storageType repr)</div><div class="ttdoc">Find an edge with its character representation.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00252">node.h:252</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_node_html_ade384415c5b47dca4990293b8599e6ce"><div class="ttname"><a href="class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce">Markov::Node::total_edge_weights</a></div><div class="ttdeci">long int total_edge_weights</div><div class="ttdoc">Total weights of the vertices, required by RandomNext.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00176">node.h:176</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html_a97e403fa0cf2666b2f142f28372de990"><div class="ttname"><a href="class_markov_1_1_edge.html#a97e403fa0cf2666b2f142f28372de990">Markov::Edge::TraverseNode</a></div><div class="ttdeci">Node&lt; NodeStorageType &gt; * TraverseNode()</div><div class="ttdoc">Traverse this edge to RightNode.</div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00136">edge.h:136</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_model_html"><div class="ttname"><a href="class_markov_1_1_model.html">Markov::Model&lt; char &gt;</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_node_html_a77dbb90420f6199790a4fa986b93f85c"><div class="ttname"><a href="class_markov_1_1_node.html#a77dbb90420f6199790a4fa986b93f85c">Markov::Node::UpdateEdges</a></div><div class="ttdeci">bool UpdateEdges(Edge&lt; storageType &gt; *)</div><div class="ttdoc">Insert a new edge to the this.edges.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00244">node.h:244</a></div></div>
+<div class="ttc" id="anamespacemarkopy__cli_html_a573dcc41f3a527edb70e831cd8108c78"><div class="ttname"><a href="namespacemarkopy__cli.html#a573dcc41f3a527edb70e831cd8108c78">markopy_cli.model</a></div><div class="ttdeci">def model</div><div class="ttdef"><b>Definition:</b> <a href="markopy__cli_8py_source.html#l00132">markopy_cli.py:132</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_edge_html"><div class="ttname"><a href="class_markov_1_1_edge.html">Markov::Edge</a></div><div class="ttdoc">Edge class used to link nodes in the model together.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00026">model.h:26</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

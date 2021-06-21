@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MarkovPasswords: /media/ignis/HDD/Repositories/MarkovPasswords/Markopy/src/Module/markopy.cpp File Reference</title>
+<title>Markopy: markopy.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,7 +17,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome-dark.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -26,7 +26,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MarkovPasswords
+   <div id="projectname">Markopy
    </div>
    <div id="projectbrief">Utilizing Markov Models for brute forcing attacks</div>
   </td>
@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('markopy_8cpp.html',''); initResizable(
 
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -93,35 +94,24 @@ $(document).ready(function(){initNavTree('markopy_8cpp.html',''); initResizable(
 <div class="textblock"><code>#include &quot;<a class="el" href="markov_passwords_8h_source.html">../../../MarkovPasswords/src/markovPasswords.h</a>&quot;</code><br />
 <code>#include &lt;Python.h&gt;</code><br />
 <code>#include &lt;boost/python.hpp&gt;</code><br />
+<code>#include &lt;<a class="el" href="model_matrix_8h_source.html">MarkovPasswords/src/modelMatrix.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for markopy.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="markopy_8cpp__incl.png" border="0" usemap="#_2media_2ignis_2_h_d_d_2_repositories_2_markov_passwords_2_markopy_2src_2_module_2markopy_8cpp" alt=""/></div>
-<map name="_2media_2ignis_2_h_d_d_2_repositories_2_markov_passwords_2_markopy_2src_2_module_2markopy_8cpp" id="_2media_2ignis_2_h_d_d_2_repositories_2_markov_passwords_2_markopy_2src_2_module_2markopy_8cpp">
-<area shape="rect" title=" " alt="" coords="287,5,508,61"/>
-<area shape="rect" href="markov_passwords_8h.html" title=" " alt="" coords="155,109,333,151"/>
-<area shape="rect" title=" " alt="" coords="358,117,437,143"/>
-<area shape="rect" title=" " alt="" coords="461,117,595,143"/>
-<area shape="rect" href="thread_shared_list_handler_8h.html" title=" " alt="" coords="39,199,233,225"/>
-<area shape="rect" href="model_8h.html" title=" " alt="" coords="263,199,454,225"/>
-<area shape="rect" title=" " alt="" coords="192,273,251,300"/>
-<area shape="rect" title=" " alt="" coords="94,273,167,300"/>
-<area shape="rect" title=" " alt="" coords="5,273,69,300"/>
-<area shape="rect" title=" " alt="" coords="483,348,533,375"/>
-<area shape="rect" title=" " alt="" coords="558,348,621,375"/>
-<area shape="rect" title=" " alt="" coords="645,348,720,375"/>
-<area shape="rect" title=" " alt="" coords="416,273,501,300"/>
-<area shape="rect" href="node_8h.html" title=" " alt="" coords="325,273,392,300"/>
-<area shape="rect" href="edge_8h.html" title=" " alt="" coords="121,348,188,375"/>
-<area shape="rect" title=" " alt="" coords="215,423,295,449"/>
-<area shape="rect" title=" " alt="" coords="371,348,458,375"/>
-<area shape="rect" href="random_8h.html" title=" " alt="" coords="263,348,347,375"/>
-<area shape="rect" title=" " alt="" coords="28,423,95,449"/>
-<area shape="rect" title=" " alt="" coords="119,423,190,449"/>
-<area shape="rect" title=" " alt="" coords="319,423,391,449"/>
-</map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="markopy_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
-</div><table class="memberdecls">
+</div>
+</div>
+<p><a href="markopy_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespace_markov"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_markov.html">Markov</a></td></tr>
+<tr class="memdesc:namespace_markov"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for the markov-model related classes. Contains <a class="el" href="class_markov_1_1_model.html" title="class for the final Markov Model, constructed from nodes and edges.">Model</a>, <a class="el" href="class_markov_1_1_node.html" title="A node class that for the vertices of model. Connected with eachother using Edge.">Node</a> and <a class="el" href="class_markov_1_1_edge.html" title="Edge class used to link nodes in the model together.">Edge</a> classes. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_markov_1_1_markopy"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_markov_1_1_markopy.html">Markov::Markopy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ab8db71261aa9207d3fb23344c18ce5a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="markopy_8cpp.html#ab8db71261aa9207d3fb23344c18ce5a7">BOOST_PYTHON_STATIC_LIB</a></td></tr>
@@ -129,8 +119,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a792d1fd5f8144cc57058ba70cc96794e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="markopy_8cpp.html#a792d1fd5f8144cc57058ba70cc96794e">BOOST_PYTHON_MODULE</a> (markopy)</td></tr>
-<tr class="separator:a792d1fd5f8144cc57058ba70cc96794e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a379628c09859652215496b63af2bcac9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9">Markov::Markopy::BOOST_PYTHON_MODULE</a> (markopy)</td></tr>
+<tr class="separator:a379628c09859652215496b63af2bcac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ab8db71261aa9207d3fb23344c18ce5a7"></a>
@@ -145,39 +135,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a792d1fd5f8144cc57058ba70cc96794e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a792d1fd5f8144cc57058ba70cc96794e">&#9670;&nbsp;</a></span>BOOST_PYTHON_MODULE()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">BOOST_PYTHON_MODULE </td>
-          <td>(</td>
-          <td class="paramtype">markopy&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="markopy_8cpp_a792d1fd5f8144cc57058ba70cc96794e_cgraph.png" border="0" usemap="#markopy_8cpp_a792d1fd5f8144cc57058ba70cc96794e_cgraph" alt=""/></div>
-<map name="markopy_8cpp_a792d1fd5f8144cc57058ba70cc96794e_cgraph" id="markopy_8cpp_a792d1fd5f8144cc57058ba70cc96794e_cgraph">
-<area shape="rect" title=" " alt="" coords="5,49,197,75"/>
-<area shape="rect" href="class_markov_passwords.html#adba2604e18b691066921e70dd347f691" title="Call Markov::Model::RandomWalk n times, and collect output." alt="" coords="245,22,452,49"/>
-<area shape="rect" href="class_markov_passwords.html#a74fa370b914503d1b67fec91a13b40af" title="Train the model with the dataset file." alt="" coords="259,74,438,101"/>
-<area shape="rect" href="class_markov_passwords.html#aa060fa646f2881cf74c647c65fed9bad" title="A single thread invoked by the Generate function." alt="" coords="509,9,715,51"/>
-<area shape="rect" href="class_markov_1_1_model.html#aa4a11c6679c998936332f8409ae95375" title="Do a random walk on this model." alt="" coords="785,5,946,47"/>
-<area shape="rect" href="class_markov_passwords.html#a119837058df933daa767d84fb21ad4ac" title="A single thread invoked by the Train function." alt="" coords="500,78,724,105"/>
-<area shape="rect" href="class_markov_1_1_model.html#ad252913f83fa3eb14cc3f9f92c5ee37a" title="Adjust the model with a single string." alt="" coords="785,71,946,112"/>
-<area shape="rect" href="class_thread_shared_list_handler.html#a32361c9a5810c0aae30b31fd38779c1e" title="Read the next line from the file." alt="" coords="772,136,959,177"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="markopy_8cpp_source.html#l00004">4</a> of file <a class="el" href="markopy_8cpp_source.html">markopy.cpp</a>.</p>
 
 </div>
 </div>

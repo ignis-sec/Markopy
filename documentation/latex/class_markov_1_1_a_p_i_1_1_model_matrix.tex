@@ -1,0 +1,1674 @@
+\hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix}{}\doxysection{Markov\+::A\+PI\+::Model\+Matrix Class Reference}
+\label{class_markov_1_1_a_p_i_1_1_model_matrix}\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+
+
+Class to flatten and reduce \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}} to a Matrix.  
+
+
+
+
+{\ttfamily \#include $<$model\+Matrix.\+h$>$}
+
+
+
+Inheritance diagram for Markov\+::A\+PI\+::Model\+Matrix\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_markov_1_1_a_p_i_1_1_model_matrix__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Markov\+::A\+PI\+::Model\+Matrix\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_markov_1_1_a_p_i_1_1_model_matrix__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a4f1d511d5004583aa0703726d81036af}{Model\+Matrix}} ()
+\item 
+bool \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{Construct\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Construct the related Matrix data for the model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}{Dump\+J\+S\+ON}} ()
+\begin{DoxyCompactList}\small\item\em Debug function to dump the model to a J\+S\+ON file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24}{Fast\+Random\+Walk}} (unsigned long int n, const char $\ast$wordlist\+File\+Name, int min\+Len=6, int max\+Len=12, int threads=20, bool b\+File\+IO=true)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} walk on the Matrix-\/reduced \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{Import}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Open a file to import with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Model\+::\+Import}} with std\+::ifstream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}{Train}} (const char $\ast$dataset\+File\+Name, char delimiter, int threads)
+\begin{DoxyCompactList}\small\item\em Train the model with the dataset file. \end{DoxyCompactList}\item 
+std\+::ifstream $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ac3fb665ee48937ca845d930e72e07917}{Open\+Dataset\+File}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Open dataset file and return the ifstream pointer. \end{DoxyCompactList}\item 
+std\+::ofstream $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660}{Save}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Export model to file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Generate}} (unsigned long int n, const char $\ast$wordlist\+File\+Name, int min\+Len=6, int max\+Len=12, int threads=20)
+\begin{DoxyCompactList}\small\item\em Call \mbox{\hyperlink{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}{Markov\+::\+Model\+::\+Random\+Walk}} n times, and collect output. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}{Random\+Walk}} (\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{Markov\+::\+Random\+::\+Random\+Engine}} $\ast$random\+Engine, int min\+Setting, int max\+Setting, char $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Do a random walk on this model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_model_ad252913f83fa3eb14cc3f9f92c5ee37a}{Adjust\+Edge}} (const char $\ast$payload, long int occurrence)
+\begin{DoxyCompactList}\small\item\em Adjust the model with a single string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}} (std\+::ifstream $\ast$)
+\begin{DoxyCompactList}\small\item\em Import a file to construct the model. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}} (std\+::ofstream $\ast$)
+\begin{DoxyCompactList}\small\item\em Export a file of the model. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{Export}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Open a file to export with filename, and call bool Model\+::\+Export with std\+::ofstream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ char $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}{Starter\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Return starter Node. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}$<$ char $>$ $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a2e08608905d7b042627ea844b08045fe}{Edges}} ()
+\begin{DoxyCompactList}\small\item\em Return a vector of all the edges in the model. \end{DoxyCompactList}\item 
+std\+::map$<$ char, \mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ char $>$ $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a71f6df805e340ce96e9dc4ee4ebc6537}{Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Return starter Node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{Fast\+Random\+Walk\+Partition}} (std\+::mutex $\ast$mlock, std\+::ofstream $\ast$wordlist, unsigned long int n, int min\+Len, int max\+Len, bool b\+File\+IO, int threads)
+\begin{DoxyCompactList}\small\item\em A single partition of Fast\+Random\+Walk event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}{Fast\+Random\+Walk\+Thread}} (std\+::mutex $\ast$mlock, std\+::ofstream $\ast$wordlist, unsigned long int n, int min\+Len, int max\+Len, int id, bool b\+File\+IO)
+\begin{DoxyCompactList}\small\item\em A single thread of a single partition of Fast\+Random\+Walk. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a0f95257e1344225233ab49602cd9551c}{Deallocate\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Deallocate matrix and make it ready for re-\/construction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edge\+Matrix}}
+\begin{DoxyCompactList}\small\item\em 2-\/D Character array for the edge Matrix (The characters of Nodes) \end{DoxyCompactList}\item 
+long int $\ast$$\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{value\+Matrix}}
+\begin{DoxyCompactList}\small\item\em 2-\/d Integer array for the value Matrix (For the weights of Edges) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrix\+Size}}
+\begin{DoxyCompactList}\small\item\em to hold Matrix size \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrix\+Index}}
+\begin{DoxyCompactList}\small\item\em to hold the Matrix index (To hold the orders of 2-\/D arrays\textquotesingle{}) \end{DoxyCompactList}\item 
+long int $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{total\+Edge\+Weights}}
+\begin{DoxyCompactList}\small\item\em Array of the Total \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} Weights. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}{ready}}
+\begin{DoxyCompactList}\small\item\em True when matrix is constructed. False if not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a5f51b0fdb75101b797f38b08da84848e}{Train\+Thread}} (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}{Markov\+::\+A\+P\+I\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler}} $\ast$listhandler, char delimiter)
+\begin{DoxyCompactList}\small\item\em A single thread invoked by the Train function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756}{Generate\+Thread}} (std\+::mutex $\ast$output\+Lock, unsigned long int n, std\+::ofstream $\ast$wordlist, int min\+Len, int max\+Len)
+\begin{DoxyCompactList}\small\item\em A single thread invoked by the Generate function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ifstream $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}{dataset\+File}}
+\item 
+std\+::ofstream $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_af5f012dcc495dbe769e663d6cb161d6a}{model\+Savefile}}
+\begin{DoxyCompactList}\small\item\em Dataset file input of our system ~\newline
+ \end{DoxyCompactList}\item 
+std\+::ofstream $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ac05e60de64e866027410d4fa1cd03248}{output\+File}}
+\begin{DoxyCompactList}\small\item\em File to save model of our system ~\newline
+ \end{DoxyCompactList}\item 
+std\+::map$<$ char, \mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ char $>$ $\ast$ $>$ \mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}
+\begin{DoxyCompactList}\small\item\em Map Left\+Node is the Nodes Node\+Value Map Right\+Node is the node pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ char $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starter\+Node}}
+\begin{DoxyCompactList}\small\item\em Starter Node of this model. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}$<$ char $>$ $\ast$ $>$ \mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}
+\begin{DoxyCompactList}\small\item\em A list of all edges in this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to flatten and reduce \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}} to a Matrix. 
+
+Matrix level operations can be used for Generation events, with a significant performance optimization at the cost of O(\+N) memory complexity (O(1) memory space for slow mode)
+
+To limit the maximum memory usage, each generation operation is partitioned into 50M chunks for allocation. Threads are sychronized and files are flushed every 50M operations. 
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00013}{13}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a4f1d511d5004583aa0703726d81036af}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a4f1d511d5004583aa0703726d81036af}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!ModelMatrix@{ModelMatrix}}
+\index{ModelMatrix@{ModelMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{ModelMatrix()}{ModelMatrix()}}
+{\footnotesize\ttfamily Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Model\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006                                  \{}
+\DoxyCodeLine{00007     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}{ready}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00008 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8h_source_l00161}{ready}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_markov_1_1_model_ad252913f83fa3eb14cc3f9f92c5ee37a}\label{class_markov_1_1_model_ad252913f83fa3eb14cc3f9f92c5ee37a}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!AdjustEdge@{AdjustEdge}}
+\index{AdjustEdge@{AdjustEdge}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{AdjustEdge()}{AdjustEdge()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Adjust\+Edge (\begin{DoxyParamCaption}\item[{const Node\+Storage\+Type $\ast$}]{payload,  }\item[{long int}]{occurrence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Adjust the model with a single string. 
+
+Start from the starter node, and for each character, Adjust\+Edge the edge Edge\+Weight from current node to the next, until N\+U\+LL character is reached.
+
+Then, update the edge Edge\+Weight from current node, to the terminator node.
+
+This function is used for training purposes, as it can be used for adjusting the model with each line of the corpus file.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Create an empty model and train it with string\+: \char`\"{}testdata\char`\"{} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} test[] = \textcolor{stringliteral}{"testdata"};}
+\DoxyCodeLine{\mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}}.AdjustEdge(test, 15); }
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ String that is passed from the training, and will be used to Adjust\+Edge the model with \\
+\hline
+{\em occurrence} & -\/ Occurrence of this string. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00323}{323}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00323                                                                                                  \{}
+\DoxyCodeLine{00324     NodeStorageType p = payload[0];}
+\DoxyCodeLine{00325     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* curnode = this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}};}
+\DoxyCodeLine{00326     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<NodeStorageType>}}* e;}
+\DoxyCodeLine{00327     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00328 }
+\DoxyCodeLine{00329     \textcolor{keywordflow}{if} (p == 0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00330     \textcolor{keywordflow}{while} (p != 0) \{}
+\DoxyCodeLine{00331         e = curnode-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(p);}
+\DoxyCodeLine{00332         \textcolor{keywordflow}{if} (e == NULL) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00333         e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(occurrence);}
+\DoxyCodeLine{00334         curnode = e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}();}
+\DoxyCodeLine{00335         p = payload[++i];}
+\DoxyCodeLine{00336     \}}
+\DoxyCodeLine{00337 }
+\DoxyCodeLine{00338     e = curnode-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(\textcolor{stringliteral}{'\(\backslash\)xff'});}
+\DoxyCodeLine{00339     e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(occurrence);}
+\DoxyCodeLine{00340     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00341 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}\label{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!ConstructMatrix@{ConstructMatrix}}
+\index{ConstructMatrix@{ConstructMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{ConstructMatrix()}{ConstructMatrix()}}
+{\footnotesize\ttfamily bool Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Construct\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct the related Matrix data for the model. 
+
+This operation can be used after importing/training to allocate and populate the matrix content.
+
+this will initialize\+: char$\ast$$\ast$ edge\+Matrix -\/$>$ a 2D array of mapping left and right connections of each edge. long int $\ast$$\ast$value\+Matrix -\/$>$ a 2D array representing the edge weights. int matrix\+Size -\/$>$ Size of the matrix, aka total number of nodes. char$\ast$ matrix\+Index -\/$>$ order of nodes in the model long int $\ast$total\+Edge\+Weights -\/$>$ total edge weights of each \mbox{\hyperlink{class_markov_1_1_node}{Node}}.
+
+\begin{DoxyReturn}{Returns}
+True if constructed. False if already construced. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022                                           \{}
+\DoxyCodeLine{00023     \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}{ready}}) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00024     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}} = this-\/>\mbox{\hyperlink{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}{StarterNode}}()-\/>\mbox{\hyperlink{class_markov_1_1_node_ad2ac18d9abd220dfd90b9df6f92c5d59}{edgesV}}.size() + 2;}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}} = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00027     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}} = \textcolor{keyword}{new} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}} = \textcolor{keyword}{new} \textcolor{keywordtype}{char}*[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00030     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00031         this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00032     \}}
+\DoxyCodeLine{00033     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}} = \textcolor{keyword}{new} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}*[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00034     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00035         this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00036     \}}
+\DoxyCodeLine{00037     std::map< char, Node< char > * > *\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}};}
+\DoxyCodeLine{00038     \mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}} = this-\/>\mbox{\hyperlink{class_markov_1_1_model_a71f6df805e340ce96e9dc4ee4ebc6537}{Nodes}}();}
+\DoxyCodeLine{00039     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{00040     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \textcolor{keyword}{const}\& [repr, node] : *\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}})\{}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{if}(repr!=0) this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i] = repr;}
+\DoxyCodeLine{00042         \textcolor{keywordflow}{else} this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i] = 199;}
+\DoxyCodeLine{00043         this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}}[i] = node-\/>TotalEdgeWeights();}
+\DoxyCodeLine{00044         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};j++)\{}
+\DoxyCodeLine{00045             \textcolor{keywordtype}{char} val = node-\/>NodeValue();}
+\DoxyCodeLine{00046             \textcolor{keywordflow}{if}(val < 0)\{}
+\DoxyCodeLine{00047                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0;k<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};k++)\{}
+\DoxyCodeLine{00048                     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i][k] = 0;}
+\DoxyCodeLine{00049                     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][k] = 255;}
+\DoxyCodeLine{00050                 \}}
+\DoxyCodeLine{00051                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00052             \}}
+\DoxyCodeLine{00053             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(node-\/>NodeValue() == 0 \&\& j>(this-\/>matrixSize-\/3))\{}
+\DoxyCodeLine{00054                 this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i][j] = 0;}
+\DoxyCodeLine{00055                 this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j] = 255;}
+\DoxyCodeLine{00056             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(j==(this-\/>matrixSize-\/1)) \{}
+\DoxyCodeLine{00057                 this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i][j] = 0;}
+\DoxyCodeLine{00058                 this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j] = 255;}
+\DoxyCodeLine{00059             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00060                 this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i][j] = node-\/>edgesV[j]-\/>EdgeWeight();}
+\DoxyCodeLine{00061                 this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j]  = node-\/>edgesV[j]-\/>RightNode()-\/>NodeValue();}
+\DoxyCodeLine{00062             \}}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064         \}}
+\DoxyCodeLine{00065         i++;}
+\DoxyCodeLine{00066     \}}
+\DoxyCodeLine{00067     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}{ready}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00068     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00069     \textcolor{comment}{//this-\/>DumpJSON();}}
+\DoxyCodeLine{00070 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8h_source_l00136}{edge\+Matrix}}, \mbox{\hyperlink{edge_8h_source_l00153}{Markov\+::\+Edge$<$ Node\+Storage\+Type $>$\+::\+Edge\+Weight()}}, \mbox{\hyperlink{model_matrix_8h_source_l00151}{matrix\+Index}}, \mbox{\hyperlink{model_matrix_8h_source_l00146}{matrix\+Size}}, \mbox{\hyperlink{model_8h_source_l00177}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Nodes()}}, \mbox{\hyperlink{node_8h_source_l00207}{Markov\+::\+Node$<$ storage\+Type $>$\+::\+Node\+Value()}}, \mbox{\hyperlink{model_matrix_8h_source_l00161}{ready}}, \mbox{\hyperlink{edge_8h_source_l00163}{Markov\+::\+Edge$<$ Node\+Storage\+Type $>$\+::\+Right\+Node()}}, \mbox{\hyperlink{model_8h_source_l00167}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Starter\+Node()}}, \mbox{\hyperlink{model_matrix_8h_source_l00156}{total\+Edge\+Weights}}, \mbox{\hyperlink{node_8h_source_l00269}{Markov\+::\+Node$<$ storage\+Type $>$\+::\+Total\+Edge\+Weights()}}, and \mbox{\hyperlink{model_matrix_8h_source_l00141}{value\+Matrix}}.
+
+
+
+Referenced by \mbox{\hyperlink{markopy_8cpp_source_l00012}{Markov\+::\+Markopy\+::\+B\+O\+O\+S\+T\+\_\+\+P\+Y\+T\+H\+O\+N\+\_\+\+M\+O\+D\+U\+L\+E()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00010}{Import()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00016}{Train()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a0f95257e1344225233ab49602cd9551c}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a0f95257e1344225233ab49602cd9551c}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!DeallocateMatrix@{DeallocateMatrix}}
+\index{DeallocateMatrix@{DeallocateMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{DeallocateMatrix()}{DeallocateMatrix()}}
+{\footnotesize\ttfamily bool Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Deallocate\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Deallocate matrix and make it ready for re-\/construction. 
+
+\begin{DoxyReturn}{Returns}
+True if deallocated. False if matrix was not initialized 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072                                            \{}
+\DoxyCodeLine{00073     \textcolor{keywordflow}{if}(!this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}{ready}}) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00074     \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}};}
+\DoxyCodeLine{00075     \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}};}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00078         \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i];}
+\DoxyCodeLine{00079     \}}
+\DoxyCodeLine{00080     \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}};}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00083         \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i];}
+\DoxyCodeLine{00084     \}}
+\DoxyCodeLine{00085     \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}};}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087     this-\/>matrixSize = -\/1;}
+\DoxyCodeLine{00088     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}{ready}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00089     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00090 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8h_source_l00136}{edge\+Matrix}}, \mbox{\hyperlink{model_matrix_8h_source_l00151}{matrix\+Index}}, \mbox{\hyperlink{model_matrix_8h_source_l00146}{matrix\+Size}}, \mbox{\hyperlink{model_matrix_8h_source_l00161}{ready}}, \mbox{\hyperlink{model_matrix_8h_source_l00156}{total\+Edge\+Weights}}, and \mbox{\hyperlink{model_matrix_8h_source_l00141}{value\+Matrix}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00010}{Import()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00016}{Train()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a0f95257e1344225233ab49602cd9551c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!DumpJSON@{DumpJSON}}
+\index{DumpJSON@{DumpJSON}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{DumpJSON()}{DumpJSON()}}
+{\footnotesize\ttfamily void Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Dump\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Debug function to dump the model to a J\+S\+ON file. 
+
+Might not work 100\%. Not meant for production use. 
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00092}{92}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092                                    \{}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094     std::cout << \textcolor{stringliteral}{"\{\(\backslash\)n   \(\backslash\)"index\(\backslash\)": \(\backslash\)""};}
+\DoxyCodeLine{00095     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00096         \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==\textcolor{charliteral}{'"'}) std::cout << \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)\(\backslash\)""};}
+\DoxyCodeLine{00097         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}) std::cout << \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)"};}
+\DoxyCodeLine{00098         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==0) std::cout << \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)x00"};}
+\DoxyCodeLine{00099         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(i==0) std::cout << \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)xff"};}
+\DoxyCodeLine{00100         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==\textcolor{charliteral}{'\(\backslash\)n'}) std::cout << \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)n"};}
+\DoxyCodeLine{00101         \textcolor{keywordflow}{else} std::cout << this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i];}
+\DoxyCodeLine{00102     \}}
+\DoxyCodeLine{00103     std::cout << }
+\DoxyCodeLine{00104     \textcolor{stringliteral}{"\(\backslash\)",\(\backslash\)n"}}
+\DoxyCodeLine{00105     \textcolor{stringliteral}{"   \(\backslash\)"edgemap\(\backslash\)": \{\(\backslash\)n"};}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00108         \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==\textcolor{charliteral}{'"'}) std::cout << \textcolor{stringliteral}{"      \(\backslash\)"\(\backslash\)\(\backslash\)\(\backslash\)"\(\backslash\)": ["};}
+\DoxyCodeLine{00109         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}) std::cout << \textcolor{stringliteral}{"      \(\backslash\)"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)": ["};}
+\DoxyCodeLine{00110         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==0) std::cout << \textcolor{stringliteral}{"      \(\backslash\)"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)x00\(\backslash\)": ["};}
+\DoxyCodeLine{00111         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]<0) std::cout << \textcolor{stringliteral}{"      \(\backslash\)"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)xff\(\backslash\)": ["};}
+\DoxyCodeLine{00112         \textcolor{keywordflow}{else} std::cout << \textcolor{stringliteral}{"      \(\backslash\)""} << this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i] << \textcolor{stringliteral}{"\(\backslash\)": ["};}
+\DoxyCodeLine{00113         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};j++)\{}
+\DoxyCodeLine{00114             \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j]==\textcolor{charliteral}{'"'}) std::cout << \textcolor{stringliteral}{"\(\backslash\)"\(\backslash\)\(\backslash\)\(\backslash\)"\(\backslash\)""};}
+\DoxyCodeLine{00115             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j]==\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}) std::cout << \textcolor{stringliteral}{"\(\backslash\)"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)""};}
+\DoxyCodeLine{00116             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j]==0) std::cout << \textcolor{stringliteral}{"\(\backslash\)"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)x00\(\backslash\)""};}
+\DoxyCodeLine{00117             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j]<0) std::cout << \textcolor{stringliteral}{"\(\backslash\)"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)xff\(\backslash\)""};}
+\DoxyCodeLine{00118             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>matrixIndex[i]==\textcolor{charliteral}{'\(\backslash\)n'}) std::cout << \textcolor{stringliteral}{"\(\backslash\)"\(\backslash\)\(\backslash\)n\(\backslash\)""};}
+\DoxyCodeLine{00119             \textcolor{keywordflow}{else} std::cout << \textcolor{stringliteral}{"\(\backslash\)""} << this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j] << \textcolor{stringliteral}{"\(\backslash\)""};}
+\DoxyCodeLine{00120             \textcolor{keywordflow}{if}(j!=this-\/>matrixSize-\/1) std::cout << \textcolor{stringliteral}{", "};}
+\DoxyCodeLine{00121         \}}
+\DoxyCodeLine{00122         std::cout << \textcolor{stringliteral}{"],\(\backslash\)n"};}
+\DoxyCodeLine{00123     \}}
+\DoxyCodeLine{00124     std::cout << \textcolor{stringliteral}{"\},\(\backslash\)n"};}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126     std::cout << \textcolor{stringliteral}{"\(\backslash\)"   weightmap\(\backslash\)": \{\(\backslash\)n"};}
+\DoxyCodeLine{00127     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00128         \textcolor{keywordflow}{if}(this-\/>matrixIndex[i]==\textcolor{charliteral}{'"'}) std::cout << \textcolor{stringliteral}{"      \(\backslash\)"\(\backslash\)\(\backslash\)\(\backslash\)"\(\backslash\)": ["};}
+\DoxyCodeLine{00129         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>matrixIndex[i]==\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}) std::cout << \textcolor{stringliteral}{"      \(\backslash\)"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)": ["};}
+\DoxyCodeLine{00130         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>matrixIndex[i]==0) std::cout << \textcolor{stringliteral}{"      \(\backslash\)"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)x00\(\backslash\)": ["};}
+\DoxyCodeLine{00131         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>matrixIndex[i]<0) std::cout << \textcolor{stringliteral}{"      \(\backslash\)"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)xff\(\backslash\)": ["};}
+\DoxyCodeLine{00132         \textcolor{keywordflow}{else} std::cout << \textcolor{stringliteral}{"      \(\backslash\)""} << this-\/>matrixIndex[i] << \textcolor{stringliteral}{"\(\backslash\)": ["};}
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{00134         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};j++)\{}
+\DoxyCodeLine{00135             std::cout << this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i][j];}
+\DoxyCodeLine{00136             \textcolor{keywordflow}{if}(j!=this-\/>matrixSize-\/1) std::cout << \textcolor{stringliteral}{", "};}
+\DoxyCodeLine{00137         \}}
+\DoxyCodeLine{00138         std::cout << \textcolor{stringliteral}{"],\(\backslash\)n"};}
+\DoxyCodeLine{00139     \}}
+\DoxyCodeLine{00140     std::cout << \textcolor{stringliteral}{"  \}\(\backslash\)n\}\(\backslash\)n"};}
+\DoxyCodeLine{00141 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8h_source_l00136}{edge\+Matrix}}, \mbox{\hyperlink{model_matrix_8h_source_l00151}{matrix\+Index}}, \mbox{\hyperlink{model_matrix_8h_source_l00146}{matrix\+Size}}, and \mbox{\hyperlink{model_matrix_8h_source_l00141}{value\+Matrix}}.
+
+
+
+Referenced by \mbox{\hyperlink{markopy_8cpp_source_l00012}{Markov\+::\+Markopy\+::\+B\+O\+O\+S\+T\+\_\+\+P\+Y\+T\+H\+O\+N\+\_\+\+M\+O\+D\+U\+L\+E()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_model_a2e08608905d7b042627ea844b08045fe}\label{class_markov_1_1_model_a2e08608905d7b042627ea844b08045fe}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Edges@{Edges}}
+\index{Edges@{Edges}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{Edges()}{Edges()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_markov_1_1_edge}{Edge}}$<$char $>$$\ast$$>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Return a vector of all the edges in the model. 
+
+\begin{DoxyReturn}{Returns}
+vector of edges 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00172}{172}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00172 \{ \textcolor{keywordflow}{return} \&\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}\label{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Export@{Export}}
+\index{Export@{Export}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{Export()}{Export()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Export (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Open a file to export with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Model\+::\+Export}} with std\+::ofstream. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, False for incomplete models or corrupt file formats
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{Use\+:}} Export file to filename 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}};}
+\DoxyCodeLine{\mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}}.Export(\textcolor{stringliteral}{"test.mdl"});}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00286}{286}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00286                                                               \{}
+\DoxyCodeLine{00287     std::ofstream exportfile;}
+\DoxyCodeLine{00288     exportfile.open(filename);}
+\DoxyCodeLine{00289     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}}(\&exportfile);}
+\DoxyCodeLine{00290 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}\label{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Export@{Export}}
+\index{Export@{Export}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{Export()}{Export()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Export (\begin{DoxyParamCaption}\item[{std\+::ofstream $\ast$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Export a file of the model. 
+
+File contains a list of edges. Format is\+: Left\+\_\+repr;Edge\+Weight;right\+\_\+repr. For more information on the format, check out the project wiki or github readme.
+
+Iterate over this vertices, and their edges, and write them to file. \begin{DoxyReturn}{Returns}
+True if successful, False for incomplete models.
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{Use\+:}} Export file to ofstream 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}};}
+\DoxyCodeLine{std::ofstream file(\textcolor{stringliteral}{"test.mdl"});}
+\DoxyCodeLine{\mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}}.Export(\&file);}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00274}{274}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00274                                                         \{}
+\DoxyCodeLine{00275     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<NodeStorageType>}}* e;}
+\DoxyCodeLine{00276     \textcolor{keywordflow}{for} (std::vector<int>::size\_type i = 0; i != this-\/>\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}.size(); i++) \{}
+\DoxyCodeLine{00277         e = this-\/>\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}[i];}
+\DoxyCodeLine{00278         \textcolor{comment}{//std::cout << e-\/>LeftNode()-\/>NodeValue() << "," << e-\/>EdgeWeight() << "," << e-\/>RightNode()-\/>NodeValue() << "\(\backslash\)n";}}
+\DoxyCodeLine{00279         *\mbox{\hyperlink{namespacemodel__2gram_a2c21010331f2adf96f64d1e90d019e76}{f}} << e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{LeftNode}}()-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}() << \textcolor{stringliteral}{","} << e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{EdgeWeight}}() << \textcolor{stringliteral}{","} << e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}()-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}() << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00280     \}}
+\DoxyCodeLine{00281 }
+\DoxyCodeLine{00282     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00283 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!FastRandomWalk@{FastRandomWalk}}
+\index{FastRandomWalk@{FastRandomWalk}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{FastRandomWalk()}{FastRandomWalk()}}
+{\footnotesize\ttfamily void Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk (\begin{DoxyParamCaption}\item[{unsigned long int}]{n,  }\item[{const char $\ast$}]{wordlist\+File\+Name,  }\item[{int}]{min\+Len = {\ttfamily 6},  }\item[{int}]{max\+Len = {\ttfamily 12},  }\item[{int}]{threads = {\ttfamily 20},  }\item[{bool}]{b\+File\+IO = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{namespace_markov_1_1_random}{Random}} walk on the Matrix-\/reduced \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}. 
+
+This has an O(\+N) Memory complexity. To limit the maximum usage, requests with n$>$50M are partitioned using \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Partition}}.
+
+If n$>$50M, threads are going to be synced, files are going to be flushed, and buffers will be reallocated every 50M generations. This comes at a minor performance penalty.
+
+While it has the same functionality, this operation reduces \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate}} runtime by \%96.\+5
+
+This function has deprecated \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate}}, and will eventually replace it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ Number of passwords to generate. \\
+\hline
+{\em wordlist\+File\+Name} & -\/ Filename to write to \\
+\hline
+{\em min\+Len} & -\/ Minimum password length to generate \\
+\hline
+{\em max\+Len} & -\/ Maximum password length to generate \\
+\hline
+{\em threads} & -\/ number of OS threads to spawn \\
+\hline
+{\em b\+File\+IO} & -\/ If false, filename will be ignored and will output to stdout.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov::API::ModelMatrix}} mp;}
+\DoxyCodeLine{mp.\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{Import}}(\textcolor{stringliteral}{"models/finished.mdl"});}
+\DoxyCodeLine{mp.\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24}{FastRandomWalk}}(50000000,\textcolor{stringliteral}{"./wordlist.txt"},6,12,25, \textcolor{keyword}{true});}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00195}{195}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00195                                                                                                                                              \{}
+\DoxyCodeLine{00196     }
+\DoxyCodeLine{00197 }
+\DoxyCodeLine{00198     std::ofstream wordlist; }
+\DoxyCodeLine{00199     \textcolor{keywordflow}{if}(bFileIO)}
+\DoxyCodeLine{00200         wordlist.open(wordlistFileName);}
+\DoxyCodeLine{00201 }
+\DoxyCodeLine{00202     std::mutex mlock;}
+\DoxyCodeLine{00203     \textcolor{keywordflow}{if}(n<=50000000ull) \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{FastRandomWalkPartition}}(\&mlock, \&wordlist, n, minLen, maxLen, bFileIO, threads);}
+\DoxyCodeLine{00204     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00205         \textcolor{keywordtype}{int} numberOfPartitions = n/50000000ull;}
+\DoxyCodeLine{00206         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<numberOfPartitions;i++)}
+\DoxyCodeLine{00207             this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{FastRandomWalkPartition}}(\&mlock, \&wordlist, 50000000ull, minLen, maxLen, bFileIO, threads);}
+\DoxyCodeLine{00208     \}}
+\DoxyCodeLine{00209 }
+\DoxyCodeLine{00210 }
+\DoxyCodeLine{00211 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8cpp_source_l00214}{Fast\+Random\+Walk\+Partition()}}.
+
+
+
+Referenced by \mbox{\hyperlink{markopy_8cpp_source_l00012}{Markov\+::\+Markopy\+::\+B\+O\+O\+S\+T\+\_\+\+P\+Y\+T\+H\+O\+N\+\_\+\+M\+O\+D\+U\+L\+E()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}\label{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!FastRandomWalkPartition@{FastRandomWalkPartition}}
+\index{FastRandomWalkPartition@{FastRandomWalkPartition}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{FastRandomWalkPartition()}{FastRandomWalkPartition()}}
+{\footnotesize\ttfamily void Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Partition (\begin{DoxyParamCaption}\item[{std\+::mutex $\ast$}]{mlock,  }\item[{std\+::ofstream $\ast$}]{wordlist,  }\item[{unsigned long int}]{n,  }\item[{int}]{min\+Len,  }\item[{int}]{max\+Len,  }\item[{bool}]{b\+File\+IO,  }\item[{int}]{threads }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A single partition of Fast\+Random\+Walk event. 
+
+Since Fast\+Random\+Walk has to allocate its output buffer before operation starts and writes data in chunks, large n parameters would lead to huge memory allocations. {\bfseries{Without}} {\bfseries{Partitioning\+:}} 
+\begin{DoxyItemize}
+\item 50M results 12 characters max -\/$>$ 550 Mb Memory allocation
+\item 5B results 12 characters max -\/$>$ 55 Gb Memory allocation
+\item 50B results 12 characters max -\/$>$ 550GB Memory allocation
+\end{DoxyItemize}
+
+Instead, Fast\+Random\+Walk is partitioned per 50M generations to limit the top memory need.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mlock} & -\/ mutex lock to distribute to child threads \\
+\hline
+{\em wordlist} & -\/ Reference to the wordlist file to write to \\
+\hline
+{\em n} & -\/ Number of passwords to generate. \\
+\hline
+{\em wordlist\+File\+Name} & -\/ Filename to write to \\
+\hline
+{\em min\+Len} & -\/ Minimum password length to generate \\
+\hline
+{\em max\+Len} & -\/ Maximum password length to generate \\
+\hline
+{\em threads} & -\/ number of OS threads to spawn \\
+\hline
+{\em b\+File\+IO} & -\/ If false, filename will be ignored and will output to stdout. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00214}{214}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00214                                                                                                                                                                 \{}
+\DoxyCodeLine{00215     }
+\DoxyCodeLine{00216     \textcolor{keywordtype}{int} iterationsPerThread = n/threads;}
+\DoxyCodeLine{00217     \textcolor{keywordtype}{int} iterationsPerThreadCarryOver = n\%threads;}
+\DoxyCodeLine{00218 }
+\DoxyCodeLine{00219     std::vector<std::thread*> threadsV;}
+\DoxyCodeLine{00220     }
+\DoxyCodeLine{00221     \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = 0;}
+\DoxyCodeLine{00222     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<threads;i++)\{}
+\DoxyCodeLine{00223         threadsV.push\_back(\textcolor{keyword}{new} std::thread(\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}{Markov::API::ModelMatrix::FastRandomWalkThread}}, \textcolor{keyword}{this}, mlock, wordlist, iterationsPerThread, minLen, maxLen, \textcolor{keywordtype}{id}, bFileIO));}
+\DoxyCodeLine{00224         \textcolor{keywordtype}{id}++;}
+\DoxyCodeLine{00225     \}}
+\DoxyCodeLine{00226 }
+\DoxyCodeLine{00227     threadsV.push\_back(\textcolor{keyword}{new} std::thread(\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}{Markov::API::ModelMatrix::FastRandomWalkThread}}, \textcolor{keyword}{this}, mlock, wordlist, iterationsPerThreadCarryOver, minLen, maxLen, \textcolor{keywordtype}{id}, bFileIO));}
+\DoxyCodeLine{00228 }
+\DoxyCodeLine{00229     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<threads;i++)\{}
+\DoxyCodeLine{00230         threadsV[i]-\/>join();}
+\DoxyCodeLine{00231     \}}
+\DoxyCodeLine{00232 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8cpp_source_l00144}{Fast\+Random\+Walk\+Thread()}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00195}{Fast\+Random\+Walk()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!FastRandomWalkThread@{FastRandomWalkThread}}
+\index{FastRandomWalkThread@{FastRandomWalkThread}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{FastRandomWalkThread()}{FastRandomWalkThread()}}
+{\footnotesize\ttfamily void Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Thread (\begin{DoxyParamCaption}\item[{std\+::mutex $\ast$}]{mlock,  }\item[{std\+::ofstream $\ast$}]{wordlist,  }\item[{unsigned long int}]{n,  }\item[{int}]{min\+Len,  }\item[{int}]{max\+Len,  }\item[{int}]{id,  }\item[{bool}]{b\+File\+IO }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A single thread of a single partition of Fast\+Random\+Walk. 
+
+A Fast\+Random\+Walk\+Partition will initiate as many of this function as requested.
+
+This function contains the bulk of the generation algorithm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mlock} & -\/ mutex lock to distribute to child threads \\
+\hline
+{\em wordlist} & -\/ Reference to the wordlist file to write to \\
+\hline
+{\em n} & -\/ Number of passwords to generate. \\
+\hline
+{\em wordlist\+File\+Name} & -\/ Filename to write to \\
+\hline
+{\em min\+Len} & -\/ Minimum password length to generate \\
+\hline
+{\em max\+Len} & -\/ Maximum password length to generate \\
+\hline
+{\em id} & -\/ {\bfseries{D\+E\+P\+R\+E\+C\+A\+T\+ED}} Thread id -\/ No longer used \\
+\hline
+{\em b\+File\+IO} & -\/ If false, filename will be ignored and will output to stdout. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00144}{144}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00144                                                                                                                                                         \{}
+\DoxyCodeLine{00145     \textcolor{keywordflow}{if}(n==0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00146 }
+\DoxyCodeLine{00147     \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{00148     \textcolor{keywordtype}{char}* e;}
+\DoxyCodeLine{00149     \textcolor{keywordtype}{char} *res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[maxLen*n];}
+\DoxyCodeLine{00150     \textcolor{keywordtype}{int} index = 0;}
+\DoxyCodeLine{00151     \textcolor{keywordtype}{char} next;}
+\DoxyCodeLine{00152     \textcolor{keywordtype}{int} len=0;}
+\DoxyCodeLine{00153     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} selection;}
+\DoxyCodeLine{00154     \textcolor{keywordtype}{char} cur;}
+\DoxyCodeLine{00155     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} bufferctr = 0;}
+\DoxyCodeLine{00156     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; i++) \{}
+\DoxyCodeLine{00157         cur=199;}
+\DoxyCodeLine{00158         len=0;}
+\DoxyCodeLine{00159         \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{00160             e = \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{strchr}}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}, cur);}
+\DoxyCodeLine{00161             index = e -\/ this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}};}
+\DoxyCodeLine{00162             selection = MarsagliaRandomEngine.\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{random}}() \% this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}}[index];}
+\DoxyCodeLine{00163             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};j++)\{}
+\DoxyCodeLine{00164                 selection -\/= this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[index][j];}
+\DoxyCodeLine{00165                 \textcolor{keywordflow}{if} (selection < 0)\{}
+\DoxyCodeLine{00166                     next = this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[index][j];}
+\DoxyCodeLine{00167                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00168                 \}}
+\DoxyCodeLine{00169             \}}
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{00171             \textcolor{keywordflow}{if} (len >= maxLen)  \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00172             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((next < 0) \&\& (len < minLen)) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00173             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (next < 0) \textcolor{keywordflow}{break};  }
+\DoxyCodeLine{00174             cur = next;}
+\DoxyCodeLine{00175             res[bufferctr + len++] = cur;}
+\DoxyCodeLine{00176         \}}
+\DoxyCodeLine{00177         res[bufferctr + len++] = \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00178         bufferctr+=len;}
+\DoxyCodeLine{00179         }
+\DoxyCodeLine{00180     \}}
+\DoxyCodeLine{00181     \textcolor{keywordflow}{if}(bFileIO)\{}
+\DoxyCodeLine{00182         mlock-\/>lock();}
+\DoxyCodeLine{00183         *wordlist << res;}
+\DoxyCodeLine{00184         mlock-\/>unlock();}
+\DoxyCodeLine{00185     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00186         mlock-\/>lock();}
+\DoxyCodeLine{00187         std::cout << res;}
+\DoxyCodeLine{00188         mlock-\/>unlock();}
+\DoxyCodeLine{00189     \}}
+\DoxyCodeLine{00190     \textcolor{keyword}{delete} res;}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8h_source_l00136}{edge\+Matrix}}, \mbox{\hyperlink{model_matrix_8h_source_l00151}{matrix\+Index}}, \mbox{\hyperlink{model_matrix_8h_source_l00146}{matrix\+Size}}, \mbox{\hyperlink{random_8h_source_l00131}{Markov\+::\+Random\+::\+Marsaglia\+::random()}}, \mbox{\hyperlink{model_matrix_8h_source_l00156}{total\+Edge\+Weights}}, and \mbox{\hyperlink{model_matrix_8h_source_l00141}{value\+Matrix}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00214}{Fast\+Random\+Walk\+Partition()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Generate@{Generate}}
+\index{Generate@{Generate}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{Generate()}{Generate()}}
+{\footnotesize\ttfamily void Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate (\begin{DoxyParamCaption}\item[{unsigned long int}]{n,  }\item[{const char $\ast$}]{wordlist\+File\+Name,  }\item[{int}]{min\+Len = {\ttfamily 6},  }\item[{int}]{max\+Len = {\ttfamily 12},  }\item[{int}]{threads = {\ttfamily 20} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Call \mbox{\hyperlink{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}{Markov\+::\+Model\+::\+Random\+Walk}} n times, and collect output. 
+
+Generate from model and write results to a file. a much more performance-\/optimized method. Fast\+Random\+Walk will reduce the runtime by \%96.\+5 on average.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]See Markov\+::\+A\+P\+I\+::\+Matrix\+Model\+::\+Fast\+Random\+Walk for more information. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ Number of passwords to generate. \\
+\hline
+{\em wordlist\+File\+Name} & -\/ Filename to write to \\
+\hline
+{\em min\+Len} & -\/ Minimum password length to generate \\
+\hline
+{\em max\+Len} & -\/ Maximum password length to generate \\
+\hline
+{\em threads} & -\/ number of OS threads to spawn \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{markov_passwords_8cpp_source}{markov\+Passwords.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110                                                                                                                                \{}
+\DoxyCodeLine{00111     \textcolor{keywordtype}{char}* res;}
+\DoxyCodeLine{00112     \textcolor{keywordtype}{char} print[100];}
+\DoxyCodeLine{00113     std::ofstream wordlist; }
+\DoxyCodeLine{00114     wordlist.open(wordlistFileName);}
+\DoxyCodeLine{00115     std::mutex mlock;}
+\DoxyCodeLine{00116     \textcolor{keywordtype}{int} iterationsPerThread = n/threads;}
+\DoxyCodeLine{00117     \textcolor{keywordtype}{int} iterationsCarryOver = n\%threads;}
+\DoxyCodeLine{00118     std::vector<std::thread*> threadsV;}
+\DoxyCodeLine{00119     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<threads;i++)\{}
+\DoxyCodeLine{00120         threadsV.push\_back(\textcolor{keyword}{new} std::thread(\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756}{Markov::API::MarkovPasswords::GenerateThread}}, \textcolor{keyword}{this}, \&mlock, iterationsPerThread, \&wordlist, minLen, maxLen));}
+\DoxyCodeLine{00121     \}}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<threads;i++)\{}
+\DoxyCodeLine{00124         threadsV[i]-\/>join();}
+\DoxyCodeLine{00125         \textcolor{keyword}{delete} threadsV[i];}
+\DoxyCodeLine{00126     \}}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756}{GenerateThread}}(\&mlock, iterationsCarryOver, \&wordlist, minLen, maxLen);}
+\DoxyCodeLine{00129     }
+\DoxyCodeLine{00130 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{markov_passwords_8cpp_source_l00132}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate\+Thread()}}.
+
+
+
+Referenced by \mbox{\hyperlink{markopy_8cpp_source_l00012}{Markov\+::\+Markopy\+::\+B\+O\+O\+S\+T\+\_\+\+P\+Y\+T\+H\+O\+N\+\_\+\+M\+O\+D\+U\+L\+E()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!GenerateThread@{GenerateThread}}
+\index{GenerateThread@{GenerateThread}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{GenerateThread()}{GenerateThread()}}
+{\footnotesize\ttfamily void Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate\+Thread (\begin{DoxyParamCaption}\item[{std\+::mutex $\ast$}]{output\+Lock,  }\item[{unsigned long int}]{n,  }\item[{std\+::ofstream $\ast$}]{wordlist,  }\item[{int}]{min\+Len,  }\item[{int}]{max\+Len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+A single thread invoked by the Generate function. 
+
+{\bfseries{D\+E\+P\+R\+E\+C\+A\+T\+ED\+:}} See Markov\+::\+A\+P\+I\+::\+Matrix\+Model\+::\+Fast\+Random\+Walk\+Thread for more information. This has been replaced with a much more performance-\/optimized method. Fast\+Random\+Walk will reduce the runtime by \%96.\+5 on average.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+Lock} & -\/ shared mutex lock to lock during output operation. Prevents race condition on write. \\
+\hline
+{\em n} & number of lines to be generated by this thread \\
+\hline
+{\em wordlist} & wordlistfile \\
+\hline
+{\em min\+Len} & -\/ Minimum password length to generate \\
+\hline
+{\em max\+Len} & -\/ Maximum password length to generate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8cpp_source_l00132}{132}} of file \mbox{\hyperlink{markov_passwords_8cpp_source}{markov\+Passwords.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132                                                                                                                                        \{}
+\DoxyCodeLine{00133     \textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[maxLen+5];}
+\DoxyCodeLine{00134     \textcolor{keywordflow}{if}(n==0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136     \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{00137     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; i++) \{}
+\DoxyCodeLine{00138         this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}{RandomWalk}}(\&MarsagliaRandomEngine, minLen, maxLen, res); }
+\DoxyCodeLine{00139         outputLock-\/>lock();}
+\DoxyCodeLine{00140         *wordlist << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00141         outputLock-\/>unlock();}
+\DoxyCodeLine{00142     \}}
+\DoxyCodeLine{00143 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_8h_source_l00293}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Random\+Walk()}}.
+
+
+
+Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00110}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}\label{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Import@{Import}}
+\index{Import@{Import}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{Import()}{Import()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Import (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Open a file to import with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Model\+::\+Import}} with std\+::ifstream. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, False for incomplete models or corrupt file formats
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{Use\+:}} Import a file with filename 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}};}
+\DoxyCodeLine{\mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}}.Import(\textcolor{stringliteral}{"test.mdl"});}
+\end{DoxyCode}
+ Construct the matrix when done. 
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010                                                      \{}
+\DoxyCodeLine{00011     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a0f95257e1344225233ab49602cd9551c}{DeallocateMatrix}}();}
+\DoxyCodeLine{00012     this-\/>\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Markov::API::MarkovPasswords::Import}}(filename);}
+\DoxyCodeLine{00013     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{ConstructMatrix}}();}
+\DoxyCodeLine{00014 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8cpp_source_l00022}{Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00072}{Deallocate\+Matrix()}}, and \mbox{\hyperlink{model_8h_source_l00266}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Import()}}.
+
+
+
+Referenced by \mbox{\hyperlink{markopy_8cpp_source_l00012}{Markov\+::\+Markopy\+::\+B\+O\+O\+S\+T\+\_\+\+P\+Y\+T\+H\+O\+N\+\_\+\+M\+O\+D\+U\+L\+E()}}, and \mbox{\hyperlink{src_2main_8cpp_source_l00014}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}\label{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Import@{Import}}
+\index{Import@{Import}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{Import()}{Import()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Import (\begin{DoxyParamCaption}\item[{std\+::ifstream $\ast$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Import a file to construct the model. 
+
+File contains a list of edges. For more info on the file format, check out the wiki and github readme pages. Format is\+: Left\+\_\+repr;Edge\+Weight;right\+\_\+repr
+
+Iterate over this list, and construct nodes and edges accordingly. \begin{DoxyReturn}{Returns}
+True if successful, False for incomplete models or corrupt file formats
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{Use\+:}} Import a file from ifstream 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}};}
+\DoxyCodeLine{std::ifstream file(\textcolor{stringliteral}{"test.mdl"});}
+\DoxyCodeLine{\mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}}.Import(\&file);}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00207}{207}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00207                                                         \{}
+\DoxyCodeLine{00208     std::string cell;}
+\DoxyCodeLine{00209 }
+\DoxyCodeLine{00210     \textcolor{keywordtype}{char} src;}
+\DoxyCodeLine{00211     \textcolor{keywordtype}{char} target;}
+\DoxyCodeLine{00212     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} oc;}
+\DoxyCodeLine{00213 }
+\DoxyCodeLine{00214     \textcolor{keywordflow}{while} (std::getline(*\mbox{\hyperlink{namespacemodel__2gram_a2c21010331f2adf96f64d1e90d019e76}{f}}, cell)) \{}
+\DoxyCodeLine{00215         \textcolor{comment}{//std::cout << "cell: " << cell << std::endl;}}
+\DoxyCodeLine{00216         src = cell[0];}
+\DoxyCodeLine{00217         target = cell[cell.length() -\/ 1];}
+\DoxyCodeLine{00218         \textcolor{keywordtype}{char}* j;}
+\DoxyCodeLine{00219         oc = std::strtol(cell.substr(2, cell.length() -\/ 2).c\_str(),\&j,10);}
+\DoxyCodeLine{00220         \textcolor{comment}{//std::cout << oc << "\(\backslash\)n";}}
+\DoxyCodeLine{00221         \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* srcN;}
+\DoxyCodeLine{00222         \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* targetN;}
+\DoxyCodeLine{00223         \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<NodeStorageType>}}* e;}
+\DoxyCodeLine{00224         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(src) == this-\/>nodes.end()) \{}
+\DoxyCodeLine{00225             srcN = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}(src);}
+\DoxyCodeLine{00226             this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.insert(std::pair<\textcolor{keywordtype}{char}, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}*>(src, srcN));}
+\DoxyCodeLine{00227             \textcolor{comment}{//std::cout << "Creating new node at start.\(\backslash\)n";}}
+\DoxyCodeLine{00228         \}}
+\DoxyCodeLine{00229         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00230             srcN = this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(src)-\/>second;}
+\DoxyCodeLine{00231         \}}
+\DoxyCodeLine{00232 }
+\DoxyCodeLine{00233         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(target) == this-\/>nodes.end()) \{}
+\DoxyCodeLine{00234             targetN = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}(target);}
+\DoxyCodeLine{00235             this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.insert(std::pair<\textcolor{keywordtype}{char}, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}*>(target, targetN));}
+\DoxyCodeLine{00236             \textcolor{comment}{//std::cout << "Creating new node at end.\(\backslash\)n";}}
+\DoxyCodeLine{00237         \}}
+\DoxyCodeLine{00238         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00239             targetN = this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(target)-\/>second;}
+\DoxyCodeLine{00240         \}}
+\DoxyCodeLine{00241         e = srcN-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(targetN);}
+\DoxyCodeLine{00242         e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(oc);}
+\DoxyCodeLine{00243         this-\/>\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}.push\_back(e);}
+\DoxyCodeLine{00244 }
+\DoxyCodeLine{00245         \textcolor{comment}{//std::cout << int(srcN-\/>NodeValue()) << " -\/-\/" << e-\/>EdgeWeight() << "-\/-\/> " << int(targetN-\/>NodeValue()) << "\(\backslash\)n";}}
+\DoxyCodeLine{00246 }
+\DoxyCodeLine{00247 }
+\DoxyCodeLine{00248     \}}
+\DoxyCodeLine{00249 }
+\DoxyCodeLine{00250     \textcolor{keywordflow}{for} (std::pair<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}*> \textcolor{keyword}{const}\& x : this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}) \{}
+\DoxyCodeLine{00251         \textcolor{comment}{//std::cout << "Total edges in EdgesV: " << x.second-\/>edgesV.size() << "\(\backslash\)n"; }}
+\DoxyCodeLine{00252         std::sort (x.second-\/>edgesV.begin(), x.second-\/>edgesV.end(), [](Edge<NodeStorageType> *lhs, Edge<NodeStorageType> *rhs)-\/>bool\{}
+\DoxyCodeLine{00253             return lhs-\/>EdgeWeight() > rhs-\/>EdgeWeight();}
+\DoxyCodeLine{00254         \});}
+\DoxyCodeLine{00255         \textcolor{comment}{//for(int i=0;i<x.second-\/>edgesV.size();i++)}}
+\DoxyCodeLine{00256         \textcolor{comment}{//  std::cout << x.second-\/>edgesV[i]-\/>EdgeWeight() << ", ";}}
+\DoxyCodeLine{00257         \textcolor{comment}{//std::cout << "\(\backslash\)n";}}
+\DoxyCodeLine{00258     \}}
+\DoxyCodeLine{00259     \textcolor{comment}{//std::cout << "Total number of nodes: " << this-\/>nodes.size() << std::endl;}}
+\DoxyCodeLine{00260     \textcolor{comment}{//std::cout << "Total number of edges: " << this-\/>edges.size() << std::endl;}}
+\DoxyCodeLine{00261 }
+\DoxyCodeLine{00262     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00263 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_model_a71f6df805e340ce96e9dc4ee4ebc6537}\label{class_markov_1_1_model_a71f6df805e340ce96e9dc4ee4ebc6537}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Nodes@{Nodes}}
+\index{Nodes@{Nodes}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{Nodes()}{Nodes()}}
+{\footnotesize\ttfamily std\+::map$<$char , \mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$char $>$$\ast$$>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Return starter \mbox{\hyperlink{class_markov_1_1_node}{Node}}. 
+
+\begin{DoxyReturn}{Returns}
+starter node with 00 Node\+Value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00177}{177}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00177 \{ \textcolor{keywordflow}{return} \&\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_ac3fb665ee48937ca845d930e72e07917}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_ac3fb665ee48937ca845d930e72e07917}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!OpenDatasetFile@{OpenDatasetFile}}
+\index{OpenDatasetFile@{OpenDatasetFile}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{OpenDatasetFile()}{OpenDatasetFile()}}
+{\footnotesize\ttfamily std\+::ifstream $\ast$ Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Open\+Dataset\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Open dataset file and return the ifstream pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ Filename to open \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ifstream$\ast$ to the the dataset file 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{markov_passwords_8cpp_source}{markov\+Passwords.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043                                                                           \{}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     std::ifstream* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}{datasetFile}};}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047     std::ifstream newFile(filename);}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}{datasetFile}} = \&newFile;}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051     this-\/>\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(datasetFile);}
+\DoxyCodeLine{00052     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}{datasetFile}};}
+\DoxyCodeLine{00053 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_8h_source_l00207}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Import()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_ac3fb665ee48937ca845d930e72e07917_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}\label{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!RandomWalk@{RandomWalk}}
+\index{RandomWalk@{RandomWalk}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{RandomWalk()}{RandomWalk()}}
+{\footnotesize\ttfamily char  $\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Random\+Walk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{Markov\+::\+Random\+::\+Random\+Engine}} $\ast$}]{random\+Engine,  }\item[{int}]{min\+Setting,  }\item[{int}]{max\+Setting,  }\item[{Node\+Storage\+Type $\ast$}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Do a random walk on this model. 
+
+Start from the starter node, on each node, invoke Random\+Next using the random engine on current node, until terminator node is reached. If terminator node is reached before minimum length criateria is reached, ignore the last selection and re-\/invoke random\+Next
+
+If maximum length criteria is reached but final node is not, cut off the generation and proceed to the final node. This function takes \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{Markov\+::\+Random\+::\+Random\+Engine}} as a parameter to generate pseudo random numbers from
+
+This library is shipped with two random engines, Marsaglia and Mersenne. While mersenne output is higher in entropy, most use cases don\textquotesingle{}t really need super high entropy output, so \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} is preferable for better performance.
+
+This function W\+I\+LL N\+OT reallocate buffer. Make sure no out of bound writes are happening via maximum length criteria.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Generate 10 lines, with 5 to 10 characters, and print the output. Use Marsaglia 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}};}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model_ae1d564c132cbf681f10f8ed0dfc772df}{Model}}.import(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
+\DoxyCodeLine{    this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}{RandomWalk}}(\&MarsagliaRandomEngine, 5, 10, res); }
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em random\+Engine} & \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} Engine to use for the random walks. For examples, see \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Markov\+::\+Random\+::\+Mersenne}} and \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} \\
+\hline
+{\em min\+Setting} & Minimum number of characters to generate \\
+\hline
+{\em max\+Setting} & Maximum number of character to generate \\
+\hline
+{\em buffer} & buffer to write the result to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Null terminated string that was generated. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00293}{293}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00293                                                                                                                                                          \{}
+\DoxyCodeLine{00294     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* n = this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}};}
+\DoxyCodeLine{00295     \textcolor{keywordtype}{int} len = 0;}
+\DoxyCodeLine{00296     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* temp\_node;}
+\DoxyCodeLine{00297     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{00298         temp\_node = n-\/>\mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(randomEngine);}
+\DoxyCodeLine{00299         \textcolor{keywordflow}{if} (len >= maxSetting) \{}
+\DoxyCodeLine{00300             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00301         \}}
+\DoxyCodeLine{00302         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((temp\_node == NULL) \&\& (len < minSetting)) \{}
+\DoxyCodeLine{00303             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00304         \}}
+\DoxyCodeLine{00305 }
+\DoxyCodeLine{00306         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (temp\_node == NULL)\{}
+\DoxyCodeLine{00307             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00308         \}}
+\DoxyCodeLine{00309             }
+\DoxyCodeLine{00310         n = temp\_node;}
+\DoxyCodeLine{00311 }
+\DoxyCodeLine{00312         buffer[len++] = n-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}();}
+\DoxyCodeLine{00313     \}}
+\DoxyCodeLine{00314 }
+\DoxyCodeLine{00315     \textcolor{comment}{//null terminate the string}}
+\DoxyCodeLine{00316     buffer[len] = 0x00;}
+\DoxyCodeLine{00317 }
+\DoxyCodeLine{00318     \textcolor{comment}{//do something with the generated string}}
+\DoxyCodeLine{00319     \textcolor{keywordflow}{return} buffer; \textcolor{comment}{//for now}}
+\DoxyCodeLine{00320 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Save@{Save}}
+\index{Save@{Save}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily std\+::ofstream $\ast$ Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Save (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Export model to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ Export filename. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ofstream$\ast$ of the exported file. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8cpp_source_l00098}{98}} of file \mbox{\hyperlink{markov_passwords_8cpp_source}{markov\+Passwords.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098                                                                 \{}
+\DoxyCodeLine{00099     std::ofstream* exportFile;}
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101     std::ofstream newFile(filename);}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     exportFile = \&newFile;}
+\DoxyCodeLine{00104     }
+\DoxyCodeLine{00105     this-\/>\mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}}(exportFile);}
+\DoxyCodeLine{00106     \textcolor{keywordflow}{return} exportFile;}
+\DoxyCodeLine{00107 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_8h_source_l00274}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Export()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}\label{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!StarterNode@{StarterNode}}
+\index{StarterNode@{StarterNode}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{StarterNode()}{StarterNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$char $>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Starter\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Return starter \mbox{\hyperlink{class_markov_1_1_node}{Node}}. 
+
+\begin{DoxyReturn}{Returns}
+starter node with 00 Node\+Value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00167}{167}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00167 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}\label{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Train@{Train}}
+\index{Train@{Train}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{Train()}{Train()}}
+{\footnotesize\ttfamily void Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Train (\begin{DoxyParamCaption}\item[{const char $\ast$}]{dataset\+File\+Name,  }\item[{char}]{delimiter,  }\item[{int}]{threads }\end{DoxyParamCaption})}
+
+
+
+Train the model with the dataset file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataset\+File\+Name} & -\/ Ifstream$\ast$ to the dataset. If null, use class member \\
+\hline
+{\em delimiter} & -\/ a character, same as the delimiter in dataset content \\
+\hline
+{\em threads} & -\/ number of OS threads to spawn\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}} mp;}
+\DoxyCodeLine{mp.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"models/2gram.mdl"});}
+\DoxyCodeLine{mp.\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Train}}(\textcolor{stringliteral}{"password.corpus"});}
+\end{DoxyCode}
+ Construct the matrix when done. 
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016                                                                                         \{}
+\DoxyCodeLine{00017     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a0f95257e1344225233ab49602cd9551c}{DeallocateMatrix}}();}
+\DoxyCodeLine{00018     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Markov::API::MarkovPasswords::Train}}(datasetFileName,delimiter,threads);}
+\DoxyCodeLine{00019     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{ConstructMatrix}}();}
+\DoxyCodeLine{00020 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8cpp_source_l00022}{Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00072}{Deallocate\+Matrix()}}, and \mbox{\hyperlink{markov_passwords_8cpp_source_l00057}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train()}}.
+
+
+
+Referenced by \mbox{\hyperlink{markopy_8cpp_source_l00012}{Markov\+::\+Markopy\+::\+B\+O\+O\+S\+T\+\_\+\+P\+Y\+T\+H\+O\+N\+\_\+\+M\+O\+D\+U\+L\+E()}}, and \mbox{\hyperlink{src_2main_8cpp_source_l00014}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_a5f51b0fdb75101b797f38b08da84848e}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_a5f51b0fdb75101b797f38b08da84848e}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!TrainThread@{TrainThread}}
+\index{TrainThread@{TrainThread}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{TrainThread()}{TrainThread()}}
+{\footnotesize\ttfamily void Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train\+Thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}{Markov\+::\+A\+P\+I\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler}} $\ast$}]{listhandler,  }\item[{char}]{delimiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+A single thread invoked by the Train function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listhandler} & -\/ Listhandler class to read corpus from \\
+\hline
+{\em delimiter} & -\/ a character, same as the delimiter in dataset content \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{markov_passwords_8cpp_source}{markov\+Passwords.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077                                                                                                                   \{}
+\DoxyCodeLine{00078     \textcolor{keywordtype}{char} format\_str[] =\textcolor{stringliteral}{"\%ld,\%s"};}
+\DoxyCodeLine{00079     format\_str[3]=delimiter;}
+\DoxyCodeLine{00080     std::string line;}
+\DoxyCodeLine{00081     \textcolor{keywordflow}{while} (listhandler-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a068e1a9ff477de23a44c10230df416a5}{next}}(\&line) \&\& \mbox{\hyperlink{markov_passwords_8cpp_a8e56c23aec0c3ae06851ab864c1f67e5}{keepRunning}}) \{}
+\DoxyCodeLine{00082         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} oc;}
+\DoxyCodeLine{00083         \textcolor{keywordflow}{if} (line.size() > 100) \{}
+\DoxyCodeLine{00084             line = line.substr(0, 100);}
+\DoxyCodeLine{00085         \}}
+\DoxyCodeLine{00086         \textcolor{keywordtype}{char}* linebuf = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[line.length()+5];}
+\DoxyCodeLine{00087 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{00088         sscanf\_s(line.c\_str(), \textcolor{stringliteral}{"\%ld,\%s"}, \&oc, linebuf, line.length()+5); \textcolor{comment}{//<== changed format\_str to-\/> "\%ld,\%s"}}
+\DoxyCodeLine{00089 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00090         sscanf(line.c\_str(), format\_str, \&oc, linebuf);}
+\DoxyCodeLine{00091 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00092         this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad252913f83fa3eb14cc3f9f92c5ee37a}{AdjustEdge}}((\textcolor{keyword}{const} \textcolor{keywordtype}{char}*)linebuf, oc); }
+\DoxyCodeLine{00093         \textcolor{keyword}{delete} linebuf;}
+\DoxyCodeLine{00094     \}}
+\DoxyCodeLine{00095 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_8h_source_l00323}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Adjust\+Edge()}}, \mbox{\hyperlink{markov_passwords_8cpp_source_l00016}{keep\+Running}}, and \mbox{\hyperlink{thread_shared_list_handler_8cpp_source_l00010}{Markov\+::\+A\+P\+I\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler\+::next()}}.
+
+
+
+Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00057}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_a5f51b0fdb75101b797f38b08da84848e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_a5f51b0fdb75101b797f38b08da84848e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!datasetFile@{datasetFile}}
+\index{datasetFile@{datasetFile}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{datasetFile}{datasetFile}}
+{\footnotesize\ttfamily std\+::ifstream$\ast$ Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::dataset\+File\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8h_source_l00106}{106}} of file \mbox{\hyperlink{markov_passwords_8h_source}{markov\+Passwords.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}\label{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!edgeMatrix@{edgeMatrix}}
+\index{edgeMatrix@{edgeMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{edgeMatrix}{edgeMatrix}}
+{\footnotesize\ttfamily char$\ast$$\ast$ Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::edge\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2-\/D Character array for the edge Matrix (The characters of Nodes) 
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00136}{136}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00022}{Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00072}{Deallocate\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00092}{Dump\+J\+S\+O\+N()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00144}{Fast\+Random\+Walk\+Thread()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}\label{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!edges@{edges}}
+\index{edges@{edges}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_markov_1_1_edge}{Edge}}$<$char $>$$\ast$$>$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::edges\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+A list of all edges in this model. 
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00195}{195}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}\label{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!matrixIndex@{matrixIndex}}
+\index{matrixIndex@{matrixIndex}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{matrixIndex}{matrixIndex}}
+{\footnotesize\ttfamily char$\ast$ Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::matrix\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+to hold the Matrix index (To hold the orders of 2-\/D arrays\textquotesingle{}) 
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00151}{151}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00022}{Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00072}{Deallocate\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00092}{Dump\+J\+S\+O\+N()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00144}{Fast\+Random\+Walk\+Thread()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!matrixSize@{matrixSize}}
+\index{matrixSize@{matrixSize}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{matrixSize}{matrixSize}}
+{\footnotesize\ttfamily int Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::matrix\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+to hold Matrix size 
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00146}{146}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00022}{Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00072}{Deallocate\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00092}{Dump\+J\+S\+O\+N()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00144}{Fast\+Random\+Walk\+Thread()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_af5f012dcc495dbe769e663d6cb161d6a}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_af5f012dcc495dbe769e663d6cb161d6a}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!modelSavefile@{modelSavefile}}
+\index{modelSavefile@{modelSavefile}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{modelSavefile}{modelSavefile}}
+{\footnotesize\ttfamily std\+::ofstream$\ast$ Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::model\+Savefile\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Dataset file input of our system ~\newline
+ 
+
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8h_source_l00107}{107}} of file \mbox{\hyperlink{markov_passwords_8h_source}{markov\+Passwords.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}\label{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!nodes@{nodes}}
+\index{nodes@{nodes}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily std\+::map$<$char , \mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$char $>$$\ast$$>$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::nodes\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Map Left\+Node is the Nodes Node\+Value Map Right\+Node is the node pointer. 
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00184}{184}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_ac05e60de64e866027410d4fa1cd03248}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_ac05e60de64e866027410d4fa1cd03248}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!outputFile@{outputFile}}
+\index{outputFile@{outputFile}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{outputFile}{outputFile}}
+{\footnotesize\ttfamily std\+::ofstream$\ast$ Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::output\+File\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+File to save model of our system ~\newline
+ 
+
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8h_source_l00108}{108}} of file \mbox{\hyperlink{markov_passwords_8h_source}{markov\+Passwords.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!ready@{ready}}
+\index{ready@{ready}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{ready}{ready}}
+{\footnotesize\ttfamily bool Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::ready\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+True when matrix is constructed. False if not. 
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00161}{161}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00022}{Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00072}{Deallocate\+Matrix()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00006}{Model\+Matrix()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}\label{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!starterNode@{starterNode}}
+\index{starterNode@{starterNode}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{starterNode}{starterNode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$char $>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::starter\+Node\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Starter \mbox{\hyperlink{class_markov_1_1_node}{Node}} of this model. 
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00189}{189}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!totalEdgeWeights@{totalEdgeWeights}}
+\index{totalEdgeWeights@{totalEdgeWeights}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{totalEdgeWeights}{totalEdgeWeights}}
+{\footnotesize\ttfamily long int$\ast$ Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::total\+Edge\+Weights\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Array of the Total \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} Weights. 
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00156}{156}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00022}{Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00072}{Deallocate\+Matrix()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00144}{Fast\+Random\+Walk\+Thread()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}} 
+\index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!valueMatrix@{valueMatrix}}
+\index{valueMatrix@{valueMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
+\doxysubsubsection{\texorpdfstring{valueMatrix}{valueMatrix}}
+{\footnotesize\ttfamily long int$\ast$$\ast$ Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::value\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2-\/d Integer array for the value Matrix (For the weights of Edges) 
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00141}{141}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00022}{Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00072}{Deallocate\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00092}{Dump\+J\+S\+O\+N()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00144}{Fast\+Random\+Walk\+Thread()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{model_matrix_8h}{model\+Matrix.\+h}}\item 
+\mbox{\hyperlink{model_matrix_8cpp}{model\+Matrix.\+cpp}}\end{DoxyCompactItemize}

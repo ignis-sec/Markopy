@@ -1,0 +1,5 @@
+<map id="Markov::API::ModelMatrix::FastRandomWalkPartition" name="Markov::API::ModelMatrix::FastRandomWalkPartition">
+<area shape="rect" id="node1" title="A single partition of FastRandomWalk event." alt="" coords="5,5,237,52"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#a96f2885aac69b49b21c66ad5a32514b9" title="A single thread of a single partition of FastRandomWalk." alt="" coords="285,5,511,52"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_random_1_1_marsaglia.html#a0a56da316d520b80be6b6df6c9e0b537" title="Generate Random Number." alt="" coords="559,5,804,52"/>
+</map>

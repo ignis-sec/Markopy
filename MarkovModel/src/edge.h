@@ -6,6 +6,7 @@ namespace Markov {
 
 	template <typename NodeStorageType>
 	class Node;
+
 	/** @brief Edge class used to link nodes in the model together.
 	* 
 	Has LeftNode, RightNode, and EdgeWeight of the edge.
@@ -18,21 +19,51 @@ namespace Markov {
 		/** @brief Default constructor. 
  		*/
 		Edge<NodeStorageType>();
-		/**@brief Constructor. Initialize edge with given RightNode and LeftNode
-		* @param _left - Left node of this edge.
-		* @param _right - Right node of this edge.
+
+		/** @brief Constructor. Initialize edge with given RightNode and LeftNode
+		 * @param _left - Left node of this edge.
+		 * @param _right - Right node of this edge.
+		 * 
+		 * @b Example @b Use: Construct edge
+		 * @code{.cpp}
+		 * Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');
+		 * Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');
+		 * Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(src, target1);
+		 * @endcode
+		 *
 		*/
-		
 		Edge<NodeStorageType>(Node<NodeStorageType>* _left, Node<NodeStorageType>* _right);
 		
 		/** @brief Adjust the edge EdgeWeight with offset.
-		* Adds the offset parameter to the edge EdgeWeight.
-		* @param offset - NodeValue to be added to the EdgeWeight
+		 * Adds the offset parameter to the edge EdgeWeight.
+		 * @param offset - NodeValue to be added to the EdgeWeight
+		 * 
+		 * @b Example @b Use: Construct edge
+		 * @code{.cpp}
+		 * Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');
+		 * Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');
+		 * Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(src, target1);
+		 * 
+		 * e1->AdjustEdge(25);
+		 * 
+		 * @endcode
 		*/
 		void AdjustEdge(long int offset);
 		
 		/** @brief Traverse this edge to RightNode.
-		* @return Right node. If this is a terminator node, return NULL
+		 * @return Right node. If this is a terminator node, return NULL
+		 * 
+		 * 
+		 * @b Example @b Use: Traverse a node
+		 * @code{.cpp}
+		 * Markov::Node<unsigned char>* src = new Markov::Node<unsigned char>('a');
+		 * Markov::Node<unsigned char>* target1 = new Markov::Node<unsigned char>('b');
+		 * Markov::Edge<unsigned char>* e1 = new Markov::Edge<unsigned char>(src, target1);
+		 * 
+		 * e1->AdjustEdge(25);
+		 * Markov::Edge<unsigned char>* e2 = e1->traverseNode();
+		 * @endcode
+		 * 
 		*/
 		inline Node<NodeStorageType>* TraverseNode();
 
@@ -61,9 +92,20 @@ namespace Markov {
 		inline Node<NodeStorageType>* RightNode();
 
 	private:
-		Node<NodeStorageType>* _left; /** @brief source node*/
-		Node<NodeStorageType>* _right;/** @brief target node*/
-		long int _weight;    /** @brief Edge EdgeWeight*/
+		/** 
+			@brief source node 
+		*/
+		Node<NodeStorageType>* _left; 
+
+		/** 
+			@brief target node 
+		*/
+		Node<NodeStorageType>* _right;
+
+		/** @brief
+			Edge Edge Weight 
+		*/
+		long int _weight;
 	};
 
 
