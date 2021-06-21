@@ -123,7 +123,7 @@ set(CMP_LINK_FLAGS "${SGX_COMMON_CFLAGS}")
 
 set_target_properties(cudamarkov PROPERTIES COMPILE_FLAGS "${CMP_CPP_FLAGS}")
 set_target_properties(cudamarkov PROPERTIES LINK_FLAGS "${CMP_LINK_FLAGS}")
-set_target_properties(cudamarkov PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(cudamarkov PROPERTIES LINKER_LANGUAGE CUDA)
 
 set_target_properties(cudamarkov
                        PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
@@ -135,3 +135,35 @@ add_executable(cudamarkov_test CudaMarkovAPI/src/main.cu)
 set_target_properties(cudamarkov_test PROPERTIES LINKER_LANGUAGE CUDA)
 target_link_libraries(cudamarkov_test markov)
 target_link_libraries(cudamarkov_test cudamarkov)
+
+
+##############################################################################################################
+#####################################     CudaMarkopy project options        #################################
+##############################################################################################################
+
+file(GLOB_RECURSE CMPY_FILES
+     "CudaMarkopy/src/*.cu"
+)
+
+add_library(cudamarkopy SHARED ${CMPY_FILES})
+
+find_package(Boost 1.71.0 COMPONENTS python REQUIRED)
+find_package(PythonLibs REQUIRED)
+
+
+set(CMPY_CPP_FLAGS "${MP_C_FLAGS} -std=c++17")
+set(CMPY_LINK_FLAGS "${SGX_COMMON_CFLAGS}")
+
+set_target_properties(cudamarkopy PROPERTIES COMPILE_FLAGS "${CMPY_CPP_FLAGS}")
+set_target_properties(cudamarkopy PROPERTIES LINK_FLAGS "${CMPY_LINK_FLAGS}")
+
+set_target_properties(cudamarkopy
+                       PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
+
+set_target_properties(cudamarkopy PROPERTIES PREFIX "")
+target_include_directories(cudamarkopy PUBLIC ${PYTHON_INCLUDE_DIRS})
+
+target_link_libraries(cudamarkopy cudamarkov)
+target_link_libraries(cudamarkopy ${PYTHON_LIBRARIES})
+target_link_libraries(cudamarkopy Boost::python)
+target_link_libraries(cudamarkopy markov)

@@ -122,6 +122,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named cudamarkopy
+
+# Build rule for target.
+cudamarkopy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cudamarkopy
+.PHONY : cudamarkopy
+
+# fast build rule for target.
+cudamarkopy/fast:
+	$(MAKE) -f CMakeFiles/cudamarkopy.dir/build.make CMakeFiles/cudamarkopy.dir/build
+.PHONY : cudamarkopy/fast
+
+#=============================================================================
 # Target rules for targets named cudamarkov_test
 
 # Build rule for target.
@@ -550,6 +563,33 @@ markov/fast:
 	$(MAKE) -f CMakeFiles/markov.dir/build.make CMakeFiles/markov.dir/build
 .PHONY : markov/fast
 
+CudaMarkopy/src/Module/cudaMarkopy.o: CudaMarkopy/src/Module/cudaMarkopy.cu.o
+
+.PHONY : CudaMarkopy/src/Module/cudaMarkopy.o
+
+# target to build an object file
+CudaMarkopy/src/Module/cudaMarkopy.cu.o:
+	$(MAKE) -f CMakeFiles/cudamarkopy.dir/build.make CMakeFiles/cudamarkopy.dir/CudaMarkopy/src/Module/cudaMarkopy.cu.o
+.PHONY : CudaMarkopy/src/Module/cudaMarkopy.cu.o
+
+CudaMarkopy/src/Module/cudaMarkopy.i: CudaMarkopy/src/Module/cudaMarkopy.cu.i
+
+.PHONY : CudaMarkopy/src/Module/cudaMarkopy.i
+
+# target to preprocess a source file
+CudaMarkopy/src/Module/cudaMarkopy.cu.i:
+	$(MAKE) -f CMakeFiles/cudamarkopy.dir/build.make CMakeFiles/cudamarkopy.dir/CudaMarkopy/src/Module/cudaMarkopy.cu.i
+.PHONY : CudaMarkopy/src/Module/cudaMarkopy.cu.i
+
+CudaMarkopy/src/Module/cudaMarkopy.s: CudaMarkopy/src/Module/cudaMarkopy.cu.s
+
+.PHONY : CudaMarkopy/src/Module/cudaMarkopy.s
+
+# target to generate assembly for a file
+CudaMarkopy/src/Module/cudaMarkopy.cu.s:
+	$(MAKE) -f CMakeFiles/cudamarkopy.dir/build.make CMakeFiles/cudamarkopy.dir/CudaMarkopy/src/Module/cudaMarkopy.cu.s
+.PHONY : CudaMarkopy/src/Module/cudaMarkopy.cu.s
+
 CudaMarkovAPI/src/cudaDeviceController.o: CudaMarkovAPI/src/cudaDeviceController.cu.o
 
 .PHONY : CudaMarkovAPI/src/cudaDeviceController.o
@@ -830,6 +870,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... test"
+	@echo "... cudamarkopy"
 	@echo "... rebuild_cache"
 	@echo "... cudamarkov_test"
 	@echo "... cudamarkov"
@@ -865,6 +906,9 @@ help:
 	@echo "... ContinuousTest"
 	@echo "... ContinuousSubmit"
 	@echo "... markov"
+	@echo "... CudaMarkopy/src/Module/cudaMarkopy.o"
+	@echo "... CudaMarkopy/src/Module/cudaMarkopy.i"
+	@echo "... CudaMarkopy/src/Module/cudaMarkopy.s"
 	@echo "... CudaMarkovAPI/src/cudaDeviceController.o"
 	@echo "... CudaMarkovAPI/src/cudaDeviceController.i"
 	@echo "... CudaMarkovAPI/src/cudaDeviceController.s"
