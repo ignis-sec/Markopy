@@ -142,7 +142,7 @@ void Markov::API::MarkovPasswords::GenerateThread(std::mutex *outputLock, unsign
 	}
 }
 
-void Markov::API::MarkovPasswords::Buff(char* str, double multiplier, bool bDontAdjustSelfLoops, bool bDontAdjustExtendedLoops){
+void Markov::API::MarkovPasswords::Buff(const char* str, double multiplier, bool bDontAdjustSelfLoops, bool bDontAdjustExtendedLoops){
 	std::string buffstr(str);
 	std::map< char, Node< char > * > *nodes;
 	std::map< char, Edge< char > * > *edges;

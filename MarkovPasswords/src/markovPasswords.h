@@ -86,7 +86,7 @@ namespace Markov::API{
          * @param bDontAdjustSelfEdges Do not adjust weights if target node is same as source node
 		 * @param bDontAdjustExtendedLoops Do not adjust if both source and target nodes are in first parameter
 		*/
-		void Buff(char* str, double multiplier, bool bDontAdjustSelfLoops=true, bool bDontAdjustExtendedLoops=false);
+		void Buff(const char* str, double multiplier, bool bDontAdjustSelfLoops=true, bool bDontAdjustExtendedLoops=false);
 		
 
 	private:
