@@ -63,7 +63,7 @@ namespace Markov::API{
 		 * @endcode
          * 
 		*/
-        void FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true);
+        int FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true);
 
         /** @copydoc Markov::Model::Import(const char *filename)
          * Construct the matrix when done.
@@ -105,7 +105,7 @@ namespace Markov::API{
 		 * @endcode
          * 
 		*/
-        void FastRandomWalk(unsigned long int n, std::ofstream *wordlist, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true);
+        int FastRandomWalk(unsigned long int n, std::ofstream *wordlist, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true);
 
 
         /** @brief A single partition of FastRandomWalk event

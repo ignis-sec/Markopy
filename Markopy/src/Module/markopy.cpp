@@ -21,6 +21,8 @@ namespace Markov::Markopy{
             .def("Export", Export, "Export a model to file.")
         ;
 
+        int (Markov::API::ModelMatrix::*FastRandomWalk)(unsigned long int, const char*, int, int, int, bool)
+            = &Markov::API::ModelMatrix::FastRandomWalk;
         class_<Markov::API::ModelMatrix>("ModelMatrix", init<>())
             
             .def(init<>())
@@ -29,7 +31,7 @@ namespace Markov::Markopy{
             .def("Export", Export, "Export a model to file.")
             .def("ConstructMatrix",&Markov::API::ModelMatrix::ConstructMatrix)
             .def("DumpJSON",&Markov::API::ModelMatrix::DumpJSON)
-            .def("FastRandomWalk",&Markov::API::ModelMatrix::FastRandomWalk)
+            .def("FastRandomWalk",FastRandomWalk)
             ;
     };
 };

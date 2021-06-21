@@ -192,23 +192,25 @@ void Markov::API::ModelMatrix::FastRandomWalkThread(std::mutex *mlock, std::ofst
 }
 
 
-void Markov::API::ModelMatrix::FastRandomWalk(unsigned long int n, std::ofstream *wordlist, int minLen, int maxLen, int threads, bool bFileIO){
+int Markov::API::ModelMatrix::FastRandomWalk(unsigned long int n, std::ofstream *wordlist, int minLen, int maxLen, int threads, bool bFileIO){
     
 
     std::mutex mlock;
-    if(n<=50000000ull) return this->FastRandomWalkPartition(&mlock, wordlist, n, minLen, maxLen, bFileIO, threads);
+    if(n<=50000000ull) this->FastRandomWalkPartition(&mlock, wordlist, n, minLen, maxLen, bFileIO, threads);
     else{
         int numberOfPartitions = n/50000000ull;
         for(int i=0;i<numberOfPartitions;i++)
             this->FastRandomWalkPartition(&mlock, wordlist, 50000000ull, minLen, maxLen, bFileIO, threads);
     }
+    return 0;
 }
 
-void Markov::API::ModelMatrix::FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, int threads, bool bFileIO){
+int Markov::API::ModelMatrix::FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, int threads, bool bFileIO){
     std::ofstream wordlist;	
     if(bFileIO)
         wordlist.open(wordlistFileName);
     this->FastRandomWalk(n, &wordlist, minLen, maxLen, threads, bFileIO);
+    return 0;
 }
 
 void Markov::API::ModelMatrix::FastRandomWalkPartition(std::mutex *mlock, std::ofstream *wordlist, unsigned long int n, int minLen, int maxLen, bool bFileIO, int threads){
