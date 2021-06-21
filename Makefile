@@ -56,16 +56,16 @@ CMAKE_BINARY_DIR = /media/ignis/HDD/Repositories/MarkovPasswords
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target test
+test/fast: test
 
-.PHONY : edit_cache/fast
+.PHONY : test/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -77,6 +77,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +122,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named cudamarkov_test
+
+# Build rule for target.
+cudamarkov_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cudamarkov_test
+.PHONY : cudamarkov_test
+
+# fast build rule for target.
+cudamarkov_test/fast:
+	$(MAKE) -f CMakeFiles/cudamarkov_test.dir/build.make CMakeFiles/cudamarkov_test.dir/build
+.PHONY : cudamarkov_test/fast
+
+#=============================================================================
+# Target rules for targets named cudamarkov
+
+# Build rule for target.
+cudamarkov: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cudamarkov
+.PHONY : cudamarkov
+
+# fast build rule for target.
+cudamarkov/fast:
+	$(MAKE) -f CMakeFiles/cudamarkov.dir/build.make CMakeFiles/cudamarkov.dir/build
+.PHONY : cudamarkov/fast
+
+#=============================================================================
+# Target rules for targets named NightlyMemCheck
+
+# Build rule for target.
+NightlyMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyMemCheck
+.PHONY : NightlyMemCheck
+
+# fast build rule for target.
+NightlyMemCheck/fast:
+	$(MAKE) -f CMakeFiles/NightlyMemCheck.dir/build.make CMakeFiles/NightlyMemCheck.dir/build
+.PHONY : NightlyMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named NightlyTest
+
+# Build rule for target.
+NightlyTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyTest
+.PHONY : NightlyTest
+
+# fast build rule for target.
+NightlyTest/fast:
+	$(MAKE) -f CMakeFiles/NightlyTest.dir/build.make CMakeFiles/NightlyTest.dir/build
+.PHONY : NightlyTest/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousConfigure
+
+# Build rule for target.
+ContinuousConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousConfigure
+.PHONY : ContinuousConfigure
+
+# fast build rule for target.
+ContinuousConfigure/fast:
+	$(MAKE) -f CMakeFiles/ContinuousConfigure.dir/build.make CMakeFiles/ContinuousConfigure.dir/build
+.PHONY : ContinuousConfigure/fast
+
+#=============================================================================
 # Target rules for targets named markopy
 
 # Build rule for target.
@@ -122,6 +198,214 @@ markopy: cmake_check_build_system
 markopy/fast:
 	$(MAKE) -f CMakeFiles/markopy.dir/build.make CMakeFiles/markopy.dir/build
 .PHONY : markopy/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousBuild
+
+# Build rule for target.
+ContinuousBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousBuild
+.PHONY : ContinuousBuild
+
+# fast build rule for target.
+ContinuousBuild/fast:
+	$(MAKE) -f CMakeFiles/ContinuousBuild.dir/build.make CMakeFiles/ContinuousBuild.dir/build
+.PHONY : ContinuousBuild/fast
+
+#=============================================================================
+# Target rules for targets named NightlyConfigure
+
+# Build rule for target.
+NightlyConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyConfigure
+.PHONY : NightlyConfigure
+
+# fast build rule for target.
+NightlyConfigure/fast:
+	$(MAKE) -f CMakeFiles/NightlyConfigure.dir/build.make CMakeFiles/NightlyConfigure.dir/build
+.PHONY : NightlyConfigure/fast
+
+#=============================================================================
+# Target rules for targets named NightlyMemoryCheck
+
+# Build rule for target.
+NightlyMemoryCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyMemoryCheck
+.PHONY : NightlyMemoryCheck
+
+# fast build rule for target.
+NightlyMemoryCheck/fast:
+	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/build
+.PHONY : NightlyMemoryCheck/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalTest
+
+# Build rule for target.
+ExperimentalTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalTest
+.PHONY : ExperimentalTest
+
+# fast build rule for target.
+ExperimentalTest/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
+.PHONY : ExperimentalTest/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousUpdate
+
+# Build rule for target.
+ContinuousUpdate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousUpdate
+.PHONY : ContinuousUpdate
+
+# fast build rule for target.
+ContinuousUpdate/fast:
+	$(MAKE) -f CMakeFiles/ContinuousUpdate.dir/build.make CMakeFiles/ContinuousUpdate.dir/build
+.PHONY : ContinuousUpdate/fast
+
+#=============================================================================
+# Target rules for targets named NightlyUpdate
+
+# Build rule for target.
+NightlyUpdate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyUpdate
+.PHONY : NightlyUpdate
+
+# fast build rule for target.
+NightlyUpdate/fast:
+	$(MAKE) -f CMakeFiles/NightlyUpdate.dir/build.make CMakeFiles/NightlyUpdate.dir/build
+.PHONY : NightlyUpdate/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalMemCheck
+
+# Build rule for target.
+ExperimentalMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalMemCheck
+.PHONY : ExperimentalMemCheck
+
+# fast build rule for target.
+ExperimentalMemCheck/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalMemCheck.dir/build.make CMakeFiles/ExperimentalMemCheck.dir/build
+.PHONY : ExperimentalMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalSubmit
+
+# Build rule for target.
+ExperimentalSubmit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalSubmit
+.PHONY : ExperimentalSubmit
+
+# fast build rule for target.
+ExperimentalSubmit/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalSubmit.dir/build.make CMakeFiles/ExperimentalSubmit.dir/build
+.PHONY : ExperimentalSubmit/fast
+
+#=============================================================================
+# Target rules for targets named Experimental
+
+# Build rule for target.
+Experimental: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Experimental
+.PHONY : Experimental
+
+# fast build rule for target.
+Experimental/fast:
+	$(MAKE) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/build
+.PHONY : Experimental/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousCoverage
+
+# Build rule for target.
+ContinuousCoverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousCoverage
+.PHONY : ContinuousCoverage
+
+# fast build rule for target.
+ContinuousCoverage/fast:
+	$(MAKE) -f CMakeFiles/ContinuousCoverage.dir/build.make CMakeFiles/ContinuousCoverage.dir/build
+.PHONY : ContinuousCoverage/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalConfigure
+
+# Build rule for target.
+ExperimentalConfigure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalConfigure
+.PHONY : ExperimentalConfigure
+
+# fast build rule for target.
+ExperimentalConfigure/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalConfigure.dir/build.make CMakeFiles/ExperimentalConfigure.dir/build
+.PHONY : ExperimentalConfigure/fast
+
+#=============================================================================
+# Target rules for targets named Continuous
+
+# Build rule for target.
+Continuous: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Continuous
+.PHONY : Continuous
+
+# fast build rule for target.
+Continuous/fast:
+	$(MAKE) -f CMakeFiles/Continuous.dir/build.make CMakeFiles/Continuous.dir/build
+.PHONY : Continuous/fast
+
+#=============================================================================
+# Target rules for targets named Nightly
+
+# Build rule for target.
+Nightly: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Nightly
+.PHONY : Nightly
+
+# fast build rule for target.
+Nightly/fast:
+	$(MAKE) -f CMakeFiles/Nightly.dir/build.make CMakeFiles/Nightly.dir/build
+.PHONY : Nightly/fast
+
+#=============================================================================
+# Target rules for targets named NightlySubmit
+
+# Build rule for target.
+NightlySubmit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlySubmit
+.PHONY : NightlySubmit
+
+# fast build rule for target.
+NightlySubmit/fast:
+	$(MAKE) -f CMakeFiles/NightlySubmit.dir/build.make CMakeFiles/NightlySubmit.dir/build
+.PHONY : NightlySubmit/fast
+
+#=============================================================================
+# Target rules for targets named NightlyStart
+
+# Build rule for target.
+NightlyStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyStart
+.PHONY : NightlyStart
+
+# fast build rule for target.
+NightlyStart/fast:
+	$(MAKE) -f CMakeFiles/NightlyStart.dir/build.make CMakeFiles/NightlyStart.dir/build
+.PHONY : NightlyStart/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalCoverage
+
+# Build rule for target.
+ExperimentalCoverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalCoverage
+.PHONY : ExperimentalCoverage
+
+# fast build rule for target.
+ExperimentalCoverage/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalCoverage.dir/build.make CMakeFiles/ExperimentalCoverage.dir/build
+.PHONY : ExperimentalCoverage/fast
 
 #=============================================================================
 # Target rules for targets named markovp
@@ -137,6 +421,123 @@ markovp/fast:
 .PHONY : markovp/fast
 
 #=============================================================================
+# Target rules for targets named NightlyCoverage
+
+# Build rule for target.
+NightlyCoverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyCoverage
+.PHONY : NightlyCoverage
+
+# fast build rule for target.
+NightlyCoverage/fast:
+	$(MAKE) -f CMakeFiles/NightlyCoverage.dir/build.make CMakeFiles/NightlyCoverage.dir/build
+.PHONY : NightlyCoverage/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalStart
+
+# Build rule for target.
+ExperimentalStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalStart
+.PHONY : ExperimentalStart
+
+# fast build rule for target.
+ExperimentalStart/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalStart.dir/build.make CMakeFiles/ExperimentalStart.dir/build
+.PHONY : ExperimentalStart/fast
+
+#=============================================================================
+# Target rules for targets named NightlyBuild
+
+# Build rule for target.
+NightlyBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyBuild
+.PHONY : NightlyBuild
+
+# fast build rule for target.
+NightlyBuild/fast:
+	$(MAKE) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/build
+.PHONY : NightlyBuild/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalBuild
+
+# Build rule for target.
+ExperimentalBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalBuild
+.PHONY : ExperimentalBuild
+
+# fast build rule for target.
+ExperimentalBuild/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/build
+.PHONY : ExperimentalBuild/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalUpdate
+
+# Build rule for target.
+ExperimentalUpdate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalUpdate
+.PHONY : ExperimentalUpdate
+
+# fast build rule for target.
+ExperimentalUpdate/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalUpdate.dir/build.make CMakeFiles/ExperimentalUpdate.dir/build
+.PHONY : ExperimentalUpdate/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousStart
+
+# Build rule for target.
+ContinuousStart: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousStart
+.PHONY : ContinuousStart
+
+# fast build rule for target.
+ContinuousStart/fast:
+	$(MAKE) -f CMakeFiles/ContinuousStart.dir/build.make CMakeFiles/ContinuousStart.dir/build
+.PHONY : ContinuousStart/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousMemCheck
+
+# Build rule for target.
+ContinuousMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousMemCheck
+.PHONY : ContinuousMemCheck
+
+# fast build rule for target.
+ContinuousMemCheck/fast:
+	$(MAKE) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/build
+.PHONY : ContinuousMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousTest
+
+# Build rule for target.
+ContinuousTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousTest
+.PHONY : ContinuousTest
+
+# fast build rule for target.
+ContinuousTest/fast:
+	$(MAKE) -f CMakeFiles/ContinuousTest.dir/build.make CMakeFiles/ContinuousTest.dir/build
+.PHONY : ContinuousTest/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousSubmit
+
+# Build rule for target.
+ContinuousSubmit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ContinuousSubmit
+.PHONY : ContinuousSubmit
+
+# fast build rule for target.
+ContinuousSubmit/fast:
+	$(MAKE) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
+.PHONY : ContinuousSubmit/fast
+
+#=============================================================================
 # Target rules for targets named markov
 
 # Build rule for target.
@@ -148,6 +549,90 @@ markov: cmake_check_build_system
 markov/fast:
 	$(MAKE) -f CMakeFiles/markov.dir/build.make CMakeFiles/markov.dir/build
 .PHONY : markov/fast
+
+CudaMarkovAPI/src/cudaDeviceController.o: CudaMarkovAPI/src/cudaDeviceController.cu.o
+
+.PHONY : CudaMarkovAPI/src/cudaDeviceController.o
+
+# target to build an object file
+CudaMarkovAPI/src/cudaDeviceController.cu.o:
+	$(MAKE) -f CMakeFiles/cudamarkov.dir/build.make CMakeFiles/cudamarkov.dir/CudaMarkovAPI/src/cudaDeviceController.cu.o
+.PHONY : CudaMarkovAPI/src/cudaDeviceController.cu.o
+
+CudaMarkovAPI/src/cudaDeviceController.i: CudaMarkovAPI/src/cudaDeviceController.cu.i
+
+.PHONY : CudaMarkovAPI/src/cudaDeviceController.i
+
+# target to preprocess a source file
+CudaMarkovAPI/src/cudaDeviceController.cu.i:
+	$(MAKE) -f CMakeFiles/cudamarkov.dir/build.make CMakeFiles/cudamarkov.dir/CudaMarkovAPI/src/cudaDeviceController.cu.i
+.PHONY : CudaMarkovAPI/src/cudaDeviceController.cu.i
+
+CudaMarkovAPI/src/cudaDeviceController.s: CudaMarkovAPI/src/cudaDeviceController.cu.s
+
+.PHONY : CudaMarkovAPI/src/cudaDeviceController.s
+
+# target to generate assembly for a file
+CudaMarkovAPI/src/cudaDeviceController.cu.s:
+	$(MAKE) -f CMakeFiles/cudamarkov.dir/build.make CMakeFiles/cudamarkov.dir/CudaMarkovAPI/src/cudaDeviceController.cu.s
+.PHONY : CudaMarkovAPI/src/cudaDeviceController.cu.s
+
+CudaMarkovAPI/src/cudaModelMatrix.o: CudaMarkovAPI/src/cudaModelMatrix.cu.o
+
+.PHONY : CudaMarkovAPI/src/cudaModelMatrix.o
+
+# target to build an object file
+CudaMarkovAPI/src/cudaModelMatrix.cu.o:
+	$(MAKE) -f CMakeFiles/cudamarkov.dir/build.make CMakeFiles/cudamarkov.dir/CudaMarkovAPI/src/cudaModelMatrix.cu.o
+.PHONY : CudaMarkovAPI/src/cudaModelMatrix.cu.o
+
+CudaMarkovAPI/src/cudaModelMatrix.i: CudaMarkovAPI/src/cudaModelMatrix.cu.i
+
+.PHONY : CudaMarkovAPI/src/cudaModelMatrix.i
+
+# target to preprocess a source file
+CudaMarkovAPI/src/cudaModelMatrix.cu.i:
+	$(MAKE) -f CMakeFiles/cudamarkov.dir/build.make CMakeFiles/cudamarkov.dir/CudaMarkovAPI/src/cudaModelMatrix.cu.i
+.PHONY : CudaMarkovAPI/src/cudaModelMatrix.cu.i
+
+CudaMarkovAPI/src/cudaModelMatrix.s: CudaMarkovAPI/src/cudaModelMatrix.cu.s
+
+.PHONY : CudaMarkovAPI/src/cudaModelMatrix.s
+
+# target to generate assembly for a file
+CudaMarkovAPI/src/cudaModelMatrix.cu.s:
+	$(MAKE) -f CMakeFiles/cudamarkov.dir/build.make CMakeFiles/cudamarkov.dir/CudaMarkovAPI/src/cudaModelMatrix.cu.s
+.PHONY : CudaMarkovAPI/src/cudaModelMatrix.cu.s
+
+CudaMarkovAPI/src/main.o: CudaMarkovAPI/src/main.cu.o
+
+.PHONY : CudaMarkovAPI/src/main.o
+
+# target to build an object file
+CudaMarkovAPI/src/main.cu.o:
+	$(MAKE) -f CMakeFiles/cudamarkov_test.dir/build.make CMakeFiles/cudamarkov_test.dir/CudaMarkovAPI/src/main.cu.o
+	$(MAKE) -f CMakeFiles/cudamarkov.dir/build.make CMakeFiles/cudamarkov.dir/CudaMarkovAPI/src/main.cu.o
+.PHONY : CudaMarkovAPI/src/main.cu.o
+
+CudaMarkovAPI/src/main.i: CudaMarkovAPI/src/main.cu.i
+
+.PHONY : CudaMarkovAPI/src/main.i
+
+# target to preprocess a source file
+CudaMarkovAPI/src/main.cu.i:
+	$(MAKE) -f CMakeFiles/cudamarkov_test.dir/build.make CMakeFiles/cudamarkov_test.dir/CudaMarkovAPI/src/main.cu.i
+	$(MAKE) -f CMakeFiles/cudamarkov.dir/build.make CMakeFiles/cudamarkov.dir/CudaMarkovAPI/src/main.cu.i
+.PHONY : CudaMarkovAPI/src/main.cu.i
+
+CudaMarkovAPI/src/main.s: CudaMarkovAPI/src/main.cu.s
+
+.PHONY : CudaMarkovAPI/src/main.s
+
+# target to generate assembly for a file
+CudaMarkovAPI/src/main.cu.s:
+	$(MAKE) -f CMakeFiles/cudamarkov_test.dir/build.make CMakeFiles/cudamarkov_test.dir/CudaMarkovAPI/src/main.cu.s
+	$(MAKE) -f CMakeFiles/cudamarkov.dir/build.make CMakeFiles/cudamarkov.dir/CudaMarkovAPI/src/main.cu.s
+.PHONY : CudaMarkovAPI/src/main.cu.s
 
 Markopy/src/Module/markopy.o: Markopy/src/Module/markopy.cpp.o
 
@@ -344,11 +829,51 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... markopy"
-	@echo "... edit_cache"
-	@echo "... markovp"
+	@echo "... test"
 	@echo "... rebuild_cache"
+	@echo "... cudamarkov_test"
+	@echo "... cudamarkov"
+	@echo "... edit_cache"
+	@echo "... NightlyMemCheck"
+	@echo "... NightlyTest"
+	@echo "... ContinuousConfigure"
+	@echo "... markopy"
+	@echo "... ContinuousBuild"
+	@echo "... NightlyConfigure"
+	@echo "... NightlyMemoryCheck"
+	@echo "... ExperimentalTest"
+	@echo "... ContinuousUpdate"
+	@echo "... NightlyUpdate"
+	@echo "... ExperimentalMemCheck"
+	@echo "... ExperimentalSubmit"
+	@echo "... Experimental"
+	@echo "... ContinuousCoverage"
+	@echo "... ExperimentalConfigure"
+	@echo "... Continuous"
+	@echo "... Nightly"
+	@echo "... NightlySubmit"
+	@echo "... NightlyStart"
+	@echo "... ExperimentalCoverage"
+	@echo "... markovp"
+	@echo "... NightlyCoverage"
+	@echo "... ExperimentalStart"
+	@echo "... NightlyBuild"
+	@echo "... ExperimentalBuild"
+	@echo "... ExperimentalUpdate"
+	@echo "... ContinuousStart"
+	@echo "... ContinuousMemCheck"
+	@echo "... ContinuousTest"
+	@echo "... ContinuousSubmit"
 	@echo "... markov"
+	@echo "... CudaMarkovAPI/src/cudaDeviceController.o"
+	@echo "... CudaMarkovAPI/src/cudaDeviceController.i"
+	@echo "... CudaMarkovAPI/src/cudaDeviceController.s"
+	@echo "... CudaMarkovAPI/src/cudaModelMatrix.o"
+	@echo "... CudaMarkovAPI/src/cudaModelMatrix.i"
+	@echo "... CudaMarkovAPI/src/cudaModelMatrix.s"
+	@echo "... CudaMarkovAPI/src/main.o"
+	@echo "... CudaMarkovAPI/src/main.i"
+	@echo "... CudaMarkovAPI/src/main.s"
 	@echo "... Markopy/src/Module/markopy.o"
 	@echo "... Markopy/src/Module/markopy.i"
 	@echo "... Markopy/src/Module/markopy.s"
