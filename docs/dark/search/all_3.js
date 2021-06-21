@@ -7,7 +7,7 @@ var searchData=
   ['cli_5ftrain_29',['cli_train',['../namespacemarkopy__cli.html#aba737028a4ca1223e06631b16d22da93',1,'markopy_cli']]],
   ['color_30',['color',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#abd812d8a82872e9fca1f0df632fa3722',1,'Markov::API::CLI::Terminal']]],
   ['colormap_31',['colormap',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#a296cac1426f648e426bd77fd3bcaf79d',1,'Markov::API::CLI::Terminal']]],
-  ['constructmatrix_32',['ConstructMatrix',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#ac1dbc499eda0e0eda3567bce45d17db4',1,'Markov::API::ModelMatrix']]],
+  ['constructmatrix_32',['ConstructMatrix',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#aafb5809808b9b0450a0bc98740121b5f',1,'Markov::API::ModelMatrix']]],
   ['corpus_5flist_33',['corpus_list',['../namespacemarkopy__cli.html#a9981bd7881129bd6b325ca2386bb44f1',1,'markopy_cli']]],
   ['cudachecknotifyerr_34',['CudaCheckNotifyErr',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711',1,'Markov::API::CUDA::CUDADeviceController']]],
   ['cudadevicecontroller_35',['CUDADeviceController',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html',1,'Markov::API::CUDA']]],
