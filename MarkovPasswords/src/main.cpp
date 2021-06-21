@@ -5,8 +5,8 @@
 #include <string>
 #include <cstring>
 #include <sstream>
-#include "markovPasswords.h"
-#include "modelMatrix.h"
+#include "MarkovAPI/src/markovPasswords.h"
+#include "MarkovAPI/src/modelMatrix.h"
 #include <chrono>
 
 /** @brief Launch CLI tool.
