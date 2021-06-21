@@ -1,4 +1,4 @@
-#include "MarkovPasswords/src/modelMatrix.h"
+#include "MarkovAPI/src/modelMatrix.h"
 #include "cudaDeviceController.h"   
 #include <curand_kernel.h>
 #include <cuda.h>

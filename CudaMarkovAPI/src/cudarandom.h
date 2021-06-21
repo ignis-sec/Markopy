@@ -1,6 +1,6 @@
 #pragma once
 #include "MarkovModel/src/random.h"
-#include "CudaMarkovPasswords/src/cudaDeviceController.h"
+#include "cudaDeviceController.h"
 
 /** @brief Namespace for Random engines operable under __device__ space.
 */

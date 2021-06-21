@@ -1,5 +1,5 @@
 #include "cudaModelMatrix.h"
-#include "CudaMarkovPasswords/src/cudarandom.h"
+#include "cudarandom.h"
 
 using Markov::API::CUDA::CUDADeviceController;
 
