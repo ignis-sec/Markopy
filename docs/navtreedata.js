@@ -87,7 +87,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_c_l_i_8h.html",
-"class_markov_1_1_node.html#a1db7cba480ab9fb41ef8ab53d1eac0f2"
+"class_markov_1_1_model.html#ae1d564c132cbf681f10f8ed0dfc772df"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

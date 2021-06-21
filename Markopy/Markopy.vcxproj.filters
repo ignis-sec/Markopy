@@ -36,6 +36,9 @@
     <ClCompile Include="..\MarkovPasswords\src\threadSharedListHandler.cpp">
       <Filter>Dependencies\MarkovPasswords</Filter>
     </ClCompile>
+    <ClCompile Include="..\MarkovPasswords\src\modelMatrix.cpp">
+      <Filter>Dependencies\MarkovPasswords</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\CLI\markopy_cli.py">

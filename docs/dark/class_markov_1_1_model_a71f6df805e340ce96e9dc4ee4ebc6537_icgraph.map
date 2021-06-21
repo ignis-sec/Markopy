@@ -1,5 +1,8 @@
 <map id="Markov::Model::Nodes" name="Markov::Model::Nodes">
-<area shape="rect" id="node1" title="Return starter Node." alt="" coords="389,14,588,43"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#ac1dbc499eda0e0eda3567bce45d17db4" title="Construct the related Matrix data for the model." alt="" coords="116,5,341,52"/>
-<area shape="rect" id="node3" href="$src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="5,14,68,43"/>
+<area shape="rect" id="node1" title="Return starter Node." alt="" coords="827,35,1025,64"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aafb5809808b9b0450a0bc98740121b5f" title="Construct the related Matrix data for the model." alt="" coords="553,26,779,73"/>
+<area shape="rect" id="node3" href="$namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" title=" " alt="" coords="5,26,232,73"/>
+<area shape="rect" id="node4" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aeba8bb79aa4dc2cfeda310f34b7c9427" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="280,97,505,144"/>
+<area shape="rect" id="node6" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#af42d40d7a5c80f0dfe126a574a17f423" title="Train the model with the dataset file." alt="" coords="280,26,505,73"/>
+<area shape="rect" id="node5" href="$src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="87,102,150,131"/>
 </map>

@@ -84,7 +84,7 @@ $(BIN)/%.cpp.o:%.cpp
 #####################################            Markopy Options             #################################
 ##############################################################################################################
 
-MPY_SRC          := MarkovPasswords/src/markovPasswords.cpp MarkovPasswords/src/threadSharedListHandler.cpp $(shell find Markopy/src/Module/ -name '*.cpp')
+MPY_SRC          := MarkovPasswords/src/markovPasswords.cpp MarkovPasswords/src/threadSharedListHandler.cpp MarkovPasswords/src/modelMatrix.cpp $(shell find Markopy/src/Module/ -name '*.cpp')
 MPY_SRC_DIR		 := Markopy/src/
 MPY_OBJS         := $(MPY_SRC:%=$(BIN)/%.o)
 MPY_DEPS         := $(MPY_OBJS:.o=.d)

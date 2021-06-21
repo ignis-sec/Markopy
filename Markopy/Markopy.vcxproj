@@ -156,6 +156,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\MarkovPasswords\src\markovPasswords.cpp" />
+    <ClCompile Include="..\MarkovPasswords\src\modelMatrix.cpp" />
     <ClCompile Include="..\MarkovPasswords\src\threadSharedListHandler.cpp" />
     <ClCompile Include="src\Module\markopy.cpp" />
   </ItemGroup>

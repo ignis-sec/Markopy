@@ -153,7 +153,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 : <a class="el" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#a296cac1426f648e426bd77fd3bcaf79d">Markov::API::CLI::Terminal</a>
 </li>
 <li>ConstructMatrix()
-: <a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#ac1dbc499eda0e0eda3567bce45d17db4">Markov::API::ModelMatrix</a>
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#aafb5809808b9b0450a0bc98740121b5f">Markov::API::ModelMatrix</a>
 </li>
 <li>CudaCheckNotifyErr()
 : <a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html#a61c65866ecf7fe229c01fcc0f9c10711">Markov::API::CUDA::CUDADeviceController</a>
@@ -182,6 +182,9 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 </li>
 <li>datasetname
 : <a class="el" href="struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options.html#a616de3cae109698c5d0fb6968e0dcc3b">Markov::API::CLI::_programOptions</a>
+</li>
+<li>DeallocateMatrix()
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a0f95257e1344225233ab49602cd9551c">Markov::API::ModelMatrix</a>
 </li>
 <li>device_edgeMatrix
 : <a class="el" href="class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a06672c27d6c96e9f8808f61c6648f191">Markov::API::CUDA::CUDAModelMatrix</a>
@@ -304,7 +307,8 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
 <li>Import()
-: <a class="el" href="class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5">Markov::Model&lt; NodeStorageType &gt;</a>
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#aeba8bb79aa4dc2cfeda310f34b7c9427">Markov::API::ModelMatrix</a>
+, <a class="el" href="class_markov_1_1_model.html#a3f872a3af96a91d4627c1a5d5e66b19a">Markov::Model&lt; NodeStorageType &gt;</a>
 </li>
 <li>importname
 : <a class="el" href="struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options.html#adf117f288aafb490d2aa38cf7332db8c">Markov::API::CLI::_programOptions</a>
@@ -399,11 +403,11 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>Node()
 : <a class="el" href="class_markov_1_1_node.html#a29468e9baf4e7cec86116ef3cbcfcb47">Markov::Node&lt; storageType &gt;</a>
 </li>
-<li>Nodes()
-: <a class="el" href="class_markov_1_1_model.html#a71f6df805e340ce96e9dc4ee4ebc6537">Markov::Model&lt; NodeStorageType &gt;</a>
-</li>
 <li>nodes
 : <a class="el" href="class_markov_1_1_model.html#aa772f79f444c2971f615df7be5e28bca">Markov::Model&lt; NodeStorageType &gt;</a>
+</li>
+<li>Nodes()
+: <a class="el" href="class_markov_1_1_model.html#a71f6df805e340ce96e9dc4ee4ebc6537">Markov::Model&lt; NodeStorageType &gt;</a>
 </li>
 <li>NodeValue()
 : <a class="el" href="class_markov_1_1_node.html#ac7cce56376f2a00764f64a0194cbb498">Markov::Node&lt; storageType &gt;</a>
@@ -451,6 +455,9 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 </li>
 <li>rd()
 : <a class="el" href="class_markov_1_1_random_1_1_default_random_engine.html#a411c66837939f7f787272f1c6aa78e23">Markov::Random::DefaultRandomEngine</a>
+</li>
+<li>ready
+: <a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#a6e6994aef7ad847300be6e158e6b3322">Markov::API::ModelMatrix</a>
 </li>
 <li>RED
 : <a class="el" href="class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#abd812d8a82872e9fca1f0df632fa3722a8eb4747060ac24837b460a58065670e5">Markov::API::CLI::Terminal</a>
@@ -513,10 +520,13 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 </li>
 <li>Train()
 : <a class="el" href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#a2fd4423ae3850e258dcb6b11a7feb9b2">Markov::API::MarkovPasswords</a>
-, <a class="el" href="class_markov_1_1_g_u_i_1_1_train.html#a81b5ca7eb56318ff1cefbc7c228a97cd">Markov::GUI::Train</a>
+, <a class="el" href="class_markov_1_1_a_p_i_1_1_model_matrix.html#af42d40d7a5c80f0dfe126a574a17f423">Markov::API::ModelMatrix</a>
 </li>
 <li>train()
 : <a class="el" href="class_markov_1_1_g_u_i_1_1_train.html#a6f74c2948379df5e7f0d8eba96c97fb0">Markov::GUI::Train</a>
+</li>
+<li>Train()
+: <a class="el" href="class_markov_1_1_g_u_i_1_1_train.html#a81b5ca7eb56318ff1cefbc7c228a97cd">Markov::GUI::Train</a>
 </li>
 <li>TrainThread()
 : <a class="el" href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#a5f51b0fdb75101b797f38b08da84848e">Markov::API::MarkovPasswords</a>
