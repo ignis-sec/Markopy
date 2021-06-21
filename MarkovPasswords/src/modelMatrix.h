@@ -24,8 +24,10 @@ namespace Markov::API{
          * int matrixSize -> Size of the matrix, aka total number of nodes.
          * char* matrixIndex -> order of nodes in the model
          * long int *totalEdgeWeights -> total edge weights of each Node.
+         * 
+         * @returns True if constructed. False if already construced.
 		*/
-        void ConstructMatrix();
+        bool ConstructMatrix();
 
 
         /** @brief Debug function to dump the model to a JSON file.
@@ -63,7 +65,17 @@ namespace Markov::API{
 		*/
         void FastRandomWalk(unsigned long int n, const char* wordlistFileName, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true);
 
+        /** @copydoc Markov::Model::Import(const char *filename)
+         * Construct the matrix when done.
+         * 
+        */
+        void Import(const char *filename);
 
+        /** @copydoc Markov::API::MarkovPasswords::Train(const char *datasetFileName, char delimiter, int threads)
+         * Construct the matrix when done.
+         * 
+        */
+        void Train(const char *datasetFileName, char delimiter, int threads);
 
     protected:
 
@@ -141,6 +153,12 @@ namespace Markov::API{
 		*/
         void FastRandomWalkThread(std::mutex *mlock, std::ofstream *wordlist, unsigned long int n, int minLen, int maxLen, int id, bool bFileIO);
         
+        /** @brief Deallocate matrix and make it ready for re-construction
+         * 
+         * @returns True if deallocated. False if matrix was not initialized
+        */
+        bool DeallocateMatrix();
+
 		/**
 			@brief 2-D Character array for the edge Matrix (The characters of Nodes)
 		*/
@@ -165,6 +183,11 @@ namespace Markov::API{
 			@brief Array of the Total Edge Weights
 		*/
         long int *totalEdgeWeights;
+
+        /**
+			@brief True when matrix is constructed. False if not.
+		*/
+        bool ready;
     };
 
 

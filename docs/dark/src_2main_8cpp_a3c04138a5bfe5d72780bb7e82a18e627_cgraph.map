@@ -1,16 +1,22 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Launch CLI tool." alt="" coords="5,201,68,231"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#ade2af065fa284422883812389f3ad2d7" title="Parse command line arguements." alt="" coords="116,86,351,133"/>
-<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#ac1dbc499eda0e0eda3567bce45d17db4" title="Construct the related Matrix data for the model." alt="" coords="121,157,346,203"/>
-<area shape="rect" id="node10" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#a9e5a9885d48e95b9f5d1ed082d83db24" title="Random walk on the Matrix&#45;reduced Markov::Model." alt="" coords="121,227,346,274"/>
-<area shape="rect" id="node14" href="$class_markov_1_1_model.html#a3f872a3af96a91d4627c1a5d5e66b19a" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="132,299,335,328"/>
-<area shape="rect" id="node4" href="$class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677" title="return edge&#39;s EdgeWeight." alt="" coords="422,5,657,35"/>
-<area shape="rect" id="node5" href="$class_markov_1_1_model.html#a71f6df805e340ce96e9dc4ee4ebc6537" title="Return starter Node." alt="" coords="440,59,639,88"/>
-<area shape="rect" id="node6" href="$class_markov_1_1_node.html#ac7cce56376f2a00764f64a0194cbb498" title="Return character representation of this node." alt="" coords="425,112,653,141"/>
-<area shape="rect" id="node7" href="$class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd" title="return edge&#39;s RightNode" alt="" coords="427,165,651,195"/>
-<area shape="rect" id="node8" href="$class_markov_1_1_model.html#a35cb15a14d034f3365b9d2d3efa1ffc0" title="Return starter Node." alt="" coords="416,219,663,248"/>
-<area shape="rect" id="node9" href="$class_markov_1_1_node.html#a60166d8f501c016de104f48e46bff223" title="return total edge weights" alt="" coords="399,272,680,301"/>
-<area shape="rect" id="node11" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5" title="A single partition of FastRandomWalk event." alt="" coords="423,326,655,373"/>
-<area shape="rect" id="node12" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#a96f2885aac69b49b21c66ad5a32514b9" title="A single thread of a single partition of FastRandomWalk." alt="" coords="728,326,953,373"/>
-<area shape="rect" id="node13" href="$class_markov_1_1_random_1_1_marsaglia.html#a0a56da316d520b80be6b6df6c9e0b537" title="Generate Random Number." alt="" coords="1001,326,1247,373"/>
+<area shape="rect" id="node1" title="Launch CLI tool." alt="" coords="5,224,68,253"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#ade2af065fa284422883812389f3ad2d7" title="Parse command line arguements." alt="" coords="116,121,351,167"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_model.html#af788426a3c41a7838a2aae199e8aef5b" title="Open a file to export with filename, and call bool Model::Export with std::ofstream." alt="" coords="133,192,334,221"/>
+<area shape="rect" id="node4" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aeba8bb79aa4dc2cfeda310f34b7c9427" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="121,317,346,363"/>
+<area shape="rect" id="node14" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#af42d40d7a5c80f0dfe126a574a17f423" title="Train the model with the dataset file." alt="" coords="121,246,346,293"/>
+<area shape="rect" id="node5" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aafb5809808b9b0450a0bc98740121b5f" title="Construct the related Matrix data for the model." alt="" coords="419,317,645,363"/>
+<area shape="rect" id="node12" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#a0f95257e1344225233ab49602cd9551c" title="Deallocate matrix and make it ready for re&#45;construction." alt="" coords="419,246,645,293"/>
+<area shape="rect" id="node13" href="$class_markov_1_1_model.html#a3f872a3af96a91d4627c1a5d5e66b19a" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="431,388,633,417"/>
+<area shape="rect" id="node6" href="$class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677" title="return edge&#39;s EdgeWeight." alt="" coords="737,219,971,248"/>
+<area shape="rect" id="node7" href="$class_markov_1_1_model.html#a71f6df805e340ce96e9dc4ee4ebc6537" title="Return starter Node." alt="" coords="755,272,953,301"/>
+<area shape="rect" id="node8" href="$class_markov_1_1_node.html#ac7cce56376f2a00764f64a0194cbb498" title="Return character representation of this node." alt="" coords="740,325,968,355"/>
+<area shape="rect" id="node9" href="$class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd" title="return edge&#39;s RightNode" alt="" coords="742,379,966,408"/>
+<area shape="rect" id="node10" href="$class_markov_1_1_model.html#a35cb15a14d034f3365b9d2d3efa1ffc0" title="Return starter Node." alt="" coords="731,432,977,461"/>
+<area shape="rect" id="node11" href="$class_markov_1_1_node.html#a60166d8f501c016de104f48e46bff223" title="return total edge weights" alt="" coords="713,485,995,515"/>
+<area shape="rect" id="node15" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html#a2fd4423ae3850e258dcb6b11a7feb9b2" title="Train the model with the dataset file." alt="" coords="399,107,665,154"/>
+<area shape="rect" id="node16" href="$markov_passwords_8cpp.html#a3b33e6f48f5d988f336e915c5346eb95" title=" " alt="" coords="801,5,907,35"/>
+<area shape="rect" id="node17" href="$class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#a08d468aa4146a30f4176bc91a40ed292" title="Construct the Thread Handler with a filename." alt="" coords="737,59,971,123"/>
+<area shape="rect" id="node18" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html#a5f51b0fdb75101b797f38b08da84848e" title="A single thread invoked by the Train function." alt="" coords="721,147,987,194"/>
+<area shape="rect" id="node19" href="$class_markov_1_1_model.html#ad252913f83fa3eb14cc3f9f92c5ee37a" title="Adjust the model with a single string." alt="" coords="1063,125,1301,155"/>
+<area shape="rect" id="node20" href="$class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#a068e1a9ff477de23a44c10230df416a5" title="Read the next line from the file." alt="" coords="1043,179,1321,226"/>
 </map>

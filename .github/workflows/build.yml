@@ -11,7 +11,7 @@ env:
   
   # Environment variables for building strategy
   
-  GITHUB_ACTION_WIN_PROJECT: D:\a\MarkovPasswords
+  GITHUB_ACTION_WIN_PROJECT: D:\a\Markopy
   # Solution path
   SOLUTION_FILE_PATH: ./
 
@@ -172,7 +172,7 @@ jobs:
       id: cache-boost
       with:
         path: ${{env.GITHUB_ACTION_WIN_PROJECT}}\boost
-        key: 'windows-boost-1.76-${{ matrix.python-version }}'
+        key: 'windows-boost-1.76-markopy-${{ matrix.python-version }}'
 
     - name: Build Boost
       id: boost

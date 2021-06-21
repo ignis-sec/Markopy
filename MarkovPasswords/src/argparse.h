@@ -4,6 +4,7 @@
 #define BOOST_ALL_DYN_LINK 1
 
 #include <boost/program_options.hpp>
+
 /** @brief Structure to hold parsed cli arguements.	
 */
 namespace opt = boost::program_options;

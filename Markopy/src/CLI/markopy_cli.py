@@ -42,8 +42,8 @@ def cli_init(input_model):
         logging.pprint(f"Verbosity set to {args.verbosity}.", 2)
 
     logging.pprint("Initializing model.", 1)
-    model = markopy.MarkovPasswords()
-    logging.pprint("Model initialized.",2)
+    model = markopy.ModelMatrix()
+    logging.pprint("Model initialized.", 2)
 
     logging.pprint("Importing model file.", 1)
 

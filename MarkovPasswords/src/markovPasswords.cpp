@@ -76,7 +76,7 @@ void Markov::API::MarkovPasswords::Train(const char* datasetFileName, char delim
 
 void Markov::API::MarkovPasswords::TrainThread(Markov::API::Concurrency::ThreadSharedListHandler *listhandler, char delimiter){
 	char format_str[] ="%ld,%s";
-	format_str[2]=delimiter;
+	format_str[3]=delimiter;
 	std::string line;
 	while (listhandler->next(&line) && keepRunning) {
 		long int oc;
