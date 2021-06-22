@@ -108,6 +108,7 @@ std::ofstream* Markov::API::MarkovPasswords::Save(const char* filename) {
 
 
 void Markov::API::MarkovPasswords::Generate(unsigned long int n, const char* wordlistFileName, int minLen, int maxLen, int threads)  {
+	signal(SIGINT, intHandler);
 	char* res;
 	char print[100];
 	std::ofstream wordlist;	
