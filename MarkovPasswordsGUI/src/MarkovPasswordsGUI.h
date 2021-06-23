@@ -22,7 +22,7 @@ namespace Markov::GUI{
         //Slots for buttons in GUI.
     public slots:
 
-        void MarkovPasswordsGUI::benchmarkSelected();
+        void benchmarkSelected();
         //void MarkovPasswordsGUI::modelvisSelected();
         //void MarkovPasswordsGUI::visualDebugSelected();
         //void MarkovPasswordsGUI::comparisonSelected();
@@ -30,9 +30,9 @@ namespace Markov::GUI{
    
   public slots:
 
-      void MarkovPasswordsGUI::home();
-      void MarkovPasswordsGUI :: pass();
-      void MarkovPasswordsGUI::model();
+      void home();
+      void pass();
+      void model();
   };
 };
 

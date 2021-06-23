@@ -1,7 +1,6 @@
 #include "MarkovPasswordsGUI.h"
 #include <fstream>
 #include <qwebengineview.h>
-#include <Windows.h>
 #include "CLI.h"
 
 using namespace Markov::GUI;
