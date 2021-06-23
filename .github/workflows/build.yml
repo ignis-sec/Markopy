@@ -227,7 +227,8 @@ jobs:
       run: |
         $env:PYTHON_PATH = "D:\a\python${{ matrix.python-version }}";
         $env:BOOST_ROOT = "${{env.GITHUB_ACTION_WIN_PROJECT}}\boost";
-        cmake .;cmake --build --target markopy markov .
+        cmake . -DPYTHON_VER=${{ matrix.python-version }}; 
+        cmake --build . --target markov cudamarkov markovp cudamarkovp markopy cudamarkopy; 
 
     - name: Zip built files # This would actually build your project, using zip for an example artifact
       run: 

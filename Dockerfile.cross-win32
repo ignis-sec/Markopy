@@ -1,0 +1,12 @@
+FROM ahakcil/markopy:0.5.0
+
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && \
+    apt-get install -y mingw-w64
+
+RUN apt-get -y autoclean \
+    && apt-get -y autoremove
+
+RUN rm -rf /var/lib/apt/lists/*
+
+COPY . /root/markopy/

@@ -5,8 +5,11 @@ out/*
 Testing/*
 models/*
 dataset/*
+build/*
 
 .idea/*
 .vs/*
 .vscode/*
 .scannerwork/*
+.git/*
+.github/*
