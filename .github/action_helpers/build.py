@@ -52,16 +52,16 @@ if __name__ == "__main__":
     if(args.step == "version_matrix"):
         
         if(a_type == "minor"):
-            lm = "[3.6, 3.7, 3.8, 3.9]"
-            wm = "[3.8, 3.9]"
+            lm = "[36, 37, 38, 39]"
+            wm = "[38, 39]"
 
         elif(a_type == "patch"):
-            lm = "[3.8]"
-            wm = "[3.8]"
+            lm = "[38]"
+            wm = "[38]"
 
         else:
-            lm = "[3.8]"
-            wm = "[3.8]"
+            lm = "[38]"
+            wm = "[38]"
 
         set_action_outputs(linux_matrix=lm, windows_matrix=wm)  
 
