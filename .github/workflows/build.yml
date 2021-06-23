@@ -208,6 +208,7 @@ jobs:
       id: cuda-toolkit
       with:
         cuda: '11.1.0'
+
     - name: Cache Qt
       id: cache-qt
       uses: actions/cache@v1
@@ -223,7 +224,6 @@ jobs:
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run:
       run: |
         $env:PYTHON_PATH = "D:\a\python${{ matrix.python-version }}";
         $env:BOOST_ROOT = "${{env.GITHUB_ACTION_WIN_PROJECT}}\boost";
