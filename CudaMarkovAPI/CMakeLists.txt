@@ -16,6 +16,7 @@ link_directories(${PROJECT_SOURCE_DIR}/out/lib)
 
 file(GLOB_RECURSE CMP_FILES
      "src/*.h"
+     "src/*.cu"
 )
 
 if(WIN32)
@@ -25,7 +26,7 @@ else()
 endif()
 
 set(CMP_CPP_FLAGS "${MP_C_FLAGS} -std=c++17")
-set(CMP_LINK_FLAGS "${SGX_COMMON_CFLAGS}")
+set(CMP_LINK_FLAGS "${SGX_COMMON_CFLAGS} -fPIC")
 
 set_target_properties(cudamarkov PROPERTIES COMPILE_FLAGS "${CMP_CPP_FLAGS}")
 set_target_properties(cudamarkov PROPERTIES LINK_FLAGS "${CMP_LINK_FLAGS}")
@@ -38,9 +39,9 @@ target_link_libraries(cudamarkov markov)
 
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/out/bin)
-add_executable(cudamarkov_test src/main.cu)
-set_target_properties(cudamarkov_test PROPERTIES LINKER_LANGUAGE CUDA)
-set_target_properties(cudamarkov_test PROPERTIES COMPILE_FLAGS "${CMP_CPP_FLAGS}")
-set_target_properties(cudamarkov_test PROPERTIES LINK_FLAGS "${CMP_LINK_FLAGS}")
-target_link_libraries(cudamarkov_test markov)
-target_link_libraries(cudamarkov_test cudamarkov)
+add_executable(cudamarkovp src/main.cu)
+set_target_properties(cudamarkovp PROPERTIES LINKER_LANGUAGE CUDA)
+set_target_properties(cudamarkovp PROPERTIES COMPILE_FLAGS "${CMP_CPP_FLAGS}")
+set_target_properties(cudamarkovp PROPERTIES LINK_FLAGS "${CMP_LINK_FLAGS}")
+target_link_libraries(cudamarkovp markov)
+target_link_libraries(cudamarkovp cudamarkov)

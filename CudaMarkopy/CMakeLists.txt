@@ -14,15 +14,16 @@ link_directories( ${CMAKE_BINARY_DIR}/out/lib)
 
 if(WIN32)
     link_directories( $ENV{BOOST_ROOT}/stage/lib/)
+    set(Boost_USE_STATIC_LIBS ON)
+    set(Boost_USE_MULTITHREADED ON)
+    set(Boost_USE_STATIC_RUNTIME OFF)
 endif()
 
 file(GLOB_RECURSE CMPY_FILES
      "src/*.cu"
 )
 
-set(Boost_USE_STATIC_LIBS ON)
-set(Boost_USE_MULTITHREADED ON)
-set(Boost_USE_STATIC_RUNTIME OFF)
+
 
 add_library(cudamarkopy SHARED ${CMPY_FILES})
 
