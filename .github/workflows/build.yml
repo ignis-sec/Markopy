@@ -82,6 +82,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       windows_matrix: ${{ steps.core.outputs.windows_matrix }}
+      windows_matrix_sep: ${{ steps.core.outputs.windows_matrix_sep }}
       linux_matrix: ${{ steps.core.outputs.linux_matrix }}
     steps:
     - uses: actions/checkout@v2
@@ -104,8 +105,8 @@ jobs:
     - name: Compile CPP
       run: |
         ls -al; 
-        cmake . -DPYTHON_VER=${{ matrix.python-version }}; 
-        cmake --build . --target markov cudamarkov markovp cudamarkovp markopy cudamarkopy; 
+        cmake . -DPYTHON_VER=${{ matrix.python-version }} -DPARTIAL=1 -DB_LIBS=1 -DB_CUDA=1 -DPROJ_VERSION="${{ needs.reversion.outputs.tag }}" -DCMAKE_BUILD_TYPE=Release; 
+        cmake --build . --config Release; 
         ls -alR out/;
         ls -al /usr/local/lib;
 
@@ -164,31 +165,33 @@ jobs:
     
 
   build_windows: 
-    name: Build All on Windows with CMAKE 
+    name: Build All on Windows with CMake 
     needs: [reversion, setup_build_matrix]
     runs-on: windows-latest
     strategy:
         fail-fast: false
-        max-parallel: 3
+        max-parallel: 4
         matrix: 
-          python-version: ${{ fromJson(needs.setup_build_matrix.outputs.windows_matrix) }}
+          #python-version: ${{ fromJson(needs.setup_build_matrix.outputs.windows_matrix) }}
+          python-version-sep: ${{ fromJson(needs.setup_build_matrix.outputs.windows_matrix_sep) }}
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python ${{ matrix.python-version-sep }}
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: ${{ matrix.python-version-sep }}
 
     - name: Link python libraries And clean boost ones
-      run: .\.github\action_helpers\actions_windows_libpython.ps1 -pythonver ${{ matrix.python-version }}
+      id: link_python
+      run: .\.github\action_helpers\actions_windows_libpython.ps1 -pythonver ${{ matrix.python-version-sep }}
 
     - name: Cache Boost
       uses: actions/cache@v2
       id: cache-boost
       with:
         path: ${{env.GITHUB_ACTION_WIN_PROJECT}}\boost
-        key: 'windows-boost-1.76-markopy-${{ matrix.python-version }}'
+        key: 'windows-boost-1.76-markopy-${{ matrix.python-version-sep }}'
 
     - name: Build Boost
       id: boost
@@ -202,48 +205,65 @@ jobs:
 
     - name: Rename boost static and dynamic libraries
       if: steps.cache-boost.outputs.cache-hit != 'true'
-      run: .\.github\action_helpers\actions_windows_libboost.ps1 -pythonver ${{ matrix.python-version }}
+      run: .\.github\action_helpers\actions_windows_libboost.ps1 -pythonver ${{ matrix.python-version-sep }}
 
-    - uses: Jimver/cuda-toolkit@v0.2.2
-      id: cuda-toolkit
-      with:
-        cuda: '11.1.0'
+    # These work, but take a damn hour to complete, if only github actions allowed custom containers
+    #- uses: Jimver/cuda-toolkit@v0.2.2
+    #  id: cuda-toolkit
+    #  with:
+    #    cuda: '11.2.2'
 
-    - name: Cache Qt
-      id: cache-qt
-      uses: actions/cache@v1
-      with:
-        path: ../Qt
-        key: ${{ runner.os }}-QtCache
+    #- name: Cache Qt
+    #  id: cache-qt
+    #  uses: actions/cache@v1
+    #  with:
+    #    path: ../Qt
+    #    key: ${{ runner.os }}-QtCache
 
-    - name: Install Qt
-      uses: jurplel/install-qt-action@v2
-      with:
-        cached: ${{ steps.cache-qt.outputs.cache-hit }}
+    #- name: Install Qt
+    #  uses: jurplel/install-qt-action@v2
+    #  with:
+    #    modules: 'qtwebengine'
+    #    cached: ${{ steps.cache-qt.outputs.cache-hit }}
 
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
-        $env:PYTHON_PATH = "D:\a\python${{ matrix.python-version }}";
+        $env:PYTHON_PATH = "D:\a\python${{ matrix.python-version-sep }}";
         $env:BOOST_ROOT = "${{env.GITHUB_ACTION_WIN_PROJECT}}\boost";
-        cmake . -DPYTHON_VER=${{ matrix.python-version }}; 
-        cmake --build . --target markov cudamarkov markovp cudamarkovp markopy cudamarkopy; 
+        cmake . -DPYTHON_VER=${{ steps.link_python.outputs.python_ver}} -DPARTIAL=1 -DBOOST_VER="1.76.0" -DPROJ_VERSION="${{ needs.reversion.outputs.tag }}" -DCMAKE_BUILD_TYPE=MinSizeRel -DPY_DEV_PATH="D:\a\python${{ matrix.python-version-sep }}" 
+        cmake --build . --config Release; 
 
     - name: Zip built files # This would actually build your project, using zip for an example artifact
-      run: 
-        powershell "Compress-Archive Markopy/src/CLI/markopy_cli.py,out/bin/markov.lib,out/bin/markopy.pyd,${{env.GITHUB_ACTION_WIN_PROJECT}}\boost\stage\lib\boost_python*.dll markopy-windows-py${{ matrix.python-version }}.pyd.zip"
+      run: |
+        dir .;
+        dir out/;
+        dir out/lib/Release;
+        powershell "Compress-Archive Markopy\src\CLI\markopy_cli.py,out\lib\Release\markopy.pyd,${{env.GITHUB_ACTION_WIN_PROJECT}}\boost\stage\lib\boost_python*.dll markopy-${{ needs.reversion.outputs.tag }}-win64-py${{ steps.link_python.outputs.python_ver}}.pyd.zip"
+        powershell "Compress-Archive out\lib\Release\markov.lib libmarkov-${{ needs.reversion.outputs.tag }}-win64.zip"
+      
+    - name: Upload LibMarkov
+      if: matrix.python-version-sep == '3.8'
+      id: upload-release-asset-libmarkov
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.reversion.outputs.upload_url }} 
+        asset_path: ./libmarkov-${{ needs.reversion.outputs.tag }}-win64.zip
+        asset_name:   libmarkov-${{ needs.reversion.outputs.tag }}-win64.zip
+        asset_content_type: application/zip<
 
-    
-    - name: Upload Markopy Release Assets
-      id: upload-release-asset 
+    - name: Upload Markopy
+      id: upload-release-asset-markopy
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ needs.reversion.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-        asset_path: ./markopy-windows-py${{ matrix.python-version }}.pyd.zip
-        asset_name:   markopy-windows-py${{ matrix.python-version }}.pyd.zip
+        asset_path: ./markopy-${{ needs.reversion.outputs.tag }}-win64-py${{ steps.link_python.outputs.python_ver}}.pyd.zip
+        asset_name:   markopy-${{ needs.reversion.outputs.tag }}-win64-py${{ steps.link_python.outputs.python_ver}}.pyd.zip
         asset_content_type: application/zip
 
 
