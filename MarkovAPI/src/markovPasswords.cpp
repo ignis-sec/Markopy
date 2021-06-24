@@ -7,8 +7,11 @@
 #include <mutex>
 #include <string>
 #include <signal.h>
+#ifdef _WIN32
+#include <Windows.h>
+#else
 #include <unistd.h>
-
+#endif
 
 static volatile int keepRunning = 1;
 
