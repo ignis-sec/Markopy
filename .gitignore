@@ -394,3 +394,8 @@ _deps
 lib/*
 
 out/**/*
+
+build/*
+**/*_autogen/**/*
+
+**/ui_*.h
