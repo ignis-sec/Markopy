@@ -10,7 +10,14 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(${PROJECT_SOURCE_DIR})
-link_directories( ${CMAKE_BINARY_DIR}/out/lib)
+
+link_directories(${PROJECT_SOURCE_DIR}/out/lib)
+
+include_directories(${PROJECT_SOURCE_DIR})
+
+file(GLOB_RECURSE CMPY_FILES
+     "src/*.cu"
+)
 
 if(WIN32)
     link_directories( $ENV{BOOST_ROOT}/stage/lib/)
@@ -19,17 +26,23 @@ if(WIN32)
     set(Boost_USE_STATIC_RUNTIME OFF)
 endif()
 
-file(GLOB_RECURSE CMPY_FILES
-     "src/*.cu"
-)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
 
+string(REGEX REPLACE "^(.)(.+)" "\\1.\\2" PYTHON_VER_SEP ${PYTHON_VER})
+
+find_package(Threads REQUIRED)
+find_package(Boost COMPONENTS python${PYTHON_VER} REQUIRED)
+if(PY_DEV_PATH)
+    message("Using ${PY_DEV_PATH}")
+    include_directories("${PY_DEV_PATH}/include")
+    link_directories("${PY_DEV_PATH}/libs")
+else()
+    find_package(PythonLibs ${PYTHON_VER_SEP} REQUIRED)
+endif()
 
 
 add_library(cudamarkopy SHARED ${CMPY_FILES})
-
-find_package(Boost COMPONENTS python38 REQUIRED)
-find_package(PythonLibs REQUIRED)
-
+add_dependencies (cudamarkopy cudamarkov)
 
 set(CMPY_CPP_FLAGS "${MP_C_FLAGS} -std=c++17")
 set(CMPY_LINK_FLAGS "${SGX_COMMON_CFLAGS}")
@@ -45,7 +58,7 @@ target_include_directories(cudamarkopy PUBLIC ${PYTHON_INCLUDE_DIRS})
 
 target_link_libraries(cudamarkopy cudamarkov)
 target_link_libraries(cudamarkopy ${PYTHON_LIBRARIES})
-target_link_libraries(cudamarkopy Boost::python38)
+target_link_libraries(cudamarkopy Boost::python${PYTHON_VER})
 target_link_libraries(cudamarkopy markov)
 if(WIN32)
     set_target_properties(markopy PROPERTIES SUFFIX ".pyd")

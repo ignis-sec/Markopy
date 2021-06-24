@@ -11,7 +11,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
-
 link_directories(${PROJECT_SOURCE_DIR}/out/lib)
 
 include_directories(${PROJECT_SOURCE_DIR})
