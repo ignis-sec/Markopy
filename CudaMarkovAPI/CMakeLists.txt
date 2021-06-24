@@ -25,6 +25,8 @@ else()
     add_library(cudamarkov SHARED ${CMP_FILES})
 endif()
 
+add_dependencies (cudamarkov markov)
+
 set(CMP_CPP_FLAGS "${MP_C_FLAGS} -std=c++17")
 set(CMP_LINK_FLAGS "${SGX_COMMON_CFLAGS} -fPIC")
 
@@ -40,6 +42,7 @@ target_link_libraries(cudamarkov markov)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/out/bin)
 add_executable(cudamarkovp src/main.cu)
+add_dependencies (cudamarkovp cudamarkov)
 set_target_properties(cudamarkovp PROPERTIES LINKER_LANGUAGE CUDA)
 set_target_properties(cudamarkovp PROPERTIES COMPILE_FLAGS "${CMP_CPP_FLAGS}")
 set_target_properties(cudamarkovp PROPERTIES LINK_FLAGS "${CMP_LINK_FLAGS}")

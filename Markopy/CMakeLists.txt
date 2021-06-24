@@ -1,7 +1,7 @@
 # CMakeList.txt : CMake project for Markopy, include source and define
 # project specific logic here.
 #
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required (VERSION 3.12)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/out/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/out/lib)
@@ -10,32 +10,45 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(${PROJECT_SOURCE_DIR})
-link_directories( ${CMAKE_BINARY_DIR}/out/lib)
+
+
+link_directories(${PROJECT_SOURCE_DIR}/out/lib)
+
+include_directories(${PROJECT_SOURCE_DIR})
 
 file(GLOB_RECURSE MPY_FILES
      "src/Module/*.h"
      "src/Module/*.cpp"
 )
 
-
 if(WIN32)
     link_directories( $ENV{BOOST_ROOT}/stage/lib/)
     set(Boost_USE_STATIC_LIBS ON)
     set(Boost_USE_MULTITHREADED ON)
     set(Boost_USE_STATIC_RUNTIME OFF)
+endif()
+
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+
+string(REGEX REPLACE "^(.)(.+)" "\\1.\\2" PYTHON_VER_SEP ${PYTHON_VER})
+
+find_package(Threads REQUIRED)
+find_package(Boost COMPONENTS python${PYTHON_VER} REQUIRED)
+if(PY_DEV_PATH)
+    message("Using ${PY_DEV_PATH}")
+    include_directories("${PY_DEV_PATH}/include")
+    link_directories("${PY_DEV_PATH}/libs")
+else()
+    find_package(PythonLibs ${PYTHON_VER_SEP} REQUIRED)
+endif()
+
+if(WIN32)
     add_library(markopy MODULE ${MPY_FILES} )
 else()
     add_library(markopy SHARED ${MPY_FILES} )
 endif()
 
-set(THREADS_PREFER_PTHREAD_FLAG ON)
-
-
-
-find_package(Threads REQUIRED)
-find_package(Boost COMPONENTS python${PYTHON_VER} REQUIRED)
-find_package(PythonLibs REQUIRED)
-
+add_dependencies (markopy markov)
 
 
 set(MPY_CPP_FLAGS "${MP_C_FLAGS} -std=c++17")

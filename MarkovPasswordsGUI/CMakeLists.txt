@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(${PROJECT_SOURCE_DIR})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-link_directories( ${CMAKE_BINARY_DIR}/out/lib)
+link_directories( ${PROJECT_SOURCE_DIR}/out/lib)
 
 
 
@@ -40,6 +40,9 @@ set(CMAKE_AUTOUIC ON)
 
 
 add_executable(MPGUI ${MPGUI_FILES} ${UIS_HDRS})
+
+add_dependencies (MPGUI markov)
+
 target_link_libraries(MPGUI markov)
 target_link_libraries(MPGUI Qt5::Widgets)
 target_link_libraries(MPGUI Qt5::Core)
