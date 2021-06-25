@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Markopy: Markov Passwords</title>
+<title>Markopy: Markopy</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,29 +84,81 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title"><a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Passwords </div>  </div>
+<div class="title">Markopy </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href="https://github.com/ignis-sec/Markopy/graphs/contributors"><object type="image/svg+xml" data="https://img.shields.io/github/contributors/ignis-sec/Markopy.svg?style=for-the-badge" style="pointer-events: none;">Contributors</object></a> <a href="https://github.com/ignis-sec/Markopy/network/members"><object type="image/svg+xml" data="https://img.shields.io/github/forks/ignis-sec/Markopy.svg?style=for-the-badge" style="pointer-events: none;">Forks</object></a> <a href="https://github.com/ignis-sec/Markopy/stargazers"><object type="image/svg+xml" data="https://img.shields.io/github/stars/ignis-sec/Markopy.svg?style=for-the-badge" style="pointer-events: none;">Stargazers</object></a> <a href="https://github.com/ignis-sec/Markopy/issues"><object type="image/svg+xml" data="https://img.shields.io/github/issues/ignis-sec/Markopy.svg?style=for-the-badge" style="pointer-events: none;">Issues</object></a> <img src="https://img.shields.io/github/license/ignis-sec/Markopy?style=for-the-badge" alt="GitHub" class="inline"/></p>
 <p><br  />
- </p><div align="center"> <h3 align="center"><a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Passwords</h3>
+ </p><div align="center"> <h3 align="center">Markopy</h3>
 </div><div align="center"> <div align="center"> Generate wordlists with markov models. <br  />
- <a href="https://github.com/ignis-sec/Markopy/wiki">Wiki</a> · <a href="https://markov.ignis.wtf">Complete documentation</a> · <a href="https://github.com/ignis-sec/Markopy/issues">Report Bug</a> · <a href="https://github.com/ignis-sec/Markopy/pulls">Add a Bug</a> </div> </div><div> <h4>Table of Contents</h4>
+ <a href="https://markov.ignis.wtf">HTML documentation</a> · <a href="https://markov.ignis.wtf/documentation.pdf">PDF documentation</a> · <a href="https://github.com/ignis-sec/Markopy">Github Page</a> · <a href="https://github.com/ignis-sec/Markopy/issues">Report Bug</a> · <a href="https://github.com/ignis-sec/Markopy/pulls">Add a Bug</a> </div> </div><div> <h4>Table of Contents</h4>
 </div><div> <ol>
 <li>
 <a href="#about-the-project">About The Project</a> <ul>
 <li>
-<a href="#built-with">Built With</a> </li>
+<a href="#possible-use-cases">Possible Use Cases</a> </li>
+<li>
+<a href="#getting-started">Getting Started</a> </li>
+<li>
+<a href="#releases">Releases</a> </li>
 </ul>
 </li>
 <li>
-<a href="#getting-started">Getting Started</a> <ul>
+<a href="#building">Building</a> <ul>
 <li>
-<a href="#prerequisites">Prerequisites</a> </li>
+<a href="#cmake-configuration">CMake configuration</a> <ul>
 <li>
-<a href="#installation">Installation</a> </li>
+<a href="#build-all">Build everything</a> </li>
+<li>
+<a href="#build-libs">Build libraries only</a> </li>
+<li>
+<a href="#build-cuda-libs">Build CUDA-accelerated libraries</a> </li>
+<li>
+<a href="#build-py-libs">Build python module &amp; libraries</a> </li>
+<li>
+<a href="#build-cpy-libs">Build CUDA accelerated python module</a> </li>
+<li>
+<a href="#build-cpy-libs-and-gui">Build CUDA accelerated python module and the GUI</a> </li>
 </ul>
 </li>
+<li>
+<a href="#prequisites">Prequisites</a> <ul>
+<li>
+<a href="#general-prequisites">General Prequisites</a> <ul>
+<li>
+<a href="#general-prequisites-linux">Linux</a> </li>
+<li>
+<a href="#general-prequisites-win">Windows</a> </li>
+</ul>
+</li>
+<li>
+<a href="#preq-mm">MarkovModel</a> </li>
+<li>
+<a href="#preq-ma">MarkovAPI</a> </li>
+<li>
+<a href="#preq-mac">MarkovAPICLI</a> </li>
+<li>
+<a href="#preq-mpy">Markopy</a> </li>
+<li>
+<a href="#preq-cma">CudaMarkovAPI</a> </li>
+<li>
+<a href="#preq-cmpy">CudaMarkopy</a> </li>
+<li>
+<a href="#preq-mpgui">MarkovPasswordsGUI</a> </li>
+</ul>
+</li>
+<li>
+<a href="#installing-deps">Installing Dependencies</a> <ul>
+<li>
+<a href="#installing-deps-win">Windows</a> </li>
+<li>
+<a href="#installing-deps-lin">Linux</a> </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#known-issues">Known Common Issues</a> </li>
 <li>
 <a href="#contributing">Contributing</a> </li>
 <li>
@@ -115,7 +167,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><hr  />
 <h1><a class="anchor" id="autotoc_md2"></a>
 About The Project</h1>
-<p>This projects primary goal is to create a comfortable development environment for working with <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Models, as well as creating an end product which can be used for generating password wordlists using <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Models.</p>
+<div id="about-the-project"></div><p>This projects primary goal is to create a comfortable development environment for working with <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Models, as well as creating an end product which can be used for generating password wordlists using <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Models.</p>
 <p>This project contains following sub-projects:</p>
 <ul>
 <li>MarkovModel<ul>
@@ -143,111 +195,182 @@ About The Project</h1>
 </ul>
 </li>
 <li>CudaMarkopy<ul>
-<li>GPU-accelereted wrağğer for CudaMarkovAPI</li>
+<li>GPU-accelereted wrapper for CudaMarkovAPI</li>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
-Possible use cases</h1>
-<p>While main focus of the development has been towards random walk performance</p>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Possible Use Cases</h2>
+<div id="possible-use-cases"></div><p>While main focus of the development has been towards random walk performance and password generation, underlying libraries could be used for other applications such as specific use cases of hidden markov models in bioinformatics and gene research.</p>
 <h2><a class="anchor" id="autotoc_md4"></a>
-Built With</h2>
-<p>Each one of the</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
-Getting Started</h1>
-<p>If you'd just like to use the project without contributing, check out the releases page. If you want to build, check out wiki for building the project.</p>
+Getting Started</h2>
+<div id="getting-started"></div><p>If you'd just like to use the project without contributing, check out the releases page. Latest minor release (0.8.x, 0.9.x) is even with main branch, and latest patch release (0.8.1, 0.8.2) is even with development branch.</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Releases</h2>
+<div id="releases"></div><p>Releases are maintained automatically via github actions. Each push to the main branch will trigger a minor version release, while each accepted pull request into the development branch will trigger a patch version release.</p>
+<p>Pull requests to the development branch will also trigger a draft release only visible to the maintainers.</p>
+<p>Release files contain:</p><ul>
+<li>libmarkov-{version}-{platform}.zip<ul>
+<li>Depending on the platform, contains the libmarkov.so or markov.lib from that version.</li>
+</ul>
+</li>
+<li>libcudamarkov-{version}-{platform}.zip<ul>
+<li>Depending on the platform, contains the libcudamarkov.so or cudamarkov.lib from that version.</li>
+</ul>
+</li>
+<li>markopy-{version}-{platform}-py{ver}.{extension}.zip<ul>
+<li>Depending on the paltform, contains markopy.so or markopy.pyd. CPython extensions are compiled for specific versions. If your python version is not supported by the releases, you can create an issue, or build it yourself using the python3.x-dev package.</li>
+</ul>
+</li>
+<li>cudamarkopy-{version}-{platform}-py{ver}.{extension}.zip<ul>
+<li>Depending on the paltform, contains cudamarkopy.so or cudamarkopy.pyd. CPython extensions are compiled for specific versions. If your python version is not supported by the releases, you can create an issue, or build it yourself using the python3.x-dev package.</li>
+</ul>
+</li>
+<li>models-{version}.zip<ul>
+<li>Contains the latest models with the release version. Contains base models (untrained), trained models, and language-specific models.</li>
+</ul>
+</li>
+</ul>
 <hr  />
-<h2><a class="anchor" id="autotoc_md7"></a>
-Prerequisites</h2>
-<h4><a class="anchor" id="autotoc_md8"></a>
-MarkovModel</h4>
+ <h1><a class="anchor" id="autotoc_md7"></a>
+Building</h1>
+<div id="building"></div><p> You can build the project using cmake with g++ &amp; nvcc on linux, and msbuild &amp; nvcc on windows.</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Prerequisites</h1>
+<div id="prequisites"></div><p>You can find a list of the dependencies below. If you have any missing, check out the <a href="#setting-up-deps">setting up prequisites</a> part.</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+General prequisites</h2>
+<div id="general-prequisites"></div><p>To build the simple core of this project, you'll need: </p>
+<h3><a class="anchor" id="autotoc_md10"></a>
+Linux</h3>
 <ul>
-<li>Make for linux, Visual Studio/MSBuild for Windows.</li>
+<li>CMake, preferably one of the latest versions.</li>
+<li>CXX compiler, preferably g++ or clang++ (LLVM 3.9+).</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md9"></a>
-MarkovPasswords</h4>
+<h3><a class="anchor" id="autotoc_md11"></a>
+Windows</h3>
 <ul>
-<li>Boost.ProgramOptions (tested on 1.76.0)</li>
+<li>CMake, preferably one of the latest versions.</li>
+<li>CXX compiler, preferably msbuild(cl.exe) or clang++ (LLVM 3.9+). Please note that mingw is not recommended as it is not officially supported by the nvcc.exe, and might not be linkable if you are building the CUDA components too.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md10"></a>
-Markopy</h4>
-<ul>
-<li>Boost.Python (tested on 1.76.0)</li>
-<li>Python development package (tested on python 3.8)</li>
-</ul>
-<h4><a class="anchor" id="autotoc_md11"></a>
-MarkovPasswordsGUI</h4>
-<ul>
-<li>QT development environment.</li>
-</ul>
-<hr  />
+<h2><a class="anchor" id="autotoc_md12"></a>
+MarkovModel</h2>
+<div id="preq-mm"></div><p> This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.</p>
 <h2><a class="anchor" id="autotoc_md13"></a>
+MarkovAPI</h2>
+<div id="preq-ma"></div><p> This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.</p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+MarkovAPICLI</h2>
+<div id="preq-mac"></div><ul>
+<li>Boost.program_options (tested on 1.71.0-1.76.0)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Markopy</h2>
+<div id="preq-mac"></div><ul>
+<li>Boost.Python (tested on 1.71.0-1.76.0)</li>
+<li>Python development package (tested on python 36-39)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md16"></a>
+CudaMarkovAPI</h2>
+<div id="preq-cma"></div><ul>
+<li>CUDA toolkit (11.0+, c++17 support required)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md17"></a>
+CudaMarkopy</h2>
+<div id="preq-cmpy"></div><ul>
+<li>CUDA toolkit (11.0+, c++17 support required)</li>
+<li>Boost.Python (tested on 1.71.0-1.76.0)</li>
+<li>Python development package (tested on python 36-39)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md18"></a>
+MarkovPasswordsGUI</h2>
+<div id="preq-mpgui"></div><ul>
+<li>QT5 development environment. (qt5-qmake on ubuntu apt-get)</li>
+<li>QTWebEngine5 plugin. (qtwebengine5-dev on ubuntu apt-get)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md19"></a>
+CMake Configuration</h2>
+<div id="cmake-configuration"></div><p>You can build this project with cmake.</p>
+<p>If you don't have prequisites for some of the projects set up, you can use the partial set up configuration to ignore those projects when setting the project up.</p>
+<p>If you do not meet the prequisites, you'll have to partially set up the CMake file (you cant use &ndash;target to build some of the targets, because configuration phase will fail too).</p>
+<p>Some examples for partially setting up and building the project are below.</p>
+<h3><a class="anchor" id="autotoc_md20"></a>
+Build everything</h3>
+<div id="build-all"></div><div class="fragment"><div class="line">$ cmake . -DPYTHON_VER=38 &amp;&amp; cmake --build .</div>
+</div><!-- fragment --><p>This will build all the libraries and executables. Requires python-dev, CUDA, QT5, QT5-Webview</p>
+<h3><a class="anchor" id="autotoc_md21"></a>
+Build libraries only</h3>
+<div id="build-libs"></div><div class="fragment"><div class="line">$ cmake . -DPARTIAL=1 -DB_LIBS=1 &amp;&amp; cmake --build .</div>
+</div><!-- fragment --><p>Only build basic libraries. Requires only CXX compiler.</p>
+<h3><a class="anchor" id="autotoc_md22"></a>
+Build CUDA-accelerated libraries</h3>
+<div id="build-cuda-libs"></div><div class="fragment"><div class="line">$ cmake . -DPARTIAL=1 -DB_CUDA=1 &amp;&amp; cmake --build .</div>
+</div><!-- fragment --><p>Build libraries along with cuda accelerated ones.</p>
+<h3><a class="anchor" id="autotoc_md23"></a>
+Build python module &amp; libraries</h3>
+<div id="build-py-libs"></div><div class="fragment"><div class="line">$ cmake . -DPARTIAL=1 -DPYTHON_VER=39 &amp;&amp; cmake --build .</div>
+</div><!-- fragment --><p>Will build basic libraries and python modules.</p>
+<h3><a class="anchor" id="autotoc_md24"></a>
+Build CUDA accelerated python module</h3>
+<div id="build-cpy-libs"></div><div class="fragment"><div class="line">$ cmake . -DPARTIAL=1 -DPYTHON_VER=39 -DB_CUDA=1 &amp;&amp; cmake --build .</div>
+</div><!-- fragment --><p>Will build cudamarkopy.</p>
+<h3><a class="anchor" id="autotoc_md25"></a>
+Build CUDA accelerated python module and the GUI</h3>
+<div id="build-cpy-libs-and-gui"></div><div class="fragment"><div class="line">$ cmake . -DPARTIAL=1 -DPYTHON_VER=39 -DB_CUDA=1 -DB_GUI &amp;&amp; cmake --build .</div>
+</div><!-- fragment --><p>Combine methods</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md27"></a>
 Installing Dependencies</h2>
-<h4><a class="anchor" id="autotoc_md14"></a>
+<div id="installing-deps"></div><h4><a class="anchor" id="autotoc_md28"></a>
 Windows</h4>
-<ul>
+<div id="installing-deps-win"></div><ul>
 <li>QT: Install <a href="https://doc.qt.io/qt-5/windows.html">QT For Windows</a></li>
-<li>Boost:<ul>
-<li>Download Boost from <a href="https://www.boost.org/users/download/">its website</a></li>
+<li>Boost (program_options and python):<ul>
+<li>Download Boost from <a href="https://www.boost.org/users/download/">its website</a>. Prefer one of the tested versions, 1.71.0 to 1.76.0</li>
 <li>Unzip the contents.</li>
-<li>Launch "Visual Studio Developer Command Prompt"</li>
-<li>Move to the boost installation directory. Run <code>bootstrap.bat</code></li>
-<li>Run <code>b2</code>.</li>
+<li>Launch "Visual Studio Developer Command Prompt" (If you don't have this, properly set up the PATH% variable for cl.exe)</li>
+<li>Move to the boost installation directory. Bootstrap libraries with your python version: ``` .\bootstrap.bat &ndash;with-python=$(which python3.6) &ndash;with-python-version=3.6; ``<code></code></li>
+<li><code>Run</code>b2<code>to build the libraries. </code>`` .\b2.exe &ndash;layout=system address-model=64 variant=release link=static runtime-link=shared threading=multi &ndash;with-program_options &ndash;with-python stage; ```</li>
 </ul>
 </li>
 <li>Python: You can use the windows app store to download python runtime and libraries.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md15"></a>
+<h4><a class="anchor" id="autotoc_md29"></a>
 Linux</h4>
-<ul>
-<li>QT: Follow <a href="https://wiki.qt.io/Install_Qt_5_on_Ubuntu">this guide</a> to install QT on Linux.</li>
-<li>Boost: run <code>sudo apt-get install libboost-all-dev</code></li>
-<li>Python: run <code>sudo apt-get install python3</code></li>
+<div id="installing-deps-lin"></div><ul>
+<li>QT: Follow <a href="https://wiki.qt.io/Install_Qt_5_on_Ubuntu">this guide</a> to install QT on Linux. Alternatively, on ubuntu you can <code>sudo apt-get install qt5-qmake qtwebengine5-dev</code></li>
+<li>Boost (program options and python):<ul>
+<li>Download Boost from <a href="https://www.boost.org/users/download/">its website</a>. Prefer one of the tested versions, 1.71.0 to 1.76.0</li>
+<li>Unzip the contents.</li>
+<li>Move to the boost installation directory. Bootstrap libraries with your python version: ``` ./bootstrap.sh &ndash;with-python=$(which python3.6) &ndash;with-python-version=3.6; ``<code></code></li>
+<li><code>Run</code>b2<code>to build the libraries. </code>`` ./b2 variant=release link=static threading=multi &ndash;with-program_options install; ./b2 &ndash;with-python &ndash;buildid=3.6 install; ```</li>
+</ul>
+</li>
+<li>Boost (alternative)<ul>
+<li>Use a package manager to install boost <div class="fragment"><div class="line">sudo apt-get install libboost-all-dev</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
+<li>Python: <div class="fragment"><div class="line">sudo apt-get install python3-dev</div>
+</div><!-- fragment --></li>
 </ul>
 <hr  />
-<h2><a class="anchor" id="autotoc_md17"></a>
-Installation</h2>
-<p>See the Wiki Page</p>
-<hr  />
-<h2><a class="anchor" id="autotoc_md19"></a>
-Building</h2>
-<p>Building process can be fairly complicated depending on the environment.</p>
-<h1><a class="anchor" id="autotoc_md20"></a>
-Linux</h1>
-<p>If you've set up the dependencies, you can just build the project with make. List of directives is below.</p>
-<div class="fragment"><div class="line">.PHONY: all</div>
-<div class="line">all: model mp</div>
-<div class="line"> </div>
-<div class="line">model: $(INCLUDE)/$(MM_LIB)</div>
-<div class="line"> </div>
-<div class="line">mp: $(BIN)/$(MP_EXEC)</div>
-<div class="line"> </div>
-<div class="line">markopy: $(BIN)/$(MPY_SO)</div>
-<div class="line"> </div>
-<div class="line">.PHONY: clean</div>
-<div class="line">clean:</div>
-<div class="line">    $(RM) -r $(BIN)/*</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md21"></a>
-Windows</h1>
-<p>Set up correct environment variables for BOOST_ROOT% (folder containing boost, libs, stage, tools) and PYTHON_PATH% (folder containing include, lib, libs, Tools, python.exe/python3.exe).</p>
-<p>If you've set up the dependencies and environment variables correctly, you can open the solution with Visual Studio and build with that.</p>
-<hr  />
-<h1><a class="anchor" id="autotoc_md23"></a>
+<h1><a class="anchor" id="autotoc_md31"></a>
 Known Common issues</h1>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<div id="known-issues"></div><h2><a class="anchor" id="autotoc_md32"></a>
 Linux</h2>
-<h3><a class="anchor" id="autotoc_md25"></a>
+<h3><a class="anchor" id="autotoc_md33"></a>
 Markopy - Python.h - Not found</h3>
-<p>Make sure you have the development version of python package, which includes the required header files. Check if header files exist: <code>/usr/include/python*</code></p>
+<p>Make sure you have the development version of python package, which includes the required header files. Check if header files exist: <code>/usr/include/python*</code> or <code>locate Python.h</code>.</p>
 <p>If it doesn't, run <code>sudo apt-get install python3-dev</code></p>
-<h3><a class="anchor" id="autotoc_md26"></a>
-Markopy/MarkovPasswords - *.so not found, or other library related issues when building</h3>
+<h3><a class="anchor" id="autotoc_md34"></a>
+Markopy/MarkovAPI - *.so not found, or other library related issues when building</h3>
 <p>Run <code>ls /usr/lib/x86_64-linux-gnu/ | grep boost</code> and check the shared object filenames. A common issue is that lboost is required but filenames are formatted as llibboost, or vice versa.</p>
 <p>Do the same for python related library issues, run: <code>ls /usr/lib/x86_64-linux-gnu/ | grep python</code> to verify filename format is as required.</p>
 <p>If not, you can modify the makefile, or create symlinks such as: <code>ln -s /usr/lib/x86_64-linux-gnu/libboost_python38.so /usr/lib/x86_64-linux-gnu/boost_python38.so</code></p>
-<h2><a class="anchor" id="autotoc_md27"></a>
+<h2><a class="anchor" id="autotoc_md35"></a>
 Windows</h2>
-<h3><a class="anchor" id="autotoc_md28"></a>
+<h3><a class="anchor" id="autotoc_md36"></a>
 Boost - Bootstrap.bat "ctype.h" not found</h3>
 <ul>
 <li>Make sure you are working in the "Visual Studio Developer Command Prompt" terminal.</li>
@@ -257,50 +380,26 @@ Boost - Bootstrap.bat "ctype.h" not found</h3>
 <div class="line">set LIB=%LIB%;C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\um\x64</div>
 </div><!-- fragment --></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md29"></a>
+<h3><a class="anchor" id="autotoc_md37"></a>
 Cannot open file "*.lib"</h3>
 <p>Make sure you have set the BOOST_ROOT environment variable correctly. Make sure you ran <code>b2</code> to build library files from boost sources.</p>
-<h3><a class="anchor" id="autotoc_md30"></a>
+<h3><a class="anchor" id="autotoc_md38"></a>
 Python.h not found</h3>
 <p>Make sure you have python installed, and make sure you set PYTHON_PATH environment variable.</p>
 <hr  />
-<h3><a class="anchor" id="autotoc_md32"></a>
-Simplified Theory</h3>
-<p><a class="anchor" id="autotoc_md33"></a></p><h5>What is a markov model</h5>
-<p>Below, is the example <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Model which can generate strings with the alphabet "a,b,c"</p>
-<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/empty_model.png" alt="" class="inline"/></p>
-<p><a class="anchor" id="autotoc_md34"></a></p><h5>Iteration 1</h5>
-<p>Below is a demonstration of how training will be done. For this example, we are going to adjust the model with string "ab", and our occurrence will be "3" From MarkovPasswords, inside the train function, Model::adjust is called with "ab" and "3" parameters.</p>
-<p>Now, Model::adjust will iteratively adjust the edge weights accordingly. It starts by adjusting weight between start and "a" node. This is done by calling Edge::adjust of the edge between the nodes.</p>
-<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_1.png" alt="" class="inline"/></p>
-<p>After adjustment, ajust function iterates to the next character, "b", and does the same thing.</p>
-<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_2.png" alt="" class="inline"/></p>
-<p>As this string is finished, it will adjust the final weight, b-&gt;"end"</p>
-<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_3.png" alt="" class="inline"/></p>
-<p><a class="anchor" id="autotoc_md35"></a></p><h5>Iteration 2</h5>
-<p>This time, same procedure will be applied for "bacb" string, with occurrence value of 12.</p>
-<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_21.png" alt="" class="inline"/></p>
-<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_22.png" alt="" class="inline"/></p>
-<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_23.png" alt="" class="inline"/></p>
-<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_24.png" alt="" class="inline"/></p>
-<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_25.png" alt="" class="inline"/></p>
-<p><a class="anchor" id="autotoc_md36"></a></p><h5>Iteration 38271</h5>
-<p>As the model is trained, hidden linguistical patterns start to appear, and our model looks like this <img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_30.png" alt="" class="inline"/></p>
-<p>With our dataset, without doing any kind of linugistic analysis ourselves, our <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Model has highlighted that strings are more likely to start with a, b tends to follow a, and a is likely to be repeated in the string. <img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_31.png" alt="" class="inline"/></p>
-<hr  />
-<h2><a class="anchor" id="autotoc_md38"></a>
-Contributing</h2>
-<p>Feel free to contribute.</p>
-<h2><a class="anchor" id="autotoc_md39"></a>
-Contact</h2>
-<p>Twitter - <a href="https://twitter.com/ahakcil">@ahakcil</a> </p>
+<h1><a class="anchor" id="autotoc_md40"></a>
+Contributing</h1>
+<div id="contributing"></div><p>Feel free to contribute. We welcome all the issues and pull requests.</p>
+<h1><a class="anchor" id="autotoc_md41"></a>
+Contact</h1>
+<div id="contact"></div><p>Twitter - <a href="https://twitter.com/ahakcil">@ahakcil</a> </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jun 26 2021 00:09:12 for Markopy by
+    <li class="footer">Generated on Sat Jun 26 2021 02:38:36 for Markopy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

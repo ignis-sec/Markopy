@@ -5,7 +5,7 @@ var searchData=
   ['concurrency_119',['Concurrency',['../namespace_markov_1_1_a_p_i_1_1_concurrency.html',1,'Markov::API']]],
   ['cuda_120',['CUDA',['../namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html',1,'Markov::API']]],
   ['gui_121',['GUI',['../namespace_markov_1_1_g_u_i.html',1,'Markov']]],
-  ['markov_20passwords_122',['Markov Passwords',['../index.html',1,'']]],
+  ['markopy_122',['Markopy',['../index.html',1,'']]],
   ['magenta_123',['MAGENTA',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#abd812d8a82872e9fca1f0df632fa3722a2202ef26e54a5230dd8c6b90b0fe999a',1,'Markov::API::CLI::Terminal']]],
   ['main_124',['main',['../_markov_a_p_i_c_l_i_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../_markov_passwords_g_u_i_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../main_8cu.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cu']]],
   ['main_2ecpp_125',['main.cpp',['../_markov_a_p_i_c_l_i_2src_2main_8cpp.html',1,'(Global Namespace)'],['../_markov_passwords_g_u_i_2src_2main_8cpp.html',1,'(Global Namespace)']]],
