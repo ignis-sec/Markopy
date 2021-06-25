@@ -1,7 +1,8 @@
 <map id="Markov::Random::Marsaglia::random" name="Markov::Random::Marsaglia::random">
-<area shape="rect" id="node1" title="Generate Random Number." alt="" coords="1107,5,1352,52"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#a96f2885aac69b49b21c66ad5a32514b9" title="A single thread of a single partition of FastRandomWalk." alt="" coords="833,5,1059,52"/>
-<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5" title="A single partition of FastRandomWalk event." alt="" coords="553,5,785,52"/>
-<area shape="rect" id="node4" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#a9e5a9885d48e95b9f5d1ed082d83db24" title="Random walk on the Matrix&#45;reduced Markov::Model." alt="" coords="280,5,505,52"/>
-<area shape="rect" id="node5" href="$namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" title=" " alt="" coords="5,5,232,52"/>
+<area shape="rect" id="node1" title="Generate Random Number." alt="" coords="1380,5,1625,52"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#a96f2885aac69b49b21c66ad5a32514b9" title="A single thread of a single partition of FastRandomWalk." alt="" coords="1107,5,1332,52"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5" title="A single partition of FastRandomWalk event." alt="" coords="827,5,1059,52"/>
+<area shape="rect" id="node4" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#a09a6793164aeccc4875c25151ca2ab14" title="Random walk on the Matrix&#45;reduced Markov::Model." alt="" coords="553,5,779,52"/>
+<area shape="rect" id="node5" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#a3bb4d49f1fbc10e1649dc9bf73529520" title="Random walk on the Matrix&#45;reduced Markov::Model." alt="" coords="280,5,505,52"/>
+<area shape="rect" id="node6" href="$namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" title=" " alt="" coords="5,5,232,52"/>
 </map>

@@ -8,6 +8,7 @@ var class_markov_1_1_model =
     [ "Import", "class_markov_1_1_model.html#a3f872a3af96a91d4627c1a5d5e66b19a", null ],
     [ "Import", "class_markov_1_1_model.html#a379ea9943f9d4c212e1140d4a9af64f5", null ],
     [ "Nodes", "class_markov_1_1_model.html#a71f6df805e340ce96e9dc4ee4ebc6537", null ],
+    [ "OptimizeEdgeOrder", "class_markov_1_1_model.html#adf22db37833ae6a4c707b446bef4359d", null ],
     [ "RandomWalk", "class_markov_1_1_model.html#aa4a11c6679c998936332f8409ae95375", null ],
     [ "StarterNode", "class_markov_1_1_model.html#a35cb15a14d034f3365b9d2d3efa1ffc0", null ],
     [ "edges", "class_markov_1_1_model.html#a06d54b6e00a7e92b2c3bf72e1bfa560a", null ],

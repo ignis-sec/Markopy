@@ -1,3 +1,9 @@
+/** @file menu.cpp
+ * @brief menu page
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 #include "menu.h"
 #include <fstream>
 #include "MarkovPasswordsGUI.h"

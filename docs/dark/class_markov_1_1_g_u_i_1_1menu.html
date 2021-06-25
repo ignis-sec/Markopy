@@ -103,7 +103,7 @@ Inheritance diagram for Markov::GUI::menu:</div>
 <div class="center"><img src="class_markov_1_1_g_u_i_1_1menu__inherit__graph.png" border="0" usemap="#_markov_1_1_g_u_i_1_1menu_inherit__map" alt="Inheritance graph"/></div>
 <map name="_markov_1_1_g_u_i_1_1menu_inherit__map" id="_markov_1_1_g_u_i_1_1menu_inherit__map">
 <area shape="rect" title="QT Menu class." alt="" coords="5,83,181,112"/>
-<area shape="rect" title=" " alt="" coords="25,5,161,35"/>
+<area shape="rect" href="class_q_main_window.html" title=" " alt="" coords="25,5,161,35"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -111,8 +111,9 @@ Collaboration diagram for Markov::GUI::menu:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_markov_1_1_g_u_i_1_1menu__coll__graph.png" border="0" usemap="#_markov_1_1_g_u_i_1_1menu_coll__map" alt="Collaboration graph"/></div>
 <map name="_markov_1_1_g_u_i_1_1menu_coll__map" id="_markov_1_1_g_u_i_1_1menu_coll__map">
-<area shape="rect" title="QT Menu class." alt="" coords="5,83,181,112"/>
-<area shape="rect" title=" " alt="" coords="25,5,161,35"/>
+<area shape="rect" title="QT Menu class." alt="" coords="47,100,223,129"/>
+<area shape="rect" href="class_q_main_window.html" title=" " alt="" coords="5,5,141,35"/>
+<area shape="rect" title=" " alt="" coords="166,5,229,35"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -130,13 +131,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aae1ad64c4ab9413e1494e1d8d30aa1f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_u_i_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">Ui::main</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_g_u_i_1_1menu.html#aae1ad64c4ab9413e1494e1d8d30aa1f4">ui</a></td></tr>
+<tr class="memitem:aae1ad64c4ab9413e1494e1d8d30aa1f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="main_8cu.html#a3c04138a5bfe5d72780bb7e82a18e627">Ui::main</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_g_u_i_1_1menu.html#aae1ad64c4ab9413e1494e1d8d30aa1f4">ui</a></td></tr>
 <tr class="separator:aae1ad64c4ab9413e1494e1d8d30aa1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>QT Menu class. </p>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00009">9</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00015">15</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a19f2bce9cdf1c78eb746e86ab5abf14a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a19f2bce9cdf1c78eb746e86ab5abf14a">&#9670;&nbsp;</a></span>menu()</h2>
@@ -154,16 +155,27 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="menu_8cpp_source.html#l00008">8</a> of file <a class="el" href="menu_8cpp_source.html">menu.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    : QMainWindow(parent)</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_markov_1_1_g_u_i_1_1menu.html#aae1ad64c4ab9413e1494e1d8d30aa1f4">ui</a>.setupUi(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//QObject::connect(ui.pushButton, &amp;QPushButton::clicked, this, [this] {about(); });</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    QObject::connect(<a class="code" href="class_markov_1_1_g_u_i_1_1menu.html#aae1ad64c4ab9413e1494e1d8d30aa1f4">ui</a>.visu, &amp;QPushButton::clicked, <span class="keyword">this</span>, [<span class="keyword">this</span>] {visualization(); });</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="menu_8cpp_source.html#l00014">14</a> of file <a class="el" href="menu_8cpp_source.html">menu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    : <a class="code" href="class_q_main_window.html">QMainWindow</a>(parent)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_markov_1_1_g_u_i_1_1menu.html#aae1ad64c4ab9413e1494e1d8d30aa1f4">ui</a>.setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">//QObject::connect(ui.pushButton, &amp;QPushButton::clicked, this, [this] {about(); });</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    QObject::connect(<a class="code" href="class_markov_1_1_g_u_i_1_1menu.html#aae1ad64c4ab9413e1494e1d8d30aa1f4">ui</a>.visu, &amp;QPushButton::clicked, <span class="keyword">this</span>, [<span class="keyword">this</span>] {visualization(); });</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="menu_8h_source.html#l00021">ui</a>, and <a class="el" href="menu_8cpp_source.html#l00027">visualization()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_markov_1_1_g_u_i_1_1menu_a19f2bce9cdf1c78eb746e86ab5abf14a_cgraph.png" border="0" usemap="#class_markov_1_1_g_u_i_1_1menu_a19f2bce9cdf1c78eb746e86ab5abf14a_cgraph" alt=""/></div>
+<map name="class_markov_1_1_g_u_i_1_1menu_a19f2bce9cdf1c78eb746e86ab5abf14a_cgraph" id="class_markov_1_1_g_u_i_1_1menu_a19f2bce9cdf1c78eb746e86ab5abf14a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,14,237,43"/>
+<area shape="rect" href="class_markov_1_1_g_u_i_1_1menu.html#ad2fd60ba9ea6b8c4ba0ccb98abe9a651" title=" " alt="" coords="285,5,472,52"/>
+</map>
+</div>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -190,11 +202,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="menu_8cpp_source.html#l00017">17</a> of file <a class="el" href="menu_8cpp_source.html">menu.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                 {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;   </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="menu_8cpp_source.html#l00023">23</a> of file <a class="el" href="menu_8cpp_source.html">menu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                 {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;   </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -221,13 +233,24 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="menu_8cpp_source.html#l00021">21</a> of file <a class="el" href="menu_8cpp_source.html">menu.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                         {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i.html">MarkovPasswordsGUI</a>* w = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i.html">MarkovPasswordsGUI</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    w-&gt;show();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    this-&gt;close();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="menu_8cpp_source.html#l00027">27</a> of file <a class="el" href="menu_8cpp_source.html">menu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                         {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i.html">MarkovPasswordsGUI</a>* w = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i.html">MarkovPasswordsGUI</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    w-&gt;show();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    this-&gt;close();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 </div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="menu_8cpp_source.html#l00014">menu()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_markov_1_1_g_u_i_1_1menu_ad2fd60ba9ea6b8c4ba0ccb98abe9a651_icgraph.png" border="0" usemap="#class_markov_1_1_g_u_i_1_1menu_ad2fd60ba9ea6b8c4ba0ccb98abe9a651_icgraph" alt=""/></div>
+<map name="class_markov_1_1_g_u_i_1_1menu_ad2fd60ba9ea6b8c4ba0ccb98abe9a651_icgraph" id="class_markov_1_1_g_u_i_1_1menu_ad2fd60ba9ea6b8c4ba0ccb98abe9a651_icgraph">
+<area shape="rect" title=" " alt="" coords="285,5,472,52"/>
+<area shape="rect" href="class_markov_1_1_g_u_i_1_1menu.html#a19f2bce9cdf1c78eb746e86ab5abf14a" title=" " alt="" coords="5,14,237,43"/>
+</map>
+</div>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -241,7 +264,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_u_i_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">Ui::main</a> Markov::GUI::menu::ui</td>
+          <td class="memname"><a class="el" href="main_8cu.html#a3c04138a5bfe5d72780bb7e82a18e627">Ui::main</a> Markov::GUI::menu::ui</td>
         </tr>
       </table>
   </td>
@@ -251,7 +274,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00015">15</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00021">21</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="menu_8cpp_source.html#l00014">menu()</a>.</p>
 
 </div>
 </div>
@@ -261,13 +286,14 @@ Private Attributes</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1menu_html_aae1ad64c4ab9413e1494e1d8d30aa1f4"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1menu.html#aae1ad64c4ab9413e1494e1d8d30aa1f4">Markov::GUI::menu::ui</a></div><div class="ttdeci">Ui::main ui</div><div class="ttdef"><b>Definition:</b> <a href="menu_8h_source.html#l00015">menu.h:15</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i_html"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i.html">Markov::GUI::MarkovPasswordsGUI</a></div><div class="ttdoc">Reporting UI.</div><div class="ttdef"><b>Definition:</b> <a href="_markov_passwords_g_u_i_8h_source.html#l00013">MarkovPasswordsGUI.h:13</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1menu_html_aae1ad64c4ab9413e1494e1d8d30aa1f4"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1menu.html#aae1ad64c4ab9413e1494e1d8d30aa1f4">Markov::GUI::menu::ui</a></div><div class="ttdeci">Ui::main ui</div><div class="ttdef"><b>Definition:</b> <a href="menu_8h_source.html#l00021">menu.h:21</a></div></div>
+<div class="ttc" id="aclass_q_main_window_html"><div class="ttname"><a href="class_q_main_window.html">QMainWindow</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i_html"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i.html">Markov::GUI::MarkovPasswordsGUI</a></div><div class="ttdoc">Reporting UI.</div><div class="ttdef"><b>Definition:</b> <a href="_markov_passwords_g_u_i_8h_source.html#l00019">MarkovPasswordsGUI.h:19</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_markov.html">Markov</a></li><li class="navelem"><a class="el" href="namespace_markov_1_1_g_u_i.html">GUI</a></li><li class="navelem"><a class="el" href="class_markov_1_1_g_u_i_1_1menu.html">menu</a></li>
-    <li class="footer">Generated by
+    <li class="footer">Generated on Fri Jun 25 2021 20:41:33 for Markopy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

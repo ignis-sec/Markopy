@@ -1,3 +1,10 @@
+/** @file cudaModelMatrix.h
+ * @brief CUDA accelerated extension of Markov::API::ModelMatrix
+ * @authors Ata Hakçıl
+ * 
+ * @copydoc Markov::API::CUDA::CUDAModelMatrix
+ */
+
 #include "MarkovAPI/src/modelMatrix.h"
 #include "cudaDeviceController.h"   
 
@@ -7,8 +14,9 @@ namespace Markov::API::CUDA{
     /** @brief Extension of Markov::API::ModelMatrix which is modified to run on GPU devices.
      * 
      * This implementation only supports Nvidia devices.
+     * @copydoc Markov::API::ModelMatrix
     */
-    class CUDAModelMatrix : public ModelMatrix, public CUDADeviceController{
+    class CUDAModelMatrix : public Markov::API::ModelMatrix, public CUDADeviceController{
     public:
 
         /** @brief Migrate the class members to the VRAM

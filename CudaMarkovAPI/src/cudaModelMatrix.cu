@@ -1,3 +1,10 @@
+/** @file cudaModelMatrix.cu
+ * @brief CUDA accelerated extension of Markov::API::ModelMatrix
+ * @authors Ata Hakçıl
+ * 
+ * @copydoc Markov::API::CUDA::CUDAModelMatrix
+ */
+
 #include "cudaModelMatrix.h"
 #include "cudarandom.h"
 

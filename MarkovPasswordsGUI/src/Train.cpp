@@ -1,3 +1,9 @@
+/** @file Train.cpp
+ * @brief training page for GUI
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 #include "Train.h"
 #include <fstream>
 #include<QFileDialog>

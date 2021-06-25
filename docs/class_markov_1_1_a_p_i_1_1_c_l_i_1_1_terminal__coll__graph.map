@@ -1,11 +1,10 @@
 <map id="Markov::API::CLI::Terminal" name="Markov::API::CLI::Terminal">
-<area shape="rect" id="node1" title="pretty colors for Terminal. Windows Only." alt="" coords="88,679,315,764"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,476,211,613"/>
-<area shape="rect" id="node3" title="STL class." alt="" coords="26,299,185,385"/>
-<area shape="rect" id="node4" title=" " alt="" coords="26,140,65,225"/>
-<area shape="rect" id="node5" title=" " alt="" coords="111,140,150,225"/>
-<area shape="rect" id="node6" title="STL class." alt="" coords="236,502,359,587"/>
-<area shape="rect" id="node7" title="STL class." alt="" coords="213,291,384,393"/>
-<area shape="rect" id="node8" title="STL class." alt="" coords="198,140,399,225"/>
-<area shape="rect" id="node9" title="STL class." alt="" coords="237,5,361,91"/>
+<area shape="rect" id="node1" title="pretty colors for Terminal. Windows Only." alt="" coords="107,628,333,713"/>
+<area shape="rect" id="node2" title=" " alt="" coords="24,443,229,563"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,283,48,369"/>
+<area shape="rect" id="node4" title=" " alt="" coords="119,283,182,369"/>
+<area shape="rect" id="node5" title="STL class." alt="" coords="253,460,376,545"/>
+<area shape="rect" id="node6" title="STL class." alt="" coords="229,275,400,377"/>
+<area shape="rect" id="node7" title="STL class." alt="" coords="214,140,415,225"/>
+<area shape="rect" id="node8" title="STL class." alt="" coords="253,5,377,91"/>
 </map>

@@ -90,6 +90,9 @@ $(document).ready(function(){initNavTree('model_8h.html',''); initResizable(); }
 <div class="title">model.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Model class template.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;map&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
@@ -103,18 +106,18 @@ Include dependency graph for model.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="model_8h__incl.png" border="0" usemap="#model_8h" alt=""/></div>
 <map name="model_8h" id="model_8h">
-<area shape="rect" title=" " alt="" coords="299,5,386,35"/>
+<area shape="rect" title="Model class template." alt="" coords="299,5,386,35"/>
 <area shape="rect" title=" " alt="" coords="5,160,64,189"/>
 <area shape="rect" title=" " alt="" coords="89,160,162,189"/>
 <area shape="rect" title=" " alt="" coords="419,83,503,112"/>
 <area shape="rect" title=" " alt="" coords="186,160,273,189"/>
 <area shape="rect" title=" " alt="" coords="528,83,595,112"/>
 <area shape="rect" title=" " alt="" coords="619,83,717,112"/>
-<area shape="rect" href="node_8h.html" title=" " alt="" coords="267,83,344,112"/>
-<area shape="rect" href="edge_8h.html" title=" " alt="" coords="596,160,673,189"/>
+<area shape="rect" href="node_8h.html" title="Node class template." alt="" coords="267,83,344,112"/>
+<area shape="rect" href="edge_8h.html" title="Edge class template." alt="" coords="596,160,673,189"/>
 <area shape="rect" title=" " alt="" coords="265,237,357,267"/>
 <area shape="rect" title=" " alt="" coords="473,160,573,189"/>
-<area shape="rect" href="random_8h.html" title=" " alt="" coords="349,160,449,189"/>
+<area shape="rect" href="random_8h.html" title="Random engine implementations for Markov." alt="" coords="349,160,449,189"/>
 <area shape="rect" title=" " alt="" coords="545,237,620,267"/>
 <area shape="rect" title=" " alt="" coords="645,237,726,267"/>
 <area shape="rect" title=" " alt="" coords="381,237,467,267"/>
@@ -125,16 +128,20 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="model_8h__dep__incl.png" border="0" usemap="#model_8hdep" alt=""/></div>
 <map name="model_8hdep" id="model_8hdep">
-<area shape="rect" title=" " alt="" coords="479,5,566,35"/>
-<area shape="rect" href="markov_passwords_8h.html" title=" " alt="" coords="263,83,441,112"/>
-<area shape="rect" href="dllmain_8cpp.html" title=" " alt="" coords="465,83,580,112"/>
-<area shape="rect" href="_unit_tests_8cpp.html" title=" " alt="" coords="605,83,731,112"/>
-<area shape="rect" href="src_2main_8cpp.html" title=" " alt="" coords="5,237,101,267"/>
-<area shape="rect" href="model_matrix_8h.html" title=" " alt="" coords="230,160,367,189"/>
-<area shape="rect" href="markopy_8cpp.html" title=" " alt="" coords="505,237,631,267"/>
-<area shape="rect" href="markov_passwords_8cpp.html" title=" " alt="" coords="442,160,641,189"/>
-<area shape="rect" href="model_matrix_8cpp.html" title=" " alt="" coords="126,237,282,267"/>
-<area shape="rect" href="cuda_model_matrix_8h.html" title=" " alt="" coords="306,237,481,267"/>
+<area shape="rect" title="Model class template." alt="" coords="304,5,391,35"/>
+<area shape="rect" href="dllmain_8cpp.html" title="DLLMain for dynamic windows library." alt="" coords="119,83,234,112"/>
+<area shape="rect" href="markov_passwords_8h.html" title="Wrapper for Markov::Model to use with char represented models." alt="" coords="258,83,437,112"/>
+<area shape="rect" href="_unit_tests_8cpp.html" title="Unit tests with Microsoft::VisualStudio::CppUnitTestFramework." alt="" coords="461,83,588,112"/>
+<area shape="rect" href="markov_passwords_8cpp.html" title="Wrapper for Markov::Model to use with char represented models." alt="" coords="5,160,204,189"/>
+<area shape="rect" href="model_matrix_8h.html" title="An extension of Markov::API::MarkovPasswords." alt="" coords="279,160,416,189"/>
+<area shape="rect" href="_markov_a_p_i_c_l_i_2src_2main_8cpp.html" title="Test cases for Markov::API::ModelMatrix." alt="" coords="149,237,245,267"/>
+<area shape="rect" href="_generate_8cpp.html" title="Generation Page." alt="" coords="441,160,571,189"/>
+<area shape="rect" href="_train_8cpp.html" title="training page for GUI" alt="" coords="596,160,691,189"/>
+<area shape="rect" href="model_matrix_8cpp.html" title="An extension of Markov::API::MarkovPasswords." alt="" coords="269,237,425,267"/>
+<area shape="rect" href="markopy_8cpp.html" title="CPython wrapper for libmarkov utils." alt="" coords="450,237,575,267"/>
+<area shape="rect" href="cuda_model_matrix_8h.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="600,237,775,267"/>
+<area shape="rect" href="cuda_model_matrix_8cu.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="516,315,699,344"/>
+<area shape="rect" href="main_8cu.html" title="Simple test file to check libcudamarkov." alt="" coords="723,315,809,344"/>
 </map>
 </div>
 </div>
@@ -158,13 +165,20 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespace_markov"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for the markov-model related classes. Contains <a class="el" href="class_markov_1_1_model.html" title="class for the final Markov Model, constructed from nodes and edges.">Model</a>, <a class="el" href="class_markov_1_1_node.html" title="A node class that for the vertices of model. Connected with eachother using Edge.">Node</a> and <a class="el" href="class_markov_1_1_edge.html" title="Edge class used to link nodes in the model together.">Edge</a> classes. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Model class template. </p>
+<dl class="section author"><dt>Authors</dt><dd>Ata Hakçıl, Osman Ömer Yıldıztugay</dd></dl>
+<p>class for the final <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Model, constructed from nodes and edges. Each atomic piece of the generation result is stored in a node, while edges contain the relation weights. <em>Extending:</em> To extend the class, implement the template and inherit from it, as "class MyModel : public Markov::Model&lt;char&gt;". For a complete demonstration of how to extend the class, see MarkovPasswords.</p>
+<p>Whole model can be defined as a list of the edges, as dangling nodes are pointless. This approach is used for the import/export operations. For more information on importing/exporting model, check out the github readme and wiki page. </p>
+
+<p class="definition">Definition in file <a class="el" href="model_8h_source.html">model.h</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_422554bd57fa81f0dd836caa3830c5ac.html">MarkovModel</a></li><li class="navelem"><a class="el" href="dir_efd19935daef5c936a959a8859f1ab63.html">src</a></li><li class="navelem"><a class="el" href="model_8h.html">model.h</a></li>
-    <li class="footer">Generated by
+    <li class="footer">Generated on Fri Jun 25 2021 20:41:33 for Markopy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

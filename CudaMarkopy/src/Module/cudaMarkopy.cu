@@ -1,3 +1,11 @@
+/** @file cudaMarkopy.cpp
+ * @brief CPython wrapper for libcudamarkov utils. GPU
+ * @authors Ata Hakçıl
+ * 
+ * @copydoc markopy.cpp
+ * @copydoc cudaModelMatrix.cu
+ */
+
 #define BOOST_PYTHON_STATIC_LIB
 #include <Python.h>
 #include <boost/python.hpp>

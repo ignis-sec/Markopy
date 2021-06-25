@@ -39,7 +39,7 @@ unsigned long \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d
 \item 
 static unsigned long $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}{Migrate\+To\+V\+R\+AM}} (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+Random\+::\+Marsaglia}} $\ast$M\+Earr, long int grid\+Size)
 \begin{DoxyCompactList}\small\item\em Migrate a \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}}\mbox{[}\mbox{]} to V\+R\+AM as seed\+Chunk. \end{DoxyCompactList}\item 
-static \+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_ad1beeb03129fea545cfb18009d2d955f}{List\+Cuda\+Devices}} ()
+static \+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}{List\+Cuda\+Devices}} ()
 \begin{DoxyCompactList}\small\item\em List \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} devices in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -62,7 +62,7 @@ std\+::uniform\+\_\+int\+\_\+distribution$<$ long long unsigned $>$ \& \mbox{\hy
 \doxysubsection*{Static Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \+\_\+\+\_\+host\+\_\+\+\_\+ int \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{Cuda\+Check\+Notify\+Err}} (cuda\+Error\+\_\+t \+\_\+status, const char $\ast$msg, bool b\+Exit=true)
+static \+\_\+\+\_\+host\+\_\+\+\_\+ int \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{Cuda\+Check\+Notify\+Err}} (cuda\+Error\+\_\+t \+\_\+status, const \mbox{\hyperlink{classchar}{char}} $\ast$msg, bool b\+Exit=true)
 \begin{DoxyCompactList}\small\item\em Check results of the last operation on G\+PU. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\static \+\_\+\+\_\+host\+\_\+\+\_\+ cuda\+Error\+\_\+t \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2}{Cuda\+Malloc2\+D\+To\+Flat}} (T $\ast$$\ast$dst, int row, int col)
 \begin{DoxyCompactList}\small\item\em Malloc a 2D array in device space. \end{DoxyCompactList}\item 
@@ -75,16 +75,40 @@ static \+\_\+\+\_\+host\+\_\+\+\_\+ int \mbox{\hyperlink{class_markov_1_1_a_p_i_
 \doxysubsection{Detailed Description}
 Extension of \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} which is capable o working on {\bfseries{device}} space. 
 
-Definition at line \mbox{\hyperlink{cudarandom_8h_source_l00011}{11}} of file \mbox{\hyperlink{cudarandom_8h_source}{cudarandom.\+h}}.
+Implementation of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} Engine. This is an implementation of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} engine, which for most use cases is a better fit than other solutions. Very simple mathematical formula to generate pseudorandom integer, so its crazy fast.
+
+This implementation of the \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}} Engine is seeded by \mbox{\hyperlink{random_8h}{random.\+h}} default random engine. Random\+Engine is only seeded once so its not a performance issue.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Using \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}} Engine with Random\+Walk 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} model;}
+\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
+\DoxyCodeLine{    this-\/>RandomWalk(\&MarsagliaRandomEngine, 5, 10, res); }
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Generating a random number with \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}} Engine 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} me;}
+\DoxyCodeLine{std::cout << me.\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{random}}();}
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{cudarandom_8h_source_l00020}{20}} of file \mbox{\hyperlink{cudarandom_8h_source}{cudarandom.\+h}}.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}} 
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}} 
 \index{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!CudaCheckNotifyErr@{CudaCheckNotifyErr}}
 \index{CudaCheckNotifyErr@{CudaCheckNotifyErr}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}}
 \doxysubsubsection{\texorpdfstring{CudaCheckNotifyErr()}{CudaCheckNotifyErr()}}
-{\footnotesize\ttfamily static \+\_\+\+\_\+host\+\_\+\+\_\+ int Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Check\+Notify\+Err (\begin{DoxyParamCaption}\item[{cuda\+Error\+\_\+t}]{\+\_\+status,  }\item[{const char $\ast$}]{msg,  }\item[{bool}]{b\+Exit = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ int Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Check\+Notify\+Err (\begin{DoxyParamCaption}\item[{cuda\+Error\+\_\+t}]{\+\_\+status,  }\item[{const \mbox{\hyperlink{classchar}{char}} $\ast$}]{msg,  }\item[{bool}]{b\+Exit = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
 
 
 
@@ -104,10 +128,29 @@ If a failure occurs, its assumed beyond redemption, and exited.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{char} *da, a = \textcolor{stringliteral}{"test"};}
 \DoxyCodeLine{cudastatus = cudaMalloc((\textcolor{keywordtype}{char} **)\&da, 5*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
-\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"Failed to allocate VRAM for *da.\(\backslash\)n"});}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"Failed to allocate VRAM for *da.\(\backslash\)n"});}
 \end{DoxyCode}
  
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{cuda_device_controller_8cu_source_l00032}{32}} of file \mbox{\hyperlink{cuda_device_controller_8cu_source}{cuda\+Device\+Controller.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032                                                                                                                        \{}
+\DoxyCodeLine{00033         \textcolor{keywordflow}{if} (\_status != cudaSuccess) \{}
+\DoxyCodeLine{00034             std::cerr << \textcolor{stringliteral}{"\(\backslash\)033[1;31m"} << msg  << \textcolor{stringliteral}{" -\/> "} << cudaGetErrorString(\_status)  << \textcolor{stringliteral}{" ("}<< \_status << \textcolor{stringliteral}{")"} << \textcolor{stringliteral}{"\(\backslash\)033[0m"} << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00035             }
+\DoxyCodeLine{00036             \textcolor{keywordflow}{if}(bExit) \{}
+\DoxyCodeLine{00037                 cudaDeviceReset();}
+\DoxyCodeLine{00038                 exit(1);}
+\DoxyCodeLine{00039             \}}
+\DoxyCodeLine{00040         \}}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00042     \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2}} 
 \index{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!CudaMalloc2DToFlat@{CudaMalloc2DToFlat}}
 \index{CudaMalloc2DToFlat@{CudaMalloc2DToFlat}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}}
@@ -139,25 +182,25 @@ cuda\+Error\+\_\+t status of the cuda\+Malloc operation
 \DoxyCodeLine{\textcolor{keywordtype}{char}* dst;}
 \DoxyCodeLine{cudastatus = CudaMalloc2DToFlat<char>(\&dst, 5, 15);}
 \DoxyCodeLine{\textcolor{keywordflow}{if}(cudastatus!=cudaSuccess)\{}
-\DoxyCodeLine{    \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{    \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
 \DoxyCodeLine{\}}
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00073}{73}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
+Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00075}{75}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00073                                                                                  \{}
-\DoxyCodeLine{00074             cudaError\_t cudastatus = cudaMalloc((T **)dst, row*col*\textcolor{keyword}{sizeof}(T));}
-\DoxyCodeLine{00075             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"cudaMalloc Failed."}, \textcolor{keyword}{false});}
-\DoxyCodeLine{00076             \textcolor{keywordflow}{return} cudastatus;}
-\DoxyCodeLine{00077         \}}
+\DoxyCodeLine{00075                                                                                  \{}
+\DoxyCodeLine{00076             cudaError\_t cudastatus = cudaMalloc((T **)dst, row*col*\textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{00077             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"cudaMalloc Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00078             \textcolor{keywordflow}{return} cudastatus;}
+\DoxyCodeLine{00079         \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat()}}.
+References \mbox{\hyperlink{cuda_device_controller_8h_source_l00132}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -199,29 +242,29 @@ cuda\+Error\+\_\+t status of the cuda\+Malloc operation
 \DoxyCodeLine{cudaError\_t cudastatus;}
 \DoxyCodeLine{\textcolor{keywordtype}{char}* dst;}
 \DoxyCodeLine{cudastatus = CudaMalloc2DToFlat<char>(\&dst, 5, 15);}
-\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
 \DoxyCodeLine{cudastatus = CudaMemcpy2DToFlat<char>(*dst,src,15,15);}
-\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMemcpy2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMemcpy2DToFlat Failed."}, \textcolor{keyword}{false});}
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00101}{101}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
+Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00103}{103}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00101                                                                                          \{}
-\DoxyCodeLine{00102             T* tempbuf = \textcolor{keyword}{new} T[row*col];}
-\DoxyCodeLine{00103             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<row;i++)\{}
-\DoxyCodeLine{00104                 memcpy(\&(tempbuf[row*i]), src[i], col);}
-\DoxyCodeLine{00105             \}}
-\DoxyCodeLine{00106             \textcolor{keywordflow}{return} cudaMemcpy(dst, tempbuf, row*col*\textcolor{keyword}{sizeof}(T), cudaMemcpyHostToDevice);}
-\DoxyCodeLine{00107             }
-\DoxyCodeLine{00108         \}}
+\DoxyCodeLine{00103                                                                                          \{}
+\DoxyCodeLine{00104             T* tempbuf = \textcolor{keyword}{new} T[row*col];}
+\DoxyCodeLine{00105             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<row;i++)\{}
+\DoxyCodeLine{00106                 memcpy(\&(tempbuf[row*i]), src[i], col);}
+\DoxyCodeLine{00107             \}}
+\DoxyCodeLine{00108             \textcolor{keywordflow}{return} cudaMemcpy(dst, tempbuf, row*col*\textcolor{keyword}{sizeof}(T), cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00109             }
+\DoxyCodeLine{00110         \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat()}}.
+References \mbox{\hyperlink{cuda_device_controller_8h_source_l00132}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -264,34 +307,34 @@ cuda\+Error\+\_\+t status of the cuda\+Malloc operation
 \DoxyCodeLine{\textcolor{keywordtype}{char}* dst;}
 \DoxyCodeLine{cudastatus = CudaMigrate2DFlat<long int>(}
 \DoxyCodeLine{   \&dst, this-\/>valueMatrix, this-\/>matrixSize, this-\/>matrixSize);}
-\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"    Cuda failed to initialize value matrix row."});}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"    Cuda failed to initialize value matrix row."});}
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{130}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
+Definition at line \mbox{\hyperlink{cuda_device_controller_8h_source_l00132}{132}} of file \mbox{\hyperlink{cuda_device_controller_8h_source}{cuda\+Device\+Controller.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00130                                                                                          \{}
-\DoxyCodeLine{00131             cudaError\_t cudastatus;}
-\DoxyCodeLine{00132             cudastatus = CudaMalloc2DToFlat<T>(dst, row, col);}
-\DoxyCodeLine{00133             \textcolor{keywordflow}{if}(cudastatus!=cudaSuccess)\{}
-\DoxyCodeLine{00134                 \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
-\DoxyCodeLine{00135                 \textcolor{keywordflow}{return} cudastatus;}
-\DoxyCodeLine{00136             \}}
-\DoxyCodeLine{00137             cudastatus = CudaMemcpy2DToFlat<T>(*dst,src,row,col);}
-\DoxyCodeLine{00138             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMemcpy2DToFlat Failed."}, \textcolor{keyword}{false});}
-\DoxyCodeLine{00139             \textcolor{keywordflow}{return} cudastatus;}
-\DoxyCodeLine{00140         \}}
+\DoxyCodeLine{00132                                                                                          \{}
+\DoxyCodeLine{00133             cudaError\_t cudastatus;}
+\DoxyCodeLine{00134             cudastatus = CudaMalloc2DToFlat<T>(dst, row, col);}
+\DoxyCodeLine{00135             \textcolor{keywordflow}{if}(cudastatus!=cudaSuccess)\{}
+\DoxyCodeLine{00136                 \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00137                 \textcolor{keywordflow}{return} cudastatus;}
+\DoxyCodeLine{00138             \}}
+\DoxyCodeLine{00139             cudastatus = CudaMemcpy2DToFlat<T>(*dst,src,row,col);}
+\DoxyCodeLine{00140             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"  CudaMemcpy2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00141             \textcolor{keywordflow}{return} cudastatus;}
+\DoxyCodeLine{00142         \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat()}}.
+References \mbox{\hyperlink{cuda_device_controller_8h_source_l00132}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat()}}.
 
 
 
-Referenced by \mbox{\hyperlink{cuda_device_controller_8h_source_l00073}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Malloc2\+D\+To\+Flat()}}, \mbox{\hyperlink{cuda_device_controller_8h_source_l00101}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Memcpy2\+D\+To\+Flat()}}, and \mbox{\hyperlink{cuda_device_controller_8h_source_l00130}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat()}}.
+Referenced by \mbox{\hyperlink{cuda_device_controller_8h_source_l00075}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Malloc2\+D\+To\+Flat()}}, \mbox{\hyperlink{cuda_device_controller_8h_source_l00103}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Memcpy2\+D\+To\+Flat()}}, and \mbox{\hyperlink{cuda_device_controller_8h_source_l00132}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+Cuda\+Migrate2\+D\+Flat()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -321,19 +364,19 @@ Distribution schema for seeding.
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00081}{81}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00090}{90}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00081                                                                                \{}
-\DoxyCodeLine{00082             \textcolor{keyword}{static} std::uniform\_int\_distribution<long long unsigned> \_distribution(0, 0xffffFFFF);}
-\DoxyCodeLine{00083             \textcolor{keywordflow}{return} \_distribution;}
-\DoxyCodeLine{00084         \}}
+\DoxyCodeLine{00090                                                                                \{}
+\DoxyCodeLine{00091             \textcolor{keyword}{static} std::uniform\_int\_distribution<long long unsigned> \_distribution(0, 0xffffFFFF);}
+\DoxyCodeLine{00092             \textcolor{keywordflow}{return} \_distribution;}
+\DoxyCodeLine{00093         \}}
 
 \end{DoxyCode}
 
 
-Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00057}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::random()}}.
+Referenced by \mbox{\hyperlink{random_8h_source_l00132}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00066}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::random()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -355,23 +398,23 @@ Default random engine for seeding.
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00073}{73}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00082}{82}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00073                                                      \{}
-\DoxyCodeLine{00074             \textcolor{keyword}{static} std::default\_random\_engine \_generator(\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}{rd}}()());}
-\DoxyCodeLine{00075             \textcolor{keywordflow}{return} \_generator;}
-\DoxyCodeLine{00076         \}}
+\DoxyCodeLine{00082                                                      \{}
+\DoxyCodeLine{00083             \textcolor{keyword}{static} std::default\_random\_engine \_generator(\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}{rd}}()());}
+\DoxyCodeLine{00084             \textcolor{keywordflow}{return} \_generator;}
+\DoxyCodeLine{00085         \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{random_8h_source_l00065}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::rd()}}.
+References \mbox{\hyperlink{random_8h_source_l00074}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::rd()}}.
 
 
 
-Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00057}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::random()}}.
+Referenced by \mbox{\hyperlink{random_8h_source_l00132}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00066}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::random()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -389,11 +432,11 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_ad1beeb03129fea545cfb18009d2d955f}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_ad1beeb03129fea545cfb18009d2d955f}} 
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}} 
 \index{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!ListCudaDevices@{ListCudaDevices}}
 \index{ListCudaDevices@{ListCudaDevices}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}}
 \doxysubsubsection{\texorpdfstring{ListCudaDevices()}{ListCudaDevices()}}
-{\footnotesize\ttfamily static \+\_\+\+\_\+host\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+List\+Cuda\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Device\+Controller\+::\+List\+Cuda\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
 
 
 
@@ -410,7 +453,30 @@ This function will print details of every \mbox{\hyperlink{namespace_markov_1_1_
 \DoxyCodeLine{Peak Memory Bandwidth (GB/s): 448.064}
 \DoxyCodeLine{Max Linear Threads: 1024}
 \end{DoxyCode}
- \mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}} 
+ 
+
+Definition at line \mbox{\hyperlink{cuda_device_controller_8cu_source_l00016}{16}} of file \mbox{\hyperlink{cuda_device_controller_8cu_source}{cuda\+Device\+Controller.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016                                                                      \{ \textcolor{comment}{//list cuda Capable devices on host.}}
+\DoxyCodeLine{00017         \textcolor{keywordtype}{int} nDevices;}
+\DoxyCodeLine{00018         cudaGetDeviceCount(\&nDevices);}
+\DoxyCodeLine{00019         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nDevices; i++) \{}
+\DoxyCodeLine{00020             cudaDeviceProp prop;}
+\DoxyCodeLine{00021             cudaGetDeviceProperties(\&prop, i);}
+\DoxyCodeLine{00022             std::cerr << \textcolor{stringliteral}{"Device Number: "} <<  i  << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00023             std::cerr << \textcolor{stringliteral}{"Device name: "} << prop.name << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00024             std::cerr << \textcolor{stringliteral}{"Memory Clock Rate (KHz): "} << prop.memoryClockRate << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00025             std::cerr << \textcolor{stringliteral}{"Memory Bus Width (bits): "} << prop.memoryBusWidth << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00026             std::cerr << \textcolor{stringliteral}{"Peak Memory Bandwidth (GB/s): "} << 2.0 * prop.memoryClockRate * (prop.memoryBusWidth / 8) / 1.0e6 << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00027             std::cerr << \textcolor{stringliteral}{"Max Linear Threads: "} << prop.maxThreadsDim[0] << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00028             }
+\DoxyCodeLine{00029         \}}
+\DoxyCodeLine{00030     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}\label{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}} 
 \index{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!MigrateToVRAM@{MigrateToVRAM}}
 \index{MigrateToVRAM@{MigrateToVRAM}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}}
 \doxysubsubsection{\texorpdfstring{MigrateToVRAM()}{MigrateToVRAM()}}
@@ -432,32 +498,46 @@ pointer to the resulting seed chunk in device V\+R\+AM.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{cudarandom_8h_source_l00019}{19}} of file \mbox{\hyperlink{cudarandom_8h_source}{cudarandom.\+h}}.
+Definition at line \mbox{\hyperlink{cudarandom_8h_source_l00028}{28}} of file \mbox{\hyperlink{cudarandom_8h_source}{cudarandom.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00019                                                                                                    \{}
-\DoxyCodeLine{00020             cudaError\_t cudastatus;}
-\DoxyCodeLine{00021             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}* seedChunk;}
-\DoxyCodeLine{00022             cudastatus = cudaMalloc((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}**)\&seedChunk, gridSize*3*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}));}
-\DoxyCodeLine{00023             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"Failed to allocate seed buffer"});}
-\DoxyCodeLine{00024             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *temp = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}[gridSize*3];}
-\DoxyCodeLine{00025             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<gridSize;i++)\{}
-\DoxyCodeLine{00026                 temp[i*3]   = MEarr[i].\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}};}
-\DoxyCodeLine{00027                 temp[i*3+1] = MEarr[i].\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
-\DoxyCodeLine{00028                 temp[i*3+2] = MEarr[i].\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
-\DoxyCodeLine{00029             \}}
-\DoxyCodeLine{00030             \textcolor{comment}{//for(int i=0;i<gridSize*3;i++) std::cout << temp[i] << "\(\backslash\)n";}}
-\DoxyCodeLine{00031             cudaMemcpy(seedChunk, temp, gridSize*3*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}), cudaMemcpyHostToDevice);}
-\DoxyCodeLine{00032             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"Failed to memcpy seed buffer."});}
-\DoxyCodeLine{00033             \textcolor{keywordflow}{return} seedChunk;}
-\DoxyCodeLine{00034         \}}
+\DoxyCodeLine{00028                                                                                                    \{}
+\DoxyCodeLine{00029             cudaError\_t cudastatus;}
+\DoxyCodeLine{00030             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}* seedChunk;}
+\DoxyCodeLine{00031             cudastatus = cudaMalloc((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}**)\&seedChunk, gridSize*3*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{00032             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"Failed to allocate seed buffer"});}
+\DoxyCodeLine{00033             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *temp = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}[gridSize*3];}
+\DoxyCodeLine{00034             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<gridSize;i++)\{}
+\DoxyCodeLine{00035                 temp[i*3]   = MEarr[i].\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}};}
+\DoxyCodeLine{00036                 temp[i*3+1] = MEarr[i].\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
+\DoxyCodeLine{00037                 temp[i*3+2] = MEarr[i].\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
+\DoxyCodeLine{00038             \}}
+\DoxyCodeLine{00039             \textcolor{comment}{//for(int i=0;i<gridSize*3;i++) std::cout << temp[i] << "\(\backslash\)n";}}
+\DoxyCodeLine{00040             cudaMemcpy(seedChunk, temp, gridSize*3*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}), cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00041             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{CudaCheckNotifyErr}}(cudastatus, \textcolor{stringliteral}{"Failed to memcpy seed buffer."});}
+\DoxyCodeLine{00042             }
+\DoxyCodeLine{00043             \textcolor{keyword}{delete}[] temp;}
+\DoxyCodeLine{00044             \textcolor{keywordflow}{return} seedChunk;}
+\DoxyCodeLine{00045         \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{random_8h_source_l00146}{Markov\+::\+Random\+::\+Marsaglia\+::x}}, \mbox{\hyperlink{random_8h_source_l00147}{Markov\+::\+Random\+::\+Marsaglia\+::y}}, and \mbox{\hyperlink{random_8h_source_l00148}{Markov\+::\+Random\+::\+Marsaglia\+::z}}.
+References \mbox{\hyperlink{random_8h_source_l00155}{Markov\+::\+Random\+::\+Marsaglia\+::x}}, \mbox{\hyperlink{random_8h_source_l00156}{Markov\+::\+Random\+::\+Marsaglia\+::y}}, and \mbox{\hyperlink{random_8h_source_l00157}{Markov\+::\+Random\+::\+Marsaglia\+::z}}.
 
+
+
+Referenced by \mbox{\hyperlink{cuda_model_matrix_8cu_source_l00145}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+C\+U\+D\+A\+Model\+Matrix\+::prep\+Kernel\+Memory\+Channel()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}\label{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}} 
 \index{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!random@{random}}
 \index{random@{random}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}}
@@ -477,32 +557,32 @@ Reimplemented from \mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_e
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00131}{131}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00140}{140}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00131                                  \{  }
-\DoxyCodeLine{00132         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} t;}
-\DoxyCodeLine{00133         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} << 16;}
-\DoxyCodeLine{00134         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} >> 5;}
-\DoxyCodeLine{00135         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} << 1;}
-\DoxyCodeLine{00136 }
-\DoxyCodeLine{00137         t = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}};}
-\DoxyCodeLine{00138         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
-\DoxyCodeLine{00139         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}} = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
-\DoxyCodeLine{00140         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}} = t \string^ \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^ \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
-\DoxyCodeLine{00141 }
-\DoxyCodeLine{00142         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
-\DoxyCodeLine{00143     \}}
+\DoxyCodeLine{00140                                  \{  }
+\DoxyCodeLine{00141         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} t;}
+\DoxyCodeLine{00142         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} << 16;}
+\DoxyCodeLine{00143         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} >> 5;}
+\DoxyCodeLine{00144         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^= \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} << 1;}
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{00146         t = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}};}
+\DoxyCodeLine{00147         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
+\DoxyCodeLine{00148         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}} = \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
+\DoxyCodeLine{00149         \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}} = t \string^ \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} \string^ \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}};}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}};}
+\DoxyCodeLine{00152     \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{random_8h_source_l00146}{Markov\+::\+Random\+::\+Marsaglia\+::x}}, \mbox{\hyperlink{random_8h_source_l00147}{Markov\+::\+Random\+::\+Marsaglia\+::y}}, and \mbox{\hyperlink{random_8h_source_l00148}{Markov\+::\+Random\+::\+Marsaglia\+::z}}.
+References \mbox{\hyperlink{random_8h_source_l00155}{Markov\+::\+Random\+::\+Marsaglia\+::x}}, \mbox{\hyperlink{random_8h_source_l00156}{Markov\+::\+Random\+::\+Marsaglia\+::y}}, and \mbox{\hyperlink{random_8h_source_l00157}{Markov\+::\+Random\+::\+Marsaglia\+::z}}.
 
 
 
-Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00144}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Thread()}}.
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00153}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Thread()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -524,19 +604,19 @@ Default random device for seeding.
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00065}{65}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00074}{74}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00065                                       \{}
-\DoxyCodeLine{00066             \textcolor{keyword}{static} std::random\_device \_rd;}
-\DoxyCodeLine{00067             \textcolor{keywordflow}{return} \_rd;}
-\DoxyCodeLine{00068         \}}
+\DoxyCodeLine{00074                                       \{}
+\DoxyCodeLine{00075             \textcolor{keyword}{static} std::random\_device \_rd;}
+\DoxyCodeLine{00076             \textcolor{keywordflow}{return} \_rd;}
+\DoxyCodeLine{00077         \}}
 
 \end{DoxyCode}
 
 
-Referenced by \mbox{\hyperlink{random_8h_source_l00073}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::generator()}}.
+Referenced by \mbox{\hyperlink{random_8h_source_l00082}{Markov\+::\+Random\+::\+Default\+Random\+Engine\+::generator()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -557,11 +637,11 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00146}{146}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00155}{155}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, \mbox{\hyperlink{cudarandom_8h_source_l00019}{Migrate\+To\+V\+R\+A\+M()}}, and \mbox{\hyperlink{random_8h_source_l00131}{Markov\+::\+Random\+::\+Marsaglia\+::random()}}.
+Referenced by \mbox{\hyperlink{random_8h_source_l00132}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, \mbox{\hyperlink{cudarandom_8h_source_l00028}{Migrate\+To\+V\+R\+A\+M()}}, and \mbox{\hyperlink{random_8h_source_l00140}{Markov\+::\+Random\+::\+Marsaglia\+::random()}}.
 
 \mbox{\Hypertarget{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}\label{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}} 
 \index{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!y@{y}}
@@ -571,11 +651,11 @@ Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Markov\+::\+Random\+::\+
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00147}{147}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00156}{156}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, \mbox{\hyperlink{cudarandom_8h_source_l00019}{Migrate\+To\+V\+R\+A\+M()}}, and \mbox{\hyperlink{random_8h_source_l00131}{Markov\+::\+Random\+::\+Marsaglia\+::random()}}.
+Referenced by \mbox{\hyperlink{random_8h_source_l00132}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, \mbox{\hyperlink{cudarandom_8h_source_l00028}{Migrate\+To\+V\+R\+A\+M()}}, and \mbox{\hyperlink{random_8h_source_l00140}{Markov\+::\+Random\+::\+Marsaglia\+::random()}}.
 
 \mbox{\Hypertarget{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}\label{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}} 
 \index{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!z@{z}}
@@ -585,11 +665,11 @@ Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Markov\+::\+Random\+::\+
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00148}{148}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00157}{157}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, \mbox{\hyperlink{cudarandom_8h_source_l00019}{Migrate\+To\+V\+R\+A\+M()}}, and \mbox{\hyperlink{random_8h_source_l00131}{Markov\+::\+Random\+::\+Marsaglia\+::random()}}.
+Referenced by \mbox{\hyperlink{random_8h_source_l00132}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, \mbox{\hyperlink{cudarandom_8h_source_l00028}{Migrate\+To\+V\+R\+A\+M()}}, and \mbox{\hyperlink{random_8h_source_l00140}{Markov\+::\+Random\+::\+Marsaglia\+::random()}}.
 
 
 

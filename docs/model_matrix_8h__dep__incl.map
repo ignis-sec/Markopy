@@ -1,7 +1,9 @@
 <map id="modelMatrix.h" name="modelMatrix.h">
-<area shape="rect" id="node1" title=" " alt="" coords="218,5,355,35"/>
-<area shape="rect" id="node2" href="$src_2main_8cpp.html" title=" " alt="" coords="5,83,101,112"/>
-<area shape="rect" id="node3" href="$model_matrix_8cpp.html" title=" " alt="" coords="126,83,282,112"/>
-<area shape="rect" id="node4" href="$markopy_8cpp.html" title=" " alt="" coords="307,83,432,112"/>
-<area shape="rect" id="node5" href="$cuda_model_matrix_8h.html" title=" " alt="" coords="457,83,631,112"/>
+<area shape="rect" id="node1" title="An extension of Markov::API::MarkovPasswords." alt="" coords="232,5,369,35"/>
+<area shape="rect" id="node2" href="$model_matrix_8cpp.html" title="An extension of Markov::API::MarkovPasswords." alt="" coords="5,83,161,112"/>
+<area shape="rect" id="node3" href="$_markov_a_p_i_c_l_i_2src_2main_8cpp.html" title="Test cases for Markov::API::ModelMatrix." alt="" coords="186,83,282,112"/>
+<area shape="rect" id="node4" href="$markopy_8cpp.html" title="CPython wrapper for libmarkov utils." alt="" coords="306,83,431,112"/>
+<area shape="rect" id="node5" href="$cuda_model_matrix_8h.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="456,83,631,112"/>
+<area shape="rect" id="node6" href="$cuda_model_matrix_8cu.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="372,160,555,189"/>
+<area shape="rect" id="node7" href="$main_8cu.html" title="Simple test file to check libcudamarkov." alt="" coords="579,160,665,189"/>
 </map>

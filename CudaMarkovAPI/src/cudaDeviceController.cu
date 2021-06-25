@@ -1,3 +1,10 @@
+/** @file cudaDeviceController.cu
+ * @brief Simple static class for basic CUDA device controls.
+ * @authors Ata Hakçıl
+ * 
+ * @copydoc Markov::API::CUDA::CUDADeviceController
+ */
+
 #include "cudaDeviceController.h"
 #include <iostream>
 #include <curand_kernel.h>

@@ -1,0 +1,68 @@
+\hypertarget{cuda_device_controller_8cu_source}{}\doxysection{cuda\+Device\+Controller.\+cu}
+\label{cuda_device_controller_8cu_source}\index{cudaDeviceController.cu@{cudaDeviceController.cu}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/** @file cudaDeviceController.cu}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @brief Simple static class for basic CUDA device controls.}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @authors Ata Hakçıl}}
+\DoxyCodeLine{00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{00005 \textcolor{comment}{ * @copydoc Markov::API::CUDA::CUDADeviceController}}
+\DoxyCodeLine{00006 \textcolor{comment}{ */}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{cuda_device_controller_8h}{"cudaDeviceController.h"}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{iostream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{curand\_kernel}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cuda}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cuda\_runtime}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{device\_launch\_parameters}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{\Hypertarget{cuda_device_controller_8cu_source_l00015}\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{00015}} \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}\{}
+\DoxyCodeLine{\Hypertarget{cuda_device_controller_8cu_source_l00016}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}{00016}}     \_\_host\_\_ \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CUDADeviceController}}::ListCudaDevices() \{ \textcolor{comment}{//list cuda Capable devices on host.}}
+\DoxyCodeLine{00017         \textcolor{keywordtype}{int} nDevices;}
+\DoxyCodeLine{00018         cudaGetDeviceCount(\&nDevices);}
+\DoxyCodeLine{00019         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nDevices; i++) \{}
+\DoxyCodeLine{00020             cudaDeviceProp prop;}
+\DoxyCodeLine{00021             cudaGetDeviceProperties(\&prop, i);}
+\DoxyCodeLine{00022             std::cerr << \textcolor{stringliteral}{"Device Number: "} <<  i  << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00023             std::cerr << \textcolor{stringliteral}{"Device name: "} << prop.name << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00024             std::cerr << \textcolor{stringliteral}{"Memory Clock Rate (KHz): "} << prop.memoryClockRate << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00025             std::cerr << \textcolor{stringliteral}{"Memory Bus Width (bits): "} << prop.memoryBusWidth << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00026             std::cerr << \textcolor{stringliteral}{"Peak Memory Bandwidth (GB/s): "} << 2.0 * prop.memoryClockRate * (prop.memoryBusWidth / 8) / 1.0e6 << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00027             std::cerr << \textcolor{stringliteral}{"Max Linear Threads: "} << prop.maxThreadsDim[0] << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029         \}}
+\DoxyCodeLine{00030     \}}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{\Hypertarget{cuda_device_controller_8cu_source_l00032}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{00032}}     \_\_host\_\_ \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CUDADeviceController}}::CudaCheckNotifyErr(cudaError\_t \_status, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg, \textcolor{keywordtype}{bool} bExit) \{}
+\DoxyCodeLine{00033         \textcolor{keywordflow}{if} (\_status != cudaSuccess) \{}
+\DoxyCodeLine{00034             std::cerr << \textcolor{stringliteral}{"\(\backslash\)033[1;31m"} << msg  << \textcolor{stringliteral}{" -\/> "} << cudaGetErrorString(\_status)  << \textcolor{stringliteral}{" ("}<< \_status << \textcolor{stringliteral}{")"} << \textcolor{stringliteral}{"\(\backslash\)033[0m"} << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036             \textcolor{keywordflow}{if}(bExit) \{}
+\DoxyCodeLine{00037                 cudaDeviceReset();}
+\DoxyCodeLine{00038                 exit(1);}
+\DoxyCodeLine{00039             \}}
+\DoxyCodeLine{00040         \}}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00042     \}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044 \textcolor{comment}{/*}}
+\DoxyCodeLine{00045 \textcolor{comment}{    template <typename T>}}
+\DoxyCodeLine{00046 \textcolor{comment}{    \_\_host\_\_ cudaError\_t Markov::API::CUDA::CUDADeviceController::CudaMalloc2DToFlat(T* dst, int row, int col)\{}}
+\DoxyCodeLine{00047 \textcolor{comment}{        return  cudaMalloc((T **)\&dst, row*col*sizeof(T));}}
+\DoxyCodeLine{00048 \textcolor{comment}{    \}}}
+\DoxyCodeLine{00049 \textcolor{comment}{}}
+\DoxyCodeLine{00050 \textcolor{comment}{    template <typename T>}}
+\DoxyCodeLine{00051 \textcolor{comment}{    \_\_host\_\_ cudaError\_t Markov::API::CUDA::CUDADeviceController::CudaMemcpy2DToFlat(T* dst, T** src, int row, int col)\{}}
+\DoxyCodeLine{00052 \textcolor{comment}{         cudaError\_t cudastatus;}}
+\DoxyCodeLine{00053 \textcolor{comment}{         for(int i=0;i<row;i++)\{}}
+\DoxyCodeLine{00054 \textcolor{comment}{            cudastatus = cudaMemcpy(dst + (i*col*sizeof(T)), }}
+\DoxyCodeLine{00055 \textcolor{comment}{                src[i], col*sizeof(T), cudaMemcpyHostToDevice);}}
+\DoxyCodeLine{00056 \textcolor{comment}{            if(cudastatus != cudaSuccess) return cudastatus;}}
+\DoxyCodeLine{00057 \textcolor{comment}{        \}}}
+\DoxyCodeLine{00058 \textcolor{comment}{        return cudaSuccess;}}
+\DoxyCodeLine{00059 \textcolor{comment}{    \}}}
+\DoxyCodeLine{00060 \textcolor{comment}{*/}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062 \};}
+
+\end{DoxyCode}

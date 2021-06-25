@@ -1,4 +1,11 @@
-#pragma once
+/** @file main.cu
+ * @brief Simple test file to check libcudamarkov
+ * @authors Ata Hakçıl
+ * 
+ * @copydoc Markov::API::CUDA::CudaModelMatrix
+ * @copydoc Markov::API::CUDA::CUDADeviceController
+ */
+
 #include <iostream>
 #include <string>
 #include <cstring>

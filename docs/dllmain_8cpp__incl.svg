@@ -57,7 +57,7 @@ var sectionId = 'dynsection-0';
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="DLLMain for dynamic windows library.">
 <polygon fill="#bfbfbf" stroke="black" points="79,-232.5 79,-253.5 165,-253.5 165,-232.5 79,-232.5"/>
 <text text-anchor="middle" x="122" y="-239.9" font-family="Helvetica,sans-Serif" font-size="12.00">dllmain.cpp</text>
 </a>
@@ -66,7 +66,7 @@ var sectionId = 'dynsection-0';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="_markov_model_2src_2pch_8h.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="_markov_model_2src_2pch_8h.html" target="_top" xlink:title="For windows dynamic library.">
 <polygon fill="none" stroke="black" points="33,-174.5 33,-195.5 83,-195.5 83,-174.5 33,-174.5"/>
 <text text-anchor="middle" x="58" y="-181.9" font-family="Helvetica,sans-Serif" font-size="12.00">pch.h</text>
 </a>
@@ -81,7 +81,7 @@ var sectionId = 'dynsection-0';
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="model_8h.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="model_8h.html" target="_top" xlink:title="Model class template.">
 <polygon fill="none" stroke="black" points="369.5,-174.5 369.5,-195.5 434.5,-195.5 434.5,-174.5 369.5,-174.5"/>
 <text text-anchor="middle" x="402" y="-181.9" font-family="Helvetica,sans-Serif" font-size="12.00">model.h</text>
 </a>
@@ -111,7 +111,7 @@ var sectionId = 'dynsection-0';
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="framework_8h.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="framework_8h.html" target="_top" xlink:title="for windows dynamic library">
 <polygon fill="none" stroke="black" points="0,-116.5 0,-137.5 94,-137.5 94,-116.5 0,-116.5"/>
 <text text-anchor="middle" x="47" y="-123.9" font-family="Helvetica,sans-Serif" font-size="12.00">framework.h</text>
 </a>
@@ -216,7 +216,7 @@ var sectionId = 'dynsection-0';
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
-<g id="a_node11"><a xlink:href="node_8h.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="node_8h.html" target="_top" xlink:title="Node class template.">
 <polygon fill="none" stroke="black" points="430,-116.5 430,-137.5 488,-137.5 488,-116.5 430,-116.5"/>
 <text text-anchor="middle" x="459" y="-123.9" font-family="Helvetica,sans-Serif" font-size="12.00">node.h</text>
 </a>
@@ -231,7 +231,7 @@ var sectionId = 'dynsection-0';
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
-<g id="a_node14"><a xlink:href="edge_8h.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="edge_8h.html" target="_top" xlink:title="Edge class template.">
 <polygon fill="none" stroke="black" points="620,-58.5 620,-79.5 678,-79.5 678,-58.5 620,-58.5"/>
 <text text-anchor="middle" x="649" y="-65.9" font-family="Helvetica,sans-Serif" font-size="12.00">edge.h</text>
 </a>
@@ -291,7 +291,7 @@ var sectionId = 'dynsection-0';
 <!-- Node17 -->
 <g id="node17" class="node">
 <title>Node17</title>
-<g id="a_node17"><a xlink:href="random_8h.html" target="_top" xlink:title=" ">
+<g id="a_node17"><a xlink:href="random_8h.html" target="_top" xlink:title="Random engine implementations for Markov.">
 <polygon fill="none" stroke="black" points="381.5,-58.5 381.5,-79.5 456.5,-79.5 456.5,-58.5 381.5,-58.5"/>
 <text text-anchor="middle" x="419" y="-65.9" font-family="Helvetica,sans-Serif" font-size="12.00">random.h</text>
 </a>

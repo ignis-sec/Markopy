@@ -57,7 +57,7 @@ var sectionId = 'dynsection-0';
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="menu page">
 <polygon fill="#bfbfbf" stroke="black" points="205,-116.5 205,-137.5 282,-137.5 282,-116.5 205,-116.5"/>
 <text text-anchor="middle" x="243.5" y="-123.9" font-family="Helvetica,sans-Serif" font-size="12.00">menu.cpp</text>
 </a>
@@ -66,7 +66,7 @@ var sectionId = 'dynsection-0';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="menu_8h.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="menu_8h.html" target="_top" xlink:title="menu page">
 <polygon fill="none" stroke="black" points="68.5,-58.5 68.5,-79.5 130.5,-79.5 130.5,-58.5 68.5,-58.5"/>
 <text text-anchor="middle" x="99.5" y="-65.9" font-family="Helvetica,sans-Serif" font-size="12.00">menu.h</text>
 </a>
@@ -96,7 +96,7 @@ var sectionId = 'dynsection-0';
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="_markov_passwords_g_u_i_8h.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="_markov_passwords_g_u_i_8h.html" target="_top" xlink:title="Main activity page for GUI.">
 <polygon fill="none" stroke="black" points="230,-58.5 230,-79.5 385,-79.5 385,-58.5 230,-58.5"/>
 <text text-anchor="middle" x="307.5" y="-65.9" font-family="Helvetica,sans-Serif" font-size="12.00">MarkovPasswordsGUI.h</text>
 </a>

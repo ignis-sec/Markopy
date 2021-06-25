@@ -1,4 +1,13 @@
 
+/** @file random.h
+ * @brief Random engine implementations for Markov
+ * @authors Ata Hakçıl
+ * 
+ * @copydoc Markov::Random::RandomEngine
+ * @copydoc Markov::Random::DefaultRandomEngine
+ * @copydoc Markov::Random::Marsaglia
+ */
+
 #pragma once
 #include <random>
 #include <iostream>

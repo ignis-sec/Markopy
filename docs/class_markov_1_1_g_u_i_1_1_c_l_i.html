@@ -106,7 +106,7 @@ Inheritance diagram for Markov::GUI::CLI:</div>
 <div class="dynheader">
 Collaboration diagram for Markov::GUI::CLI:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_g_u_i_1_1_c_l_i__coll__graph.svg" width="166" height="282"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_g_u_i_1_1_c_l_i__coll__graph.svg" width="219" height="299"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -132,7 +132,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>QT <a class="el" href="class_markov_1_1_g_u_i_1_1_c_l_i.html" title="QT CLI Class.">CLI</a> Class. </p>
 
-<p class="definition">Definition at line <a class="el" href="_c_l_i_8h_source.html#l00008">8</a> of file <a class="el" href="_c_l_i_8h_source.html">CLI.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_l_i_8h_source.html#l00014">14</a> of file <a class="el" href="_c_l_i_8h_source.html">CLI.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac6aba780e5312f9f03cb716f0929d39e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac6aba780e5312f9f03cb716f0929d39e">&#9670;&nbsp;</a></span>CLI()</h2>
@@ -149,6 +149,25 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_c_l_i_8cpp_source.html#l00015">15</a> of file <a class="el" href="_c_l_i_8cpp_source.html">CLI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    : <a class="code" href="class_q_main_window.html">QMainWindow</a>(parent)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_markov_1_1_g_u_i_1_1_c_l_i.html#a9351de2c083b7b3fd76f36b3737e36dc">ui</a>.setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    QObject::connect(<a class="code" href="class_markov_1_1_g_u_i_1_1_c_l_i.html#a9351de2c083b7b3fd76f36b3737e36dc">ui</a>.startButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, [<span class="keyword">this</span>] {start(); });</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    QObject::connect(<a class="code" href="class_markov_1_1_g_u_i_1_1_c_l_i.html#a9351de2c083b7b3fd76f36b3737e36dc">ui</a>.commandLinkButton_2, &amp;QPushButton::clicked, <span class="keyword">this</span>, [<span class="keyword">this</span>] {statistics(); });</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    QObject::connect(<a class="code" href="class_markov_1_1_g_u_i_1_1_c_l_i.html#a9351de2c083b7b3fd76f36b3737e36dc">ui</a>.commandLinkButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, [<span class="keyword">this</span>] {about(); });</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;     </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="_c_l_i_8cpp_source.html#l00036">about()</a>, <a class="el" href="_c_l_i_8cpp_source.html#l00026">start()</a>, <a class="el" href="_c_l_i_8cpp_source.html#l00031">statistics()</a>, and <a class="el" href="_c_l_i_8h_source.html#l00020">ui</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_g_u_i_1_1_c_l_i_ac6aba780e5312f9f03cb716f0929d39e_cgraph.svg" width="484" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -176,6 +195,21 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_c_l_i_8cpp_source.html#l00036">36</a> of file <a class="el" href="_c_l_i_8cpp_source.html">CLI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                         {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    about button</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="_c_l_i_8cpp_source.html#l00015">CLI()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_g_u_i_1_1_c_l_i_afd53e83febbbb8bdaed5f58b084f3ce2_icgraph.svg" width="460" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
 </div>
 </div>
 <a id="aff8081f3baac288e70163e720a60a1e7"></a>
@@ -201,11 +235,18 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="_u_i_2src_2main_8cpp_source.html#l00012">main()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_l_i_8cpp_source.html#l00026">26</a> of file <a class="el" href="_c_l_i_8cpp_source.html">CLI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                         {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html">Train</a>* w = <span class="keyword">new</span> <a class="code" href="class_markov_1_1_g_u_i_1_1_train.html">Train</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    w-&gt;show();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    this-&gt;close();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="_c_l_i_8cpp_source.html#l00015">CLI()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_g_u_i_1_1_c_l_i_aff8081f3baac288e70163e720a60a1e7_icgraph.svg" width="324" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_g_u_i_1_1_c_l_i_aff8081f3baac288e70163e720a60a1e7_icgraph.svg" width="452" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -234,6 +275,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_c_l_i_8cpp_source.html#l00031">31</a> of file <a class="el" href="_c_l_i_8cpp_source.html">CLI.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                              {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    statistic will show</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="_c_l_i_8cpp_source.html#l00015">CLI()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_g_u_i_1_1_c_l_i_a1695cccf724c76f48e4931e2f636512d_icgraph.svg" width="484" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -257,20 +313,26 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_c_l_i_8h_source.html#l00014">14</a> of file <a class="el" href="_c_l_i_8h_source.html">CLI.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_l_i_8h_source.html#l00020">20</a> of file <a class="el" href="_c_l_i_8h_source.html">CLI.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_c_l_i_8cpp_source.html#l00015">CLI()</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_c_l_i_8h_source.html">CLI.h</a></li>
+<li><a class="el" href="_c_l_i_8cpp_source.html">CLI.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_q_main_window_html"><div class="ttname"><a href="class_q_main_window.html">QMainWindow</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1_train_html"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1_train.html">Markov::GUI::Train</a></div><div class="ttdoc">QT Training page class.</div><div class="ttdef"><b>Definition:</b> <a href="_train_8h_source.html#l00015">Train.h:15</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1_c_l_i_html_a9351de2c083b7b3fd76f36b3737e36dc"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1_c_l_i.html#a9351de2c083b7b3fd76f36b3737e36dc">Markov::GUI::CLI::ui</a></div><div class="ttdeci">Ui::CLI ui</div><div class="ttdef"><b>Definition:</b> <a href="_c_l_i_8h_source.html#l00020">CLI.h:20</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_markov.html">Markov</a></li><li class="navelem"><a class="el" href="namespace_markov_1_1_g_u_i.html">GUI</a></li><li class="navelem"><a class="el" href="class_markov_1_1_g_u_i_1_1_c_l_i.html">CLI</a></li>
-    <li class="footer">Generated by
+    <li class="footer">Generated on Fri Jun 25 2021 20:40:52 for Markopy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -1,3 +1,9 @@
+/** @file cli.cpp
+ * @brief CLI page 
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 #include "CLI.h"
 #include <fstream>
 #include "Train.h"

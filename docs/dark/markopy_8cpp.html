@@ -91,37 +91,39 @@ $(document).ready(function(){initNavTree('markopy_8cpp.html',''); initResizable(
 <div class="title">markopy.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="markov_passwords_8h_source.html">../../../MarkovPasswords/src/markovPasswords.h</a>&quot;</code><br />
-<code>#include &lt;Python.h&gt;</code><br />
+
+<p>CPython wrapper for libmarkov utils.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;Python.h&gt;</code><br />
 <code>#include &lt;boost/python.hpp&gt;</code><br />
-<code>#include &lt;<a class="el" href="model_matrix_8h_source.html">MarkovPasswords/src/modelMatrix.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="model_matrix_8h_source.html">MarkovAPI/src/modelMatrix.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for markopy.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="markopy_8cpp__incl.png" border="0" usemap="#markopy_8cpp" alt=""/></div>
 <map name="markopy_8cpp" id="markopy_8cpp">
-<area shape="rect" title=" " alt="" coords="874,5,999,35"/>
-<area shape="rect" href="markov_passwords_8h.html" title=" " alt="" coords="615,177,827,224"/>
-<area shape="rect" title=" " alt="" coords="973,91,1065,121"/>
-<area shape="rect" title=" " alt="" coords="1089,91,1251,121"/>
-<area shape="rect" href="model_matrix_8h.html" title=" " alt="" coords="759,83,949,129"/>
-<area shape="rect" href="thread_shared_list_handler_8h.html" title=" " alt="" coords="604,272,837,301"/>
-<area shape="rect" href="model_8h.html" title=" " alt="" coords="353,272,579,301"/>
-<area shape="rect" title=" " alt="" coords="711,349,778,379"/>
-<area shape="rect" title=" " alt="" coords="603,349,687,379"/>
-<area shape="rect" title=" " alt="" coords="827,349,900,379"/>
-<area shape="rect" title=" " alt="" coords="614,427,673,456"/>
-<area shape="rect" title=" " alt="" coords="5,427,79,456"/>
-<area shape="rect" title=" " alt="" coords="103,427,189,456"/>
-<area shape="rect" title=" " alt="" coords="429,349,527,379"/>
-<area shape="rect" href="node_8h.html" title=" " alt="" coords="277,349,354,379"/>
-<area shape="rect" href="edge_8h.html" title=" " alt="" coords="513,427,590,456"/>
-<area shape="rect" title=" " alt="" coords="181,504,273,533"/>
-<area shape="rect" title=" " alt="" coords="389,427,489,456"/>
-<area shape="rect" href="random_8h.html" title=" " alt="" coords="265,427,365,456"/>
-<area shape="rect" title=" " alt="" coords="462,504,537,533"/>
-<area shape="rect" title=" " alt="" coords="561,504,643,533"/>
-<area shape="rect" title=" " alt="" coords="298,504,383,533"/>
+<area shape="rect" title="CPython wrapper for libmarkov utils." alt="" coords="503,5,629,35"/>
+<area shape="rect" title=" " alt="" coords="369,83,461,112"/>
+<area shape="rect" title=" " alt="" coords="485,83,647,112"/>
+<area shape="rect" href="model_matrix_8h.html" title="An extension of Markov::API::MarkovPasswords." alt="" coords="671,83,925,112"/>
+<area shape="rect" href="markov_passwords_8h.html" title="Wrapper for Markov::Model to use with char represented models." alt="" coords="631,160,810,189"/>
+<area shape="rect" title=" " alt="" coords="827,315,900,344"/>
+<area shape="rect" href="thread_shared_list_handler_8h.html" title="Thread&#45;safe wrapper for std::ifstream." alt="" coords="604,237,837,267"/>
+<area shape="rect" href="model_8h.html" title="Model class template." alt="" coords="353,237,579,267"/>
+<area shape="rect" title=" " alt="" coords="711,315,778,344"/>
+<area shape="rect" title=" " alt="" coords="603,315,687,344"/>
+<area shape="rect" title=" " alt="" coords="614,392,673,421"/>
+<area shape="rect" title=" " alt="" coords="5,392,79,421"/>
+<area shape="rect" title=" " alt="" coords="103,392,189,421"/>
+<area shape="rect" title=" " alt="" coords="429,315,527,344"/>
+<area shape="rect" href="node_8h.html" title="Node class template." alt="" coords="277,315,354,344"/>
+<area shape="rect" href="edge_8h.html" title="Edge class template." alt="" coords="513,392,590,421"/>
+<area shape="rect" title=" " alt="" coords="181,469,273,499"/>
+<area shape="rect" title=" " alt="" coords="389,392,489,421"/>
+<area shape="rect" href="random_8h.html" title="Random engine implementations for Markov." alt="" coords="265,392,365,421"/>
+<area shape="rect" title=" " alt="" coords="462,469,537,499"/>
+<area shape="rect" title=" " alt="" coords="561,469,643,499"/>
+<area shape="rect" title=" " alt="" coords="298,469,383,499"/>
 </map>
 </div>
 </div>
@@ -137,7 +139,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ab8db71261aa9207d3fb23344c18ce5a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="markopy_8cpp.html#ab8db71261aa9207d3fb23344c18ce5a7">BOOST_PYTHON_STATIC_LIB</a></td></tr>
+<tr class="memitem:aaf8a1a195131e697ef0e215c1ca4f7cb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="markopy_8cpp.html#aaf8a1a195131e697ef0e215c1ca4f7cb">BOOST_ALL_STATIC_LIB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:aaf8a1a195131e697ef0e215c1ca4f7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8db71261aa9207d3fb23344c18ce5a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="markopy_8cpp.html#ab8db71261aa9207d3fb23344c18ce5a7">BOOST_PYTHON_STATIC_LIB</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:ab8db71261aa9207d3fb23344c18ce5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -145,7 +149,50 @@ Functions</h2></td></tr>
 <tr class="memitem:a379628c09859652215496b63af2bcac9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9">Markov::Markopy::BOOST_PYTHON_MODULE</a> (markopy)</td></tr>
 <tr class="separator:a379628c09859652215496b63af2bcac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>CPython wrapper for libmarkov utils. </p>
+<dl class="section author"><dt>Authors</dt><dd>Ata Hakçıl, Celal Sahir Çetiner</dd></dl>
+<p>This file is a wrapper for libmarkov utilities, exposing:</p><ul>
+<li>MarkovPasswords<ul>
+<li>Import</li>
+<li>Export</li>
+<li>Train</li>
+<li>Generate</li>
+</ul>
+</li>
+<li>ModelMatrix<ul>
+<li>Import</li>
+<li>Export</li>
+<li>Train</li>
+<li>ConstructMatrix</li>
+<li>DumpJSON</li>
+<li>FastRandomWalk</li>
+</ul>
+</li>
+</ul>
+<p><a class="el" href="class_markov_1_1_model.html" title="class for the final Markov Model, constructed from nodes and edges.">Markov::Model</a> with char represented nodes. Includes wrappers for <a class="el" href="class_markov_1_1_model.html" title="class for the final Markov Model, constructed from nodes and edges.">Markov::Model</a> and additional helper functions to handle file I/O</p>
+<p>This class is an extension of Markov::Model&lt;char&gt;, with higher level abstractions such as train and generate.</p>
+<p>Class to flatten and reduce <a class="el" href="class_markov_1_1_model.html" title="class for the final Markov Model, constructed from nodes and edges.">Markov::Model</a> to a Matrix. Matrix level operations can be used for Generation events, with a significant performance optimization at the cost of O(N) memory complexity (O(1) memory space for slow mode)</p>
+<p>To limit the maximum memory usage, each generation operation is partitioned into 50M chunks for allocation. Threads are sychronized and files are flushed every 50M operations. </p>
+
+<p class="definition">Definition in file <a class="el" href="markopy_8cpp_source.html">markopy.cpp</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aaf8a1a195131e697ef0e215c1ca4f7cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf8a1a195131e697ef0e215c1ca4f7cb">&#9670;&nbsp;</a></span>BOOST_ALL_STATIC_LIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOST_ALL_STATIC_LIB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="markopy_8cpp_source.html#l00024">24</a> of file <a class="el" href="markopy_8cpp_source.html">markopy.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ab8db71261aa9207d3fb23344c18ce5a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab8db71261aa9207d3fb23344c18ce5a7">&#9670;&nbsp;</a></span>BOOST_PYTHON_STATIC_LIB</h2>
 
@@ -153,12 +200,12 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define BOOST_PYTHON_STATIC_LIB</td>
+          <td class="memname">#define BOOST_PYTHON_STATIC_LIB&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="markopy_8cpp_source.html#l00004">4</a> of file <a class="el" href="markopy_8cpp_source.html">markopy.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="markopy_8cpp_source.html#l00025">25</a> of file <a class="el" href="markopy_8cpp_source.html">markopy.cpp</a>.</p>
 
 </div>
 </div>
@@ -168,7 +215,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_49eade59e01b0fbf4300858ffc47ca49.html">Markopy</a></li><li class="navelem"><a class="el" href="dir_93cd05e1e65f1a98a2104277b36e7795.html">src</a></li><li class="navelem"><a class="el" href="dir_bab8f64279de8bdf1719608edf845bc3.html">Module</a></li><li class="navelem"><a class="el" href="markopy_8cpp.html">markopy.cpp</a></li>
-    <li class="footer">Generated by
+    <li class="footer">Generated on Fri Jun 25 2021 20:41:33 for Markopy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

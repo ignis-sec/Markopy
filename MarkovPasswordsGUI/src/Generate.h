@@ -1,3 +1,9 @@
+/** @file Generate.h
+ * @brief Generation Page
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 #pragma once
 #include <QtWidgets/QMainWindow>
 #include "ui_Generate.h"

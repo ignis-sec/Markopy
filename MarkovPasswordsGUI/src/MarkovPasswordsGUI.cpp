@@ -1,3 +1,9 @@
+/** @file MarkovPasswordsGUI.cpp
+ * @brief Main activity page for GUI
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 #include "MarkovPasswordsGUI.h"
 #include <fstream>
 #include <qwebengineview.h>

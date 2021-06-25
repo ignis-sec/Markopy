@@ -16,37 +16,39 @@
 
 
 
-Definition at line \mbox{\hyperlink{markopy_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{markopy_8cpp_source}{markopy.\+cpp}}.
+Definition at line \mbox{\hyperlink{markopy_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{markopy_8cpp_source}{markopy.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00013     \{}
-\DoxyCodeLine{00014         bool (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}}::*Import)(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*) = \&\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>::Import}};}
-\DoxyCodeLine{00015         bool (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}}::*Export)(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*) = \&\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>::Export}};}
-\DoxyCodeLine{00016         class\_<Markov::API::MarkovPasswords>(\textcolor{stringliteral}{"MarkovPasswords"}, init<>())}
-\DoxyCodeLine{00017             .def(init<>())}
-\DoxyCodeLine{00018             .def(\textcolor{stringliteral}{"Train"}, \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Markov::API::MarkovPasswords::Train}})}
-\DoxyCodeLine{00019             .def(\textcolor{stringliteral}{"Generate"}, \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Markov::API::MarkovPasswords::Generate}})}
-\DoxyCodeLine{00020             .def(\textcolor{stringliteral}{"Import"}, Import, \textcolor{stringliteral}{"Import a model file."})}
-\DoxyCodeLine{00021             .def(\textcolor{stringliteral}{"Export"}, Export, \textcolor{stringliteral}{"Export a model to file."})}
-\DoxyCodeLine{00022         ;}
-\DoxyCodeLine{00023 }
-\DoxyCodeLine{00024         class\_<Markov::API::ModelMatrix>(\textcolor{stringliteral}{"ModelMatrix"}, init<>())}
-\DoxyCodeLine{00025             }
-\DoxyCodeLine{00026             .def(init<>())}
-\DoxyCodeLine{00027             .def(\textcolor{stringliteral}{"Train"}, \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}{Markov::API::ModelMatrix::Train}})}
-\DoxyCodeLine{00028             .def(\textcolor{stringliteral}{"Import"}, \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{Markov::API::ModelMatrix::Import}}, \textcolor{stringliteral}{"Import a model file."})}
-\DoxyCodeLine{00029             .def(\textcolor{stringliteral}{"Export"}, Export, \textcolor{stringliteral}{"Export a model to file."})}
-\DoxyCodeLine{00030             .def(\textcolor{stringliteral}{"ConstructMatrix"},\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{Markov::API::ModelMatrix::ConstructMatrix}})}
-\DoxyCodeLine{00031             .def(\textcolor{stringliteral}{"DumpJSON"},\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}{Markov::API::ModelMatrix::DumpJSON}})}
-\DoxyCodeLine{00032             .def(\textcolor{stringliteral}{"FastRandomWalk"},\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a9e5a9885d48e95b9f5d1ed082d83db24}{Markov::API::ModelMatrix::FastRandomWalk}})}
-\DoxyCodeLine{00033             ;}
-\DoxyCodeLine{00034     \};}
+\DoxyCodeLine{00035     \{}
+\DoxyCodeLine{00036         bool (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}}::*Import)(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*) = \&\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>::Import}};}
+\DoxyCodeLine{00037         bool (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}}::*Export)(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*) = \&\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>::Export}};}
+\DoxyCodeLine{00038         class\_<Markov::API::MarkovPasswords>(\textcolor{stringliteral}{"MarkovPasswords"}, init<>())}
+\DoxyCodeLine{00039             .def(init<>())}
+\DoxyCodeLine{00040             .def(\textcolor{stringliteral}{"Train"}, \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Markov::API::MarkovPasswords::Train}})}
+\DoxyCodeLine{00041             .def(\textcolor{stringliteral}{"Generate"}, \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Markov::API::MarkovPasswords::Generate}})}
+\DoxyCodeLine{00042             .def(\textcolor{stringliteral}{"Import"}, Import, \textcolor{stringliteral}{"Import a model file."})}
+\DoxyCodeLine{00043             .def(\textcolor{stringliteral}{"Export"}, Export, \textcolor{stringliteral}{"Export a model to file."})}
+\DoxyCodeLine{00044         ;}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046         int (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov::API::ModelMatrix}}::*FastRandomWalk)(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} int, \textcolor{keyword}{const} \textcolor{keywordtype}{char}*, int, int, int, bool)}
+\DoxyCodeLine{00047             = \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a3bb4d49f1fbc10e1649dc9bf73529520}{Markov::API::ModelMatrix::FastRandomWalk}};}
+\DoxyCodeLine{00048         class\_<Markov::API::ModelMatrix>(\textcolor{stringliteral}{"ModelMatrix"}, init<>())}
+\DoxyCodeLine{00049             }
+\DoxyCodeLine{00050             .def(init<>())}
+\DoxyCodeLine{00051             .def(\textcolor{stringliteral}{"Train"}, \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}{Markov::API::ModelMatrix::Train}})}
+\DoxyCodeLine{00052             .def(\textcolor{stringliteral}{"Import"}, \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{Markov::API::ModelMatrix::Import}}, \textcolor{stringliteral}{"Import a model file."})}
+\DoxyCodeLine{00053             .def(\textcolor{stringliteral}{"Export"}, Export, \textcolor{stringliteral}{"Export a model to file."})}
+\DoxyCodeLine{00054             .def(\textcolor{stringliteral}{"ConstructMatrix"},\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{Markov::API::ModelMatrix::ConstructMatrix}})}
+\DoxyCodeLine{00055             .def(\textcolor{stringliteral}{"DumpJSON"},\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}{Markov::API::ModelMatrix::DumpJSON}})}
+\DoxyCodeLine{00056             .def(\textcolor{stringliteral}{"FastRandomWalk"},FastRandomWalk)}
+\DoxyCodeLine{00057             ;}
+\DoxyCodeLine{00058     \};}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{model_matrix_8cpp_source_l00022}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00092}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Dump\+J\+S\+O\+N()}}, \mbox{\hyperlink{model_8h_source_l00286}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Export()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00195}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk()}}, \mbox{\hyperlink{markov_passwords_8cpp_source_l00110}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00010}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Import()}}, \mbox{\hyperlink{model_8h_source_l00266}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Import()}}, \mbox{\hyperlink{markov_passwords_8cpp_source_l00057}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00016}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Train()}}.
+References \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00101}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Dump\+J\+S\+O\+N()}}, \mbox{\hyperlink{model_8h_source_l00300}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Export()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00217}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk()}}, \mbox{\hyperlink{markov_passwords_8cpp_source_l00118}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00019}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Import()}}, \mbox{\hyperlink{model_8h_source_l00280}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Import()}}, \mbox{\hyperlink{markov_passwords_8cpp_source_l00065}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00025}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Train()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

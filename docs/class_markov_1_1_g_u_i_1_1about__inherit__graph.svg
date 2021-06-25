@@ -24,12 +24,12 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="15,-100.5 15,-163.5 117,-163.5 117,-100.5 15,-100.5"/>
+<g id="a_node2"><a xlink:href="class_q_main_window.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="15,-100.5 15,-163.5 117,-163.5 117,-100.5 15,-100.5"/>
 <text text-anchor="middle" x="66" y="-149.9" font-family="Helvetica,sans-Serif" font-size="12.00">QMainWindow</text>
-<polyline fill="none" stroke="#bfbfbf" points="15,-142.5 117,-142.5 "/>
+<polyline fill="none" stroke="black" points="15,-142.5 117,-142.5 "/>
 <text text-anchor="middle" x="66" y="-128.9" font-family="Helvetica,sans-Serif" font-size="12.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="15,-121.5 117,-121.5 "/>
+<polyline fill="none" stroke="black" points="15,-121.5 117,-121.5 "/>
 <text text-anchor="middle" x="66" y="-107.9" font-family="Helvetica,sans-Serif" font-size="12.00"> </text>
 </a>
 </g>

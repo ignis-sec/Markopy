@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['total_5fedge_5fweights_444',['total_edge_weights',['../class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce',1,'Markov::Node']]],
-  ['totaledgeweights_445',['totalEdgeWeights',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a47bab10980c3117f75909b640a4096df',1,'Markov::API::ModelMatrix']]],
-  ['true_446',['True',['../namespacemarkopy__cli.html#a467e50c1f956acbd27d5cfc8fea0e4f1',1,'markopy_cli']]]
+  ['total_5fedge_5fweights_474',['total_edge_weights',['../class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce',1,'Markov::Node']]],
+  ['totaledgeweights_475',['totalEdgeWeights',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a47bab10980c3117f75909b640a4096df',1,'Markov::API::ModelMatrix']]],
+  ['totaloutputperkernel_476',['totalOutputPerKernel',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a391422909c58da061283df0f1ff8069a',1,'Markov::API::CUDA::CUDAModelMatrix']]],
+  ['totaloutputpersync_477',['totalOutputPerSync',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a37c46cbceec37984c029be96402c60bf',1,'Markov::API::CUDA::CUDAModelMatrix']]]
 ];

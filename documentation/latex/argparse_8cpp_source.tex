@@ -2,35 +2,42 @@
 \label{argparse_8cpp_source}\index{argparse.cpp@{argparse.cpp}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{argparse_8h}{"argparse.h"}}}
-\DoxyCodeLine{00002 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{"color/term.h"}}
-\DoxyCodeLine{00003 }
-\DoxyCodeLine{\Hypertarget{argparse_8cpp_source_l00004}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a318af5fbacd5becef2ee72a87ac344da}{00004}} Markov::API::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{CLI}}::ProgramOptions* Markov::API::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{CLI}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse}{Argparse}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a318af5fbacd5becef2ee72a87ac344da}{parse}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv) \{ \textcolor{keywordflow}{return} 0; \}}
-\DoxyCodeLine{00005 }
-\DoxyCodeLine{00006 }
+\DoxyCodeLine{00001 \textcolor{comment}{/** @file argparse.cpp}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @brief Arguement handler class for native CPP cli}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @authors Celal Sahir Çetiner}}
+\DoxyCodeLine{00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{00005 \textcolor{comment}{ * @copydoc Markov::API::CLI::Argparse}}
+\DoxyCodeLine{00006 \textcolor{comment}{ */}}
 \DoxyCodeLine{00007 }
-\DoxyCodeLine{\Hypertarget{argparse_8cpp_source_l00008}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_ac7aaf4edf169e3aab32aca083984d914}{00008}} \textcolor{keywordtype}{void} Markov::API::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{CLI}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse}{Argparse}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_ac7aaf4edf169e3aab32aca083984d914}{help}}() \{}
-\DoxyCodeLine{00009     std::cout <<}
-\DoxyCodeLine{00010     \textcolor{stringliteral}{"Markov Passwords -\/ Help\(\backslash\)n"}}
-\DoxyCodeLine{00011     \textcolor{stringliteral}{"Options:\(\backslash\)n"}}
-\DoxyCodeLine{00012     \textcolor{stringliteral}{"   \(\backslash\)n"}}
-\DoxyCodeLine{00013     \textcolor{stringliteral}{"   -\/of -\/-\/outputfilename\(\backslash\)n"}}
-\DoxyCodeLine{00014     \textcolor{stringliteral}{"       Filename to output the generation results\(\backslash\)n"}}
-\DoxyCodeLine{00015     \textcolor{stringliteral}{"   -\/ef -\/-\/exportfilename\(\backslash\)n"}}
-\DoxyCodeLine{00016     \textcolor{stringliteral}{"       filename to export built model to\(\backslash\)n"}}
-\DoxyCodeLine{00017     \textcolor{stringliteral}{"   -\/if -\/-\/importfilename\(\backslash\)n"}}
-\DoxyCodeLine{00018     \textcolor{stringliteral}{"       filename to import model from\(\backslash\)n"}}
-\DoxyCodeLine{00019     \textcolor{stringliteral}{"   -\/n (generate count)\(\backslash\)n"}}
-\DoxyCodeLine{00020     \textcolor{stringliteral}{"       Number of lines to generate\(\backslash\)n"}}
-\DoxyCodeLine{00021     \textcolor{stringliteral}{"   \(\backslash\)n"}}
-\DoxyCodeLine{00022     \textcolor{stringliteral}{"Usage: \(\backslash\)n"}}
-\DoxyCodeLine{00023     \textcolor{stringliteral}{"   markov.exe -\/if empty\_model.mdl -\/ef model.mdl\(\backslash\)n"}}
-\DoxyCodeLine{00024     \textcolor{stringliteral}{"       import empty\_model.mdl and train it with data from stdin. When done, output the model to model.mdl\(\backslash\)n"}}
-\DoxyCodeLine{00025     \textcolor{stringliteral}{"\(\backslash\)n"}}
-\DoxyCodeLine{00026     \textcolor{stringliteral}{"   markov.exe -\/if empty\_model.mdl -\/n 15000 -\/of wordlist.txt\(\backslash\)n"}}
-\DoxyCodeLine{00027     \textcolor{stringliteral}{"       import empty\_model.mdl and generate 15000 words to wordlist.txt\(\backslash\)n"}}
-\DoxyCodeLine{00028 }
-\DoxyCodeLine{00029      << std::endl;}
-\DoxyCodeLine{00030 \}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{argparse_8h}{"argparse.h"}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{"color/term.h"}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{\Hypertarget{argparse_8cpp_source_l00011}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a318af5fbacd5becef2ee72a87ac344da}{00011}} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{CLI}}::ProgramOptions* \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{CLI}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse}{Argparse}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a318af5fbacd5becef2ee72a87ac344da}{parse}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv) \{ \textcolor{keywordflow}{return} 0; \}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{\Hypertarget{argparse_8cpp_source_l00015}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_ac7aaf4edf169e3aab32aca083984d914}{00015}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{CLI}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse}{Argparse}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_ac7aaf4edf169e3aab32aca083984d914}{help}}() \{}
+\DoxyCodeLine{00016     std::cout <<}
+\DoxyCodeLine{00017     \textcolor{stringliteral}{"Markov Passwords -\/ Help\(\backslash\)n"}}
+\DoxyCodeLine{00018     \textcolor{stringliteral}{"Options:\(\backslash\)n"}}
+\DoxyCodeLine{00019     \textcolor{stringliteral}{"   \(\backslash\)n"}}
+\DoxyCodeLine{00020     \textcolor{stringliteral}{"   -\/of -\/-\/outputfilename\(\backslash\)n"}}
+\DoxyCodeLine{00021     \textcolor{stringliteral}{"       Filename to output the generation results\(\backslash\)n"}}
+\DoxyCodeLine{00022     \textcolor{stringliteral}{"   -\/ef -\/-\/exportfilename\(\backslash\)n"}}
+\DoxyCodeLine{00023     \textcolor{stringliteral}{"       filename to export built model to\(\backslash\)n"}}
+\DoxyCodeLine{00024     \textcolor{stringliteral}{"   -\/if -\/-\/importfilename\(\backslash\)n"}}
+\DoxyCodeLine{00025     \textcolor{stringliteral}{"       filename to import model from\(\backslash\)n"}}
+\DoxyCodeLine{00026     \textcolor{stringliteral}{"   -\/n (generate count)\(\backslash\)n"}}
+\DoxyCodeLine{00027     \textcolor{stringliteral}{"       Number of lines to generate\(\backslash\)n"}}
+\DoxyCodeLine{00028     \textcolor{stringliteral}{"   \(\backslash\)n"}}
+\DoxyCodeLine{00029     \textcolor{stringliteral}{"Usage: \(\backslash\)n"}}
+\DoxyCodeLine{00030     \textcolor{stringliteral}{"   markov.exe -\/if empty\_model.mdl -\/ef model.mdl\(\backslash\)n"}}
+\DoxyCodeLine{00031     \textcolor{stringliteral}{"       import empty\_model.mdl and train it with data from stdin. When done, output the model to model.mdl\(\backslash\)n"}}
+\DoxyCodeLine{00032     \textcolor{stringliteral}{"\(\backslash\)n"}}
+\DoxyCodeLine{00033     \textcolor{stringliteral}{"   markov.exe -\/if empty\_model.mdl -\/n 15000 -\/of wordlist.txt\(\backslash\)n"}}
+\DoxyCodeLine{00034     \textcolor{stringliteral}{"       import empty\_model.mdl and generate 15000 words to wordlist.txt\(\backslash\)n"}}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036      << std::endl;}
+\DoxyCodeLine{00037 \}}
 
 \end{DoxyCode}

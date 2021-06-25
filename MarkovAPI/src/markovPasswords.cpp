@@ -1,4 +1,12 @@
-#pragma once
+/** @file markovPasswords.cpp
+ * @brief Wrapper for Markov::Model to use with char represented models.
+ * @authors Ata Hakçıl, Osman Ömer Yıldıztugay
+ * 
+ * This file contains the implementation for Markov::API::MarkovPasswords class.
+ * 
+ * @copydoc Markov::API::MarkovPasswords
+ */
+
 #include "markovPasswords.h"
 #include <string.h>
 #include <chrono>

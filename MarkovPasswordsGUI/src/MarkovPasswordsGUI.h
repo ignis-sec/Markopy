@@ -1,3 +1,9 @@
+/** @file MarkovPasswordsGUI.h
+ * @brief Main activity page for GUI
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 #pragma once
 
 #include <QtWidgets/QMainWindow>

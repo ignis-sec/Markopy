@@ -1,3 +1,9 @@
+/** @file main.cpp
+ * @brief Entry point for GUI
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 //#include "MarkovPasswordsGUI.h"
 #include "menu.h"
 #include <QtWidgets/QApplication>

@@ -1,13 +1,26 @@
 \hypertarget{cudarandom_8h}{}\doxysection{cudarandom.\+h File Reference}
 \label{cudarandom_8h}\index{cudarandom.h@{cudarandom.h}}
+
+
+Extension of \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} for C\+U\+DA.  
+
+
 {\ttfamily \#include \char`\"{}Markov\+Model/src/random.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}Cuda\+Markov\+Passwords/src/cuda\+Device\+Controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cuda\+Device\+Controller.\+h\char`\"{}}\newline
 Include dependency graph for cudarandom.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{cudarandom_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{cudarandom_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -31,3 +44,37 @@ class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsagl
 \item 
 \+\_\+\+\_\+device\+\_\+\+\_\+ unsigned long \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_ac44f9c51be54b9b123dca4560482a346}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+Random\+::devrandom}} (unsigned long \&x, unsigned long \&y, unsigned long \&z)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} Generation function operable in {\bfseries{device}} space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Extension of \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} for C\+U\+DA. 
+
+\begin{DoxyAuthor}{Authors}
+Ata Hakçıl
+\end{DoxyAuthor}
+Implementation of Marsaglia Random Engine. This is an implementation of Marsaglia Random engine, which for most use cases is a better fit than other solutions. Very simple mathematical formula to generate pseudorandom integer, so its crazy fast.
+
+This implementation of the Marsaglia Engine is seeded by \mbox{\hyperlink{random_8h}{random.\+h}} default random engine. Random\+Engine is only seeded once so its not a performance issue.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Using Marsaglia Engine with Random\+Walk 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} model;}
+\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
+\DoxyCodeLine{    this-\/>RandomWalk(\&MarsagliaRandomEngine, 5, 10, res); }
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Generating a random number with Marsaglia Engine 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} me;}
+\DoxyCodeLine{std::cout << me.\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{random}}();}
+\end{DoxyCode}
+ 
+
+Definition in file \mbox{\hyperlink{cudarandom_8h_source}{cudarandom.\+h}}.
+

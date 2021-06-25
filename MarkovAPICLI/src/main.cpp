@@ -1,3 +1,12 @@
+/** @file main.cpp
+ * @brief Test cases for Markov::API::ModelMatrix
+ * @authors Ata Hakçıl, Celal Sahir Çetiner
+ * 
+ * @copydoc Markov::API::CLI::Argparse
+ * @copydoc Markov::API::ModelMatrix
+ * @copydoc Markov::API::MarkovPasswords
+ */
+
 #pragma once
 #include <iostream>
 #include "color/term.h"

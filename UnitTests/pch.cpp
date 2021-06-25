@@ -1,3 +1,8 @@
+/** @file pch.cpp
+ * @brief For windows dynamic library
+ * @authors Ata Hakçıl
+ * 
+ */
 // pch.cpp: source file corresponding to the pre-compiled header
 
 #include "pch.h"

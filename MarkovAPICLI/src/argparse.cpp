@@ -1,3 +1,10 @@
+/** @file argparse.cpp
+ * @brief Arguement handler class for native CPP cli
+ * @authors Celal Sahir Çetiner
+ * 
+ * @copydoc Markov::API::CLI::Argparse
+ */
+
 #include "argparse.h"
 #include "color/term.h"
 

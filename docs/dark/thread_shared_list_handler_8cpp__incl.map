@@ -1,6 +1,6 @@
 <map id="threadSharedListHandler.cpp" name="threadSharedListHandler.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="13,5,265,35"/>
-<area shape="rect" id="node2" href="$thread_shared_list_handler_8h.html" title=" " alt="" coords="22,83,255,112"/>
+<area shape="rect" id="node1" title="Thread&#45;safe wrapper for std::ifstream." alt="" coords="13,5,265,35"/>
+<area shape="rect" id="node2" href="$thread_shared_list_handler_8h.html" title="Thread&#45;safe wrapper for std::ifstream." alt="" coords="22,83,255,112"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,160,72,189"/>
 <area shape="rect" id="node4" title=" " alt="" coords="97,160,181,189"/>
 <area shape="rect" id="node5" title=" " alt="" coords="205,160,278,189"/>

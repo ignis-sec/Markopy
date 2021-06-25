@@ -1,3 +1,10 @@
+/** @file term.h
+ * @brief Terminal handler for pretty stuff like colors
+ * @authors Ata Hakçıl
+ * 
+ * @copydoc Markov::API::CLI::Terminal
+ */
+
 #pragma once
 
 #ifdef _WIN32

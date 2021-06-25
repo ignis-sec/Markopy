@@ -1,3 +1,12 @@
+/** @file markovPasswords.h
+ * @brief Wrapper for Markov::Model to use with char represented models.
+ * @authors Ata Hakçıl, Osman Ömer Yıldıztugay
+ * 
+ * This file contains the declerations for Markov::API::MarkovPasswords class.
+ * 
+ * @copydoc Markov::API::MarkovPasswords
+ */
+
 #pragma once
 #include "threadSharedListHandler.h"
 #include "MarkovModel/src/model.h"

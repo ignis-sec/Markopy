@@ -52,7 +52,7 @@ This engine is also used by other engines for seeding.
 
 {\bfseries{Example}} {\bfseries{Use\+:}} Using Default Engine with Random\+Walk 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{namespacemarkopy__cli_a573dcc41f3a527edb70e831cd8108c78}{model}};}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} model;}
 \DoxyCodeLine{Model.import(\textcolor{stringliteral}{"model.mdl"});}
 \DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{Markov::Random::DefaultRandomEngine}} randomEngine;}
@@ -70,7 +70,7 @@ This engine is also used by other engines for seeding.
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00052}{52}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00061}{61}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 
@@ -87,19 +87,19 @@ Distribution schema for seeding.
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00081}{81}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00090}{90}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00081                                                                                \{}
-\DoxyCodeLine{00082             \textcolor{keyword}{static} std::uniform\_int\_distribution<long long unsigned> \_distribution(0, 0xffffFFFF);}
-\DoxyCodeLine{00083             \textcolor{keywordflow}{return} \_distribution;}
-\DoxyCodeLine{00084         \}}
+\DoxyCodeLine{00090                                                                                \{}
+\DoxyCodeLine{00091             \textcolor{keyword}{static} std::uniform\_int\_distribution<long long unsigned> \_distribution(0, 0xffffFFFF);}
+\DoxyCodeLine{00092             \textcolor{keywordflow}{return} \_distribution;}
+\DoxyCodeLine{00093         \}}
 
 \end{DoxyCode}
 
 
-Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00057}{random()}}.
+Referenced by \mbox{\hyperlink{random_8h_source_l00132}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00066}{random()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -121,23 +121,23 @@ Default random engine for seeding.
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00073}{73}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00082}{82}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00073                                                      \{}
-\DoxyCodeLine{00074             \textcolor{keyword}{static} std::default\_random\_engine \_generator(\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}{rd}}()());}
-\DoxyCodeLine{00075             \textcolor{keywordflow}{return} \_generator;}
-\DoxyCodeLine{00076         \}}
+\DoxyCodeLine{00082                                                      \{}
+\DoxyCodeLine{00083             \textcolor{keyword}{static} std::default\_random\_engine \_generator(\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a411c66837939f7f787272f1c6aa78e23}{rd}}()());}
+\DoxyCodeLine{00084             \textcolor{keywordflow}{return} \_generator;}
+\DoxyCodeLine{00085         \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{random_8h_source_l00065}{rd()}}.
+References \mbox{\hyperlink{random_8h_source_l00074}{rd()}}.
 
 
 
-Referenced by \mbox{\hyperlink{random_8h_source_l00123}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00057}{random()}}.
+Referenced by \mbox{\hyperlink{random_8h_source_l00132}{Markov\+::\+Random\+::\+Marsaglia\+::\+Marsaglia()}}, and \mbox{\hyperlink{random_8h_source_l00066}{random()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -178,18 +178,18 @@ Reimplemented in \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da3
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00057}{57}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00066}{66}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00057                                      \{}
-\DoxyCodeLine{00058             \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}()(this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}());}
-\DoxyCodeLine{00059         \}}
+\DoxyCodeLine{00066                                      \{}
+\DoxyCodeLine{00067             \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}()(this-\/>\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}());}
+\DoxyCodeLine{00068         \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{random_8h_source_l00081}{distribution()}}, and \mbox{\hyperlink{random_8h_source_l00073}{generator()}}.
+References \mbox{\hyperlink{random_8h_source_l00090}{distribution()}}, and \mbox{\hyperlink{random_8h_source_l00082}{generator()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -211,19 +211,19 @@ Default random device for seeding.
 
 
 
-Definition at line \mbox{\hyperlink{random_8h_source_l00065}{65}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+Definition at line \mbox{\hyperlink{random_8h_source_l00074}{74}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00065                                       \{}
-\DoxyCodeLine{00066             \textcolor{keyword}{static} std::random\_device \_rd;}
-\DoxyCodeLine{00067             \textcolor{keywordflow}{return} \_rd;}
-\DoxyCodeLine{00068         \}}
+\DoxyCodeLine{00074                                       \{}
+\DoxyCodeLine{00075             \textcolor{keyword}{static} std::random\_device \_rd;}
+\DoxyCodeLine{00076             \textcolor{keywordflow}{return} \_rd;}
+\DoxyCodeLine{00077         \}}
 
 \end{DoxyCode}
 
 
-Referenced by \mbox{\hyperlink{random_8h_source_l00073}{generator()}}.
+Referenced by \mbox{\hyperlink{random_8h_source_l00082}{generator()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
