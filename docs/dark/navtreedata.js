@@ -24,30 +24,31 @@ var NAVTREE =
 [
   [ "Markopy", "index.html", [
     [ "Markov Passwords", "index.html", [
-      [ "About The Project", "index.html#autotoc_md2", [
-        [ "Built With", "index.html#autotoc_md3", null ]
+      [ "About The Project", "index.html#autotoc_md2", null ],
+      [ "Possible use cases", "index.html#autotoc_md3", [
+        [ "Built With", "index.html#autotoc_md4", null ]
       ] ],
-      [ "Getting Started", "index.html#autotoc_md4", [
-        [ "Prerequisites", "index.html#autotoc_md6", null ],
-        [ "Installing Dependencies", "index.html#autotoc_md12", null ],
-        [ "Installation", "index.html#autotoc_md16", null ],
-        [ "Building", "index.html#autotoc_md18", null ]
+      [ "Getting Started", "index.html#autotoc_md5", [
+        [ "Prerequisites", "index.html#autotoc_md7", null ],
+        [ "Installing Dependencies", "index.html#autotoc_md13", null ],
+        [ "Installation", "index.html#autotoc_md17", null ],
+        [ "Building", "index.html#autotoc_md19", null ]
       ] ],
-      [ "Linux", "index.html#autotoc_md19", null ],
-      [ "Windows", "index.html#autotoc_md20", null ],
-      [ "Known Common issues", "index.html#autotoc_md22", [
-        [ "Linux", "index.html#autotoc_md23", [
-          [ "Markopy - Python.h - Not found", "index.html#autotoc_md24", null ],
-          [ "Markopy/MarkovPasswords - *.so not found, or other library related issues when building", "index.html#autotoc_md25", null ]
+      [ "Linux", "index.html#autotoc_md20", null ],
+      [ "Windows", "index.html#autotoc_md21", null ],
+      [ "Known Common issues", "index.html#autotoc_md23", [
+        [ "Linux", "index.html#autotoc_md24", [
+          [ "Markopy - Python.h - Not found", "index.html#autotoc_md25", null ],
+          [ "Markopy/MarkovPasswords - *.so not found, or other library related issues when building", "index.html#autotoc_md26", null ]
         ] ],
-        [ "Windows", "index.html#autotoc_md26", [
-          [ "Boost - Bootstrap.bat \"ctype.h\" not found", "index.html#autotoc_md27", null ],
-          [ "Cannot open file \"*.lib\"", "index.html#autotoc_md28", null ],
-          [ "Python.h not found", "index.html#autotoc_md29", null ],
-          [ "Simplified Theory", "index.html#autotoc_md31", null ]
+        [ "Windows", "index.html#autotoc_md27", [
+          [ "Boost - Bootstrap.bat \"ctype.h\" not found", "index.html#autotoc_md28", null ],
+          [ "Cannot open file \"*.lib\"", "index.html#autotoc_md29", null ],
+          [ "Python.h not found", "index.html#autotoc_md30", null ],
+          [ "Simplified Theory", "index.html#autotoc_md32", null ]
         ] ],
-        [ "Contributing", "index.html#autotoc_md37", null ],
-        [ "Contact", "index.html#autotoc_md38", null ]
+        [ "Contributing", "index.html#autotoc_md38", null ],
+        [ "Contact", "index.html#autotoc_md39", null ]
       ] ]
     ] ],
     [ "NVSight Report", "md__media_ignis__h_d_d__repositories__markov_passwords__n_v_sight_report.html", null ],
@@ -89,7 +90,7 @@ var NAVTREEINDEX =
 [
 "_c_l_i_8cpp.html",
 "class_markov_1_1_g_u_i_1_1_c_l_i.html#ac6aba780e5312f9f03cb716f0929d39e",
-"term_8h.html#ac91ec1d9a601445bd4e3ee362e3dbd3f"
+"term_8h.html#ab4aa9c34956736274020c42f469deaf6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

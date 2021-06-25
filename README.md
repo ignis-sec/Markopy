@@ -49,7 +49,6 @@
 </div>
 
 ---
-<!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
@@ -73,10 +72,14 @@ This project contains following sub-projects:
 - CudaMarkopy
   - GPU-accelereted wrağğer for CudaMarkovAPI
 
-  
+
+## Possible use cases
+
+While main focus of the development has been towards random walk performance
+
 ### Built With
 
-* CPP, with dependecies: boost, python3-dev, QT-5.
+Each one of the 
 
 
 ## Getting Started
