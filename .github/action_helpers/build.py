@@ -52,18 +52,20 @@ if __name__ == "__main__":
     if(args.step == "version_matrix"):
         
         if(a_type == "minor"):
-            lm = "[3.6, 3.7, 3.8, 3.9]"
-            wm = "[3.8, 3.9]"
+            lm = "[36, 37, 38, 39]"
+            wm = "[36, 37, 38, 39]"
+            wms = "[3.6, 3.7, 3.8, 3.9]"
 
         elif(a_type == "patch"):
-            lm = "[3.8]"
-            wm = "[3.8]"
-
+            lm = "[38]"
+            wm = "[38]"
+            wms = "[3.8]"
         else:
-            lm = "[3.8]"
-            wm = "[3.8]"
+            lm = "[38]"
+            wm = "[38]"
+            wms = "[3.8]"
 
-        set_action_outputs(linux_matrix=lm, windows_matrix=wm)  
+        set_action_outputs(linux_matrix=lm, windows_matrix=wm, windows_matrix_sep=wms)  
 
     if(args.step == "linux_python_libs"):
         os.system(f".github/action_helpers/actions_linux_python_libs.sh {args.pyversion}")

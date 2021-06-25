@@ -1,0 +1,12 @@
+**/CmakeFiles/*
+docs/*
+documentation/*
+out/*
+Testing/*
+models/*
+dataset/*
+
+.idea/*
+.vs/*
+.vscode/*
+.scannerwork/*

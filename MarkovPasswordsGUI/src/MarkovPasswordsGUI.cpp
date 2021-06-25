@@ -1,14 +1,11 @@
 #include "MarkovPasswordsGUI.h"
 #include <fstream>
 #include <qwebengineview.h>
-#include <Windows.h>
 #include "CLI.h"
 
 using namespace Markov::GUI;
 
-MarkovPasswordsGUI::MarkovPasswordsGUI(QWidget *parent)
-    : QMainWindow(parent)
-{
+Markov::GUI::MarkovPasswordsGUI::MarkovPasswordsGUI(QWidget *parent) : QMainWindow(parent){
     ui.setupUi(this);
 
 

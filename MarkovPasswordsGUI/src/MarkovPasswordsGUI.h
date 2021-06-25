@@ -12,6 +12,8 @@ namespace Markov::GUI{
     */
     class MarkovPasswordsGUI : public QMainWindow {
         Q_OBJECT
+    public:
+        MarkovPasswordsGUI(QWidget* parent = Q_NULLPTR);
 
     private:
         Ui::MarkovPasswordsGUIClass ui;
@@ -20,17 +22,17 @@ namespace Markov::GUI{
         //Slots for buttons in GUI.
     public slots:
 
-        void MarkovPasswordsGUI::benchmarkSelected();
-        void MarkovPasswordsGUI::modelvisSelected();
-        void MarkovPasswordsGUI::visualDebugSelected();
-        void MarkovPasswordsGUI::comparisonSelected();
+        void benchmarkSelected();
+        //void MarkovPasswordsGUI::modelvisSelected();
+        //void MarkovPasswordsGUI::visualDebugSelected();
+        //void MarkovPasswordsGUI::comparisonSelected();
     
    
   public slots:
 
-      void MarkovPasswordsGUI::home();
-      void MarkovPasswordsGUI :: pass();
-      void MarkovPasswordsGUI::model();
+      void home();
+      void pass();
+      void model();
   };
 };
 
