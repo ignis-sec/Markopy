@@ -110,12 +110,22 @@ jobs:
         ls -alR out/;
         ls -al /usr/local/lib;
 
-    - name: Zip built files # This would actually build your project, using zip for an example artifact
+    - name: Zip library files # This would actually build your project, using zip for an example artifact
+      if: matrix.python-version == '38'
+      run: |
+        zip --junk-paths libmarkov-${{ needs.reversion.outputs.tag }}-linux.zip out/lib/libmarkov.so out/bin/markovp
+        zip --junk-paths libcudamarkov-${{ needs.reversion.outputs.tag }}-linux.zip out/lib/libcudamarkov.so out/bin/cudamarkovp
+    
+    - name: Zip models files # This would actually build your project, using zip for an example artifact
+      if: matrix.python-version == '38'
+      run: |
+        zip -r models-${{ needs.reversion.outputs.tag }}.zip models/*
+  
+    - name: Zip python files
       run: |
         zip --junk-paths markopy-${{ needs.reversion.outputs.tag }}-linux-py${{ matrix.python-version }}.so.zip out/lib/markopy.so Markopy/src/CLI/markopy.py  /usr/local/lib/libboost_python${{ matrix.python-version }}*so.1*
         zip --junk-paths cudamarkopy-${{ needs.reversion.outputs.tag }}-linux-py${{ matrix.python-version }}.so.zip out/lib/cudamarkopy.so Markopy/src/CLI/markopy.py  /usr/local/lib/libboost_python${{ matrix.python-version }}*so.1*
-        zip --junk-paths libmarkov-${{ needs.reversion.outputs.tag }}-linux.zip out/lib/libmarkov.so out/bin/markovp
-        zip --junk-paths libcudamarkov-${{ needs.reversion.outputs.tag }}-linux.zip out/lib/libcudamarkov.so out/bin/cudamarkovp
+        
     
     - name: Upload LibMarkov
       if: matrix.python-version == '38'
@@ -161,6 +171,17 @@ jobs:
         upload_url: ${{ needs.reversion.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
         asset_path: ./cudamarkopy-${{ needs.reversion.outputs.tag }}-linux-py${{ matrix.python-version }}.so.zip
         asset_name:   cudamarkopy-${{ needs.reversion.outputs.tag }}-linux-py${{ matrix.python-version }}.so.zip
+        asset_content_type: application/zip
+
+    - name: Upload Models
+      id: upload-release-asset-models
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.reversion.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./models-${{ needs.reversion.outputs.tag }}.zip
+        asset_name:   models-${{ needs.reversion.outputs.tag }}.zip
         asset_content_type: application/zip
     
 

@@ -1,10 +1,10 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
 \contentsline {chapter}{\numberline {1}Markov Passwords}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}About The Project}{3}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Built With}{3}{subsection.1.1.1}%
-\contentsline {section}{\numberline {1.2}Getting Started}{3}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Prerequisites}{3}{subsection.1.2.1}%
-\contentsline {paragraph}{\numberline {1.2.1.0.1}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model}{3}{paragraph.1.2.1.0.1}%
+\contentsline {subsection}{\numberline {1.1.1}Built With}{4}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}Getting Started}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Prerequisites}{4}{subsection.1.2.1}%
+\contentsline {paragraph}{\numberline {1.2.1.0.1}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model}{4}{paragraph.1.2.1.0.1}%
 \contentsline {paragraph}{\numberline {1.2.1.0.2}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords}{4}{paragraph.1.2.1.0.2}%
 \contentsline {paragraph}{\numberline {1.2.1.0.3}Markopy}{4}{paragraph.1.2.1.0.3}%
 \contentsline {paragraph}{\numberline {1.2.1.0.4}Markov\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Passwords\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI}{4}{paragraph.1.2.1.0.4}%
@@ -13,8 +13,8 @@
 \contentsline {paragraph}{\numberline {1.2.2.0.2}Linux}{4}{paragraph.1.2.2.0.2}%
 \contentsline {subsection}{\numberline {1.2.3}Installation}{4}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}Building}{4}{subsection.1.2.4}%
-\contentsline {section}{\numberline {1.3}Linux}{4}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Windows}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.3}Linux}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Windows}{5}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Known Common issues}{5}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Linux}{5}{subsection.1.5.1}%
 \contentsline {subsubsection}{\numberline {1.5.1.1}Markopy -\/ Python.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h -\/ Not found}{5}{subsubsection.1.5.1.1}%
@@ -23,7 +23,7 @@
 \contentsline {subsubsection}{\numberline {1.5.2.1}Boost -\/ Bootstrap.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bat \char `\"{}ctype.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h\char `\"{} not found}{5}{subsubsection.1.5.2.1}%
 \contentsline {subsubsection}{\numberline {1.5.2.2}Cannot open file \char `\"{}$\ast $.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lib\char `\"{}}{5}{subsubsection.1.5.2.2}%
 \contentsline {subsubsection}{\numberline {1.5.2.3}Python.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h not found}{5}{subsubsection.1.5.2.3}%
-\contentsline {subsubsection}{\numberline {1.5.2.4}Simplified Theory}{5}{subsubsection.1.5.2.4}%
+\contentsline {subsubsection}{\numberline {1.5.2.4}Simplified Theory}{6}{subsubsection.1.5.2.4}%
 \contentsline {subsection}{\numberline {1.5.3}Contributing}{6}{subsection.1.5.3}%
 \contentsline {subsection}{\numberline {1.5.4}Contact}{6}{subsection.1.5.4}%
 \contentsline {chapter}{\numberline {2}N\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}V\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sight Report}{7}{chapter.2}%
@@ -631,4 +631,4 @@
 \contentsline {section}{\numberline {10.91}Unit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tests.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{317}{section.10.91}%
 \contentsline {subsection}{\numberline {10.91.1}Detailed Description}{318}{subsection.10.91.1}%
 \contentsline {section}{\numberline {10.92}Unit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tests.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{318}{section.10.92}%
-\contentsline {chapter}{Index}{327}{section*.422}%
+\contentsline {chapter}{Index}{327}{section*.423}%
