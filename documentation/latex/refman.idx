@@ -1,756 +1,756 @@
-\indexentry{markopy@{markopy}|hyperpage}{27}
-\indexentry{markopy@{markopy}!cli\_generate@{cli\_generate}|hyperpage}{27}
-\indexentry{cli\_generate@{cli\_generate}!markopy@{markopy}|hyperpage}{27}
-\indexentry{markopy@{markopy}!cli\_init@{cli\_init}|hyperpage}{28}
-\indexentry{cli\_init@{cli\_init}!markopy@{markopy}|hyperpage}{28}
-\indexentry{markopy@{markopy}!cli\_train@{cli\_train}|hyperpage}{29}
-\indexentry{cli\_train@{cli\_train}!markopy@{markopy}|hyperpage}{29}
-\indexentry{markopy@{markopy}!action@{action}|hyperpage}{30}
-\indexentry{action@{action}!markopy@{markopy}|hyperpage}{30}
-\indexentry{markopy@{markopy}!args@{args}|hyperpage}{30}
-\indexentry{args@{args}!markopy@{markopy}|hyperpage}{30}
-\indexentry{markopy@{markopy}!default@{default}|hyperpage}{30}
-\indexentry{default@{default}!markopy@{markopy}|hyperpage}{30}
-\indexentry{markopy@{markopy}!help@{help}|hyperpage}{30}
-\indexentry{help@{help}!markopy@{markopy}|hyperpage}{30}
-\indexentry{markopy@{markopy}!parser@{parser}|hyperpage}{31}
-\indexentry{parser@{parser}!markopy@{markopy}|hyperpage}{31}
-\indexentry{Markov@{Markov}|hyperpage}{31}
-\indexentry{Markov::API@{Markov::API}|hyperpage}{31}
-\indexentry{Markov::API::CLI@{Markov::API::CLI}|hyperpage}{32}
-\indexentry{Markov::API::CLI@{Markov::API::CLI}!ProgramOptions@{ProgramOptions}|hyperpage}{32}
-\indexentry{ProgramOptions@{ProgramOptions}!Markov::API::CLI@{Markov::API::CLI}|hyperpage}{32}
-\indexentry{Markov::API::CLI@{Markov::API::CLI}!operator$<$$<$@{operator$<$$<$}|hyperpage}{32}
-\indexentry{operator$<$$<$@{operator$<$$<$}!Markov::API::CLI@{Markov::API::CLI}|hyperpage}{32}
-\indexentry{Markov::API::Concurrency@{Markov::API::Concurrency}|hyperpage}{33}
-\indexentry{Markov::API::CUDA@{Markov::API::CUDA}|hyperpage}{33}
-\indexentry{Markov::API::CUDA@{Markov::API::CUDA}!FastRandomWalkCUDAKernel@{FastRandomWalkCUDAKernel}|hyperpage}{33}
-\indexentry{FastRandomWalkCUDAKernel@{FastRandomWalkCUDAKernel}!Markov::API::CUDA@{Markov::API::CUDA}|hyperpage}{33}
-\indexentry{Markov::API::CUDA@{Markov::API::CUDA}!strchr@{strchr}|hyperpage}{35}
-\indexentry{strchr@{strchr}!Markov::API::CUDA@{Markov::API::CUDA}|hyperpage}{35}
-\indexentry{Markov::API::CUDA::Random@{Markov::API::CUDA::Random}|hyperpage}{35}
-\indexentry{Markov::API::CUDA::Random@{Markov::API::CUDA::Random}!devrandom@{devrandom}|hyperpage}{35}
-\indexentry{devrandom@{devrandom}!Markov::API::CUDA::Random@{Markov::API::CUDA::Random}|hyperpage}{35}
-\indexentry{Markov::GUI@{Markov::GUI}|hyperpage}{36}
-\indexentry{Markov::Markopy@{Markov::Markopy}|hyperpage}{36}
-\indexentry{Markov::Markopy@{Markov::Markopy}!BOOST\_PYTHON\_MODULE@{BOOST\_PYTHON\_MODULE}|hyperpage}{37}
-\indexentry{BOOST\_PYTHON\_MODULE@{BOOST\_PYTHON\_MODULE}!Markov::Markopy@{Markov::Markopy}|hyperpage}{37}
-\indexentry{Markov::Random@{Markov::Random}|hyperpage}{37}
-\indexentry{model\_2gram@{model\_2gram}|hyperpage}{38}
-\indexentry{model\_2gram@{model\_2gram}!alphabet@{alphabet}|hyperpage}{38}
-\indexentry{alphabet@{alphabet}!model\_2gram@{model\_2gram}|hyperpage}{38}
-\indexentry{model\_2gram@{model\_2gram}!f@{f}|hyperpage}{38}
-\indexentry{f@{f}!model\_2gram@{model\_2gram}|hyperpage}{38}
-\indexentry{random@{random}|hyperpage}{38}
-\indexentry{random-\/model@{random-\/model}|hyperpage}{38}
-\indexentry{random-\/model@{random-\/model}!alphabet@{alphabet}|hyperpage}{39}
-\indexentry{alphabet@{alphabet}!random-\/model@{random-\/model}|hyperpage}{39}
-\indexentry{random-\/model@{random-\/model}!f@{f}|hyperpage}{39}
-\indexentry{f@{f}!random-\/model@{random-\/model}|hyperpage}{39}
-\indexentry{Testing@{Testing}|hyperpage}{39}
-\indexentry{Testing::MarkovModel@{Testing::MarkovModel}|hyperpage}{39}
-\indexentry{Testing::MarkovModel@{Testing::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}|hyperpage}{39}
-\indexentry{TEST\_CLASS@{TEST\_CLASS}!Testing::MarkovModel@{Testing::MarkovModel}|hyperpage}{39}
-\indexentry{Testing::MarkovModel@{Testing::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}|hyperpage}{40}
-\indexentry{TEST\_CLASS@{TEST\_CLASS}!Testing::MarkovModel@{Testing::MarkovModel}|hyperpage}{40}
+\indexentry{markopy@{markopy}|hyperpage}{29}
+\indexentry{markopy@{markopy}!cli\_generate@{cli\_generate}|hyperpage}{29}
+\indexentry{cli\_generate@{cli\_generate}!markopy@{markopy}|hyperpage}{29}
+\indexentry{markopy@{markopy}!cli\_init@{cli\_init}|hyperpage}{30}
+\indexentry{cli\_init@{cli\_init}!markopy@{markopy}|hyperpage}{30}
+\indexentry{markopy@{markopy}!cli\_train@{cli\_train}|hyperpage}{31}
+\indexentry{cli\_train@{cli\_train}!markopy@{markopy}|hyperpage}{31}
+\indexentry{markopy@{markopy}!action@{action}|hyperpage}{32}
+\indexentry{action@{action}!markopy@{markopy}|hyperpage}{32}
+\indexentry{markopy@{markopy}!args@{args}|hyperpage}{32}
+\indexentry{args@{args}!markopy@{markopy}|hyperpage}{32}
+\indexentry{markopy@{markopy}!default@{default}|hyperpage}{32}
+\indexentry{default@{default}!markopy@{markopy}|hyperpage}{32}
+\indexentry{markopy@{markopy}!help@{help}|hyperpage}{32}
+\indexentry{help@{help}!markopy@{markopy}|hyperpage}{32}
+\indexentry{markopy@{markopy}!parser@{parser}|hyperpage}{33}
+\indexentry{parser@{parser}!markopy@{markopy}|hyperpage}{33}
+\indexentry{Markov@{Markov}|hyperpage}{33}
+\indexentry{Markov::API@{Markov::API}|hyperpage}{33}
+\indexentry{Markov::API::CLI@{Markov::API::CLI}|hyperpage}{34}
+\indexentry{Markov::API::CLI@{Markov::API::CLI}!ProgramOptions@{ProgramOptions}|hyperpage}{34}
+\indexentry{ProgramOptions@{ProgramOptions}!Markov::API::CLI@{Markov::API::CLI}|hyperpage}{34}
+\indexentry{Markov::API::CLI@{Markov::API::CLI}!operator$<$$<$@{operator$<$$<$}|hyperpage}{34}
+\indexentry{operator$<$$<$@{operator$<$$<$}!Markov::API::CLI@{Markov::API::CLI}|hyperpage}{34}
+\indexentry{Markov::API::Concurrency@{Markov::API::Concurrency}|hyperpage}{35}
+\indexentry{Markov::API::CUDA@{Markov::API::CUDA}|hyperpage}{35}
+\indexentry{Markov::API::CUDA@{Markov::API::CUDA}!FastRandomWalkCUDAKernel@{FastRandomWalkCUDAKernel}|hyperpage}{35}
+\indexentry{FastRandomWalkCUDAKernel@{FastRandomWalkCUDAKernel}!Markov::API::CUDA@{Markov::API::CUDA}|hyperpage}{35}
+\indexentry{Markov::API::CUDA@{Markov::API::CUDA}!strchr@{strchr}|hyperpage}{37}
+\indexentry{strchr@{strchr}!Markov::API::CUDA@{Markov::API::CUDA}|hyperpage}{37}
+\indexentry{Markov::API::CUDA::Random@{Markov::API::CUDA::Random}|hyperpage}{37}
+\indexentry{Markov::API::CUDA::Random@{Markov::API::CUDA::Random}!devrandom@{devrandom}|hyperpage}{37}
+\indexentry{devrandom@{devrandom}!Markov::API::CUDA::Random@{Markov::API::CUDA::Random}|hyperpage}{37}
+\indexentry{Markov::GUI@{Markov::GUI}|hyperpage}{38}
+\indexentry{Markov::Markopy@{Markov::Markopy}|hyperpage}{38}
+\indexentry{Markov::Markopy@{Markov::Markopy}!BOOST\_PYTHON\_MODULE@{BOOST\_PYTHON\_MODULE}|hyperpage}{39}
+\indexentry{BOOST\_PYTHON\_MODULE@{BOOST\_PYTHON\_MODULE}!Markov::Markopy@{Markov::Markopy}|hyperpage}{39}
+\indexentry{Markov::Random@{Markov::Random}|hyperpage}{39}
+\indexentry{model\_2gram@{model\_2gram}|hyperpage}{40}
+\indexentry{model\_2gram@{model\_2gram}!alphabet@{alphabet}|hyperpage}{40}
+\indexentry{alphabet@{alphabet}!model\_2gram@{model\_2gram}|hyperpage}{40}
+\indexentry{model\_2gram@{model\_2gram}!f@{f}|hyperpage}{40}
+\indexentry{f@{f}!model\_2gram@{model\_2gram}|hyperpage}{40}
+\indexentry{random@{random}|hyperpage}{40}
+\indexentry{random-\/model@{random-\/model}|hyperpage}{40}
+\indexentry{random-\/model@{random-\/model}!alphabet@{alphabet}|hyperpage}{41}
+\indexentry{alphabet@{alphabet}!random-\/model@{random-\/model}|hyperpage}{41}
+\indexentry{random-\/model@{random-\/model}!f@{f}|hyperpage}{41}
+\indexentry{f@{f}!random-\/model@{random-\/model}|hyperpage}{41}
+\indexentry{Testing@{Testing}|hyperpage}{41}
+\indexentry{Testing::MarkovModel@{Testing::MarkovModel}|hyperpage}{41}
 \indexentry{Testing::MarkovModel@{Testing::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}|hyperpage}{41}
 \indexentry{TEST\_CLASS@{TEST\_CLASS}!Testing::MarkovModel@{Testing::MarkovModel}|hyperpage}{41}
-\indexentry{Testing::MarkovPasswords@{Testing::MarkovPasswords}|hyperpage}{42}
-\indexentry{Testing::MVP@{Testing::MVP}|hyperpage}{43}
-\indexentry{Testing::MVP::MarkovModel@{Testing::MVP::MarkovModel}|hyperpage}{43}
-\indexentry{Testing::MVP::MarkovModel@{Testing::MVP::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}|hyperpage}{43}
-\indexentry{TEST\_CLASS@{TEST\_CLASS}!Testing::MVP::MarkovModel@{Testing::MVP::MarkovModel}|hyperpage}{43}
-\indexentry{Testing::MVP::MarkovModel@{Testing::MVP::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}|hyperpage}{44}
-\indexentry{TEST\_CLASS@{TEST\_CLASS}!Testing::MVP::MarkovModel@{Testing::MVP::MarkovModel}|hyperpage}{44}
+\indexentry{Testing::MarkovModel@{Testing::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}|hyperpage}{42}
+\indexentry{TEST\_CLASS@{TEST\_CLASS}!Testing::MarkovModel@{Testing::MarkovModel}|hyperpage}{42}
+\indexentry{Testing::MarkovModel@{Testing::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}|hyperpage}{43}
+\indexentry{TEST\_CLASS@{TEST\_CLASS}!Testing::MarkovModel@{Testing::MarkovModel}|hyperpage}{43}
+\indexentry{Testing::MarkovPasswords@{Testing::MarkovPasswords}|hyperpage}{44}
+\indexentry{Testing::MVP@{Testing::MVP}|hyperpage}{45}
+\indexentry{Testing::MVP::MarkovModel@{Testing::MVP::MarkovModel}|hyperpage}{45}
 \indexentry{Testing::MVP::MarkovModel@{Testing::MVP::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}|hyperpage}{45}
 \indexentry{TEST\_CLASS@{TEST\_CLASS}!Testing::MVP::MarkovModel@{Testing::MVP::MarkovModel}|hyperpage}{45}
-\indexentry{Testing::MVP::MarkovPasswords@{Testing::MVP::MarkovPasswords}|hyperpage}{48}
-\indexentry{Testing::MVP::MarkovPasswords@{Testing::MVP::MarkovPasswords}!TEST\_CLASS@{TEST\_CLASS}|hyperpage}{49}
-\indexentry{TEST\_CLASS@{TEST\_CLASS}!Testing::MVP::MarkovPasswords@{Testing::MVP::MarkovPasswords}|hyperpage}{49}
-\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{51}
-\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!bExport@{bExport}|hyperpage}{52}
-\indexentry{bExport@{bExport}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{52}
-\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!bFailure@{bFailure}|hyperpage}{52}
-\indexentry{bFailure@{bFailure}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{52}
-\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!bImport@{bImport}|hyperpage}{52}
-\indexentry{bImport@{bImport}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{52}
-\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!datasetname@{datasetname}|hyperpage}{52}
-\indexentry{datasetname@{datasetname}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{52}
-\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!exportname@{exportname}|hyperpage}{53}
-\indexentry{exportname@{exportname}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{53}
-\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!generateN@{generateN}|hyperpage}{53}
-\indexentry{generateN@{generateN}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{53}
-\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!importname@{importname}|hyperpage}{53}
-\indexentry{importname@{importname}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{53}
-\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!outputfilename@{outputfilename}|hyperpage}{53}
-\indexentry{outputfilename@{outputfilename}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{53}
-\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!seperator@{seperator}|hyperpage}{53}
-\indexentry{seperator@{seperator}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{53}
-\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!wordlistname@{wordlistname}|hyperpage}{53}
-\indexentry{wordlistname@{wordlistname}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{53}
-\indexentry{Markov::GUI::about@{Markov::GUI::about}|hyperpage}{54}
-\indexentry{Markov::GUI::about@{Markov::GUI::about}!about@{about}|hyperpage}{55}
-\indexentry{about@{about}!Markov::GUI::about@{Markov::GUI::about}|hyperpage}{55}
-\indexentry{Markov::GUI::about@{Markov::GUI::about}!ui@{ui}|hyperpage}{55}
-\indexentry{ui@{ui}!Markov::GUI::about@{Markov::GUI::about}|hyperpage}{55}
-\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{55}
-\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!Argparse@{Argparse}|hyperpage}{57}
-\indexentry{Argparse@{Argparse}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{57}
-\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!Argparse@{Argparse}|hyperpage}{57}
-\indexentry{Argparse@{Argparse}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{57}
-\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!getProgramOptions@{getProgramOptions}|hyperpage}{59}
-\indexentry{getProgramOptions@{getProgramOptions}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{59}
-\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!help@{help}|hyperpage}{59}
-\indexentry{help@{help}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{59}
-\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!parse@{parse}|hyperpage}{59}
-\indexentry{parse@{parse}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{59}
-\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!setProgramOptions@{setProgramOptions}|hyperpage}{60}
-\indexentry{setProgramOptions@{setProgramOptions}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{60}
-\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!po@{po}|hyperpage}{61}
-\indexentry{po@{po}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{61}
-\indexentry{Markov::GUI::CLI@{Markov::GUI::CLI}|hyperpage}{61}
-\indexentry{Markov::GUI::CLI@{Markov::GUI::CLI}!CLI@{CLI}|hyperpage}{62}
-\indexentry{CLI@{CLI}!Markov::GUI::CLI@{Markov::GUI::CLI}|hyperpage}{62}
-\indexentry{Markov::GUI::CLI@{Markov::GUI::CLI}!about@{about}|hyperpage}{63}
-\indexentry{about@{about}!Markov::GUI::CLI@{Markov::GUI::CLI}|hyperpage}{63}
-\indexentry{Markov::GUI::CLI@{Markov::GUI::CLI}!start@{start}|hyperpage}{63}
-\indexentry{start@{start}!Markov::GUI::CLI@{Markov::GUI::CLI}|hyperpage}{63}
-\indexentry{Markov::GUI::CLI@{Markov::GUI::CLI}!statistics@{statistics}|hyperpage}{64}
-\indexentry{statistics@{statistics}!Markov::GUI::CLI@{Markov::GUI::CLI}|hyperpage}{64}
-\indexentry{Markov::GUI::CLI@{Markov::GUI::CLI}!ui@{ui}|hyperpage}{64}
-\indexentry{ui@{ui}!Markov::GUI::CLI@{Markov::GUI::CLI}|hyperpage}{64}
-\indexentry{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}|hyperpage}{64}
-\indexentry{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaCheckNotifyErr@{CudaCheckNotifyErr}|hyperpage}{66}
-\indexentry{CudaCheckNotifyErr@{CudaCheckNotifyErr}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}|hyperpage}{66}
-\indexentry{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaMalloc2DToFlat@{CudaMalloc2DToFlat}|hyperpage}{67}
-\indexentry{CudaMalloc2DToFlat@{CudaMalloc2DToFlat}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}|hyperpage}{67}
-\indexentry{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}|hyperpage}{68}
-\indexentry{CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}|hyperpage}{68}
-\indexentry{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaMigrate2DFlat@{CudaMigrate2DFlat}|hyperpage}{69}
-\indexentry{CudaMigrate2DFlat@{CudaMigrate2DFlat}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}|hyperpage}{69}
-\indexentry{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!ListCudaDevices@{ListCudaDevices}|hyperpage}{70}
-\indexentry{ListCudaDevices@{ListCudaDevices}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}|hyperpage}{70}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{71}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!AdjustEdge@{AdjustEdge}|hyperpage}{75}
-\indexentry{AdjustEdge@{AdjustEdge}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{75}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!AllocVRAMOutputBuffer@{AllocVRAMOutputBuffer}|hyperpage}{76}
-\indexentry{AllocVRAMOutputBuffer@{AllocVRAMOutputBuffer}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{76}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Buff@{Buff}|hyperpage}{76}
-\indexentry{Buff@{Buff}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{76}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!ConstructMatrix@{ConstructMatrix}|hyperpage}{78}
-\indexentry{ConstructMatrix@{ConstructMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{78}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!CudaCheckNotifyErr@{CudaCheckNotifyErr}|hyperpage}{79}
-\indexentry{CudaCheckNotifyErr@{CudaCheckNotifyErr}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{79}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!CudaMalloc2DToFlat@{CudaMalloc2DToFlat}|hyperpage}{80}
-\indexentry{CudaMalloc2DToFlat@{CudaMalloc2DToFlat}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{80}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}|hyperpage}{81}
-\indexentry{CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{81}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!CudaMigrate2DFlat@{CudaMigrate2DFlat}|hyperpage}{82}
-\indexentry{CudaMigrate2DFlat@{CudaMigrate2DFlat}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{82}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!DeallocateMatrix@{DeallocateMatrix}|hyperpage}{83}
-\indexentry{DeallocateMatrix@{DeallocateMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{83}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!DumpJSON@{DumpJSON}|hyperpage}{84}
-\indexentry{DumpJSON@{DumpJSON}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{84}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Edges@{Edges}|hyperpage}{85}
-\indexentry{Edges@{Edges}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{85}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Export@{Export}|hyperpage}{85}
-\indexentry{Export@{Export}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{85}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Export@{Export}|hyperpage}{85}
-\indexentry{Export@{Export}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{85}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FastRandomWalk@{FastRandomWalk}|hyperpage}{86}
-\indexentry{FastRandomWalk@{FastRandomWalk}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{86}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FastRandomWalk@{FastRandomWalk}|hyperpage}{87}
-\indexentry{FastRandomWalk@{FastRandomWalk}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{87}
+\indexentry{Testing::MVP::MarkovModel@{Testing::MVP::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}|hyperpage}{46}
+\indexentry{TEST\_CLASS@{TEST\_CLASS}!Testing::MVP::MarkovModel@{Testing::MVP::MarkovModel}|hyperpage}{46}
+\indexentry{Testing::MVP::MarkovModel@{Testing::MVP::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}|hyperpage}{47}
+\indexentry{TEST\_CLASS@{TEST\_CLASS}!Testing::MVP::MarkovModel@{Testing::MVP::MarkovModel}|hyperpage}{47}
+\indexentry{Testing::MVP::MarkovPasswords@{Testing::MVP::MarkovPasswords}|hyperpage}{50}
+\indexentry{Testing::MVP::MarkovPasswords@{Testing::MVP::MarkovPasswords}!TEST\_CLASS@{TEST\_CLASS}|hyperpage}{51}
+\indexentry{TEST\_CLASS@{TEST\_CLASS}!Testing::MVP::MarkovPasswords@{Testing::MVP::MarkovPasswords}|hyperpage}{51}
+\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{53}
+\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!bExport@{bExport}|hyperpage}{54}
+\indexentry{bExport@{bExport}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{54}
+\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!bFailure@{bFailure}|hyperpage}{54}
+\indexentry{bFailure@{bFailure}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{54}
+\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!bImport@{bImport}|hyperpage}{54}
+\indexentry{bImport@{bImport}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{54}
+\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!datasetname@{datasetname}|hyperpage}{54}
+\indexentry{datasetname@{datasetname}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{54}
+\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!exportname@{exportname}|hyperpage}{55}
+\indexentry{exportname@{exportname}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{55}
+\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!generateN@{generateN}|hyperpage}{55}
+\indexentry{generateN@{generateN}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{55}
+\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!importname@{importname}|hyperpage}{55}
+\indexentry{importname@{importname}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{55}
+\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!outputfilename@{outputfilename}|hyperpage}{55}
+\indexentry{outputfilename@{outputfilename}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{55}
+\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!seperator@{seperator}|hyperpage}{55}
+\indexentry{seperator@{seperator}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{55}
+\indexentry{Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}!wordlistname@{wordlistname}|hyperpage}{55}
+\indexentry{wordlistname@{wordlistname}!Markov::API::CLI::\_programOptions@{Markov::API::CLI::\_programOptions}|hyperpage}{55}
+\indexentry{Markov::GUI::about@{Markov::GUI::about}|hyperpage}{56}
+\indexentry{Markov::GUI::about@{Markov::GUI::about}!about@{about}|hyperpage}{57}
+\indexentry{about@{about}!Markov::GUI::about@{Markov::GUI::about}|hyperpage}{57}
+\indexentry{Markov::GUI::about@{Markov::GUI::about}!ui@{ui}|hyperpage}{57}
+\indexentry{ui@{ui}!Markov::GUI::about@{Markov::GUI::about}|hyperpage}{57}
+\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{57}
+\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!Argparse@{Argparse}|hyperpage}{59}
+\indexentry{Argparse@{Argparse}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{59}
+\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!Argparse@{Argparse}|hyperpage}{59}
+\indexentry{Argparse@{Argparse}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{59}
+\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!getProgramOptions@{getProgramOptions}|hyperpage}{61}
+\indexentry{getProgramOptions@{getProgramOptions}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{61}
+\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!help@{help}|hyperpage}{61}
+\indexentry{help@{help}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{61}
+\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!parse@{parse}|hyperpage}{61}
+\indexentry{parse@{parse}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{61}
+\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!setProgramOptions@{setProgramOptions}|hyperpage}{62}
+\indexentry{setProgramOptions@{setProgramOptions}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{62}
+\indexentry{Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}!po@{po}|hyperpage}{63}
+\indexentry{po@{po}!Markov::API::CLI::Argparse@{Markov::API::CLI::Argparse}|hyperpage}{63}
+\indexentry{Markov::GUI::CLI@{Markov::GUI::CLI}|hyperpage}{63}
+\indexentry{Markov::GUI::CLI@{Markov::GUI::CLI}!CLI@{CLI}|hyperpage}{64}
+\indexentry{CLI@{CLI}!Markov::GUI::CLI@{Markov::GUI::CLI}|hyperpage}{64}
+\indexentry{Markov::GUI::CLI@{Markov::GUI::CLI}!about@{about}|hyperpage}{65}
+\indexentry{about@{about}!Markov::GUI::CLI@{Markov::GUI::CLI}|hyperpage}{65}
+\indexentry{Markov::GUI::CLI@{Markov::GUI::CLI}!start@{start}|hyperpage}{65}
+\indexentry{start@{start}!Markov::GUI::CLI@{Markov::GUI::CLI}|hyperpage}{65}
+\indexentry{Markov::GUI::CLI@{Markov::GUI::CLI}!statistics@{statistics}|hyperpage}{66}
+\indexentry{statistics@{statistics}!Markov::GUI::CLI@{Markov::GUI::CLI}|hyperpage}{66}
+\indexentry{Markov::GUI::CLI@{Markov::GUI::CLI}!ui@{ui}|hyperpage}{66}
+\indexentry{ui@{ui}!Markov::GUI::CLI@{Markov::GUI::CLI}|hyperpage}{66}
+\indexentry{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}|hyperpage}{66}
+\indexentry{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaCheckNotifyErr@{CudaCheckNotifyErr}|hyperpage}{68}
+\indexentry{CudaCheckNotifyErr@{CudaCheckNotifyErr}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}|hyperpage}{68}
+\indexentry{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaMalloc2DToFlat@{CudaMalloc2DToFlat}|hyperpage}{69}
+\indexentry{CudaMalloc2DToFlat@{CudaMalloc2DToFlat}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}|hyperpage}{69}
+\indexentry{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}|hyperpage}{70}
+\indexentry{CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}|hyperpage}{70}
+\indexentry{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!CudaMigrate2DFlat@{CudaMigrate2DFlat}|hyperpage}{71}
+\indexentry{CudaMigrate2DFlat@{CudaMigrate2DFlat}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}|hyperpage}{71}
+\indexentry{Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}!ListCudaDevices@{ListCudaDevices}|hyperpage}{72}
+\indexentry{ListCudaDevices@{ListCudaDevices}!Markov::API::CUDA::CUDADeviceController@{Markov::API::CUDA::CUDADeviceController}|hyperpage}{72}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{73}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!AdjustEdge@{AdjustEdge}|hyperpage}{77}
+\indexentry{AdjustEdge@{AdjustEdge}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{77}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!AllocVRAMOutputBuffer@{AllocVRAMOutputBuffer}|hyperpage}{78}
+\indexentry{AllocVRAMOutputBuffer@{AllocVRAMOutputBuffer}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{78}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Buff@{Buff}|hyperpage}{78}
+\indexentry{Buff@{Buff}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{78}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!ConstructMatrix@{ConstructMatrix}|hyperpage}{80}
+\indexentry{ConstructMatrix@{ConstructMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{80}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!CudaCheckNotifyErr@{CudaCheckNotifyErr}|hyperpage}{81}
+\indexentry{CudaCheckNotifyErr@{CudaCheckNotifyErr}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{81}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!CudaMalloc2DToFlat@{CudaMalloc2DToFlat}|hyperpage}{82}
+\indexentry{CudaMalloc2DToFlat@{CudaMalloc2DToFlat}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{82}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}|hyperpage}{83}
+\indexentry{CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{83}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!CudaMigrate2DFlat@{CudaMigrate2DFlat}|hyperpage}{84}
+\indexentry{CudaMigrate2DFlat@{CudaMigrate2DFlat}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{84}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!DeallocateMatrix@{DeallocateMatrix}|hyperpage}{85}
+\indexentry{DeallocateMatrix@{DeallocateMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{85}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!DumpJSON@{DumpJSON}|hyperpage}{86}
+\indexentry{DumpJSON@{DumpJSON}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{86}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Edges@{Edges}|hyperpage}{87}
+\indexentry{Edges@{Edges}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{87}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Export@{Export}|hyperpage}{87}
+\indexentry{Export@{Export}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{87}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Export@{Export}|hyperpage}{87}
+\indexentry{Export@{Export}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{87}
 \indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FastRandomWalk@{FastRandomWalk}|hyperpage}{88}
 \indexentry{FastRandomWalk@{FastRandomWalk}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{88}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FastRandomWalkPartition@{FastRandomWalkPartition}|hyperpage}{89}
-\indexentry{FastRandomWalkPartition@{FastRandomWalkPartition}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{89}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FastRandomWalkThread@{FastRandomWalkThread}|hyperpage}{90}
-\indexentry{FastRandomWalkThread@{FastRandomWalkThread}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{90}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FlattenMatrix@{FlattenMatrix}|hyperpage}{92}
-\indexentry{FlattenMatrix@{FlattenMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{92}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!GatherAsyncKernelOutput@{GatherAsyncKernelOutput}|hyperpage}{92}
-\indexentry{GatherAsyncKernelOutput@{GatherAsyncKernelOutput}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{92}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Generate@{Generate}|hyperpage}{92}
-\indexentry{Generate@{Generate}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{92}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!GenerateThread@{GenerateThread}|hyperpage}{94}
-\indexentry{GenerateThread@{GenerateThread}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{94}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Import@{Import}|hyperpage}{95}
-\indexentry{Import@{Import}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{95}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Import@{Import}|hyperpage}{96}
-\indexentry{Import@{Import}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{96}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!LaunchAsyncKernel@{LaunchAsyncKernel}|hyperpage}{97}
-\indexentry{LaunchAsyncKernel@{LaunchAsyncKernel}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{97}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!ListCudaDevices@{ListCudaDevices}|hyperpage}{97}
-\indexentry{ListCudaDevices@{ListCudaDevices}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{97}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!MigrateMatrix@{MigrateMatrix}|hyperpage}{97}
-\indexentry{MigrateMatrix@{MigrateMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{97}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Nodes@{Nodes}|hyperpage}{98}
-\indexentry{Nodes@{Nodes}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{98}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!OpenDatasetFile@{OpenDatasetFile}|hyperpage}{98}
-\indexentry{OpenDatasetFile@{OpenDatasetFile}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{98}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!OptimizeEdgeOrder@{OptimizeEdgeOrder}|hyperpage}{99}
-\indexentry{OptimizeEdgeOrder@{OptimizeEdgeOrder}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{99}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!prepKernelMemoryChannel@{prepKernelMemoryChannel}|hyperpage}{99}
-\indexentry{prepKernelMemoryChannel@{prepKernelMemoryChannel}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{99}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!RandomWalk@{RandomWalk}|hyperpage}{100}
-\indexentry{RandomWalk@{RandomWalk}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{100}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Save@{Save}|hyperpage}{101}
-\indexentry{Save@{Save}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{101}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!StarterNode@{StarterNode}|hyperpage}{101}
-\indexentry{StarterNode@{StarterNode}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{101}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Train@{Train}|hyperpage}{102}
-\indexentry{Train@{Train}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{102}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!TrainThread@{TrainThread}|hyperpage}{103}
-\indexentry{TrainThread@{TrainThread}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{103}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!alternatingKernels@{alternatingKernels}|hyperpage}{104}
-\indexentry{alternatingKernels@{alternatingKernels}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{104}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!cudaBlocks@{cudaBlocks}|hyperpage}{104}
-\indexentry{cudaBlocks@{cudaBlocks}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{104}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!cudaGridSize@{cudaGridSize}|hyperpage}{104}
-\indexentry{cudaGridSize@{cudaGridSize}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{104}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!cudaMemPerGrid@{cudaMemPerGrid}|hyperpage}{104}
-\indexentry{cudaMemPerGrid@{cudaMemPerGrid}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{104}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!cudaPerKernelAllocationSize@{cudaPerKernelAllocationSize}|hyperpage}{104}
-\indexentry{cudaPerKernelAllocationSize@{cudaPerKernelAllocationSize}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{104}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!cudastreams@{cudastreams}|hyperpage}{104}
-\indexentry{cudastreams@{cudastreams}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{104}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!cudaThreads@{cudaThreads}|hyperpage}{104}
-\indexentry{cudaThreads@{cudaThreads}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{104}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!datasetFile@{datasetFile}|hyperpage}{105}
-\indexentry{datasetFile@{datasetFile}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{105}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_edgeMatrix@{device\_edgeMatrix}|hyperpage}{105}
-\indexentry{device\_edgeMatrix@{device\_edgeMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{105}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_matrixIndex@{device\_matrixIndex}|hyperpage}{105}
-\indexentry{device\_matrixIndex@{device\_matrixIndex}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{105}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_outputBuffer@{device\_outputBuffer}|hyperpage}{105}
-\indexentry{device\_outputBuffer@{device\_outputBuffer}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{105}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_seeds@{device\_seeds}|hyperpage}{105}
-\indexentry{device\_seeds@{device\_seeds}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{105}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_totalEdgeWeights@{device\_totalEdgeWeights}|hyperpage}{105}
-\indexentry{device\_totalEdgeWeights@{device\_totalEdgeWeights}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{105}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_valueMatrix@{device\_valueMatrix}|hyperpage}{105}
-\indexentry{device\_valueMatrix@{device\_valueMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{105}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!edgeMatrix@{edgeMatrix}|hyperpage}{105}
-\indexentry{edgeMatrix@{edgeMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{105}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!edges@{edges}|hyperpage}{106}
-\indexentry{edges@{edges}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!flatEdgeMatrix@{flatEdgeMatrix}|hyperpage}{106}
-\indexentry{flatEdgeMatrix@{flatEdgeMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!flatValueMatrix@{flatValueMatrix}|hyperpage}{106}
-\indexentry{flatValueMatrix@{flatValueMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!iterationsPerKernelThread@{iterationsPerKernelThread}|hyperpage}{106}
-\indexentry{iterationsPerKernelThread@{iterationsPerKernelThread}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!matrixIndex@{matrixIndex}|hyperpage}{106}
-\indexentry{matrixIndex@{matrixIndex}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!matrixSize@{matrixSize}|hyperpage}{106}
-\indexentry{matrixSize@{matrixSize}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!modelSavefile@{modelSavefile}|hyperpage}{106}
-\indexentry{modelSavefile@{modelSavefile}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!nodes@{nodes}|hyperpage}{106}
-\indexentry{nodes@{nodes}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!numberOfPartitions@{numberOfPartitions}|hyperpage}{107}
-\indexentry{numberOfPartitions@{numberOfPartitions}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!outputBuffer@{outputBuffer}|hyperpage}{107}
-\indexentry{outputBuffer@{outputBuffer}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!outputFile@{outputFile}|hyperpage}{107}
-\indexentry{outputFile@{outputFile}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!ready@{ready}|hyperpage}{107}
-\indexentry{ready@{ready}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!starterNode@{starterNode}|hyperpage}{107}
-\indexentry{starterNode@{starterNode}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!totalEdgeWeights@{totalEdgeWeights}|hyperpage}{107}
-\indexentry{totalEdgeWeights@{totalEdgeWeights}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!totalOutputPerKernel@{totalOutputPerKernel}|hyperpage}{107}
-\indexentry{totalOutputPerKernel@{totalOutputPerKernel}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!totalOutputPerSync@{totalOutputPerSync}|hyperpage}{108}
-\indexentry{totalOutputPerSync@{totalOutputPerSync}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{108}
-\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!valueMatrix@{valueMatrix}|hyperpage}{108}
-\indexentry{valueMatrix@{valueMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{108}
-\indexentry{Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}|hyperpage}{108}
-\indexentry{Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}!distribution@{distribution}|hyperpage}{111}
-\indexentry{distribution@{distribution}!Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}|hyperpage}{111}
-\indexentry{Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}!generator@{generator}|hyperpage}{111}
-\indexentry{generator@{generator}!Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}|hyperpage}{111}
-\indexentry{Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}!random@{random}|hyperpage}{112}
-\indexentry{random@{random}!Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}|hyperpage}{112}
-\indexentry{Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}!rd@{rd}|hyperpage}{112}
-\indexentry{rd@{rd}!Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}|hyperpage}{112}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{113}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!Edge@{Edge}|hyperpage}{114}
-\indexentry{Edge@{Edge}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{114}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!Edge@{Edge}|hyperpage}{114}
-\indexentry{Edge@{Edge}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{114}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!AdjustEdge@{AdjustEdge}|hyperpage}{115}
-\indexentry{AdjustEdge@{AdjustEdge}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{115}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!EdgeWeight@{EdgeWeight}|hyperpage}{115}
-\indexentry{EdgeWeight@{EdgeWeight}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{115}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!LeftNode@{LeftNode}|hyperpage}{116}
-\indexentry{LeftNode@{LeftNode}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{116}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!RightNode@{RightNode}|hyperpage}{116}
-\indexentry{RightNode@{RightNode}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{116}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!SetLeftEdge@{SetLeftEdge}|hyperpage}{116}
-\indexentry{SetLeftEdge@{SetLeftEdge}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{116}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!SetRightEdge@{SetRightEdge}|hyperpage}{117}
-\indexentry{SetRightEdge@{SetRightEdge}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{117}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!TraverseNode@{TraverseNode}|hyperpage}{117}
-\indexentry{TraverseNode@{TraverseNode}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{117}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!\_left@{\_left}|hyperpage}{117}
-\indexentry{\_left@{\_left}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{117}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!\_right@{\_right}|hyperpage}{118}
-\indexentry{\_right@{\_right}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{118}
-\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!\_weight@{\_weight}|hyperpage}{118}
-\indexentry{\_weight@{\_weight}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{118}
-\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{118}
-\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}!Generate@{Generate}|hyperpage}{119}
-\indexentry{Generate@{Generate}!Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{119}
-\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}!generation@{generation}|hyperpage}{120}
-\indexentry{generation@{generation}!Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{120}
-\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}!home@{home}|hyperpage}{121}
-\indexentry{home@{home}!Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{121}
-\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}!train@{train}|hyperpage}{121}
-\indexentry{train@{train}!Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{121}
-\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}!vis@{vis}|hyperpage}{121}
-\indexentry{vis@{vis}!Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{121}
-\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}!ui@{ui}|hyperpage}{122}
-\indexentry{ui@{ui}!Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{122}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{122}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!MarkovPasswords@{MarkovPasswords}|hyperpage}{126}
-\indexentry{MarkovPasswords@{MarkovPasswords}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{126}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!MarkovPasswords@{MarkovPasswords}|hyperpage}{126}
-\indexentry{MarkovPasswords@{MarkovPasswords}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{126}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!AdjustEdge@{AdjustEdge}|hyperpage}{126}
-\indexentry{AdjustEdge@{AdjustEdge}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{126}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Buff@{Buff}|hyperpage}{127}
-\indexentry{Buff@{Buff}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{127}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Edges@{Edges}|hyperpage}{128}
-\indexentry{Edges@{Edges}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{128}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Export@{Export}|hyperpage}{128}
-\indexentry{Export@{Export}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{128}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Export@{Export}|hyperpage}{129}
-\indexentry{Export@{Export}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{129}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Generate@{Generate}|hyperpage}{129}
-\indexentry{Generate@{Generate}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{129}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!GenerateThread@{GenerateThread}|hyperpage}{130}
-\indexentry{GenerateThread@{GenerateThread}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{130}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Import@{Import}|hyperpage}{131}
-\indexentry{Import@{Import}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{131}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Import@{Import}|hyperpage}{132}
-\indexentry{Import@{Import}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{132}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Nodes@{Nodes}|hyperpage}{133}
-\indexentry{Nodes@{Nodes}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{133}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!OpenDatasetFile@{OpenDatasetFile}|hyperpage}{133}
-\indexentry{OpenDatasetFile@{OpenDatasetFile}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{133}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!OptimizeEdgeOrder@{OptimizeEdgeOrder}|hyperpage}{133}
-\indexentry{OptimizeEdgeOrder@{OptimizeEdgeOrder}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{133}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!RandomWalk@{RandomWalk}|hyperpage}{134}
-\indexentry{RandomWalk@{RandomWalk}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{134}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Save@{Save}|hyperpage}{135}
-\indexentry{Save@{Save}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{135}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!StarterNode@{StarterNode}|hyperpage}{135}
-\indexentry{StarterNode@{StarterNode}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{135}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Train@{Train}|hyperpage}{135}
-\indexentry{Train@{Train}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{135}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!TrainThread@{TrainThread}|hyperpage}{137}
-\indexentry{TrainThread@{TrainThread}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{137}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!datasetFile@{datasetFile}|hyperpage}{138}
-\indexentry{datasetFile@{datasetFile}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{138}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!edges@{edges}|hyperpage}{138}
-\indexentry{edges@{edges}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{138}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!modelSavefile@{modelSavefile}|hyperpage}{138}
-\indexentry{modelSavefile@{modelSavefile}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{138}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!nodes@{nodes}|hyperpage}{138}
-\indexentry{nodes@{nodes}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{138}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!outputFile@{outputFile}|hyperpage}{138}
-\indexentry{outputFile@{outputFile}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{138}
-\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!starterNode@{starterNode}|hyperpage}{138}
-\indexentry{starterNode@{starterNode}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{138}
-\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{139}
-\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}!MarkovPasswordsGUI@{MarkovPasswordsGUI}|hyperpage}{140}
-\indexentry{MarkovPasswordsGUI@{MarkovPasswordsGUI}!Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{140}
-\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}!benchmarkSelected@{benchmarkSelected}|hyperpage}{141}
-\indexentry{benchmarkSelected@{benchmarkSelected}!Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{141}
-\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}!home@{home}|hyperpage}{141}
-\indexentry{home@{home}!Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{141}
-\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}!model@{model}|hyperpage}{141}
-\indexentry{model@{model}!Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{141}
-\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}!pass@{pass}|hyperpage}{141}
-\indexentry{pass@{pass}!Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{141}
-\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}!ui@{ui}|hyperpage}{141}
-\indexentry{ui@{ui}!Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{141}
-\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{142}
-\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!Marsaglia@{Marsaglia}|hyperpage}{145}
-\indexentry{Marsaglia@{Marsaglia}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{145}
-\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!distribution@{distribution}|hyperpage}{145}
-\indexentry{distribution@{distribution}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{145}
-\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!generator@{generator}|hyperpage}{146}
-\indexentry{generator@{generator}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{146}
-\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!random@{random}|hyperpage}{146}
-\indexentry{random@{random}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{146}
-\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!rd@{rd}|hyperpage}{147}
-\indexentry{rd@{rd}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{147}
-\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!x@{x}|hyperpage}{147}
-\indexentry{x@{x}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{147}
-\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!y@{y}|hyperpage}{147}
-\indexentry{y@{y}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{147}
-\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!z@{z}|hyperpage}{147}
-\indexentry{z@{z}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{147}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{148}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!CudaCheckNotifyErr@{CudaCheckNotifyErr}|hyperpage}{150}
-\indexentry{CudaCheckNotifyErr@{CudaCheckNotifyErr}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{150}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!CudaMalloc2DToFlat@{CudaMalloc2DToFlat}|hyperpage}{151}
-\indexentry{CudaMalloc2DToFlat@{CudaMalloc2DToFlat}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{151}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}|hyperpage}{152}
-\indexentry{CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{152}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!CudaMigrate2DFlat@{CudaMigrate2DFlat}|hyperpage}{153}
-\indexentry{CudaMigrate2DFlat@{CudaMigrate2DFlat}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{153}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!distribution@{distribution}|hyperpage}{154}
-\indexentry{distribution@{distribution}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{154}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!generator@{generator}|hyperpage}{154}
-\indexentry{generator@{generator}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{154}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!ListCudaDevices@{ListCudaDevices}|hyperpage}{155}
-\indexentry{ListCudaDevices@{ListCudaDevices}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{155}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!MigrateToVRAM@{MigrateToVRAM}|hyperpage}{155}
-\indexentry{MigrateToVRAM@{MigrateToVRAM}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{155}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!random@{random}|hyperpage}{156}
-\indexentry{random@{random}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{156}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!rd@{rd}|hyperpage}{157}
-\indexentry{rd@{rd}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{157}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!x@{x}|hyperpage}{157}
-\indexentry{x@{x}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{157}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!y@{y}|hyperpage}{157}
-\indexentry{y@{y}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{157}
-\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!z@{z}|hyperpage}{157}
-\indexentry{z@{z}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{157}
-\indexentry{Markov::GUI::menu@{Markov::GUI::menu}|hyperpage}{158}
-\indexentry{Markov::GUI::menu@{Markov::GUI::menu}!menu@{menu}|hyperpage}{159}
-\indexentry{menu@{menu}!Markov::GUI::menu@{Markov::GUI::menu}|hyperpage}{159}
-\indexentry{Markov::GUI::menu@{Markov::GUI::menu}!about@{about}|hyperpage}{159}
-\indexentry{about@{about}!Markov::GUI::menu@{Markov::GUI::menu}|hyperpage}{159}
-\indexentry{Markov::GUI::menu@{Markov::GUI::menu}!visualization@{visualization}|hyperpage}{159}
-\indexentry{visualization@{visualization}!Markov::GUI::menu@{Markov::GUI::menu}|hyperpage}{159}
-\indexentry{Markov::GUI::menu@{Markov::GUI::menu}!ui@{ui}|hyperpage}{160}
-\indexentry{ui@{ui}!Markov::GUI::menu@{Markov::GUI::menu}|hyperpage}{160}
-\indexentry{Markov::Random::Mersenne@{Markov::Random::Mersenne}|hyperpage}{160}
-\indexentry{Markov::Random::Mersenne@{Markov::Random::Mersenne}!distribution@{distribution}|hyperpage}{163}
-\indexentry{distribution@{distribution}!Markov::Random::Mersenne@{Markov::Random::Mersenne}|hyperpage}{163}
-\indexentry{Markov::Random::Mersenne@{Markov::Random::Mersenne}!generator@{generator}|hyperpage}{163}
-\indexentry{generator@{generator}!Markov::Random::Mersenne@{Markov::Random::Mersenne}|hyperpage}{163}
-\indexentry{Markov::Random::Mersenne@{Markov::Random::Mersenne}!random@{random}|hyperpage}{164}
-\indexentry{random@{random}!Markov::Random::Mersenne@{Markov::Random::Mersenne}|hyperpage}{164}
-\indexentry{Markov::Random::Mersenne@{Markov::Random::Mersenne}!rd@{rd}|hyperpage}{164}
-\indexentry{rd@{rd}!Markov::Random::Mersenne@{Markov::Random::Mersenne}|hyperpage}{164}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{165}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Model@{Model}|hyperpage}{166}
-\indexentry{Model@{Model}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{166}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!AdjustEdge@{AdjustEdge}|hyperpage}{166}
-\indexentry{AdjustEdge@{AdjustEdge}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{166}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Edges@{Edges}|hyperpage}{167}
-\indexentry{Edges@{Edges}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{167}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Export@{Export}|hyperpage}{167}
-\indexentry{Export@{Export}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{167}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Export@{Export}|hyperpage}{168}
-\indexentry{Export@{Export}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{168}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Import@{Import}|hyperpage}{169}
-\indexentry{Import@{Import}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{169}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Import@{Import}|hyperpage}{169}
-\indexentry{Import@{Import}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{169}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Nodes@{Nodes}|hyperpage}{170}
-\indexentry{Nodes@{Nodes}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{170}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!OptimizeEdgeOrder@{OptimizeEdgeOrder}|hyperpage}{171}
-\indexentry{OptimizeEdgeOrder@{OptimizeEdgeOrder}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{171}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!RandomWalk@{RandomWalk}|hyperpage}{171}
-\indexentry{RandomWalk@{RandomWalk}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{171}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!StarterNode@{StarterNode}|hyperpage}{172}
-\indexentry{StarterNode@{StarterNode}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{172}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!edges@{edges}|hyperpage}{173}
-\indexentry{edges@{edges}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{173}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!nodes@{nodes}|hyperpage}{173}
-\indexentry{nodes@{nodes}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{173}
-\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!starterNode@{starterNode}|hyperpage}{173}
-\indexentry{starterNode@{starterNode}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{173}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{173}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!ModelMatrix@{ModelMatrix}|hyperpage}{177}
-\indexentry{ModelMatrix@{ModelMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{177}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!AdjustEdge@{AdjustEdge}|hyperpage}{177}
-\indexentry{AdjustEdge@{AdjustEdge}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{177}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Buff@{Buff}|hyperpage}{178}
-\indexentry{Buff@{Buff}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{178}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!ConstructMatrix@{ConstructMatrix}|hyperpage}{179}
-\indexentry{ConstructMatrix@{ConstructMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{179}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!DeallocateMatrix@{DeallocateMatrix}|hyperpage}{181}
-\indexentry{DeallocateMatrix@{DeallocateMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{181}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!DumpJSON@{DumpJSON}|hyperpage}{182}
-\indexentry{DumpJSON@{DumpJSON}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{182}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Edges@{Edges}|hyperpage}{183}
-\indexentry{Edges@{Edges}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{183}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Export@{Export}|hyperpage}{183}
-\indexentry{Export@{Export}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{183}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Export@{Export}|hyperpage}{183}
-\indexentry{Export@{Export}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{183}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!FastRandomWalk@{FastRandomWalk}|hyperpage}{184}
-\indexentry{FastRandomWalk@{FastRandomWalk}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{184}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!FastRandomWalk@{FastRandomWalk}|hyperpage}{185}
-\indexentry{FastRandomWalk@{FastRandomWalk}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{185}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!FastRandomWalkPartition@{FastRandomWalkPartition}|hyperpage}{186}
-\indexentry{FastRandomWalkPartition@{FastRandomWalkPartition}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{186}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!FastRandomWalkThread@{FastRandomWalkThread}|hyperpage}{187}
-\indexentry{FastRandomWalkThread@{FastRandomWalkThread}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{187}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Generate@{Generate}|hyperpage}{188}
-\indexentry{Generate@{Generate}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{188}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!GenerateThread@{GenerateThread}|hyperpage}{190}
-\indexentry{GenerateThread@{GenerateThread}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{190}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Import@{Import}|hyperpage}{191}
-\indexentry{Import@{Import}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{191}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Import@{Import}|hyperpage}{192}
-\indexentry{Import@{Import}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{192}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Nodes@{Nodes}|hyperpage}{193}
-\indexentry{Nodes@{Nodes}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{193}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!OpenDatasetFile@{OpenDatasetFile}|hyperpage}{193}
-\indexentry{OpenDatasetFile@{OpenDatasetFile}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{193}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!OptimizeEdgeOrder@{OptimizeEdgeOrder}|hyperpage}{193}
-\indexentry{OptimizeEdgeOrder@{OptimizeEdgeOrder}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{193}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!RandomWalk@{RandomWalk}|hyperpage}{194}
-\indexentry{RandomWalk@{RandomWalk}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{194}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Save@{Save}|hyperpage}{195}
-\indexentry{Save@{Save}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{195}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!StarterNode@{StarterNode}|hyperpage}{195}
-\indexentry{StarterNode@{StarterNode}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{195}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Train@{Train}|hyperpage}{196}
-\indexentry{Train@{Train}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{196}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!TrainThread@{TrainThread}|hyperpage}{197}
-\indexentry{TrainThread@{TrainThread}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{197}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!datasetFile@{datasetFile}|hyperpage}{197}
-\indexentry{datasetFile@{datasetFile}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{197}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!edgeMatrix@{edgeMatrix}|hyperpage}{198}
-\indexentry{edgeMatrix@{edgeMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{198}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!edges@{edges}|hyperpage}{198}
-\indexentry{edges@{edges}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{198}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!matrixIndex@{matrixIndex}|hyperpage}{198}
-\indexentry{matrixIndex@{matrixIndex}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{198}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!matrixSize@{matrixSize}|hyperpage}{198}
-\indexentry{matrixSize@{matrixSize}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{198}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!modelSavefile@{modelSavefile}|hyperpage}{198}
-\indexentry{modelSavefile@{modelSavefile}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{198}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!nodes@{nodes}|hyperpage}{198}
-\indexentry{nodes@{nodes}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{198}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!outputFile@{outputFile}|hyperpage}{198}
-\indexentry{outputFile@{outputFile}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{198}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!ready@{ready}|hyperpage}{198}
-\indexentry{ready@{ready}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{198}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!starterNode@{starterNode}|hyperpage}{199}
-\indexentry{starterNode@{starterNode}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{199}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!totalEdgeWeights@{totalEdgeWeights}|hyperpage}{199}
-\indexentry{totalEdgeWeights@{totalEdgeWeights}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{199}
-\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!valueMatrix@{valueMatrix}|hyperpage}{199}
-\indexentry{valueMatrix@{valueMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{199}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{199}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Node@{Node}|hyperpage}{201}
-\indexentry{Node@{Node}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{201}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Node@{Node}|hyperpage}{201}
-\indexentry{Node@{Node}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{201}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Edges@{Edges}|hyperpage}{202}
-\indexentry{Edges@{Edges}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{202}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!FindEdge@{FindEdge}|hyperpage}{202}
-\indexentry{FindEdge@{FindEdge}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{202}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!FindEdge@{FindEdge}|hyperpage}{202}
-\indexentry{FindEdge@{FindEdge}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{202}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Link@{Link}|hyperpage}{203}
-\indexentry{Link@{Link}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{203}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Link@{Link}|hyperpage}{203}
-\indexentry{Link@{Link}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{203}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!NodeValue@{NodeValue}|hyperpage}{204}
-\indexentry{NodeValue@{NodeValue}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{204}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!RandomNext@{RandomNext}|hyperpage}{204}
-\indexentry{RandomNext@{RandomNext}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{204}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!TotalEdgeWeights@{TotalEdgeWeights}|hyperpage}{205}
-\indexentry{TotalEdgeWeights@{TotalEdgeWeights}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{205}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!UpdateEdges@{UpdateEdges}|hyperpage}{205}
-\indexentry{UpdateEdges@{UpdateEdges}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{205}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!UpdateTotalVerticeWeight@{UpdateTotalVerticeWeight}|hyperpage}{206}
-\indexentry{UpdateTotalVerticeWeight@{UpdateTotalVerticeWeight}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{206}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!\_value@{\_value}|hyperpage}{206}
-\indexentry{\_value@{\_value}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{206}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!edges@{edges}|hyperpage}{206}
-\indexentry{edges@{edges}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{206}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!edgesV@{edgesV}|hyperpage}{206}
-\indexentry{edgesV@{edgesV}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{206}
-\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!total\_edge\_weights@{total\_edge\_weights}|hyperpage}{206}
-\indexentry{total\_edge\_weights@{total\_edge\_weights}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{206}
-\indexentry{QMainWindow@{QMainWindow}|hyperpage}{207}
-\indexentry{Markov::Random::RandomEngine@{Markov::Random::RandomEngine}|hyperpage}{207}
-\indexentry{Markov::Random::RandomEngine@{Markov::Random::RandomEngine}!random@{random}|hyperpage}{209}
-\indexentry{random@{random}!Markov::Random::RandomEngine@{Markov::Random::RandomEngine}|hyperpage}{209}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{209}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!color@{color}|hyperpage}{211}
-\indexentry{color@{color}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{RESET@{RESET}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!RESET@{RESET}|hyperpage}{211}
-\indexentry{BLACK@{BLACK}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!BLACK@{BLACK}|hyperpage}{211}
-\indexentry{RED@{RED}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!RED@{RED}|hyperpage}{211}
-\indexentry{GREEN@{GREEN}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!GREEN@{GREEN}|hyperpage}{211}
-\indexentry{YELLOW@{YELLOW}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!YELLOW@{YELLOW}|hyperpage}{211}
-\indexentry{BLUE@{BLUE}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!BLUE@{BLUE}|hyperpage}{211}
-\indexentry{MAGENTA@{MAGENTA}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!MAGENTA@{MAGENTA}|hyperpage}{211}
-\indexentry{CYAN@{CYAN}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!CYAN@{CYAN}|hyperpage}{211}
-\indexentry{WHITE@{WHITE}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!WHITE@{WHITE}|hyperpage}{211}
-\indexentry{LIGHTGRAY@{LIGHTGRAY}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!LIGHTGRAY@{LIGHTGRAY}|hyperpage}{211}
-\indexentry{DARKGRAY@{DARKGRAY}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!DARKGRAY@{DARKGRAY}|hyperpage}{211}
-\indexentry{BROWN@{BROWN}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!BROWN@{BROWN}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!Terminal@{Terminal}|hyperpage}{211}
-\indexentry{Terminal@{Terminal}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!colormap@{colormap}|hyperpage}{211}
-\indexentry{colormap@{colormap}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
-\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!endl@{endl}|hyperpage}{212}
-\indexentry{endl@{endl}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{212}
-\indexentry{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}|hyperpage}{212}
-\indexentry{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}!ThreadSharedListHandler@{ThreadSharedListHandler}|hyperpage}{214}
-\indexentry{ThreadSharedListHandler@{ThreadSharedListHandler}!Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}|hyperpage}{214}
-\indexentry{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}!next@{next}|hyperpage}{215}
-\indexentry{next@{next}!Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}|hyperpage}{215}
-\indexentry{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}!listfile@{listfile}|hyperpage}{215}
-\indexentry{listfile@{listfile}!Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}|hyperpage}{215}
-\indexentry{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}!mlock@{mlock}|hyperpage}{215}
-\indexentry{mlock@{mlock}!Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}|hyperpage}{215}
-\indexentry{Markov::GUI::Train@{Markov::GUI::Train}|hyperpage}{216}
-\indexentry{Markov::GUI::Train@{Markov::GUI::Train}!Train@{Train}|hyperpage}{217}
-\indexentry{Train@{Train}!Markov::GUI::Train@{Markov::GUI::Train}|hyperpage}{217}
-\indexentry{Markov::GUI::Train@{Markov::GUI::Train}!home@{home}|hyperpage}{218}
-\indexentry{home@{home}!Markov::GUI::Train@{Markov::GUI::Train}|hyperpage}{218}
-\indexentry{Markov::GUI::Train@{Markov::GUI::Train}!train@{train}|hyperpage}{218}
-\indexentry{train@{train}!Markov::GUI::Train@{Markov::GUI::Train}|hyperpage}{218}
-\indexentry{Markov::GUI::Train@{Markov::GUI::Train}!ui@{ui}|hyperpage}{219}
-\indexentry{ui@{ui}!Markov::GUI::Train@{Markov::GUI::Train}|hyperpage}{219}
-\indexentry{about.cpp@{about.cpp}|hyperpage}{221}
-\indexentry{about.cpp@{about.cpp}|hyperpage}{221}
-\indexentry{about.h@{about.h}|hyperpage}{221}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FastRandomWalk@{FastRandomWalk}|hyperpage}{89}
+\indexentry{FastRandomWalk@{FastRandomWalk}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{89}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FastRandomWalk@{FastRandomWalk}|hyperpage}{90}
+\indexentry{FastRandomWalk@{FastRandomWalk}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{90}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FastRandomWalkPartition@{FastRandomWalkPartition}|hyperpage}{91}
+\indexentry{FastRandomWalkPartition@{FastRandomWalkPartition}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{91}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FastRandomWalkThread@{FastRandomWalkThread}|hyperpage}{92}
+\indexentry{FastRandomWalkThread@{FastRandomWalkThread}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{92}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!FlattenMatrix@{FlattenMatrix}|hyperpage}{94}
+\indexentry{FlattenMatrix@{FlattenMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{94}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!GatherAsyncKernelOutput@{GatherAsyncKernelOutput}|hyperpage}{94}
+\indexentry{GatherAsyncKernelOutput@{GatherAsyncKernelOutput}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{94}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Generate@{Generate}|hyperpage}{94}
+\indexentry{Generate@{Generate}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{94}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!GenerateThread@{GenerateThread}|hyperpage}{96}
+\indexentry{GenerateThread@{GenerateThread}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{96}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Import@{Import}|hyperpage}{97}
+\indexentry{Import@{Import}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{97}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Import@{Import}|hyperpage}{98}
+\indexentry{Import@{Import}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{98}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!LaunchAsyncKernel@{LaunchAsyncKernel}|hyperpage}{99}
+\indexentry{LaunchAsyncKernel@{LaunchAsyncKernel}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{99}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!ListCudaDevices@{ListCudaDevices}|hyperpage}{99}
+\indexentry{ListCudaDevices@{ListCudaDevices}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{99}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!MigrateMatrix@{MigrateMatrix}|hyperpage}{99}
+\indexentry{MigrateMatrix@{MigrateMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{99}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Nodes@{Nodes}|hyperpage}{100}
+\indexentry{Nodes@{Nodes}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{100}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!OpenDatasetFile@{OpenDatasetFile}|hyperpage}{100}
+\indexentry{OpenDatasetFile@{OpenDatasetFile}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{100}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!OptimizeEdgeOrder@{OptimizeEdgeOrder}|hyperpage}{101}
+\indexentry{OptimizeEdgeOrder@{OptimizeEdgeOrder}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{101}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!prepKernelMemoryChannel@{prepKernelMemoryChannel}|hyperpage}{101}
+\indexentry{prepKernelMemoryChannel@{prepKernelMemoryChannel}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{101}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!RandomWalk@{RandomWalk}|hyperpage}{102}
+\indexentry{RandomWalk@{RandomWalk}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{102}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Save@{Save}|hyperpage}{103}
+\indexentry{Save@{Save}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{103}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!StarterNode@{StarterNode}|hyperpage}{103}
+\indexentry{StarterNode@{StarterNode}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{103}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!Train@{Train}|hyperpage}{104}
+\indexentry{Train@{Train}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{104}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!TrainThread@{TrainThread}|hyperpage}{105}
+\indexentry{TrainThread@{TrainThread}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{105}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!alternatingKernels@{alternatingKernels}|hyperpage}{106}
+\indexentry{alternatingKernels@{alternatingKernels}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!cudaBlocks@{cudaBlocks}|hyperpage}{106}
+\indexentry{cudaBlocks@{cudaBlocks}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!cudaGridSize@{cudaGridSize}|hyperpage}{106}
+\indexentry{cudaGridSize@{cudaGridSize}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!cudaMemPerGrid@{cudaMemPerGrid}|hyperpage}{106}
+\indexentry{cudaMemPerGrid@{cudaMemPerGrid}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!cudaPerKernelAllocationSize@{cudaPerKernelAllocationSize}|hyperpage}{106}
+\indexentry{cudaPerKernelAllocationSize@{cudaPerKernelAllocationSize}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!cudastreams@{cudastreams}|hyperpage}{106}
+\indexentry{cudastreams@{cudastreams}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!cudaThreads@{cudaThreads}|hyperpage}{106}
+\indexentry{cudaThreads@{cudaThreads}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{106}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!datasetFile@{datasetFile}|hyperpage}{107}
+\indexentry{datasetFile@{datasetFile}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_edgeMatrix@{device\_edgeMatrix}|hyperpage}{107}
+\indexentry{device\_edgeMatrix@{device\_edgeMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_matrixIndex@{device\_matrixIndex}|hyperpage}{107}
+\indexentry{device\_matrixIndex@{device\_matrixIndex}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_outputBuffer@{device\_outputBuffer}|hyperpage}{107}
+\indexentry{device\_outputBuffer@{device\_outputBuffer}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_seeds@{device\_seeds}|hyperpage}{107}
+\indexentry{device\_seeds@{device\_seeds}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_totalEdgeWeights@{device\_totalEdgeWeights}|hyperpage}{107}
+\indexentry{device\_totalEdgeWeights@{device\_totalEdgeWeights}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!device\_valueMatrix@{device\_valueMatrix}|hyperpage}{107}
+\indexentry{device\_valueMatrix@{device\_valueMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!edgeMatrix@{edgeMatrix}|hyperpage}{107}
+\indexentry{edgeMatrix@{edgeMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{107}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!edges@{edges}|hyperpage}{108}
+\indexentry{edges@{edges}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{108}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!flatEdgeMatrix@{flatEdgeMatrix}|hyperpage}{108}
+\indexentry{flatEdgeMatrix@{flatEdgeMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{108}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!flatValueMatrix@{flatValueMatrix}|hyperpage}{108}
+\indexentry{flatValueMatrix@{flatValueMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{108}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!iterationsPerKernelThread@{iterationsPerKernelThread}|hyperpage}{108}
+\indexentry{iterationsPerKernelThread@{iterationsPerKernelThread}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{108}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!matrixIndex@{matrixIndex}|hyperpage}{108}
+\indexentry{matrixIndex@{matrixIndex}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{108}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!matrixSize@{matrixSize}|hyperpage}{108}
+\indexentry{matrixSize@{matrixSize}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{108}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!modelSavefile@{modelSavefile}|hyperpage}{108}
+\indexentry{modelSavefile@{modelSavefile}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{108}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!nodes@{nodes}|hyperpage}{108}
+\indexentry{nodes@{nodes}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{108}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!numberOfPartitions@{numberOfPartitions}|hyperpage}{109}
+\indexentry{numberOfPartitions@{numberOfPartitions}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{109}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!outputBuffer@{outputBuffer}|hyperpage}{109}
+\indexentry{outputBuffer@{outputBuffer}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{109}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!outputFile@{outputFile}|hyperpage}{109}
+\indexentry{outputFile@{outputFile}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{109}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!ready@{ready}|hyperpage}{109}
+\indexentry{ready@{ready}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{109}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!starterNode@{starterNode}|hyperpage}{109}
+\indexentry{starterNode@{starterNode}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{109}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!totalEdgeWeights@{totalEdgeWeights}|hyperpage}{109}
+\indexentry{totalEdgeWeights@{totalEdgeWeights}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{109}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!totalOutputPerKernel@{totalOutputPerKernel}|hyperpage}{109}
+\indexentry{totalOutputPerKernel@{totalOutputPerKernel}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{109}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!totalOutputPerSync@{totalOutputPerSync}|hyperpage}{110}
+\indexentry{totalOutputPerSync@{totalOutputPerSync}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{110}
+\indexentry{Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}!valueMatrix@{valueMatrix}|hyperpage}{110}
+\indexentry{valueMatrix@{valueMatrix}!Markov::API::CUDA::CUDAModelMatrix@{Markov::API::CUDA::CUDAModelMatrix}|hyperpage}{110}
+\indexentry{Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}|hyperpage}{110}
+\indexentry{Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}!distribution@{distribution}|hyperpage}{113}
+\indexentry{distribution@{distribution}!Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}|hyperpage}{113}
+\indexentry{Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}!generator@{generator}|hyperpage}{113}
+\indexentry{generator@{generator}!Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}|hyperpage}{113}
+\indexentry{Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}!random@{random}|hyperpage}{114}
+\indexentry{random@{random}!Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}|hyperpage}{114}
+\indexentry{Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}!rd@{rd}|hyperpage}{114}
+\indexentry{rd@{rd}!Markov::Random::DefaultRandomEngine@{Markov::Random::DefaultRandomEngine}|hyperpage}{114}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{115}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!Edge@{Edge}|hyperpage}{116}
+\indexentry{Edge@{Edge}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{116}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!Edge@{Edge}|hyperpage}{116}
+\indexentry{Edge@{Edge}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{116}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!AdjustEdge@{AdjustEdge}|hyperpage}{117}
+\indexentry{AdjustEdge@{AdjustEdge}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{117}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!EdgeWeight@{EdgeWeight}|hyperpage}{117}
+\indexentry{EdgeWeight@{EdgeWeight}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{117}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!LeftNode@{LeftNode}|hyperpage}{118}
+\indexentry{LeftNode@{LeftNode}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{118}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!RightNode@{RightNode}|hyperpage}{118}
+\indexentry{RightNode@{RightNode}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{118}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!SetLeftEdge@{SetLeftEdge}|hyperpage}{118}
+\indexentry{SetLeftEdge@{SetLeftEdge}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{118}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!SetRightEdge@{SetRightEdge}|hyperpage}{119}
+\indexentry{SetRightEdge@{SetRightEdge}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{119}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!TraverseNode@{TraverseNode}|hyperpage}{119}
+\indexentry{TraverseNode@{TraverseNode}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{119}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!\_left@{\_left}|hyperpage}{119}
+\indexentry{\_left@{\_left}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{119}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!\_right@{\_right}|hyperpage}{120}
+\indexentry{\_right@{\_right}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{120}
+\indexentry{Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}!\_weight@{\_weight}|hyperpage}{120}
+\indexentry{\_weight@{\_weight}!Markov::Edge$<$ NodeStorageType $>$@{Markov::Edge$<$ NodeStorageType $>$}|hyperpage}{120}
+\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{120}
+\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}!Generate@{Generate}|hyperpage}{121}
+\indexentry{Generate@{Generate}!Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{121}
+\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}!generation@{generation}|hyperpage}{122}
+\indexentry{generation@{generation}!Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{122}
+\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}!home@{home}|hyperpage}{123}
+\indexentry{home@{home}!Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{123}
+\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}!train@{train}|hyperpage}{123}
+\indexentry{train@{train}!Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{123}
+\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}!vis@{vis}|hyperpage}{123}
+\indexentry{vis@{vis}!Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{123}
+\indexentry{Markov::GUI::Generate@{Markov::GUI::Generate}!ui@{ui}|hyperpage}{124}
+\indexentry{ui@{ui}!Markov::GUI::Generate@{Markov::GUI::Generate}|hyperpage}{124}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{124}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!MarkovPasswords@{MarkovPasswords}|hyperpage}{128}
+\indexentry{MarkovPasswords@{MarkovPasswords}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{128}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!MarkovPasswords@{MarkovPasswords}|hyperpage}{128}
+\indexentry{MarkovPasswords@{MarkovPasswords}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{128}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!AdjustEdge@{AdjustEdge}|hyperpage}{128}
+\indexentry{AdjustEdge@{AdjustEdge}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{128}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Buff@{Buff}|hyperpage}{129}
+\indexentry{Buff@{Buff}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{129}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Edges@{Edges}|hyperpage}{130}
+\indexentry{Edges@{Edges}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{130}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Export@{Export}|hyperpage}{130}
+\indexentry{Export@{Export}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{130}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Export@{Export}|hyperpage}{131}
+\indexentry{Export@{Export}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{131}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Generate@{Generate}|hyperpage}{131}
+\indexentry{Generate@{Generate}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{131}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!GenerateThread@{GenerateThread}|hyperpage}{132}
+\indexentry{GenerateThread@{GenerateThread}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{132}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Import@{Import}|hyperpage}{133}
+\indexentry{Import@{Import}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{133}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Import@{Import}|hyperpage}{134}
+\indexentry{Import@{Import}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{134}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Nodes@{Nodes}|hyperpage}{135}
+\indexentry{Nodes@{Nodes}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{135}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!OpenDatasetFile@{OpenDatasetFile}|hyperpage}{135}
+\indexentry{OpenDatasetFile@{OpenDatasetFile}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{135}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!OptimizeEdgeOrder@{OptimizeEdgeOrder}|hyperpage}{135}
+\indexentry{OptimizeEdgeOrder@{OptimizeEdgeOrder}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{135}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!RandomWalk@{RandomWalk}|hyperpage}{136}
+\indexentry{RandomWalk@{RandomWalk}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{136}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Save@{Save}|hyperpage}{137}
+\indexentry{Save@{Save}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{137}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!StarterNode@{StarterNode}|hyperpage}{137}
+\indexentry{StarterNode@{StarterNode}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{137}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!Train@{Train}|hyperpage}{137}
+\indexentry{Train@{Train}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{137}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!TrainThread@{TrainThread}|hyperpage}{139}
+\indexentry{TrainThread@{TrainThread}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{139}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!datasetFile@{datasetFile}|hyperpage}{140}
+\indexentry{datasetFile@{datasetFile}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{140}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!edges@{edges}|hyperpage}{140}
+\indexentry{edges@{edges}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{140}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!modelSavefile@{modelSavefile}|hyperpage}{140}
+\indexentry{modelSavefile@{modelSavefile}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{140}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!nodes@{nodes}|hyperpage}{140}
+\indexentry{nodes@{nodes}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{140}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!outputFile@{outputFile}|hyperpage}{140}
+\indexentry{outputFile@{outputFile}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{140}
+\indexentry{Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}!starterNode@{starterNode}|hyperpage}{140}
+\indexentry{starterNode@{starterNode}!Markov::API::MarkovPasswords@{Markov::API::MarkovPasswords}|hyperpage}{140}
+\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{141}
+\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}!MarkovPasswordsGUI@{MarkovPasswordsGUI}|hyperpage}{142}
+\indexentry{MarkovPasswordsGUI@{MarkovPasswordsGUI}!Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{142}
+\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}!benchmarkSelected@{benchmarkSelected}|hyperpage}{143}
+\indexentry{benchmarkSelected@{benchmarkSelected}!Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{143}
+\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}!home@{home}|hyperpage}{143}
+\indexentry{home@{home}!Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{143}
+\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}!model@{model}|hyperpage}{143}
+\indexentry{model@{model}!Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{143}
+\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}!pass@{pass}|hyperpage}{143}
+\indexentry{pass@{pass}!Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{143}
+\indexentry{Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}!ui@{ui}|hyperpage}{143}
+\indexentry{ui@{ui}!Markov::GUI::MarkovPasswordsGUI@{Markov::GUI::MarkovPasswordsGUI}|hyperpage}{143}
+\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{144}
+\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!Marsaglia@{Marsaglia}|hyperpage}{147}
+\indexentry{Marsaglia@{Marsaglia}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{147}
+\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!distribution@{distribution}|hyperpage}{147}
+\indexentry{distribution@{distribution}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{147}
+\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!generator@{generator}|hyperpage}{148}
+\indexentry{generator@{generator}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{148}
+\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!random@{random}|hyperpage}{148}
+\indexentry{random@{random}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{148}
+\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!rd@{rd}|hyperpage}{149}
+\indexentry{rd@{rd}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{149}
+\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!x@{x}|hyperpage}{149}
+\indexentry{x@{x}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{149}
+\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!y@{y}|hyperpage}{149}
+\indexentry{y@{y}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{149}
+\indexentry{Markov::Random::Marsaglia@{Markov::Random::Marsaglia}!z@{z}|hyperpage}{149}
+\indexentry{z@{z}!Markov::Random::Marsaglia@{Markov::Random::Marsaglia}|hyperpage}{149}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{150}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!CudaCheckNotifyErr@{CudaCheckNotifyErr}|hyperpage}{152}
+\indexentry{CudaCheckNotifyErr@{CudaCheckNotifyErr}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{152}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!CudaMalloc2DToFlat@{CudaMalloc2DToFlat}|hyperpage}{153}
+\indexentry{CudaMalloc2DToFlat@{CudaMalloc2DToFlat}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{153}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}|hyperpage}{154}
+\indexentry{CudaMemcpy2DToFlat@{CudaMemcpy2DToFlat}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{154}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!CudaMigrate2DFlat@{CudaMigrate2DFlat}|hyperpage}{155}
+\indexentry{CudaMigrate2DFlat@{CudaMigrate2DFlat}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{155}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!distribution@{distribution}|hyperpage}{156}
+\indexentry{distribution@{distribution}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{156}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!generator@{generator}|hyperpage}{156}
+\indexentry{generator@{generator}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{156}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!ListCudaDevices@{ListCudaDevices}|hyperpage}{157}
+\indexentry{ListCudaDevices@{ListCudaDevices}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{157}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!MigrateToVRAM@{MigrateToVRAM}|hyperpage}{157}
+\indexentry{MigrateToVRAM@{MigrateToVRAM}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{157}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!random@{random}|hyperpage}{158}
+\indexentry{random@{random}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{158}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!rd@{rd}|hyperpage}{159}
+\indexentry{rd@{rd}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{159}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!x@{x}|hyperpage}{159}
+\indexentry{x@{x}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{159}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!y@{y}|hyperpage}{159}
+\indexentry{y@{y}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{159}
+\indexentry{Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}!z@{z}|hyperpage}{159}
+\indexentry{z@{z}!Markov::API::CUDA::Random::Marsaglia@{Markov::API::CUDA::Random::Marsaglia}|hyperpage}{159}
+\indexentry{Markov::GUI::menu@{Markov::GUI::menu}|hyperpage}{160}
+\indexentry{Markov::GUI::menu@{Markov::GUI::menu}!menu@{menu}|hyperpage}{161}
+\indexentry{menu@{menu}!Markov::GUI::menu@{Markov::GUI::menu}|hyperpage}{161}
+\indexentry{Markov::GUI::menu@{Markov::GUI::menu}!about@{about}|hyperpage}{161}
+\indexentry{about@{about}!Markov::GUI::menu@{Markov::GUI::menu}|hyperpage}{161}
+\indexentry{Markov::GUI::menu@{Markov::GUI::menu}!visualization@{visualization}|hyperpage}{161}
+\indexentry{visualization@{visualization}!Markov::GUI::menu@{Markov::GUI::menu}|hyperpage}{161}
+\indexentry{Markov::GUI::menu@{Markov::GUI::menu}!ui@{ui}|hyperpage}{162}
+\indexentry{ui@{ui}!Markov::GUI::menu@{Markov::GUI::menu}|hyperpage}{162}
+\indexentry{Markov::Random::Mersenne@{Markov::Random::Mersenne}|hyperpage}{162}
+\indexentry{Markov::Random::Mersenne@{Markov::Random::Mersenne}!distribution@{distribution}|hyperpage}{165}
+\indexentry{distribution@{distribution}!Markov::Random::Mersenne@{Markov::Random::Mersenne}|hyperpage}{165}
+\indexentry{Markov::Random::Mersenne@{Markov::Random::Mersenne}!generator@{generator}|hyperpage}{165}
+\indexentry{generator@{generator}!Markov::Random::Mersenne@{Markov::Random::Mersenne}|hyperpage}{165}
+\indexentry{Markov::Random::Mersenne@{Markov::Random::Mersenne}!random@{random}|hyperpage}{166}
+\indexentry{random@{random}!Markov::Random::Mersenne@{Markov::Random::Mersenne}|hyperpage}{166}
+\indexentry{Markov::Random::Mersenne@{Markov::Random::Mersenne}!rd@{rd}|hyperpage}{166}
+\indexentry{rd@{rd}!Markov::Random::Mersenne@{Markov::Random::Mersenne}|hyperpage}{166}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{167}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Model@{Model}|hyperpage}{168}
+\indexentry{Model@{Model}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{168}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!AdjustEdge@{AdjustEdge}|hyperpage}{168}
+\indexentry{AdjustEdge@{AdjustEdge}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{168}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Edges@{Edges}|hyperpage}{169}
+\indexentry{Edges@{Edges}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{169}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Export@{Export}|hyperpage}{169}
+\indexentry{Export@{Export}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{169}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Export@{Export}|hyperpage}{170}
+\indexentry{Export@{Export}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{170}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Import@{Import}|hyperpage}{171}
+\indexentry{Import@{Import}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{171}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Import@{Import}|hyperpage}{171}
+\indexentry{Import@{Import}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{171}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!Nodes@{Nodes}|hyperpage}{172}
+\indexentry{Nodes@{Nodes}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{172}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!OptimizeEdgeOrder@{OptimizeEdgeOrder}|hyperpage}{173}
+\indexentry{OptimizeEdgeOrder@{OptimizeEdgeOrder}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{173}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!RandomWalk@{RandomWalk}|hyperpage}{173}
+\indexentry{RandomWalk@{RandomWalk}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{173}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!StarterNode@{StarterNode}|hyperpage}{174}
+\indexentry{StarterNode@{StarterNode}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{174}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!edges@{edges}|hyperpage}{175}
+\indexentry{edges@{edges}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{175}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!nodes@{nodes}|hyperpage}{175}
+\indexentry{nodes@{nodes}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{175}
+\indexentry{Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}!starterNode@{starterNode}|hyperpage}{175}
+\indexentry{starterNode@{starterNode}!Markov::Model$<$ NodeStorageType $>$@{Markov::Model$<$ NodeStorageType $>$}|hyperpage}{175}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{175}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!ModelMatrix@{ModelMatrix}|hyperpage}{179}
+\indexentry{ModelMatrix@{ModelMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{179}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!AdjustEdge@{AdjustEdge}|hyperpage}{179}
+\indexentry{AdjustEdge@{AdjustEdge}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{179}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Buff@{Buff}|hyperpage}{180}
+\indexentry{Buff@{Buff}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{180}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!ConstructMatrix@{ConstructMatrix}|hyperpage}{181}
+\indexentry{ConstructMatrix@{ConstructMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{181}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!DeallocateMatrix@{DeallocateMatrix}|hyperpage}{183}
+\indexentry{DeallocateMatrix@{DeallocateMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{183}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!DumpJSON@{DumpJSON}|hyperpage}{184}
+\indexentry{DumpJSON@{DumpJSON}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{184}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Edges@{Edges}|hyperpage}{185}
+\indexentry{Edges@{Edges}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{185}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Export@{Export}|hyperpage}{185}
+\indexentry{Export@{Export}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{185}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Export@{Export}|hyperpage}{185}
+\indexentry{Export@{Export}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{185}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!FastRandomWalk@{FastRandomWalk}|hyperpage}{186}
+\indexentry{FastRandomWalk@{FastRandomWalk}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{186}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!FastRandomWalk@{FastRandomWalk}|hyperpage}{187}
+\indexentry{FastRandomWalk@{FastRandomWalk}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{187}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!FastRandomWalkPartition@{FastRandomWalkPartition}|hyperpage}{188}
+\indexentry{FastRandomWalkPartition@{FastRandomWalkPartition}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{188}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!FastRandomWalkThread@{FastRandomWalkThread}|hyperpage}{189}
+\indexentry{FastRandomWalkThread@{FastRandomWalkThread}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{189}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Generate@{Generate}|hyperpage}{190}
+\indexentry{Generate@{Generate}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{190}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!GenerateThread@{GenerateThread}|hyperpage}{192}
+\indexentry{GenerateThread@{GenerateThread}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{192}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Import@{Import}|hyperpage}{193}
+\indexentry{Import@{Import}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{193}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Import@{Import}|hyperpage}{194}
+\indexentry{Import@{Import}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{194}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Nodes@{Nodes}|hyperpage}{195}
+\indexentry{Nodes@{Nodes}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{195}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!OpenDatasetFile@{OpenDatasetFile}|hyperpage}{195}
+\indexentry{OpenDatasetFile@{OpenDatasetFile}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{195}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!OptimizeEdgeOrder@{OptimizeEdgeOrder}|hyperpage}{195}
+\indexentry{OptimizeEdgeOrder@{OptimizeEdgeOrder}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{195}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!RandomWalk@{RandomWalk}|hyperpage}{196}
+\indexentry{RandomWalk@{RandomWalk}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{196}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Save@{Save}|hyperpage}{197}
+\indexentry{Save@{Save}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{197}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!StarterNode@{StarterNode}|hyperpage}{197}
+\indexentry{StarterNode@{StarterNode}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{197}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!Train@{Train}|hyperpage}{198}
+\indexentry{Train@{Train}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{198}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!TrainThread@{TrainThread}|hyperpage}{199}
+\indexentry{TrainThread@{TrainThread}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{199}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!datasetFile@{datasetFile}|hyperpage}{199}
+\indexentry{datasetFile@{datasetFile}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{199}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!edgeMatrix@{edgeMatrix}|hyperpage}{200}
+\indexentry{edgeMatrix@{edgeMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{200}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!edges@{edges}|hyperpage}{200}
+\indexentry{edges@{edges}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{200}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!matrixIndex@{matrixIndex}|hyperpage}{200}
+\indexentry{matrixIndex@{matrixIndex}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{200}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!matrixSize@{matrixSize}|hyperpage}{200}
+\indexentry{matrixSize@{matrixSize}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{200}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!modelSavefile@{modelSavefile}|hyperpage}{200}
+\indexentry{modelSavefile@{modelSavefile}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{200}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!nodes@{nodes}|hyperpage}{200}
+\indexentry{nodes@{nodes}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{200}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!outputFile@{outputFile}|hyperpage}{200}
+\indexentry{outputFile@{outputFile}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{200}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!ready@{ready}|hyperpage}{200}
+\indexentry{ready@{ready}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{200}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!starterNode@{starterNode}|hyperpage}{201}
+\indexentry{starterNode@{starterNode}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{201}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!totalEdgeWeights@{totalEdgeWeights}|hyperpage}{201}
+\indexentry{totalEdgeWeights@{totalEdgeWeights}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{201}
+\indexentry{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!valueMatrix@{valueMatrix}|hyperpage}{201}
+\indexentry{valueMatrix@{valueMatrix}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}|hyperpage}{201}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{201}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Node@{Node}|hyperpage}{203}
+\indexentry{Node@{Node}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{203}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Node@{Node}|hyperpage}{203}
+\indexentry{Node@{Node}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{203}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Edges@{Edges}|hyperpage}{204}
+\indexentry{Edges@{Edges}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{204}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!FindEdge@{FindEdge}|hyperpage}{204}
+\indexentry{FindEdge@{FindEdge}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{204}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!FindEdge@{FindEdge}|hyperpage}{204}
+\indexentry{FindEdge@{FindEdge}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{204}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Link@{Link}|hyperpage}{205}
+\indexentry{Link@{Link}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{205}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!Link@{Link}|hyperpage}{205}
+\indexentry{Link@{Link}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{205}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!NodeValue@{NodeValue}|hyperpage}{206}
+\indexentry{NodeValue@{NodeValue}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{206}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!RandomNext@{RandomNext}|hyperpage}{206}
+\indexentry{RandomNext@{RandomNext}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{206}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!TotalEdgeWeights@{TotalEdgeWeights}|hyperpage}{207}
+\indexentry{TotalEdgeWeights@{TotalEdgeWeights}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{207}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!UpdateEdges@{UpdateEdges}|hyperpage}{207}
+\indexentry{UpdateEdges@{UpdateEdges}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{207}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!UpdateTotalVerticeWeight@{UpdateTotalVerticeWeight}|hyperpage}{208}
+\indexentry{UpdateTotalVerticeWeight@{UpdateTotalVerticeWeight}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{208}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!\_value@{\_value}|hyperpage}{208}
+\indexentry{\_value@{\_value}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{208}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!edges@{edges}|hyperpage}{208}
+\indexentry{edges@{edges}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{208}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!edgesV@{edgesV}|hyperpage}{208}
+\indexentry{edgesV@{edgesV}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{208}
+\indexentry{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!total\_edge\_weights@{total\_edge\_weights}|hyperpage}{208}
+\indexentry{total\_edge\_weights@{total\_edge\_weights}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}|hyperpage}{208}
+\indexentry{QMainWindow@{QMainWindow}|hyperpage}{209}
+\indexentry{Markov::Random::RandomEngine@{Markov::Random::RandomEngine}|hyperpage}{209}
+\indexentry{Markov::Random::RandomEngine@{Markov::Random::RandomEngine}!random@{random}|hyperpage}{211}
+\indexentry{random@{random}!Markov::Random::RandomEngine@{Markov::Random::RandomEngine}|hyperpage}{211}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{211}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!color@{color}|hyperpage}{213}
+\indexentry{color@{color}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{RESET@{RESET}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!RESET@{RESET}|hyperpage}{213}
+\indexentry{BLACK@{BLACK}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!BLACK@{BLACK}|hyperpage}{213}
+\indexentry{RED@{RED}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!RED@{RED}|hyperpage}{213}
+\indexentry{GREEN@{GREEN}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!GREEN@{GREEN}|hyperpage}{213}
+\indexentry{YELLOW@{YELLOW}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!YELLOW@{YELLOW}|hyperpage}{213}
+\indexentry{BLUE@{BLUE}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!BLUE@{BLUE}|hyperpage}{213}
+\indexentry{MAGENTA@{MAGENTA}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!MAGENTA@{MAGENTA}|hyperpage}{213}
+\indexentry{CYAN@{CYAN}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!CYAN@{CYAN}|hyperpage}{213}
+\indexentry{WHITE@{WHITE}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!WHITE@{WHITE}|hyperpage}{213}
+\indexentry{LIGHTGRAY@{LIGHTGRAY}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!LIGHTGRAY@{LIGHTGRAY}|hyperpage}{213}
+\indexentry{DARKGRAY@{DARKGRAY}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!DARKGRAY@{DARKGRAY}|hyperpage}{213}
+\indexentry{BROWN@{BROWN}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!BROWN@{BROWN}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!Terminal@{Terminal}|hyperpage}{213}
+\indexentry{Terminal@{Terminal}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!colormap@{colormap}|hyperpage}{213}
+\indexentry{colormap@{colormap}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{213}
+\indexentry{Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}!endl@{endl}|hyperpage}{214}
+\indexentry{endl@{endl}!Markov::API::CLI::Terminal@{Markov::API::CLI::Terminal}|hyperpage}{214}
+\indexentry{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}|hyperpage}{214}
+\indexentry{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}!ThreadSharedListHandler@{ThreadSharedListHandler}|hyperpage}{216}
+\indexentry{ThreadSharedListHandler@{ThreadSharedListHandler}!Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}|hyperpage}{216}
+\indexentry{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}!next@{next}|hyperpage}{217}
+\indexentry{next@{next}!Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}|hyperpage}{217}
+\indexentry{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}!listfile@{listfile}|hyperpage}{217}
+\indexentry{listfile@{listfile}!Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}|hyperpage}{217}
+\indexentry{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}!mlock@{mlock}|hyperpage}{217}
+\indexentry{mlock@{mlock}!Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}|hyperpage}{217}
+\indexentry{Markov::GUI::Train@{Markov::GUI::Train}|hyperpage}{218}
+\indexentry{Markov::GUI::Train@{Markov::GUI::Train}!Train@{Train}|hyperpage}{219}
+\indexentry{Train@{Train}!Markov::GUI::Train@{Markov::GUI::Train}|hyperpage}{219}
+\indexentry{Markov::GUI::Train@{Markov::GUI::Train}!home@{home}|hyperpage}{220}
+\indexentry{home@{home}!Markov::GUI::Train@{Markov::GUI::Train}|hyperpage}{220}
+\indexentry{Markov::GUI::Train@{Markov::GUI::Train}!train@{train}|hyperpage}{220}
+\indexentry{train@{train}!Markov::GUI::Train@{Markov::GUI::Train}|hyperpage}{220}
+\indexentry{Markov::GUI::Train@{Markov::GUI::Train}!ui@{ui}|hyperpage}{221}
+\indexentry{ui@{ui}!Markov::GUI::Train@{Markov::GUI::Train}|hyperpage}{221}
+\indexentry{about.cpp@{about.cpp}|hyperpage}{223}
+\indexentry{about.cpp@{about.cpp}|hyperpage}{223}
 \indexentry{about.h@{about.h}|hyperpage}{223}
-\indexentry{argparse.cpp@{argparse.cpp}|hyperpage}{223}
-\indexentry{argparse.cpp@{argparse.cpp}|hyperpage}{223}
-\indexentry{argparse.h@{argparse.h}|hyperpage}{224}
-\indexentry{argparse.h@{argparse.h}!BOOST\_ALL\_STATIC\_LIB@{BOOST\_ALL\_STATIC\_LIB}|hyperpage}{225}
-\indexentry{BOOST\_ALL\_STATIC\_LIB@{BOOST\_ALL\_STATIC\_LIB}!argparse.h@{argparse.h}|hyperpage}{225}
-\indexentry{argparse.h@{argparse.h}!BOOST\_PROGRAM\_OPTIONS\_STATIC\_LIB@{BOOST\_PROGRAM\_OPTIONS\_STATIC\_LIB}|hyperpage}{226}
-\indexentry{BOOST\_PROGRAM\_OPTIONS\_STATIC\_LIB@{BOOST\_PROGRAM\_OPTIONS\_STATIC\_LIB}!argparse.h@{argparse.h}|hyperpage}{226}
+\indexentry{about.h@{about.h}|hyperpage}{225}
+\indexentry{argparse.cpp@{argparse.cpp}|hyperpage}{225}
+\indexentry{argparse.cpp@{argparse.cpp}|hyperpage}{225}
 \indexentry{argparse.h@{argparse.h}|hyperpage}{226}
-\indexentry{CLI.cpp@{CLI.cpp}|hyperpage}{229}
-\indexentry{CLI.cpp@{CLI.cpp}|hyperpage}{229}
-\indexentry{CLI.h@{CLI.h}|hyperpage}{230}
-\indexentry{CLI.h@{CLI.h}|hyperpage}{231}
-\indexentry{cudaDeviceController.cu@{cudaDeviceController.cu}|hyperpage}{231}
-\indexentry{cudaDeviceController.cu@{cudaDeviceController.cu}|hyperpage}{232}
-\indexentry{cudaDeviceController.h@{cudaDeviceController.h}|hyperpage}{233}
-\indexentry{cudaDeviceController.h@{cudaDeviceController.h}|hyperpage}{234}
-\indexentry{cudaModelMatrix.cu@{cudaModelMatrix.cu}|hyperpage}{236}
-\indexentry{cudaModelMatrix.cu@{cudaModelMatrix.cu}|hyperpage}{237}
-\indexentry{cudaModelMatrix.h@{cudaModelMatrix.h}|hyperpage}{240}
+\indexentry{argparse.h@{argparse.h}!BOOST\_ALL\_STATIC\_LIB@{BOOST\_ALL\_STATIC\_LIB}|hyperpage}{227}
+\indexentry{BOOST\_ALL\_STATIC\_LIB@{BOOST\_ALL\_STATIC\_LIB}!argparse.h@{argparse.h}|hyperpage}{227}
+\indexentry{argparse.h@{argparse.h}!BOOST\_PROGRAM\_OPTIONS\_STATIC\_LIB@{BOOST\_PROGRAM\_OPTIONS\_STATIC\_LIB}|hyperpage}{228}
+\indexentry{BOOST\_PROGRAM\_OPTIONS\_STATIC\_LIB@{BOOST\_PROGRAM\_OPTIONS\_STATIC\_LIB}!argparse.h@{argparse.h}|hyperpage}{228}
+\indexentry{argparse.h@{argparse.h}|hyperpage}{228}
+\indexentry{CLI.cpp@{CLI.cpp}|hyperpage}{231}
+\indexentry{CLI.cpp@{CLI.cpp}|hyperpage}{231}
+\indexentry{CLI.h@{CLI.h}|hyperpage}{232}
+\indexentry{CLI.h@{CLI.h}|hyperpage}{233}
+\indexentry{cudaDeviceController.cu@{cudaDeviceController.cu}|hyperpage}{233}
+\indexentry{cudaDeviceController.cu@{cudaDeviceController.cu}|hyperpage}{234}
+\indexentry{cudaDeviceController.h@{cudaDeviceController.h}|hyperpage}{235}
+\indexentry{cudaDeviceController.h@{cudaDeviceController.h}|hyperpage}{236}
+\indexentry{cudaModelMatrix.cu@{cudaModelMatrix.cu}|hyperpage}{238}
+\indexentry{cudaModelMatrix.cu@{cudaModelMatrix.cu}|hyperpage}{239}
 \indexentry{cudaModelMatrix.h@{cudaModelMatrix.h}|hyperpage}{242}
-\indexentry{cudarandom.h@{cudarandom.h}|hyperpage}{244}
+\indexentry{cudaModelMatrix.h@{cudaModelMatrix.h}|hyperpage}{244}
 \indexentry{cudarandom.h@{cudarandom.h}|hyperpage}{246}
-\indexentry{dllmain.cpp@{dllmain.cpp}|hyperpage}{246}
-\indexentry{dllmain.cpp@{dllmain.cpp}|hyperpage}{247}
-\indexentry{edge.h@{edge.h}|hyperpage}{248}
-\indexentry{edge.h@{edge.h}|hyperpage}{249}
-\indexentry{framework.h@{framework.h}|hyperpage}{251}
-\indexentry{framework.h@{framework.h}!WIN32\_LEAN\_AND\_MEAN@{WIN32\_LEAN\_AND\_MEAN}|hyperpage}{251}
-\indexentry{WIN32\_LEAN\_AND\_MEAN@{WIN32\_LEAN\_AND\_MEAN}!framework.h@{framework.h}|hyperpage}{251}
-\indexentry{framework.h@{framework.h}|hyperpage}{252}
-\indexentry{Generate.cpp@{Generate.cpp}|hyperpage}{252}
-\indexentry{Generate.cpp@{Generate.cpp}|hyperpage}{252}
-\indexentry{Generate.h@{Generate.h}|hyperpage}{254}
-\indexentry{Generate.h@{Generate.h}|hyperpage}{255}
-\indexentry{main.cpp@{main.cpp}|hyperpage}{256}
-\indexentry{MarkovAPICLI/src/main.cpp@{MarkovAPICLI/src/main.cpp}!main@{main}|hyperpage}{256}
-\indexentry{main@{main}!MarkovAPICLI/src/main.cpp@{MarkovAPICLI/src/main.cpp}|hyperpage}{256}
-\indexentry{main.cpp@{main.cpp}|hyperpage}{257}
+\indexentry{cudarandom.h@{cudarandom.h}|hyperpage}{248}
+\indexentry{dllmain.cpp@{dllmain.cpp}|hyperpage}{248}
+\indexentry{dllmain.cpp@{dllmain.cpp}|hyperpage}{249}
+\indexentry{edge.h@{edge.h}|hyperpage}{250}
+\indexentry{edge.h@{edge.h}|hyperpage}{251}
+\indexentry{framework.h@{framework.h}|hyperpage}{253}
+\indexentry{framework.h@{framework.h}!WIN32\_LEAN\_AND\_MEAN@{WIN32\_LEAN\_AND\_MEAN}|hyperpage}{253}
+\indexentry{WIN32\_LEAN\_AND\_MEAN@{WIN32\_LEAN\_AND\_MEAN}!framework.h@{framework.h}|hyperpage}{253}
+\indexentry{framework.h@{framework.h}|hyperpage}{254}
+\indexentry{Generate.cpp@{Generate.cpp}|hyperpage}{254}
+\indexentry{Generate.cpp@{Generate.cpp}|hyperpage}{254}
+\indexentry{Generate.h@{Generate.h}|hyperpage}{256}
+\indexentry{Generate.h@{Generate.h}|hyperpage}{257}
 \indexentry{main.cpp@{main.cpp}|hyperpage}{258}
-\indexentry{MarkovPasswordsGUI/src/main.cpp@{MarkovPasswordsGUI/src/main.cpp}!main@{main}|hyperpage}{259}
-\indexentry{main@{main}!MarkovPasswordsGUI/src/main.cpp@{MarkovPasswordsGUI/src/main.cpp}|hyperpage}{259}
+\indexentry{MarkovAPICLI/src/main.cpp@{MarkovAPICLI/src/main.cpp}!main@{main}|hyperpage}{258}
+\indexentry{main@{main}!MarkovAPICLI/src/main.cpp@{MarkovAPICLI/src/main.cpp}|hyperpage}{258}
 \indexentry{main.cpp@{main.cpp}|hyperpage}{259}
-\indexentry{main.cu@{main.cu}|hyperpage}{260}
-\indexentry{main.cu@{main.cu}!main@{main}|hyperpage}{260}
-\indexentry{main@{main}!main.cu@{main.cu}|hyperpage}{260}
-\indexentry{main.cu@{main.cu}|hyperpage}{261}
-\indexentry{markopy.cpp@{markopy.cpp}|hyperpage}{261}
-\indexentry{markopy.cpp@{markopy.cpp}!BOOST\_ALL\_STATIC\_LIB@{BOOST\_ALL\_STATIC\_LIB}|hyperpage}{263}
-\indexentry{BOOST\_ALL\_STATIC\_LIB@{BOOST\_ALL\_STATIC\_LIB}!markopy.cpp@{markopy.cpp}|hyperpage}{263}
-\indexentry{markopy.cpp@{markopy.cpp}!BOOST\_PYTHON\_STATIC\_LIB@{BOOST\_PYTHON\_STATIC\_LIB}|hyperpage}{263}
-\indexentry{BOOST\_PYTHON\_STATIC\_LIB@{BOOST\_PYTHON\_STATIC\_LIB}!markopy.cpp@{markopy.cpp}|hyperpage}{263}
+\indexentry{main.cpp@{main.cpp}|hyperpage}{260}
+\indexentry{MarkovPasswordsGUI/src/main.cpp@{MarkovPasswordsGUI/src/main.cpp}!main@{main}|hyperpage}{261}
+\indexentry{main@{main}!MarkovPasswordsGUI/src/main.cpp@{MarkovPasswordsGUI/src/main.cpp}|hyperpage}{261}
+\indexentry{main.cpp@{main.cpp}|hyperpage}{261}
+\indexentry{main.cu@{main.cu}|hyperpage}{262}
+\indexentry{main.cu@{main.cu}!main@{main}|hyperpage}{262}
+\indexentry{main@{main}!main.cu@{main.cu}|hyperpage}{262}
+\indexentry{main.cu@{main.cu}|hyperpage}{263}
 \indexentry{markopy.cpp@{markopy.cpp}|hyperpage}{263}
-\indexentry{markopy.py@{markopy.py}|hyperpage}{264}
-\indexentry{markopy.py@{markopy.py}|hyperpage}{264}
-\indexentry{markovPasswords.cpp@{markovPasswords.cpp}|hyperpage}{266}
-\indexentry{markovPasswords.cpp@{markovPasswords.cpp}!intHandler@{intHandler}|hyperpage}{267}
-\indexentry{intHandler@{intHandler}!markovPasswords.cpp@{markovPasswords.cpp}|hyperpage}{267}
-\indexentry{markovPasswords.cpp@{markovPasswords.cpp}!keepRunning@{keepRunning}|hyperpage}{268}
-\indexentry{keepRunning@{keepRunning}!markovPasswords.cpp@{markovPasswords.cpp}|hyperpage}{268}
+\indexentry{markopy.cpp@{markopy.cpp}!BOOST\_ALL\_STATIC\_LIB@{BOOST\_ALL\_STATIC\_LIB}|hyperpage}{265}
+\indexentry{BOOST\_ALL\_STATIC\_LIB@{BOOST\_ALL\_STATIC\_LIB}!markopy.cpp@{markopy.cpp}|hyperpage}{265}
+\indexentry{markopy.cpp@{markopy.cpp}!BOOST\_PYTHON\_STATIC\_LIB@{BOOST\_PYTHON\_STATIC\_LIB}|hyperpage}{265}
+\indexentry{BOOST\_PYTHON\_STATIC\_LIB@{BOOST\_PYTHON\_STATIC\_LIB}!markopy.cpp@{markopy.cpp}|hyperpage}{265}
+\indexentry{markopy.cpp@{markopy.cpp}|hyperpage}{265}
+\indexentry{markopy.py@{markopy.py}|hyperpage}{266}
+\indexentry{markopy.py@{markopy.py}|hyperpage}{266}
 \indexentry{markovPasswords.cpp@{markovPasswords.cpp}|hyperpage}{268}
-\indexentry{markovPasswords.h@{markovPasswords.h}|hyperpage}{270}
-\indexentry{markovPasswords.h@{markovPasswords.h}|hyperpage}{271}
-\indexentry{MarkovPasswordsGUI.cpp@{MarkovPasswordsGUI.cpp}|hyperpage}{273}
-\indexentry{MarkovPasswordsGUI.cpp@{MarkovPasswordsGUI.cpp}|hyperpage}{273}
-\indexentry{MarkovPasswordsGUI.h@{MarkovPasswordsGUI.h}|hyperpage}{274}
-\indexentry{MarkovPasswordsGUI.h@{MarkovPasswordsGUI.h}|hyperpage}{275}
-\indexentry{menu.cpp@{menu.cpp}|hyperpage}{276}
-\indexentry{menu.cpp@{menu.cpp}|hyperpage}{276}
-\indexentry{menu.h@{menu.h}|hyperpage}{277}
-\indexentry{menu.h@{menu.h}|hyperpage}{278}
-\indexentry{model.h@{model.h}|hyperpage}{278}
-\indexentry{model.h@{model.h}|hyperpage}{279}
-\indexentry{model\_2gram.py@{model\_2gram.py}|hyperpage}{284}
-\indexentry{model\_2gram.py@{model\_2gram.py}|hyperpage}{284}
-\indexentry{modelMatrix.cpp@{modelMatrix.cpp}|hyperpage}{284}
-\indexentry{modelMatrix.cpp@{modelMatrix.cpp}|hyperpage}{285}
-\indexentry{modelMatrix.h@{modelMatrix.h}|hyperpage}{288}
-\indexentry{modelMatrix.h@{modelMatrix.h}|hyperpage}{289}
-\indexentry{node.h@{node.h}|hyperpage}{292}
-\indexentry{node.h@{node.h}|hyperpage}{293}
-\indexentry{pch.cpp@{pch.cpp}|hyperpage}{297}
-\indexentry{pch.cpp@{pch.cpp}|hyperpage}{297}
-\indexentry{pch.cpp@{pch.cpp}|hyperpage}{297}
-\indexentry{pch.cpp@{pch.cpp}|hyperpage}{298}
-\indexentry{pch.h@{pch.h}|hyperpage}{298}
-\indexentry{pch.h@{pch.h}|hyperpage}{299}
-\indexentry{pch.h@{pch.h}|hyperpage}{299}
+\indexentry{markovPasswords.cpp@{markovPasswords.cpp}!intHandler@{intHandler}|hyperpage}{269}
+\indexentry{intHandler@{intHandler}!markovPasswords.cpp@{markovPasswords.cpp}|hyperpage}{269}
+\indexentry{markovPasswords.cpp@{markovPasswords.cpp}!keepRunning@{keepRunning}|hyperpage}{270}
+\indexentry{keepRunning@{keepRunning}!markovPasswords.cpp@{markovPasswords.cpp}|hyperpage}{270}
+\indexentry{markovPasswords.cpp@{markovPasswords.cpp}|hyperpage}{270}
+\indexentry{markovPasswords.h@{markovPasswords.h}|hyperpage}{272}
+\indexentry{markovPasswords.h@{markovPasswords.h}|hyperpage}{273}
+\indexentry{MarkovPasswordsGUI.cpp@{MarkovPasswordsGUI.cpp}|hyperpage}{275}
+\indexentry{MarkovPasswordsGUI.cpp@{MarkovPasswordsGUI.cpp}|hyperpage}{275}
+\indexentry{MarkovPasswordsGUI.h@{MarkovPasswordsGUI.h}|hyperpage}{276}
+\indexentry{MarkovPasswordsGUI.h@{MarkovPasswordsGUI.h}|hyperpage}{277}
+\indexentry{menu.cpp@{menu.cpp}|hyperpage}{278}
+\indexentry{menu.cpp@{menu.cpp}|hyperpage}{278}
+\indexentry{menu.h@{menu.h}|hyperpage}{279}
+\indexentry{menu.h@{menu.h}|hyperpage}{280}
+\indexentry{model.h@{model.h}|hyperpage}{280}
+\indexentry{model.h@{model.h}|hyperpage}{281}
+\indexentry{model\_2gram.py@{model\_2gram.py}|hyperpage}{286}
+\indexentry{model\_2gram.py@{model\_2gram.py}|hyperpage}{286}
+\indexentry{modelMatrix.cpp@{modelMatrix.cpp}|hyperpage}{286}
+\indexentry{modelMatrix.cpp@{modelMatrix.cpp}|hyperpage}{287}
+\indexentry{modelMatrix.h@{modelMatrix.h}|hyperpage}{290}
+\indexentry{modelMatrix.h@{modelMatrix.h}|hyperpage}{291}
+\indexentry{node.h@{node.h}|hyperpage}{294}
+\indexentry{node.h@{node.h}|hyperpage}{295}
+\indexentry{pch.cpp@{pch.cpp}|hyperpage}{299}
+\indexentry{pch.cpp@{pch.cpp}|hyperpage}{299}
+\indexentry{pch.cpp@{pch.cpp}|hyperpage}{299}
+\indexentry{pch.cpp@{pch.cpp}|hyperpage}{300}
 \indexentry{pch.h@{pch.h}|hyperpage}{300}
-\indexentry{random-\/model.py@{random-\/model.py}|hyperpage}{300}
-\indexentry{random-\/model.py@{random-\/model.py}|hyperpage}{301}
-\indexentry{random.h@{random.h}|hyperpage}{301}
+\indexentry{pch.h@{pch.h}|hyperpage}{301}
+\indexentry{pch.h@{pch.h}|hyperpage}{301}
+\indexentry{pch.h@{pch.h}|hyperpage}{302}
+\indexentry{random-\/model.py@{random-\/model.py}|hyperpage}{302}
+\indexentry{random-\/model.py@{random-\/model.py}|hyperpage}{303}
 \indexentry{random.h@{random.h}|hyperpage}{303}
-\indexentry{README.md@{README.md}|hyperpage}{305}
-\indexentry{report.md@{report.md}|hyperpage}{305}
-\indexentry{term.cpp@{term.cpp}|hyperpage}{305}
-\indexentry{term.cpp@{term.cpp}!operator$<$$<$@{operator$<$$<$}|hyperpage}{306}
-\indexentry{operator$<$$<$@{operator$<$$<$}!term.cpp@{term.cpp}|hyperpage}{306}
-\indexentry{term.cpp@{term.cpp}|hyperpage}{306}
-\indexentry{term.h@{term.h}|hyperpage}{307}
-\indexentry{term.h@{term.h}!TERM\_FAIL@{TERM\_FAIL}|hyperpage}{309}
-\indexentry{TERM\_FAIL@{TERM\_FAIL}!term.h@{term.h}|hyperpage}{309}
-\indexentry{term.h@{term.h}!TERM\_INFO@{TERM\_INFO}|hyperpage}{309}
-\indexentry{TERM\_INFO@{TERM\_INFO}!term.h@{term.h}|hyperpage}{309}
-\indexentry{term.h@{term.h}!TERM\_SUCC@{TERM\_SUCC}|hyperpage}{309}
-\indexentry{TERM\_SUCC@{TERM\_SUCC}!term.h@{term.h}|hyperpage}{309}
-\indexentry{term.h@{term.h}!TERM\_WARN@{TERM\_WARN}|hyperpage}{309}
-\indexentry{TERM\_WARN@{TERM\_WARN}!term.h@{term.h}|hyperpage}{309}
+\indexentry{random.h@{random.h}|hyperpage}{305}
+\indexentry{README.md@{README.md}|hyperpage}{307}
+\indexentry{report.md@{report.md}|hyperpage}{307}
+\indexentry{term.cpp@{term.cpp}|hyperpage}{307}
+\indexentry{term.cpp@{term.cpp}!operator$<$$<$@{operator$<$$<$}|hyperpage}{308}
+\indexentry{operator$<$$<$@{operator$<$$<$}!term.cpp@{term.cpp}|hyperpage}{308}
+\indexentry{term.cpp@{term.cpp}|hyperpage}{308}
 \indexentry{term.h@{term.h}|hyperpage}{309}
-\indexentry{threadSharedListHandler.cpp@{threadSharedListHandler.cpp}|hyperpage}{310}
-\indexentry{threadSharedListHandler.cpp@{threadSharedListHandler.cpp}|hyperpage}{311}
-\indexentry{threadSharedListHandler.h@{threadSharedListHandler.h}|hyperpage}{311}
-\indexentry{threadSharedListHandler.h@{threadSharedListHandler.h}|hyperpage}{312}
-\indexentry{Train.cpp@{Train.cpp}|hyperpage}{314}
-\indexentry{Train.cpp@{Train.cpp}|hyperpage}{314}
-\indexentry{Train.h@{Train.h}|hyperpage}{315}
+\indexentry{term.h@{term.h}!TERM\_FAIL@{TERM\_FAIL}|hyperpage}{311}
+\indexentry{TERM\_FAIL@{TERM\_FAIL}!term.h@{term.h}|hyperpage}{311}
+\indexentry{term.h@{term.h}!TERM\_INFO@{TERM\_INFO}|hyperpage}{311}
+\indexentry{TERM\_INFO@{TERM\_INFO}!term.h@{term.h}|hyperpage}{311}
+\indexentry{term.h@{term.h}!TERM\_SUCC@{TERM\_SUCC}|hyperpage}{311}
+\indexentry{TERM\_SUCC@{TERM\_SUCC}!term.h@{term.h}|hyperpage}{311}
+\indexentry{term.h@{term.h}!TERM\_WARN@{TERM\_WARN}|hyperpage}{311}
+\indexentry{TERM\_WARN@{TERM\_WARN}!term.h@{term.h}|hyperpage}{311}
+\indexentry{term.h@{term.h}|hyperpage}{311}
+\indexentry{threadSharedListHandler.cpp@{threadSharedListHandler.cpp}|hyperpage}{312}
+\indexentry{threadSharedListHandler.cpp@{threadSharedListHandler.cpp}|hyperpage}{313}
+\indexentry{threadSharedListHandler.h@{threadSharedListHandler.h}|hyperpage}{313}
+\indexentry{threadSharedListHandler.h@{threadSharedListHandler.h}|hyperpage}{314}
+\indexentry{Train.cpp@{Train.cpp}|hyperpage}{316}
+\indexentry{Train.cpp@{Train.cpp}|hyperpage}{316}
 \indexentry{Train.h@{Train.h}|hyperpage}{317}
-\indexentry{UnitTests.cpp@{UnitTests.cpp}|hyperpage}{317}
-\indexentry{UnitTests.cpp@{UnitTests.cpp}|hyperpage}{318}
+\indexentry{Train.h@{Train.h}|hyperpage}{319}
+\indexentry{UnitTests.cpp@{UnitTests.cpp}|hyperpage}{319}
+\indexentry{UnitTests.cpp@{UnitTests.cpp}|hyperpage}{320}
