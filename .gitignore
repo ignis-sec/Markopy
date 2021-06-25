@@ -358,7 +358,7 @@ MigrationBackup/
 
 # Development models and datasets
 datasets/*
-models/*
+#models/*
 
 # Sample datasets
 Markopy/src/CLI/sample_datasets/*
