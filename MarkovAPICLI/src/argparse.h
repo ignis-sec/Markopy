@@ -1,3 +1,10 @@
+/** @file argparse.h
+ * @brief Arguement handler class for native CPP cli
+ * @authors Celal Sahir Çetiner
+ * 
+ * @copydoc Markov::API::CLI::Argparse:
+ */
+
 #include<string>
 #include<iostream>
 

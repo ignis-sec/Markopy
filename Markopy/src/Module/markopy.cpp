@@ -1,3 +1,25 @@
+/** @file markopy.cpp
+ * @brief CPython wrapper for libmarkov utils.
+ * @authors Ata Hakçıl, Celal Sahir Çetiner
+ * 
+ * This file is a wrapper for libmarkov utilities, exposing:
+ * - MarkovPasswords
+ *   - Import
+ *   - Export
+ *   - Train
+ *   - Generate
+ * - ModelMatrix
+ *   - Import
+ *   - Export 
+ *   - Train
+ *   - ConstructMatrix
+ *   - DumpJSON
+ *   - FastRandomWalk
+ * 
+ * @copydoc Markov::API::MarkovPasswords
+ * @copydoc Markov::API::ModelMatrix
+ * 
+*/
 
 #define BOOST_ALL_STATIC_LIB 1
 #define BOOST_PYTHON_STATIC_LIB 1

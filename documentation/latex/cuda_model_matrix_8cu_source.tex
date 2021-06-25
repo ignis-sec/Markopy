@@ -1,0 +1,278 @@
+\hypertarget{cuda_model_matrix_8cu_source}{}\doxysection{cuda\+Model\+Matrix.\+cu}
+\label{cuda_model_matrix_8cu_source}\index{cudaModelMatrix.cu@{cudaModelMatrix.cu}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/** @file cudaModelMatrix.cu}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @brief CUDA accelerated extension of Markov::API::ModelMatrix}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @authors Ata Hakçıl}}
+\DoxyCodeLine{00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{00005 \textcolor{comment}{ * @copydoc Markov::API::CUDA::CUDAModelMatrix}}
+\DoxyCodeLine{00006 \textcolor{comment}{ */}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{cuda_model_matrix_8h}{"cudaModelMatrix.h"}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{cudarandom_8h}{"cudarandom.h"}}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{curand\_kernel}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cuda}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cuda\_runtime}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{device\_launch\_parameters}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 \textcolor{keyword}{using} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::CUDADeviceController;}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}\{}
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8cu_source_l00020}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a5dd552997a32c0cabf3a6cca6fb07b73}{00020}}     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a5dd552997a32c0cabf3a6cca6fb07b73}{\_\_host\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{CUDAModelMatrix}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a5dd552997a32c0cabf3a6cca6fb07b73}{MigrateMatrix}}()\{}
+\DoxyCodeLine{00021         cudaError\_t cudastatus;}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023         cudastatus = cudaMalloc((\textcolor{keywordtype}{char}**)\&(\textcolor{keyword}{this}-\/>device\_matrixIndex),}
+\DoxyCodeLine{00024             \textcolor{keyword}{this}-\/>matrixSize*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{00025         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"Cuda failed to initialize device\_matrixIndex."});}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027         cudastatus = cudaMalloc((\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} **)\&(\textcolor{keyword}{this}-\/>device\_totalEdgeWeights), \textcolor{keyword}{this}-\/>matrixSize*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00028         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"Cuda failed to initialize device\_totalEdgeWeights."});}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030         cudastatus = cudaMemcpy(\textcolor{keyword}{this}-\/>device\_matrixIndex, \textcolor{keyword}{this}-\/>matrixIndex,}
+\DoxyCodeLine{00031             \textcolor{keyword}{this}-\/>matrixSize*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00032         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"Cuda failed to copy to device memory. (Index)"});}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034         cudastatus = cudaMemcpy(\textcolor{keyword}{this}-\/>device\_totalEdgeWeights, \textcolor{keyword}{this}-\/>totalEdgeWeights,}
+\DoxyCodeLine{00035             \textcolor{keyword}{this}-\/>matrixSize*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int}), cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00036         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"Cuda failed to copy to device memory. (Total Edge Values)"});}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038         cudastatus = CudaMigrate2DFlat<\textcolor{keywordtype}{char}>(}
+\DoxyCodeLine{00039             \&(\textcolor{keyword}{this}-\/>device\_edgeMatrix), \textcolor{keyword}{this}-\/>edgeMatrix, \textcolor{keyword}{this}-\/>matrixSize, \textcolor{keyword}{this}-\/>matrixSize);}
+\DoxyCodeLine{00040         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"    Cuda failed to initialize edge matrix."});}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042         cudastatus = CudaMigrate2DFlat<\textcolor{keywordtype}{long} \textcolor{keywordtype}{int}>(}
+\DoxyCodeLine{00043             \&(\textcolor{keyword}{this}-\/>device\_valueMatrix), \textcolor{keyword}{this}-\/>valueMatrix, \textcolor{keyword}{this}-\/>matrixSize, \textcolor{keyword}{this}-\/>matrixSize);}
+\DoxyCodeLine{00044         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"    Cuda failed to initialize value matrix row."});}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046     \}}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048     \textcolor{comment}{/*\_\_host\_\_ char*  Markov::API::CUDA::CUDAModelMatrix::AllocVRAMOutputBuffer(long int n, long int singleGenMaxLen, long int CUDAKernelGridSize,long int sizePerGrid)\{}}
+\DoxyCodeLine{00049 \textcolor{comment}{        cudaError\_t cudastatus;}}
+\DoxyCodeLine{00050 \textcolor{comment}{        cudastatus = cudaMalloc((char **)\&this-\/>device\_outputBuffer1, CUDAKernelGridSize*sizePerGrid);}}
+\DoxyCodeLine{00051 \textcolor{comment}{        CudaCheckNotifyErr(cudastatus, "Failed to allocate VRAM buffer. (Possibly out of VRAM.)");}}
+\DoxyCodeLine{00052 \textcolor{comment}{        }}
+\DoxyCodeLine{00053 \textcolor{comment}{        return this-\/>device\_outputBuffer1;}}
+\DoxyCodeLine{00054 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8cu_source_l00058}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac9d971ef67f5062f2fe756a7286a15b9}{00058}}     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac9d971ef67f5062f2fe756a7286a15b9}{\_\_host\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{CUDAModelMatrix}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac9d971ef67f5062f2fe756a7286a15b9}{FastRandomWalk}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac9d971ef67f5062f2fe756a7286a15b9}{n}}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac9d971ef67f5062f2fe756a7286a15b9}{wordlistFileName}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac9d971ef67f5062f2fe756a7286a15b9}{minLen}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac9d971ef67f5062f2fe756a7286a15b9}{maxLen}}, \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac9d971ef67f5062f2fe756a7286a15b9}{bFileIO}}, \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac9d971ef67f5062f2fe756a7286a15b9}{bInfinite}})\{}
+\DoxyCodeLine{00059         cudaDeviceProp prop;}
+\DoxyCodeLine{00060         \textcolor{keywordtype}{int} device=0;}
+\DoxyCodeLine{00061         cudaGetDeviceProperties(\&prop, device);}
+\DoxyCodeLine{00062         cudaChooseDevice(\&device, \&prop);}
+\DoxyCodeLine{00063         \textcolor{comment}{//std::cout << "Flattening matrix." << std::endl;}}
+\DoxyCodeLine{00064         \textcolor{keyword}{this}-\/>FlattenMatrix();}
+\DoxyCodeLine{00065         \textcolor{comment}{//std::cout << "Migrating matrix." << std::endl;}}
+\DoxyCodeLine{00066         \textcolor{keyword}{this}-\/>MigrateMatrix();}
+\DoxyCodeLine{00067         \textcolor{comment}{//std::cout << "Migrated matrix." << std::endl;}}
+\DoxyCodeLine{00068         std::ofstream wordlist;}
+\DoxyCodeLine{00069         \textcolor{keywordflow}{if}(bFileIO)}
+\DoxyCodeLine{00070             wordlist.open(wordlistFileName);}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aa766da0ed9e36697b33b45887b55fe81}{cudaBlocks}} = 1024;}
+\DoxyCodeLine{00074         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ae0b55a41086fbb8afcacdc4a076c85ab}{cudaThreads}} = 256;}
+\DoxyCodeLine{00075         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{iterationsPerKernelThread}} = 100;}
+\DoxyCodeLine{00076         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ad8d2ede773004722efa2bba39f76e186}{alternatingKernels}} = 2;}
+\DoxyCodeLine{00077         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a391422909c58da061283df0f1ff8069a}{totalOutputPerKernel}} = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{int})\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aa766da0ed9e36697b33b45887b55fe81}{cudaBlocks}}*(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int})\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ae0b55a41086fbb8afcacdc4a076c85ab}{cudaThreads}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{iterationsPerKernelThread}};}
+\DoxyCodeLine{00078         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a37c46cbceec37984c029be96402c60bf}{totalOutputPerSync}}= \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a391422909c58da061283df0f1ff8069a}{totalOutputPerKernel}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ad8d2ede773004722efa2bba39f76e186}{alternatingKernels}};}
+\DoxyCodeLine{00079         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a91f9343a8d6eb14f094b8fecf9bf740a}{numberOfPartitions}} = n/\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a37c46cbceec37984c029be96402c60bf}{totalOutputPerSync}};}
+\DoxyCodeLine{00080         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_afaa4601b838fb62a5c95e4d7dc44dea8}{cudaGridSize}} = \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aa766da0ed9e36697b33b45887b55fe81}{cudaBlocks}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ae0b55a41086fbb8afcacdc4a076c85ab}{cudaThreads}};}
+\DoxyCodeLine{00081         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a27101ee4851ec3aa480d3d2df3610535}{cudaMemPerGrid}} = (maxLen+2)*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{iterationsPerKernelThread}};}
+\DoxyCodeLine{00082         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a306164e3689c651ec597a2f183a2115c}{cudaPerKernelAllocationSize}} = \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_afaa4601b838fb62a5c95e4d7dc44dea8}{cudaGridSize}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a27101ee4851ec3aa480d3d2df3610535}{cudaMemPerGrid}};}
+\DoxyCodeLine{00083         \textcolor{keyword}{this}-\/>prepKernelMemoryChannel(alternatingKernels);}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} leftover = n -\/ (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a37c46cbceec37984c029be96402c60bf}{totalOutputPerSync}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a91f9343a8d6eb14f094b8fecf9bf740a}{numberOfPartitions}});}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087         \textcolor{keywordflow}{if}(bInfinite \&\& !\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a91f9343a8d6eb14f094b8fecf9bf740a}{numberOfPartitions}}) \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a91f9343a8d6eb14f094b8fecf9bf740a}{numberOfPartitions}}=5;}
+\DoxyCodeLine{00088         std::cerr << \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a306164e3689c651ec597a2f183a2115c}{cudaPerKernelAllocationSize}} << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00090         \textcolor{keywordflow}{if}(n\%\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a37c46cbceec37984c029be96402c60bf}{totalOutputPerSync}}) std::cerr << \textcolor{stringliteral}{"For optimization, request outputs muliples of "}<< \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a37c46cbceec37984c029be96402c60bf}{totalOutputPerSync}} << \textcolor{stringliteral}{".\(\backslash\)n"};}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092         \textcolor{comment}{//start kernelID 1}}
+\DoxyCodeLine{00093         \textcolor{keyword}{this}-\/>LaunchAsyncKernel(1, minLen, maxLen);}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=1;i<\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a91f9343a8d6eb14f094b8fecf9bf740a}{numberOfPartitions}};i++)\{}
+\DoxyCodeLine{00096             \textcolor{keywordflow}{if}(bInfinite) i=0;}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098             \textcolor{comment}{//wait kernelID1 to finish, and start kernelID 0}}
+\DoxyCodeLine{00099             cudaStreamSynchronize(\textcolor{keyword}{this}-\/>cudastreams[1]);}
+\DoxyCodeLine{00100             \textcolor{keyword}{this}-\/>LaunchAsyncKernel(0, minLen, maxLen);}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102             \textcolor{comment}{//start memcpy from kernel 1 (block until done)}}
+\DoxyCodeLine{00103             \textcolor{keyword}{this}-\/>GatherAsyncKernelOutput(1, bFileIO, wordlist);}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{00105             \textcolor{comment}{//wait kernelID 0 to finish, then start kernelID1}}
+\DoxyCodeLine{00106             cudaStreamSynchronize(\textcolor{keyword}{this}-\/>cudastreams[0]);}
+\DoxyCodeLine{00107             \textcolor{keyword}{this}-\/>LaunchAsyncKernel(1, minLen, maxLen);}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109             \textcolor{comment}{//start memcpy from kernel 0 (block until done)}}
+\DoxyCodeLine{00110             \textcolor{keyword}{this}-\/>GatherAsyncKernelOutput(0, bFileIO, wordlist);}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112         \}}
+\DoxyCodeLine{00113 }
+\DoxyCodeLine{00114         \textcolor{comment}{//wait kernelID1 to finish, and start kernelID 0}}
+\DoxyCodeLine{00115         cudaStreamSynchronize(\textcolor{keyword}{this}-\/>cudastreams[1]);}
+\DoxyCodeLine{00116         \textcolor{keyword}{this}-\/>LaunchAsyncKernel(0, minLen, maxLen);}
+\DoxyCodeLine{00117         \textcolor{keyword}{this}-\/>GatherAsyncKernelOutput(1, bFileIO, wordlist);}
+\DoxyCodeLine{00118         cudaStreamSynchronize(\textcolor{keyword}{this}-\/>cudastreams[0]);}
+\DoxyCodeLine{00119         \textcolor{keyword}{this}-\/>GatherAsyncKernelOutput(0, bFileIO, wordlist);}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{00122         \textcolor{keywordflow}{if}(!leftover) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00123         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ad8d2ede773004722efa2bba39f76e186}{alternatingKernels}}=1;}
+\DoxyCodeLine{00124         std::cerr << \textcolor{stringliteral}{"Remaining line count ("} << leftover << \textcolor{stringliteral}{") is lower than partition. Adjusting CUDA workload..\(\backslash\)n"};}
+\DoxyCodeLine{00125         \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{iterationsPerKernelThread}} = leftover/\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_afaa4601b838fb62a5c95e4d7dc44dea8}{cudaGridSize}};}
+\DoxyCodeLine{00126         \textcolor{keyword}{this}-\/>LaunchAsyncKernel(0, minLen, maxLen);}
+\DoxyCodeLine{00127         cudaStreamSynchronize(\textcolor{keyword}{this}-\/>cudastreams[0]);}
+\DoxyCodeLine{00128         \textcolor{keyword}{this}-\/>GatherAsyncKernelOutput(0, bFileIO, wordlist);}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130         leftover -\/= \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{iterationsPerKernelThread}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_afaa4601b838fb62a5c95e4d7dc44dea8}{cudaGridSize}};}
+\DoxyCodeLine{00131         \textcolor{keywordflow}{if}(!leftover) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133         std::cerr << \textcolor{stringliteral}{"Remaining line count ("} << leftover << \textcolor{stringliteral}{") is lower than minimum possible. Handing over to CPU generation.\(\backslash\)n"};}
+\DoxyCodeLine{00134         \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{iterationsPerKernelThread}} = leftover/\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_afaa4601b838fb62a5c95e4d7dc44dea8}{cudaGridSize}};}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136         leftover -\/= \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{iterationsPerKernelThread}};}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138         \textcolor{keywordflow}{if}(!leftover) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00139         std::cerr << \textcolor{stringliteral}{"Remaining "} << leftover << \textcolor{stringliteral}{" lines are absolutely not worth printing.\(\backslash\)n"};}
+\DoxyCodeLine{00140         Markov::API::ModelMatrix::ConstructMatrix();}
+\DoxyCodeLine{00141         Markov::API::ModelMatrix::FastRandomWalk(leftover, \&wordlist, minLen, maxLen, 1, bFileIO);}
+\DoxyCodeLine{00142 }
+\DoxyCodeLine{00143     \}}
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8cu_source_l00145}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aa9d82f3bf38544bd94b5074c9d3b89d3}{00145}}     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aa9d82f3bf38544bd94b5074c9d3b89d3}{\_\_host\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{CUDAModelMatrix}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aa9d82f3bf38544bd94b5074c9d3b89d3}{prepKernelMemoryChannel}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_aa9d82f3bf38544bd94b5074c9d3b89d3}{numberOfStreams}})\{}
+\DoxyCodeLine{00146 }
+\DoxyCodeLine{00147         \textcolor{keyword}{this}-\/>cudastreams = \textcolor{keyword}{new} cudaStream\_t[numberOfStreams];}
+\DoxyCodeLine{00148         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<numberOfStreams;i++)}
+\DoxyCodeLine{00149             cudaStreamCreate(\&\textcolor{keyword}{this}-\/>cudastreams[i]);}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151         \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a7b18ffe2f94cb380dccfdd996e4157e9}{-\/>}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a7b18ffe2f94cb380dccfdd996e4157e9}{outputBuffer}} = \textcolor{keyword}{new} \textcolor{keywordtype}{char}*[numberOfStreams];}
+\DoxyCodeLine{00152         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<numberOfStreams;i++)}
+\DoxyCodeLine{00153             \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a7b18ffe2f94cb380dccfdd996e4157e9}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a7b18ffe2f94cb380dccfdd996e4157e9}{outputBuffer}}[i]= \textcolor{keyword}{new} \textcolor{keywordtype}{char}[\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a306164e3689c651ec597a2f183a2115c}{cudaPerKernelAllocationSize}}];}
+\DoxyCodeLine{00154 }
+\DoxyCodeLine{00155         cudaError\_t cudastatus;}
+\DoxyCodeLine{00156         \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a589f82de68793f8fbc570827d092fd1a}{-\/>}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a589f82de68793f8fbc570827d092fd1a}{device\_outputBuffer}} = \textcolor{keyword}{new} \textcolor{keywordtype}{char}*[numberOfStreams];}
+\DoxyCodeLine{00157             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<numberOfStreams;i++)\{}
+\DoxyCodeLine{00158                 cudastatus = cudaMalloc((\textcolor{keywordtype}{char}**)\&(device\_outputBuffer[i]), cudaPerKernelAllocationSize);}
+\DoxyCodeLine{00159                 CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"Failed to establish memory channel. Possibly out of VRAM?"});}
+\DoxyCodeLine{00160             \}}
+\DoxyCodeLine{00161 }
+\DoxyCodeLine{00162         \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1bdd84e951e4afff952f80be85a3e6c0}{-\/>}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1bdd84e951e4afff952f80be85a3e6c0}{device\_seeds}} = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}*[numberOfStreams];}
+\DoxyCodeLine{00163         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<numberOfStreams;i++)\{}
+\DoxyCodeLine{00164             \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}} *MEarr = \textcolor{keyword}{new} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}}[\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_afaa4601b838fb62a5c95e4d7dc44dea8}{cudaGridSize}}];}
+\DoxyCodeLine{00165             \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1bdd84e951e4afff952f80be85a3e6c0}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1bdd84e951e4afff952f80be85a3e6c0}{device\_seeds}}[i] = \mbox{\hyperlink{namespace_markov}{Markov}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}{::}}\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}{::}}\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}{::}}\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}{MigrateToVRAM}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}{(}}MEarr\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}{,}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_afaa4601b838fb62a5c95e4d7dc44dea8}{cudaGridSize}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia_acb0d606c1de30fe59858f6e0cb9f7935}{)}};}
+\DoxyCodeLine{00166             \textcolor{keyword}{delete}[] MEarr;}
+\DoxyCodeLine{00167         \}}
+\DoxyCodeLine{00168 }
+\DoxyCodeLine{00169     \}}
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8cu_source_l00171}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6856c284e1e50962c9428a0116033228}{00171}}     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6856c284e1e50962c9428a0116033228}{\_\_host\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{CUDAModelMatrix}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6856c284e1e50962c9428a0116033228}{LaunchAsyncKernel}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6856c284e1e50962c9428a0116033228}{kernelID}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6856c284e1e50962c9428a0116033228}{minLen}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6856c284e1e50962c9428a0116033228}{maxLen}})\{}
+\DoxyCodeLine{00172 }
+\DoxyCodeLine{00173         \textcolor{comment}{//if(kernelID == 0);// cudaStreamSynchronize(this-\/>cudastreams[2]);}}
+\DoxyCodeLine{00174         \textcolor{comment}{//else cudaStreamSynchronize(this-\/>cudastreams[kernelID-\/1]);}}
+\DoxyCodeLine{00175         FastRandomWalkCUDAKernel<<<cudaBlocks,cudaThreads,0, \textcolor{keyword}{this}-\/>cudastreams[kernelID]>>>(iterationsPerKernelThread, minLen, maxLen, \textcolor{keyword}{this}-\/>device\_outputBuffer[kernelID], \textcolor{keyword}{this}-\/>device\_matrixIndex,}
+\DoxyCodeLine{00176             \textcolor{keyword}{this}-\/>device\_totalEdgeWeights, \textcolor{keyword}{this}-\/>device\_valueMatrix, \textcolor{keyword}{this}-\/>device\_edgeMatrix, \textcolor{keyword}{this}-\/>matrixSize, cudaMemPerGrid, \textcolor{keyword}{this}-\/>device\_seeds[kernelID]);}
+\DoxyCodeLine{00177         \textcolor{comment}{//std::cerr << "Started kernel" << kernelID << "\(\backslash\)n";}}
+\DoxyCodeLine{00178     \}}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8cu_source_l00180}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{00180}}     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{\_\_host\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{CUDAModelMatrix}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{GatherAsyncKernelOutput}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{kernelID}}, \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{bFileIO}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{std}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{ofstream}} \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{wordlist}})\{}
+\DoxyCodeLine{00181         cudaMemcpy(\textcolor{keyword}{this}-\/>outputBuffer[kernelID],\textcolor{keyword}{this}-\/>device\_outputBuffer[kernelID],cudaPerKernelAllocationSize, cudaMemcpyDeviceToHost);}
+\DoxyCodeLine{00182         \textcolor{comment}{//std::cerr << "Kernel" << kernelID << " output copied\(\backslash\)n";}}
+\DoxyCodeLine{00183         \textcolor{keywordflow}{if}(bFileIO)\{}
+\DoxyCodeLine{00184             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} j=0;j<\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a306164e3689c651ec597a2f183a2115c}{cudaPerKernelAllocationSize}};j+=\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a27101ee4851ec3aa480d3d2df3610535}{cudaMemPerGrid}})\{}
+\DoxyCodeLine{00185                 wordlist << \&\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a7b18ffe2f94cb380dccfdd996e4157e9}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a7b18ffe2f94cb380dccfdd996e4157e9}{outputBuffer}}[kernelID][j];}
+\DoxyCodeLine{00186             \}}
+\DoxyCodeLine{00187         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00188             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} j=0;j<\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a306164e3689c651ec597a2f183a2115c}{cudaPerKernelAllocationSize}};j+=\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a27101ee4851ec3aa480d3d2df3610535}{cudaMemPerGrid}})\{}
+\DoxyCodeLine{00189                 std::cout << \&\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a7b18ffe2f94cb380dccfdd996e4157e9}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a7b18ffe2f94cb380dccfdd996e4157e9}{outputBuffer}}[kernelID][j];}
+\DoxyCodeLine{00190             \}}
+\DoxyCodeLine{00191         \}}
+\DoxyCodeLine{00192     \}}
+\DoxyCodeLine{00193 }
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8cu_source_l00194}\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{00194}}     \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{\_\_global\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{FastRandomWalkCUDAKernel}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{n}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{minLen}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{maxLen}}, \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{outputBuffer}},}
+\DoxyCodeLine{00195     \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{matrixIndex}}, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{totalEdgeWeights}}, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{valueMatrix}}, \textcolor{keywordtype}{char} *\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{edgeMatrix}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{matrixSize}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{memoryPerKernelGrid}}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{seed}})\{}
+\DoxyCodeLine{00196 }
+\DoxyCodeLine{00197         \textcolor{keywordtype}{int} kernelWorkerIndex = threadIdx.x + blockIdx.x * blockDim.x;}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199         \textcolor{keywordflow}{if}(n==0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201         \textcolor{keywordtype}{char}* e;}
+\DoxyCodeLine{00202         \textcolor{keywordtype}{int} index = 0;}
+\DoxyCodeLine{00203         \textcolor{keywordtype}{char} next;}
+\DoxyCodeLine{00204         \textcolor{keywordtype}{int} len=0;}
+\DoxyCodeLine{00205         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} selection;}
+\DoxyCodeLine{00206         \textcolor{keywordtype}{char} cur;}
+\DoxyCodeLine{00207         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} bufferctr = 0;}
+\DoxyCodeLine{00208         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} *x,*y,*z,t;}
+\DoxyCodeLine{00209         \textcolor{keywordtype}{char}* res = \&outputBuffer[kernelWorkerIndex*memoryPerKernelGrid];}
+\DoxyCodeLine{00210         x=\&seed[kernelWorkerIndex*3];}
+\DoxyCodeLine{00211         y=\&seed[kernelWorkerIndex*3+1];}
+\DoxyCodeLine{00212         z=\&seed[kernelWorkerIndex*3+2];}
+\DoxyCodeLine{00213         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; i++) \{}
+\DoxyCodeLine{00214             cur=199;}
+\DoxyCodeLine{00215             len=0;}
+\DoxyCodeLine{00216             \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{00217                 e = strchr(matrixIndex, cur, matrixSize);}
+\DoxyCodeLine{00218                 index = e -\/ matrixIndex;}
+\DoxyCodeLine{00219                 \textcolor{comment}{/*selection = Markov::API::CUDA::Random::devrandom(}}
+\DoxyCodeLine{00220 \textcolor{comment}{                    seed[kernelWorkerIndex*3],}}
+\DoxyCodeLine{00221 \textcolor{comment}{                    seed[kernelWorkerIndex*3+1],}}
+\DoxyCodeLine{00222 \textcolor{comment}{                    seed[kernelWorkerIndex*3+2]) \% totalEdgeWeights[index];*/}}
+\DoxyCodeLine{00223                 *x \string^= *x << 16;}
+\DoxyCodeLine{00224                 *x \string^= *x >> 5;}
+\DoxyCodeLine{00225                 *x \string^= *x << 1;}
+\DoxyCodeLine{00226 }
+\DoxyCodeLine{00227                 t = *x;}
+\DoxyCodeLine{00228                 *x = *y;}
+\DoxyCodeLine{00229                 *y = *z;}
+\DoxyCodeLine{00230                 *z = t \string^ *x \string^ *y;}
+\DoxyCodeLine{00231                 selection = *z \% totalEdgeWeights[index];}
+\DoxyCodeLine{00232             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<matrixSize-\/1;j++)\{}
+\DoxyCodeLine{00233                     selection -\/= valueMatrix[index*matrixSize + j];}
+\DoxyCodeLine{00234                     \textcolor{keywordflow}{if} (selection < 0)\{}
+\DoxyCodeLine{00235                         next = edgeMatrix[index*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*matrixSize + j];}
+\DoxyCodeLine{00236                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00237                     \}}
+\DoxyCodeLine{00238                 \}}
+\DoxyCodeLine{00239 }
+\DoxyCodeLine{00240                 \textcolor{keywordflow}{if} (len >= maxLen)  \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00241                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((next < 0) \&\& (len < minLen)) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00242                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (next < 0) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00243                 cur = next;}
+\DoxyCodeLine{00244                 res[bufferctr + len++] = cur;}
+\DoxyCodeLine{00245             \}}
+\DoxyCodeLine{00246             res[bufferctr + len++] = \textcolor{stringliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00247             bufferctr+=len;}
+\DoxyCodeLine{00248         \}}
+\DoxyCodeLine{00249         res[bufferctr] = \textcolor{stringliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00250     \}}
+\DoxyCodeLine{00251 }
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8cu_source_l00252}\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{00252}}     \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{\_\_device\_\_}} \textcolor{keywordtype}{char}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{strchr}}(\textcolor{keywordtype}{char}* \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{p}}, \textcolor{keywordtype}{char} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{c}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{s\_len}})\{}
+\DoxyCodeLine{00253        \textcolor{keywordflow}{for} (;; ++p, s\_len-\/-\/) \{}
+\DoxyCodeLine{00254             \textcolor{keywordflow}{if} (*p ==  c)}
+\DoxyCodeLine{00255                 \textcolor{keywordflow}{return}((\textcolor{keywordtype}{char} *)p);}
+\DoxyCodeLine{00256             \textcolor{keywordflow}{if} (!*p)}
+\DoxyCodeLine{00257                 \textcolor{keywordflow}{return}((\textcolor{keywordtype}{char} *)NULL);}
+\DoxyCodeLine{00258         \}}
+\DoxyCodeLine{00259     \}}
+\DoxyCodeLine{00260 }
+\DoxyCodeLine{\Hypertarget{cuda_model_matrix_8cu_source_l00261}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ae40af2e90f0500e2780a017f0d39f5e5}{00261}}     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ae40af2e90f0500e2780a017f0d39f5e5}{\_\_host\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{CUDAModelMatrix}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ae40af2e90f0500e2780a017f0d39f5e5}{FlattenMatrix}}()\{}
+\DoxyCodeLine{00262         \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6345ea79ce015e2a97d1be91a661449a}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a6345ea79ce015e2a97d1be91a661449a}{flatEdgeMatrix}} = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}*\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00263 }
+\DoxyCodeLine{00264         \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_abb65a788e9039a3b46cc5cdc76a11130}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_abb65a788e9039a3b46cc5cdc76a11130}{flatValueMatrix}} = \textcolor{keyword}{new} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}[\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}*\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00265         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00266             memcpy(\&\textcolor{keyword}{this}-\/>flatEdgeMatrix[i*\textcolor{keyword}{this}-\/>matrixSize], \textcolor{keyword}{this}-\/>edgeMatrix[i], \textcolor{keyword}{this}-\/>matrixSize );}
+\DoxyCodeLine{00267             memcpy(\&\textcolor{keyword}{this}-\/>flatValueMatrix[i*\textcolor{keyword}{this}-\/>matrixSize], \textcolor{keyword}{this}-\/>valueMatrix[i], \textcolor{keyword}{this}-\/>matrixSize*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int}) );}
+\DoxyCodeLine{00268         \}}
+\DoxyCodeLine{00269     \}}
+\DoxyCodeLine{00270 }
+\DoxyCodeLine{00271 }
+\DoxyCodeLine{00272 \};}
+
+\end{DoxyCode}

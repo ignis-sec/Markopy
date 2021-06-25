@@ -1,3 +1,11 @@
+/** @file node.h
+ * @brief Node class template
+ * @authors Ata Hakçıl, Osman Ömer Yıldıztugay
+ * 
+ * @copydoc Markov::Node
+ */
+
+
 #pragma once
 #include <vector>
 #include <map>

@@ -1,3 +1,10 @@
+/** @file threadSharedListHandler.h
+ * @brief Thread-safe wrapper for std::ifstream
+ * @authors Ata Hakçıl
+ * 
+ * @copydoc Markov::API::Concurrency::ThreadSharedListHandler
+ */
+
 #include <string>
 #include <fstream>
 #include <mutex>

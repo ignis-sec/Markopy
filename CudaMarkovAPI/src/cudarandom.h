@@ -1,3 +1,10 @@
+/** @file cudarandom.h
+ * @brief Extension of Markov::Random::Marsaglia for CUDA 
+ * @authors Ata Hakçıl
+ * 
+ * @copydoc Markov::Random::Marsaglia
+ */
+
 #pragma once
 #include "MarkovModel/src/random.h"
 #include "cudaDeviceController.h"
@@ -7,6 +14,8 @@
 namespace Markov::API::CUDA::Random{
 
 	/** @brief Extension of Markov::Random::Marsaglia which is capable o working on __device__ space.
+	 * 
+	 * @copydoc Markov::Random::Marsaglia
 	*/
     class Marsaglia : public Markov::Random::Marsaglia, public CUDADeviceController{
 	public:

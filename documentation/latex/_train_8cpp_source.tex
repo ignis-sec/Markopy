@@ -1,0 +1,88 @@
+\hypertarget{_train_8cpp_source}{}\doxysection{Train.\+cpp}
+\label{_train_8cpp_source}\index{Train.cpp@{Train.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/** @file Train.cpp}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @brief training page for GUI}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @authors Yunus Emre Yılmaz}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ */}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_train_8h}{"Train.h"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{fstream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\textcolor{preprocessor}{<}\textcolor{preprocessor}{QFileDialog}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\textcolor{preprocessor}{<}\textcolor{preprocessor}{QMessageBox}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\textcolor{preprocessor}{<}\textcolor{preprocessor}{QTextStream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\textcolor{preprocessor}{<}\textcolor{preprocessor}{QDir}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_c_l_i_8h}{"CLI.h"}}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{"MarkovAPI/src/markovPasswords.h"}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{QtWidgets}\textcolor{preprocessor}{/}\textcolor{preprocessor}{QApplication}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00017 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_generate_8h}{"Generate.h"}}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020 \textcolor{keyword}{using} \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}};}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{\Hypertarget{_train_8cpp_source_l00022}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_a81b5ca7eb56318ff1cefbc7c228a97cd}{00022}} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train}{Train}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_a81b5ca7eb56318ff1cefbc7c228a97cd}{Train}}(QWidget* parent)}
+\DoxyCodeLine{00023     : QMainWindow(parent)}
+\DoxyCodeLine{00024 \{}
+\DoxyCodeLine{00025     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_aca81fef5702a620bf650aa8a4c2bdaea}{ui}}.setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     QObject::connect(ui.pushButton, \&QPushButton::clicked, \textcolor{keyword}{this}, [\textcolor{keyword}{this}] \{train(); \});}
+\DoxyCodeLine{00030     QObject::connect(ui.pushButton\_2, \&QPushButton::clicked, \textcolor{keyword}{this}, [\textcolor{keyword}{this}] \{home(); \});}
+\DoxyCodeLine{00031     \textcolor{comment}{//QObject::connect(ui.pushButton\_3, \&QPushButton::clicked, this, [this] \{goGenerate(); \});}}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033     \textcolor{comment}{//ui.pushButton\_3-\/>setVisible(false);}}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036 \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{\Hypertarget{_train_8cpp_source_l00038}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_a6f74c2948379df5e7f0d8eba96c97fb0}{00038}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train}{Train}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_a6f74c2948379df5e7f0d8eba96c97fb0}{train}}() \{}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042     QString file\_name = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Open a File"}, QDir::homePath());}
+\DoxyCodeLine{00043     QFile file(file\_name);}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     \textcolor{keywordflow}{if} (!file.open(QFile::ReadOnly | QFile::Text)) \{}
+\DoxyCodeLine{00046         QMessageBox::warning(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Error"}, \textcolor{stringliteral}{"File Not Open!"});}
+\DoxyCodeLine{00047     \}}
+\DoxyCodeLine{00048     QTextStream in(\&file);}
+\DoxyCodeLine{00049     QString text = in.readAll();}
+\DoxyCodeLine{00050     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_aca81fef5702a620bf650aa8a4c2bdaea}{ui}}.plainTextEdit-\/>setPlainText(text);}
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053     \textcolor{keywordtype}{char}* cstr;}
+\DoxyCodeLine{00054     std::string fname = file\_name.toStdString();}
+\DoxyCodeLine{00055     cstr = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[fname.size() + 1];}
+\DoxyCodeLine{00056     strcpy(cstr, fname.c\_str());}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060     \textcolor{keywordtype}{char} a=\textcolor{stringliteral}{','};}
+\DoxyCodeLine{00061     \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{MarkovPasswords}} mp;}
+\DoxyCodeLine{00062     mp.Import(\textcolor{stringliteral}{"models/2gram.mdl"});}
+\DoxyCodeLine{00063     mp\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{.}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Train}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{(}}cstr\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{,}} a\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{,}} 10\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{)}}; \textcolor{comment}{//please parameterize this hardcoded 10 threads}}
+\DoxyCodeLine{00064     mp.Export(\textcolor{stringliteral}{"models/finished.mdl"});}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_aca81fef5702a620bf650aa8a4c2bdaea}{ui}}.label\_2-\/>setText(\textcolor{stringliteral}{"Training DONE!"});}
+\DoxyCodeLine{00067     \textcolor{comment}{//ui.pushButton\_3-\/>setVisible(true);}}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070     file.close();}
+\DoxyCodeLine{00071 \}}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{\Hypertarget{_train_8cpp_source_l00073}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_a7a1f48206baae01e8e658d8d7734bdde}{00073}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train}{Train}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_a7a1f48206baae01e8e658d8d7734bdde}{home}}() \{}
+\DoxyCodeLine{00074      \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i}{CLI}}* w = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i}{CLI}};}
+\DoxyCodeLine{00075      w-\/>show();}
+\DoxyCodeLine{00076      \textcolor{keyword}{this}-\/>close();}
+\DoxyCodeLine{00077 \}}
+\DoxyCodeLine{00078 \textcolor{comment}{/*void Train::goGenerate() \{}}
+\DoxyCodeLine{00079 \textcolor{comment}{    Generate* w = new Generate;}}
+\DoxyCodeLine{00080 \textcolor{comment}{    w-\/>show();}}
+\DoxyCodeLine{00081 \textcolor{comment}{    this-\/>close();}}
+\DoxyCodeLine{00082 \textcolor{comment}{\}*/}}
+
+\end{DoxyCode}

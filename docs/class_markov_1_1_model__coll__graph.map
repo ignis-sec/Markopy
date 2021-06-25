@@ -1,16 +1,10 @@
 <map id="Markov::Model&lt; NodeStorageType &gt;" name="Markov::Model&lt; NodeStorageType &gt;">
-<area shape="rect" id="node1" title="class for the final Markov Model, constructed from nodes and edges." alt="" coords="259,1261,522,1520"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_node.html" title=" " alt="" coords="455,561,711,872"/>
-<area shape="rect" id="node12" href="$class_markov_1_1_edge.html" title="Edge class used to link nodes in the model together." alt="" coords="570,955,825,1196"/>
-<area shape="rect" id="node14" title=" " alt="" coords="43,1024,389,1127"/>
-<area shape="rect" id="node3" title=" " alt="" coords="291,341,637,461"/>
-<area shape="rect" id="node4" title="STL class." alt="" coords="270,156,429,241"/>
-<area shape="rect" id="node13" title=" " alt="" coords="524,1585,825,1688"/>
-<area shape="rect" id="node5" title=" " alt="" coords="330,5,369,91"/>
-<area shape="rect" id="node6" title=" " alt="" coords="622,5,661,91"/>
-<area shape="rect" id="node8" title="STL class." alt="" coords="729,156,882,241"/>
-<area shape="rect" id="node7" title=" " alt="" coords="665,350,946,453"/>
-<area shape="rect" id="node10" title=" " alt="" coords="900,1585,1137,1688"/>
-<area shape="rect" id="node9" href="$class_markov_1_1_node.html" title="A node class that for the vertices of model. Connected with eachother using Edge." alt="" coords="729,1753,996,2047"/>
-<area shape="rect" id="node11" href="$class_markov_1_1_edge.html" title=" " alt="" coords="546,1261,811,1520"/>
+<area shape="rect" id="node1" title="class for the final Markov Model, constructed from nodes and edges." alt="" coords="270,851,533,1127"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_node.html" title=" " alt="" coords="191,324,447,617"/>
+<area shape="rect" id="node8" title=" " alt="" coords="7,683,353,785"/>
+<area shape="rect" id="node3" title=" " alt="" coords="51,165,93,250"/>
+<area shape="rect" id="node4" title=" " alt="" coords="117,5,281,91"/>
+<area shape="rect" id="node5" title=" " alt="" coords="286,156,631,259"/>
+<area shape="rect" id="node6" title=" " alt="" coords="447,5,700,91"/>
+<area shape="rect" id="node7" title=" " alt="" coords="655,156,937,259"/>
 </map>

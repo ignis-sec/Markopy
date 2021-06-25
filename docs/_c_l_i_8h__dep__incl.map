@@ -1,5 +1,8 @@
 <map id="CLI.h" name="CLI.h">
-<area shape="rect" id="node1" title=" " alt="" coords="114,5,177,35"/>
-<area shape="rect" id="node2" href="$_u_i_2src_2main_8cpp.html" title=" " alt="" coords="5,83,101,112"/>
-<area shape="rect" id="node3" href="$_markov_passwords_g_u_i_8cpp.html" title=" " alt="" coords="126,83,351,112"/>
+<area shape="rect" id="node1" title="CLI page." alt="" coords="283,5,345,35"/>
+<area shape="rect" id="node2" href="$_c_l_i_8cpp.html" title="CLI page." alt="" coords="5,83,87,112"/>
+<area shape="rect" id="node3" href="$_generate_8cpp.html" title="Generation Page." alt="" coords="111,83,242,112"/>
+<area shape="rect" id="node4" href="$_markov_passwords_g_u_i_2src_2main_8cpp.html" title="Entry point for GUI." alt="" coords="266,83,362,112"/>
+<area shape="rect" id="node5" href="$_markov_passwords_g_u_i_8cpp.html" title="Main activity page for GUI." alt="" coords="387,83,612,112"/>
+<area shape="rect" id="node6" href="$_train_8cpp.html" title="training page for GUI" alt="" coords="636,83,731,112"/>
 </map>

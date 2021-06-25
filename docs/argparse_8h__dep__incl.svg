@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Arguement handler class for native CPP cli.">
 <polygon fill="#bfbfbf" stroke="black" points="58,-58.5 58,-79.5 139,-79.5 139,-58.5 58,-58.5"/>
 <text text-anchor="middle" x="98.5" y="-65.9" font-family="Helvetica,sans-Serif" font-size="12.00">argparse.h</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="argparse_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="argparse_8cpp.html" target="_top" xlink:title="Arguement handler class for native CPP cli.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-21.5 95,-21.5 95,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="47.5" y="-7.9" font-family="Helvetica,sans-Serif" font-size="12.00">argparse.cpp</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="src_2main_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="_markov_a_p_i_c_l_i_2src_2main_8cpp.html" target="_top" xlink:title="Test cases for Markov::API::ModelMatrix.">
 <polygon fill="none" stroke="black" points="113.5,-0.5 113.5,-21.5 185.5,-21.5 185.5,-0.5 113.5,-0.5"/>
 <text text-anchor="middle" x="149.5" y="-7.9" font-family="Helvetica,sans-Serif" font-size="12.00">main.cpp</text>
 </a>

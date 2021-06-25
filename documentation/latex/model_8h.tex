@@ -1,5 +1,10 @@
 \hypertarget{model_8h}{}\doxysection{model.\+h File Reference}
 \label{model_8h}\index{model.h@{model.h}}
+
+
+Model class template.  
+
+
 {\ttfamily \#include $<$map$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
@@ -38,3 +43,17 @@ class \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model$<$ Node\+Storag
 \item 
  \mbox{\hyperlink{namespace_markov}{Markov}}
 \begin{DoxyCompactList}\small\item\em Namespace for the markov-\/model related classes. Contains \mbox{\hyperlink{class_markov_1_1_model}{Model}}, \mbox{\hyperlink{class_markov_1_1_node}{Node}} and \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model class template. 
+
+\begin{DoxyAuthor}{Authors}
+Ata Hakçıl, Osman Ömer Yıldıztugay
+\end{DoxyAuthor}
+class for the final \mbox{\hyperlink{namespace_markov}{Markov}} Model, constructed from nodes and edges. Each atomic piece of the generation result is stored in a node, while edges contain the relation weights. {\itshape Extending\+:} To extend the class, implement the template and inherit from it, as \char`\"{}class My\+Model \+: public Markov\+::\+Model$<$char$>$\char`\"{}. For a complete demonstration of how to extend the class, see Markov\+Passwords.
+
+Whole model can be defined as a list of the edges, as dangling nodes are pointless. This approach is used for the import/export operations. For more information on importing/exporting model, check out the github readme and wiki page. 
+
+Definition in file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+

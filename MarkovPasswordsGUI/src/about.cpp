@@ -1,3 +1,10 @@
+
+/** @file about.cpp
+ * @brief About page 
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 #include <fstream>
 #include <QtWidgets/QApplication>
 #include "about.h"

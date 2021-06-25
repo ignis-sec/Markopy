@@ -1,3 +1,13 @@
+/** @file modelMatrix.h
+ * @brief An extension of Markov::API::MarkovPasswords
+ * @authors Ata Hakçıl
+ * 
+ * This class shows superior performance compared to the traditional model at Markov::API::MarkovPasswords
+ * 
+ * @copydoc Markov::API::ModelMatrix
+ * 
+ */
+
 #include "markovPasswords.h"
 #include <mutex>
 

@@ -1,4 +1,5 @@
 <map id="Markov::GUI::about" name="Markov::GUI::about">
-<area shape="rect" id="node1" title="QT Class for about page." alt="" coords="5,139,181,224"/>
-<area shape="rect" id="node2" title=" " alt="" coords="25,5,161,91"/>
+<area shape="rect" id="node1" title="QT Class for about page." alt="" coords="47,156,223,241"/>
+<area shape="rect" id="node2" href="$class_q_main_window.html" title=" " alt="" coords="5,5,141,91"/>
+<area shape="rect" id="node3" title=" " alt="" coords="166,5,229,91"/>
 </map>

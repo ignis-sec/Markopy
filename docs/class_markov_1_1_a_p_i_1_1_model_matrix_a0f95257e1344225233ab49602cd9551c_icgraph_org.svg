@@ -22,76 +22,70 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="class_markov_1_1_a_p_i_1_1_model_matrix.html#aeba8bb79aa4dc2cfeda310f34b7c9427" target="_top" xlink:title="Open a file to import with filename, and call bool Model::Import with std::ifstream.">
-<polygon fill="none" stroke="black" points="206,-53.5 206,-87.5 375,-87.5 375,-53.5 206,-53.5"/>
-<text text-anchor="start" x="214" y="-73.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::API::ModelMatrix</text>
-<text text-anchor="middle" x="290.5" y="-60.9" font-family="Helvetica,sans-Serif" font-size="12.00">::Import</text>
+<polygon fill="none" stroke="black" points="206,-0.5 206,-34.5 375,-34.5 375,-0.5 206,-0.5"/>
+<text text-anchor="start" x="214" y="-20.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::API::ModelMatrix</text>
+<text text-anchor="middle" x="290.5" y="-7.9" font-family="Helvetica,sans-Serif" font-size="12.00">::Import</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M400.74,-55.97C392.17,-57.11 383.52,-58.26 375.05,-59.39"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="401.31,-59.43 410.76,-54.64 400.39,-52.49 401.31,-59.43"/>
+<path fill="none" stroke="midnightblue" d="M400.74,-31.49C392.17,-30.39 383.52,-29.29 375.05,-28.2"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="400.4,-34.98 410.76,-32.77 401.29,-28.03 400.4,-34.98"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:href="class_markov_1_1_a_p_i_1_1_model_matrix.html#af42d40d7a5c80f0dfe126a574a17f423" target="_top" xlink:title="Train the model with the dataset file.">
-<polygon fill="none" stroke="black" points="206,-0.5 206,-34.5 375,-34.5 375,-0.5 206,-0.5"/>
-<text text-anchor="start" x="214" y="-20.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::API::ModelMatrix</text>
-<text text-anchor="middle" x="290.5" y="-7.9" font-family="Helvetica,sans-Serif" font-size="12.00">::Train</text>
+<polygon fill="none" stroke="black" points="206,-53.5 206,-87.5 375,-87.5 375,-53.5 206,-53.5"/>
+<text text-anchor="start" x="214" y="-73.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::API::ModelMatrix</text>
+<text text-anchor="middle" x="290.5" y="-60.9" font-family="Helvetica,sans-Serif" font-size="12.00">::Train</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M400.74,-31.49C392.17,-30.39 383.52,-29.29 375.05,-28.2"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="400.4,-34.98 410.76,-32.77 401.29,-28.03 400.4,-34.98"/>
+<path fill="none" stroke="midnightblue" d="M400.74,-55.97C392.17,-57.11 383.52,-58.26 375.05,-59.39"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="401.31,-59.43 410.76,-54.64 400.39,-52.49 401.31,-59.43"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="0,-51.5 0,-85.5 170,-85.5 170,-51.5 0,-51.5"/>
-<text text-anchor="start" x="8" y="-71.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::Markopy::BOOST</text>
-<text text-anchor="middle" x="85" y="-58.9" font-family="Helvetica,sans-Serif" font-size="12.00">_PYTHON_MODULE</text>
+<polygon fill="none" stroke="black" points="0,-50.5 0,-84.5 170,-84.5 170,-50.5 0,-50.5"/>
+<text text-anchor="start" x="8" y="-70.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::Markopy::BOOST</text>
+<text text-anchor="middle" x="85" y="-57.9" font-family="Helvetica,sans-Serif" font-size="12.00">_PYTHON_MODULE</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M195.61,-69.58C187.17,-69.49 178.66,-69.41 170.31,-69.33"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="195.81,-73.08 205.85,-69.68 195.88,-66.08 195.81,-73.08"/>
+<path fill="none" stroke="midnightblue" d="M210.13,-37C192.1,-41.43 173.08,-46.1 155.5,-50.42"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="211.16,-40.35 220.04,-34.57 209.49,-33.55 211.16,-40.35"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title="Launch CLI tool.">
-<polygon fill="none" stroke="black" points="61.5,-10 61.5,-31 108.5,-31 108.5,-10 61.5,-10"/>
-<text text-anchor="middle" x="85" y="-17.4" font-family="Helvetica,sans-Serif" font-size="12.00">main</text>
+<g id="a_node4"><a xlink:href="_markov_a_p_i_c_l_i_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title="Launch CLI tool.">
+<polygon fill="none" stroke="black" points="61.5,-7 61.5,-28 108.5,-28 108.5,-7 61.5,-7"/>
+<text text-anchor="middle" x="85" y="-14.4" font-family="Helvetica,sans-Serif" font-size="12.00">main</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node2&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M209.92,-50.95C173.64,-42.03 133.41,-32.15 108.91,-26.13"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="209.49,-54.45 220.04,-53.43 211.16,-47.65 209.49,-54.45"/>
+<path fill="none" stroke="midnightblue" d="M195.44,-17.5C163.21,-17.5 129.95,-17.5 108.68,-17.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="195.85,-21 205.85,-17.5 195.85,-14 195.85,-21"/>
 </g>
 <!-- Node5&#45;&gt;Node3 -->
 <g id="edge5" class="edge">
 <title>Node5&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M211.64,-37.01C192.65,-41.77 172.48,-46.83 153.98,-51.46"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="212.61,-40.38 221.45,-34.55 210.9,-33.59 212.61,-40.38"/>
-</g>
-<!-- Node5&#45;&gt;Node4 -->
-<g id="edge6" class="edge">
-<title>Node5&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M195.44,-18.89C163.21,-19.36 129.95,-19.85 108.68,-20.17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="195.9,-22.38 205.85,-18.73 195.8,-15.38 195.9,-22.38"/>
+<path fill="none" stroke="midnightblue" d="M195.61,-69.12C187.17,-68.99 178.66,-68.87 170.31,-68.74"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="195.8,-72.62 205.85,-69.27 195.9,-65.62 195.8,-72.62"/>
 </g>
 </g>
 </svg>

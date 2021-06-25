@@ -106,7 +106,7 @@ Inheritance diagram for Markov::Random::Marsaglia:</div>
 <div class="dynheader">
 Collaboration diagram for Markov::Random::Marsaglia:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_random_1_1_marsaglia__coll__graph.svg" width="304" height="484"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_random_1_1_marsaglia__coll__graph.svg" width="462" height="503"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -143,8 +143,8 @@ Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Marsaglia</a> <a class="el" href="namespace_markov_1_1_random.html" title="Objects related to RNG.">Random</a> Engine. </p>
 <p>This is an implementation of <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Marsaglia</a> <a class="el" href="namespace_markov_1_1_random.html" title="Objects related to RNG.">Random</a> engine, which for most use cases is a better fit than other solutions. Very simple mathematical formula to generate pseudorandom integer, so its crazy fast.</p>
-<p>This implementation of the <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Marsaglia</a> Engine is seeded by <a class="el" href="random_8h.html">random.h</a> default random engine. <a class="el" href="class_markov_1_1_random_1_1_random_engine.html" title="An abstract class for Random Engine.">RandomEngine</a> is only seeded once so its not a performance issue.</p>
-<p><b>Example</b> <b>Use:</b> Using <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Marsaglia</a> Engine with RandomWalk </p><div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_model.html">Markov::Model&lt;char&gt;</a> <a class="code" href="namespacemarkopy__cli.html#a573dcc41f3a527edb70e831cd8108c78">model</a>;</div>
+<p>This implementation of the <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Marsaglia</a> Engine is seeded by <a class="el" href="random_8h.html" title="Random engine implementations for Markov.">random.h</a> default random engine. <a class="el" href="class_markov_1_1_random_1_1_random_engine.html" title="An abstract class for Random Engine.">RandomEngine</a> is only seeded once so its not a performance issue.</p>
+<p><b>Example</b> <b>Use:</b> Using <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Marsaglia</a> Engine with RandomWalk </p><div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_model.html">Markov::Model&lt;char&gt;</a> model;</div>
 <div class="line">Model.import(<span class="stringliteral">&quot;model.mdl&quot;</span>);</div>
 <div class="line"><span class="keywordtype">char</span>* res = <span class="keyword">new</span> <span class="keywordtype">char</span>[11];</div>
 <div class="line"><a class="code" href="class_markov_1_1_random_1_1_marsaglia.html">Markov::Random::Marsaglia</a> MarsagliaRandomEngine;</div>
@@ -155,7 +155,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- fragment --><p><b>Example</b> <b>Use:</b> Generating a random number with <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Marsaglia</a> Engine </p><div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_random_1_1_marsaglia.html">Markov::Random::Marsaglia</a> me;</div>
 <div class="line">std::cout &lt;&lt; me.<a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a0a56da316d520b80be6b6df6c9e0b537">random</a>();</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00116">116</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00125">125</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aafadb3ac016ff0dac8df73a93e594e3b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aafadb3ac016ff0dac8df73a93e594e3b">&#9670;&nbsp;</a></span>Marsaglia()</h2>
@@ -183,15 +183,15 @@ Protected Member Functions</h2></td></tr>
 <p>Construct <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Marsaglia</a> Engine. </p>
 <p>Initialize x,y and z using the default random engine. </p>
 
-<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00123">123</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                   {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            this-&gt;<a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> = this-&gt;<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#a53c9c440002ed1adb2b18292ca82d1c9">distribution</a>()(this-&gt;<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#aee6d9202d0aa50c16f46ecec0a2b05de">generator</a>());</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            this-&gt;<a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a818a46e943aa0df0f9a65a9cef9eb521">y</a> = this-&gt;<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#a53c9c440002ed1adb2b18292ca82d1c9">distribution</a>()(this-&gt;<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#aee6d9202d0aa50c16f46ecec0a2b05de">generator</a>());</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            this-&gt;<a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#af80540e1a0a6897e3cd030d4e1514200">z</a> = this-&gt;<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#a53c9c440002ed1adb2b18292ca82d1c9">distribution</a>()(this-&gt;<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#aee6d9202d0aa50c16f46ecec0a2b05de">generator</a>());</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="comment">//std::cout &lt;&lt; &quot;x: &quot; &lt;&lt; x &lt;&lt; &quot;, y: &quot; &lt;&lt; y &lt;&lt; &quot;, z: &quot; &lt;&lt; z &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00132">132</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                   {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            this-&gt;<a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> = this-&gt;<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#a53c9c440002ed1adb2b18292ca82d1c9">distribution</a>()(this-&gt;<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#aee6d9202d0aa50c16f46ecec0a2b05de">generator</a>());</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            this-&gt;<a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a818a46e943aa0df0f9a65a9cef9eb521">y</a> = this-&gt;<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#a53c9c440002ed1adb2b18292ca82d1c9">distribution</a>()(this-&gt;<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#aee6d9202d0aa50c16f46ecec0a2b05de">generator</a>());</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            this-&gt;<a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#af80540e1a0a6897e3cd030d4e1514200">z</a> = this-&gt;<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#a53c9c440002ed1adb2b18292ca82d1c9">distribution</a>()(this-&gt;<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#aee6d9202d0aa50c16f46ecec0a2b05de">generator</a>());</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="comment">//std::cout &lt;&lt; &quot;x: &quot; &lt;&lt; x &lt;&lt; &quot;, y: &quot; &lt;&lt; y &lt;&lt; &quot;, z: &quot; &lt;&lt; z &lt;&lt; &quot;\n&quot;;</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="random_8h_source.html#l00081">Markov::Random::DefaultRandomEngine::distribution()</a>, <a class="el" href="random_8h_source.html#l00073">Markov::Random::DefaultRandomEngine::generator()</a>, <a class="el" href="random_8h_source.html#l00146">x</a>, <a class="el" href="random_8h_source.html#l00147">y</a>, and <a class="el" href="random_8h_source.html#l00148">z</a>.</p>
+<p class="reference">References <a class="el" href="random_8h_source.html#l00090">Markov::Random::DefaultRandomEngine::distribution()</a>, <a class="el" href="random_8h_source.html#l00082">Markov::Random::DefaultRandomEngine::generator()</a>, <a class="el" href="random_8h_source.html#l00155">x</a>, <a class="el" href="random_8h_source.html#l00156">y</a>, and <a class="el" href="random_8h_source.html#l00157">z</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -227,13 +227,13 @@ Here is the call graph for this function:</div>
 
 <p>Distribution schema for seeding. </p>
 
-<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00081">81</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                                                               {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keyword">static</span> std::uniform_int_distribution&lt;long long unsigned&gt; _distribution(0, 0xffffFFFF);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">return</span> _distribution;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00090">90</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                                                               {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keyword">static</span> std::uniform_int_distribution&lt;long long unsigned&gt; _distribution(0, 0xffffFFFF);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> _distribution;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="random_8h_source.html#l00123">Marsaglia()</a>, and <a class="el" href="random_8h_source.html#l00057">Markov::Random::DefaultRandomEngine::random()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="random_8h_source.html#l00132">Marsaglia()</a>, and <a class="el" href="random_8h_source.html#l00066">Markov::Random::DefaultRandomEngine::random()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -268,15 +268,15 @@ Here is the caller graph for this function:</div>
 
 <p>Default random engine for seeding. </p>
 
-<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00073">73</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                                     {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keyword">static</span> std::default_random_engine _generator(<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#a411c66837939f7f787272f1c6aa78e23">rd</a>()());</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span> _generator;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00082">82</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                                     {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keyword">static</span> std::default_random_engine _generator(<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#a411c66837939f7f787272f1c6aa78e23">rd</a>()());</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">return</span> _generator;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="random_8h_source.html#l00065">Markov::Random::DefaultRandomEngine::rd()</a>.</p>
+<p class="reference">References <a class="el" href="random_8h_source.html#l00074">Markov::Random::DefaultRandomEngine::rd()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="random_8h_source.html#l00123">Marsaglia()</a>, and <a class="el" href="random_8h_source.html#l00057">Markov::Random::DefaultRandomEngine::random()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="random_8h_source.html#l00132">Marsaglia()</a>, and <a class="el" href="random_8h_source.html#l00066">Markov::Random::DefaultRandomEngine::random()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -320,24 +320,24 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="class_markov_1_1_random_1_1_default_random_engine.html#afd4233366727e5c2dd14d7e5c3ebfec1">Markov::Random::DefaultRandomEngine</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00131">131</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                 {  </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> t;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> ^= <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> &lt;&lt; 16;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> ^= <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> &gt;&gt; 5;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> ^= <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> &lt;&lt; 1;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        t = <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a>;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> = <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a818a46e943aa0df0f9a65a9cef9eb521">y</a>;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a818a46e943aa0df0f9a65a9cef9eb521">y</a> = <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#af80540e1a0a6897e3cd030d4e1514200">z</a>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#af80540e1a0a6897e3cd030d4e1514200">z</a> = t ^ <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> ^ <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a818a46e943aa0df0f9a65a9cef9eb521">y</a>;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#af80540e1a0a6897e3cd030d4e1514200">z</a>;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00140">140</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                 {  </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> t;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> ^= <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> &lt;&lt; 16;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> ^= <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> &gt;&gt; 5;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> ^= <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> &lt;&lt; 1;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        t = <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> = <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a818a46e943aa0df0f9a65a9cef9eb521">y</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a818a46e943aa0df0f9a65a9cef9eb521">y</a> = <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#af80540e1a0a6897e3cd030d4e1514200">z</a>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#af80540e1a0a6897e3cd030d4e1514200">z</a> = t ^ <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">x</a> ^ <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a818a46e943aa0df0f9a65a9cef9eb521">y</a>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#af80540e1a0a6897e3cd030d4e1514200">z</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="random_8h_source.html#l00146">x</a>, <a class="el" href="random_8h_source.html#l00147">y</a>, and <a class="el" href="random_8h_source.html#l00148">z</a>.</p>
+<p class="reference">References <a class="el" href="random_8h_source.html#l00155">x</a>, <a class="el" href="random_8h_source.html#l00156">y</a>, and <a class="el" href="random_8h_source.html#l00157">z</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="model_matrix_8cpp_source.html#l00144">Markov::API::ModelMatrix::FastRandomWalkThread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="model_matrix_8cpp_source.html#l00153">Markov::API::ModelMatrix::FastRandomWalkThread()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -372,13 +372,13 @@ Here is the caller graph for this function:</div>
 
 <p>Default random device for seeding. </p>
 
-<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00065">65</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                      {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">static</span> std::random_device _rd;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> _rd;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00074">74</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                      {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keyword">static</span> std::random_device _rd;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span> _rd;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="random_8h_source.html#l00073">Markov::Random::DefaultRandomEngine::generator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="random_8h_source.html#l00082">Markov::Random::DefaultRandomEngine::generator()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -401,9 +401,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00146">146</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00155">155</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="random_8h_source.html#l00123">Marsaglia()</a>, <a class="el" href="cudarandom_8h_source.html#l00019">Markov::API::CUDA::Random::Marsaglia::MigrateToVRAM()</a>, and <a class="el" href="random_8h_source.html#l00131">random()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="random_8h_source.html#l00132">Marsaglia()</a>, <a class="el" href="cudarandom_8h_source.html#l00028">Markov::API::CUDA::Random::Marsaglia::MigrateToVRAM()</a>, and <a class="el" href="random_8h_source.html#l00140">random()</a>.</p>
 
 </div>
 </div>
@@ -419,9 +419,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00147">147</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00156">156</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="random_8h_source.html#l00123">Marsaglia()</a>, <a class="el" href="cudarandom_8h_source.html#l00019">Markov::API::CUDA::Random::Marsaglia::MigrateToVRAM()</a>, and <a class="el" href="random_8h_source.html#l00131">random()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="random_8h_source.html#l00132">Marsaglia()</a>, <a class="el" href="cudarandom_8h_source.html#l00028">Markov::API::CUDA::Random::Marsaglia::MigrateToVRAM()</a>, and <a class="el" href="random_8h_source.html#l00140">random()</a>.</p>
 
 </div>
 </div>
@@ -437,9 +437,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00148">148</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="random_8h_source.html#l00157">157</a> of file <a class="el" href="random_8h_source.html">random.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="random_8h_source.html#l00123">Marsaglia()</a>, <a class="el" href="cudarandom_8h_source.html#l00019">Markov::API::CUDA::Random::Marsaglia::MigrateToVRAM()</a>, and <a class="el" href="random_8h_source.html#l00131">random()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="random_8h_source.html#l00132">Marsaglia()</a>, <a class="el" href="cudarandom_8h_source.html#l00028">Markov::API::CUDA::Random::Marsaglia::MigrateToVRAM()</a>, and <a class="el" href="random_8h_source.html#l00140">random()</a>.</p>
 
 </div>
 </div>
@@ -448,21 +448,20 @@ Here is the caller graph for this function:</div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_markov_1_1_random_1_1_default_random_engine_html_a411c66837939f7f787272f1c6aa78e23"><div class="ttname"><a href="class_markov_1_1_random_1_1_default_random_engine.html#a411c66837939f7f787272f1c6aa78e23">Markov::Random::DefaultRandomEngine::rd</a></div><div class="ttdeci">std::random_device &amp; rd()</div><div class="ttdoc">Default random device for seeding.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00065">random.h:65</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html_a6d147584295802300120e83d87fa14dc"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">Markov::Random::Marsaglia::x</a></div><div class="ttdeci">unsigned long x</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00146">random.h:146</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_random_1_1_default_random_engine_html_aee6d9202d0aa50c16f46ecec0a2b05de"><div class="ttname"><a href="class_markov_1_1_random_1_1_default_random_engine.html#aee6d9202d0aa50c16f46ecec0a2b05de">Markov::Random::DefaultRandomEngine::generator</a></div><div class="ttdeci">std::default_random_engine &amp; generator()</div><div class="ttdoc">Default random engine for seeding.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00073">random.h:73</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_random_1_1_default_random_engine_html_a53c9c440002ed1adb2b18292ca82d1c9"><div class="ttname"><a href="class_markov_1_1_random_1_1_default_random_engine.html#a53c9c440002ed1adb2b18292ca82d1c9">Markov::Random::DefaultRandomEngine::distribution</a></div><div class="ttdeci">std::uniform_int_distribution&lt; long long unsigned &gt; &amp; distribution()</div><div class="ttdoc">Distribution schema for seeding.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00081">random.h:81</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html_a0a56da316d520b80be6b6df6c9e0b537"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html#a0a56da316d520b80be6b6df6c9e0b537">Markov::Random::Marsaglia::random</a></div><div class="ttdeci">unsigned long random()</div><div class="ttdoc">Generate Random Number.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00131">random.h:131</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html">Markov::Random::Marsaglia</a></div><div class="ttdoc">Implementation of Marsaglia Random Engine.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00116">random.h:116</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html_a818a46e943aa0df0f9a65a9cef9eb521"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html#a818a46e943aa0df0f9a65a9cef9eb521">Markov::Random::Marsaglia::y</a></div><div class="ttdeci">unsigned long y</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00147">random.h:147</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_default_random_engine_html_a411c66837939f7f787272f1c6aa78e23"><div class="ttname"><a href="class_markov_1_1_random_1_1_default_random_engine.html#a411c66837939f7f787272f1c6aa78e23">Markov::Random::DefaultRandomEngine::rd</a></div><div class="ttdeci">std::random_device &amp; rd()</div><div class="ttdoc">Default random device for seeding.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00074">random.h:74</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html_a6d147584295802300120e83d87fa14dc"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html#a6d147584295802300120e83d87fa14dc">Markov::Random::Marsaglia::x</a></div><div class="ttdeci">unsigned long x</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00155">random.h:155</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_default_random_engine_html_aee6d9202d0aa50c16f46ecec0a2b05de"><div class="ttname"><a href="class_markov_1_1_random_1_1_default_random_engine.html#aee6d9202d0aa50c16f46ecec0a2b05de">Markov::Random::DefaultRandomEngine::generator</a></div><div class="ttdeci">std::default_random_engine &amp; generator()</div><div class="ttdoc">Default random engine for seeding.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00082">random.h:82</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_default_random_engine_html_a53c9c440002ed1adb2b18292ca82d1c9"><div class="ttname"><a href="class_markov_1_1_random_1_1_default_random_engine.html#a53c9c440002ed1adb2b18292ca82d1c9">Markov::Random::DefaultRandomEngine::distribution</a></div><div class="ttdeci">std::uniform_int_distribution&lt; long long unsigned &gt; &amp; distribution()</div><div class="ttdoc">Distribution schema for seeding.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00090">random.h:90</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html_a0a56da316d520b80be6b6df6c9e0b537"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html#a0a56da316d520b80be6b6df6c9e0b537">Markov::Random::Marsaglia::random</a></div><div class="ttdeci">unsigned long random()</div><div class="ttdoc">Generate Random Number.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00140">random.h:140</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html">Markov::Random::Marsaglia</a></div><div class="ttdoc">Implementation of Marsaglia Random Engine.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00125">random.h:125</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html_a818a46e943aa0df0f9a65a9cef9eb521"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html#a818a46e943aa0df0f9a65a9cef9eb521">Markov::Random::Marsaglia::y</a></div><div class="ttdeci">unsigned long y</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00156">random.h:156</a></div></div>
 <div class="ttc" id="aclass_markov_1_1_model_html"><div class="ttname"><a href="class_markov_1_1_model.html">Markov::Model&lt; char &gt;</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html_af80540e1a0a6897e3cd030d4e1514200"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html#af80540e1a0a6897e3cd030d4e1514200">Markov::Random::Marsaglia::z</a></div><div class="ttdeci">unsigned long z</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00148">random.h:148</a></div></div>
-<div class="ttc" id="anamespacemarkopy__cli_html_a573dcc41f3a527edb70e831cd8108c78"><div class="ttname"><a href="namespacemarkopy__cli.html#a573dcc41f3a527edb70e831cd8108c78">markopy_cli.model</a></div><div class="ttdeci">def model</div><div class="ttdef"><b>Definition:</b> <a href="markopy__cli_8py_source.html#l00132">markopy_cli.py:132</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html_af80540e1a0a6897e3cd030d4e1514200"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html#af80540e1a0a6897e3cd030d4e1514200">Markov::Random::Marsaglia::z</a></div><div class="ttdeci">unsigned long z</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00157">random.h:157</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_markov.html">Markov</a></li><li class="navelem"><a class="el" href="namespace_markov_1_1_random.html">Random</a></li><li class="navelem"><a class="el" href="class_markov_1_1_random_1_1_marsaglia.html">Marsaglia</a></li>
-    <li class="footer">Generated by
+    <li class="footer">Generated on Fri Jun 25 2021 20:40:52 for Markopy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

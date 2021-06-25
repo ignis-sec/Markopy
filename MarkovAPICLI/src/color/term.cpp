@@ -1,4 +1,10 @@
-#pragma once
+/** @file term.cpp
+ * @brief Terminal handler for pretty stuff like colors
+ * @authors Ata Hakçıl
+ * 
+ * @copydoc Markov::API::CLI::Terminal
+ */
+
 #include "term.h"
 #include <string>
 

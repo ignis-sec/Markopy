@@ -1,5 +1,8 @@
 <map id="Markov::API::CLI::_programOptions" name="Markov::API::CLI::_programOptions">
-<area shape="rect" id="node1" title="Structure to hold parsed cli arguements." alt="" coords="5,265,168,312"/>
-<area shape="rect" id="node2" title="STL class." alt="" coords="36,101,137,131"/>
-<area shape="rect" id="node3" title="STL class." alt="" coords="5,5,168,52"/>
+<area shape="rect" id="node1" title="Structure to hold parsed cli arguements." alt="" coords="128,265,291,312"/>
+<area shape="rect" id="node2" href="$classchar.html" title=" " alt="" coords="5,101,64,131"/>
+<area shape="rect" id="node3" title=" " alt="" coords="128,101,171,131"/>
+<area shape="rect" id="node4" title="STL class." alt="" coords="220,101,321,131"/>
+<area shape="rect" id="node5" title="STL class." alt="" coords="189,5,352,52"/>
+<area shape="rect" id="node6" title=" " alt="" coords="396,101,452,131"/>
 </map>

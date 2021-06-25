@@ -2,27 +2,33 @@
 \label{about_8h_source}\index{about.h@{about.h}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
-\DoxyCodeLine{00002 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{QtWidgets}\textcolor{preprocessor}{/}\textcolor{preprocessor}{QMainWindow}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{"ui\_about.h"}}
-\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{ui\_menu}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00005 }
-\DoxyCodeLine{00006 \textcolor{comment}{/** @brief namespace for MarkovPasswords API GUI wrapper}}
-\DoxyCodeLine{00007 \textcolor{comment}{*/}}
-\DoxyCodeLine{00008 \textcolor{keyword}{namespace} Markov::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}}\{}
-\DoxyCodeLine{00009 }
-\DoxyCodeLine{00010     \textcolor{comment}{/** @brief QT Class for about page}}
-\DoxyCodeLine{00011 \textcolor{comment}{    */}}
-\DoxyCodeLine{\Hypertarget{about_8h_source_l00012}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about}{00012}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a539af3a67154650a2b269aae5abf41a0}{about}} :\textcolor{keyword}{public} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a539af3a67154650a2b269aae5abf41a0}{QMainWindow}} \{}
-\DoxyCodeLine{00013     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a539af3a67154650a2b269aae5abf41a0}{Q\_OBJECT}}}
-\DoxyCodeLine{00014     \textcolor{keyword}{public}:}
-\DoxyCodeLine{00015         \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a539af3a67154650a2b269aae5abf41a0}{about}}(\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a539af3a67154650a2b269aae5abf41a0}{QWidget}}* \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a539af3a67154650a2b269aae5abf41a0}{parent}} = \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a539af3a67154650a2b269aae5abf41a0}{Q\_NULLPTR}});}
-\DoxyCodeLine{00016 }
-\DoxyCodeLine{00017     \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{about_8h_source_l00018}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a773b962f6e7f5158fc39b710df87ef87}{00018}}         \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a773b962f6e7f5158fc39b710df87ef87}{Ui}}:: \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a773b962f6e7f5158fc39b710df87ef87}{main}} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a773b962f6e7f5158fc39b710df87ef87}{ui}};}
-\DoxyCodeLine{00019 }
-\DoxyCodeLine{00020 }
-\DoxyCodeLine{00021     \};}
-\DoxyCodeLine{00022 \};}
+\DoxyCodeLine{00001 \textcolor{comment}{/** @file about.h}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @brief About page }}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @authors Yunus Emre Yılmaz}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ */}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{QtWidgets}\textcolor{preprocessor}{/}\textcolor{preprocessor}{QMainWindow}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{"ui\_about.h"}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{ui\_menu}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 \textcolor{comment}{/** @brief namespace for MarkovPasswords API GUI wrapper}}
+\DoxyCodeLine{00013 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{about_8h_source_l00014}\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{00014}} \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}}\{}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016     \textcolor{comment}{/** @brief QT Class for about page}}
+\DoxyCodeLine{00017 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{about_8h_source_l00018}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about}{00018}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about}{about}} :\textcolor{keyword}{public} QMainWindow \{}
+\DoxyCodeLine{00019     Q\_OBJECT}
+\DoxyCodeLine{00020     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021         \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a2d7cd30a50c3e97001c969d61b525fe8}{about}}(QWidget* parent = Q\_NULLPTR);}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{about_8h_source_l00024}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a773b962f6e7f5158fc39b710df87ef87}{00024}}         Ui:: main \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1about_a773b962f6e7f5158fc39b710df87ef87}{ui}};}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027     \};}
+\DoxyCodeLine{00028 \};}
 
 \end{DoxyCode}

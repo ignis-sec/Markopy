@@ -1,0 +1,9 @@
+<map id="cudaDeviceController.cu" name="cudaDeviceController.cu">
+<area shape="rect" id="node1" title="Simple static class for basic CUDA device controls." alt="" coords="324,5,539,35"/>
+<area shape="rect" id="node2" href="$cuda_device_controller_8h.html" title="Simple static class for basic CUDA device controls." alt="" coords="5,83,212,112"/>
+<area shape="rect" id="node3" title=" " alt="" coords="133,160,225,189"/>
+<area shape="rect" id="node4" title=" " alt="" coords="288,83,439,112"/>
+<area shape="rect" id="node5" title=" " alt="" coords="463,83,539,112"/>
+<area shape="rect" id="node6" title=" " alt="" coords="563,83,710,112"/>
+<area shape="rect" id="node7" title=" " alt="" coords="735,83,987,112"/>
+</map>

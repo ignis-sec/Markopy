@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="menu page">
 <polygon fill="#bfbfbf" stroke="black" points="51,-58.5 51,-79.5 113,-79.5 113,-58.5 51,-58.5"/>
 <text text-anchor="middle" x="82" y="-65.9" font-family="Helvetica,sans-Serif" font-size="12.00">menu.h</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="_u_i_2src_2main_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="_markov_passwords_g_u_i_2src_2main_8cpp.html" target="_top" xlink:title="Entry point for GUI.">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-21.5 72,-21.5 72,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="36" y="-7.9" font-family="Helvetica,sans-Serif" font-size="12.00">main.cpp</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="menu_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="menu_8cpp.html" target="_top" xlink:title="menu page">
 <polygon fill="none" stroke="black" points="90.5,-0.5 90.5,-21.5 167.5,-21.5 167.5,-0.5 90.5,-0.5"/>
 <text text-anchor="middle" x="129" y="-7.9" font-family="Helvetica,sans-Serif" font-size="12.00">menu.cpp</text>
 </a>

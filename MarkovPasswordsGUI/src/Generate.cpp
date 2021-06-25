@@ -1,3 +1,9 @@
+/** @file Generate.cpp
+ * @brief Generation Page
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 #include "Generate.h"
 #include <fstream>
 #include<QFileDialog>

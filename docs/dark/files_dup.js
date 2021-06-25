@@ -1,16 +1,20 @@
 var files_dup =
 [
+    [ "about.cpp", "about_8cpp.html", null ],
     [ "about.h", "about_8h.html", [
       [ "about", "class_markov_1_1_g_u_i_1_1about.html", "class_markov_1_1_g_u_i_1_1about" ]
     ] ],
     [ "argparse.cpp", "argparse_8cpp.html", null ],
     [ "argparse.h", "argparse_8h.html", "argparse_8h" ],
+    [ "CLI.cpp", "_c_l_i_8cpp.html", null ],
     [ "CLI.h", "_c_l_i_8h.html", [
       [ "CLI", "class_markov_1_1_g_u_i_1_1_c_l_i.html", "class_markov_1_1_g_u_i_1_1_c_l_i" ]
     ] ],
+    [ "cudaDeviceController.cu", "cuda_device_controller_8cu.html", null ],
     [ "cudaDeviceController.h", "cuda_device_controller_8h.html", [
       [ "CUDADeviceController", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller" ]
     ] ],
+    [ "cudaModelMatrix.cu", "cuda_model_matrix_8cu.html", "cuda_model_matrix_8cu" ],
     [ "cudaModelMatrix.h", "cuda_model_matrix_8h.html", "cuda_model_matrix_8h" ],
     [ "cudarandom.h", "cudarandom_8h.html", "cudarandom_8h" ],
     [ "dllmain.cpp", "dllmain_8cpp.html", null ],
@@ -19,10 +23,15 @@ var files_dup =
       [ "Edge", "class_markov_1_1_edge.html", "class_markov_1_1_edge" ]
     ] ],
     [ "framework.h", "framework_8h.html", "framework_8h" ],
-    [ "src/main.cpp", "src_2main_8cpp.html", "src_2main_8cpp" ],
-    [ "UI/src/main.cpp", "_u_i_2src_2main_8cpp.html", "_u_i_2src_2main_8cpp" ],
+    [ "Generate.cpp", "_generate_8cpp.html", null ],
+    [ "Generate.h", "_generate_8h.html", [
+      [ "Generate", "class_markov_1_1_g_u_i_1_1_generate.html", "class_markov_1_1_g_u_i_1_1_generate" ]
+    ] ],
+    [ "MarkovAPICLI/src/main.cpp", "_markov_a_p_i_c_l_i_2src_2main_8cpp.html", "_markov_a_p_i_c_l_i_2src_2main_8cpp" ],
+    [ "MarkovPasswordsGUI/src/main.cpp", "_markov_passwords_g_u_i_2src_2main_8cpp.html", "_markov_passwords_g_u_i_2src_2main_8cpp" ],
+    [ "main.cu", "main_8cu.html", "main_8cu" ],
     [ "markopy.cpp", "markopy_8cpp.html", "markopy_8cpp" ],
-    [ "markopy_cli.py", "markopy__cli_8py.html", "markopy__cli_8py" ],
+    [ "markopy.py", "markopy_8py.html", "markopy_8py" ],
     [ "markovPasswords.cpp", "markov_passwords_8cpp.html", "markov_passwords_8cpp" ],
     [ "markovPasswords.h", "markov_passwords_8h.html", [
       [ "MarkovPasswords", "class_markov_1_1_a_p_i_1_1_markov_passwords.html", "class_markov_1_1_a_p_i_1_1_markov_passwords" ]
@@ -65,6 +74,7 @@ var files_dup =
     [ "threadSharedListHandler.h", "thread_shared_list_handler_8h.html", [
       [ "ThreadSharedListHandler", "class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html", "class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler" ]
     ] ],
+    [ "Train.cpp", "_train_8cpp.html", null ],
     [ "Train.h", "_train_8h.html", [
       [ "Train", "class_markov_1_1_g_u_i_1_1_train.html", "class_markov_1_1_g_u_i_1_1_train" ]
     ] ],
