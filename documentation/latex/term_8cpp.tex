@@ -1,5 +1,10 @@
 \hypertarget{term_8cpp}{}\doxysection{term.\+cpp File Reference}
 \label{term_8cpp}\index{term.cpp@{term.cpp}}
+
+
+Terminal handler for pretty stuff like colors.  
+
+
 {\ttfamily \#include \char`\"{}term.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$string$>$}\newline
 Include dependency graph for term.\+cpp\+:
@@ -17,6 +22,18 @@ std\+::ostream \& \mbox{\hyperlink{term_8cpp_ad8a8c0db6261a3f70fc7536aed3488ae}{
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Terminal handler for pretty stuff like colors. 
+
+\begin{DoxyAuthor}{Authors}
+Ata Hakçıl
+\end{DoxyAuthor}
+pretty colors for Terminal. Windows Only.
+
+Definition in file \mbox{\hyperlink{term_8cpp_source}{term.\+cpp}}.
+
+
+
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{term_8cpp_ad8a8c0db6261a3f70fc7536aed3488ae}\label{term_8cpp_ad8a8c0db6261a3f70fc7536aed3488ae}} 
 \index{term.cpp@{term.cpp}!operator$<$$<$@{operator$<$$<$}}
@@ -26,19 +43,19 @@ std\+::ostream \& \mbox{\hyperlink{term_8cpp_ad8a8c0db6261a3f70fc7536aed3488ae}{
 
 overload for std\+::cout. 
 
-Definition at line \mbox{\hyperlink{term_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{term_8cpp_source}{term.\+cpp}}.
+Definition at line \mbox{\hyperlink{term_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{term_8cpp_source}{term.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00060                                                                \{}
-\DoxyCodeLine{00061     \textcolor{keywordtype}{char} buf[6];}
-\DoxyCodeLine{00062     sprintf(buf,\textcolor{stringliteral}{"\%d"},Terminal::colormap.find(c)-\/>second);}
-\DoxyCodeLine{00063     os << \textcolor{stringliteral}{"\(\backslash\)e[1;"} << buf << \textcolor{stringliteral}{"m"};}
-\DoxyCodeLine{00064     \textcolor{keywordflow}{return} os;}
-\DoxyCodeLine{00065 \}}
+\DoxyCodeLine{00066                                                                \{}
+\DoxyCodeLine{00067     \textcolor{keywordtype}{char} buf[6];}
+\DoxyCodeLine{00068     sprintf(buf,\textcolor{stringliteral}{"\%d"},Terminal::colormap.find(c)-\/>second);}
+\DoxyCodeLine{00069     os << \textcolor{stringliteral}{"\(\backslash\)e[1;"} << buf << \textcolor{stringliteral}{"m"};}
+\DoxyCodeLine{00070     \textcolor{keywordflow}{return} os;}
+\DoxyCodeLine{00071 \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{term_8h_source_l00032}{Markov\+::\+A\+P\+I\+::\+C\+L\+I\+::\+Terminal\+::colormap}}.
+References \mbox{\hyperlink{term_8h_source_l00039}{Markov\+::\+A\+P\+I\+::\+C\+L\+I\+::\+Terminal\+::colormap}}.
 

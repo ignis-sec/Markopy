@@ -1,4 +1,4 @@
 <map id="Markov::GUI::menu" name="Markov::GUI::menu">
 <area shape="rect" id="node1" title="QT Menu class." alt="" coords="5,139,181,259"/>
-<area shape="rect" id="node2" title=" " alt="" coords="25,5,161,91"/>
+<area shape="rect" id="node2" href="$class_q_main_window.html" title=" " alt="" coords="25,5,161,91"/>
 </map>

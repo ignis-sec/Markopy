@@ -1,11 +1,7 @@
 <map id="cudarandom.h" name="cudarandom.h">
-<area shape="rect" id="node1" title=" " alt="" coords="224,5,363,35"/>
-<area shape="rect" id="node2" href="$random_8h.html" title=" " alt="" coords="41,91,281,121"/>
-<area shape="rect" id="node5" href="$cuda_device_controller_8h.html" title=" " alt="" coords="315,83,554,129"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,177,91,207"/>
-<area shape="rect" id="node4" title=" " alt="" coords="115,177,207,207"/>
-<area shape="rect" id="node6" title=" " alt="" coords="231,177,382,207"/>
-<area shape="rect" id="node7" title=" " alt="" coords="406,177,482,207"/>
-<area shape="rect" id="node8" title=" " alt="" coords="507,177,653,207"/>
-<area shape="rect" id="node9" title=" " alt="" coords="678,177,930,207"/>
+<area shape="rect" id="node1" title="Extension of Markov::Random::Marsaglia for CUDA." alt="" coords="180,5,319,35"/>
+<area shape="rect" id="node2" href="$random_8h.html" title="Random engine implementations for Markov." alt="" coords="5,83,245,112"/>
+<area shape="rect" id="node5" href="$cuda_device_controller_8h.html" title="Simple static class for basic CUDA device controls." alt="" coords="270,83,477,112"/>
+<area shape="rect" id="node3" title=" " alt="" coords="83,160,168,189"/>
+<area shape="rect" id="node4" title=" " alt="" coords="259,160,351,189"/>
 </map>

@@ -50,6 +50,7 @@ var NAVTREE =
         [ "Contact", "index.html#autotoc_md38", null ]
       ] ]
     ] ],
+    [ "NVSight Report", "md__media_ignis__h_d_d__repositories__markov_passwords__n_v_sight_report.html", null ],
     [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -86,8 +87,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_c_l_i_8h.html",
-"class_markov_1_1_node.html#a1db7cba480ab9fb41ef8ab53d1eac0f2"
+"_c_l_i_8cpp.html",
+"class_markov_1_1_g_u_i_1_1_c_l_i.html#ac6aba780e5312f9f03cb716f0929d39e",
+"term_8h.html#ac91ec1d9a601445bd4e3ee362e3dbd3f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

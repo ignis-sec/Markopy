@@ -1,3 +1,10 @@
+/** @file dllmain.cpp
+ * @brief DLLMain for dynamic windows library
+ * @authors Ata Hakçıl
+ * 
+ * @copydoc Markov::Model
+ */
+
 #include "pch.h"
 #include "model.h"
 #include <iostream>

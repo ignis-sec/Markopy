@@ -1,0 +1,12 @@
+<map id="Markov::API::ModelMatrix::Import" name="Markov::API::ModelMatrix::Import">
+<area shape="rect" id="node1" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="5,201,231,247"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aafb5809808b9b0450a0bc98740121b5f" title="Construct the related Matrix data for the model." alt="" coords="279,130,504,177"/>
+<area shape="rect" id="node9" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#a0f95257e1344225233ab49602cd9551c" title="Deallocate matrix and make it ready for re&#45;construction." alt="" coords="279,201,504,247"/>
+<area shape="rect" id="node10" href="$class_markov_1_1_model.html#a3f872a3af96a91d4627c1a5d5e66b19a" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="290,272,493,301"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677" title="return edge&#39;s EdgeWeight." alt="" coords="575,5,810,35"/>
+<area shape="rect" id="node4" href="$class_markov_1_1_model.html#a71f6df805e340ce96e9dc4ee4ebc6537" title="Return starter Node." alt="" coords="593,59,792,88"/>
+<area shape="rect" id="node5" href="$class_markov_1_1_node.html#ac7cce56376f2a00764f64a0194cbb498" title="Return character representation of this node." alt="" coords="579,112,807,141"/>
+<area shape="rect" id="node6" href="$class_markov_1_1_edge.html#a2e7d14e46631c85c84f6f8f1dd2949cd" title="return edge&#39;s RightNode" alt="" coords="581,165,805,195"/>
+<area shape="rect" id="node7" href="$class_markov_1_1_model.html#a35cb15a14d034f3365b9d2d3efa1ffc0" title="Return starter Node." alt="" coords="569,219,816,248"/>
+<area shape="rect" id="node8" href="$class_markov_1_1_node.html#a60166d8f501c016de104f48e46bff223" title="return total edge weights" alt="" coords="552,272,833,301"/>
+</map>

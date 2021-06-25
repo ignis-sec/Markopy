@@ -3,6 +3,12 @@ param (
    [string]$pythonver = "3.8"
 )
 
+$a = $pythonver.substring(0,1)
+$b = $pythonver.substring(2,1)
+echo "$a$b"
+echo "set-output name=python_ver::$a$b"
+echo "::set-output name=python_ver::$a$b"
+
 which python;
 mkdir D:\a\python$pythonver;
 

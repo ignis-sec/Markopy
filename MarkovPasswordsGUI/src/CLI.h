@@ -1,3 +1,9 @@
+/** @file cli.h
+ * @brief CLI page 
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 #pragma once
 #include <QtWidgets/QMainWindow>
 #include "ui_CLI.h"

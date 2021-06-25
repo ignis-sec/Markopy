@@ -2,40 +2,64 @@
 \label{markopy_8cpp_source}\index{markopy.cpp@{markopy.cpp}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
-\DoxyCodeLine{00002 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{"../../../MarkovPasswords/src/markovPasswords.h"}}
-\DoxyCodeLine{00003 }
-\DoxyCodeLine{\Hypertarget{markopy_8cpp_source_l00004}\mbox{\hyperlink{markopy_8cpp_ab8db71261aa9207d3fb23344c18ce5a7}{00004}} \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define} \textcolor{preprocessor}{BOOST\_PYTHON\_STATIC\_LIB}}
-\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{Python}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{boost}\textcolor{preprocessor}{/}\textcolor{preprocessor}{python}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00007 }
-\DoxyCodeLine{00008 \textcolor{keyword}{using} \textcolor{keyword}{namespace} boost::python;}
-\DoxyCodeLine{00009 }
-\DoxyCodeLine{\Hypertarget{markopy_8cpp_source_l00010}\mbox{\hyperlink{namespace_markov_1_1_markopy}{00010}} \textcolor{keyword}{namespace} Markov::\mbox{\hyperlink{namespace_markov_1_1_markopy}{Markopy}}\{}
-\DoxyCodeLine{\Hypertarget{markopy_8cpp_source_l00011}\mbox{\hyperlink{namespace_markov_1_1_markopy_a379628c09859652215496b63af2bcac9}{00011}}     BOOST\_PYTHON\_MODULE(markopy)}
-\DoxyCodeLine{00012     \{}
-\DoxyCodeLine{00013         \textcolor{keywordtype}{bool} (Markov::API::MarkovPasswords::*Import)(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*) = \&Markov\mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{::}}\mbox{\hyperlink{class_markov_1_1_model}{Model}}\mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{<}}\textcolor{keywordtype}{char}\mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{>}}\mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{::}}\mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{Import}};}
-\DoxyCodeLine{00014         \textcolor{keywordtype}{bool} (Markov::API::MarkovPasswords::*Export)(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*) = \&Markov\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{::}}\mbox{\hyperlink{class_markov_1_1_model}{Model}}\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{<}}\textcolor{keywordtype}{char}\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{>}}\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{::}}\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{Export}};}
-\DoxyCodeLine{00015         class\_<Markov::API::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{MarkovPasswords}}>(\textcolor{stringliteral}{"MarkovPasswords"}, init<>())}
-\DoxyCodeLine{00016             .def(init<>())}
-\DoxyCodeLine{00017             .def(\textcolor{stringliteral}{"Train"}, \&Markov\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{::}}API\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{MarkovPasswords}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Train}},}
-\DoxyCodeLine{00018             \textcolor{stringliteral}{"Train the model\(\backslash\)n"}}
-\DoxyCodeLine{00019             \textcolor{stringliteral}{"\(\backslash\)n"}}
-\DoxyCodeLine{00020             \textcolor{stringliteral}{":param datasetFileName: Ifstream* to the dataset. If null, use class member\(\backslash\)n"}}
-\DoxyCodeLine{00021             \textcolor{stringliteral}{":param delimiter: a character, same as the delimiter in dataset content\(\backslash\)n"}}
-\DoxyCodeLine{00022             \textcolor{stringliteral}{":param threads: number of OS threads to spawn\(\backslash\)n"})}
-\DoxyCodeLine{00023             .def(\textcolor{stringliteral}{"Generate"}, \&Markov\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{::}}API\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{MarkovPasswords}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Generate}},}
-\DoxyCodeLine{00024             \textcolor{stringliteral}{"Generate passwords from a trained model.\(\backslash\)n"}}
-\DoxyCodeLine{00025             \textcolor{stringliteral}{":param n: Ifstream* to the dataset. If null, use class member\(\backslash\)n"}}
-\DoxyCodeLine{00026             \textcolor{stringliteral}{":param wordlistFileName: a character, same as the delimiter in dataset content\(\backslash\)n"}}
-\DoxyCodeLine{00027             \textcolor{stringliteral}{":param minLen: number of OS threads to spawn\(\backslash\)n"}}
-\DoxyCodeLine{00028             \textcolor{stringliteral}{":param maxLen: Ifstream* to the dataset. If null, use class member\(\backslash\)n"}}
-\DoxyCodeLine{00029             \textcolor{stringliteral}{":param threads: a character, same as the delimiter in dataset content\(\backslash\)n"}}
-\DoxyCodeLine{00030             \textcolor{stringliteral}{":param threads: number of OS threads to spawn\(\backslash\)n"})}
-\DoxyCodeLine{00031             .def(\textcolor{stringliteral}{"Import"}, Import, \textcolor{stringliteral}{"Import a model file."})}
-\DoxyCodeLine{00032             .def(\textcolor{stringliteral}{"Export"}, Export, \textcolor{stringliteral}{"Export a model to file."})}
-\DoxyCodeLine{00033         ;}
-\DoxyCodeLine{00034     \};}
-\DoxyCodeLine{00035 \};}
+\DoxyCodeLine{00001 \textcolor{comment}{/** @file markopy.cpp}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @brief CPython wrapper for libmarkov utils.}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @authors Ata Hakçıl, Celal Sahir Çetiner}}
+\DoxyCodeLine{00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{00005 \textcolor{comment}{ * This file is a wrapper for libmarkov utilities, exposing:}}
+\DoxyCodeLine{00006 \textcolor{comment}{ * -\/ MarkovPasswords}}
+\DoxyCodeLine{00007 \textcolor{comment}{ *   -\/ Import}}
+\DoxyCodeLine{00008 \textcolor{comment}{ *   -\/ Export}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *   -\/ Train}}
+\DoxyCodeLine{00010 \textcolor{comment}{ *   -\/ Generate}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * -\/ ModelMatrix}}
+\DoxyCodeLine{00012 \textcolor{comment}{ *   -\/ Import}}
+\DoxyCodeLine{00013 \textcolor{comment}{ *   -\/ Export }}
+\DoxyCodeLine{00014 \textcolor{comment}{ *   -\/ Train}}
+\DoxyCodeLine{00015 \textcolor{comment}{ *   -\/ ConstructMatrix}}
+\DoxyCodeLine{00016 \textcolor{comment}{ *   -\/ DumpJSON}}
+\DoxyCodeLine{00017 \textcolor{comment}{ *   -\/ FastRandomWalk}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * }}
+\DoxyCodeLine{00019 \textcolor{comment}{ * @copydoc Markov::API::MarkovPasswords}}
+\DoxyCodeLine{00020 \textcolor{comment}{ * @copydoc Markov::API::ModelMatrix}}
+\DoxyCodeLine{00021 \textcolor{comment}{ * }}
+\DoxyCodeLine{00022 \textcolor{comment}{*/}}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{\Hypertarget{markopy_8cpp_source_l00024}\mbox{\hyperlink{markopy_8cpp_aaf8a1a195131e697ef0e215c1ca4f7cb}{00024}} \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define} \textcolor{preprocessor}{BOOST\_ALL\_STATIC\_LIB} 1}
+\DoxyCodeLine{\Hypertarget{markopy_8cpp_source_l00025}\mbox{\hyperlink{markopy_8cpp_ab8db71261aa9207d3fb23344c18ce5a7}{00025}} \textcolor{preprocessor}{\#}\textcolor{preprocessor}{define} \textcolor{preprocessor}{BOOST\_PYTHON\_STATIC\_LIB} 1}
+\DoxyCodeLine{00026 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{Python}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00027 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{boost}\textcolor{preprocessor}{/}\textcolor{preprocessor}{python}\textcolor{preprocessor}{.}\textcolor{preprocessor}{hpp}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00028 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{MarkovAPI}\textcolor{preprocessor}{/}\textcolor{preprocessor}{src}\textcolor{preprocessor}{/}\textcolor{preprocessor}{modelMatrix}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031 \textcolor{keyword}{using} \textcolor{keyword}{namespace} boost::python;}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{\Hypertarget{markopy_8cpp_source_l00033}\mbox{\hyperlink{namespace_markov_1_1_markopy}{00033}} \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_markopy}{Markopy}}\{}
+\DoxyCodeLine{\Hypertarget{markopy_8cpp_source_l00034}\mbox{\hyperlink{namespace_markov_1_1_markopy_a379628c09859652215496b63af2bcac9}{00034}}     BOOST\_PYTHON\_MODULE(markopy)}
+\DoxyCodeLine{00035     \{}
+\DoxyCodeLine{00036         \textcolor{keywordtype}{bool} (Markov::API::MarkovPasswords::*Import)(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*) = \&\mbox{\hyperlink{namespace_markov}{Markov}}\mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{::}}\mbox{\hyperlink{class_markov_1_1_model}{Model}}\mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{<}}\textcolor{keywordtype}{char}\mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{>}}\mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{::}}\mbox{\hyperlink{class_markov_1_1_model_a3f872a3af96a91d4627c1a5d5e66b19a}{Import}};}
+\DoxyCodeLine{00037         \textcolor{keywordtype}{bool} (Markov::API::MarkovPasswords::*Export)(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*) = \&\mbox{\hyperlink{namespace_markov}{Markov}}\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{::}}\mbox{\hyperlink{class_markov_1_1_model}{Model}}\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{<}}\textcolor{keywordtype}{char}\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{>}}\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{::}}\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{Export}};}
+\DoxyCodeLine{00038         class\_<\mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{MarkovPasswords}}>(\textcolor{stringliteral}{"MarkovPasswords"}, init<>())}
+\DoxyCodeLine{00039             .def(init<>())}
+\DoxyCodeLine{00040             .def(\textcolor{stringliteral}{"Train"}, \&\mbox{\hyperlink{namespace_markov}{Markov}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{::}}\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{MarkovPasswords}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Train}})}
+\DoxyCodeLine{00041             .def(\textcolor{stringliteral}{"Generate"}, \&\mbox{\hyperlink{namespace_markov}{Markov}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{::}}\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{MarkovPasswords}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Generate}})}
+\DoxyCodeLine{00042             .def(\textcolor{stringliteral}{"Import"}, Import, \textcolor{stringliteral}{"Import a model file."})}
+\DoxyCodeLine{00043             .def(\textcolor{stringliteral}{"Export"}, Export, \textcolor{stringliteral}{"Export a model to file."})}
+\DoxyCodeLine{00044         ;}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046         \textcolor{keywordtype}{int} (Markov::API::ModelMatrix::*FastRandomWalk)(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}*, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{bool})}
+\DoxyCodeLine{00047             = \&\mbox{\hyperlink{namespace_markov}{Markov}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a3bb4d49f1fbc10e1649dc9bf73529520}{::}}\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a3bb4d49f1fbc10e1649dc9bf73529520}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{ModelMatrix}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a3bb4d49f1fbc10e1649dc9bf73529520}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a3bb4d49f1fbc10e1649dc9bf73529520}{FastRandomWalk}};}
+\DoxyCodeLine{00048         class\_<\mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{ModelMatrix}}>(\textcolor{stringliteral}{"ModelMatrix"}, init<>())}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050             .def(init<>())}
+\DoxyCodeLine{00051             .def(\textcolor{stringliteral}{"Train"}, \&\mbox{\hyperlink{namespace_markov}{Markov}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}{::}}\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{ModelMatrix}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}{Train}})}
+\DoxyCodeLine{00052             .def(\textcolor{stringliteral}{"Import"}, \&\mbox{\hyperlink{namespace_markov}{Markov}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{::}}\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{ModelMatrix}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{Import}}, \textcolor{stringliteral}{"Import a model file."})}
+\DoxyCodeLine{00053             .def(\textcolor{stringliteral}{"Export"}, Export, \textcolor{stringliteral}{"Export a model to file."})}
+\DoxyCodeLine{00054             .def(\textcolor{stringliteral}{"ConstructMatrix"},\&\mbox{\hyperlink{namespace_markov}{Markov}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{::}}\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{ModelMatrix}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{ConstructMatrix}})}
+\DoxyCodeLine{00055             .def(\textcolor{stringliteral}{"DumpJSON"},\&\mbox{\hyperlink{namespace_markov}{Markov}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}{::}}\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{ModelMatrix}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}{DumpJSON}})}
+\DoxyCodeLine{00056             .def(\textcolor{stringliteral}{"FastRandomWalk"},FastRandomWalk)}
+\DoxyCodeLine{00057             ;}
+\DoxyCodeLine{00058     \};}
+\DoxyCodeLine{00059 \};}
 
 \end{DoxyCode}

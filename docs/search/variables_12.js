@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['ui_443',['ui',['../class_markov_1_1_g_u_i_1_1menu.html#aae1ad64c4ab9413e1494e1d8d30aa1f4',1,'Markov::GUI::menu::ui()'],['../class_markov_1_1_g_u_i_1_1_c_l_i.html#a9351de2c083b7b3fd76f36b3737e36dc',1,'Markov::GUI::CLI::ui()'],['../class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i.html#a519b96e65ff7d0c398e5e192af381777',1,'Markov::GUI::MarkovPasswordsGUI::ui()'],['../class_markov_1_1_g_u_i_1_1about.html#a773b962f6e7f5158fc39b710df87ef87',1,'Markov::GUI::about::ui()'],['../class_markov_1_1_g_u_i_1_1_train.html#aca81fef5702a620bf650aa8a4c2bdaea',1,'Markov::GUI::Train::ui()']]]
+  ['total_5fedge_5fweights_474',['total_edge_weights',['../class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce',1,'Markov::Node']]],
+  ['totaledgeweights_475',['totalEdgeWeights',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a47bab10980c3117f75909b640a4096df',1,'Markov::API::ModelMatrix']]],
+  ['totaloutputperkernel_476',['totalOutputPerKernel',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a391422909c58da061283df0f1ff8069a',1,'Markov::API::CUDA::CUDAModelMatrix']]],
+  ['totaloutputpersync_477',['totalOutputPerSync',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a37c46cbceec37984c029be96402c60bf',1,'Markov::API::CUDA::CUDAModelMatrix']]]
 ];

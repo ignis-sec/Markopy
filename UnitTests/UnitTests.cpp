@@ -1,3 +1,9 @@
+/** @file UnitTests.cpp
+ * @brief Unit tests with Microsoft::VisualStudio::CppUnitTestFramework
+ * @authors Ata Hakçıl, Osman Ömer Yıldıztugay, Yunus Emre Yılmaz
+ *
+ */
+
 #include "pch.h"
 #include "CppUnitTest.h"
 #include "MarkovModel/src/model.h"

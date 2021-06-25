@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH:+${CPLUS_INCLUDE_PATH}:}/usr/include/python3.8:/usr/lib/cuda11.0/include:$(pwd)"
+export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH:+${CPLUS_INCLUDE_PATH}:}/usr/include/python3.8:/usr/lib/cuda11.0/include:/usr/include/x86_64-linux-gnu/qt5/:$(pwd):$(pwd)/MarkovPasswordsGUI/"
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/lib
 #cleanup old documentations
 rm -r docs/*
@@ -23,7 +23,10 @@ cat Doxyfile-Latex.comp > Doxyfile-Latex
 cat Doxyfile-Base.comp >> Doxyfile-Latex
 doxygen Doxyfile-Latex
 
+#cp -r NVSight/* includes/latex/
 cp -r includes/latex/* latex/
 cd latex
 make
 cp refman.pdf ../../docs/documentation.pdf
+
+#cp -r ../NVSight/* docs/

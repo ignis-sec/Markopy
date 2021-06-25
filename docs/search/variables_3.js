@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['colormap_398',['colormap',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#a296cac1426f648e426bd77fd3bcaf79d',1,'Markov::API::CLI::Terminal']]],
-  ['corpus_5flist_399',['corpus_list',['../namespacemarkopy__cli.html#a9981bd7881129bd6b325ca2386bb44f1',1,'markopy_cli']]]
+  ['colormap_430',['colormap',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#a296cac1426f648e426bd77fd3bcaf79d',1,'Markov::API::CLI::Terminal']]],
+  ['cudablocks_431',['cudaBlocks',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#aa766da0ed9e36697b33b45887b55fe81',1,'Markov::API::CUDA::CUDAModelMatrix']]],
+  ['cudagridsize_432',['cudaGridSize',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#afaa4601b838fb62a5c95e4d7dc44dea8',1,'Markov::API::CUDA::CUDAModelMatrix']]],
+  ['cudamempergrid_433',['cudaMemPerGrid',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a27101ee4851ec3aa480d3d2df3610535',1,'Markov::API::CUDA::CUDAModelMatrix']]],
+  ['cudaperkernelallocationsize_434',['cudaPerKernelAllocationSize',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a306164e3689c651ec597a2f183a2115c',1,'Markov::API::CUDA::CUDAModelMatrix']]],
+  ['cudastreams_435',['cudastreams',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#acb871cf2bd10bbd14bfafd64eb0e5e97',1,'Markov::API::CUDA::CUDAModelMatrix']]],
+  ['cudathreads_436',['cudaThreads',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ae0b55a41086fbb8afcacdc4a076c85ab',1,'Markov::API::CUDA::CUDAModelMatrix']]]
 ];

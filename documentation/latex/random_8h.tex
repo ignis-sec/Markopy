@@ -1,5 +1,10 @@
 \hypertarget{random_8h}{}\doxysection{random.\+h File Reference}
 \label{random_8h}\index{random.h@{random.h}}
+
+
+Random engine implementations for \mbox{\hyperlink{namespace_markov}{Markov}}.  
+
+
 {\ttfamily \#include $<$random$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 Include dependency graph for random.\+h\+:
@@ -36,3 +41,65 @@ class \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Markov\+::\+Random\
 \begin{DoxyCompactList}\small\item\em Namespace for the markov-\/model related classes. Contains \mbox{\hyperlink{class_markov_1_1_model}{Model}}, \mbox{\hyperlink{class_markov_1_1_node}{Node}} and \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} classes. \end{DoxyCompactList}\item 
  \mbox{\hyperlink{namespace_markov_1_1_random}{Markov\+::\+Random}}
 \begin{DoxyCompactList}\small\item\em Objects related to R\+NG. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Random engine implementations for \mbox{\hyperlink{namespace_markov}{Markov}}. 
+
+\begin{DoxyAuthor}{Authors}
+Ata Hakçıl
+\end{DoxyAuthor}
+An abstract class for Random Engine. This class is used for generating random numbers, which are used for random walking on the graph.
+
+Main reason behind allowing different random engines is that some use cases may favor performance, while some favor good random.
+
+Mersenne can be used for truer random, while Marsaglia can be used for deterministic but fast random.
+
+Implementation using \mbox{\hyperlink{random_8h}{Random.\+h}} default random engine. This engine is also used by other engines for seeding.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Using Default Engine with Random\+Walk 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} model;}
+\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{Markov::Random::DefaultRandomEngine}} randomEngine;}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
+\DoxyCodeLine{    this-\/>RandomWalk(\&randomEngine, 5, 10, res); }
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Generating a random number with Marsaglia Engine 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{Markov::Random::DefaultRandomEngine}} de;}
+\DoxyCodeLine{std::cout << de.\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_afd4233366727e5c2dd14d7e5c3ebfec1}{random}}();}
+\end{DoxyCode}
+
+
+Implementation of Marsaglia Random Engine. This is an implementation of Marsaglia Random engine, which for most use cases is a better fit than other solutions. Very simple mathematical formula to generate pseudorandom integer, so its crazy fast.
+
+This implementation of the Marsaglia Engine is seeded by \mbox{\hyperlink{random_8h}{random.\+h}} default random engine. Random\+Engine is only seeded once so its not a performance issue.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Using Marsaglia Engine with Random\+Walk 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} model;}
+\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
+\DoxyCodeLine{    this-\/>RandomWalk(\&MarsagliaRandomEngine, 5, 10, res); }
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Generating a random number with Marsaglia Engine 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} me;}
+\DoxyCodeLine{std::cout << me.\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{random}}();}
+\end{DoxyCode}
+ 
+
+Definition in file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+

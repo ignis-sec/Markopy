@@ -1,0 +1,136 @@
+\hypertarget{_generate_8cpp_source}{}\doxysection{Generate.\+cpp}
+\label{_generate_8cpp_source}\index{Generate.cpp@{Generate.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/** @file Generate.cpp}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @brief Generation Page}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @authors Yunus Emre Yılmaz}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ */}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_generate_8h}{"Generate.h"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{fstream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\textcolor{preprocessor}{<}\textcolor{preprocessor}{QFileDialog}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\textcolor{preprocessor}{<}\textcolor{preprocessor}{QMessageBox}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\textcolor{preprocessor}{<}\textcolor{preprocessor}{QTextStream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include}\textcolor{preprocessor}{<}\textcolor{preprocessor}{QDir}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_c_l_i_8h}{"CLI.h"}}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{"MarkovAPI/src/markovPasswords.h"}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{QtWidgets}\textcolor{preprocessor}{/}\textcolor{preprocessor}{QApplication}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_markov_passwords_g_u_i_8h}{"MarkovPasswordsGUI.h"}}}
+\DoxyCodeLine{00017 \textcolor{keyword}{using} \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}};}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{\Hypertarget{_generate_8cpp_source_l00020}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a104406389ae61bab2e3d87f771a2e353}{00020}} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate}{Generate}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a104406389ae61bab2e3d87f771a2e353}{Generate}}(QWidget* parent)}
+\DoxyCodeLine{00021     : QMainWindow(parent)}
+\DoxyCodeLine{00022 \{}
+\DoxyCodeLine{00023     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025     QObject::connect(ui.pushButton, \&QPushButton::clicked, \textcolor{keyword}{this}, [\textcolor{keyword}{this}] \{generation(); \});}
+\DoxyCodeLine{00026     QObject::connect(ui.pushButton\_4, \&QPushButton::clicked, \textcolor{keyword}{this}, [\textcolor{keyword}{this}] \{home(); \});}
+\DoxyCodeLine{00027     QObject::connect(ui.pushButton\_3, \&QPushButton::clicked, \textcolor{keyword}{this}, [\textcolor{keyword}{this}] \{train(); \});}
+\DoxyCodeLine{00028     QObject::connect(ui.pushButton\_2, \&QPushButton::clicked, \textcolor{keyword}{this}, [\textcolor{keyword}{this}] \{vis(); \});}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.pushButton-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{00032     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.lineEdit-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{00033     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.lineEdit\_2-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{00034     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.lineEdit\_3-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{00035     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.label\_3-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{00036     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.label\_4-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{00037     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.label\_5-\/>setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040 \}}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{\Hypertarget{_generate_8cpp_source_l00042}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_abc3c4aa5bf5afc2d56f0f95a355b1984}{00042}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate}{Generate}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_abc3c4aa5bf5afc2d56f0f95a355b1984}{generation}}() \{}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047     QString file\_name = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Open a File"}, QDir::homePath());}
+\DoxyCodeLine{00048     QFile file(file\_name);}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052     \textcolor{keywordtype}{int} numberPass = \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.lineEdit-\/>text().toInt();}
+\DoxyCodeLine{00053     \textcolor{keywordtype}{int} minLen = \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.lineEdit\_2-\/>text().toInt();}
+\DoxyCodeLine{00054     \textcolor{keywordtype}{int} maxLen = \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.lineEdit\_3-\/>text().toInt();}
+\DoxyCodeLine{00055     \textcolor{keywordtype}{char}* cstr;}
+\DoxyCodeLine{00056     std::string fname = file\_name.toStdString();}
+\DoxyCodeLine{00057     cstr = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[fname.size() + 1];}
+\DoxyCodeLine{00058     strcpy(cstr, fname.c\_str());}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.label\_6-\/>setText(\textcolor{stringliteral}{"GENERATING!"});}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062     \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{MarkovPasswords}} mp;}
+\DoxyCodeLine{00063     mp.Import(\textcolor{stringliteral}{"src\(\backslash\)\(\backslash\)CLI\(\backslash\)\(\backslash\)sample\_models\(\backslash\)\(\backslash\)2gram-\/trained.mdl"});}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065     mp\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{.}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Generate}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{(}}numberPass\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{,}}cstr\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{,}}minLen\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{,}}maxLen\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{)}};}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067     \textcolor{keywordflow}{if} (!file.open(QFile::ReadOnly | QFile::Text)) \{}
+\DoxyCodeLine{00068         QMessageBox::warning(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Error"}, \textcolor{stringliteral}{"File Not Open!"});}
+\DoxyCodeLine{00069     \}}
+\DoxyCodeLine{00070     QTextStream in(\&file);}
+\DoxyCodeLine{00071     QString text = in.readAll();}
+\DoxyCodeLine{00072     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.plainTextEdit-\/>setPlainText(text);}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.label\_6-\/>setText(\textcolor{stringliteral}{"DONE!"});}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078     file.close();}
+\DoxyCodeLine{00079 \}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{\Hypertarget{_generate_8cpp_source_l00082}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_af5f5d0fcc5530157d882e35e35d1649e}{00082}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate}{Generate}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_af5f5d0fcc5530157d882e35e35d1649e}{train}}() \{}
+\DoxyCodeLine{00083     QString file\_name = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Open a File"}, QDir::homePath());}
+\DoxyCodeLine{00084     QFile file(file\_name);}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     \textcolor{keywordflow}{if} (!file.open(QFile::ReadOnly | QFile::Text)) \{}
+\DoxyCodeLine{00087         QMessageBox::warning(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Error"}, \textcolor{stringliteral}{"File Not Open!"});}
+\DoxyCodeLine{00088     \}}
+\DoxyCodeLine{00089     QTextStream in(\&file);}
+\DoxyCodeLine{00090     QString text = in.readAll();}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093     \textcolor{keywordtype}{char}* cstr;}
+\DoxyCodeLine{00094     std::string fname = file\_name.toStdString();}
+\DoxyCodeLine{00095     cstr = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[fname.size() + 1];}
+\DoxyCodeLine{00096     strcpy(cstr, fname.c\_str());}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100     \textcolor{keywordtype}{char} a = \textcolor{stringliteral}{','};}
+\DoxyCodeLine{00101     \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{MarkovPasswords}} mp;}
+\DoxyCodeLine{00102     mp.Import(\textcolor{stringliteral}{"models\(\backslash\)\(\backslash\)2gram.mdl"});}
+\DoxyCodeLine{00103     mp\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{.}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Train}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{(}}cstr\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{,}} a\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{,}}10\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{)}};}
+\DoxyCodeLine{00104     mp.Export(\textcolor{stringliteral}{"models\(\backslash\)\(\backslash\)finished.mdl"});}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.pushButton-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00109     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.lineEdit-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00110     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.lineEdit\_2-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00111     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.lineEdit\_3-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00112     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.label\_3-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00113     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.label\_4-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00114     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.label\_5-\/>setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116     file.close();}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119 \}}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{\Hypertarget{_generate_8cpp_source_l00121}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a333b11d559e0ef49ea79626c97fbaeb3}{00121}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate}{Generate}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a333b11d559e0ef49ea79626c97fbaeb3}{home}}() \{}
+\DoxyCodeLine{00122      \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i}{CLI}}* w = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i}{CLI}};}
+\DoxyCodeLine{00123      w-\/>show();}
+\DoxyCodeLine{00124      \textcolor{keyword}{this}-\/>close();}
+\DoxyCodeLine{00125 \}}
+\DoxyCodeLine{\Hypertarget{_generate_8cpp_source_l00126}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_afbab410a7d15a59d42be45705f32e0fa}{00126}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate}{Generate}} :: \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_afbab410a7d15a59d42be45705f32e0fa}{vis}}() \{}
+\DoxyCodeLine{00127     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i}{MarkovPasswordsGUI}}* w = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i}{MarkovPasswordsGUI}};}
+\DoxyCodeLine{00128     w-\/>show();}
+\DoxyCodeLine{00129     \textcolor{keyword}{this}-\/>close();}
+\DoxyCodeLine{00130 \}}
+
+\end{DoxyCode}

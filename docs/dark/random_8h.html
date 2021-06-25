@@ -90,6 +90,9 @@ $(document).ready(function(){initNavTree('random_8h.html',''); initResizable(); 
 <div class="title">random.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Random engine implementations for <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a>.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;random&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -97,7 +100,7 @@ Include dependency graph for random.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="random_8h__incl.png" border="0" usemap="#random_8h" alt=""/></div>
 <map name="random_8h" id="random_8h">
-<area shape="rect" title=" " alt="" coords="54,5,154,35"/>
+<area shape="rect" title="Random engine implementations for Markov." alt="" coords="54,5,154,35"/>
 <area shape="rect" title=" " alt="" coords="5,83,91,112"/>
 <area shape="rect" title=" " alt="" coords="115,83,207,112"/>
 </map>
@@ -107,19 +110,23 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="random_8h__dep__incl.png" border="0" usemap="#random_8hdep" alt=""/></div>
 <map name="random_8hdep" id="random_8hdep">
-<area shape="rect" title=" " alt="" coords="474,5,574,35"/>
-<area shape="rect" href="node_8h.html" title=" " alt="" coords="420,83,497,112"/>
-<area shape="rect" href="cudarandom_8h.html" title=" " alt="" coords="521,83,660,112"/>
-<area shape="rect" href="model_8h.html" title=" " alt="" coords="415,160,502,189"/>
-<area shape="rect" href="markov_passwords_8h.html" title=" " alt="" coords="199,237,377,267"/>
-<area shape="rect" href="dllmain_8cpp.html" title=" " alt="" coords="401,237,516,267"/>
-<area shape="rect" href="_unit_tests_8cpp.html" title=" " alt="" coords="541,237,667,267"/>
-<area shape="rect" href="src_2main_8cpp.html" title=" " alt="" coords="5,392,101,421"/>
-<area shape="rect" href="model_matrix_8h.html" title=" " alt="" coords="123,315,261,344"/>
-<area shape="rect" href="markov_passwords_8cpp.html" title=" " alt="" coords="285,315,483,344"/>
-<area shape="rect" href="markopy_8cpp.html" title=" " alt="" coords="508,315,633,344"/>
-<area shape="rect" href="model_matrix_8cpp.html" title=" " alt="" coords="126,392,282,421"/>
-<area shape="rect" href="cuda_model_matrix_8h.html" title=" " alt="" coords="306,392,481,421"/>
+<area shape="rect" title="Random engine implementations for Markov." alt="" coords="503,5,603,35"/>
+<area shape="rect" href="node_8h.html" title="Node class template." alt="" coords="477,83,554,112"/>
+<area shape="rect" href="cudarandom_8h.html" title="Extension of Markov::Random::Marsaglia for CUDA." alt="" coords="651,160,790,189"/>
+<area shape="rect" href="model_8h.html" title="Model class template." alt="" coords="441,160,528,189"/>
+<area shape="rect" href="dllmain_8cpp.html" title="DLLMain for dynamic windows library." alt="" coords="169,237,283,267"/>
+<area shape="rect" href="markov_passwords_8h.html" title="Wrapper for Markov::Model to use with char represented models." alt="" coords="307,237,486,267"/>
+<area shape="rect" href="_unit_tests_8cpp.html" title="Unit tests with Microsoft::VisualStudio::CppUnitTestFramework." alt="" coords="511,237,637,267"/>
+<area shape="rect" href="markov_passwords_8cpp.html" title="Wrapper for Markov::Model to use with char represented models." alt="" coords="5,315,204,344"/>
+<area shape="rect" href="model_matrix_8h.html" title="An extension of Markov::API::MarkovPasswords." alt="" coords="279,315,416,344"/>
+<area shape="rect" href="_markov_a_p_i_c_l_i_2src_2main_8cpp.html" title="Test cases for Markov::API::ModelMatrix." alt="" coords="106,392,202,421"/>
+<area shape="rect" href="_generate_8cpp.html" title="Generation Page." alt="" coords="441,315,571,344"/>
+<area shape="rect" href="_train_8cpp.html" title="training page for GUI" alt="" coords="596,315,691,344"/>
+<area shape="rect" href="model_matrix_8cpp.html" title="An extension of Markov::API::MarkovPasswords." alt="" coords="227,392,383,421"/>
+<area shape="rect" href="markopy_8cpp.html" title="CPython wrapper for libmarkov utils." alt="" coords="407,392,533,421"/>
+<area shape="rect" href="cuda_model_matrix_8h.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="557,392,732,421"/>
+<area shape="rect" href="cuda_model_matrix_8cu.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="679,469,861,499"/>
+<area shape="rect" href="main_8cu.html" title="Simple test file to check libcudamarkov." alt="" coords="568,469,655,499"/>
 </map>
 </div>
 </div>
@@ -131,7 +138,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An abstract class for <a class="el" href="namespace_markov_1_1_random.html" title="Objects related to RNG.">Random</a> Engine.  <a href="class_markov_1_1_random_1_1_random_engine.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_random_1_1_default_random_engine.html">Markov::Random::DefaultRandomEngine</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation using <a class="el" href="random_8h.html">Random.h</a> default random engine.  <a href="class_markov_1_1_random_1_1_default_random_engine.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation using <a class="el" href="random_8h.html" title="Random engine implementations for Markov.">Random.h</a> default random engine.  <a href="class_markov_1_1_random_1_1_default_random_engine.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_random_1_1_marsaglia.html">Markov::Random::Marsaglia</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine.">Marsaglia</a> <a class="el" href="namespace_markov_1_1_random.html" title="Objects related to RNG.">Random</a> Engine.  <a href="class_markov_1_1_random_1_1_marsaglia.html#details">More...</a><br /></td></tr>
@@ -149,13 +156,49 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespace_markov_1_1_random"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objects related to RNG. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Random engine implementations for <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a>. </p>
+<dl class="section author"><dt>Authors</dt><dd>Ata Hakçıl</dd></dl>
+<p>An abstract class for Random Engine. This class is used for generating random numbers, which are used for random walking on the graph.</p>
+<p>Main reason behind allowing different random engines is that some use cases may favor performance, while some favor good random.</p>
+<p>Mersenne can be used for truer random, while Marsaglia can be used for deterministic but fast random.</p>
+<p>Implementation using <a class="el" href="random_8h.html" title="Random engine implementations for Markov.">Random.h</a> default random engine. This engine is also used by other engines for seeding.</p>
+<p><b>Example</b> <b>Use:</b> Using Default Engine with RandomWalk </p><div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_model.html">Markov::Model&lt;char&gt;</a> model;</div>
+<div class="line">Model.import(<span class="stringliteral">&quot;model.mdl&quot;</span>);</div>
+<div class="line"><span class="keywordtype">char</span>* res = <span class="keyword">new</span> <span class="keywordtype">char</span>[11];</div>
+<div class="line"><a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html">Markov::Random::DefaultRandomEngine</a> randomEngine;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
+<div class="line">    this-&gt;RandomWalk(&amp;randomEngine, 5, 10, res); </div>
+<div class="line">    std::cout &lt;&lt; res &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> }</div>
+</div><!-- fragment --><p><b>Example</b> <b>Use:</b> Generating a random number with Marsaglia Engine </p><div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html">Markov::Random::DefaultRandomEngine</a> de;</div>
+<div class="line">std::cout &lt;&lt; de.<a class="code" href="class_markov_1_1_random_1_1_default_random_engine.html#afd4233366727e5c2dd14d7e5c3ebfec1">random</a>();</div>
+</div><!-- fragment --><p>Implementation of Marsaglia Random Engine. This is an implementation of Marsaglia Random engine, which for most use cases is a better fit than other solutions. Very simple mathematical formula to generate pseudorandom integer, so its crazy fast.</p>
+<p>This implementation of the Marsaglia Engine is seeded by <a class="el" href="random_8h.html" title="Random engine implementations for Markov.">random.h</a> default random engine. RandomEngine is only seeded once so its not a performance issue.</p>
+<p><b>Example</b> <b>Use:</b> Using Marsaglia Engine with RandomWalk </p><div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_model.html">Markov::Model&lt;char&gt;</a> model;</div>
+<div class="line">Model.import(<span class="stringliteral">&quot;model.mdl&quot;</span>);</div>
+<div class="line"><span class="keywordtype">char</span>* res = <span class="keyword">new</span> <span class="keywordtype">char</span>[11];</div>
+<div class="line"><a class="code" href="class_markov_1_1_random_1_1_marsaglia.html">Markov::Random::Marsaglia</a> MarsagliaRandomEngine;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
+<div class="line">    this-&gt;RandomWalk(&amp;MarsagliaRandomEngine, 5, 10, res); </div>
+<div class="line">    std::cout &lt;&lt; res &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"> }</div>
+</div><!-- fragment --><p><b>Example</b> <b>Use:</b> Generating a random number with Marsaglia Engine </p><div class="fragment"><div class="line"><a class="code" href="class_markov_1_1_random_1_1_marsaglia.html">Markov::Random::Marsaglia</a> me;</div>
+<div class="line">std::cout &lt;&lt; me.<a class="code" href="class_markov_1_1_random_1_1_marsaglia.html#a0a56da316d520b80be6b6df6c9e0b537">random</a>();</div>
+</div><!-- fragment --> 
+<p class="definition">Definition in file <a class="el" href="random_8h_source.html">random.h</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_markov_1_1_random_1_1_default_random_engine_html"><div class="ttname"><a href="class_markov_1_1_random_1_1_default_random_engine.html">Markov::Random::DefaultRandomEngine</a></div><div class="ttdoc">Implementation using Random.h default random engine.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00061">random.h:61</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html_a0a56da316d520b80be6b6df6c9e0b537"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html#a0a56da316d520b80be6b6df6c9e0b537">Markov::Random::Marsaglia::random</a></div><div class="ttdeci">unsigned long random()</div><div class="ttdoc">Generate Random Number.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00140">random.h:140</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_default_random_engine_html_afd4233366727e5c2dd14d7e5c3ebfec1"><div class="ttname"><a href="class_markov_1_1_random_1_1_default_random_engine.html#afd4233366727e5c2dd14d7e5c3ebfec1">Markov::Random::DefaultRandomEngine::random</a></div><div class="ttdeci">unsigned long random()</div><div class="ttdoc">Generate Random Number.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00066">random.h:66</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_random_1_1_marsaglia_html"><div class="ttname"><a href="class_markov_1_1_random_1_1_marsaglia.html">Markov::Random::Marsaglia</a></div><div class="ttdoc">Implementation of Marsaglia Random Engine.</div><div class="ttdef"><b>Definition:</b> <a href="random_8h_source.html#l00125">random.h:125</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_model_html"><div class="ttname"><a href="class_markov_1_1_model.html">Markov::Model&lt; char &gt;</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_422554bd57fa81f0dd836caa3830c5ac.html">MarkovModel</a></li><li class="navelem"><a class="el" href="dir_efd19935daef5c936a959a8859f1ab63.html">src</a></li><li class="navelem"><a class="el" href="random_8h.html">random.h</a></li>
-    <li class="footer">Generated by
+    <li class="footer">Generated on Fri Jun 25 2021 20:41:33 for Markopy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

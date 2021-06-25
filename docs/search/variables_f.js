@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['parser_436',['parser',['../namespacemarkopy__cli.html#a57371c71f08d532cbc8dc5138711329e',1,'markopy_cli']]],
-  ['po_437',['po',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#a7cce367bd032897cc433adf667099a6c',1,'Markov::API::CLI::Argparse']]]
+  ['parser_469',['parser',['../namespacemarkopy.html#ad5187b752577f4de390b183b9c31ba33',1,'markopy']]],
+  ['po_470',['po',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#a7cce367bd032897cc433adf667099a6c',1,'Markov::API::CLI::Argparse']]]
 ];

@@ -1,3 +1,10 @@
+/** @file edge.h
+ * @brief Edge class template
+ * @authors Ata Hakçıl, Osman Ömer Yıldıztugay
+ * 
+ * @copydoc Markov::Edge
+ */
+
 #pragma once
 #include <cstdint>
 #include <cstddef>

@@ -1,3 +1,9 @@
+/** @file menu.h
+ * @brief menu page
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 #pragma once
 #include <QtWidgets/QMainWindow>
 #include "ui_menu.h"

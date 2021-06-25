@@ -1,8 +1,7 @@
 <map id="Markov::API::CUDA::CUDAModelMatrix" name="Markov::API::CUDA::CUDAModelMatrix">
-<area shape="rect" id="node1" title="Extension of Markov::API::ModelMatrix which is modified to run on GPU devices." alt="" coords="215,1271,457,1547"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html" title="Class to flatten and reduce Markov::Model to a Matrix." alt="" coords="13,980,265,1221"/>
-<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html" title="Markov::Model with char represented nodes." alt="" coords="5,689,272,931"/>
-<area shape="rect" id="node4" href="$class_markov_1_1_model.html" title=" " alt="" coords="33,364,244,640"/>
-<area shape="rect" id="node5" href="$class_markov_1_1_model.html" title="class for the final Markov Model, constructed from nodes and edges." alt="" coords="7,5,270,299"/>
-<area shape="rect" id="node6" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html" title="Controller class for CUDA device." alt="" coords="289,1015,517,1187"/>
+<area shape="rect" id="node1" title="Extension of Markov::API::ModelMatrix which is modified to run on GPU devices." alt="" coords="137,1029,405,1565"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html" title="Class to flatten and reduce Markov::Model to a Matrix." alt="" coords="13,653,265,981"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html" title="Markov::Model with char represented nodes." alt="" coords="5,347,272,605"/>
+<area shape="rect" id="node4" href="$class_markov_1_1_model.html" title=" " alt="" coords="33,5,244,299"/>
+<area shape="rect" id="node5" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html" title="Controller class for CUDA device." alt="" coords="289,731,517,903"/>
 </map>

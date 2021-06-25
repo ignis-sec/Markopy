@@ -87,38 +87,46 @@ $(document).ready(function(){initNavTree('about_8h_source.html',''); initResizab
 <div class="title">about.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="about_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">QtWidgets</span><span class="preprocessor">/</span><span class="preprocessor">QMainWindow</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;ui_about.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">ui_menu</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/** @brief namespace for MarkovPasswords API GUI wrapper</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace</span> Markov::<a class="code" href="namespace_markov_1_1_g_u_i.html">GUI</a>{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">/** @brief QT Class for about page</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_markov_1_1_g_u_i_1_1about.html">   12</a></span>&#160;    <span class="keyword">class</span> <a class="code" href="class_markov_1_1_g_u_i_1_1about.html#a539af3a67154650a2b269aae5abf41a0">about</a> :<span class="keyword">public</span> <a class="code" href="class_markov_1_1_g_u_i_1_1about.html#a539af3a67154650a2b269aae5abf41a0">QMainWindow</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_markov_1_1_g_u_i_1_1about.html#a539af3a67154650a2b269aae5abf41a0">Q_OBJECT</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_markov_1_1_g_u_i_1_1about.html#a539af3a67154650a2b269aae5abf41a0">about</a>(<a class="code" href="class_markov_1_1_g_u_i_1_1about.html#a539af3a67154650a2b269aae5abf41a0">QWidget</a>* <a class="code" href="class_markov_1_1_g_u_i_1_1about.html#a539af3a67154650a2b269aae5abf41a0">parent</a> = <a class="code" href="class_markov_1_1_g_u_i_1_1about.html#a539af3a67154650a2b269aae5abf41a0">Q_NULLPTR</a>);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_markov_1_1_g_u_i_1_1about.html#a773b962f6e7f5158fc39b710df87ef87">   18</a></span>&#160;        <a class="code" href="class_markov_1_1_g_u_i_1_1about.html#a773b962f6e7f5158fc39b710df87ef87">Ui</a>:: <a class="code" href="class_markov_1_1_g_u_i_1_1about.html#a773b962f6e7f5158fc39b710df87ef87">main</a> <a class="code" href="class_markov_1_1_g_u_i_1_1about.html#a773b962f6e7f5158fc39b710df87ef87">ui</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<a href="about_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/** @file about.h</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @brief About page </span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * @authors Yunus Emre Yılmaz</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">QtWidgets</span><span class="preprocessor">/</span><span class="preprocessor">QMainWindow</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;ui_about.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">ui_menu</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/** @brief namespace for MarkovPasswords API GUI wrapper</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespace_markov_1_1_g_u_i.html">   14</a></span>&#160;<span class="keyword">namespace</span> <a class="code" href="namespace_markov.html">Markov</a>::<a class="code" href="namespace_markov_1_1_g_u_i.html">GUI</a>{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">/** @brief QT Class for about page</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_markov_1_1_g_u_i_1_1about.html">   18</a></span>&#160;    <span class="keyword">class</span> <a class="code" href="class_markov_1_1_g_u_i_1_1about.html">about</a> :<span class="keyword">public</span> QMainWindow {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_markov_1_1_g_u_i_1_1about.html#a2d7cd30a50c3e97001c969d61b525fe8">about</a>(QWidget* parent = Q_NULLPTR);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_markov_1_1_g_u_i_1_1about.html#a773b962f6e7f5158fc39b710df87ef87">   24</a></span>&#160;        Ui:: main <a class="code" href="class_markov_1_1_g_u_i_1_1about.html#a773b962f6e7f5158fc39b710df87ef87">ui</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespace_markov_1_1_g_u_i_html"><div class="ttname"><a href="namespace_markov_1_1_g_u_i.html">Markov::GUI</a></div><div class="ttdoc">namespace for MarkovPasswords API GUI wrapper</div><div class="ttdef"><b>Definition:</b> <a href="menu_8h_source.html#l00006">menu.h:6</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1about_html_a539af3a67154650a2b269aae5abf41a0"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1about.html#a539af3a67154650a2b269aae5abf41a0">Markov::GUI::about::about</a></div><div class="ttdeci">about(QWidget *parent=Q_NULLPTR)</div></div>
-<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1about_html_a773b962f6e7f5158fc39b710df87ef87"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1about.html#a773b962f6e7f5158fc39b710df87ef87">Markov::GUI::about::ui</a></div><div class="ttdeci">Ui::main ui</div><div class="ttdef"><b>Definition:</b> <a href="about_8h_source.html#l00018">about.h:18</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1about_html"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1about.html">Markov::GUI::about</a></div><div class="ttdoc">QT Class for about page.</div><div class="ttdef"><b>Definition:</b> <a href="about_8h_source.html#l00018">about.h:18</a></div></div>
+<div class="ttc" id="anamespace_markov_1_1_g_u_i_html"><div class="ttname"><a href="namespace_markov_1_1_g_u_i.html">Markov::GUI</a></div><div class="ttdoc">namespace for MarkovPasswords API GUI wrapper</div><div class="ttdef"><b>Definition:</b> <a href="about_8h_source.html#l00014">about.h:14</a></div></div>
+<div class="ttc" id="anamespace_markov_html"><div class="ttname"><a href="namespace_markov.html">Markov</a></div><div class="ttdoc">Namespace for the markov-model related classes. Contains Model, Node and Edge classes.</div><div class="ttdef"><b>Definition:</b> <a href="model_8h_source.html#l00024">model.h:24</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1about_html_a2d7cd30a50c3e97001c969d61b525fe8"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1about.html#a2d7cd30a50c3e97001c969d61b525fe8">Markov::GUI::about::about</a></div><div class="ttdeci">about(QWidget *parent=Q_NULLPTR)</div><div class="ttdef"><b>Definition:</b> <a href="about_8cpp_source.html#l00014">about.cpp:14</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_g_u_i_1_1about_html_a773b962f6e7f5158fc39b710df87ef87"><div class="ttname"><a href="class_markov_1_1_g_u_i_1_1about.html#a773b962f6e7f5158fc39b710df87ef87">Markov::GUI::about::ui</a></div><div class="ttdeci">Ui::main ui</div><div class="ttdef"><b>Definition:</b> <a href="about_8h_source.html#l00024">about.h:24</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9b4f0d5587cead59387f745a2ce93b9c.html">MarkovPasswordsGUI</a></li><li class="navelem"><a class="el" href="dir_f2808bc6654a688015dbfd486288ae56.html">src</a></li><li class="navelem"><a class="el" href="about_8h.html">about.h</a></li>
-    <li class="footer">Generated by
+    <li class="footer">Generated on Fri Jun 25 2021 20:40:35 for Markopy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
