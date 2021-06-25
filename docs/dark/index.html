@@ -147,42 +147,43 @@ About The Project</h1>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Possible use cases</h1>
+<p>While main focus of the development has been towards random walk performance</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
 Built With</h2>
-<ul>
-<li>CPP, with dependecies: boost, python3-dev, QT-5.</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<p>Each one of the</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Getting Started</h1>
 <p>If you'd just like to use the project without contributing, check out the releases page. If you want to build, check out wiki for building the project.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 Prerequisites</h2>
-<h4><a class="anchor" id="autotoc_md7"></a>
+<h4><a class="anchor" id="autotoc_md8"></a>
 MarkovModel</h4>
 <ul>
 <li>Make for linux, Visual Studio/MSBuild for Windows.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md8"></a>
+<h4><a class="anchor" id="autotoc_md9"></a>
 MarkovPasswords</h4>
 <ul>
 <li>Boost.ProgramOptions (tested on 1.76.0)</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md9"></a>
+<h4><a class="anchor" id="autotoc_md10"></a>
 Markopy</h4>
 <ul>
 <li>Boost.Python (tested on 1.76.0)</li>
 <li>Python development package (tested on python 3.8)</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md10"></a>
+<h4><a class="anchor" id="autotoc_md11"></a>
 MarkovPasswordsGUI</h4>
 <ul>
 <li>QT development environment.</li>
 </ul>
 <hr  />
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Installing Dependencies</h2>
-<h4><a class="anchor" id="autotoc_md13"></a>
+<h4><a class="anchor" id="autotoc_md14"></a>
 Windows</h4>
 <ul>
 <li>QT: Install <a href="https://doc.qt.io/qt-5/windows.html">QT For Windows</a></li>
@@ -196,7 +197,7 @@ Windows</h4>
 </li>
 <li>Python: You can use the windows app store to download python runtime and libraries.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md14"></a>
+<h4><a class="anchor" id="autotoc_md15"></a>
 Linux</h4>
 <ul>
 <li>QT: Follow <a href="https://wiki.qt.io/Install_Qt_5_on_Ubuntu">this guide</a> to install QT on Linux.</li>
@@ -204,14 +205,14 @@ Linux</h4>
 <li>Python: run <code>sudo apt-get install python3</code></li>
 </ul>
 <hr  />
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 Installation</h2>
 <p>See the Wiki Page</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md18"></a>
+<h2><a class="anchor" id="autotoc_md19"></a>
 Building</h2>
 <p>Building process can be fairly complicated depending on the environment.</p>
-<h1><a class="anchor" id="autotoc_md19"></a>
+<h1><a class="anchor" id="autotoc_md20"></a>
 Linux</h1>
 <p>If you've set up the dependencies, you can just build the project with make. List of directives is below.</p>
 <div class="fragment"><div class="line">.PHONY: all</div>
@@ -226,27 +227,27 @@ Linux</h1>
 <div class="line">.PHONY: clean</div>
 <div class="line">clean:</div>
 <div class="line">    $(RM) -r $(BIN)/*</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md20"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md21"></a>
 Windows</h1>
 <p>Set up correct environment variables for BOOST_ROOT% (folder containing boost, libs, stage, tools) and PYTHON_PATH% (folder containing include, lib, libs, Tools, python.exe/python3.exe).</p>
 <p>If you've set up the dependencies and environment variables correctly, you can open the solution with Visual Studio and build with that.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md22"></a>
+<h1><a class="anchor" id="autotoc_md23"></a>
 Known Common issues</h1>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 Linux</h2>
-<h3><a class="anchor" id="autotoc_md24"></a>
+<h3><a class="anchor" id="autotoc_md25"></a>
 Markopy - Python.h - Not found</h3>
 <p>Make sure you have the development version of python package, which includes the required header files. Check if header files exist: <code>/usr/include/python*</code></p>
 <p>If it doesn't, run <code>sudo apt-get install python3-dev</code></p>
-<h3><a class="anchor" id="autotoc_md25"></a>
+<h3><a class="anchor" id="autotoc_md26"></a>
 Markopy/MarkovPasswords - *.so not found, or other library related issues when building</h3>
 <p>Run <code>ls /usr/lib/x86_64-linux-gnu/ | grep boost</code> and check the shared object filenames. A common issue is that lboost is required but filenames are formatted as llibboost, or vice versa.</p>
 <p>Do the same for python related library issues, run: <code>ls /usr/lib/x86_64-linux-gnu/ | grep python</code> to verify filename format is as required.</p>
 <p>If not, you can modify the makefile, or create symlinks such as: <code>ln -s /usr/lib/x86_64-linux-gnu/libboost_python38.so /usr/lib/x86_64-linux-gnu/boost_python38.so</code></p>
-<h2><a class="anchor" id="autotoc_md26"></a>
+<h2><a class="anchor" id="autotoc_md27"></a>
 Windows</h2>
-<h3><a class="anchor" id="autotoc_md27"></a>
+<h3><a class="anchor" id="autotoc_md28"></a>
 Boost - Bootstrap.bat "ctype.h" not found</h3>
 <ul>
 <li>Make sure you are working in the "Visual Studio Developer Command Prompt" terminal.</li>
@@ -256,19 +257,19 @@ Boost - Bootstrap.bat "ctype.h" not found</h3>
 <div class="line">set LIB=%LIB%;C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\um\x64</div>
 </div><!-- fragment --></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md28"></a>
+<h3><a class="anchor" id="autotoc_md29"></a>
 Cannot open file "*.lib"</h3>
 <p>Make sure you have set the BOOST_ROOT environment variable correctly. Make sure you ran <code>b2</code> to build library files from boost sources.</p>
-<h3><a class="anchor" id="autotoc_md29"></a>
+<h3><a class="anchor" id="autotoc_md30"></a>
 Python.h not found</h3>
 <p>Make sure you have python installed, and make sure you set PYTHON_PATH environment variable.</p>
 <hr  />
-<h3><a class="anchor" id="autotoc_md31"></a>
+<h3><a class="anchor" id="autotoc_md32"></a>
 Simplified Theory</h3>
-<p><a class="anchor" id="autotoc_md32"></a></p><h5>What is a markov model</h5>
+<p><a class="anchor" id="autotoc_md33"></a></p><h5>What is a markov model</h5>
 <p>Below, is the example <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Model which can generate strings with the alphabet "a,b,c"</p>
 <p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/empty_model.png" alt="" class="inline"/></p>
-<p><a class="anchor" id="autotoc_md33"></a></p><h5>Iteration 1</h5>
+<p><a class="anchor" id="autotoc_md34"></a></p><h5>Iteration 1</h5>
 <p>Below is a demonstration of how training will be done. For this example, we are going to adjust the model with string "ab", and our occurrence will be "3" From MarkovPasswords, inside the train function, Model::adjust is called with "ab" and "3" parameters.</p>
 <p>Now, Model::adjust will iteratively adjust the edge weights accordingly. It starts by adjusting weight between start and "a" node. This is done by calling Edge::adjust of the edge between the nodes.</p>
 <p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_1.png" alt="" class="inline"/></p>
@@ -276,21 +277,21 @@ Simplified Theory</h3>
 <p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_2.png" alt="" class="inline"/></p>
 <p>As this string is finished, it will adjust the final weight, b-&gt;"end"</p>
 <p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_3.png" alt="" class="inline"/></p>
-<p><a class="anchor" id="autotoc_md34"></a></p><h5>Iteration 2</h5>
+<p><a class="anchor" id="autotoc_md35"></a></p><h5>Iteration 2</h5>
 <p>This time, same procedure will be applied for "bacb" string, with occurrence value of 12.</p>
 <p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_21.png" alt="" class="inline"/></p>
 <p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_22.png" alt="" class="inline"/></p>
 <p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_23.png" alt="" class="inline"/></p>
 <p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_24.png" alt="" class="inline"/></p>
 <p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_25.png" alt="" class="inline"/></p>
-<p><a class="anchor" id="autotoc_md35"></a></p><h5>Iteration 38271</h5>
+<p><a class="anchor" id="autotoc_md36"></a></p><h5>Iteration 38271</h5>
 <p>As the model is trained, hidden linguistical patterns start to appear, and our model looks like this <img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_30.png" alt="" class="inline"/></p>
 <p>With our dataset, without doing any kind of linugistic analysis ourselves, our <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Model has highlighted that strings are more likely to start with a, b tends to follow a, and a is likely to be repeated in the string. <img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_31.png" alt="" class="inline"/></p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md37"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 Contributing</h2>
 <p>Feel free to contribute.</p>
-<h2><a class="anchor" id="autotoc_md38"></a>
+<h2><a class="anchor" id="autotoc_md39"></a>
 Contact</h2>
 <p>Twitter - <a href="https://twitter.com/ahakcil">@ahakcil</a> </p>
 </div></div><!-- PageDoc -->
@@ -299,7 +300,7 @@ Contact</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jun 26 2021 00:02:31 for Markopy by
+    <li class="footer">Generated on Sat Jun 26 2021 00:09:51 for Markopy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
