@@ -162,7 +162,7 @@ SOFTWARE.
     }
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     :root {
         --primary-color: #00559f;
         --primary-dark-color: #1982d2;
@@ -739,7 +739,7 @@ div.contents div.dyncontent {
     margin: var(--spacing-medium) 0;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     div.contents div.dyncontent img {
         filter: hue-rotate(180deg) invert();
     }
@@ -1256,7 +1256,7 @@ table.directory {
     }
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     .iconfopen, .iconfclosed {
         filter: hue-rotate(180deg) invert();
     }
@@ -1353,7 +1353,7 @@ li.navelem:first-child:before {
     margin-right: var(--spacing-small);
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     #nav-path li.navelem:after {
         text-shadow: 3px 0 0 var(--separator-color), 8px 0 6px rgba(0,0,0,0.4);
     }

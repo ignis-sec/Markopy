@@ -87,16 +87,12 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title"><a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Passwords </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Table of Contents<a href="https://github.com/FlameOfIgnis/MarkovPasswords/graphs/contributors"><object type="image/svg+xml" data="https://img.shields.io/github/contributors/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge" style="pointer-events: none;">Contributors</object></a> <a href="https://github.com/FlameOfIgnis/MarkovPasswords/network/members"><object type="image/svg+xml" data="https://img.shields.io/github/forks/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge" style="pointer-events: none;">Forks</object></a> <a href="https://github.com/FlameOfIgnis/MarkovPasswords/stargazers"><object type="image/svg+xml" data="https://img.shields.io/github/stars/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge" style="pointer-events: none;">Stargazers</object></a> <a href="https://github.com/FlameOfIgnis/MarkovPasswords/issues"><object type="image/svg+xml" data="https://img.shields.io/github/issues/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge" style="pointer-events: none;">Issues</object></a> <img src="https://img.shields.io/github/license/FlameOfIgnis/MarkovPasswords?style=for-the-badge" alt="GitHub" class="inline"/></p>
-<p align="center"><br  />
- </p>
-<p align="center"></p>
-<h3 align="center"><a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Passwords</h3>
-<p align="center"></p>
-<p>Generate wordlists with markov models. <br  />
- <a href="https://github.com/FlameOfIgnis/MarkovPasswords/wiki">Wiki</a> · <a href="https://markov.ignis.wtf">Complete documentation</a> · <a href="https://github.com/FlameOfIgnis/MarkovPasswords/issues">Report Bug</a> · <a href="https://github.com/FlameOfIgnis/MarkovPasswords/pulls">Add a Bug</a> </p>
-<p>&lt;details open="open"&gt;</p>
-<ol>
+<div class="textblock"><p><a href="https://github.com/ignis-sec/Markopy/graphs/contributors"><object type="image/svg+xml" data="https://img.shields.io/github/contributors/ignis-sec/Markopy.svg?style=for-the-badge" style="pointer-events: none;">Contributors</object></a> <a href="https://github.com/ignis-sec/Markopy/network/members"><object type="image/svg+xml" data="https://img.shields.io/github/forks/ignis-sec/Markopy.svg?style=for-the-badge" style="pointer-events: none;">Forks</object></a> <a href="https://github.com/ignis-sec/Markopy/stargazers"><object type="image/svg+xml" data="https://img.shields.io/github/stars/ignis-sec/Markopy.svg?style=for-the-badge" style="pointer-events: none;">Stargazers</object></a> <a href="https://github.com/ignis-sec/Markopy/issues"><object type="image/svg+xml" data="https://img.shields.io/github/issues/ignis-sec/Markopy.svg?style=for-the-badge" style="pointer-events: none;">Issues</object></a> <img src="https://img.shields.io/github/license/ignis-sec/Markopy?style=for-the-badge" alt="GitHub" class="inline"/></p>
+<p><br  />
+ </p><div align="center"> <h3 align="center"><a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Passwords</h3>
+</div><div align="center"> <div align="center"> Generate wordlists with markov models. <br  />
+ <a href="https://github.com/ignis-sec/Markopy/wiki">Wiki</a> · <a href="https://markov.ignis.wtf">Complete documentation</a> · <a href="https://github.com/ignis-sec/Markopy/issues">Report Bug</a> · <a href="https://github.com/ignis-sec/Markopy/pulls">Add a Bug</a> </div> </div><div> <h4>Table of Contents</h4>
+</div><div> <ol>
 <li>
 <a href="#about-the-project">About The Project</a> <ul>
 <li>
@@ -116,11 +112,41 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <li>
 <a href="#contact">Contact</a> </li>
 </ol>
-<p>&lt;/details&gt;</p>
-<hr  />
+</div><hr  />
 <h1><a class="anchor" id="autotoc_md2"></a>
 About The Project</h1>
-<p>This project aims to generate wordlists using markov models.</p>
+<p>This projects primary goal is to create a comfortable development environment for working with <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Models, as well as creating an end product which can be used for generating password wordlists using <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Models.</p>
+<p>This project contains following sub-projects:</p>
+<ul>
+<li>MarkovModel<ul>
+<li>A versatile header-only template library for basic <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Model structure.</li>
+</ul>
+</li>
+<li>MarkovAPI<ul>
+<li>A static/dynamic library built on MarkovModel, specialized to generate single-word lines.</li>
+</ul>
+</li>
+<li>MarkovAPICLI<ul>
+<li>A command line interface built on top of MarkovAPI</li>
+</ul>
+</li>
+<li>Markopy<ul>
+<li>A CPython extension wrapper for MarkovAPI, along with its own command line interface.</li>
+</ul>
+</li>
+<li>MarkovPasswordsGUI<ul>
+<li>A graphical user interface for MarkovAPI</li>
+</ul>
+</li>
+<li>CudaMarkovAPI<ul>
+<li>GPU-accelerated wrapper for MarkovAPI</li>
+</ul>
+</li>
+<li>CudaMarkopy<ul>
+<li>GPU-accelereted wrağğer for CudaMarkovAPI</li>
+</ul>
+</li>
+</ul>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Built With</h2>
 <ul>
@@ -241,25 +267,25 @@ Python.h not found</h3>
 Simplified Theory</h3>
 <p><a class="anchor" id="autotoc_md32"></a></p><h5>What is a markov model</h5>
 <p>Below, is the example <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Model which can generate strings with the alphabet "a,b,c"</p>
-<p><img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/empty_model.png" alt="" class="inline"/></p>
+<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/empty_model.png" alt="" class="inline"/></p>
 <p><a class="anchor" id="autotoc_md33"></a></p><h5>Iteration 1</h5>
 <p>Below is a demonstration of how training will be done. For this example, we are going to adjust the model with string "ab", and our occurrence will be "3" From MarkovPasswords, inside the train function, Model::adjust is called with "ab" and "3" parameters.</p>
 <p>Now, Model::adjust will iteratively adjust the edge weights accordingly. It starts by adjusting weight between start and "a" node. This is done by calling Edge::adjust of the edge between the nodes.</p>
-<p><img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_1.png" alt="" class="inline"/></p>
+<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_1.png" alt="" class="inline"/></p>
 <p>After adjustment, ajust function iterates to the next character, "b", and does the same thing.</p>
-<p><img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_2.png" alt="" class="inline"/></p>
+<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_2.png" alt="" class="inline"/></p>
 <p>As this string is finished, it will adjust the final weight, b-&gt;"end"</p>
-<p><img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_3.png" alt="" class="inline"/></p>
+<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_3.png" alt="" class="inline"/></p>
 <p><a class="anchor" id="autotoc_md34"></a></p><h5>Iteration 2</h5>
 <p>This time, same procedure will be applied for "bacb" string, with occurrence value of 12.</p>
-<p><img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_21.png" alt="" class="inline"/></p>
-<p><img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_22.png" alt="" class="inline"/></p>
-<p><img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_23.png" alt="" class="inline"/></p>
-<p><img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_24.png" alt="" class="inline"/></p>
-<p><img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_25.png" alt="" class="inline"/></p>
+<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_21.png" alt="" class="inline"/></p>
+<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_22.png" alt="" class="inline"/></p>
+<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_23.png" alt="" class="inline"/></p>
+<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_24.png" alt="" class="inline"/></p>
+<p><img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_25.png" alt="" class="inline"/></p>
 <p><a class="anchor" id="autotoc_md35"></a></p><h5>Iteration 38271</h5>
-<p>As the model is trained, hidden linguistical patterns start to appear, and our model looks like this <img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_30.png" alt="" class="inline"/></p>
-<p>With our dataset, without doing any kind of linugistic analysis ourselves, our <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Model has highlighted that strings are more likely to start with a, b tends to follow a, and a is likely to be repeated in the string. <img src="https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_31.png" alt="" class="inline"/></p>
+<p>As the model is trained, hidden linguistical patterns start to appear, and our model looks like this <img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_30.png" alt="" class="inline"/></p>
+<p>With our dataset, without doing any kind of linugistic analysis ourselves, our <a class="el" href="namespace_markov.html" title="Namespace for the markov-model related classes. Contains Model, Node and Edge classes.">Markov</a> Model has highlighted that strings are more likely to start with a, b tends to follow a, and a is likely to be repeated in the string. <img src="https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_31.png" alt="" class="inline"/></p>
 <hr  />
 <h2><a class="anchor" id="autotoc_md37"></a>
 Contributing</h2>
@@ -273,7 +299,7 @@ Contact</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Jun 25 2021 20:40:52 for Markopy by
+    <li class="footer">Generated on Sat Jun 26 2021 00:01:52 for Markopy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -5,59 +5,75 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-![GitHub](https://img.shields.io/github/license/FlameOfIgnis/MarkovPasswords?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/ignis-sec/Markopy?style=for-the-badge)
 
 
 <!-- PROJECT LOGO -->
 <br />
-<p align="center">
-
+<div align="center">
   <h3 align="center">Markov Passwords</h3>
-
-  <p align="center">
+  <div align="center">
    Generate wordlists with markov models.
     <br />
-    <a href="https://github.com/FlameOfIgnis/MarkovPasswords/wiki">Wiki</a>
+    <a href="https://github.com/ignis-sec/Markopy/wiki">Wiki</a>
     ·
     <a href="https://markov.ignis.wtf">Complete documentation</a>
     ·
-    <a href="https://github.com/FlameOfIgnis/MarkovPasswords/issues">Report Bug</a>
+    <a href="https://github.com/ignis-sec/Markopy/issues">Report Bug</a>
     ·
-    <a href="https://github.com/FlameOfIgnis/MarkovPasswords/pulls">Add a Bug</a>
-  </p>
-</p>
+    <a href="https://github.com/ignis-sec/Markopy/pulls">Add a Bug</a>
+  </div>
+</div>
 
 
 
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
-
+<div>
+    <h4>Table of Contents</h4>
+    <ol>
+      <li>
+        <a href="#about-the-project">About The Project</a>
+        <ul>
+          <li><a href="#built-with">Built With</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#getting-started">Getting Started</a>
+        <ul>
+          <li><a href="#prerequisites">Prerequisites</a></li>
+          <li><a href="#installation">Installation</a></li>
+        </ul>
+      </li>
+      <li><a href="#contributing">Contributing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+</div>
 
 ---
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-This project aims to generate wordlists using markov models.
+This projects primary goal is to create a comfortable development environment for working with Markov Models,
+as well as creating an end product which can be used for generating password wordlists using Markov Models.
 
+This project contains following sub-projects:
+
+- MarkovModel
+  - A versatile header-only template library for basic Markov Model structure.
+- MarkovAPI
+  - A static/dynamic library built on MarkovModel, specialized to generate single-word lines.
+- MarkovAPICLI
+  - A command line interface built on top of MarkovAPI
+- Markopy
+  - A CPython extension wrapper for MarkovAPI, along with its own command line interface.
+- MarkovPasswordsGUI
+  - A graphical user interface for MarkovAPI
+- CudaMarkovAPI
+  - GPU-accelerated wrapper for MarkovAPI
+- CudaMarkopy
+  - GPU-accelereted wrağğer for CudaMarkovAPI
+
+  
 ### Built With
 
 * CPP, with dependecies: boost, python3-dev, QT-5.
@@ -181,7 +197,7 @@ Make sure you have python installed, and make sure you set PYTHON_PATH environme
 
 Below, is the example Markov Model which can generate strings with the alphabet "a,b,c"
 
-![](https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/empty_model.png)
+![](https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/empty_model.png)
 
 
 ##### Iteration 1
@@ -191,40 +207,40 @@ From MarkovPasswords, inside the train function, Model::adjust is called with "a
 
 Now, Model::adjust will iteratively adjust the edge weights accordingly. It starts by adjusting weight between start and "a" node. This is done by calling Edge::adjust of the edge between the nodes.
 
-![](https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_1.png)
+![](https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_1.png)
 
 After adjustment, ajust function iterates to the next character, "b", and does the same thing.
 
-![](https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_2.png)
+![](https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_2.png)
 
 As this string is finished, it will adjust the final weight, b->"end"
 
-![](https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_3.png)
+![](https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_3.png)
 
 ##### Iteration 2
 
 This time, same procedure will be applied for "bacb" string, with occurrence value of 12.
 
 
-![](https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_21.png)
+![](https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_21.png)
 
-![](https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_22.png)
+![](https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_22.png)
 
-![](https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_23.png)
+![](https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_23.png)
 
-![](https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_24.png)
+![](https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_24.png)
 
-![](https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_25.png)
+![](https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_25.png)
 
 
 
 ##### Iteration 38271
 
 As the model is trained, hidden linguistical patterns start to appear, and our model looks like this
-![](https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_30.png)
+![](https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_30.png)
 
 With our dataset, without doing any kind of linugistic analysis ourselves, our Markov Model has highlighted that strings are more likely to start with a, b tends to follow a, and a is likely to be repeated in the string.
-![](https://raw.githubusercontent.com/FlameOfIgnis/MarkovPasswords/main/docs/images/model_31.png)
+![](https://raw.githubusercontent.com/ignis-sec/Markopy/main/docs/images/model_31.png)
 
 ---
 
@@ -241,13 +257,13 @@ Twitter - [@ahakcil](https://twitter.com/ahakcil)
 
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge
-[contributors-url]: https://github.com/FlameOfIgnis/MarkovPasswords/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge
-[forks-url]: https://github.com/FlameOfIgnis/MarkovPasswords/network/members
-[stars-shield]: https://img.shields.io/github/stars/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge
-[stars-url]: https://github.com/FlameOfIgnis/MarkovPasswords/stargazers
-[issues-shield]: https://img.shields.io/github/issues/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge
-[issues-url]: https://github.com/FlameOfIgnis/MarkovPasswords/issues
-[license-shield]: https://img.shields.io/github/license/FlameOfIgnis/MarkovPasswords.svg?style=for-the-badge
-[license-url]: https://github.com/FlameOfIgnis/MarkovPasswords/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/ignis-sec/Markopy.svg?style=for-the-badge
+[contributors-url]: https://github.com/ignis-sec/Markopy/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ignis-sec/Markopy.svg?style=for-the-badge
+[forks-url]: https://github.com/ignis-sec/Markopy/network/members
+[stars-shield]: https://img.shields.io/github/stars/ignis-sec/Markopy.svg?style=for-the-badge
+[stars-url]: https://github.com/ignis-sec/Markopy/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ignis-sec/Markopy.svg?style=for-the-badge
+[issues-url]: https://github.com/ignis-sec/Markopy/issues
+[license-shield]: https://img.shields.io/github/license/ignis-sec/Markopy.svg?style=for-the-badge
+[license-url]: https://github.com/ignis-sec/Markopy/LICENSE
