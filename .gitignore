@@ -375,7 +375,9 @@ include/*.so
 #cuda performance reports
 nvsight/*
 
-
+*.vcxproj
+*.vcxproj.filters
+*.sln
 
 #cmake ignores
 CMakeCache.txt

@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['gatherasynckerneloutput_362',['GatherAsyncKernelOutput',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a9e7c10fa39fe69e23ebc7aa812c30e71',1,'Markov::API::CUDA::CUDAModelMatrix']]],
-  ['generate_363',['Generate',['../class_markov_1_1_a_p_i_1_1_markov_passwords.html#a13886b29051abf3edeed97bd7f985f39',1,'Markov::API::MarkovPasswords::Generate()'],['../class_markov_1_1_g_u_i_1_1_generate.html#a104406389ae61bab2e3d87f771a2e353',1,'Markov::GUI::Generate::Generate()']]],
-  ['generatethread_364',['GenerateThread',['../class_markov_1_1_a_p_i_1_1_markov_passwords.html#ac2703ec2d5c97adaf8d205000ca34756',1,'Markov::API::MarkovPasswords']]],
-  ['generation_365',['generation',['../class_markov_1_1_g_u_i_1_1_generate.html#abc3c4aa5bf5afc2d56f0f95a355b1984',1,'Markov::GUI::Generate']]],
-  ['generator_366',['generator',['../class_markov_1_1_random_1_1_default_random_engine.html#aee6d9202d0aa50c16f46ecec0a2b05de',1,'Markov::Random::DefaultRandomEngine']]],
-  ['getprogramoptions_367',['getProgramOptions',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#a792dca6b5bf0d96ab8221a6f33335205',1,'Markov::API::CLI::Argparse']]]
+  ['fastrandomwalk_394',['FastRandomWalk',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a3bb4d49f1fbc10e1649dc9bf73529520',1,'Markov::API::ModelMatrix::FastRandomWalk(unsigned long int n, const char *wordlistFileName, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true)'],['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a09a6793164aeccc4875c25151ca2ab14',1,'Markov::API::ModelMatrix::FastRandomWalk(unsigned long int n, std::ofstream *wordlist, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true)'],['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ac9d971ef67f5062f2fe756a7286a15b9',1,'Markov::API::CUDA::CUDAModelMatrix::FastRandomWalk()']]],
+  ['fastrandomwalkcudakernel_395',['FastRandomWalkCUDAKernel',['../namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html#a67e8dd9b192bc5a7f35b8187f376dccc',1,'Markov::API::CUDA']]],
+  ['fastrandomwalkpartition_396',['FastRandomWalkPartition',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5',1,'Markov::API::ModelMatrix']]],
+  ['fastrandomwalkthread_397',['FastRandomWalkThread',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a96f2885aac69b49b21c66ad5a32514b9',1,'Markov::API::ModelMatrix']]],
+  ['findedge_398',['FindEdge',['../class_markov_1_1_node.html#ad836573fbdec1c6d7e72945f48ed081c',1,'Markov::Node::FindEdge(storageType repr)'],['../class_markov_1_1_node.html#adec94acba3fc021a2bbaded53d9e9730',1,'Markov::Node::FindEdge(Node&lt; storageType &gt; *target)']]],
+  ['flattenmatrix_399',['FlattenMatrix',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ae40af2e90f0500e2780a017f0d39f5e5',1,'Markov::API::CUDA::CUDAModelMatrix']]]
 ];

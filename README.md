@@ -288,17 +288,18 @@ Combine methods
 
 - QT: Install [QT For Windows](https://doc.qt.io/qt-5/windows.html)
 - Boost (program_options and python): 
-   - Download Boost from [its website](https://www.boost.org/users/download/). Prefer one of the tested versions, 1.71.0 to 1.76.0
-   - Unzip the contents.
-   - Launch "Visual Studio Developer Command Prompt" (If you don't have this, properly set up the %PATH% variable for cl.exe) 
-   - Move to the boost installation directory. Bootstrap libraries with your python version:
-    ```
-    .\bootstrap.bat --with-python=$(which python3.6) --with-python-version=3.6;
-    ```
-   - Run `b2` to build the libraries.
-    ```
-    .\b2.exe --layout=system address-model=64 variant=release link=static runtime-link=shared threading=multi --with-program_options --with-python stage;
-    ```
+  - Download Boost from [its website](https://www.boost.org/users/download/). Prefer one of the tested versions, 1.71.0 to 1.76.0
+  - Unzip the contents.
+  - Launch "Visual Studio Developer Command Prompt" (If you don't have this, properly set up the %PATH% variable for cl.exe) 
+  - Move to the boost installation directory. Bootstrap libraries with your python version:
+  ```
+  .\bootstrap.bat --with-python=$(which python3.6) --with-python-version=3.6;
+  ```
+
+  - Run `b2` to build the libraries.
+  ```
+  .\b2.exe --layout=system address-model=64 variant=release link=static runtime-link=shared threading=multi --with-program_options --with-python stage;
+  ```
 
 - Python: You can use the windows app store to download python runtime and libraries.
 
@@ -312,14 +313,15 @@ Combine methods
   - Download Boost from [its website](https://www.boost.org/users/download/). Prefer one of the tested versions, 1.71.0 to 1.76.0
   - Unzip the contents.
   - Move to the boost installation directory. Bootstrap libraries with your python version:
-    ```
-    ./bootstrap.sh --with-python=$(which python3.6) --with-python-version=3.6;
-    ```
+  ```
+  ./bootstrap.sh --with-python=$(which python3.6) --with-python-version=3.6;
+  ```
+
   - Run `b2` to build the libraries.
-    ```
-    ./b2 variant=release link=static threading=multi --with-program_options install;
-    ./b2 --with-python --buildid=3.6 install;
-    ```
+  ```
+  ./b2 variant=release link=static threading=multi --with-program_options install;
+  ./b2 --with-python --buildid=3.6 install;
+  ```
 
 - Boost (alternative)
   - Use a package manager to install boost
@@ -346,12 +348,24 @@ Check if header files exist: `/usr/include/python*` or `locate Python.h`.
 If it doesn't, run `sudo apt-get install python3-dev`
 
 #### Markopy/MarkovAPI - *.so not found, or other library related issues when building
-Run `ls /usr/lib/x86_64-linux-gnu/ | grep boost` and check the shared object filenames. A common issue is that lboost is required but filenames are formatted as llibboost, or vice versa.
+Run: 
+```
+ls /usr/lib/x86_64-linux-gnu/ | grep boost
+```
 
-Do the same for python related library issues, run: `ls /usr/lib/x86_64-linux-gnu/ | grep python` to verify filename format is as required.
+and check the shared object filenames. A common issue is that lboost is required but filenames are formatted as libboost, or vice versa.
+
+Do the same for python related library issues, run: 
+```
+ls /usr/lib/x86_64-linux-gnu/ | grep python
+```
+
+to verify filename format is as required.
 
 If not, you can modify the makefile, or create symlinks such as:
-`ln -s /usr/lib/x86_64-linux-gnu/libboost_python38.so /usr/lib/x86_64-linux-gnu/boost_python38.so`
+```
+ln -s /usr/lib/x86_64-linux-gnu/libboost_python38.so /usr/lib/x86_64-linux-gnu/boost_python38.so
+```
 
 ### Windows
 #### Boost - Bootstrap.bat "ctype.h" not found

@@ -145,10 +145,10 @@ Definition at line \mbox{\hyperlink{_train_8cpp_source_l00038}{38}} of file \mbo
 \DoxyCodeLine{00058 }
 \DoxyCodeLine{00059    }
 \DoxyCodeLine{00060     \textcolor{keywordtype}{char} a=\textcolor{charliteral}{','};}
-\DoxyCodeLine{00061     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}} mp;}
-\DoxyCodeLine{00062     mp.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"models/2gram.mdl"});}
-\DoxyCodeLine{00063     mp.\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Train}}(cstr, a, 10); \textcolor{comment}{//please parameterize this hardcoded 10 threads}}
-\DoxyCodeLine{00064     mp.\mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}}(\textcolor{stringliteral}{"models/finished.mdl"}); }
+\DoxyCodeLine{00061     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}} \mbox{\hyperlink{namespacemarkopy_a2626224ad1569dd3ce7c37599cb1e6fe}{mp}};}
+\DoxyCodeLine{00062     \mbox{\hyperlink{namespacemp}{mp}}.Import(\textcolor{stringliteral}{"models/2gram.mdl"});}
+\DoxyCodeLine{00063     \mbox{\hyperlink{namespacemp}{mp}}.Train(cstr, a, 10); \textcolor{comment}{//please parameterize this hardcoded 10 threads}}
+\DoxyCodeLine{00064     \mbox{\hyperlink{namespacemp}{mp}}.Export(\textcolor{stringliteral}{"models/finished.mdl"}); }
 \DoxyCodeLine{00065 }
 \DoxyCodeLine{00066     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_aca81fef5702a620bf650aa8a4c2bdaea}{ui}}.label\_2-\/>setText(\textcolor{stringliteral}{"Training DONE!"});}
 \DoxyCodeLine{00067     \textcolor{comment}{//ui.pushButton\_3-\/>setVisible(true);}}
@@ -162,12 +162,24 @@ Definition at line \mbox{\hyperlink{_train_8cpp_source_l00038}{38}} of file \mbo
 
 References \mbox{\hyperlink{markov_passwords_8cpp_source_l00065}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train()}}, and \mbox{\hyperlink{_train_8h_source_l00021}{ui}}.
 
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00161}{base.\+Base\+C\+L\+I\+::process()}}.
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_markov_1_1_g_u_i_1_1_train_a6f74c2948379df5e7f0d8eba96c97fb0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_g_u_i_1_1_train_a6f74c2948379df5e7f0d8eba96c97fb0_icgraph}
 \end{center}
 \end{figure}
 

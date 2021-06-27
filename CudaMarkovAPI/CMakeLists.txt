@@ -28,7 +28,12 @@ endif()
 add_dependencies (cudamarkov markov)
 
 set(CMP_CPP_FLAGS "${MP_C_FLAGS} -std=c++17")
-set(CMP_LINK_FLAGS "${SGX_COMMON_CFLAGS} -fPIC")
+if(WIN32)
+set(CMP_LINK_FLAGS "${SGX_COMMON_CFLAGS}")
+else()
+set(CMP_LINK_FLAGS "${SGX_COMMON_CFLAGS} -Wl,-rpath='${ORIGIN}'")
+endif()
+
 
 set_target_properties(cudamarkov PROPERTIES COMPILE_FLAGS "${CMP_CPP_FLAGS}")
 set_target_properties(cudamarkov PROPERTIES LINK_FLAGS "${CMP_LINK_FLAGS}")

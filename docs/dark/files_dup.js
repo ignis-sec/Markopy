@@ -6,6 +6,11 @@ var files_dup =
     ] ],
     [ "argparse.cpp", "argparse_8cpp.html", null ],
     [ "argparse.h", "argparse_8h.html", "argparse_8h" ],
+    [ "base.py", "base_8py.html", [
+      [ "BaseCLI", "classbase_1_1_base_c_l_i.html", "classbase_1_1_base_c_l_i" ],
+      [ "AbstractGenerationModelCLI", "classbase_1_1_abstract_generation_model_c_l_i.html", "classbase_1_1_abstract_generation_model_c_l_i" ],
+      [ "AbstractTrainingModelCLI", "classbase_1_1_abstract_training_model_c_l_i.html", "classbase_1_1_abstract_training_model_c_l_i" ]
+    ] ],
     [ "CLI.cpp", "_c_l_i_8cpp.html", null ],
     [ "CLI.h", "_c_l_i_8h.html", [
       [ "CLI", "class_markov_1_1_g_u_i_1_1_c_l_i.html", "class_markov_1_1_g_u_i_1_1_c_l_i" ]
@@ -44,6 +49,7 @@ var files_dup =
     [ "menu.h", "menu_8h.html", [
       [ "menu", "class_markov_1_1_g_u_i_1_1menu.html", "class_markov_1_1_g_u_i_1_1menu" ]
     ] ],
+    [ "mmx.py", "mmx_8py.html", "mmx_8py" ],
     [ "model.h", "model_8h.html", [
       [ "Node", "class_markov_1_1_node.html", "class_markov_1_1_node" ],
       [ "Edge", "class_markov_1_1_edge.html", "class_markov_1_1_edge" ],
@@ -54,6 +60,7 @@ var files_dup =
     [ "modelMatrix.h", "model_matrix_8h.html", [
       [ "ModelMatrix", "class_markov_1_1_a_p_i_1_1_model_matrix.html", "class_markov_1_1_a_p_i_1_1_model_matrix" ]
     ] ],
+    [ "mp.py", "mp_8py.html", "mp_8py" ],
     [ "node.h", "node_8h.html", [
       [ "Node", "class_markov_1_1_node.html", "class_markov_1_1_node" ]
     ] ],

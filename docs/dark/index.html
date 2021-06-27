@@ -329,8 +329,10 @@ Windows</h4>
 <li>Download Boost from <a href="https://www.boost.org/users/download/">its website</a>. Prefer one of the tested versions, 1.71.0 to 1.76.0</li>
 <li>Unzip the contents.</li>
 <li>Launch "Visual Studio Developer Command Prompt" (If you don't have this, properly set up the PATH% variable for cl.exe)</li>
-<li>Move to the boost installation directory. Bootstrap libraries with your python version: ``` .\bootstrap.bat &ndash;with-python=$(which python3.6) &ndash;with-python-version=3.6; ``<code></code></li>
-<li><code>Run</code>b2<code>to build the libraries. </code>`` .\b2.exe &ndash;layout=system address-model=64 variant=release link=static runtime-link=shared threading=multi &ndash;with-program_options &ndash;with-python stage; ```</li>
+<li>Move to the boost installation directory. Bootstrap libraries with your python version: <div class="fragment"><div class="line">.\bootstrap.bat --with-python=$(which python3.6) --with-python-version=3.6;</div>
+</div><!-- fragment --></li>
+<li>Run <code>b2</code> to build the libraries. <div class="fragment"><div class="line">.\b2.exe --layout=system address-model=64 variant=release link=static runtime-link=shared threading=multi --with-program_options --with-python stage;</div>
+</div><!-- fragment --></li>
 </ul>
 </li>
 <li>Python: You can use the windows app store to download python runtime and libraries.</li>
@@ -342,8 +344,11 @@ Linux</h4>
 <li>Boost (program options and python):<ul>
 <li>Download Boost from <a href="https://www.boost.org/users/download/">its website</a>. Prefer one of the tested versions, 1.71.0 to 1.76.0</li>
 <li>Unzip the contents.</li>
-<li>Move to the boost installation directory. Bootstrap libraries with your python version: ``` ./bootstrap.sh &ndash;with-python=$(which python3.6) &ndash;with-python-version=3.6; ``<code></code></li>
-<li><code>Run</code>b2<code>to build the libraries. </code>`` ./b2 variant=release link=static threading=multi &ndash;with-program_options install; ./b2 &ndash;with-python &ndash;buildid=3.6 install; ```</li>
+<li>Move to the boost installation directory. Bootstrap libraries with your python version: <div class="fragment"><div class="line">./bootstrap.sh --with-python=$(which python3.6) --with-python-version=3.6;</div>
+</div><!-- fragment --></li>
+<li>Run <code>b2</code> to build the libraries. <div class="fragment"><div class="line">./b2 variant=release link=static threading=multi --with-program_options install;</div>
+<div class="line">./b2 --with-python --buildid=3.6 install;</div>
+</div><!-- fragment --></li>
 </ul>
 </li>
 <li>Boost (alternative)<ul>
@@ -365,10 +370,12 @@ Markopy - Python.h - Not found</h3>
 <p>If it doesn't, run <code>sudo apt-get install python3-dev</code></p>
 <h3><a class="anchor" id="autotoc_md34"></a>
 Markopy/MarkovAPI - *.so not found, or other library related issues when building</h3>
-<p>Run <code>ls /usr/lib/x86_64-linux-gnu/ | grep boost</code> and check the shared object filenames. A common issue is that lboost is required but filenames are formatted as llibboost, or vice versa.</p>
-<p>Do the same for python related library issues, run: <code>ls /usr/lib/x86_64-linux-gnu/ | grep python</code> to verify filename format is as required.</p>
-<p>If not, you can modify the makefile, or create symlinks such as: <code>ln -s /usr/lib/x86_64-linux-gnu/libboost_python38.so /usr/lib/x86_64-linux-gnu/boost_python38.so</code></p>
-<h2><a class="anchor" id="autotoc_md35"></a>
+<p>Run: </p><div class="fragment"><div class="line">ls /usr/lib/x86_64-linux-gnu/ | grep boost</div>
+</div><!-- fragment --><p>and check the shared object filenames. A common issue is that lboost is required but filenames are formatted as libboost, or vice versa.</p>
+<p>Do the same for python related library issues, run: </p><div class="fragment"><div class="line">ls /usr/lib/x86_64-linux-gnu/ | grep python</div>
+</div><!-- fragment --><p>to verify filename format is as required.</p>
+<p>If not, you can modify the makefile, or create symlinks such as: </p><div class="fragment"><div class="line">ln -s /usr/lib/x86_64-linux-gnu/libboost_python38.so /usr/lib/x86_64-linux-gnu/boost_python38.so</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md35"></a>
 Windows</h2>
 <h3><a class="anchor" id="autotoc_md36"></a>
 Boost - Bootstrap.bat "ctype.h" not found</h3>
@@ -399,7 +406,7 @@ Contact</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jun 26 2021 02:39:13 for Markopy by
+    <li class="footer">Generated on Sun Jun 27 2021 17:05:59 for Markopy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['seperator_472',['seperator',['../struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options.html#ac558e96f2f1d618782339c27bd0f7abb',1,'Markov::API::CLI::_programOptions']]],
-  ['starternode_473',['starterNode',['../class_markov_1_1_model.html#ad2d9bf601df78f80076f5d3fbb65fe28',1,'Markov::Model']]]
+  ['total_5fedge_5fweights_523',['total_edge_weights',['../class_markov_1_1_node.html#ade384415c5b47dca4990293b8599e6ce',1,'Markov::Node']]],
+  ['totaledgeweights_524',['totalEdgeWeights',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a47bab10980c3117f75909b640a4096df',1,'Markov::API::ModelMatrix']]],
+  ['totaloutputperkernel_525',['totalOutputPerKernel',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a391422909c58da061283df0f1ff8069a',1,'Markov::API::CUDA::CUDAModelMatrix']]],
+  ['totaloutputpersync_526',['totalOutputPerSync',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a37c46cbceec37984c029be96402c60bf',1,'Markov::API::CUDA::CUDAModelMatrix']]]
 ];

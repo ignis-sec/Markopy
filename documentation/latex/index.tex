@@ -260,8 +260,16 @@ Combine methods
 \item Download Boost from \href{https://www.boost.org/users/download/}{\texttt{ its website}}. Prefer one of the tested versions, 1.\+71.\+0 to 1.\+76.\+0
 \item Unzip the contents.
 \item Launch \char`\"{}\+Visual Studio Developer Command Prompt\char`\"{} (If you don\textquotesingle{}t have this, properly set up the P\+A\+TH\% variable for cl.\+exe)
-\item Move to the boost installation directory. Bootstrap libraries with your python version\+: \`{}\`{}\`{} .\textbackslash{}bootstrap.bat --with-\/python=\$(which python3.\+6) --with-\/python-\/version=3.\+6; \`{}\`{}{\ttfamily }
-\item {\ttfamily Run}b2{\ttfamily to build the libraries. }\`{}\`{} .\textbackslash{}b2.exe --layout=system address-\/model=64 variant=release link=static runtime-\/link=shared threading=multi --with-\/program\+\_\+options --with-\/python stage; \`{}\`{}\`{}
+\item Move to the boost installation directory. Bootstrap libraries with your python version\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.\(\backslash\)bootstrap.bat -\/-\/with-\/python=\$(which python3.6) -\/-\/with-\/python-\/version=3.6;}
+\end{DoxyCode}
+
+\item Run {\ttfamily b2} to build the libraries. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.\(\backslash\)b2.exe -\/-\/layout=system address-\/model=64 variant=release link=static runtime-\/link=shared threading=multi -\/-\/with-\/program\_options -\/-\/with-\/python stage;}
+\end{DoxyCode}
+
 \end{DoxyItemize}
 \item Python\+: You can use the windows app store to download python runtime and libraries.
 \end{DoxyItemize}\hypertarget{index_autotoc_md29}{}\doxyparagraph{Linux}\label{index_autotoc_md29}
@@ -274,8 +282,17 @@ Combine methods
 \begin{DoxyItemize}
 \item Download Boost from \href{https://www.boost.org/users/download/}{\texttt{ its website}}. Prefer one of the tested versions, 1.\+71.\+0 to 1.\+76.\+0
 \item Unzip the contents.
-\item Move to the boost installation directory. Bootstrap libraries with your python version\+: \`{}\`{}\`{} ./bootstrap.sh --with-\/python=\$(which python3.\+6) --with-\/python-\/version=3.\+6; \`{}\`{}{\ttfamily }
-\item {\ttfamily Run}b2{\ttfamily to build the libraries. }\`{}\`{} ./b2 variant=release link=static threading=multi --with-\/program\+\_\+options install; ./b2 --with-\/python --buildid=3.\+6 install; \`{}\`{}\`{}
+\item Move to the boost installation directory. Bootstrap libraries with your python version\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./bootstrap.sh -\/-\/with-\/python=\$(which python3.6) -\/-\/with-\/python-\/version=3.6;}
+\end{DoxyCode}
+
+\item Run {\ttfamily b2} to build the libraries. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./b2 variant=release link=static threading=multi -\/-\/with-\/program\_options install;}
+\DoxyCodeLine{./b2 -\/-\/with-\/python -\/-\/buildid=3.6 install;}
+\end{DoxyCode}
+
 \end{DoxyItemize}
 \item Boost (alternative)
 \begin{DoxyItemize}
@@ -299,11 +316,27 @@ Combine methods
 Make sure you have the development version of python package, which includes the required header files. Check if header files exist\+: {\ttfamily /usr/include/python$\ast$} or {\ttfamily locate Python.\+h}.
 
 If it doesn\textquotesingle{}t, run {\ttfamily sudo apt-\/get install python3-\/dev}\hypertarget{index_autotoc_md34}{}\doxysubsubsection{Markopy/\+Markov\+A\+P\+I -\/ $\ast$.\+so not found, or other library related issues when building}\label{index_autotoc_md34}
-Run {\ttfamily ls /usr/lib/x86\+\_\+64-\/linux-\/gnu/ $\vert$ grep boost} and check the shared object filenames. A common issue is that lboost is required but filenames are formatted as llibboost, or vice versa.
+Run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ls /usr/lib/x86\_64-\/linux-\/gnu/ | grep boost}
+\end{DoxyCode}
 
-Do the same for python related library issues, run\+: {\ttfamily ls /usr/lib/x86\+\_\+64-\/linux-\/gnu/ $\vert$ grep python} to verify filename format is as required.
 
-If not, you can modify the makefile, or create symlinks such as\+: {\ttfamily ln -\/s /usr/lib/x86\+\_\+64-\/linux-\/gnu/libboost\+\_\+python38.so /usr/lib/x86\+\_\+64-\/linux-\/gnu/boost\+\_\+python38.so}\hypertarget{index_autotoc_md35}{}\doxysubsection{Windows}\label{index_autotoc_md35}
+and check the shared object filenames. A common issue is that lboost is required but filenames are formatted as libboost, or vice versa.
+
+Do the same for python related library issues, run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ls /usr/lib/x86\_64-\/linux-\/gnu/ | grep python}
+\end{DoxyCode}
+
+
+to verify filename format is as required.
+
+If not, you can modify the makefile, or create symlinks such as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ln -\/s /usr/lib/x86\_64-\/linux-\/gnu/libboost\_python38.so /usr/lib/x86\_64-\/linux-\/gnu/boost\_python38.so}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md35}{}\doxysubsection{Windows}\label{index_autotoc_md35}
 \hypertarget{index_autotoc_md36}{}\doxysubsubsection{Boost -\/ Bootstrap.\+bat \char`\"{}ctype.\+h\char`\"{} not found}\label{index_autotoc_md36}
 
 \begin{DoxyItemize}

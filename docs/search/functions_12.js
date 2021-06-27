@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vis_417',['vis',['../class_markov_1_1_g_u_i_1_1_generate.html#afbab410a7d15a59d42be45705f32e0fa',1,'Markov::GUI::Generate']]],
-  ['visualization_418',['visualization',['../class_markov_1_1_g_u_i_1_1menu.html#ad2fd60ba9ea6b8c4ba0ccb98abe9a651',1,'Markov::GUI::menu']]]
+  ['updateedges_459',['UpdateEdges',['../class_markov_1_1_node.html#a77dbb90420f6199790a4fa986b93f85c',1,'Markov::Node']]],
+  ['updatetotalverticeweight_460',['UpdateTotalVerticeWeight',['../class_markov_1_1_node.html#ab254a9c976195fcb1cac4d463d030d3c',1,'Markov::Node']]]
 ];

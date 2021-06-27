@@ -2,6 +2,16 @@ var hierarchy =
 [
     [ "Markov::API::CLI::_programOptions", "struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options.html", null ],
     [ "Markov::API::CLI::Argparse", "class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html", null ],
+    [ "base.BaseCLI", "classbase_1_1_base_c_l_i.html", [
+      [ "base.AbstractGenerationModelCLI", "classbase_1_1_abstract_generation_model_c_l_i.html", [
+        [ "base.AbstractTrainingModelCLI", "classbase_1_1_abstract_training_model_c_l_i.html", [
+          [ "mp.MarkovPasswordsCLI", "classmp_1_1_markov_passwords_c_l_i.html", null ]
+        ] ],
+        [ "mmx.ModelMatrixCLI", "classmmx_1_1_model_matrix_c_l_i.html", null ]
+      ] ],
+      [ "base.AbstractTrainingModelCLI", "classbase_1_1_abstract_training_model_c_l_i.html", null ],
+      [ "markopy.MarkopyCLI", "classmarkopy_1_1_markopy_c_l_i.html", null ]
+    ] ],
     [ "Markov::API::CUDA::CUDADeviceController", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html", [
       [ "Markov::API::CUDA::CUDAModelMatrix", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html", null ],
       [ "Markov::API::CUDA::Random::Marsaglia", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia.html", null ]

@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['benchmarkselected_336',['benchmarkSelected',['../class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i.html#a80a34b8a143b4657270fd1e69b54d0fa',1,'Markov::GUI::MarkovPasswordsGUI']]],
-  ['boost_5fpython_5fmodule_337',['BOOST_PYTHON_MODULE',['../namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9',1,'Markov::Markopy']]],
-  ['buff_338',['Buff',['../class_markov_1_1_a_p_i_1_1_markov_passwords.html#ad490665eae3beb022afc7e2491583d0a',1,'Markov::API::MarkovPasswords']]]
+  ['about_369',['about',['../class_markov_1_1_g_u_i_1_1about.html#a2d7cd30a50c3e97001c969d61b525fe8',1,'Markov::GUI::about::about()'],['../class_markov_1_1_g_u_i_1_1_c_l_i.html#afd53e83febbbb8bdaed5f58b084f3ce2',1,'Markov::GUI::CLI::about()'],['../class_markov_1_1_g_u_i_1_1menu.html#a0ca49b20cf34f1349a4489c9ae3e28ca',1,'Markov::GUI::menu::about()']]],
+  ['add_5farguments_370',['add_arguments',['../classbase_1_1_base_c_l_i.html#ae6dfeda797cbd1d32cf42d66d3caf225',1,'base.BaseCLI.add_arguments()'],['../classbase_1_1_abstract_generation_model_c_l_i.html#a5c6d330635f8dbfdeeb73f1cbb735bdf',1,'base.AbstractGenerationModelCLI.add_arguments()'],['../classbase_1_1_abstract_training_model_c_l_i.html#a167435f7113abb4531e1a5b7e53b5194',1,'base.AbstractTrainingModelCLI.add_arguments()'],['../classmarkopy_1_1_markopy_c_l_i.html#a08b0f0fa9f5e58b6469c4d8f5c2fb7b8',1,'markopy.MarkopyCLI.add_arguments()'],['../classmmx_1_1_model_matrix_c_l_i.html#a72bef55e5c769e9df9eb07fd2bd071e9',1,'mmx.ModelMatrixCLI.add_arguments()']]],
+  ['adjustedge_371',['AdjustEdge',['../class_markov_1_1_model.html#ad252913f83fa3eb14cc3f9f92c5ee37a',1,'Markov::Model::AdjustEdge()'],['../class_markov_1_1_edge.html#aa9d6cc6e631f1b515b4db604c96ad4ad',1,'Markov::Edge::AdjustEdge()']]],
+  ['allocvramoutputbuffer_372',['AllocVRAMOutputBuffer',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ab1ef31ffbad0b0acebbfa2a78c47e349',1,'Markov::API::CUDA::CUDAModelMatrix']]],
+  ['argparse_373',['Argparse',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#ac8aafb4b712616440ab0e8ed5e25f02e',1,'Markov::API::CLI::Argparse::Argparse()'],['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#ade2af065fa284422883812389f3ad2d7',1,'Markov::API::CLI::Argparse::Argparse(int argc, char **argv)']]]
 ];
