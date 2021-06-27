@@ -1,0 +1,238 @@
+\hypertarget{base_8py_source}{}\doxysection{base.\+py}
+\label{base_8py_source}\index{base.py@{base.py}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00001}\mbox{\hyperlink{namespacebase}{00001}} \textcolor{keyword}{import} argparse}
+\DoxyCodeLine{00002 \textcolor{keyword}{import} allogate \textcolor{keyword}{as} logging}
+\DoxyCodeLine{00003 \textcolor{keyword}{import} os}
+\DoxyCodeLine{00004 \textcolor{keyword}{from} abc \textcolor{keyword}{import} abstractmethod}
+\DoxyCodeLine{00005 \textcolor{keyword}{from} termcolor \textcolor{keyword}{import} colored}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00007}\mbox{\hyperlink{classbase_1_1_base_c_l_i}{00007}} \textcolor{keyword}{class }\mbox{\hyperlink{classbase_1_1_base_c_l_i}{BaseCLI}}():}
+\DoxyCodeLine{00008     \textcolor{stringliteral}{""" Base CLI class to handle user interactions"""}}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00009}\mbox{\hyperlink{classbase_1_1_base_c_l_i_aeb876aa47255d7a8fbf6bda468f17a8b}{00009}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_aeb876aa47255d7a8fbf6bda468f17a8b}{\_\_init\_\_}}(self, add\_help=True):}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00010}\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{00010}}         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}} = argparse.ArgumentParser(description=\textcolor{stringliteral}{"Python wrapper for MarkovPasswords."},}
+\DoxyCodeLine{00011         epilog=f\textcolor{stringliteral}{"""\{colored("Sample runs:", "yellow")\}}}
+\DoxyCodeLine{00012 \textcolor{stringliteral}{        \{\_\_file\_\_.split("/")[-\/1]\} train untrained.mdl -\/d dataset.dat -\/s "\(\backslash\)\(\backslash\)t" -\/o trained.mdl}}
+\DoxyCodeLine{00013 \textcolor{stringliteral}{            Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl\(\backslash\)n}}
+\DoxyCodeLine{00014 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00015 \textcolor{stringliteral}{        \{\_\_file\_\_.split("/")[-\/1]\} generate trained.mdl -\/n 500 -\/w output.txt}}
+\DoxyCodeLine{00016 \textcolor{stringliteral}{            Import trained.mdl, and generate 500 lines to output.txt}}
+\DoxyCodeLine{00017 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00018 \textcolor{stringliteral}{        \{\_\_file\_\_.split("/")[-\/1]\} combine untrained.mdl -\/d dataset.dat -\/s "\(\backslash\)\(\backslash\)t" -\/n 500 -\/w output.txt}}
+\DoxyCodeLine{00019 \textcolor{stringliteral}{            Train and immediately generate 500 lines to output.txt. Do not export trained model.}}
+\DoxyCodeLine{00020 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00021 \textcolor{stringliteral}{        \{\_\_file\_\_.split("/")[-\/1]\} combine untrained.mdl -\/d dataset.dat -\/s "\(\backslash\)\(\backslash\)t" -\/n 500 -\/w output.txt -\/o trained.mdl}}
+\DoxyCodeLine{00022 \textcolor{stringliteral}{            Train and immediately generate 500 lines to output.txt. Export trained model.}}
+\DoxyCodeLine{00023 \textcolor{stringliteral}{        """}, add\_help=add\_help, formatter\_class=argparse.RawTextHelpFormatter)}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00024}\mbox{\hyperlink{classbase_1_1_base_c_l_i_a45aa56452da7271e5c30e7f3b67fa6c2}{00024}}         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a45aa56452da7271e5c30e7f3b67fa6c2}{print\_help}} = self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.print\_help}
+\DoxyCodeLine{00025         }
+\DoxyCodeLine{00026     @abstractmethod}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00027}\mbox{\hyperlink{classbase_1_1_base_c_l_i_ae6dfeda797cbd1d32cf42d66d3caf225}{00027}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_ae6dfeda797cbd1d32cf42d66d3caf225}{add\_arguments}}(self):}
+\DoxyCodeLine{00028         \textcolor{stringliteral}{"Add command line arguements to the parser"}}
+\DoxyCodeLine{00029         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.add\_argument(\textcolor{stringliteral}{"mode"},                             help=\textcolor{stringliteral}{"Process mode. Either 'Train', 'Generate', or 'Combine'."})}
+\DoxyCodeLine{00030         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.add\_argument(\textcolor{stringliteral}{"-\/t"}, \textcolor{stringliteral}{"-\/-\/threads"},default=10,       help=\textcolor{stringliteral}{"Number of lines to generate. Ignored in training mode."})}
+\DoxyCodeLine{00031         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.add\_argument(\textcolor{stringliteral}{"-\/v"}, \textcolor{stringliteral}{"-\/-\/verbosity"},action=\textcolor{stringliteral}{"count"}, help=\textcolor{stringliteral}{"Output verbosity."})}
+\DoxyCodeLine{00032         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.add\_argument(\textcolor{stringliteral}{"-\/b"}, \textcolor{stringliteral}{"-\/-\/bulk"},action=\textcolor{stringliteral}{"store\_true"}, help=\textcolor{stringliteral}{"Bulk generate or bulk train every corpus/model in the folder."})}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     @abstractmethod}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00035}\mbox{\hyperlink{classbase_1_1_base_c_l_i_a0d820ca7ee4743284b4f2c8fdb2828cb}{00035}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_a0d820ca7ee4743284b4f2c8fdb2828cb}{help}}(self):}
+\DoxyCodeLine{00036         \textcolor{stringliteral}{"Handle help strings. Defaults to argparse's help"}}
+\DoxyCodeLine{00037         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a45aa56452da7271e5c30e7f3b67fa6c2}{print\_help}}()}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00039}\mbox{\hyperlink{classbase_1_1_base_c_l_i_a5f12b66168de1b9393ab69b663ab32a1}{00039}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_a5f12b66168de1b9393ab69b663ab32a1}{parse}}(self):}
+\DoxyCodeLine{00040         \textcolor{stringliteral}{"add, parse and hook arguements"}}
+\DoxyCodeLine{00041         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ae6dfeda797cbd1d32cf42d66d3caf225}{add\_arguments}}()}
+\DoxyCodeLine{00042         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_af7dd474789ac13215823e6ba0d7f1c95}{parse\_arguments}}()}
+\DoxyCodeLine{00043         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_aa1e67059dd0b710f61a58aed603fe4ed}{init\_post\_arguments}}()}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     @abstractmethod}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00046}\mbox{\hyperlink{classbase_1_1_base_c_l_i_aa1e67059dd0b710f61a58aed603fe4ed}{00046}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_aa1e67059dd0b710f61a58aed603fe4ed}{init\_post\_arguments}}(self):}
+\DoxyCodeLine{00047         \textcolor{stringliteral}{"set up stuff that is collected from command line arguements"}}
+\DoxyCodeLine{00048         logging.VERBOSITY = 0}
+\DoxyCodeLine{00049         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{00050             \textcolor{keywordflow}{if} self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.verbosity:}
+\DoxyCodeLine{00051                 logging.VERBOSITY = self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.verbosity}
+\DoxyCodeLine{00052                 logging.pprint(f\textcolor{stringliteral}{"Verbosity set to \{self.args.verbosity\}."}, 2)}
+\DoxyCodeLine{00053         \textcolor{keywordflow}{except}:}
+\DoxyCodeLine{00054             \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{00055     }
+\DoxyCodeLine{00056     @abstractmethod}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00057}\mbox{\hyperlink{classbase_1_1_base_c_l_i_af7dd474789ac13215823e6ba0d7f1c95}{00057}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_af7dd474789ac13215823e6ba0d7f1c95}{parse\_arguments}}(self):}
+\DoxyCodeLine{00058         \textcolor{stringliteral}{"trigger parser"}}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00059}\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{00059}}         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}} = self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.parse\_known\_args()[0]}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00061}\mbox{\hyperlink{classbase_1_1_base_c_l_i_a9a07289c27ee0b79f1f886df237075ae}{00061}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_a9a07289c27ee0b79f1f886df237075ae}{import\_model}}(self, filename):}
+\DoxyCodeLine{00062         \textcolor{stringliteral}{"Import a model file"}}
+\DoxyCodeLine{00063         logging.pprint(\textcolor{stringliteral}{"Importing model file."}, 1)}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a8839aad437c2dfba5481a744274ff580}{check\_import\_path}}(filename):}
+\DoxyCodeLine{00066             logging.pprint(f\textcolor{stringliteral}{"Model file at \{filename\} not found. Check the file path, or working directory"})}
+\DoxyCodeLine{00067             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069         self.model.Import(filename)}
+\DoxyCodeLine{00070         logging.pprint(\textcolor{stringliteral}{"Model imported successfully."}, 2)}
+\DoxyCodeLine{00071         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00075}\mbox{\hyperlink{classbase_1_1_base_c_l_i_a57cd9963d8dfbc42b2e560b0dacd871d}{00075}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_a57cd9963d8dfbc42b2e560b0dacd871d}{train}}(self, dataset : str, seperator : str, output : str, output\_forced : bool=\textcolor{keyword}{False}, bulk : bool=\textcolor{keyword}{False}):}
+\DoxyCodeLine{00076         \textcolor{stringliteral}{""" Train a model via CLI parameters }}
+\DoxyCodeLine{00077 \textcolor{stringliteral}{            @param model Model instance}}
+\DoxyCodeLine{00078 \textcolor{stringliteral}{            @param dataset filename for the dataset}}
+\DoxyCodeLine{00079 \textcolor{stringliteral}{            @param seperator seperator used with the dataset}}
+\DoxyCodeLine{00080 \textcolor{stringliteral}{            @param output output filename}}
+\DoxyCodeLine{00081 \textcolor{stringliteral}{            @param output\_forced force overwrite}}
+\DoxyCodeLine{00082 \textcolor{stringliteral}{            @param bulk marks bulk operation with directories}}
+\DoxyCodeLine{00083 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{00084         logging.pprint(\textcolor{stringliteral}{"Training."})}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} (dataset \textcolor{keywordflow}{and} seperator \textcolor{keywordflow}{and} (output \textcolor{keywordflow}{or} \textcolor{keywordflow}{not} output\_forced)):}
+\DoxyCodeLine{00087             logging.pprint(f\textcolor{stringliteral}{"Training mode requires -\/d/-\/-\/dataset\{', -\/o/-\/-\/output' if output\_forced else''\} and -\/s/-\/-\/seperator parameters. Exiting."})}
+\DoxyCodeLine{00088             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00090         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} bulk \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ac5ed1fa9866d7b2ae8942cedaf30f1c4}{check\_corpus\_path}}(dataset):}
+\DoxyCodeLine{00091             logging.pprint(f\textcolor{stringliteral}{"\{dataset\} doesn't exists. Check the file path, or working directory"})}
+\DoxyCodeLine{00092             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a9cadc9a6993e1f53418c8fe9403ac941}{check\_export\_path}}(output):}
+\DoxyCodeLine{00095             logging.pprint(f\textcolor{stringliteral}{"Cannot create output at \{output\}"})}
+\DoxyCodeLine{00096             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098         if(seperator == \textcolor{stringliteral}{'\(\backslash\)\(\backslash\)t'}):}
+\DoxyCodeLine{00099             logging.pprint(\textcolor{stringliteral}{"Escaping seperator."}, 3)}
+\DoxyCodeLine{00100             seperator = \textcolor{stringliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00101         }
+\DoxyCodeLine{00102         if(len(seperator)!=1):}
+\DoxyCodeLine{00103             logging.pprint(f\textcolor{stringliteral}{'Delimiter must be a single character, and "\{seperator\}" is not accepted.'})}
+\DoxyCodeLine{00104             exit(4)}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106         logging.pprint(f\textcolor{stringliteral}{'Starting training.'}, 3)}
+\DoxyCodeLine{00107         self.model.Train(dataset,seperator, int(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.threads))}
+\DoxyCodeLine{00108         logging.pprint(f\textcolor{stringliteral}{'Training completed.'}, 2)}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{00110         if(output):}
+\DoxyCodeLine{00111             logging.pprint(f\textcolor{stringliteral}{'Exporting model to \{output\}'}, 2)}
+\DoxyCodeLine{00112             self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a61612a5271d78046d11f000ae47b5ece}{export}}(output)}
+\DoxyCodeLine{00113         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00114             logging.pprint(f\textcolor{stringliteral}{'Model will not be exported.'}, 1)}
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00118}\mbox{\hyperlink{classbase_1_1_base_c_l_i_a61612a5271d78046d11f000ae47b5ece}{00118}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_a61612a5271d78046d11f000ae47b5ece}{export}}(self, filename):}
+\DoxyCodeLine{00119         \textcolor{stringliteral}{"Export model to a file"}}
+\DoxyCodeLine{00120         self.model.Export(filename)}
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00122}\mbox{\hyperlink{classbase_1_1_base_c_l_i_a3178017ad9900e1455460302122fe694}{00122}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_a3178017ad9900e1455460302122fe694}{generate}}(self, wordlist : str, bulk : bool=\textcolor{keyword}{False}):}
+\DoxyCodeLine{00123         \textcolor{stringliteral}{""" Generate strings from the model}}
+\DoxyCodeLine{00124 \textcolor{stringliteral}{            @param model: model instance}}
+\DoxyCodeLine{00125 \textcolor{stringliteral}{            @param wordlist wordlist filename}}
+\DoxyCodeLine{00126 \textcolor{stringliteral}{            @param bulk marks bulk operation with directories}}
+\DoxyCodeLine{00127 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{00128         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} (wordlist \textcolor{keywordflow}{or} self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.count):}
+\DoxyCodeLine{00129             logging.pprint(\textcolor{stringliteral}{"Generation mode requires -\/w/-\/-\/wordlist and -\/n/-\/-\/count parameters. Exiting."})}
+\DoxyCodeLine{00130             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00131     }
+\DoxyCodeLine{00132         if(bulk \textcolor{keywordflow}{and} os.path.isfile(wordlist)):}
+\DoxyCodeLine{00133             logging.pprint(f\textcolor{stringliteral}{"\{wordlist\} exists and will be overwritten."}, 1)}
+\DoxyCodeLine{00134         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a4e56de0ebfeb7d595e1463bf23ecfe88}{\_generate}}(wordlist)}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136     @abstractmethod}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00137}\mbox{\hyperlink{classbase_1_1_base_c_l_i_a4e56de0ebfeb7d595e1463bf23ecfe88}{00137}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_a4e56de0ebfeb7d595e1463bf23ecfe88}{\_generate}}(self, wordlist):}
+\DoxyCodeLine{00138         self.model.Generate(int(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.count), wordlist, int(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.min), int(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.max), int(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.threads))}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140     @staticmethod}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00141}\mbox{\hyperlink{classbase_1_1_base_c_l_i_a8839aad437c2dfba5481a744274ff580}{00141}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_a8839aad437c2dfba5481a744274ff580}{check\_import\_path}}(filename):}
+\DoxyCodeLine{00142         \textcolor{stringliteral}{"Check given import path for validity"}}
+\DoxyCodeLine{00143         if(\textcolor{keywordflow}{not} os.path.isfile(filename)):}
+\DoxyCodeLine{00144             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00145         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00146             \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00147 }
+\DoxyCodeLine{00148     @staticmethod}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00149}\mbox{\hyperlink{classbase_1_1_base_c_l_i_ac5ed1fa9866d7b2ae8942cedaf30f1c4}{00149}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_ac5ed1fa9866d7b2ae8942cedaf30f1c4}{check\_corpus\_path}}(filename):}
+\DoxyCodeLine{00150         \textcolor{stringliteral}{"Check given corpus path for validity"}}
+\DoxyCodeLine{00151         if(\textcolor{keywordflow}{not} os.path.isfile(filename)):}
+\DoxyCodeLine{00152             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00153         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00154 }
+\DoxyCodeLine{00155     @staticmethod}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00156}\mbox{\hyperlink{classbase_1_1_base_c_l_i_a9cadc9a6993e1f53418c8fe9403ac941}{00156}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_a9cadc9a6993e1f53418c8fe9403ac941}{check\_export\_path}}(filename):}
+\DoxyCodeLine{00157         if(filename \textcolor{keywordflow}{and} os.path.isfile(filename)):}
+\DoxyCodeLine{00158             \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00159         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00161}\mbox{\hyperlink{classbase_1_1_base_c_l_i_a81415f28ab1efa8b74cb6d5fe063a2d3}{00161}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_base_c_l_i_a81415f28ab1efa8b74cb6d5fe063a2d3}{process}}(self):}
+\DoxyCodeLine{00162         if(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.bulk):}
+\DoxyCodeLine{00163             logging.pprint(f\textcolor{stringliteral}{"Bulk mode operation chosen."}, 4)}
+\DoxyCodeLine{00164             \textcolor{keywordflow}{if} (self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.mode.lower() == \textcolor{stringliteral}{"train"}):}
+\DoxyCodeLine{00165                 \textcolor{keywordflow}{if} (os.path.isdir(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.output) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.output)) \textcolor{keywordflow}{and} (os.path.isdir(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.dataset) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.dataset)):}
+\DoxyCodeLine{00166                     corpus\_list = os.listdir(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.dataset)}
+\DoxyCodeLine{00167                     \textcolor{keywordflow}{for} corpus \textcolor{keywordflow}{in} corpus\_list:}
+\DoxyCodeLine{00168                         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a9a07289c27ee0b79f1f886df237075ae}{import\_model}}(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.input)}
+\DoxyCodeLine{00169                         logging.pprint(f\textcolor{stringliteral}{"Training \{self.args.input\} with \{corpus\}"}, 2)}
+\DoxyCodeLine{00170                         output\_file\_name = corpus}
+\DoxyCodeLine{00171                         model\_extension = \textcolor{stringliteral}{""}}
+\DoxyCodeLine{00172                         \textcolor{keywordflow}{if} \textcolor{stringliteral}{"."} \textcolor{keywordflow}{in} self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.input:}
+\DoxyCodeLine{00173                             model\_extension = self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.input.split(\textcolor{stringliteral}{"."})[-\/1]}
+\DoxyCodeLine{00174                         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a57cd9963d8dfbc42b2e560b0dacd871d}{train}}(f\textcolor{stringliteral}{"\{self.args.dataset\}/\{corpus\}"}, self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.seperator, f\textcolor{stringliteral}{"\{self.args.output\}/\{corpus\}.\{model\_extension\}"}, output\_forced=\textcolor{keyword}{True}, bulk=\textcolor{keyword}{True})}
+\DoxyCodeLine{00175                 \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00176                     logging.pprint(\textcolor{stringliteral}{"In bulk training, output and dataset should be a directory."})}
+\DoxyCodeLine{00177                     exit(1)}
+\DoxyCodeLine{00178 }
+\DoxyCodeLine{00179             \textcolor{keywordflow}{elif} (self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.mode.lower() == \textcolor{stringliteral}{"generate"}):}
+\DoxyCodeLine{00180                 \textcolor{keywordflow}{if} (os.path.isdir(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.wordlist) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.wordlist)) \textcolor{keywordflow}{and} (os.path.isdir(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.input) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.input)):}
+\DoxyCodeLine{00181                     model\_list = os.listdir(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.input)}
+\DoxyCodeLine{00182                     print(model\_list)}
+\DoxyCodeLine{00183                     \textcolor{keywordflow}{for} input \textcolor{keywordflow}{in} model\_list:}
+\DoxyCodeLine{00184                         logging.pprint(f\textcolor{stringliteral}{"Generating from \{self.args.input\}/\{input\} to \{self.args.wordlist\}/\{input\}.txt"}, 2)}
+\DoxyCodeLine{00185                         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a9a07289c27ee0b79f1f886df237075ae}{import\_model}}(f\textcolor{stringliteral}{"\{self.args.input\}/\{input\}"})}
+\DoxyCodeLine{00186                         model\_base = input}
+\DoxyCodeLine{00187                         \textcolor{keywordflow}{if} \textcolor{stringliteral}{"."} \textcolor{keywordflow}{in} self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.input:}
+\DoxyCodeLine{00188                             model\_base = input.split(\textcolor{stringliteral}{"."})[1]}
+\DoxyCodeLine{00189                         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a3178017ad9900e1455460302122fe694}{generate}}(f\textcolor{stringliteral}{"\{self.args.wordlist\}/\{model\_base\}.txt"}, bulk=\textcolor{keyword}{True})}
+\DoxyCodeLine{00190                 \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00191                     logging.pprint(\textcolor{stringliteral}{"In bulk generation, input and wordlist should be directory."})}
+\DoxyCodeLine{00192 }
+\DoxyCodeLine{00193         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00194             self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a9a07289c27ee0b79f1f886df237075ae}{import\_model}}(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.input)}
+\DoxyCodeLine{00195             \textcolor{keywordflow}{if} (self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.mode.lower() == \textcolor{stringliteral}{"generate"}):}
+\DoxyCodeLine{00196                 self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a3178017ad9900e1455460302122fe694}{generate}}(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.wordlist)}
+\DoxyCodeLine{00197 }
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199             \textcolor{keywordflow}{elif} (self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.mode.lower() == \textcolor{stringliteral}{"train"}):}
+\DoxyCodeLine{00200                 self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a57cd9963d8dfbc42b2e560b0dacd871d}{train}}(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.dataset, self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.seperator, self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.output, output\_forced=\textcolor{keyword}{True})}
+\DoxyCodeLine{00201 }
+\DoxyCodeLine{00202 }
+\DoxyCodeLine{00203             elif(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.mode.lower() == \textcolor{stringliteral}{"combine"}):}
+\DoxyCodeLine{00204                 self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a57cd9963d8dfbc42b2e560b0dacd871d}{train}}(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.dataset, self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.seperator, self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.output)}
+\DoxyCodeLine{00205                 self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a3178017ad9900e1455460302122fe694}{generate}}(self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_ab326819cf0bdb6b0de1b774334e06c80}{args}}.wordlist)}
+\DoxyCodeLine{00206 }
+\DoxyCodeLine{00207 }
+\DoxyCodeLine{00208             \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00209                 logging.pprint(\textcolor{stringliteral}{"Invalid mode arguement given."})}
+\DoxyCodeLine{00210                 logging.pprint(\textcolor{stringliteral}{"Accepted modes: 'Generate', 'Train', 'Combine'"})}
+\DoxyCodeLine{00211                 exit(5)}
+\DoxyCodeLine{00212 }
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00213}\mbox{\hyperlink{classbase_1_1_abstract_generation_model_c_l_i}{00213}} \textcolor{keyword}{class }\mbox{\hyperlink{classbase_1_1_abstract_generation_model_c_l_i}{AbstractGenerationModelCLI}}(\mbox{\hyperlink{classbase_1_1_base_c_l_i}{BaseCLI}}):}
+\DoxyCodeLine{00214     @abstractmethod}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00215}\mbox{\hyperlink{classbase_1_1_abstract_generation_model_c_l_i_a5c6d330635f8dbfdeeb73f1cbb735bdf}{00215}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_abstract_generation_model_c_l_i_a5c6d330635f8dbfdeeb73f1cbb735bdf}{add\_arguments}}(self):}
+\DoxyCodeLine{00216         \textcolor{stringliteral}{"Add command line arguements to the parser"}}
+\DoxyCodeLine{00217         super().\mbox{\hyperlink{classbase_1_1_abstract_generation_model_c_l_i_a5c6d330635f8dbfdeeb73f1cbb735bdf}{add\_arguments}}()}
+\DoxyCodeLine{00218         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.add\_argument(\textcolor{stringliteral}{"input"},                            help=\textcolor{stringliteral}{"Input model file. This model will be imported before starting operation."})}
+\DoxyCodeLine{00219         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.add\_argument(\textcolor{stringliteral}{"-\/w"}, \textcolor{stringliteral}{"-\/-\/wordlist"},                 help=\textcolor{stringliteral}{"Wordlist file path to export generation results to. Will be ignored for training mode"})}
+\DoxyCodeLine{00220         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.add\_argument(\textcolor{stringliteral}{"-\/-\/min"}, default=6,                 help=\textcolor{stringliteral}{"Minimum length that is allowed during generation"})}
+\DoxyCodeLine{00221         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.add\_argument(\textcolor{stringliteral}{"-\/-\/max"}, default=12,                help=\textcolor{stringliteral}{"Maximum length that is allowed during generation"})}
+\DoxyCodeLine{00222         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.add\_argument(\textcolor{stringliteral}{"-\/n"}, \textcolor{stringliteral}{"-\/-\/count"},                    help=\textcolor{stringliteral}{"Number of lines to generate. Ignored in training mode."})}
+\DoxyCodeLine{00223 }
+\DoxyCodeLine{00224 }
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00225}\mbox{\hyperlink{classbase_1_1_abstract_training_model_c_l_i}{00225}} \textcolor{keyword}{class }\mbox{\hyperlink{classbase_1_1_abstract_training_model_c_l_i}{AbstractTrainingModelCLI}}(\mbox{\hyperlink{classbase_1_1_abstract_generation_model_c_l_i}{AbstractGenerationModelCLI}}, \mbox{\hyperlink{classbase_1_1_base_c_l_i}{BaseCLI}}):}
+\DoxyCodeLine{00226     @abstractmethod}
+\DoxyCodeLine{\Hypertarget{base_8py_source_l00227}\mbox{\hyperlink{classbase_1_1_abstract_training_model_c_l_i_a167435f7113abb4531e1a5b7e53b5194}{00227}}     \textcolor{keyword}{def }\mbox{\hyperlink{classbase_1_1_abstract_training_model_c_l_i_a167435f7113abb4531e1a5b7e53b5194}{add\_arguments}}(self):}
+\DoxyCodeLine{00228         \textcolor{stringliteral}{"Add command line arguements to the parser"}}
+\DoxyCodeLine{00229         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.add\_argument(\textcolor{stringliteral}{"-\/o"}, \textcolor{stringliteral}{"-\/-\/output"},                   help=\textcolor{stringliteral}{"Output model file. This model will be exported when done. Will be ignored for generation mode."})}
+\DoxyCodeLine{00230         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.add\_argument(\textcolor{stringliteral}{"-\/d"}, \textcolor{stringliteral}{"-\/-\/dataset"},                  help=\textcolor{stringliteral}{"Dataset file to read input from for training. Will be ignored for generation mode."})}
+\DoxyCodeLine{00231         self.\mbox{\hyperlink{classbase_1_1_base_c_l_i_a51328a92a02b5b9fac1bef898820bf78}{parser}}.add\_argument(\textcolor{stringliteral}{"-\/s"}, \textcolor{stringliteral}{"-\/-\/seperator"},                help=\textcolor{stringliteral}{"Seperator character to use with training data.(character between occurrence and value)"})}
+\DoxyCodeLine{00232         super().\mbox{\hyperlink{classbase_1_1_abstract_training_model_c_l_i_a167435f7113abb4531e1a5b7e53b5194}{add\_arguments}}()}
+
+\end{DoxyCode}

@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['fastrandomwalk_356',['FastRandomWalk',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a3bb4d49f1fbc10e1649dc9bf73529520',1,'Markov::API::ModelMatrix::FastRandomWalk(unsigned long int n, const char *wordlistFileName, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true)'],['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a09a6793164aeccc4875c25151ca2ab14',1,'Markov::API::ModelMatrix::FastRandomWalk(unsigned long int n, std::ofstream *wordlist, int minLen=6, int maxLen=12, int threads=20, bool bFileIO=true)'],['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ac9d971ef67f5062f2fe756a7286a15b9',1,'Markov::API::CUDA::CUDAModelMatrix::FastRandomWalk()']]],
-  ['fastrandomwalkcudakernel_357',['FastRandomWalkCUDAKernel',['../namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html#a67e8dd9b192bc5a7f35b8187f376dccc',1,'Markov::API::CUDA']]],
-  ['fastrandomwalkpartition_358',['FastRandomWalkPartition',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#ad775d2e9c35e6f78c53f796df11405b5',1,'Markov::API::ModelMatrix']]],
-  ['fastrandomwalkthread_359',['FastRandomWalkThread',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a96f2885aac69b49b21c66ad5a32514b9',1,'Markov::API::ModelMatrix']]],
-  ['findedge_360',['FindEdge',['../class_markov_1_1_node.html#ad836573fbdec1c6d7e72945f48ed081c',1,'Markov::Node::FindEdge(storageType repr)'],['../class_markov_1_1_node.html#adec94acba3fc021a2bbaded53d9e9730',1,'Markov::Node::FindEdge(Node&lt; storageType &gt; *target)']]],
-  ['flattenmatrix_361',['FlattenMatrix',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ae40af2e90f0500e2780a017f0d39f5e5',1,'Markov::API::CUDA::CUDAModelMatrix']]]
+  ['edge_390',['Edge',['../class_markov_1_1_edge.html#a893ea498a247e09b2a7e2424f026a137',1,'Markov::Edge::Edge()'],['../class_markov_1_1_edge.html#a7813ff80fd97d5c0bd4fb339e2e5764b',1,'Markov::Edge::Edge(Node&lt; NodeStorageType &gt; *_left, Node&lt; NodeStorageType &gt; *_right)']]],
+  ['edges_391',['Edges',['../class_markov_1_1_model.html#a2e08608905d7b042627ea844b08045fe',1,'Markov::Model::Edges()'],['../class_markov_1_1_node.html#ad404ccc317ef8413881b8d7b72b4f4f0',1,'Markov::Node::Edges()']]],
+  ['edgeweight_392',['EdgeWeight',['../class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677',1,'Markov::Edge']]],
+  ['export_393',['export',['../classbase_1_1_base_c_l_i.html#a61612a5271d78046d11f000ae47b5ece',1,'base.BaseCLI.export()'],['../class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939',1,'Markov::Model::Export(std::ofstream *)'],['../class_markov_1_1_model.html#af788426a3c41a7838a2aae199e8aef5b',1,'Markov::Model::Export(const char *filename)']]]
 ];
