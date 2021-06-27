@@ -123,8 +123,12 @@ jobs:
   
     - name: Zip python files
       run: |
-        zip -r --junk-paths markopy-${{ needs.reversion.outputs.tag }}-linux-py${{ matrix.python-version }}.so.zip out/lib/markopy.so out/lib/libmarkov.so Markopy/src/CLI/*.py  /usr/local/lib/libboost_python${{ matrix.python-version }}*so.1*
-        zip --junk-paths cudamarkopy-${{ needs.reversion.outputs.tag }}-linux-py${{ matrix.python-version }}.so.zip out/lib/markopy.so out/lib/libmarkov.so out/lib/libcudamarkov.so out/lib/cudamarkopy.so Markopy/src/CLI/*.py CudaMarkopy/src/CLI/*.py  /usr/local/lib/libboost_python${{ matrix.python-version }}*so.1*
+        mkdir markopy-linux;
+        mkdir cudamarkopy-linux;
+        cp out/lib/markopy.so out/lib/libmarkov.so Markopy/src/CLI/*.py  /usr/local/lib/libboost_python${{ matrix.python-version }}*so.1* markopy-linux/
+        zip -r markopy-${{ needs.reversion.outputs.tag }}-linux-py${{ matrix.python-version }}.so.zip markopy-linux
+        cp out/lib/markopy.so out/lib/libmarkov.so out/lib/libcudamarkov.so out/lib/cudamarkopy.so Markopy/src/CLI/*.py CudaMarkopy/src/CLI/*.py  /usr/local/lib/libboost_python${{ matrix.python-version }}*so.1* cudamarkopy-linux/
+        zip -r cudamarkopy-${{ needs.reversion.outputs.tag }}-linux-py${{ matrix.python-version }}.so.zip cudamarkopy-linux
         
     
     - name: Upload LibMarkov
@@ -261,7 +265,9 @@ jobs:
         dir .;
         dir out/;
         dir out/lib/Release;
-        powershell "Compress-Archive Markopy\src\CLI\*.py,out\lib\Release\markopy.pyd,${{env.GITHUB_ACTION_WIN_PROJECT}}\boost\stage\lib\boost_python*.dll markopy-${{ needs.reversion.outputs.tag }}-win64-py${{ steps.link_python.outputs.python_ver}}.pyd.zip"
+        mkdir markopy-windows
+        copy-item -Path Markopy\src\CLI\*.py,out\lib\Release\markopy.pyd,${{env.GITHUB_ACTION_WIN_PROJECT}}\boost\stage\lib\boost_python*.dll -Destination markopy-windows\
+        powershell "Compress-Archive markopy-windows markopy-${{ needs.reversion.outputs.tag }}-win64-py${{ steps.link_python.outputs.python_ver}}.pyd.zip"
         powershell "Compress-Archive out\lib\Release\markov.lib libmarkov-${{ needs.reversion.outputs.tag }}-win64.zip"
       
     - name: Upload LibMarkov
