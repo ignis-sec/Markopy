@@ -1,5 +1,10 @@
 \hypertarget{thread_shared_list_handler_8cpp}{}\doxysection{thread\+Shared\+List\+Handler.\+cpp File Reference}
 \label{thread_shared_list_handler_8cpp}\index{threadSharedListHandler.cpp@{threadSharedListHandler.cpp}}
+
+
+Thread-\/safe wrapper for std\+::ifstream.  
+
+
 {\ttfamily \#include \char`\"{}thread\+Shared\+List\+Handler.\+h\char`\"{}}\newline
 Include dependency graph for thread\+Shared\+List\+Handler.\+cpp\+:
 \nopagebreak
@@ -9,3 +14,17 @@ Include dependency graph for thread\+Shared\+List\+Handler.\+cpp\+:
 \includegraphics[width=285pt]{thread_shared_list_handler_8cpp__incl}
 \end{center}
 \end{figure}
+
+
+\doxysubsection{Detailed Description}
+Thread-\/safe wrapper for std\+::ifstream. 
+
+\begin{DoxyAuthor}{Authors}
+Ata Hakçıl
+\end{DoxyAuthor}
+Simple class for managing shared access to file. This class maintains the handover of each line from a file to multiple threads.
+
+When two different threads try to read from the same file while reading a line isn\textquotesingle{}t completed, it can have unexpected results. Line might be split, or might be read twice. This class locks the read action on the list until a line is completed, and then proceeds with the handover. 
+
+Definition in file \mbox{\hyperlink{thread_shared_list_handler_8cpp_source}{thread\+Shared\+List\+Handler.\+cpp}}.
+

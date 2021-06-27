@@ -23,7 +23,7 @@
 \usepackage[nointegrals]{wasysym}
 \usepackage[table]{xcolor}
 \usepackage{ifpdf,ifxetex}
-
+\usepackage{titlesec} 
 % Font selection
 \usepackage[T1]{fontenc}
 \usepackage[scaled=.90]{helvet}
@@ -117,7 +117,7 @@
   \newunicodechar{²}{${}^{2}$}% Superscript two
   \newunicodechar{³}{${}^{3}$}% Superscript three
 
-% Hyperlinks (required, but should be loaded last)
+% Hyperlinks (required, but should be loaded last)  
 \ifpdf
   \usepackage[pdftex,pagebackref=true]{hyperref}
 \else
@@ -146,6 +146,15 @@
 \usepackage{etoc}
 \etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
 \renewcommand{\numberline}[1]{#1~}
+
+\titleformat{\chapter}[display]
+  {\bfseries\Large}
+  {\filright\MakeUppercase{\chaptertitlename \thechapter}}
+  {1ex}
+  {\titlerule\vspace{1ex}\filleft}
+  [\vspace{1ex}\titlerule]
+  \titlespacing*{\chapter}{0pt}{0pt}{20pt}
+  \titlespacing*{\section}{0pt}{0pt}{0pt}
 %===== C O N T E N T S =====
 
 \begin{document}
@@ -193,7 +202,7 @@
         
     \large
     
-    \textbf{0.4.1 Documentation}
+    \textbf{0.6.0 Documentation}
     
 \end{center}
 \end{titlepage}
@@ -203,8 +212,12 @@
 \hypersetup{pageanchor=true}
 
 %--- Begin generated contents ---
-\chapter{Markov Passwords}
+\chapter{Markopy}
 \label{index}\hypertarget{index}{}\input{index}
+\chapter{N\+V\+Sight Report}
+\label{md__media_ignis__h_d_d__repositories__markov_passwords__n_v_sight_report}
+\Hypertarget{md__media_ignis__h_d_d__repositories__markov_passwords__n_v_sight_report}
+\input{md__media_ignis__h_d_d__repositories__markov_passwords__n_v_sight_report}
 \chapter{Deprecated List}
 \label{deprecated}
 \Hypertarget{deprecated}
@@ -218,7 +231,7 @@
 \chapter{File Index}
 \input{files}
 \chapter{Namespace Documentation}
-\input{namespacemarkopy__cli}
+\input{namespacemarkopy}
 \input{namespace_markov}
 \input{namespace_markov_1_1_a_p_i}
 \input{namespace_markov_1_1_a_p_i_1_1_c_l_i}
@@ -246,30 +259,40 @@
 \input{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}
 \input{class_markov_1_1_random_1_1_default_random_engine}
 \input{class_markov_1_1_edge}
+\input{class_markov_1_1_g_u_i_1_1_generate}
 \input{class_markov_1_1_a_p_i_1_1_markov_passwords}
 \input{class_markov_1_1_g_u_i_1_1_markov_passwords_g_u_i}
-\input{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}
 \input{class_markov_1_1_random_1_1_marsaglia}
+\input{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}
 \input{class_markov_1_1_g_u_i_1_1menu}
 \input{class_markov_1_1_random_1_1_mersenne}
 \input{class_markov_1_1_model}
 \input{class_markov_1_1_a_p_i_1_1_model_matrix}
 \input{class_markov_1_1_node}
+\input{class_q_main_window}
 \input{class_markov_1_1_random_1_1_random_engine}
 \input{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}
 \input{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}
 \input{class_markov_1_1_g_u_i_1_1_train}
 \chapter{File Documentation}
+\input{about_8cpp}
+\input{about_8cpp_source}
 \input{about_8h}
 \input{about_8h_source}
 \input{argparse_8cpp}
 \input{argparse_8cpp_source}
 \input{argparse_8h}
 \input{argparse_8h_source}
+\input{_c_l_i_8cpp}
+\input{_c_l_i_8cpp_source}
 \input{_c_l_i_8h}
 \input{_c_l_i_8h_source}
+\input{cuda_device_controller_8cu}
+\input{cuda_device_controller_8cu_source}
 \input{cuda_device_controller_8h}
 \input{cuda_device_controller_8h_source}
+\input{cuda_model_matrix_8cu}
+\input{cuda_model_matrix_8cu_source}
 \input{cuda_model_matrix_8h}
 \input{cuda_model_matrix_8h_source}
 \input{cudarandom_8h}
@@ -280,14 +303,20 @@
 \input{edge_8h_source}
 \input{framework_8h}
 \input{framework_8h_source}
-\input{src_2main_8cpp}
-\input{src_2main_8cpp_source}
-\input{_u_i_2src_2main_8cpp}
-\input{_u_i_2src_2main_8cpp_source}
+\input{_generate_8cpp}
+\input{_generate_8cpp_source}
+\input{_generate_8h}
+\input{_generate_8h_source}
+\input{_markov_a_p_i_c_l_i_2src_2main_8cpp}
+\input{_markov_a_p_i_c_l_i_2src_2main_8cpp_source}
+\input{_markov_passwords_g_u_i_2src_2main_8cpp}
+\input{_markov_passwords_g_u_i_2src_2main_8cpp_source}
+\input{main_8cu}
+\input{main_8cu_source}
 \input{markopy_8cpp}
 \input{markopy_8cpp_source}
-\input{markopy__cli_8py}
-\input{markopy__cli_8py_source}
+\input{markopy_8py}
+\input{markopy_8py_source}
 \input{markov_passwords_8cpp}
 \input{markov_passwords_8cpp_source}
 \input{markov_passwords_8h}
@@ -323,6 +352,7 @@
 \input{random_8h}
 \input{random_8h_source}
 \input{_r_e_a_d_m_e_8md}
+\input{report_8md}
 \input{term_8cpp}
 \input{term_8cpp_source}
 \input{term_8h}
@@ -331,6 +361,8 @@
 \input{thread_shared_list_handler_8cpp_source}
 \input{thread_shared_list_handler_8h}
 \input{thread_shared_list_handler_8h_source}
+\input{_train_8cpp}
+\input{_train_8cpp_source}
 \input{_train_8h}
 \input{_train_8h_source}
 \input{_unit_tests_8cpp}

@@ -1,3 +1,9 @@
+/** @file Train.h
+ * @brief training page for GUI
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 #pragma once
 #include <QtWidgets/QMainWindow>
 #include "ui_Train.h"

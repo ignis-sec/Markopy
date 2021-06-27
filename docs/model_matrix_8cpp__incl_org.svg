@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="An extension of Markov::API::MarkovPasswords.">
 <polygon fill="#bfbfbf" stroke="black" points="617,-348.5 617,-369.5 734,-369.5 734,-348.5 617,-348.5"/>
 <text text-anchor="middle" x="675.5" y="-355.9" font-family="Helvetica,sans-Serif" font-size="12.00">modelMatrix.cpp</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="model_matrix_8h.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="model_matrix_8h.html" target="_top" xlink:title="An extension of Markov::API::MarkovPasswords.">
 <polygon fill="none" stroke="black" points="516,-290.5 516,-311.5 619,-311.5 619,-290.5 516,-290.5"/>
 <text text-anchor="middle" x="567.5" y="-297.9" font-family="Helvetica,sans-Serif" font-size="12.00">modelMatrix.h</text>
 </a>
@@ -80,7 +80,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="markov_passwords_8h.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="markov_passwords_8h.html" target="_top" xlink:title="Wrapper for Markov::Model to use with char represented models.">
 <polygon fill="none" stroke="black" points="417.5,-232.5 417.5,-253.5 551.5,-253.5 551.5,-232.5 417.5,-232.5"/>
 <text text-anchor="middle" x="484.5" y="-239.9" font-family="Helvetica,sans-Serif" font-size="12.00">markovPasswords.h</text>
 </a>
@@ -110,7 +110,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="thread_shared_list_handler_8h.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="thread_shared_list_handler_8h.html" target="_top" xlink:title="Thread&#45;safe wrapper for std::ifstream.">
 <polygon fill="none" stroke="black" points="397,-174.5 397,-195.5 572,-195.5 572,-174.5 397,-174.5"/>
 <text text-anchor="middle" x="484.5" y="-181.9" font-family="Helvetica,sans-Serif" font-size="12.00">threadSharedListHandler.h</text>
 </a>
@@ -125,7 +125,7 @@
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="model_8h.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="model_8h.html" target="_top" xlink:title="Model class template.">
 <polygon fill="none" stroke="black" points="208.5,-174.5 208.5,-195.5 378.5,-195.5 378.5,-174.5 208.5,-174.5"/>
 <text text-anchor="middle" x="293.5" y="-181.9" font-family="Helvetica,sans-Serif" font-size="12.00">MarkovModel/src/model.h</text>
 </a>
@@ -239,7 +239,7 @@
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:href="node_8h.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="node_8h.html" target="_top" xlink:title="Node class template.">
 <polygon fill="none" stroke="black" points="170.5,-116.5 170.5,-137.5 228.5,-137.5 228.5,-116.5 170.5,-116.5"/>
 <text text-anchor="middle" x="199.5" y="-123.9" font-family="Helvetica,sans-Serif" font-size="12.00">node.h</text>
 </a>
@@ -254,7 +254,7 @@
 <!-- Node16 -->
 <g id="node16" class="node">
 <title>Node16</title>
-<g id="a_node16"><a xlink:href="edge_8h.html" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="edge_8h.html" target="_top" xlink:title="Edge class template.">
 <polygon fill="none" stroke="black" points="380.5,-58.5 380.5,-79.5 438.5,-79.5 438.5,-58.5 380.5,-58.5"/>
 <text text-anchor="middle" x="409.5" y="-65.9" font-family="Helvetica,sans-Serif" font-size="12.00">edge.h</text>
 </a>
@@ -323,7 +323,7 @@
 <!-- Node19 -->
 <g id="node19" class="node">
 <title>Node19</title>
-<g id="a_node19"><a xlink:href="random_8h.html" target="_top" xlink:title=" ">
+<g id="a_node19"><a xlink:href="random_8h.html" target="_top" xlink:title="Random engine implementations for Markov.">
 <polygon fill="none" stroke="black" points="195,-58.5 195,-79.5 270,-79.5 270,-58.5 195,-58.5"/>
 <text text-anchor="middle" x="232.5" y="-65.9" font-family="Helvetica,sans-Serif" font-size="12.00">random.h</text>
 </a>

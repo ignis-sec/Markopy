@@ -1,0 +1,57 @@
+\hypertarget{_markov_a_p_i_c_l_i_2src_2main_8cpp_source}{}\doxysection{Markov\+A\+P\+I\+C\+L\+I/src/main.cpp}
+\label{_markov_a_p_i_c_l_i_2src_2main_8cpp_source}\index{main.cpp@{main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/** @file main.cpp}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @brief Test cases for Markov::API::ModelMatrix}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @authors Ata Hakçıl, Celal Sahir Çetiner}}
+\DoxyCodeLine{00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{00005 \textcolor{comment}{ * @copydoc Markov::API::CLI::Argparse}}
+\DoxyCodeLine{00006 \textcolor{comment}{ * @copydoc Markov::API::ModelMatrix}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * @copydoc Markov::API::MarkovPasswords}}
+\DoxyCodeLine{00008 \textcolor{comment}{ */}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{iostream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{"color/term.h"}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{argparse_8h}{"argparse.h"}}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{string}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cstring}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{sstream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00017 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{"MarkovAPI/src/markovPasswords.h"}}
+\DoxyCodeLine{00018 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{"MarkovAPI/src/modelMatrix.h"}}
+\DoxyCodeLine{00019 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{chrono}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021 \textcolor{comment}{/** @brief Launch CLI tool.}}
+\DoxyCodeLine{00022 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_markov_a_p_i_c_l_i_2src_2main_8cpp_source_l00023}\mbox{\hyperlink{_markov_a_p_i_c_l_i_2src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{00023}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cu_a3c04138a5bfe5d72780bb7e82a18e627}{main}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv) \{}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025     \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{CLI}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Terminal}} t;}
+\DoxyCodeLine{00026     \textcolor{comment}{/*}}
+\DoxyCodeLine{00027 \textcolor{comment}{    ProgramOptions* p  = Argparse::parse(argc, argv);}}
+\DoxyCodeLine{00028 \textcolor{comment}{}}
+\DoxyCodeLine{00029 \textcolor{comment}{    if (p==0 || p-\/>bFailure) \{}}
+\DoxyCodeLine{00030 \textcolor{comment}{        std::cout << TERM\_FAIL << "Arguments Failed to Parse" << std::endl;}}
+\DoxyCodeLine{00031 \textcolor{comment}{        Argparse::help();}}
+\DoxyCodeLine{00032 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{00033     \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{CLI}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse}{Argparse}} a\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_ade2af065fa284422883812389f3ad2d7}{(}}argc\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_ade2af065fa284422883812389f3ad2d7}{,}}argv\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_ade2af065fa284422883812389f3ad2d7}{)}};}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035     \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{ModelMatrix}} markovPass;}
+\DoxyCodeLine{00036     std::cerr << \textcolor{stringliteral}{"Importing model.\(\backslash\)n"};}
+\DoxyCodeLine{00037     markovPass\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{.}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{Import}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{(}}\textcolor{stringliteral}{"models/finished.mdl"}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{)}};}
+\DoxyCodeLine{00038     std::cerr << \textcolor{stringliteral}{"Import done. \(\backslash\)n"};}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     markovPass\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ad490665eae3beb022afc7e2491583d0a}{.}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ad490665eae3beb022afc7e2491583d0a}{Buff}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ad490665eae3beb022afc7e2491583d0a}{(}}\textcolor{stringliteral}{"!\(\backslash\)"\#\$\%\&'()*+,-\/./:;<=>?@[\(\backslash\)\(\backslash\)]\string^\_`\{|\}\string~"}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ad490665eae3beb022afc7e2491583d0a}{,}} 100\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ad490665eae3beb022afc7e2491583d0a}{)}};}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042     markovPass\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{.}}\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{Export}}\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{(}}\textcolor{stringliteral}{"models/buffed-\/symbols-\/100fold.mdl"}\mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{)}};}
+\DoxyCodeLine{00043     \textcolor{comment}{//markovPass.ConstructMatrix();}}
+\DoxyCodeLine{00044     \textcolor{comment}{//std::chrono::steady\_clock::time\_point begin = std::chrono::steady\_clock::now();}}
+\DoxyCodeLine{00045     \textcolor{comment}{//markovPass.FastRandomWalk(50000000,"/media/ignis/Stuff/wordlist.txt",6,12,25, true);}}
+\DoxyCodeLine{00046     \textcolor{comment}{//markovPass.FastRandomWalk(500000000,"/media/ignis/Stuff/wordlist2.txt",6,12,25, true);}}
+\DoxyCodeLine{00047     \textcolor{comment}{//std::chrono::steady\_clock::time\_point end = std::chrono::steady\_clock::now();}}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049     \textcolor{comment}{//std::cerr << "Finished in:" << std::chrono::duration\_cast<std::chrono::milliseconds> (end -\/ begin).count() << " milliseconds" << std::endl;}}
+\DoxyCodeLine{00050     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00051 \}}
+
+\end{DoxyCode}

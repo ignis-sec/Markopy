@@ -2,150 +2,152 @@
 \label{cuda_device_controller_8h_source}\index{cudaDeviceController.h@{cudaDeviceController.h}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001 }
-\DoxyCodeLine{00002 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
-\DoxyCodeLine{00003 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{iostream}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00004 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{curand\_kernel}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00005 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cuda}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00006 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cuda\_runtime}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{device\_launch\_parameters}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00008 }
-\DoxyCodeLine{00009 \textcolor{comment}{/** @brief Namespace for objects requiring CUDA libraries.}}
-\DoxyCodeLine{00010 \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{cuda_device_controller_8h_source_l00011}\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{00011}} \textcolor{keyword}{namespace} Markov::API::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}\{}
-\DoxyCodeLine{00012     \textcolor{comment}{/** @brief Controller class for CUDA device}}
-\DoxyCodeLine{00013 \textcolor{comment}{     * }}
-\DoxyCodeLine{00014 \textcolor{comment}{     * This implementation only supports Nvidia devices.}}
-\DoxyCodeLine{00015 \textcolor{comment}{    */}}
-\DoxyCodeLine{\Hypertarget{cuda_device_controller_8h_source_l00016}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller}{00016}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CUDADeviceController}}\{}
-\DoxyCodeLine{00017     \textcolor{keyword}{public}:}
-\DoxyCodeLine{00018         \textcolor{comment}{/** @brief List CUDA devices in the system.}}
-\DoxyCodeLine{00019 \textcolor{comment}{         *}}
-\DoxyCodeLine{00020 \textcolor{comment}{         * This function will print details of every CUDA capable device in the system.}}
-\DoxyCodeLine{00021 \textcolor{comment}{         * }}
-\DoxyCodeLine{00022 \textcolor{comment}{         * @b Example @b output:}}
-\DoxyCodeLine{00023 \textcolor{comment}{         * @code\{.txt\}}}
-\DoxyCodeLine{00024 \textcolor{comment}{         * Device Number: 0}}
-\DoxyCodeLine{00025 \textcolor{comment}{         * Device name: GeForce RTX 2070}}
-\DoxyCodeLine{00026 \textcolor{comment}{         * Memory Clock Rate (KHz): 7001000}}
-\DoxyCodeLine{00027 \textcolor{comment}{         * Memory Bus Width (bits): 256}}
-\DoxyCodeLine{00028 \textcolor{comment}{         * Peak Memory Bandwidth (GB/s): 448.064}}
-\DoxyCodeLine{00029 \textcolor{comment}{         * Max Linear Threads: 1024}}
-\DoxyCodeLine{00030 \textcolor{comment}{         * @endcode}}
-\DoxyCodeLine{00031 \textcolor{comment}{        */}}
-\DoxyCodeLine{00032         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_ad1beeb03129fea545cfb18009d2d955f}{\_\_host\_\_}} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_ad1beeb03129fea545cfb18009d2d955f}{ListCudaDevices}}();}
-\DoxyCodeLine{00033 }
-\DoxyCodeLine{00034     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00035         \textcolor{comment}{/** @brief Check results of the last operation on GPU.}}
-\DoxyCodeLine{00036 \textcolor{comment}{         * }}
-\DoxyCodeLine{00037 \textcolor{comment}{         * Check the status returned from cudaMalloc/cudaMemcpy to find failures.}}
+\DoxyCodeLine{00001 \textcolor{comment}{/** @file cudaDeviceController.h}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @brief Simple static class for basic CUDA device controls.}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @authors Ata Hakçıl}}
+\DoxyCodeLine{00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{00005 \textcolor{comment}{ * @copydoc Markov::API::CUDA::CUDADeviceController}}
+\DoxyCodeLine{00006 \textcolor{comment}{ */}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{pragma} \textcolor{preprocessor}{once}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{iostream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 \textcolor{comment}{/** @brief Namespace for objects requiring CUDA libraries.}}
+\DoxyCodeLine{00012 \textcolor{comment}{*/}}
+\DoxyCodeLine{00013 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}\{}
+\DoxyCodeLine{00014     \textcolor{comment}{/** @brief Controller class for CUDA device}}
+\DoxyCodeLine{00015 \textcolor{comment}{     * }}
+\DoxyCodeLine{00016 \textcolor{comment}{     * This implementation only supports Nvidia devices.}}
+\DoxyCodeLine{00017 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{cuda_device_controller_8h_source_l00018}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller}{00018}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CUDADeviceController}}\{}
+\DoxyCodeLine{00019     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020         \textcolor{comment}{/** @brief List CUDA devices in the system.}}
+\DoxyCodeLine{00021 \textcolor{comment}{         *}}
+\DoxyCodeLine{00022 \textcolor{comment}{         * This function will print details of every CUDA capable device in the system.}}
+\DoxyCodeLine{00023 \textcolor{comment}{         * }}
+\DoxyCodeLine{00024 \textcolor{comment}{         * @b Example @b output:}}
+\DoxyCodeLine{00025 \textcolor{comment}{         * @code\{.txt\}}}
+\DoxyCodeLine{00026 \textcolor{comment}{         * Device Number: 0}}
+\DoxyCodeLine{00027 \textcolor{comment}{         * Device name: GeForce RTX 2070}}
+\DoxyCodeLine{00028 \textcolor{comment}{         * Memory Clock Rate (KHz): 7001000}}
+\DoxyCodeLine{00029 \textcolor{comment}{         * Memory Bus Width (bits): 256}}
+\DoxyCodeLine{00030 \textcolor{comment}{         * Peak Memory Bandwidth (GB/s): 448.064}}
+\DoxyCodeLine{00031 \textcolor{comment}{         * Max Linear Threads: 1024}}
+\DoxyCodeLine{00032 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00033 \textcolor{comment}{        */}}
+\DoxyCodeLine{00034         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}{\_\_host\_\_}} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aa6094d80af47a2557693a3d3005d5013}{ListCudaDevices}}();}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00037         \textcolor{comment}{/** @brief Check results of the last operation on GPU.}}
 \DoxyCodeLine{00038 \textcolor{comment}{         * }}
-\DoxyCodeLine{00039 \textcolor{comment}{         * If a failure occurs, its assumed beyond redemption, and exited.}}
-\DoxyCodeLine{00040 \textcolor{comment}{         * @param \_status Cuda error status to check }}
-\DoxyCodeLine{00041 \textcolor{comment}{         * @param msg Message to print in case of a failure}}
-\DoxyCodeLine{00042 \textcolor{comment}{         * @return 0 if successful, 1 if failure.}}
-\DoxyCodeLine{00043 \textcolor{comment}{         * @b Example @b output:}}
-\DoxyCodeLine{00044 \textcolor{comment}{         * @code\{.cpp\}}}
-\DoxyCodeLine{00045 \textcolor{comment}{         * char *da, a = "test";}}
-\DoxyCodeLine{00046 \textcolor{comment}{         * cudastatus = cudaMalloc((char **)\&da, 5*sizeof(char*));}}
-\DoxyCodeLine{00047 \textcolor{comment}{         * CudaCheckNotifyErr(cudastatus, "Failed to allocate VRAM for *da.\(\backslash\)n");}}
-\DoxyCodeLine{00048 \textcolor{comment}{         * @endcode}}
-\DoxyCodeLine{00049 \textcolor{comment}{        */}}
-\DoxyCodeLine{00050         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{\_\_host\_\_}} \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{CudaCheckNotifyErr}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{cudaError\_t}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{\_status}}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{msg}}, \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a61c65866ecf7fe229c01fcc0f9c10711}{bExit}}=\textcolor{keyword}{true});}
-\DoxyCodeLine{00051 }
-\DoxyCodeLine{00052 }
-\DoxyCodeLine{00053         \textcolor{comment}{/** @brief Malloc a 2D array in device space}}
-\DoxyCodeLine{00054 \textcolor{comment}{         * }}
-\DoxyCodeLine{00055 \textcolor{comment}{         * This function will allocate enough space on VRAM for flattened 2D array.}}
+\DoxyCodeLine{00039 \textcolor{comment}{         * Check the status returned from cudaMalloc/cudaMemcpy to find failures.}}
+\DoxyCodeLine{00040 \textcolor{comment}{         * }}
+\DoxyCodeLine{00041 \textcolor{comment}{         * If a failure occurs, its assumed beyond redemption, and exited.}}
+\DoxyCodeLine{00042 \textcolor{comment}{         * @param \_status Cuda error status to check }}
+\DoxyCodeLine{00043 \textcolor{comment}{         * @param msg Message to print in case of a failure}}
+\DoxyCodeLine{00044 \textcolor{comment}{         * @return 0 if successful, 1 if failure.}}
+\DoxyCodeLine{00045 \textcolor{comment}{         * @b Example @b output:}}
+\DoxyCodeLine{00046 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00047 \textcolor{comment}{         * char *da, a = "test";}}
+\DoxyCodeLine{00048 \textcolor{comment}{         * cudastatus = cudaMalloc((char **)\&da, 5*sizeof(char*));}}
+\DoxyCodeLine{00049 \textcolor{comment}{         * CudaCheckNotifyErr(cudastatus, "Failed to allocate VRAM for *da.\(\backslash\)n");}}
+\DoxyCodeLine{00050 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00051 \textcolor{comment}{        */}}
+\DoxyCodeLine{00052         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{\_\_host\_\_}} \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{CudaCheckNotifyErr}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{cudaError\_t}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{\_status}}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{msg}}, \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{bExit}}=\textcolor{keyword}{true});}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055         \textcolor{comment}{/** @brief Malloc a 2D array in device space}}
 \DoxyCodeLine{00056 \textcolor{comment}{         * }}
-\DoxyCodeLine{00057 \textcolor{comment}{         * @param dst destination pointer}}
-\DoxyCodeLine{00058 \textcolor{comment}{         * @param row row size of the 2d array}}
-\DoxyCodeLine{00059 \textcolor{comment}{         * @param col column size of the 2d array}}
-\DoxyCodeLine{00060 \textcolor{comment}{         * @return cudaError\_t status of the cudaMalloc operation}}
-\DoxyCodeLine{00061 \textcolor{comment}{         * }}
-\DoxyCodeLine{00062 \textcolor{comment}{         * @b Example @b output:}}
-\DoxyCodeLine{00063 \textcolor{comment}{         * @code\{.cpp\}}}
-\DoxyCodeLine{00064 \textcolor{comment}{         *   cudaError\_t cudastatus;}}
-\DoxyCodeLine{00065 \textcolor{comment}{         *   char* dst;}}
-\DoxyCodeLine{00066 \textcolor{comment}{         *   cudastatus = CudaMalloc2DToFlat<char>(\&dst, 5, 15);}}
-\DoxyCodeLine{00067 \textcolor{comment}{         *   if(cudastatus!=cudaSuccess)\{}}
-\DoxyCodeLine{00068 \textcolor{comment}{         *       CudaCheckNotifyErr(cudastatus, "  CudaMalloc2DToFlat Failed.", false);}}
-\DoxyCodeLine{00069 \textcolor{comment}{         *   \}}}
-\DoxyCodeLine{00070 \textcolor{comment}{         * @endcode}}
-\DoxyCodeLine{00071 \textcolor{comment}{        */}}
-\DoxyCodeLine{00072         \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{\Hypertarget{cuda_device_controller_8h_source_l00073}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2}{00073}}         \_\_host\_\_ \textcolor{keyword}{static} cudaError\_t \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaMalloc2DToFlat}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}** \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}})\{}
-\DoxyCodeLine{00074             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaError\_t}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}} = \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaMalloc}}((\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}} **)\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}}*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}));}
-\DoxyCodeLine{00075             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaCheckNotifyErr}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}}, \textcolor{stringliteral}{"cudaMalloc Failed."}, \textcolor{keyword}{false});}
-\DoxyCodeLine{00076             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}};}
-\DoxyCodeLine{00077         \}}
-\DoxyCodeLine{00078 }
-\DoxyCodeLine{00079 }
-\DoxyCodeLine{00080         \textcolor{comment}{/** @brief Memcpy a 2D array in device space after flattening}}
-\DoxyCodeLine{00081 \textcolor{comment}{         * }}
-\DoxyCodeLine{00082 \textcolor{comment}{         * Resulting buffer will not be true 2D array.}}
+\DoxyCodeLine{00057 \textcolor{comment}{         * This function will allocate enough space on VRAM for flattened 2D array.}}
+\DoxyCodeLine{00058 \textcolor{comment}{         * }}
+\DoxyCodeLine{00059 \textcolor{comment}{         * @param dst destination pointer}}
+\DoxyCodeLine{00060 \textcolor{comment}{         * @param row row size of the 2d array}}
+\DoxyCodeLine{00061 \textcolor{comment}{         * @param col column size of the 2d array}}
+\DoxyCodeLine{00062 \textcolor{comment}{         * @return cudaError\_t status of the cudaMalloc operation}}
+\DoxyCodeLine{00063 \textcolor{comment}{         * }}
+\DoxyCodeLine{00064 \textcolor{comment}{         * @b Example @b output:}}
+\DoxyCodeLine{00065 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00066 \textcolor{comment}{         *   cudaError\_t cudastatus;}}
+\DoxyCodeLine{00067 \textcolor{comment}{         *   char* dst;}}
+\DoxyCodeLine{00068 \textcolor{comment}{         *   cudastatus = CudaMalloc2DToFlat<char>(\&dst, 5, 15);}}
+\DoxyCodeLine{00069 \textcolor{comment}{         *   if(cudastatus!=cudaSuccess)\{}}
+\DoxyCodeLine{00070 \textcolor{comment}{         *       CudaCheckNotifyErr(cudastatus, "  CudaMalloc2DToFlat Failed.", false);}}
+\DoxyCodeLine{00071 \textcolor{comment}{         *   \}}}
+\DoxyCodeLine{00072 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00073 \textcolor{comment}{        */}}
+\DoxyCodeLine{00074         \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{cuda_device_controller_8h_source_l00075}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a506aa9d676544d166a21d017ab0aeea2}{00075}}         \_\_host\_\_ \textcolor{keyword}{static} cudaError\_t \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaMalloc2DToFlat}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}** \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}})\{}
+\DoxyCodeLine{00076             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaError\_t}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}} = \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaMalloc}}((\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}} **)\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}}*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}));}
+\DoxyCodeLine{00077             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaCheckNotifyErr}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}}, \textcolor{stringliteral}{"cudaMalloc Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00078             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}};}
+\DoxyCodeLine{00079         \}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082         \textcolor{comment}{/** @brief Memcpy a 2D array in device space after flattening}}
 \DoxyCodeLine{00083 \textcolor{comment}{         * }}
-\DoxyCodeLine{00084 \textcolor{comment}{         * @param dst destination pointer}}
-\DoxyCodeLine{00085 \textcolor{comment}{         * @param rc  source pointer}}
-\DoxyCodeLine{00086 \textcolor{comment}{         * @param row row size of the 2d array}}
-\DoxyCodeLine{00087 \textcolor{comment}{         * @param col column size of the 2d array}}
-\DoxyCodeLine{00088 \textcolor{comment}{         * @return cudaError\_t status of the cudaMalloc operation}}
-\DoxyCodeLine{00089 \textcolor{comment}{         * }}
-\DoxyCodeLine{00090 \textcolor{comment}{         * @b Example @b output:}}
-\DoxyCodeLine{00091 \textcolor{comment}{         * @code\{.cpp\}}}
-\DoxyCodeLine{00092 \textcolor{comment}{         *   cudaError\_t cudastatus;}}
-\DoxyCodeLine{00093 \textcolor{comment}{         *   char* dst;}}
-\DoxyCodeLine{00094 \textcolor{comment}{         *   cudastatus = CudaMalloc2DToFlat<char>(\&dst, 5, 15);}}
-\DoxyCodeLine{00095 \textcolor{comment}{         *   CudaCheckNotifyErr(cudastatus, "  CudaMalloc2DToFlat Failed.", false);}}
-\DoxyCodeLine{00096 \textcolor{comment}{         *   cudastatus = CudaMemcpy2DToFlat<char>(*dst,src,15,15);}}
-\DoxyCodeLine{00097 \textcolor{comment}{         *   CudaCheckNotifyErr(cudastatus, "  CudaMemcpy2DToFlat Failed.", false);}}
-\DoxyCodeLine{00098 \textcolor{comment}{         * @endcode}}
-\DoxyCodeLine{00099 \textcolor{comment}{        */}}
-\DoxyCodeLine{00100         \textcolor{keyword}{template} <\textcolor{keyword}{typename} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}>}
-\DoxyCodeLine{\Hypertarget{cuda_device_controller_8h_source_l00101}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a5bbde3a16fc7a4b8cdf07e72a31c1f54}{00101}}         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{\_\_host\_\_}} \textcolor{keyword}{static} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaError\_t}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaMemcpy2DToFlat}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}** \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{src}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}})\{}
-\DoxyCodeLine{00102             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{tempbuf}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}[\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}}];}
-\DoxyCodeLine{00103             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{i}}=0;\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{i}}<\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}};\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{i}}++)\{}
-\DoxyCodeLine{00104                 \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{memcpy}}(\&(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{tempbuf}}[\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{i}}]), \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{src}}[\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{i}}], \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}});}
-\DoxyCodeLine{00105             \}}
-\DoxyCodeLine{00106             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaMemcpy}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{tempbuf}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}}*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}), \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaMemcpyHostToDevice}});}
-\DoxyCodeLine{00107 }
-\DoxyCodeLine{00108         \}}
+\DoxyCodeLine{00084 \textcolor{comment}{         * Resulting buffer will not be true 2D array.}}
+\DoxyCodeLine{00085 \textcolor{comment}{         * }}
+\DoxyCodeLine{00086 \textcolor{comment}{         * @param dst destination pointer}}
+\DoxyCodeLine{00087 \textcolor{comment}{         * @param rc  source pointer}}
+\DoxyCodeLine{00088 \textcolor{comment}{         * @param row row size of the 2d array}}
+\DoxyCodeLine{00089 \textcolor{comment}{         * @param col column size of the 2d array}}
+\DoxyCodeLine{00090 \textcolor{comment}{         * @return cudaError\_t status of the cudaMalloc operation}}
+\DoxyCodeLine{00091 \textcolor{comment}{         * }}
+\DoxyCodeLine{00092 \textcolor{comment}{         * @b Example @b output:}}
+\DoxyCodeLine{00093 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00094 \textcolor{comment}{         *   cudaError\_t cudastatus;}}
+\DoxyCodeLine{00095 \textcolor{comment}{         *   char* dst;}}
+\DoxyCodeLine{00096 \textcolor{comment}{         *   cudastatus = CudaMalloc2DToFlat<char>(\&dst, 5, 15);}}
+\DoxyCodeLine{00097 \textcolor{comment}{         *   CudaCheckNotifyErr(cudastatus, "  CudaMalloc2DToFlat Failed.", false);}}
+\DoxyCodeLine{00098 \textcolor{comment}{         *   cudastatus = CudaMemcpy2DToFlat<char>(*dst,src,15,15);}}
+\DoxyCodeLine{00099 \textcolor{comment}{         *   CudaCheckNotifyErr(cudastatus, "  CudaMemcpy2DToFlat Failed.", false);}}
+\DoxyCodeLine{00100 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00101 \textcolor{comment}{        */}}
+\DoxyCodeLine{00102         \textcolor{keyword}{template} <\textcolor{keyword}{typename} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}>}
+\DoxyCodeLine{\Hypertarget{cuda_device_controller_8h_source_l00103}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_a5bbde3a16fc7a4b8cdf07e72a31c1f54}{00103}}         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{\_\_host\_\_}} \textcolor{keyword}{static} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaError\_t}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaMemcpy2DToFlat}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}** \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{src}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}})\{}
+\DoxyCodeLine{00104             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{tempbuf}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}[\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}}];}
+\DoxyCodeLine{00105             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{i}}=0;\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{i}}<\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}};\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{i}}++)\{}
+\DoxyCodeLine{00106                 \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{memcpy}}(\&(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{tempbuf}}[\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{i}}]), \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{src}}[\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{i}}], \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}});}
+\DoxyCodeLine{00107             \}}
+\DoxyCodeLine{00108             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaMemcpy}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{tempbuf}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}}*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}), \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaMemcpyHostToDevice}});}
 \DoxyCodeLine{00109 }
-\DoxyCodeLine{00110         \textcolor{comment}{/** @brief Both malloc and memcpy a 2D array into device VRAM.}}
-\DoxyCodeLine{00111 \textcolor{comment}{         * }}
-\DoxyCodeLine{00112 \textcolor{comment}{         * Resulting buffer will not be true 2D array.}}
+\DoxyCodeLine{00110         \}}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112         \textcolor{comment}{/** @brief Both malloc and memcpy a 2D array into device VRAM.}}
 \DoxyCodeLine{00113 \textcolor{comment}{         * }}
-\DoxyCodeLine{00114 \textcolor{comment}{         * @param dst destination pointer}}
-\DoxyCodeLine{00115 \textcolor{comment}{         * @param rc  source pointer}}
-\DoxyCodeLine{00116 \textcolor{comment}{         * @param row row size of the 2d array}}
-\DoxyCodeLine{00117 \textcolor{comment}{         * @param col column size of the 2d array}}
-\DoxyCodeLine{00118 \textcolor{comment}{         * @return cudaError\_t status of the cudaMalloc operation}}
-\DoxyCodeLine{00119 \textcolor{comment}{         * }}
-\DoxyCodeLine{00120 \textcolor{comment}{         * @b Example @b output:}}
-\DoxyCodeLine{00121 \textcolor{comment}{         * @code\{.cpp\}}}
-\DoxyCodeLine{00122 \textcolor{comment}{         *   cudaError\_t cudastatus;}}
-\DoxyCodeLine{00123 \textcolor{comment}{         *   char* dst;}}
-\DoxyCodeLine{00124 \textcolor{comment}{         *   cudastatus = CudaMigrate2DFlat<long int>(}}
-\DoxyCodeLine{00125 \textcolor{comment}{         *      \&dst, this-\/>valueMatrix, this-\/>matrixSize, this-\/>matrixSize);}}
-\DoxyCodeLine{00126 \textcolor{comment}{         *   CudaCheckNotifyErr(cudastatus, "    Cuda failed to initialize value matrix row.");}}
-\DoxyCodeLine{00127 \textcolor{comment}{         * @endcode}}
-\DoxyCodeLine{00128 \textcolor{comment}{        */}}
-\DoxyCodeLine{00129         \textcolor{keyword}{template} <\textcolor{keyword}{typename} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}>}
-\DoxyCodeLine{\Hypertarget{cuda_device_controller_8h_source_l00130}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{00130}}         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{\_\_host\_\_}} \textcolor{keyword}{static} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaError\_t}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaMigrate2DFlat}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}** \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}** \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{src}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}})\{}
-\DoxyCodeLine{00131             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaError\_t}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}};}
-\DoxyCodeLine{00132             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}} = \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaMalloc2DToFlat}}<\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}>(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}});}
-\DoxyCodeLine{00133             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}}!=\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaSuccess}})\{}
-\DoxyCodeLine{00134                 \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaCheckNotifyErr}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}}, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
-\DoxyCodeLine{00135                 \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}};}
-\DoxyCodeLine{00136             \}}
-\DoxyCodeLine{00137             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}} = \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaMemcpy2DToFlat}}<\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}>(*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}},\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{src}},\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}},\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}});}
-\DoxyCodeLine{00138             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaCheckNotifyErr}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}}, \textcolor{stringliteral}{"  CudaMemcpy2DToFlat Failed."}, \textcolor{keyword}{false});}
-\DoxyCodeLine{00139             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}};}
-\DoxyCodeLine{00140         \}}
-\DoxyCodeLine{00141 }
-\DoxyCodeLine{00142 }
-\DoxyCodeLine{00143     \textcolor{keyword}{private}:}
-\DoxyCodeLine{00144     \};}
-\DoxyCodeLine{00145 \};}
+\DoxyCodeLine{00114 \textcolor{comment}{         * Resulting buffer will not be true 2D array.}}
+\DoxyCodeLine{00115 \textcolor{comment}{         * }}
+\DoxyCodeLine{00116 \textcolor{comment}{         * @param dst destination pointer}}
+\DoxyCodeLine{00117 \textcolor{comment}{         * @param rc  source pointer}}
+\DoxyCodeLine{00118 \textcolor{comment}{         * @param row row size of the 2d array}}
+\DoxyCodeLine{00119 \textcolor{comment}{         * @param col column size of the 2d array}}
+\DoxyCodeLine{00120 \textcolor{comment}{         * @return cudaError\_t status of the cudaMalloc operation}}
+\DoxyCodeLine{00121 \textcolor{comment}{         * }}
+\DoxyCodeLine{00122 \textcolor{comment}{         * @b Example @b output:}}
+\DoxyCodeLine{00123 \textcolor{comment}{         * @code\{.cpp\}}}
+\DoxyCodeLine{00124 \textcolor{comment}{         *   cudaError\_t cudastatus;}}
+\DoxyCodeLine{00125 \textcolor{comment}{         *   char* dst;}}
+\DoxyCodeLine{00126 \textcolor{comment}{         *   cudastatus = CudaMigrate2DFlat<long int>(}}
+\DoxyCodeLine{00127 \textcolor{comment}{         *      \&dst, this-\/>valueMatrix, this-\/>matrixSize, this-\/>matrixSize);}}
+\DoxyCodeLine{00128 \textcolor{comment}{         *   CudaCheckNotifyErr(cudastatus, "    Cuda failed to initialize value matrix row.");}}
+\DoxyCodeLine{00129 \textcolor{comment}{         * @endcode}}
+\DoxyCodeLine{00130 \textcolor{comment}{        */}}
+\DoxyCodeLine{00131         \textcolor{keyword}{template} <\textcolor{keyword}{typename} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}>}
+\DoxyCodeLine{\Hypertarget{cuda_device_controller_8h_source_l00132}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{00132}}         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{\_\_host\_\_}} \textcolor{keyword}{static} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaError\_t}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaMigrate2DFlat}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}** \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}** \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{src}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}})\{}
+\DoxyCodeLine{00133             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaError\_t}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}};}
+\DoxyCodeLine{00134             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}} = \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaMalloc2DToFlat}}<\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}>(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}});}
+\DoxyCodeLine{00135             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}}!=\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudaSuccess}})\{}
+\DoxyCodeLine{00136                 \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaCheckNotifyErr}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}}, \textcolor{stringliteral}{"  CudaMalloc2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00137                 \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}};}
+\DoxyCodeLine{00138             \}}
+\DoxyCodeLine{00139             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}} = \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaMemcpy2DToFlat}}<\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{T}}>(*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{dst}},\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{src}},\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{row}},\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{col}});}
+\DoxyCodeLine{00140             \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CudaCheckNotifyErr}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}}, \textcolor{stringliteral}{"  CudaMemcpy2DToFlat Failed."}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00141             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{cudastatus}};}
+\DoxyCodeLine{00142         \}}
+\DoxyCodeLine{00143 }
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{00145     \textcolor{keyword}{private}:}
+\DoxyCodeLine{00146     \};}
+\DoxyCodeLine{00147 \};}
 
 \end{DoxyCode}

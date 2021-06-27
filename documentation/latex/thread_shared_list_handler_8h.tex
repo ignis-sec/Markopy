@@ -1,5 +1,10 @@
 \hypertarget{thread_shared_list_handler_8h}{}\doxysection{thread\+Shared\+List\+Handler.\+h File Reference}
 \label{thread_shared_list_handler_8h}\index{threadSharedListHandler.h@{threadSharedListHandler.h}}
+
+
+Thread-\/safe wrapper for std\+::ifstream.  
+
+
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$mutex$>$}\newline
@@ -33,3 +38,17 @@ class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_
 \begin{DoxyCompactList}\small\item\em Namespace for the \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov\+Passwords}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i}{A\+PI}}. \end{DoxyCompactList}\item 
  \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_concurrency}{Markov\+::\+A\+P\+I\+::\+Concurrency}}
 \begin{DoxyCompactList}\small\item\em Namespace for \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_concurrency}{Concurrency}} related classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Thread-\/safe wrapper for std\+::ifstream. 
+
+\begin{DoxyAuthor}{Authors}
+Ata Hakçıl
+\end{DoxyAuthor}
+Simple class for managing shared access to file. This class maintains the handover of each line from a file to multiple threads.
+
+When two different threads try to read from the same file while reading a line isn\textquotesingle{}t completed, it can have unexpected results. Line might be split, or might be read twice. This class locks the read action on the list until a line is completed, and then proceeds with the handover. 
+
+Definition in file \mbox{\hyperlink{thread_shared_list_handler_8h_source}{thread\+Shared\+List\+Handler.\+h}}.
+

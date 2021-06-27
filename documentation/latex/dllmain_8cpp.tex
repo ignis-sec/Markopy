@@ -1,5 +1,10 @@
 \hypertarget{dllmain_8cpp}{}\doxysection{dllmain.\+cpp File Reference}
 \label{dllmain_8cpp}\index{dllmain.cpp@{dllmain.cpp}}
+
+
+D\+L\+L\+Main for dynamic windows library.  
+
+
 {\ttfamily \#include \char`\"{}pch.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}model.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
@@ -11,3 +16,17 @@ Include dependency graph for dllmain.\+cpp\+:
 \includegraphics[width=350pt]{dllmain_8cpp__incl}
 \end{center}
 \end{figure}
+
+
+\doxysubsection{Detailed Description}
+D\+L\+L\+Main for dynamic windows library. 
+
+\begin{DoxyAuthor}{Authors}
+Ata Hakçıl
+\end{DoxyAuthor}
+class for the final \mbox{\hyperlink{namespace_markov}{Markov}} Model, constructed from nodes and edges. Each atomic piece of the generation result is stored in a node, while edges contain the relation weights. {\itshape Extending\+:} To extend the class, implement the template and inherit from it, as \char`\"{}class My\+Model \+: public Markov\+::\+Model$<$char$>$\char`\"{}. For a complete demonstration of how to extend the class, see Markov\+Passwords.
+
+Whole model can be defined as a list of the edges, as dangling nodes are pointless. This approach is used for the import/export operations. For more information on importing/exporting model, check out the github readme and wiki page. 
+
+Definition in file \mbox{\hyperlink{dllmain_8cpp_source}{dllmain.\+cpp}}.
+

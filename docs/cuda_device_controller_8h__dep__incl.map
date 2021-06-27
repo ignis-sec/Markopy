@@ -1,5 +1,8 @@
 <map id="cudaDeviceController.h" name="cudaDeviceController.h">
-<area shape="rect" id="node1" title=" " alt="" coords="80,5,287,35"/>
-<area shape="rect" id="node2" href="$cuda_model_matrix_8h.html" title=" " alt="" coords="5,83,180,112"/>
-<area shape="rect" id="node3" href="$cudarandom_8h.html" title=" " alt="" coords="205,83,343,112"/>
+<area shape="rect" id="node1" title="Simple static class for basic CUDA device controls." alt="" coords="211,5,417,35"/>
+<area shape="rect" id="node2" href="$cuda_device_controller_8cu.html" title="Simple static class for basic CUDA device controls." alt="" coords="5,83,220,112"/>
+<area shape="rect" id="node3" href="$cuda_model_matrix_8h.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="408,83,583,112"/>
+<area shape="rect" id="node6" href="$cudarandom_8h.html" title="Extension of Markov::Random::Marsaglia for CUDA." alt="" coords="245,83,383,112"/>
+<area shape="rect" id="node4" href="$cuda_model_matrix_8cu.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="235,160,417,189"/>
+<area shape="rect" id="node5" href="$main_8cu.html" title="Simple test file to check libcudamarkov." alt="" coords="452,160,539,189"/>
 </map>

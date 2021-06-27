@@ -20,9 +20,9 @@ class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matr
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\+\_\+\+\_\+global\+\_\+\+\_\+ void \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{Fast\+Random\+Walk\+C\+U\+D\+A\+Kernel}} (unsigned long int n, int min\+Len, int max\+Len, char $\ast$output\+Buffer, char $\ast$matrix\+Index, long int $\ast$total\+Edge\+Weights, long int $\ast$value\+Matrix, char $\ast$edge\+Matrix, int matrix\+Size, int memory\+Per\+Kernel\+Grid, unsigned long $\ast$seed)
+\+\_\+\+\_\+global\+\_\+\+\_\+ void \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{Fast\+Random\+Walk\+C\+U\+D\+A\+Kernel}} (unsigned long int n, int min\+Len, int max\+Len, \mbox{\hyperlink{classchar}{char}} $\ast$output\+Buffer, \mbox{\hyperlink{classchar}{char}} $\ast$matrix\+Index, long int $\ast$total\+Edge\+Weights, long int $\ast$value\+Matrix, \mbox{\hyperlink{classchar}{char}} $\ast$edge\+Matrix, int matrix\+Size, int memory\+Per\+Kernel\+Grid, unsigned long $\ast$seed)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} kernel for the Fast\+Random\+Walk operation. \end{DoxyCompactList}\item 
-\+\_\+\+\_\+device\+\_\+\+\_\+ char $\ast$ \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{strchr}} (char $\ast$p, char c, int s\+\_\+len)
+\+\_\+\+\_\+device\+\_\+\+\_\+ \mbox{\hyperlink{classchar}{char}} $\ast$ \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{strchr}} (\mbox{\hyperlink{classchar}{char}} $\ast$p, \mbox{\hyperlink{classchar}{char}} c, int s\+\_\+len)
 \begin{DoxyCompactList}\small\item\em srtchr implementation on {\bfseries{device}} space \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -34,7 +34,7 @@ Namespace for objects requiring \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_
 \index{Markov::API::CUDA@{Markov::API::CUDA}!FastRandomWalkCUDAKernel@{FastRandomWalkCUDAKernel}}
 \index{FastRandomWalkCUDAKernel@{FastRandomWalkCUDAKernel}!Markov::API::CUDA@{Markov::API::CUDA}}
 \doxysubsubsection{\texorpdfstring{FastRandomWalkCUDAKernel()}{FastRandomWalkCUDAKernel()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+global\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+Fast\+Random\+Walk\+C\+U\+D\+A\+Kernel (\begin{DoxyParamCaption}\item[{unsigned long int}]{n,  }\item[{int}]{min\+Len,  }\item[{int}]{max\+Len,  }\item[{char $\ast$}]{output\+Buffer,  }\item[{char $\ast$}]{matrix\+Index,  }\item[{long int $\ast$}]{total\+Edge\+Weights,  }\item[{long int $\ast$}]{value\+Matrix,  }\item[{char $\ast$}]{edge\+Matrix,  }\item[{int}]{matrix\+Size,  }\item[{int}]{memory\+Per\+Kernel\+Grid,  }\item[{unsigned long $\ast$}]{seed }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \+\_\+\+\_\+global\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+Fast\+Random\+Walk\+C\+U\+D\+A\+Kernel (\begin{DoxyParamCaption}\item[{unsigned long int}]{n,  }\item[{int}]{min\+Len,  }\item[{int}]{max\+Len,  }\item[{\mbox{\hyperlink{classchar}{char}} $\ast$}]{output\+Buffer,  }\item[{\mbox{\hyperlink{classchar}{char}} $\ast$}]{matrix\+Index,  }\item[{long int $\ast$}]{total\+Edge\+Weights,  }\item[{long int $\ast$}]{value\+Matrix,  }\item[{\mbox{\hyperlink{classchar}{char}} $\ast$}]{edge\+Matrix,  }\item[{int}]{matrix\+Size,  }\item[{int}]{memory\+Per\+Kernel\+Grid,  }\item[{unsigned long $\ast$}]{seed }\end{DoxyParamCaption})}
 
 
 
@@ -67,11 +67,75 @@ Will be initiated by C\+PU and continued by G\+PU ({\bfseries{global}} tag)
 {\em seed} & -\/ seed chunk to generate the random from (generated \& used by Marsaglia) \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}\label{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}} 
+
+
+Definition at line \mbox{\hyperlink{cuda_model_matrix_8cu_source_l00194}{194}} of file \mbox{\hyperlink{cuda_model_matrix_8cu_source}{cuda\+Model\+Matrix.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00195                                                                                                                                                          \{}
+\DoxyCodeLine{00196         }
+\DoxyCodeLine{00197         \textcolor{keywordtype}{int} kernelWorkerIndex = threadIdx.x + blockIdx.x * blockDim.x;}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199         \textcolor{keywordflow}{if}(n==0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201         \textcolor{keywordtype}{char}* e;}
+\DoxyCodeLine{00202         \textcolor{keywordtype}{int} index = 0;}
+\DoxyCodeLine{00203         \textcolor{keywordtype}{char} next;}
+\DoxyCodeLine{00204         \textcolor{keywordtype}{int} len=0;}
+\DoxyCodeLine{00205         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} selection;}
+\DoxyCodeLine{00206         \textcolor{keywordtype}{char} cur;}
+\DoxyCodeLine{00207         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} bufferctr = 0;}
+\DoxyCodeLine{00208         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} *x,*y,*z,t;}
+\DoxyCodeLine{00209         \textcolor{keywordtype}{char}* res = \&outputBuffer[kernelWorkerIndex*memoryPerKernelGrid];}
+\DoxyCodeLine{00210         x=\&seed[kernelWorkerIndex*3];}
+\DoxyCodeLine{00211         y=\&seed[kernelWorkerIndex*3+1];}
+\DoxyCodeLine{00212         z=\&seed[kernelWorkerIndex*3+2];}
+\DoxyCodeLine{00213         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; i++) \{}
+\DoxyCodeLine{00214             cur=199;}
+\DoxyCodeLine{00215             len=0;}
+\DoxyCodeLine{00216             \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{00217                 e = \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{strchr}}(matrixIndex, cur, matrixSize);}
+\DoxyCodeLine{00218                 index = e -\/ matrixIndex;}
+\DoxyCodeLine{00219                 \textcolor{comment}{/*selection = Markov::API::CUDA::Random::devrandom(}}
+\DoxyCodeLine{00220 \textcolor{comment}{                    seed[kernelWorkerIndex*3],}}
+\DoxyCodeLine{00221 \textcolor{comment}{                    seed[kernelWorkerIndex*3+1],}}
+\DoxyCodeLine{00222 \textcolor{comment}{                    seed[kernelWorkerIndex*3+2]) \% totalEdgeWeights[index];*/}}
+\DoxyCodeLine{00223                 *x \string^= *x << 16;}
+\DoxyCodeLine{00224                 *x \string^= *x >> 5;}
+\DoxyCodeLine{00225                 *x \string^= *x << 1;}
+\DoxyCodeLine{00226 }
+\DoxyCodeLine{00227                 t = *x;}
+\DoxyCodeLine{00228                 *x = *y;}
+\DoxyCodeLine{00229                 *y = *z;}
+\DoxyCodeLine{00230                 *z = t \string^ *x \string^ *y;}
+\DoxyCodeLine{00231                 selection = *z \% totalEdgeWeights[index];}
+\DoxyCodeLine{00232             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<matrixSize-\/1;j++)\{}
+\DoxyCodeLine{00233                     selection -\/= valueMatrix[index*matrixSize + j];}
+\DoxyCodeLine{00234                     \textcolor{keywordflow}{if} (selection < 0)\{}
+\DoxyCodeLine{00235                         next = edgeMatrix[index*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classchar}{char}})*matrixSize + j];}
+\DoxyCodeLine{00236                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00237                     \}}
+\DoxyCodeLine{00238                 \}}
+\DoxyCodeLine{00239 }
+\DoxyCodeLine{00240                 \textcolor{keywordflow}{if} (len >= maxLen)  \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00241                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((next < 0) \&\& (len < minLen)) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00242                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (next < 0) \textcolor{keywordflow}{break};  }
+\DoxyCodeLine{00243                 cur = next;}
+\DoxyCodeLine{00244                 res[bufferctr + len++] = cur;}
+\DoxyCodeLine{00245             \}}
+\DoxyCodeLine{00246             res[bufferctr + len++] = \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00247             bufferctr+=len;}
+\DoxyCodeLine{00248         \}}
+\DoxyCodeLine{00249         res[bufferctr] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00250     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}\label{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}} 
 \index{Markov::API::CUDA@{Markov::API::CUDA}!strchr@{strchr}}
 \index{strchr@{strchr}!Markov::API::CUDA@{Markov::API::CUDA}}
 \doxysubsubsection{\texorpdfstring{strchr()}{strchr()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+device\+\_\+\+\_\+ char$\ast$ Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::strchr (\begin{DoxyParamCaption}\item[{char $\ast$}]{p,  }\item[{char}]{c,  }\item[{int}]{s\+\_\+len }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \+\_\+\+\_\+device\+\_\+\+\_\+ \mbox{\hyperlink{classchar}{char}} $\ast$ Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::strchr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classchar}{char}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{classchar}{char}}}]{c,  }\item[{int}]{s\+\_\+len }\end{DoxyParamCaption})}
 
 
 
@@ -91,3 +155,19 @@ Fint the first matching index of a string
 \begin{DoxyReturn}{Returns}
 pointer to the match 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{cuda_model_matrix_8cu_source_l00252}{252}} of file \mbox{\hyperlink{cuda_model_matrix_8cu_source}{cuda\+Model\+Matrix.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00252                                                        \{}
+\DoxyCodeLine{00253        \textcolor{keywordflow}{for} (;; ++p, s\_len-\/-\/) \{}
+\DoxyCodeLine{00254             \textcolor{keywordflow}{if} (*p ==  c)}
+\DoxyCodeLine{00255                 \textcolor{keywordflow}{return}((\textcolor{keywordtype}{char} *)p);}
+\DoxyCodeLine{00256             \textcolor{keywordflow}{if} (!*p)}
+\DoxyCodeLine{00257                 \textcolor{keywordflow}{return}((\textcolor{keywordtype}{char} *)NULL);}
+\DoxyCodeLine{00258         \}}
+\DoxyCodeLine{00259     \}}
+
+\end{DoxyCode}

@@ -1,0 +1,46 @@
+\hypertarget{_c_l_i_8cpp_source}{}\doxysection{C\+L\+I.\+cpp}
+\label{_c_l_i_8cpp_source}\index{CLI.cpp@{CLI.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/** @file cli.cpp}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @brief CLI page }}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @authors Yunus Emre Yılmaz}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ */}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_c_l_i_8h}{"CLI.h"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{fstream}\textcolor{preprocessor}{>}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{_train_8h}{"Train.h"}}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{keyword}{using} \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}};}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{\Hypertarget{_c_l_i_8cpp_source_l00015}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_ac6aba780e5312f9f03cb716f0929d39e}{00015}} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i}{CLI}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_ac6aba780e5312f9f03cb716f0929d39e}{CLI}}(QWidget* parent)}
+\DoxyCodeLine{00016     : QMainWindow(parent)}
+\DoxyCodeLine{00017 \{}
+\DoxyCodeLine{00018     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_a9351de2c083b7b3fd76f36b3737e36dc}{ui}}.setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020     QObject::connect(\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_a9351de2c083b7b3fd76f36b3737e36dc}{ui}}.startButton, \&QPushButton::clicked, \textcolor{keyword}{this}, [\textcolor{keyword}{this}] \{\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_aff8081f3baac288e70163e720a60a1e7}{start}}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_aff8081f3baac288e70163e720a60a1e7}{(}}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_aff8081f3baac288e70163e720a60a1e7}{)}}; \});}
+\DoxyCodeLine{00021     QObject::connect(\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_a9351de2c083b7b3fd76f36b3737e36dc}{ui}}.commandLinkButton\_2, \&QPushButton::clicked, \textcolor{keyword}{this}, [\textcolor{keyword}{this}] \{\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_a1695cccf724c76f48e4931e2f636512d}{statistics}}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_a1695cccf724c76f48e4931e2f636512d}{(}}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_a1695cccf724c76f48e4931e2f636512d}{)}}; \});}
+\DoxyCodeLine{00022     QObject::connect(\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_a9351de2c083b7b3fd76f36b3737e36dc}{ui}}.commandLinkButton, \&QPushButton::clicked, \textcolor{keyword}{this}, [\textcolor{keyword}{this}] \{\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_afd53e83febbbb8bdaed5f58b084f3ce2}{about}}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_afd53e83febbbb8bdaed5f58b084f3ce2}{(}}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_afd53e83febbbb8bdaed5f58b084f3ce2}{)}}; \});}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024 \}}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{\Hypertarget{_c_l_i_8cpp_source_l00026}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_aff8081f3baac288e70163e720a60a1e7}{00026}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i}{CLI}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_aff8081f3baac288e70163e720a60a1e7}{start}}() \{}
+\DoxyCodeLine{00027     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train}{Train}}* w = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train}{Train}};}
+\DoxyCodeLine{00028     w-\/>show();}
+\DoxyCodeLine{00029     \textcolor{keyword}{this}-\/>close();}
+\DoxyCodeLine{00030 \}}
+\DoxyCodeLine{\Hypertarget{_c_l_i_8cpp_source_l00031}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_a1695cccf724c76f48e4931e2f636512d}{00031}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i}{CLI}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_a1695cccf724c76f48e4931e2f636512d}{statistics}}() \{}
+\DoxyCodeLine{00032     \textcolor{comment}{/*}}
+\DoxyCodeLine{00033 \textcolor{comment}{    statistic will show}}
+\DoxyCodeLine{00034 \textcolor{comment}{    */}}
+\DoxyCodeLine{00035 \}}
+\DoxyCodeLine{\Hypertarget{_c_l_i_8cpp_source_l00036}\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_afd53e83febbbb8bdaed5f58b084f3ce2}{00036}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_g_u_i}{GUI}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i}{CLI}}::\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_c_l_i_afd53e83febbbb8bdaed5f58b084f3ce2}{about}}() \{}
+\DoxyCodeLine{00037     \textcolor{comment}{/*}}
+\DoxyCodeLine{00038 \textcolor{comment}{    about button}}
+\DoxyCodeLine{00039 \textcolor{comment}{    */}}
+\DoxyCodeLine{00040 \}}
+
+\end{DoxyCode}

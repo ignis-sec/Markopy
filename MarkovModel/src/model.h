@@ -1,6 +1,10 @@
-/** @dir Model.h
- *
+/** @file model.h
+ * @brief Model class template
+ * @authors Ata Hakçıl, Osman Ömer Yıldıztugay
+ * 
+ * @copydoc Markov::Model
  */
+
 
 
 #pragma once

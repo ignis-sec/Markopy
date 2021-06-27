@@ -90,29 +90,23 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title="Launch CLI tool.">
-<polygon fill="none" stroke="black" points="61.5,-10 61.5,-31 108.5,-31 108.5,-10 61.5,-10"/>
-<text text-anchor="middle" x="85" y="-17.4" font-family="Helvetica,sans-Serif" font-size="12.00">main</text>
+<g id="a_node5"><a xlink:href="_markov_a_p_i_c_l_i_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title="Launch CLI tool.">
+<polygon fill="none" stroke="black" points="61.5,-7 61.5,-28 108.5,-28 108.5,-7 61.5,-7"/>
+<text text-anchor="middle" x="85" y="-14.4" font-family="Helvetica,sans-Serif" font-size="12.00">main</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M195.44,-18.89C163.21,-19.36 129.95,-19.85 108.68,-20.17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="195.9,-22.38 205.85,-18.73 195.8,-15.38 195.9,-22.38"/>
+<path fill="none" stroke="midnightblue" d="M195.44,-17.5C163.21,-17.5 129.95,-17.5 108.68,-17.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="195.85,-21 205.85,-17.5 195.85,-14 195.85,-21"/>
 </g>
 <!-- Node6&#45;&gt;Node3 -->
 <g id="edge7" class="edge">
 <title>Node6&#45;&gt;Node3</title>
 <path fill="none" stroke="midnightblue" d="M195.61,-70.5C187.17,-70.5 178.66,-70.5 170.31,-70.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="195.85,-74 205.85,-70.5 195.85,-67 195.85,-74"/>
-</g>
-<!-- Node6&#45;&gt;Node5 -->
-<g id="edge8" class="edge">
-<title>Node6&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M209.92,-50.95C173.64,-42.03 133.41,-32.15 108.91,-26.13"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="209.49,-54.45 220.04,-53.43 211.16,-47.65 209.49,-54.45"/>
 </g>
 </g>
 </svg>

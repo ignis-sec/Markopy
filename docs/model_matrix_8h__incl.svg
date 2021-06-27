@@ -57,7 +57,7 @@ var sectionId = 'dynsection-0';
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="An extension of Markov::API::MarkovPasswords.">
 <polygon fill="#bfbfbf" stroke="black" points="543,-290.5 543,-311.5 646,-311.5 646,-290.5 543,-290.5"/>
 <text text-anchor="middle" x="594.5" y="-297.9" font-family="Helvetica,sans-Serif" font-size="12.00">modelMatrix.h</text>
 </a>
@@ -66,7 +66,7 @@ var sectionId = 'dynsection-0';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="markov_passwords_8h.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="markov_passwords_8h.html" target="_top" xlink:title="Wrapper for Markov::Model to use with char represented models.">
 <polygon fill="none" stroke="black" points="469.5,-232.5 469.5,-253.5 603.5,-253.5 603.5,-232.5 469.5,-232.5"/>
 <text text-anchor="middle" x="536.5" y="-239.9" font-family="Helvetica,sans-Serif" font-size="12.00">markovPasswords.h</text>
 </a>
@@ -96,7 +96,7 @@ var sectionId = 'dynsection-0';
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="thread_shared_list_handler_8h.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="thread_shared_list_handler_8h.html" target="_top" xlink:title="Thread&#45;safe wrapper for std::ifstream.">
 <polygon fill="none" stroke="black" points="449,-174.5 449,-195.5 624,-195.5 624,-174.5 449,-174.5"/>
 <text text-anchor="middle" x="536.5" y="-181.9" font-family="Helvetica,sans-Serif" font-size="12.00">threadSharedListHandler.h</text>
 </a>
@@ -111,7 +111,7 @@ var sectionId = 'dynsection-0';
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="model_8h.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="model_8h.html" target="_top" xlink:title="Model class template.">
 <polygon fill="none" stroke="black" points="260.5,-174.5 260.5,-195.5 430.5,-195.5 430.5,-174.5 260.5,-174.5"/>
 <text text-anchor="middle" x="345.5" y="-181.9" font-family="Helvetica,sans-Serif" font-size="12.00">MarkovModel/src/model.h</text>
 </a>
@@ -234,7 +234,7 @@ var sectionId = 'dynsection-0';
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="node_8h.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="node_8h.html" target="_top" xlink:title="Node class template.">
 <polygon fill="none" stroke="black" points="203.5,-116.5 203.5,-137.5 261.5,-137.5 261.5,-116.5 203.5,-116.5"/>
 <text text-anchor="middle" x="232.5" y="-123.9" font-family="Helvetica,sans-Serif" font-size="12.00">node.h</text>
 </a>
@@ -249,7 +249,7 @@ var sectionId = 'dynsection-0';
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
-<g id="a_node15"><a xlink:href="edge_8h.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="edge_8h.html" target="_top" xlink:title="Edge class template.">
 <polygon fill="none" stroke="black" points="380.5,-58.5 380.5,-79.5 438.5,-79.5 438.5,-58.5 380.5,-58.5"/>
 <text text-anchor="middle" x="409.5" y="-65.9" font-family="Helvetica,sans-Serif" font-size="12.00">edge.h</text>
 </a>
@@ -318,7 +318,7 @@ var sectionId = 'dynsection-0';
 <!-- Node18 -->
 <g id="node18" class="node">
 <title>Node18</title>
-<g id="a_node18"><a xlink:href="random_8h.html" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="random_8h.html" target="_top" xlink:title="Random engine implementations for Markov.">
 <polygon fill="none" stroke="black" points="195,-58.5 195,-79.5 270,-79.5 270,-58.5 195,-58.5"/>
 <text text-anchor="middle" x="232.5" y="-65.9" font-family="Helvetica,sans-Serif" font-size="12.00">random.h</text>
 </a>

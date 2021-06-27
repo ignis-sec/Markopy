@@ -1,6 +1,11 @@
 \hypertarget{cuda_model_matrix_8h}{}\doxysection{cuda\+Model\+Matrix.\+h File Reference}
 \label{cuda_model_matrix_8h}\index{cudaModelMatrix.h@{cudaModelMatrix.h}}
-{\ttfamily \#include \char`\"{}Markov\+Passwords/src/model\+Matrix.\+h\char`\"{}}\newline
+
+
+C\+U\+DA accelerated extension of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix}}.  
+
+
+{\ttfamily \#include \char`\"{}Markov\+A\+P\+I/src/model\+Matrix.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}cuda\+Device\+Controller.\+h\char`\"{}}\newline
 Include dependency graph for cuda\+Model\+Matrix.\+h\+:
 \nopagebreak
@@ -8,6 +13,14 @@ Include dependency graph for cuda\+Model\+Matrix.\+h\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{cuda_model_matrix_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{cuda_model_matrix_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -27,7 +40,23 @@ class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matr
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\+\_\+\+\_\+global\+\_\+\+\_\+ void \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+Fast\+Random\+Walk\+C\+U\+D\+A\+Kernel}} (unsigned long int n, int min\+Len, int max\+Len, char $\ast$output\+Buffer, char $\ast$matrix\+Index, long int $\ast$total\+Edge\+Weights, long int $\ast$value\+Matrix, char $\ast$edge\+Matrix, int matrix\+Size, int memory\+Per\+Kernel\+Grid, unsigned long $\ast$seed)
+\+\_\+\+\_\+global\+\_\+\+\_\+ void \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+Fast\+Random\+Walk\+C\+U\+D\+A\+Kernel}} (unsigned long int n, int min\+Len, int max\+Len, \mbox{\hyperlink{classchar}{char}} $\ast$output\+Buffer, \mbox{\hyperlink{classchar}{char}} $\ast$matrix\+Index, long int $\ast$total\+Edge\+Weights, long int $\ast$value\+Matrix, \mbox{\hyperlink{classchar}{char}} $\ast$edge\+Matrix, int matrix\+Size, int memory\+Per\+Kernel\+Grid, unsigned long $\ast$seed)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} kernel for the Fast\+Random\+Walk operation. \end{DoxyCompactList}\item 
-\+\_\+\+\_\+device\+\_\+\+\_\+ char $\ast$ \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a3e74937619866dc763c1f11b923866aa}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::strchr}} (char $\ast$p, char c, int s\+\_\+len)
+\+\_\+\+\_\+device\+\_\+\+\_\+ \mbox{\hyperlink{classchar}{char}} $\ast$ \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::strchr}} (\mbox{\hyperlink{classchar}{char}} $\ast$p, \mbox{\hyperlink{classchar}{char}} c, int s\+\_\+len)
 \begin{DoxyCompactList}\small\item\em srtchr implementation on {\bfseries{device}} space \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+C\+U\+DA accelerated extension of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix}}. 
+
+\begin{DoxyAuthor}{Authors}
+Ata Hakçıl
+\end{DoxyAuthor}
+Extension of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix}} which is modified to run on G\+PU devices. This implementation only supports Nvidia devices.
+
+Class to flatten and reduce \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}} to a Matrix. Matrix level operations can be used for Generation events, with a significant performance optimization at the cost of O(\+N) memory complexity (O(1) memory space for slow mode)
+
+To limit the maximum memory usage, each generation operation is partitioned into 50M chunks for allocation. Threads are sychronized and files are flushed every 50M operations. 
+
+Definition in file \mbox{\hyperlink{cuda_model_matrix_8h_source}{cuda\+Model\+Matrix.\+h}}.
+

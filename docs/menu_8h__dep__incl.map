@@ -1,5 +1,5 @@
 <map id="menu.h" name="menu.h">
-<area shape="rect" id="node1" title=" " alt="" coords="73,5,156,35"/>
-<area shape="rect" id="node2" href="$_u_i_2src_2main_8cpp.html" title=" " alt="" coords="5,83,101,112"/>
-<area shape="rect" id="node3" href="$menu_8cpp.html" title=" " alt="" coords="126,83,229,112"/>
+<area shape="rect" id="node1" title="menu page" alt="" coords="73,5,156,35"/>
+<area shape="rect" id="node2" href="$_markov_passwords_g_u_i_2src_2main_8cpp.html" title="Entry point for GUI." alt="" coords="5,83,101,112"/>
+<area shape="rect" id="node3" href="$menu_8cpp.html" title="menu page" alt="" coords="126,83,229,112"/>
 </map>

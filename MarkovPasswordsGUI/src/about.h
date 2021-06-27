@@ -1,3 +1,9 @@
+/** @file about.h
+ * @brief About page 
+ * @authors Yunus Emre Yılmaz
+ *
+ */
+
 #pragma once
 #include <QtWidgets/QMainWindow>
 #include "ui_about.h"

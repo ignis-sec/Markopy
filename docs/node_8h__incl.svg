@@ -57,7 +57,7 @@ var sectionId = 'dynsection-0';
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Node class template.">
 <polygon fill="#bfbfbf" stroke="black" points="200.5,-116.5 200.5,-137.5 258.5,-137.5 258.5,-116.5 200.5,-116.5"/>
 <text text-anchor="middle" x="229.5" y="-123.9" font-family="Helvetica,sans-Serif" font-size="12.00">node.h</text>
 </a>
@@ -141,7 +141,7 @@ var sectionId = 'dynsection-0';
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="edge_8h.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="edge_8h.html" target="_top" xlink:title="Edge class template.">
 <polygon fill="none" stroke="black" points="443.5,-58.5 443.5,-79.5 501.5,-79.5 501.5,-58.5 443.5,-58.5"/>
 <text text-anchor="middle" x="472.5" y="-65.9" font-family="Helvetica,sans-Serif" font-size="12.00">edge.h</text>
 </a>
@@ -156,7 +156,7 @@ var sectionId = 'dynsection-0';
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="random_8h.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="random_8h.html" target="_top" xlink:title="Random engine implementations for Markov.">
 <polygon fill="none" stroke="black" points="351,-58.5 351,-79.5 426,-79.5 426,-58.5 351,-58.5"/>
 <text text-anchor="middle" x="388.5" y="-65.9" font-family="Helvetica,sans-Serif" font-size="12.00">random.h</text>
 </a>

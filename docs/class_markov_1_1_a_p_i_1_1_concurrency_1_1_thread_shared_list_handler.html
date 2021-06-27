@@ -17,7 +17,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-light.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -105,7 +105,7 @@ Collaboration diagram for Markov::API::Concurrency::ThreadSharedListHandler:</di
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a08d468aa4146a30f4176bc91a40ed292"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#a08d468aa4146a30f4176bc91a40ed292">ThreadSharedListHandler</a> (const char *filename)</td></tr>
+<tr class="memitem:a08d468aa4146a30f4176bc91a40ed292"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#a08d468aa4146a30f4176bc91a40ed292">ThreadSharedListHandler</a> (const <a class="el" href="classchar.html">char</a> *filename)</td></tr>
 <tr class="memdesc:a08d468aa4146a30f4176bc91a40ed292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the Thread Handler with a filename.  <a href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#a08d468aa4146a30f4176bc91a40ed292">More...</a><br /></td></tr>
 <tr class="separator:a08d468aa4146a30f4176bc91a40ed292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a068e1a9ff477de23a44c10230df416a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#a068e1a9ff477de23a44c10230df416a5">next</a> (std::string *line)</td></tr>
@@ -124,7 +124,7 @@ Private Attributes</h2></td></tr>
 <p>This class maintains the handover of each line from a file to multiple threads.</p>
 <p>When two different threads try to read from the same file while reading a line isn't completed, it can have unexpected results. Line might be split, or might be read twice. This class locks the read action on the list until a line is completed, and then proceeds with the handover. </p>
 
-<p class="definition">Definition at line <a class="el" href="thread_shared_list_handler_8h_source.html#l00018">18</a> of file <a class="el" href="thread_shared_list_handler_8h_source.html">threadSharedListHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="thread_shared_list_handler_8h_source.html#l00025">25</a> of file <a class="el" href="thread_shared_list_handler_8h_source.html">threadSharedListHandler.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a08d468aa4146a30f4176bc91a40ed292"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a08d468aa4146a30f4176bc91a40ed292">&#9670;&nbsp;</a></span>ThreadSharedListHandler()</h2>
@@ -135,7 +135,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">Markov::API::Concurrency::ThreadSharedListHandler::ThreadSharedListHandler </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classchar.html">char</a> *&#160;</td>
           <td class="paramname"><em>filename</em></td><td>)</td>
           <td></td>
         </tr>
@@ -188,19 +188,19 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="thread_shared_list_handler_8cpp_source.html#l00004">4</a> of file <a class="el" href="thread_shared_list_handler_8cpp_source.html">threadSharedListHandler.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                                                                        {</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#ad7bf8372a5de9f5aa9fb10d4f77d7373">listfile</a>;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#ad7bf8372a5de9f5aa9fb10d4f77d7373">listfile</a>.open(filename, std::ios_base::binary);</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="thread_shared_list_handler_8cpp_source.html#l00012">12</a> of file <a class="el" href="thread_shared_list_handler_8cpp_source.html">threadSharedListHandler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                                                        {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#ad7bf8372a5de9f5aa9fb10d4f77d7373">listfile</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#ad7bf8372a5de9f5aa9fb10d4f77d7373">listfile</a>.open(filename, std::ios_base::binary);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="thread_shared_list_handler_8h_source.html#l00088">listfile</a>.</p>
+<p class="reference">References <a class="el" href="thread_shared_list_handler_8h_source.html#l00095">listfile</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="markov_passwords_8cpp_source.html#l00057">Markov::API::MarkovPasswords::Train()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="markov_passwords_8cpp_source.html#l00065">Markov::API::MarkovPasswords::Train()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292_icgraph.svg" width="100%" height="389"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292_icgraph.svg" width="100%" height="470"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -229,23 +229,23 @@ Here is the caller graph for this function:</div>
 <div class="line">std::string line;</div>
 <div class="line">std::cout &lt;&lt; listhandler-&gt;next(&amp;line) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="thread_shared_list_handler_8cpp_source.html#l00010">10</a> of file <a class="el" href="thread_shared_list_handler_8cpp_source.html">threadSharedListHandler.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                                                     {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">bool</span> res = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#af95b0f077e162b3cf3c465f6b0dfe525">mlock</a>.lock();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    res = (std::getline(this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#ad7bf8372a5de9f5aa9fb10d4f77d7373">listfile</a>,*line,<span class="charliteral">&#39;\n&#39;</span>))? <span class="keyword">true</span> : <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#af95b0f077e162b3cf3c465f6b0dfe525">mlock</a>.unlock();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="thread_shared_list_handler_8cpp_source.html#l00018">18</a> of file <a class="el" href="thread_shared_list_handler_8cpp_source.html">threadSharedListHandler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">bool</span> res = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#af95b0f077e162b3cf3c465f6b0dfe525">mlock</a>.lock();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    res = (std::getline(this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#ad7bf8372a5de9f5aa9fb10d4f77d7373">listfile</a>,*line,<span class="charliteral">&#39;\n&#39;</span>))? <span class="keyword">true</span> : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    this-&gt;<a class="code" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#af95b0f077e162b3cf3c465f6b0dfe525">mlock</a>.unlock();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="thread_shared_list_handler_8h_source.html#l00088">listfile</a>, and <a class="el" href="thread_shared_list_handler_8h_source.html#l00089">mlock</a>.</p>
+<p class="reference">References <a class="el" href="thread_shared_list_handler_8h_source.html#l00095">listfile</a>, and <a class="el" href="thread_shared_list_handler_8h_source.html#l00096">mlock</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="markov_passwords_8cpp_source.html#l00077">Markov::API::MarkovPasswords::TrainThread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="markov_passwords_8cpp_source.html#l00085">Markov::API::MarkovPasswords::TrainThread()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a068e1a9ff477de23a44c10230df416a5_icgraph.svg" width="100%" height="389"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a068e1a9ff477de23a44c10230df416a5_icgraph.svg" width="100%" height="470"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -272,9 +272,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="thread_shared_list_handler_8h_source.html#l00088">88</a> of file <a class="el" href="thread_shared_list_handler_8h_source.html">threadSharedListHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="thread_shared_list_handler_8h_source.html#l00095">95</a> of file <a class="el" href="thread_shared_list_handler_8h_source.html">threadSharedListHandler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="thread_shared_list_handler_8cpp_source.html#l00010">next()</a>, and <a class="el" href="thread_shared_list_handler_8cpp_source.html#l00004">ThreadSharedListHandler()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="thread_shared_list_handler_8cpp_source.html#l00018">next()</a>, and <a class="el" href="thread_shared_list_handler_8cpp_source.html#l00012">ThreadSharedListHandler()</a>.</p>
 
 </div>
 </div>
@@ -298,9 +298,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="thread_shared_list_handler_8h_source.html#l00089">89</a> of file <a class="el" href="thread_shared_list_handler_8h_source.html">threadSharedListHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="thread_shared_list_handler_8h_source.html#l00096">96</a> of file <a class="el" href="thread_shared_list_handler_8h_source.html">threadSharedListHandler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="thread_shared_list_handler_8cpp_source.html#l00010">next()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="thread_shared_list_handler_8cpp_source.html#l00018">next()</a>.</p>
 
 </div>
 </div>
@@ -310,16 +310,16 @@ Here is the caller graph for this function:</div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_markov_passwords_html_a5f51b0fdb75101b797f38b08da84848e"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#a5f51b0fdb75101b797f38b08da84848e">Markov::API::MarkovPasswords::TrainThread</a></div><div class="ttdeci">void TrainThread(Markov::API::Concurrency::ThreadSharedListHandler *listhandler, char delimiter)</div><div class="ttdoc">A single thread invoked by the Train function.</div><div class="ttdef"><b>Definition:</b> <a href="markov_passwords_8cpp_source.html#l00077">markovPasswords.cpp:77</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_html_af95b0f077e162b3cf3c465f6b0dfe525"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#af95b0f077e162b3cf3c465f6b0dfe525">Markov::API::Concurrency::ThreadSharedListHandler::mlock</a></div><div class="ttdeci">std::mutex mlock</div><div class="ttdef"><b>Definition:</b> <a href="thread_shared_list_handler_8h_source.html#l00089">threadSharedListHandler.h:89</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_markov_passwords_html_a2fd4423ae3850e258dcb6b11a7feb9b2"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#a2fd4423ae3850e258dcb6b11a7feb9b2">Markov::API::MarkovPasswords::Train</a></div><div class="ttdeci">void Train(const char *datasetFileName, char delimiter, int threads)</div><div class="ttdoc">Train the model with the dataset file.</div><div class="ttdef"><b>Definition:</b> <a href="markov_passwords_8cpp_source.html#l00057">markovPasswords.cpp:57</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_html_ad7bf8372a5de9f5aa9fb10d4f77d7373"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#ad7bf8372a5de9f5aa9fb10d4f77d7373">Markov::API::Concurrency::ThreadSharedListHandler::listfile</a></div><div class="ttdeci">std::ifstream listfile</div><div class="ttdef"><b>Definition:</b> <a href="thread_shared_list_handler_8h_source.html#l00088">threadSharedListHandler.h:88</a></div></div>
-<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_html_a08d468aa4146a30f4176bc91a40ed292"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#a08d468aa4146a30f4176bc91a40ed292">Markov::API::Concurrency::ThreadSharedListHandler::ThreadSharedListHandler</a></div><div class="ttdeci">ThreadSharedListHandler(const char *filename)</div><div class="ttdoc">Construct the Thread Handler with a filename.</div><div class="ttdef"><b>Definition:</b> <a href="thread_shared_list_handler_8cpp_source.html#l00004">threadSharedListHandler.cpp:4</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_markov_passwords_html_a5f51b0fdb75101b797f38b08da84848e"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#a5f51b0fdb75101b797f38b08da84848e">Markov::API::MarkovPasswords::TrainThread</a></div><div class="ttdeci">void TrainThread(Markov::API::Concurrency::ThreadSharedListHandler *listhandler, char delimiter)</div><div class="ttdoc">A single thread invoked by the Train function.</div><div class="ttdef"><b>Definition:</b> <a href="markov_passwords_8cpp_source.html#l00085">markovPasswords.cpp:85</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_html_af95b0f077e162b3cf3c465f6b0dfe525"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#af95b0f077e162b3cf3c465f6b0dfe525">Markov::API::Concurrency::ThreadSharedListHandler::mlock</a></div><div class="ttdeci">std::mutex mlock</div><div class="ttdef"><b>Definition:</b> <a href="thread_shared_list_handler_8h_source.html#l00096">threadSharedListHandler.h:96</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_markov_passwords_html_a2fd4423ae3850e258dcb6b11a7feb9b2"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_markov_passwords.html#a2fd4423ae3850e258dcb6b11a7feb9b2">Markov::API::MarkovPasswords::Train</a></div><div class="ttdeci">void Train(const char *datasetFileName, char delimiter, int threads)</div><div class="ttdoc">Train the model with the dataset file.</div><div class="ttdef"><b>Definition:</b> <a href="markov_passwords_8cpp_source.html#l00065">markovPasswords.cpp:65</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_html_ad7bf8372a5de9f5aa9fb10d4f77d7373"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#ad7bf8372a5de9f5aa9fb10d4f77d7373">Markov::API::Concurrency::ThreadSharedListHandler::listfile</a></div><div class="ttdeci">std::ifstream listfile</div><div class="ttdef"><b>Definition:</b> <a href="thread_shared_list_handler_8h_source.html#l00095">threadSharedListHandler.h:95</a></div></div>
+<div class="ttc" id="aclass_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_html_a08d468aa4146a30f4176bc91a40ed292"><div class="ttname"><a href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#a08d468aa4146a30f4176bc91a40ed292">Markov::API::Concurrency::ThreadSharedListHandler::ThreadSharedListHandler</a></div><div class="ttdeci">ThreadSharedListHandler(const char *filename)</div><div class="ttdoc">Construct the Thread Handler with a filename.</div><div class="ttdef"><b>Definition:</b> <a href="thread_shared_list_handler_8cpp_source.html#l00012">threadSharedListHandler.cpp:12</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_markov.html">Markov</a></li><li class="navelem"><a class="el" href="namespace_markov_1_1_a_p_i.html">API</a></li><li class="navelem"><a class="el" href="namespace_markov_1_1_a_p_i_1_1_concurrency.html">Concurrency</a></li><li class="navelem"><a class="el" href="class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html">ThreadSharedListHandler</a></li>
-    <li class="footer">Generated by
+    <li class="footer">Generated on Sat Jun 26 2021 02:50:09 for Markopy by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -3,7 +3,6 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-*.txt
 # User-specific files
 *.rsuser
 *.suo
@@ -359,7 +358,7 @@ MigrationBackup/
 
 # Development models and datasets
 datasets/*
-models/*
+#models/*
 
 # Sample datasets
 Markopy/src/CLI/sample_datasets/*
@@ -373,4 +372,32 @@ Markopy/src/CLI/markopy.so
 # Build shared object files
 include/*.so
 
+#cuda performance reports
 nvsight/*
+
+*.vcxproj
+*.vcxproj.filters
+*.sln
+
+#cmake ignores
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+
+#library files
+lib/*
+
+out/**/*
+
+build/*
+**/*_autogen/**/*
+
+**/ui_*.h
