@@ -9,13 +9,17 @@ from importlib.util import spec_from_loader, module_from_spec
 from importlib.machinery import SourceFileLoader, ExtensionFileLoader
 import os
 import sys
+
+ext = "so"
+if os.name == 'nt':
+    ext="pyd"
 try:
-    spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", "markopy.so"))
+    spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", f"markopy.{ext}"))
     markopy = module_from_spec(spec)
 except ImportError as e:
-    print("Working in development mode. Trying to load markopy.so from ../../../out/")
+    print(f"Working in development mode. Trying to load markopy.{ext} from ../../../out/")
     if(os.path.exists("../../../out/lib/markopy.so")):
-        spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", "../../../out/lib/markopy.so"))
+        spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", f"../../../out/lib/markopy.{ext}"))
         markopy = module_from_spec(spec)
     else:
         raise e

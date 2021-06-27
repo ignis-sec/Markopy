@@ -10,13 +10,16 @@ from importlib.machinery import SourceFileLoader, ExtensionFileLoader
 import os
 import sys
 
+ext = "so"
+if os.name == 'nt':
+    ext="pyd"
 try:
-    spec = spec_from_loader("cudamarkopy", ExtensionFileLoader("cudamarkopy", "cudamarkopy.so"))
+    spec = spec_from_loader("cudamarkopy", ExtensionFileLoader("cudamarkopy", f"cudamarkopy.{ext}"))
     cudamarkopy = module_from_spec(spec)
 except ImportError as e:
     print("Working in development mode. Trying to load cudamarkopy.so from ../../../out/")
-    if(os.path.exists("../../../out/lib/cudamarkopy.so")):
-        spec = spec_from_loader("cudamarkopy", ExtensionFileLoader("cudamarkopy", "../../../out/lib/cudamarkopy.so"))
+    if(os.path.exists(f"../../../out/lib/cudamarkopy.{ext}")):
+        spec = spec_from_loader("cudamarkopy", ExtensionFileLoader("cudamarkopy", f"../../../out/lib/cudamarkopy.{ext}"))
         cudamarkopy = module_from_spec(spec)
     else:
         raise e
