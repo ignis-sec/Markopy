@@ -49,9 +49,12 @@ endif()
 
 add_dependencies (markopy markov)
 
-
-set(MPY_CPP_FLAGS "${MP_C_FLAGS} -std=c++17")
-set(MPY_LINK_FLAGS "${SGX_COMMON_CFLAGS} ")
+set(MPY_CPP_FLAGS "${MPY_C_FLAGS} -std=c++17")
+if(WIN32)
+set(MPY_LINK_FLAGS "${SGX_COMMON_CFLAGS}")
+else()
+set(MPY_LINK_FLAGS "${SGX_COMMON_CFLAGS} -Wl,-rpath='${ORIGIN}'")
+endif()
 
 set_target_properties(markopy PROPERTIES COMPILE_FLAGS "${MPY_CPP_FLAGS}")
 set_target_properties(markopy PROPERTIES LINK_FLAGS "${MPY_LINK_FLAGS}")

@@ -16,11 +16,13 @@ if os.name == 'nt':
 try:
     spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", f"markopy.{ext}"))
     markopy = module_from_spec(spec)
+    spec.loader.exec_module(markopy)
 except ImportError as e:
-    print(f"Working in development mode. Trying to load markopy.{ext} from ../../../out/")
+    print(f"({__file__}) Working in development mode. Trying to load markopy.{ext} from ../../../out/")
     if(os.path.exists("../../../out/lib/markopy.so")):
         spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", f"../../../out/lib/markopy.{ext}"))
         markopy = module_from_spec(spec)
+        spec.loader.exec_module(markopy)
     else:
         raise e
 

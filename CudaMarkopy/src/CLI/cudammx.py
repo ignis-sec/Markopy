@@ -16,11 +16,13 @@ if os.name == 'nt':
 try:
     spec = spec_from_loader("cudamarkopy", ExtensionFileLoader("cudamarkopy", f"cudamarkopy.{ext}"))
     cudamarkopy = module_from_spec(spec)
+    spec.loader.exec_module(cudamarkopy)
 except ImportError as e:
-    print("Working in development mode. Trying to load cudamarkopy.so from ../../../out/")
+    print(f"({__file__}) Working in development mode. Trying to load cudamarkopy.{ext} from ../../../out/")
     if(os.path.exists(f"../../../out/lib/cudamarkopy.{ext}")):
         spec = spec_from_loader("cudamarkopy", ExtensionFileLoader("cudamarkopy", f"../../../out/lib/cudamarkopy.{ext}"))
         cudamarkopy = module_from_spec(spec)
+        spec.loader.exec_module(cudamarkopy)
     else:
         raise e
 
