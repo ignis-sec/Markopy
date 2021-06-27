@@ -5,10 +5,37 @@
  @authors Ata Hakçıl
 """
 
-import markopy
-from base_cli import BaseCLI
-from mp_cli import MarkovPasswordsCLI
-from mmx_cli import ModelMatrixCLI
+from importlib.util import spec_from_loader, module_from_spec
+from importlib.machinery import SourceFileLoader, ExtensionFileLoader
+import os
+import sys
+try:
+    spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", "markopy.so"))
+    markopy = module_from_spec(spec)
+except ImportError as e:
+    print("Working in development mode. Trying to load markopy.so from ../../../out/")
+    if(os.path.exists("../../../out/lib/markopy.so")):
+        spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", "../../../out/lib/markopy.so"))
+        markopy = module_from_spec(spec)
+    else:
+        raise e
+
+try:
+    from base import BaseCLI
+    from mp import MarkovPasswordsCLI
+    from mmx import ModelMatrixCLI
+
+except ModuleNotFoundError as e:
+    print("Working in development mode. Trying to load markopy.py from ../../../Markopy/")
+    if(os.path.exists("../../../Markopy/src/CLI/base.py")):
+        sys.path.insert(1, '../../../Markopy/src/CLI/')
+        from base import BaseCLI
+        from mp import MarkovPasswordsCLI
+        from mmx import ModelMatrixCLI
+    else:
+        raise e 
+
+
 from termcolor import colored
 from abc import abstractmethod
 

@@ -6,7 +6,7 @@
 """
 
 import markopy
-from base_cli import BaseCLI,AbstractGenerationModelCLI, AbstractTrainingModelCLI
+from base import BaseCLI,AbstractGenerationModelCLI, AbstractTrainingModelCLI
 
 
 

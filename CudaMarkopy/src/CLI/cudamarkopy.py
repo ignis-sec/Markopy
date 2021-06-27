@@ -7,24 +7,44 @@
 
 import sys
 import os
-import cudamarkopy
-from  cudammx_cli import CudaModelMatrixCLI
-from mmx_cli import ModelMatrixCLI
-from mp_cli import MarkovPasswordsCLI
-from termcolor import colored
+from importlib.util import spec_from_loader, module_from_spec
+from importlib.machinery import SourceFileLoader, ExtensionFileLoader
+import inspect 
+try:
+    spec = spec_from_loader("markopy", SourceFileLoader("markopy", "markopy.py"))
+    markopy = module_from_spec(spec)
+    spec.loader.exec_module(markopy)
+except (ModuleNotFoundError,FileNotFoundError) as e:
+    if(os.path.exists("../../../Markopy/src/CLI/markopy.py")):
+        spec = spec_from_loader("markopy", SourceFileLoader("markopy", "../../../Markopy/src/CLI/markopy.py"))
+        markopy = module_from_spec(spec)
+        spec.loader.exec_module(markopy)
 
 try:
-    import markopy_cli
-except ImportError as e:
-    print("markopy_cli.py not found. Checking as if in project directory.")
-    if(os.path.exists("../../../Markopy/src/CLI/markopy_cli.py")):
+    from cudammx import CudaModelMatrixCLI
+    from mmx import ModelMatrixCLI
+    from mp import MarkovPasswordsCLI
+
+except ModuleNotFoundError as e:
+    print("Working in development mode. Trying to load markopy.py from ../../../Markopy/")
+    if(os.path.exists("../../../Markopy/src/CLI/cudammx.py")):
         sys.path.insert(1, '../../../Markopy/src/CLI/')
-        import markopy_cli
+        from cudammx import CudaModelMatrixCLI
+        from mmx import ModelMatrixCLI
+        from mp import MarkovPasswordsCLI
     else:
-        raise e
+        raise e 
 
 
-class CudaMarkopyCLI(markopy_cli.MarkopyCLI):
+#print(markopy)
+#print(inspect.getmembers(markopy))
+#import code
+#code.interact(local=locals())
+
+from termcolor import colored
+
+
+class CudaMarkopyCLI(markopy.MarkopyCLI):
     def __init__(self) -> None:
         super().__init__(add_help=False)
         self.parser.epilog+=f"""

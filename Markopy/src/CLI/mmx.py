@@ -6,7 +6,7 @@
 """
 
 import markopy
-from base_cli import BaseCLI, AbstractGenerationModelCLI
+from base import BaseCLI, AbstractGenerationModelCLI
 import os
 import allogate as logging
 
