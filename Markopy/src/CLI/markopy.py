@@ -14,13 +14,13 @@ ext = "so"
 if os.name == 'nt':
     ext="pyd"
 try:
-    spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", f"markopy.{ext}"))
+    spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", os.path.abspath(f"markopy.{ext}")))
     markopy = module_from_spec(spec)
     spec.loader.exec_module(markopy)
 except ImportError as e:
     print(f"({__file__}) Working in development mode. Trying to load markopy.{ext} from ../../../out/")
     if(os.path.exists("../../../out/lib/markopy.so")):
-        spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", f"../../../out/lib/markopy.{ext}"))
+        spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", os.path.abspath(f"../../../out/lib/markopy.{ext}")))
         markopy = module_from_spec(spec)
         spec.loader.exec_module(markopy)
     else:

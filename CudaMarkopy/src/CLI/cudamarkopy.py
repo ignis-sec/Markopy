@@ -11,7 +11,7 @@ from importlib.util import spec_from_loader, module_from_spec
 from importlib.machinery import SourceFileLoader, ExtensionFileLoader
 import inspect 
 try:
-    spec = spec_from_loader("markopy", SourceFileLoader("markopy", "markopy.py"))
+    spec = spec_from_loader("markopy", SourceFileLoader("markopy", os.path.abspath("markopy.py")))
     markopy = module_from_spec(spec)
     spec.loader.exec_module(markopy)
 except (ModuleNotFoundError,FileNotFoundError) as e:

@@ -14,13 +14,13 @@ ext = "so"
 if os.name == 'nt':
     ext="pyd"
 try:
-    spec = spec_from_loader("cudamarkopy", ExtensionFileLoader("cudamarkopy", f"cudamarkopy.{ext}"))
+    spec = spec_from_loader("cudamarkopy", ExtensionFileLoader("cudamarkopy", os.path.abspath(f"cudamarkopy.{ext}")))
     cudamarkopy = module_from_spec(spec)
     spec.loader.exec_module(cudamarkopy)
 except ImportError as e:
     print(f"({__file__}) Working in development mode. Trying to load cudamarkopy.{ext} from ../../../out/")
     if(os.path.exists(f"../../../out/lib/cudamarkopy.{ext}")):
-        spec = spec_from_loader("cudamarkopy", ExtensionFileLoader("cudamarkopy", f"../../../out/lib/cudamarkopy.{ext}"))
+        spec = spec_from_loader("cudamarkopy", ExtensionFileLoader("cudamarkopy", os.path.abspath(f"../../../out/lib/cudamarkopy.{ext}")))
         cudamarkopy = module_from_spec(spec)
         spec.loader.exec_module(cudamarkopy)
     else:
@@ -29,7 +29,7 @@ except ImportError as e:
 
 
 try:
-    spec = spec_from_loader("markopy", SourceFileLoader("markopy", "markopy.py"))
+    spec = spec_from_loader("markopy", SourceFileLoader("markopy", os.path.abspath("markopy.py")))
     markopy = module_from_spec(spec)
 
     from mmx import ModelMatrixCLI
@@ -38,7 +38,7 @@ try:
 except ImportError as e:
     print("Working in development mode. Trying to load from ../../../out/")
     if(os.path.exists("../../../Markopy/src/CLI/markopy.py")):
-        spec = spec_from_loader("markopy", SourceFileLoader("markopy", "../../../Markopy/src/CLI/markopy.py"))
+        spec = spec_from_loader("markopy", SourceFileLoader("markopy", os.path.abspath("../../../Markopy/src/CLI/markopy.py")))
         markopy = module_from_spec(spec)
         sys.path.insert(1, '../../../Markopy/src/CLI/')
 
