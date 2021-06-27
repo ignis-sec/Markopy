@@ -123,8 +123,8 @@ jobs:
   
     - name: Zip python files
       run: |
-        zip -r --junk-paths markopy-${{ needs.reversion.outputs.tag }}-linux-py${{ matrix.python-version }}.so.zip out/lib/markopy.so Markopy/src/CLI/*.py  /usr/local/lib/libboost_python${{ matrix.python-version }}*so.1*
-        zip --junk-paths cudamarkopy-${{ needs.reversion.outputs.tag }}-linux-py${{ matrix.python-version }}.so.zip out/lib/markopy.so out/lib/cudamarkopy.so Markopy/src/CLI/*.py CudaMarkopy/src/CLI/*.py  /usr/local/lib/libboost_python${{ matrix.python-version }}*so.1*
+        zip -r --junk-paths markopy-${{ needs.reversion.outputs.tag }}-linux-py${{ matrix.python-version }}.so.zip out/lib/markopy.so out/lib/libmarkov.so Markopy/src/CLI/*.py  /usr/local/lib/libboost_python${{ matrix.python-version }}*so.1*
+        zip --junk-paths cudamarkopy-${{ needs.reversion.outputs.tag }}-linux-py${{ matrix.python-version }}.so.zip out/lib/markopy.so out/lib/libmarkov.so out/lib/libcudamarkov.so out/lib/cudamarkopy.so Markopy/src/CLI/*.py CudaMarkopy/src/CLI/*.py  /usr/local/lib/libboost_python${{ matrix.python-version }}*so.1*
         
     
     - name: Upload LibMarkov
