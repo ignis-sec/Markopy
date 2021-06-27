@@ -162,7 +162,7 @@ SOFTWARE.
     }
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: light) {
     :root {
         --primary-color: #00559f;
         --primary-dark-color: #1982d2;
@@ -202,7 +202,7 @@ SOFTWARE.
         --bug-color-dark: #812a00;
         --bug-color-darker: #ffd3be;
     }
-}
+}*/
 
 body {
     color: var(--page-foreground-color);
@@ -739,11 +739,11 @@ div.contents div.dyncontent {
     margin: var(--spacing-medium) 0;
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: light) {
     div.contents div.dyncontent img {
         filter: hue-rotate(180deg) invert();
     }
-}
+}*/
 
 h2.groupheader {
     border-bottom: 1px solid var(--separator-color);
@@ -1256,11 +1256,11 @@ table.directory {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: light) {
     .iconfopen, .iconfclosed {
         filter: hue-rotate(180deg) invert();
     }
-}
+}*/
 
 /*
  Class list
@@ -1353,11 +1353,11 @@ li.navelem:first-child:before {
     margin-right: var(--spacing-small);
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: light) {
     #nav-path li.navelem:after {
         text-shadow: 3px 0 0 var(--separator-color), 8px 0 6px rgba(0,0,0,0.4);
     }
-}
+}*/
 
 .navpath li.navelem a:hover {
     color: var(--primary-color);

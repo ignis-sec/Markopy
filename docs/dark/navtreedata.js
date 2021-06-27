@@ -23,33 +23,47 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Markopy", "index.html", [
-    [ "Markov Passwords", "index.html", [
-      [ "About The Project", "index.html#autotoc_md2", [
-        [ "Built With", "index.html#autotoc_md3", null ]
+    [ "About The Project", "index.html#autotoc_md2", [
+      [ "Possible Use Cases", "index.html#autotoc_md3", null ],
+      [ "Getting Started", "index.html#autotoc_md4", null ],
+      [ "Releases", "index.html#autotoc_md5", null ]
+    ] ],
+    [ "Building", "index.html#autotoc_md7", null ],
+    [ "Prerequisites", "index.html#autotoc_md8", [
+      [ "General prequisites", "index.html#autotoc_md9", [
+        [ "Linux", "index.html#autotoc_md10", null ],
+        [ "Windows", "index.html#autotoc_md11", null ]
       ] ],
-      [ "Getting Started", "index.html#autotoc_md4", [
-        [ "Prerequisites", "index.html#autotoc_md6", null ],
-        [ "Installing Dependencies", "index.html#autotoc_md12", null ],
-        [ "Installation", "index.html#autotoc_md16", null ],
-        [ "Building", "index.html#autotoc_md18", null ]
+      [ "MarkovModel", "index.html#autotoc_md12", null ],
+      [ "MarkovAPI", "index.html#autotoc_md13", null ],
+      [ "MarkovAPICLI", "index.html#autotoc_md14", null ],
+      [ "Markopy", "index.html#autotoc_md15", null ],
+      [ "CudaMarkovAPI", "index.html#autotoc_md16", null ],
+      [ "CudaMarkopy", "index.html#autotoc_md17", null ],
+      [ "MarkovPasswordsGUI", "index.html#autotoc_md18", null ],
+      [ "CMake Configuration", "index.html#autotoc_md19", [
+        [ "Build everything", "index.html#autotoc_md20", null ],
+        [ "Build libraries only", "index.html#autotoc_md21", null ],
+        [ "Build CUDA-accelerated libraries", "index.html#autotoc_md22", null ],
+        [ "Build python module & libraries", "index.html#autotoc_md23", null ],
+        [ "Build CUDA accelerated python module", "index.html#autotoc_md24", null ],
+        [ "Build CUDA accelerated python module and the GUI", "index.html#autotoc_md25", null ]
       ] ],
-      [ "Linux", "index.html#autotoc_md19", null ],
-      [ "Windows", "index.html#autotoc_md20", null ],
-      [ "Known Common issues", "index.html#autotoc_md22", [
-        [ "Linux", "index.html#autotoc_md23", [
-          [ "Markopy - Python.h - Not found", "index.html#autotoc_md24", null ],
-          [ "Markopy/MarkovPasswords - *.so not found, or other library related issues when building", "index.html#autotoc_md25", null ]
-        ] ],
-        [ "Windows", "index.html#autotoc_md26", [
-          [ "Boost - Bootstrap.bat \"ctype.h\" not found", "index.html#autotoc_md27", null ],
-          [ "Cannot open file \"*.lib\"", "index.html#autotoc_md28", null ],
-          [ "Python.h not found", "index.html#autotoc_md29", null ],
-          [ "Simplified Theory", "index.html#autotoc_md31", null ]
-        ] ],
-        [ "Contributing", "index.html#autotoc_md37", null ],
-        [ "Contact", "index.html#autotoc_md38", null ]
+      [ "Installing Dependencies", "index.html#autotoc_md27", null ]
+    ] ],
+    [ "Known Common issues", "index.html#autotoc_md31", [
+      [ "Linux", "index.html#autotoc_md32", [
+        [ "Markopy - Python.h - Not found", "index.html#autotoc_md33", null ],
+        [ "Markopy/MarkovAPI - *.so not found, or other library related issues when building", "index.html#autotoc_md34", null ]
+      ] ],
+      [ "Windows", "index.html#autotoc_md35", [
+        [ "Boost - Bootstrap.bat \"ctype.h\" not found", "index.html#autotoc_md36", null ],
+        [ "Cannot open file \"*.lib\"", "index.html#autotoc_md37", null ],
+        [ "Python.h not found", "index.html#autotoc_md38", null ]
       ] ]
     ] ],
+    [ "Contributing", "index.html#autotoc_md40", null ],
+    [ "Contact", "index.html#autotoc_md41", null ],
     [ "NVSight Report", "md__media_ignis__h_d_d__repositories__markov_passwords__n_v_sight_report.html", null ],
     [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -89,7 +103,7 @@ var NAVTREEINDEX =
 [
 "_c_l_i_8cpp.html",
 "class_markov_1_1_g_u_i_1_1_c_l_i.html#ac6aba780e5312f9f03cb716f0929d39e",
-"term_8h.html#ac91ec1d9a601445bd4e3ee362e3dbd3f"
+"struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options.html#adf5a58de13f5a85f2af513798c491c08"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
