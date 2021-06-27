@@ -27,8 +27,11 @@ else()
 endif()
 
 set(MPLIB_CPP_FLAGS "${MPLIB_C_FLAGS} -std=c++17")
-
+if(WIN32)
 set(MPLIB_LINK_FLAGS "${SGX_COMMON_CFLAGS}")
+else()
+set(MPLIB_LINK_FLAGS "${SGX_COMMON_CFLAGS} -Wl,-rpath='${ORIGIN}'")
+endif()
 
 set_target_properties(markov PROPERTIES COMPILE_FLAGS "${MPLIB_CPP_FLAGS}")
 set_target_properties(markov PROPERTIES LINK_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${MPLIB_LINK_FLAGS}")

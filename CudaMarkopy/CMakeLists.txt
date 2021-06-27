@@ -45,7 +45,12 @@ add_library(cudamarkopy SHARED ${CMPY_FILES})
 add_dependencies (cudamarkopy cudamarkov)
 
 set(CMPY_CPP_FLAGS "${MP_C_FLAGS} -std=c++17")
+if(WIN32)
 set(CMPY_LINK_FLAGS "${SGX_COMMON_CFLAGS}")
+else()
+set(CMPY_LINK_FLAGS "${SGX_COMMON_CFLAGS} -Wl,-rpath='${ORIGIN}'")
+endif()
+
 
 set_target_properties(cudamarkopy PROPERTIES COMPILE_FLAGS "${CMPY_CPP_FLAGS}")
 set_target_properties(cudamarkopy PROPERTIES LINK_FLAGS "${CMPY_LINK_FLAGS}")
