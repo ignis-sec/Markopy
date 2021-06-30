@@ -1,11 +1,35 @@
+#!/usr/bin/python3
+##
+# @package Python.Markopy
+#
+
+##
+# @namespace Python.Markopy
+# @brief wrapper scripts for Markopy
+#
+
+##
+# @namespace Python
+# @brief Python language scripts
+#
+
+##
+# @file base.py
+# @brief base command line interface for python
+#
+
 import argparse
 import allogate as logging
 import os
 from abc import abstractmethod
 from termcolor import colored
+from mm import MarkovModel
+
 
 class BaseCLI():
-    """ Base CLI class to handle user interactions"""
+    """! @brief Base CLI class to handle user interactions        
+         @belongsto Python::Markopy
+    """
     def __init__(self, add_help=True):
         self.parser = argparse.ArgumentParser(description="Python wrapper for MarkovPasswords.",
         epilog=f"""{colored("Sample runs:", "yellow")}
@@ -22,10 +46,11 @@ class BaseCLI():
             Train and immediately generate 500 lines to output.txt. Export trained model.
         """, add_help=add_help, formatter_class=argparse.RawTextHelpFormatter)
         self.print_help = self.parser.print_help
-        
+        self.model = MarkovModel()
+     
     @abstractmethod
     def add_arguments(self):
-        "Add command line arguements to the parser"
+        "! Add command line arguements to the parser"
         self.parser.add_argument("mode",                             help="Process mode. Either 'Train', 'Generate', or 'Combine'.")
         self.parser.add_argument("-t", "--threads",default=10,       help="Number of lines to generate. Ignored in training mode.")
         self.parser.add_argument("-v", "--verbosity",action="count", help="Output verbosity.")
@@ -211,6 +236,11 @@ class BaseCLI():
                 exit(5)
 
 class AbstractGenerationModelCLI(BaseCLI):
+    """!
+    @brief abstract class for generation capable models
+    @belongsto Python::Markopy
+    @extends Python::Markopy::BaseCLI
+    """
     @abstractmethod
     def add_arguments(self):
         "Add command line arguements to the parser"
@@ -223,6 +253,12 @@ class AbstractGenerationModelCLI(BaseCLI):
 
 
 class AbstractTrainingModelCLI(AbstractGenerationModelCLI, BaseCLI):
+    """!
+    @brief abstract class for training capable models
+    @belongsto Python::Markopy
+    @extends Python::Markopy::BaseCLI
+    @extends Python::Markopy::AbstractGenerationModelCLI
+    """
     @abstractmethod
     def add_arguments(self):
         "Add command line arguements to the parser"

@@ -1,34 +1,23 @@
-""" @package markopy
- @file mmx_cli.py
- @namespace Python::Markopy::ModelMatrix
- @brief Command line class for ModelMatrix
- @authors Ata Hakçıl
-"""
+#!/usr/bin/python3
 
-from importlib.util import spec_from_loader, module_from_spec
-from importlib.machinery import SourceFileLoader, ExtensionFileLoader
-import os
-ext = "so"
-if os.name == 'nt':
-    ext="pyd"
-try:
-    spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", os.path.abspath(f"markopy.{ext}")))
-    markopy = module_from_spec(spec)
-    spec.loader.exec_module(markopy)
-except ImportError as e:
-    print(f"({__file__}) Working in development mode. Trying to load markopy.{ext} from ../../../out/")
-    if(os.path.exists(f"../../../out/lib/markopy.{ext}")):
-        spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", os.path.abspath(f"../../../out/lib/markopy.{ext}")))
-        markopy = module_from_spec(spec)
-        spec.loader.exec_module(markopy)
-    else:
-        raise e
+from mm import ModelMatrix
+
+from importer import import_markopy
+markopy = import_markopy()
 
 from base import BaseCLI, AbstractGenerationModelCLI
 import os
 import allogate as logging
 
-class ModelMatrixCLI(AbstractGenerationModelCLI):
+class ModelMatrixCLI(AbstractGenerationModelCLI, ModelMatrix):
+    """!
+        @brief Extension of Python.Markopy.Base.BaseCLI  for Markov::API::ModelMatrix
+        @belongsto Python::Markopy
+        @extends Python::Markopy::AbstractGenerationModelCLI
+        @extends Python::Markopy::ModelMatrix
+
+        adds -st/--stdout arguement to the command line.
+    """
     def __init__(self):
         super().__init__()
         self.model = markopy.ModelMatrix()

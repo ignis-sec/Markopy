@@ -1,9 +1,17 @@
-""" @package cudamarkopy
- @file cudamarkopy_cli.py
- @namespace Python::CUDA::Markopy
- @brief Command line 
- @authors Ata Hakçıl
-"""
+#!/usr/bin/python3
+##
+# @package Python.CudaMarkopy
+#
+
+##
+# @namespace Python.CudaMarkopy
+# @brief wrapper scripts for CudaMarkopy
+#
+
+##
+# @file cudamarkopy.py
+# @brief base command line interface for python
+#
 
 import sys
 import os
@@ -44,7 +52,13 @@ except ModuleNotFoundError as e:
 from termcolor import colored
 
 
-class CudaMarkopyCLI(markopy.MarkopyCLI):
+class CudaMarkopyCLI(markopy.MarkopyCLI, CudaModelMatrixCLI):
+    """!
+         @belongsto Python::CudaMarkopy
+         @brief CUDA extension to MarkopyCLI. Adds CudaModelMatrixCLI to the interface.
+         @extends Python::Markopy::MarkopyCLI
+         @extends Python::CudaMarkopy::CudaModelMatrixCLI
+    """
     def __init__(self) -> None:
         super().__init__(add_help=False)
         self.parser.epilog+=f"""

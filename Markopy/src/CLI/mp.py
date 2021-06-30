@@ -1,12 +1,10 @@
-""" @package markopy
- @file mp_cli.py
- @namespace Python::Markopy::MarkovPasswords
- @brief Command line class for MarkovPasswords
- @authors Ata Hakçıl
-"""
+#!/usr/bin/python3
+
 from importlib.util import spec_from_loader, module_from_spec
 from importlib.machinery import SourceFileLoader, ExtensionFileLoader
 import os
+from mm import MarkovModel
+
 ext = "so"
 if os.name == 'nt':
     ext="pyd"
@@ -27,7 +25,14 @@ from base import BaseCLI,AbstractGenerationModelCLI, AbstractTrainingModelCLI
 
 
 
-class MarkovPasswordsCLI(AbstractTrainingModelCLI):
+class MarkovPasswordsCLI(AbstractTrainingModelCLI,MarkovModel):
+    """!
+        @brief Extension of Python.Markopy.Base.BaseCLI for Markov::API::MarkovPasswords
+        @belongsto Python::Markopy
+        @extends Python::Markopy::MarkovModel
+        @extends Python::Markopy::AbstractTrainingModelCLI
+        adds -st/--stdout arguement to the command line.
+    """
     def __init__(self):
         super().__init__()
         self.model = markopy.MarkovPasswords()
