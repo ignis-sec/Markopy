@@ -1,0 +1,9 @@
+<map id="Markov::Model::StarterNode" name="Markov::Model::StarterNode">
+<area shape="rect" id="node1" title="Return starter Node." alt="" coords="840,106,1087,135"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aafb5809808b9b0450a0bc98740121b5f" title="Construct the related Matrix data for the model." alt="" coords="567,97,792,144"/>
+<area shape="rect" id="node3" href="$namespace_markov_1_1_markopy_1_1_c_u_d_a.html#a584fc8e70bb6cf08f544f52805245e19" title=" " alt="" coords="5,67,245,113"/>
+<area shape="rect" id="node4" href="$namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" title=" " alt="" coords="12,137,239,184"/>
+<area shape="rect" id="node5" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aeba8bb79aa4dc2cfeda310f34b7c9427" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="293,5,519,52"/>
+<area shape="rect" id="node7" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#af42d40d7a5c80f0dfe126a574a17f423" title="Train the model with the dataset file." alt="" coords="293,128,519,175"/>
+<area shape="rect" id="node6" href="$_markov_a_p_i_c_l_i_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="94,13,157,42"/>
+</map>

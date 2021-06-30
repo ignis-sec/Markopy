@@ -1,6 +1,6 @@
-<map id="framework.h" name="framework.h">
-<area shape="rect" id="node1" title="for windows dynamic library" alt="" coords="61,5,187,35"/>
-<area shape="rect" id="node2" href="$_markov_model_2src_2pch_8h.html" title="For windows dynamic library." alt="" coords="91,83,157,112"/>
-<area shape="rect" id="node3" href="$dllmain_8cpp.html" title="DLLMain for dynamic windows library." alt="" coords="5,160,120,189"/>
-<area shape="rect" id="node4" href="$_markov_model_2src_2pch_8cpp.html" title="For windows dynamic library." alt="" coords="144,160,229,189"/>
+<map id="Markopy/MarkovModel/src/framework.h" name="Markopy/MarkovModel/src/framework.h">
+<area shape="rect" id="node1" title="for windows dynamic library" alt="" coords="119,5,321,52"/>
+<area shape="rect" id="node2" href="$_markov_model_2src_2pch_8h.html" title="For windows dynamic library." alt="" coords="119,100,321,147"/>
+<area shape="rect" id="node3" href="$dllmain_8cpp.html" title="DLLMain for dynamic windows library." alt="" coords="5,195,208,241"/>
+<area shape="rect" id="node4" href="$_markov_model_2src_2pch_8cpp.html" title="For windows dynamic library." alt="" coords="232,195,435,241"/>
 </map>

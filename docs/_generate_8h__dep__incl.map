@@ -1,5 +1,5 @@
-<map id="Generate.h" name="Generate.h">
-<area shape="rect" id="node1" title="Generation Page." alt="" coords="83,5,195,35"/>
-<area shape="rect" id="node2" href="$_generate_8cpp.html" title="Generation Page." alt="" coords="5,83,136,112"/>
-<area shape="rect" id="node3" href="$_train_8cpp.html" title="training page for GUI" alt="" coords="161,83,255,112"/>
+<map id="Markopy/MarkovPasswordsGUI/src/Generate.h" name="Markopy/MarkovPasswordsGUI/src/Generate.h">
+<area shape="rect" id="node1" title="Generation Page." alt="" coords="149,5,415,52"/>
+<area shape="rect" id="node2" href="$_generate_8cpp.html" title="Generation Page." alt="" coords="5,100,271,147"/>
+<area shape="rect" id="node3" href="$_train_8cpp.html" title="training page for GUI" alt="" coords="295,100,560,147"/>
 </map>
