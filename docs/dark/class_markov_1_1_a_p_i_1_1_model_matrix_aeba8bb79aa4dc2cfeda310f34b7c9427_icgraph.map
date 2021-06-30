@@ -1,5 +1,6 @@
 <map id="Markov::API::ModelMatrix::Import" name="Markov::API::ModelMatrix::Import">
-<area shape="rect" id="node1" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="280,37,505,84"/>
-<area shape="rect" id="node2" href="$namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" title=" " alt="" coords="5,5,232,52"/>
-<area shape="rect" id="node3" href="$_markov_a_p_i_c_l_i_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="87,77,150,106"/>
+<area shape="rect" id="node1" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="293,76,519,123"/>
+<area shape="rect" id="node2" href="$namespace_markov_1_1_markopy_1_1_c_u_d_a.html#a584fc8e70bb6cf08f544f52805245e19" title=" " alt="" coords="5,5,245,52"/>
+<area shape="rect" id="node3" href="$namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" title=" " alt="" coords="12,76,239,123"/>
+<area shape="rect" id="node4" href="$_markov_a_p_i_c_l_i_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="94,147,157,177"/>
 </map>

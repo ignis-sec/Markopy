@@ -1,10 +1,10 @@
 <map id="Markov::Model&lt; NodeStorageType &gt;" name="Markov::Model&lt; NodeStorageType &gt;">
-<area shape="rect" id="node1" title="class for the final Markov Model, constructed from nodes and edges." alt="" coords="270,851,533,1127"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_node.html" title=" " alt="" coords="191,324,447,617"/>
-<area shape="rect" id="node8" title=" " alt="" coords="7,683,353,785"/>
-<area shape="rect" id="node3" title=" " alt="" coords="51,165,93,250"/>
-<area shape="rect" id="node4" title=" " alt="" coords="117,5,281,91"/>
-<area shape="rect" id="node5" title=" " alt="" coords="286,156,631,259"/>
-<area shape="rect" id="node6" title=" " alt="" coords="447,5,700,91"/>
-<area shape="rect" id="node7" title=" " alt="" coords="655,156,937,259"/>
+<area shape="rect" id="node1" title="class for the final Markov Model, constructed from nodes and edges." alt="" coords="221,1111,583,1595"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_node.html" title=" " alt="" coords="158,324,481,877"/>
+<area shape="rect" id="node8" title=" " alt="" coords="7,943,354,1045"/>
+<area shape="rect" id="node3" title=" " alt="" coords="51,165,94,250"/>
+<area shape="rect" id="node4" href="$class_node_storage_type.html" title=" " alt="" coords="117,5,281,91"/>
+<area shape="rect" id="node5" title=" " alt="" coords="287,156,632,259"/>
+<area shape="rect" id="node6" title=" " alt="" coords="447,5,701,91"/>
+<area shape="rect" id="node7" title=" " alt="" coords="656,156,937,259"/>
 </map>

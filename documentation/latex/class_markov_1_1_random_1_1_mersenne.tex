@@ -53,13 +53,14 @@ This is an implementation of \mbox{\hyperlink{class_markov_1_1_random_1_1_mersen
 {\bfseries{Example}} {\bfseries{Use\+:}} Using \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Mersenne}} Engine with Random\+Walk 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} model;}
-\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"{}model.mdl"{}});}
 \DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Markov::Random::Mersenne}} MersenneTwisterEngine;}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
 \DoxyCodeLine{    this-\/>RandomWalk(\&MersenneTwisterEngine, 5, 10, res); }
-\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
 \DoxyCodeLine{ \}}
+
 \end{DoxyCode}
 
 
@@ -67,6 +68,7 @@ This is an implementation of \mbox{\hyperlink{class_markov_1_1_random_1_1_mersen
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Markov::Random::Mersenne}} me;}
 \DoxyCodeLine{std::cout << me.\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_afd4233366727e5c2dd14d7e5c3ebfec1}{random}}();}
+
 \end{DoxyCode}
  
 
@@ -237,4 +239,4 @@ Here is the caller graph for this function\+:
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{random_8h}{random.\+h}}\end{DoxyCompactItemize}
+Markopy/\+Markov\+Model/src/\mbox{\hyperlink{random_8h}{random.\+h}}\end{DoxyCompactItemize}

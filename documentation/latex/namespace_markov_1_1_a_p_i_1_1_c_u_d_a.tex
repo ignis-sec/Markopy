@@ -1,8 +1,8 @@
-\hypertarget{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{}\doxysection{Markov\+::A\+PI\+::C\+U\+DA Namespace Reference}
+\hypertarget{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{}\doxysection{Markov\+::API\+::CUDA Namespace Reference}
 \label{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}\index{Markov::API::CUDA@{Markov::API::CUDA}}
 
 
-Namespace for objects requiring \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} libraries.  
+Namespace for objects requiring \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}} libraries.  
 
 
 \doxysubsection*{Namespaces}
@@ -13,34 +13,34 @@ Namespace for objects requiring \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller}{C\+U\+D\+A\+Device\+Controller}}
-\begin{DoxyCompactList}\small\item\em Controller class for \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} device. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{C\+U\+D\+A\+Model\+Matrix}}
-\begin{DoxyCompactList}\small\item\em Extension of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix}} which is modified to run on G\+PU devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller}{CUDADevice\+Controller}}
+\begin{DoxyCompactList}\small\item\em Controller class for \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}} device. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{CUDAModel\+Matrix}}
+\begin{DoxyCompactList}\small\item\em Extension of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+API\+::\+Model\+Matrix}} which is modified to run on GPU devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\+\_\+\+\_\+global\+\_\+\+\_\+ void \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{Fast\+Random\+Walk\+C\+U\+D\+A\+Kernel}} (unsigned long int n, int min\+Len, int max\+Len, \mbox{\hyperlink{classchar}{char}} $\ast$output\+Buffer, \mbox{\hyperlink{classchar}{char}} $\ast$matrix\+Index, long int $\ast$total\+Edge\+Weights, long int $\ast$value\+Matrix, \mbox{\hyperlink{classchar}{char}} $\ast$edge\+Matrix, int matrix\+Size, int memory\+Per\+Kernel\+Grid, unsigned long $\ast$seed)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} kernel for the Fast\+Random\+Walk operation. \end{DoxyCompactList}\item 
-\+\_\+\+\_\+device\+\_\+\+\_\+ \mbox{\hyperlink{classchar}{char}} $\ast$ \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{strchr}} (\mbox{\hyperlink{classchar}{char}} $\ast$p, \mbox{\hyperlink{classchar}{char}} c, int s\+\_\+len)
+\+\_\+\+\_\+global\+\_\+\+\_\+ void \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{Fast\+Random\+Walk\+CUDAKernel}} (unsigned long int n, int min\+Len, int max\+Len, char $\ast$output\+Buffer, char $\ast$matrix\+Index, long int $\ast$total\+Edge\+Weights, long int $\ast$value\+Matrix, char $\ast$edge\+Matrix, int matrix\+Size, int memory\+Per\+Kernel\+Grid, unsigned long $\ast$seed)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}} kernel for the Fast\+Random\+Walk operation. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+device\+\_\+\+\_\+ char $\ast$ \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{strchr}} (char $\ast$p, char c, int s\+\_\+len)
 \begin{DoxyCompactList}\small\item\em srtchr implementation on {\bfseries{device}} space \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Namespace for objects requiring \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} libraries. 
+Namespace for objects requiring \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}} libraries. 
 
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}\label{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}} 
 \index{Markov::API::CUDA@{Markov::API::CUDA}!FastRandomWalkCUDAKernel@{FastRandomWalkCUDAKernel}}
 \index{FastRandomWalkCUDAKernel@{FastRandomWalkCUDAKernel}!Markov::API::CUDA@{Markov::API::CUDA}}
 \doxysubsubsection{\texorpdfstring{FastRandomWalkCUDAKernel()}{FastRandomWalkCUDAKernel()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+global\+\_\+\+\_\+ void Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+Fast\+Random\+Walk\+C\+U\+D\+A\+Kernel (\begin{DoxyParamCaption}\item[{unsigned long int}]{n,  }\item[{int}]{min\+Len,  }\item[{int}]{max\+Len,  }\item[{\mbox{\hyperlink{classchar}{char}} $\ast$}]{output\+Buffer,  }\item[{\mbox{\hyperlink{classchar}{char}} $\ast$}]{matrix\+Index,  }\item[{long int $\ast$}]{total\+Edge\+Weights,  }\item[{long int $\ast$}]{value\+Matrix,  }\item[{\mbox{\hyperlink{classchar}{char}} $\ast$}]{edge\+Matrix,  }\item[{int}]{matrix\+Size,  }\item[{int}]{memory\+Per\+Kernel\+Grid,  }\item[{unsigned long $\ast$}]{seed }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \+\_\+\+\_\+global\+\_\+\+\_\+ void Markov\+::\+API\+::\+CUDA\+::\+Fast\+Random\+Walk\+CUDAKernel (\begin{DoxyParamCaption}\item[{unsigned long int}]{n,  }\item[{int}]{min\+Len,  }\item[{int}]{max\+Len,  }\item[{char $\ast$}]{output\+Buffer,  }\item[{char $\ast$}]{matrix\+Index,  }\item[{long int $\ast$}]{total\+Edge\+Weights,  }\item[{long int $\ast$}]{value\+Matrix,  }\item[{char $\ast$}]{edge\+Matrix,  }\item[{int}]{matrix\+Size,  }\item[{int}]{memory\+Per\+Kernel\+Grid,  }\item[{unsigned long $\ast$}]{seed }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} kernel for the Fast\+Random\+Walk operation. 
+\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}} kernel for the Fast\+Random\+Walk operation. 
 
-Will be initiated by C\+PU and continued by G\+PU ({\bfseries{global}} tag)
+Will be initiated by CPU and continued by GPU ({\bfseries{global}} tag)
 
 
 \begin{DoxyParams}{Parameters}
@@ -50,15 +50,15 @@ Will be initiated by C\+PU and continued by G\+PU ({\bfseries{global}} tag)
 \hline
 {\em max\+Len} & -\/ maximum string length for a single generation \\
 \hline
-{\em output\+Buffer} & -\/ V\+R\+AM ptr to the output buffer \\
+{\em output\+Buffer} & -\/ VRAM ptr to the output buffer \\
 \hline
-{\em matrix\+Index} & -\/ V\+R\+AM ptr to the matrix indices \\
+{\em matrix\+Index} & -\/ VRAM ptr to the matrix indices \\
 \hline
-{\em total\+Edge\+Weights} & -\/ V\+R\+AM ptr to the total\+Edge\+Weights array \\
+{\em total\+Edge\+Weights} & -\/ VRAM ptr to the total\+Edge\+Weights array \\
 \hline
-{\em value\+Matrix} & -\/ V\+R\+AM ptr to the edge weights array \\
+{\em value\+Matrix} & -\/ VRAM ptr to the edge weights array \\
 \hline
-{\em edge\+Matrix} & -\/ V\+R\+AM ptr to the edge representations array \\
+{\em edge\+Matrix} & -\/ VRAM ptr to the edge representations array \\
 \hline
 {\em matrix\+Size} & -\/ Size of the matrix dimensions \\
 \hline
@@ -113,7 +113,7 @@ Definition at line \mbox{\hyperlink{cuda_model_matrix_8cu_source_l00194}{194}} o
 \DoxyCodeLine{00232             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<matrixSize-\/1;j++)\{}
 \DoxyCodeLine{00233                     selection -\/= valueMatrix[index*matrixSize + j];}
 \DoxyCodeLine{00234                     \textcolor{keywordflow}{if} (selection < 0)\{}
-\DoxyCodeLine{00235                         next = edgeMatrix[index*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classchar}{char}})*matrixSize + j];}
+\DoxyCodeLine{00235                         next = edgeMatrix[index*\textcolor{keyword}{sizeof}(char)*matrixSize + j];}
 \DoxyCodeLine{00236                         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{00237                     \}}
 \DoxyCodeLine{00238                 \}}
@@ -135,7 +135,7 @@ Definition at line \mbox{\hyperlink{cuda_model_matrix_8cu_source_l00194}{194}} o
 \index{Markov::API::CUDA@{Markov::API::CUDA}!strchr@{strchr}}
 \index{strchr@{strchr}!Markov::API::CUDA@{Markov::API::CUDA}}
 \doxysubsubsection{\texorpdfstring{strchr()}{strchr()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+device\+\_\+\+\_\+ \mbox{\hyperlink{classchar}{char}} $\ast$ Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::strchr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classchar}{char}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{classchar}{char}}}]{c,  }\item[{int}]{s\+\_\+len }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \+\_\+\+\_\+device\+\_\+\+\_\+ char $\ast$ Markov\+::\+API\+::\+CUDA\+::strchr (\begin{DoxyParamCaption}\item[{char $\ast$}]{p,  }\item[{char}]{c,  }\item[{int}]{s\+\_\+len }\end{DoxyParamCaption})}
 
 
 

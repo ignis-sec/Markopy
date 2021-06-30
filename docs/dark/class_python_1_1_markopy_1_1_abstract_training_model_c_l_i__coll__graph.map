@@ -1,0 +1,5 @@
+<map id="Python.Markopy.AbstractTrainingModelCLI" name="Python.Markopy.AbstractTrainingModelCLI">
+<area shape="rect" id="node1" title="abstract class for training capable models" alt="" coords="5,177,288,224"/>
+<area shape="rect" id="node2" href="$class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i.html" title="abstract class for generation capable models" alt="" coords="89,83,399,129"/>
+<area shape="rect" id="node3" href="$class_python_1_1_markopy_1_1_base_c_l_i.html" title="Base CLI class to handle user interactions" alt="" coords="37,5,256,35"/>
+</map>

@@ -1,0 +1,52 @@
+\hypertarget{mm_8py_source}{}\doxysection{mm.\+py}
+\label{mm_8py_source}\index{Markopy/Markopy/src/CLI/mm.py@{Markopy/Markopy/src/CLI/mm.py}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mm_8py_source_l00001}\mbox{\hyperlink{namespacemm}{00001}} }
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{keyword}{from} abc \textcolor{keyword}{import} abstractmethod}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \textcolor{keyword}{from} importer \textcolor{keyword}{import} import\_markopy}
+\DoxyCodeLine{\Hypertarget{mm_8py_source_l00011}\mbox{\hyperlink{namespacemm_a02b19d7455a51d0e202c5b37d6d9fff7}{00011}} markopy = \mbox{\hyperlink{namespaceimporter_a94ba10dfc732b45384713b2908257fb8}{import\_markopy}}()}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{\Hypertarget{mm_8py_source_l00013}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_model}{00013}} \textcolor{keyword}{class }\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_model}{MarkovModel}}(markopy.MarkovPasswords):}
+\DoxyCodeLine{00014     \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00015 \textcolor{stringliteral}{    @brief Abstract representation of a markov model}}
+\DoxyCodeLine{00016 \textcolor{stringliteral}{    @implements Markov::API::MarkovPasswords}}
+\DoxyCodeLine{00017 \textcolor{stringliteral}{    @belongsto Python::Markopy}}
+\DoxyCodeLine{00018 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00019 \textcolor{stringliteral}{    To help with the python-\/cpp gateway documentation.}}
+\DoxyCodeLine{00020 \textcolor{stringliteral}{    "{}"{}"{}}}
+\DoxyCodeLine{00021     \textcolor{preprocessor}{@abstractmethod}}
+\DoxyCodeLine{\Hypertarget{mm_8py_source_l00022}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_model_a3c4f5f9762e7615490dff15522ede9ed}{00022}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_model_a3c4f5f9762e7615490dff15522ede9ed}{Import}}(filename : str):}
+\DoxyCodeLine{00023         \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025     \textcolor{preprocessor}{@abstractmethod}}
+\DoxyCodeLine{\Hypertarget{mm_8py_source_l00026}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_model_a0dda990f0b004f1b41d9f4b997a245ea}{00026}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_model_a0dda990f0b004f1b41d9f4b997a245ea}{Export}}(filename : str):}
+\DoxyCodeLine{00027         \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     \textcolor{preprocessor}{@abstractmethod}}
+\DoxyCodeLine{\Hypertarget{mm_8py_source_l00030}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_model_a503d9365e0b97e44beb99bfc6c2adeea}{00030}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_model_a503d9365e0b97e44beb99bfc6c2adeea}{Train}}(dataset: str, seperator : str, threads : int):}
+\DoxyCodeLine{00031         \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033     \textcolor{preprocessor}{@abstractmethod}}
+\DoxyCodeLine{\Hypertarget{mm_8py_source_l00034}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_model_a053683d627aaab8dec11ae020a2d09d3}{00034}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_model_a053683d627aaab8dec11ae020a2d09d3}{Generate}}(count : int, wordlist : str, minlen : int, maxlen: int, threads : int):}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{\Hypertarget{mm_8py_source_l00038}\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix}{00038}} \textcolor{keyword}{class }\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix}{ModelMatrix}}(markopy.ModelMatrix):}
+\DoxyCodeLine{00039     \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00040 \textcolor{stringliteral}{    @brief Abstract representation of a matrix based model}}
+\DoxyCodeLine{00041 \textcolor{stringliteral}{    @implements Markov::API::ModelMatrix }}
+\DoxyCodeLine{00042 \textcolor{stringliteral}{    @belongsto Python::Markopy}}
+\DoxyCodeLine{00043 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00044 \textcolor{stringliteral}{    To help with the python-\/cpp gateway documentation.}}
+\DoxyCodeLine{00045 \textcolor{stringliteral}{    "{}"{}"{}}}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047     \textcolor{preprocessor}{@abstractmethod}}
+\DoxyCodeLine{\Hypertarget{mm_8py_source_l00048}\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_ae42271d3f464fd17b5e91a95b3cffd27}{00048}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_ae42271d3f464fd17b5e91a95b3cffd27}{FastRandomWalk}}(count : int, wordlist : str, minlen : int, maxlen : int):}
+\DoxyCodeLine{00049         \textcolor{keywordflow}{pass}}
+
+\end{DoxyCode}

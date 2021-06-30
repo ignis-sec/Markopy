@@ -1,9 +1,9 @@
 <map id="Markov::API::CLI::Argparse" name="Markov::API::CLI::Argparse">
-<area shape="rect" id="node1" title="Parse command line arguements." alt="" coords="112,545,347,717"/>
+<area shape="rect" id="node1" title="Parse command line arguements." alt="" coords="85,545,374,891"/>
 <area shape="rect" id="node2" href="$struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options.html" title="Structure to hold parsed cli arguements." alt="" coords="148,377,311,480"/>
-<area shape="rect" id="node3" href="$classchar.html" title=" " alt="" coords="5,157,64,243"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,157,64,243"/>
 <area shape="rect" id="node4" title=" " alt="" coords="141,157,184,243"/>
-<area shape="rect" id="node5" title="STL class." alt="" coords="247,157,348,243"/>
-<area shape="rect" id="node6" title="STL class." alt="" coords="216,5,379,108"/>
+<area shape="rect" id="node5" title=" " alt="" coords="247,157,348,243"/>
+<area shape="rect" id="node6" title=" " alt="" coords="216,5,379,108"/>
 <area shape="rect" id="node7" title=" " alt="" coords="436,157,492,243"/>
 </map>

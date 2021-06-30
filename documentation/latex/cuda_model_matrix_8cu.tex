@@ -1,8 +1,8 @@
-\hypertarget{cuda_model_matrix_8cu}{}\doxysection{cuda\+Model\+Matrix.\+cu File Reference}
-\label{cuda_model_matrix_8cu}\index{cudaModelMatrix.cu@{cudaModelMatrix.cu}}
+\hypertarget{cuda_model_matrix_8cu}{}\doxysection{Markopy/\+Cuda\+Markov\+API/src/cuda\+Model\+Matrix.cu File Reference}
+\label{cuda_model_matrix_8cu}\index{Markopy/CudaMarkovAPI/src/cudaModelMatrix.cu@{Markopy/CudaMarkovAPI/src/cudaModelMatrix.cu}}
 
 
-C\+U\+DA accelerated extension of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix}}.  
+CUDA accelerated extension of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+API\+::\+Model\+Matrix}}.  
 
 
 {\ttfamily \#include \char`\"{}cuda\+Model\+Matrix.\+h\char`\"{}}\newline
@@ -24,26 +24,26 @@ Include dependency graph for cuda\+Model\+Matrix.\+cu\+:
 \item 
  \mbox{\hyperlink{namespace_markov}{Markov}}
 \begin{DoxyCompactList}\small\item\em Namespace for the markov-\/model related classes. Contains \mbox{\hyperlink{class_markov_1_1_model}{Model}}, \mbox{\hyperlink{class_markov_1_1_node}{Node}} and \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} classes. \end{DoxyCompactList}\item 
- \mbox{\hyperlink{namespace_markov_1_1_a_p_i}{Markov\+::\+A\+PI}}
-\begin{DoxyCompactList}\small\item\em Namespace for the \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov\+Passwords}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i}{A\+PI}}. \end{DoxyCompactList}\item 
- \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{Markov\+::\+A\+P\+I\+::\+C\+U\+DA}}
-\begin{DoxyCompactList}\small\item\em Namespace for objects requiring \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} libraries. \end{DoxyCompactList}\end{DoxyCompactItemize}
+ \mbox{\hyperlink{namespace_markov_1_1_a_p_i}{Markov\+::\+API}}
+\begin{DoxyCompactList}\small\item\em Namespace for the \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov\+Passwords}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{Markov\+::\+API\+::\+CUDA}}
+\begin{DoxyCompactList}\small\item\em Namespace for objects requiring \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}} libraries. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\+\_\+\+\_\+global\+\_\+\+\_\+ void \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+Fast\+Random\+Walk\+C\+U\+D\+A\+Kernel}} (unsigned long int n, int min\+Len, int max\+Len, \mbox{\hyperlink{classchar}{char}} $\ast$output\+Buffer, \mbox{\hyperlink{classchar}{char}} $\ast$matrix\+Index, long int $\ast$total\+Edge\+Weights, long int $\ast$value\+Matrix, \mbox{\hyperlink{classchar}{char}} $\ast$edge\+Matrix, int matrix\+Size, int memory\+Per\+Kernel\+Grid, unsigned long $\ast$seed)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} kernel for the Fast\+Random\+Walk operation. \end{DoxyCompactList}\item 
-\+\_\+\+\_\+device\+\_\+\+\_\+ \mbox{\hyperlink{classchar}{char}} $\ast$ \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::strchr}} (\mbox{\hyperlink{classchar}{char}} $\ast$p, \mbox{\hyperlink{classchar}{char}} c, int s\+\_\+len)
+\+\_\+\+\_\+global\+\_\+\+\_\+ void \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a67e8dd9b192bc5a7f35b8187f376dccc}{Markov\+::\+API\+::\+CUDA\+::\+Fast\+Random\+Walk\+CUDAKernel}} (unsigned long int n, int min\+Len, int max\+Len, char $\ast$output\+Buffer, char $\ast$matrix\+Index, long int $\ast$total\+Edge\+Weights, long int $\ast$value\+Matrix, char $\ast$edge\+Matrix, int matrix\+Size, int memory\+Per\+Kernel\+Grid, unsigned long $\ast$seed)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}} kernel for the Fast\+Random\+Walk operation. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+device\+\_\+\+\_\+ char $\ast$ \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{Markov\+::\+API\+::\+CUDA\+::strchr}} (char $\ast$p, char c, int s\+\_\+len)
 \begin{DoxyCompactList}\small\item\em srtchr implementation on {\bfseries{device}} space \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-C\+U\+DA accelerated extension of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix}}. 
+CUDA accelerated extension of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+API\+::\+Model\+Matrix}}. 
 
 \begin{DoxyAuthor}{Authors}
 Ata Hakçıl
 \end{DoxyAuthor}
-Extension of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix}} which is modified to run on G\+PU devices. This implementation only supports Nvidia devices.
+Extension of \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+API\+::\+Model\+Matrix}} which is modified to run on GPU devices. This implementation only supports Nvidia devices.
 
 Class to flatten and reduce \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}} to a Matrix. Matrix level operations can be used for Generation events, with a significant performance optimization at the cost of O(\+N) memory complexity (O(1) memory space for slow mode)
 

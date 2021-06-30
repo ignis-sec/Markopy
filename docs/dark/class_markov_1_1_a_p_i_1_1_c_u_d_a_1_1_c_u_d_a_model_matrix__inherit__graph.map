@@ -1,7 +1,9 @@
 <map id="Markov::API::CUDA::CUDAModelMatrix" name="Markov::API::CUDA::CUDAModelMatrix">
 <area shape="rect" id="node1" title="Extension of Markov::API::ModelMatrix which is modified to run on GPU devices." alt="" coords="165,255,347,301"/>
+<area shape="rect" id="node6" href="$class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i.html" title="Python CLI wrapper for CudaModelMatrix." alt="" coords="114,349,398,396"/>
 <area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html" title="Class to flatten and reduce Markov::Model to a Matrix." alt="" coords="26,169,251,198"/>
 <area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html" title="Markov::Model with char represented nodes." alt="" coords="5,83,272,112"/>
 <area shape="rect" id="node4" href="$class_markov_1_1_model.html" title=" " alt="" coords="33,5,244,35"/>
 <area shape="rect" id="node5" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller.html" title="Controller class for CUDA device." alt="" coords="275,160,475,207"/>
+<area shape="rect" id="node7" href="$class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html" title="CUDA extension to MarkopyCLI." alt="" coords="91,444,421,473"/>
 </map>

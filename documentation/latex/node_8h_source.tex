@@ -1,5 +1,5 @@
 \hypertarget{node_8h_source}{}\doxysection{node.\+h}
-\label{node_8h_source}\index{node.h@{node.h}}
+\label{node_8h_source}\index{Markopy/MarkovModel/src/node.h@{Markopy/MarkovModel/src/node.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001 \textcolor{comment}{/** @file node.h}}
@@ -16,8 +16,8 @@
 \DoxyCodeLine{00012 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{assert}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00013 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{iostream}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00014 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{stdexcept}\textcolor{preprocessor}{>} \textcolor{comment}{// To use runtime\_error}}
-\DoxyCodeLine{00015 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{edge_8h}{"edge.h"}}}
-\DoxyCodeLine{00016 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{random_8h}{"random.h"}}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{edge_8h}{"{}edge.h"{}}}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{random_8h}{"{}random.h"{}}}}
 \DoxyCodeLine{00017 \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_markov}{Markov}} \{}
 \DoxyCodeLine{00018 }
 \DoxyCodeLine{00019     \textcolor{comment}{/** @brief A node class that for the vertices of model. Connected with eachother using Edge}}
@@ -25,7 +25,7 @@
 \DoxyCodeLine{00021 \textcolor{comment}{    * This class will later be templated to accept other data types than char*.}}
 \DoxyCodeLine{00022 \textcolor{comment}{    */}}
 \DoxyCodeLine{00023     \textcolor{keyword}{template} <\textcolor{keyword}{typename} storageType>}
-\DoxyCodeLine{00024     \textcolor{keyword}{class} Node \{}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00024}\mbox{\hyperlink{class_markov_1_1_node}{00024}}     \textcolor{keyword}{class} Node \{}
 \DoxyCodeLine{00025     \textcolor{keyword}{public}:}
 \DoxyCodeLine{00026 }
 \DoxyCodeLine{00027         \textcolor{comment}{/** @brief Default constructor. Creates an empty Node.}}
@@ -56,7 +56,7 @@
 \DoxyCodeLine{00052 \textcolor{comment}{         * Markov::Edge<unsigned char>* e = LeftNode-\/>Link(RightNode);}}
 \DoxyCodeLine{00053 \textcolor{comment}{         * @endcode}}
 \DoxyCodeLine{00054 \textcolor{comment}{        */}}
-\DoxyCodeLine{00055         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(Node<storageType>*);}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00055}\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{00055}}         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(Node<storageType>*);}
 \DoxyCodeLine{00056 }
 \DoxyCodeLine{00057         \textcolor{comment}{/** @brief Link this node with another, with this node as its source.}}
 \DoxyCodeLine{00058 \textcolor{comment}{         * }}
@@ -72,7 +72,7 @@
 \DoxyCodeLine{00068 \textcolor{comment}{         * LeftNode-\/>Link(e);}}
 \DoxyCodeLine{00069 \textcolor{comment}{         * @endcode}}
 \DoxyCodeLine{00070 \textcolor{comment}{        */}}
-\DoxyCodeLine{00071         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_a1db7cba480ab9fb41ef8ab53d1eac0f2}{Link}}(Edge<storageType>*);}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00071}\mbox{\hyperlink{class_markov_1_1_node_a1db7cba480ab9fb41ef8ab53d1eac0f2}{00071}}         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_a1db7cba480ab9fb41ef8ab53d1eac0f2}{Link}}(Edge<storageType>*);}
 \DoxyCodeLine{00072 }
 \DoxyCodeLine{00073         \textcolor{comment}{/** @brief Chose a random node from the list of edges, with regards to its EdgeWeight, and TraverseNode to that.}}
 \DoxyCodeLine{00074 \textcolor{comment}{         * }}
@@ -84,7 +84,7 @@
 \DoxyCodeLine{00080 \textcolor{comment}{         * @code\{.cpp\} }}
 \DoxyCodeLine{00081 \textcolor{comment}{         *  char* buffer[64];}}
 \DoxyCodeLine{00082 \textcolor{comment}{         *  Markov::Model<char> model;}}
-\DoxyCodeLine{00083 \textcolor{comment}{         *  model.Import("model.mdl");}}
+\DoxyCodeLine{00083 \textcolor{comment}{         *  model.Import("{}model.mdl"{});}}
 \DoxyCodeLine{00084 \textcolor{comment}{         *  Markov::Node<char>* n = model.starterNode;}}
 \DoxyCodeLine{00085 \textcolor{comment}{         *  int len = 0;}}
 \DoxyCodeLine{00086 \textcolor{comment}{         *  Markov::Node<char>* temp\_node;}}
@@ -107,7 +107,7 @@
 \DoxyCodeLine{00103 \textcolor{comment}{         *  \}}}
 \DoxyCodeLine{00104 \textcolor{comment}{         * @endcode}}
 \DoxyCodeLine{00105 \textcolor{comment}{        */}}
-\DoxyCodeLine{00106         Node<storageType>* \mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(\mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_random}{Random}}::\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{RandomEngine}}* randomEngine);}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00106}\mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{00106}}         Node<storageType>* \mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(\mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_random}{Random}}::\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{RandomEngine}}* randomEngine);}
 \DoxyCodeLine{00107 }
 \DoxyCodeLine{00108         \textcolor{comment}{/** @brief Insert a new edge to the this.edges.}}
 \DoxyCodeLine{00109 \textcolor{comment}{         * @param edge -\/ New edge that will be inserted.}}
@@ -127,7 +127,7 @@
 \DoxyCodeLine{00123 \textcolor{comment}{         * src-\/>UpdateEdges(e2);}}
 \DoxyCodeLine{00124 \textcolor{comment}{         * @endcode}}
 \DoxyCodeLine{00125 \textcolor{comment}{        */}}
-\DoxyCodeLine{00126         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{UpdateEdges}}(Edge<storageType>*);}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00126}\mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{00126}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{UpdateEdges}}(Edge<storageType>*);}
 \DoxyCodeLine{00127 }
 \DoxyCodeLine{00128         \textcolor{comment}{/** @brief Find an edge with its character representation.}}
 \DoxyCodeLine{00129 \textcolor{comment}{         * @param repr -\/ character NodeValue of the target node.}}
@@ -147,31 +147,31 @@
 \DoxyCodeLine{00143 \textcolor{comment}{         * @endcode}}
 \DoxyCodeLine{00144 \textcolor{comment}{         *  }}
 \DoxyCodeLine{00145 \textcolor{comment}{        */}}
-\DoxyCodeLine{00146         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(storageType repr);}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00146}\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{00146}}         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(storageType repr);}
 \DoxyCodeLine{00147 }
 \DoxyCodeLine{00148         \textcolor{comment}{/** @brief Find an edge with its pointer. Avoid unless neccessary because comptutational cost of find by character is cheaper (because of std::map)}}
 \DoxyCodeLine{00149 \textcolor{comment}{        * @param target -\/ target node.}}
 \DoxyCodeLine{00150 \textcolor{comment}{        * @return Edge that is connected between this node, and the target node.}}
 \DoxyCodeLine{00151 \textcolor{comment}{        */}}
-\DoxyCodeLine{00152         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_adec94acba3fc021a2bbaded53d9e9730}{FindEdge}}(Node<storageType>* target);}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00152}\mbox{\hyperlink{class_markov_1_1_node_adec94acba3fc021a2bbaded53d9e9730}{00152}}         Edge<storageType>* \mbox{\hyperlink{class_markov_1_1_node_adec94acba3fc021a2bbaded53d9e9730}{FindEdge}}(Node<storageType>* target);}
 \DoxyCodeLine{00153 }
 \DoxyCodeLine{00154         \textcolor{comment}{/** @brief Return character representation of this node.}}
 \DoxyCodeLine{00155 \textcolor{comment}{        * @return character representation at \_value.}}
 \DoxyCodeLine{00156 \textcolor{comment}{        */}}
-\DoxyCodeLine{00157         \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}();}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00157}\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{00157}}         \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}();}
 \DoxyCodeLine{00158 }
 \DoxyCodeLine{00159         \textcolor{comment}{/** @brief Change total weights with offset}}
 \DoxyCodeLine{00160 \textcolor{comment}{         * @param offset to adjust the vertice weight with}}
 \DoxyCodeLine{00161 \textcolor{comment}{        */}}
-\DoxyCodeLine{00162         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_node_ab254a9c976195fcb1cac4d463d030d3c}{UpdateTotalVerticeWeight}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} offset);}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00162}\mbox{\hyperlink{class_markov_1_1_node_ab254a9c976195fcb1cac4d463d030d3c}{00162}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_node_ab254a9c976195fcb1cac4d463d030d3c}{UpdateTotalVerticeWeight}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} offset);}
 \DoxyCodeLine{00163 }
 \DoxyCodeLine{00164         \textcolor{comment}{/** @brief return edges}}
 \DoxyCodeLine{00165 \textcolor{comment}{        */}}
-\DoxyCodeLine{00166         \textcolor{keyword}{inline} std::map<storageType, Edge<storageType>*>* \mbox{\hyperlink{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}{Edges}}();}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00166}\mbox{\hyperlink{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}{00166}}         \textcolor{keyword}{inline} std::map<storageType, Edge<storageType>*>* \mbox{\hyperlink{class_markov_1_1_node_ad404ccc317ef8413881b8d7b72b4f4f0}{Edges}}();}
 \DoxyCodeLine{00167 }
 \DoxyCodeLine{00168         \textcolor{comment}{/** @brief return total edge weights}}
 \DoxyCodeLine{00169 \textcolor{comment}{        */}}
-\DoxyCodeLine{00170         \textcolor{keyword}{inline} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_node_a60166d8f501c016de104f48e46bff223}{TotalEdgeWeights}}();}
+\DoxyCodeLine{\Hypertarget{node_8h_source_l00170}\mbox{\hyperlink{class_markov_1_1_node_a60166d8f501c016de104f48e46bff223}{00170}}         \textcolor{keyword}{inline} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_node_a60166d8f501c016de104f48e46bff223}{TotalEdgeWeights}}();}
 \DoxyCodeLine{00171 }
 \DoxyCodeLine{00172 }
 \DoxyCodeLine{\Hypertarget{node_8h_source_l00173}\mbox{\hyperlink{class_markov_1_1_node_ad2ac18d9abd220dfd90b9df6f92c5d59}{00173}}         std::vector<Edge<storageType>*> \mbox{\hyperlink{class_markov_1_1_node_ad2ac18d9abd220dfd90b9df6f92c5d59}{edgesV}};}
@@ -247,8 +247,8 @@
 \DoxyCodeLine{00243     \}}
 \DoxyCodeLine{00244 }
 \DoxyCodeLine{00245     \textcolor{comment}{//if this assertion is reached, it means there is an implementation error above}}
-\DoxyCodeLine{00246     std::cout << \textcolor{stringliteral}{"This should never be reached (node failed to walk to next)\(\backslash\)n"}; \textcolor{comment}{//cant assert from child thread}}
-\DoxyCodeLine{00247     assert(\textcolor{keyword}{true} \&\& \textcolor{stringliteral}{"This should never be reached (node failed to walk to next)"});}
+\DoxyCodeLine{00246     std::cout << \textcolor{stringliteral}{"{}This should never be reached (node failed to walk to next)\(\backslash\)n"{}}; \textcolor{comment}{//cant assert from child thread}}
+\DoxyCodeLine{00247     assert(\textcolor{keyword}{true} \&\& \textcolor{stringliteral}{"{}This should never be reached (node failed to walk to next)"{}});}
 \DoxyCodeLine{00248     \textcolor{keywordflow}{return} NULL;}
 \DoxyCodeLine{00249 \}}
 \DoxyCodeLine{00250 }

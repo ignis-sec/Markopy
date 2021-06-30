@@ -1,4 +1,4 @@
 <map id="Markov::Random::RandomEngine::random" name="Markov::Random::RandomEngine::random">
-<area shape="rect" id="node1" title=" " alt="" coords="309,5,599,52"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_node.html#a87224bed22e5da09e0ddb91c681a6b2c" title="Chose a random node from the list of edges, with regards to its EdgeWeight, and TraverseNode to that." alt="" coords="5,5,261,52"/>
+<area shape="rect" id="node1" title=" " alt="" coords="300,5,589,52"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_node.html#a87224bed22e5da09e0ddb91c681a6b2c" title="Chose a random node from the list of edges, with regards to its EdgeWeight, and TraverseNode to that." alt="" coords="5,14,252,43"/>
 </map>

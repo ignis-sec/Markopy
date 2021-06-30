@@ -1,8 +1,8 @@
-\hypertarget{cudarandom_8h}{}\doxysection{cudarandom.\+h File Reference}
-\label{cudarandom_8h}\index{cudarandom.h@{cudarandom.h}}
+\hypertarget{cudarandom_8h}{}\doxysection{Markopy/\+Cuda\+Markov\+API/src/cudarandom.h File Reference}
+\label{cudarandom_8h}\index{Markopy/CudaMarkovAPI/src/cudarandom.h@{Markopy/CudaMarkovAPI/src/cudarandom.h}}
 
 
-Extension of \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} for C\+U\+DA.  
+Extension of \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} for CUDA.  
 
 
 {\ttfamily \#include \char`\"{}Markov\+Model/src/random.\+h\char`\"{}}\newline
@@ -20,34 +20,34 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=217pt]{cudarandom_8h__dep__incl}
+\includegraphics[width=247pt]{cudarandom_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+Random\+::\+Marsaglia}}
+class \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Markov\+::\+API\+::\+CUDA\+::\+Random\+::\+Marsaglia}}
 \begin{DoxyCompactList}\small\item\em Extension of \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} which is capable o working on {\bfseries{device}} space. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
  \mbox{\hyperlink{namespace_markov}{Markov}}
 \begin{DoxyCompactList}\small\item\em Namespace for the markov-\/model related classes. Contains \mbox{\hyperlink{class_markov_1_1_model}{Model}}, \mbox{\hyperlink{class_markov_1_1_node}{Node}} and \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} classes. \end{DoxyCompactList}\item 
- \mbox{\hyperlink{namespace_markov_1_1_a_p_i}{Markov\+::\+A\+PI}}
-\begin{DoxyCompactList}\small\item\em Namespace for the \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov\+Passwords}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i}{A\+PI}}. \end{DoxyCompactList}\item 
- \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{Markov\+::\+A\+P\+I\+::\+C\+U\+DA}}
-\begin{DoxyCompactList}\small\item\em Namespace for objects requiring \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{C\+U\+DA}} libraries. \end{DoxyCompactList}\item 
- \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+Random}}
+ \mbox{\hyperlink{namespace_markov_1_1_a_p_i}{Markov\+::\+API}}
+\begin{DoxyCompactList}\small\item\em Namespace for the \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov\+Passwords}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{Markov\+::\+API\+::\+CUDA}}
+\begin{DoxyCompactList}\small\item\em Namespace for objects requiring \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}} libraries. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Markov\+::\+API\+::\+CUDA\+::\+Random}}
 \begin{DoxyCompactList}\small\item\em Namespace for \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} engines operable under {\bfseries{device}} space. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\+\_\+\+\_\+device\+\_\+\+\_\+ unsigned long \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_ac44f9c51be54b9b123dca4560482a346}{Markov\+::\+A\+P\+I\+::\+C\+U\+D\+A\+::\+Random\+::devrandom}} (unsigned long \&x, unsigned long \&y, unsigned long \&z)
+\+\_\+\+\_\+device\+\_\+\+\_\+ unsigned long \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_ac44f9c51be54b9b123dca4560482a346}{Markov\+::\+API\+::\+CUDA\+::\+Random\+::devrandom}} (unsigned long \&x, unsigned long \&y, unsigned long \&z)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia}{Marsaglia}} \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random}{Random}} Generation function operable in {\bfseries{device}} space. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Extension of \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} for C\+U\+DA. 
+Extension of \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} for CUDA. 
 
 \begin{DoxyAuthor}{Authors}
 Ata Hakçıl
@@ -59,13 +59,14 @@ This implementation of the Marsaglia Engine is seeded by \mbox{\hyperlink{random
 {\bfseries{Example}} {\bfseries{Use\+:}} Using Marsaglia Engine with Random\+Walk 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} model;}
-\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"{}model.mdl"{}});}
 \DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
 \DoxyCodeLine{    this-\/>RandomWalk(\&MarsagliaRandomEngine, 5, 10, res); }
-\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
 \DoxyCodeLine{ \}}
+
 \end{DoxyCode}
 
 
@@ -73,6 +74,7 @@ This implementation of the Marsaglia Engine is seeded by \mbox{\hyperlink{random
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} me;}
 \DoxyCodeLine{std::cout << me.\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{random}}();}
+
 \end{DoxyCode}
  
 

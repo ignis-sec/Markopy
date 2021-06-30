@@ -1,0 +1,30 @@
+<map id="Python.Markopy.MarkopyCLI" name="Python.Markopy.MarkopyCLI">
+<area shape="rect" id="node1" title="Top level model selector for Markopy CLI." alt="" coords="1196,3685,1444,3944"/>
+<area shape="rect" id="node2" href="$class_python_1_1_markopy_1_1_base_c_l_i.html" title="Base CLI class to handle user interactions" alt="" coords="1342,1712,1615,2335"/>
+<area shape="rect" id="node4" href="$class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i.html" title="abstract class for generation capable models" alt="" coords="1118,2677,1429,2780"/>
+<area shape="rect" id="node27" href="$class_python_1_1_markopy_1_1_abstract_training_model_c_l_i.html" title="abstract class for training capable models" alt="" coords="1195,3269,1477,3371"/>
+<area shape="rect" id="node3" href="$class_python_1_1_markopy_1_1_model_matrix_c_l_i.html" title="Extension of Python.Markopy.Base.BaseCLI for Markov::API::ModelMatrix." alt="" coords="859,3429,1136,3636"/>
+<area shape="rect" id="node5" href="$class_python_1_1_markopy_1_1_model_matrix.html" title="Abstract representation of a matrix based model." alt="" coords="738,3260,990,3380"/>
+<area shape="rect" id="node6" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html" title="Class to flatten and reduce Markov::Model to a Matrix." alt="" coords="631,2435,969,3023"/>
+<area shape="rect" id="node7" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html" title="Markov::Model with char represented nodes." alt="" coords="755,1747,1149,2300"/>
+<area shape="rect" id="node28" href="$class_python_1_1_markopy_1_1_markov_model.html" title="Abstract representation of a markov model." alt="" coords="876,3047,1137,3236"/>
+<area shape="rect" id="node8" href="$class_markov_1_1_model.html" title=" " alt="" coords="811,1215,1093,1629"/>
+<area shape="rect" id="node9" title=" " alt="" coords="390,775,605,877"/>
+<area shape="rect" id="node10" title=" " alt="" coords="815,5,873,91"/>
+<area shape="rect" id="node11" href="$class_markov_1_1_node.html" title=" " alt="" coords="789,156,1083,588"/>
+<area shape="rect" id="node12" title=" " alt="" coords="597,1047,811,1149"/>
+<area shape="rect" id="node13" href="$class_markov_1_1_edge.html" title=" " alt="" coords="789,671,1083,981"/>
+<area shape="rect" id="node15" title=" " alt="" coords="860,1047,1044,1149"/>
+<area shape="rect" id="node14" href="$classlong_01int.html" title=" " alt="" coords="942,5,1023,91"/>
+<area shape="rect" id="node16" title=" " alt="" coords="425,1379,548,1465"/>
+<area shape="rect" id="node17" title=" " alt="" coords="53,1047,224,1149"/>
+<area shape="rect" id="node18" title=" " alt="" coords="5,775,171,877"/>
+<area shape="rect" id="node19" title=" " alt="" coords="85,329,286,415"/>
+<area shape="rect" id="node23" title=" " alt="" coords="195,775,365,877"/>
+<area shape="rect" id="node20" title=" " alt="" coords="123,5,247,91"/>
+<area shape="rect" id="node21" title=" " alt="" coords="629,1379,757,1465"/>
+<area shape="rect" id="node22" title=" " alt="" coords="270,1047,447,1149"/>
+<area shape="rect" id="node24" title=" " alt="" coords="587,1981,629,2066"/>
+<area shape="rect" id="node25" title=" " alt="" coords="675,1981,731,2066"/>
+<area shape="rect" id="node26" href="$class_python_1_1_markopy_1_1_markov_passwords_c_l_i.html" title="Extension of Python.Markopy.Base.BaseCLI for Markov::API::MarkovPasswords." alt="" coords="1161,3464,1479,3601"/>
+</map>

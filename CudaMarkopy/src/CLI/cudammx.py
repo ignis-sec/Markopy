@@ -1,14 +1,16 @@
-""" @package markopy
- @file cudammx_cli.py
- @namespace Python::Markopy::CUDA::ModelMatrix
- @brief Command line class for CudaModelMatrix
- @authors Ata Hakçıl
-"""
+
+##
+# @file cudammx.py
+# @brief CUDAModelMatrix CLI wrapper
+#
+
+
 
 from importlib.util import spec_from_loader, module_from_spec
 from importlib.machinery import SourceFileLoader, ExtensionFileLoader
 import os
 import sys
+from mm import ModelMatrix
 
 ext = "so"
 if os.name == 'nt':
@@ -51,6 +53,13 @@ import os
 import allogate as logging
 
 class CudaModelMatrixCLI(ModelMatrixCLI,AbstractGenerationModelCLI):
+    """!
+         @belongsto Python::CudaMarkopy
+         @brief Python CLI wrapper for CudaModelMatrix
+         @extends Python::Markopy::ModelMatrixCLI
+         @extends Python::Markopy::AbstractGenerationModelCLI
+         @extends Markov::API::CUDA::CUDAModelMatrix
+    """
     def __init__(self):
         super().__init__()
         self.model = cudamarkopy.CUDAModelMatrix()
@@ -58,8 +67,6 @@ class CudaModelMatrixCLI(ModelMatrixCLI,AbstractGenerationModelCLI):
     def add_arguments(self):
         super().add_arguments()
         self.parser.add_argument("-if", "--infinite", action="store_true", help="Infinite generation mode")
-        
-
 
     def init_post_arguments(self):
         super().init_post_arguments()

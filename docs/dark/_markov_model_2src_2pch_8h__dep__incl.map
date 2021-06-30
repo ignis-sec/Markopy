@@ -1,5 +1,5 @@
-<map id="pch.h" name="pch.h">
-<area shape="rect" id="node1" title="For windows dynamic library." alt="" coords="91,5,157,35"/>
-<area shape="rect" id="node2" href="$dllmain_8cpp.html" title="DLLMain for dynamic windows library." alt="" coords="5,83,120,112"/>
-<area shape="rect" id="node3" href="$_markov_model_2src_2pch_8cpp.html" title="For windows dynamic library." alt="" coords="144,83,229,112"/>
+<map id="Markopy/MarkovModel/src/pch.h" name="Markopy/MarkovModel/src/pch.h">
+<area shape="rect" id="node1" title="For windows dynamic library." alt="" coords="119,5,321,52"/>
+<area shape="rect" id="node2" href="$dllmain_8cpp.html" title="DLLMain for dynamic windows library." alt="" coords="5,100,208,147"/>
+<area shape="rect" id="node3" href="$_markov_model_2src_2pch_8cpp.html" title="For windows dynamic library." alt="" coords="232,100,435,147"/>
 </map>

@@ -1,9 +1,9 @@
 <map id="Markov::Node&lt; storageType &gt;" name="Markov::Node&lt; storageType &gt;">
-<area shape="rect" id="node1" title="A node class that for the vertices of model. Connected with eachother using Edge." alt="" coords="297,631,563,907"/>
-<area shape="rect" id="node2" title=" " alt="" coords="422,463,659,565"/>
-<area shape="rect" id="node3" href="$class_markov_1_1_edge.html" title=" " alt="" coords="391,173,656,397"/>
-<area shape="rect" id="node7" title=" " alt="" coords="97,463,398,565"/>
-<area shape="rect" id="node4" title=" " alt="" coords="662,5,705,91"/>
-<area shape="rect" id="node5" title=" " alt="" coords="415,5,626,91"/>
-<area shape="rect" id="node6" title=" " alt="" coords="69,243,189,328"/>
+<area shape="rect" id="node1" title="A node class that for the vertices of model. Connected with eachother using Edge." alt="" coords="290,769,571,1271"/>
+<area shape="rect" id="node2" title=" " alt="" coords="423,601,660,704"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_edge.html" title=" " alt="" coords="391,173,657,536"/>
+<area shape="rect" id="node7" title=" " alt="" coords="97,601,399,704"/>
+<area shape="rect" id="node4" title=" " alt="" coords="663,5,705,91"/>
+<area shape="rect" id="node5" href="$class_node_3_01storage_type_01_4_01_5.html" title=" " alt="" coords="416,5,627,91"/>
+<area shape="rect" id="node6" title=" " alt="" coords="69,312,189,397"/>
 </map>

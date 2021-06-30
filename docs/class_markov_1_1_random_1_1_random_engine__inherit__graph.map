@@ -1,7 +1,7 @@
 <map id="Markov::Random::RandomEngine" name="Markov::Random::RandomEngine">
-<area shape="rect" id="node1" title="An abstract class for Random Engine." alt="" coords="118,5,407,91"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_random_1_1_default_random_engine.html" title="Implementation using Random.h default random engine." alt="" coords="116,139,409,293"/>
-<area shape="rect" id="node3" href="$class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine." alt="" coords="5,341,251,479"/>
-<area shape="rect" id="node5" href="$class_markov_1_1_random_1_1_mersenne.html" title="Implementation of Mersenne Twister Engine." alt="" coords="275,367,522,453"/>
-<area shape="rect" id="node4" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia.html" title="Extension of Markov::Random::Marsaglia which is capable o working on device space." alt="" coords="37,527,219,629"/>
+<area shape="rect" id="node1" title="An abstract class for Random Engine." alt="" coords="135,5,424,108"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_random_1_1_default_random_engine.html" title="Implementation using Random.h default random engine." alt="" coords="133,156,426,380"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_random_1_1_marsaglia.html" title="Implementation of Marsaglia Random Engine." alt="" coords="22,428,267,565"/>
+<area shape="rect" id="node5" href="$class_markov_1_1_random_1_1_mersenne.html" title="Implementation of Mersenne Twister Engine." alt="" coords="292,454,539,539"/>
+<area shape="rect" id="node4" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia.html" title="Extension of Markov::Random::Marsaglia which is capable o working on device space." alt="" coords="5,613,284,768"/>
 </map>

@@ -1,0 +1,420 @@
+\hypertarget{_r_e_a_d_m_e_8md_source}{}\doxysection{Markopy/\+README.md}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \# Markopy}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 [![Contributors][contributors-\/shield]][contributors-\/url]}
+\DoxyCodeLine{00005 [![Forks][forks-\/shield]][forks-\/url]}
+\DoxyCodeLine{00006 [![Stargazers][stars-\/shield]][stars-\/url]}
+\DoxyCodeLine{00007 [![Issues][issues-\/shield]][issues-\/url]}
+\DoxyCodeLine{00008 ![GitHub](https://img.shields.io/github/license/ignis-\/sec/Markopy?style=for-\/the-\/badge)}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 <!-\/-\/ PROJECT LOGO -\/-\/>}
+\DoxyCodeLine{00012 <br />}
+\DoxyCodeLine{00013 <div align="{}center"{}>}
+\DoxyCodeLine{00014   <h3 align="{}center"{}>Markopy</h3>}
+\DoxyCodeLine{00015   <div align="{}center"{}>}
+\DoxyCodeLine{00016    Generate wordlists with markov models.}
+\DoxyCodeLine{00017     <br />}
+\DoxyCodeLine{00018     <a href="{}https://markov.ignis.wtf"{}>HTML documentation</a>}
+\DoxyCodeLine{00019     ·}
+\DoxyCodeLine{00020     <a href="{}https://markov.ignis.wtf/documentation.pdf"{}>PDF documentation</a>}
+\DoxyCodeLine{00021     ·}
+\DoxyCodeLine{00022     <a href="{}https://github.com/ignis-\/sec/Markopy"{}>Github Page</a>}
+\DoxyCodeLine{00023     ·}
+\DoxyCodeLine{00024     <a href="{}https://github.com/ignis-\/sec/Markopy/issues"{}>Report Bug</a>}
+\DoxyCodeLine{00025     ·}
+\DoxyCodeLine{00026     <a href="{}https://github.com/ignis-\/sec/Markopy/pulls"{}>Add a Bug</a>}
+\DoxyCodeLine{00027   </div>}
+\DoxyCodeLine{00028 </div>}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032 <div>}
+\DoxyCodeLine{00033     <h4>Table of Contents</h4>}
+\DoxyCodeLine{00034     <ol>}
+\DoxyCodeLine{00035       <li>}
+\DoxyCodeLine{00036         <a href="{}\#about-\/the-\/project"{}>About The Project</a>}
+\DoxyCodeLine{00037         <ul>}
+\DoxyCodeLine{00038           <li><a href="{}\#possible-\/use-\/cases"{}>Possible Use Cases</a></li>}
+\DoxyCodeLine{00039           <li><a href="{}\#getting-\/started"{}>Getting Started</a></li>}
+\DoxyCodeLine{00040           <li><a href="{}\#releases"{}>Releases</a></li>}
+\DoxyCodeLine{00041         </ul>}
+\DoxyCodeLine{00042       </li>}
+\DoxyCodeLine{00043       <li>}
+\DoxyCodeLine{00044         <a href="{}\#building"{}>Building</a>}
+\DoxyCodeLine{00045         <ul>}
+\DoxyCodeLine{00046           <li>}
+\DoxyCodeLine{00047             <a href="{}\#cmake-\/configuration"{}>CMake configuration</a>}
+\DoxyCodeLine{00048             <ul>}
+\DoxyCodeLine{00049               <li><a href="{}\#build-\/all"{}>Build everything</a></li>}
+\DoxyCodeLine{00050               <li><a href="{}\#build-\/libs"{}>Build libraries only</a></li>}
+\DoxyCodeLine{00051               <li><a href="{}\#build-\/cuda-\/libs"{}>Build CUDA-\/accelerated libraries</a></li>}
+\DoxyCodeLine{00052               <li><a href="{}\#build-\/py-\/libs"{}>Build python module \& libraries</a></li>}
+\DoxyCodeLine{00053               <li><a href="{}\#build-\/cpy-\/libs"{}>Build CUDA accelerated python module</a></li>}
+\DoxyCodeLine{00054               <li><a href="{}\#build-\/cpy-\/libs-\/and-\/gui"{}>Build CUDA accelerated python module and the GUI</a></li>}
+\DoxyCodeLine{00055             </ul>}
+\DoxyCodeLine{00056           </li>}
+\DoxyCodeLine{00057           <li><a href="{}\#prequisites"{}>Prequisites</a>}
+\DoxyCodeLine{00058             <ul>}
+\DoxyCodeLine{00059               <li>}
+\DoxyCodeLine{00060                 <a href="{}\#general-\/prequisites"{}>General Prequisites</a>}
+\DoxyCodeLine{00061                 <ul>}
+\DoxyCodeLine{00062                   <li><a href="{}\#general-\/prequisites-\/linux"{}>Linux</a></li>}
+\DoxyCodeLine{00063                   <li><a href="{}\#general-\/prequisites-\/win"{}>Windows</a></li>}
+\DoxyCodeLine{00064                 </ul>}
+\DoxyCodeLine{00065               </li>}
+\DoxyCodeLine{00066               <li><a href="{}\#preq-\/mm"{}>MarkovModel</a></li>}
+\DoxyCodeLine{00067               <li><a href="{}\#preq-\/ma"{}>MarkovAPI</a></li>}
+\DoxyCodeLine{00068               <li><a href="{}\#preq-\/mac"{}>MarkovAPICLI</a></li>}
+\DoxyCodeLine{00069               <li><a href="{}\#preq-\/mpy"{}>Markopy</a></li>}
+\DoxyCodeLine{00070               <li><a href="{}\#preq-\/cma"{}>CudaMarkovAPI</a></li>}
+\DoxyCodeLine{00071               <li><a href="{}\#preq-\/cmpy"{}>CudaMarkopy</a></li>}
+\DoxyCodeLine{00072               <li><a href="{}\#preq-\/mpgui"{}>MarkovPasswordsGUI</a></li>}
+\DoxyCodeLine{00073             </ul>}
+\DoxyCodeLine{00074           </li>}
+\DoxyCodeLine{00075           <li>}
+\DoxyCodeLine{00076             <a href="{}\#installing-\/deps"{}>Installing Dependencies</a>}
+\DoxyCodeLine{00077             <ul>}
+\DoxyCodeLine{00078               <li><a href="{}\#installing-\/deps-\/win"{}>Windows</a></li>}
+\DoxyCodeLine{00079               <li><a href="{}\#installing-\/deps-\/lin"{}>Linux</a></li>}
+\DoxyCodeLine{00080             </ul>}
+\DoxyCodeLine{00081           </li>}
+\DoxyCodeLine{00082         </ul>}
+\DoxyCodeLine{00083       </li>}
+\DoxyCodeLine{00084       <li><a href="{}\#known-\/issues"{}>Known Common Issues</a></li>}
+\DoxyCodeLine{00085       <li><a href="{}\#contributing"{}>Contributing</a></li>}
+\DoxyCodeLine{00086       <li><a href="{}\#contact"{}>Contact</a></li>}
+\DoxyCodeLine{00087     </ol>}
+\DoxyCodeLine{00088 </div>}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00090 -\/-\/-\/}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092 \#\# About The Project}
+\DoxyCodeLine{00093 <div id="{}about-\/the-\/project"{}></div>}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095 This projects primary goal is to create a comfortable development environment for working with Markov Models,}
+\DoxyCodeLine{00096 as well as creating an end product which can be used for generating password wordlists using Markov Models.}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098 This project contains following sub-\/projects:}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100 -\/ MarkovModel}
+\DoxyCodeLine{00101   -\/ A versatile header-\/only template library for basic Markov Model structure.}
+\DoxyCodeLine{00102 -\/ MarkovAPI}
+\DoxyCodeLine{00103   -\/ A static/dynamic library built on MarkovModel, specialized to generate single-\/word lines.}
+\DoxyCodeLine{00104 -\/ MarkovAPICLI}
+\DoxyCodeLine{00105   -\/ A command line interface built on top of MarkovAPI}
+\DoxyCodeLine{00106 -\/ Markopy}
+\DoxyCodeLine{00107   -\/ A CPython extension wrapper for MarkovAPI, along with its own command line interface.}
+\DoxyCodeLine{00108 -\/ MarkovPasswordsGUI}
+\DoxyCodeLine{00109   -\/ A graphical user interface for MarkovAPI}
+\DoxyCodeLine{00110 -\/ CudaMarkovAPI}
+\DoxyCodeLine{00111   -\/ GPU-\/accelerated wrapper for MarkovAPI}
+\DoxyCodeLine{00112 -\/ CudaMarkopy}
+\DoxyCodeLine{00113   -\/ GPU-\/accelereted wrapper for CudaMarkovAPI}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116 \#\#\# Possible Use Cases}
+\DoxyCodeLine{00117 <div id="{}possible-\/use-\/cases"{}></div>}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119 While main focus of the development has been towards random walk performance and password generation, underlying libraries could be used for other applications such as specific use cases of hidden markov models in bioinformatics and gene research.}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{00122 \#\#\# Getting Started}
+\DoxyCodeLine{00123 <div id="{}getting-\/started"{}></div>}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00125 If you'd just like to use the project without contributing, check out the releases page.}
+\DoxyCodeLine{00126 Latest minor release (0.8.x, 0.9.x) is even with main branch, and latest patch release (0.8.1, 0.8.2) is even with development branch.}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128 }
+\DoxyCodeLine{00129 \#\#\# Releases}
+\DoxyCodeLine{00130 <div id="{}releases"{}></div>}
+\DoxyCodeLine{00131 }
+\DoxyCodeLine{00132 Releases are maintained automatically via github actions. Each push to the main branch will trigger a minor version release, while each accepted pull request into the development branch will trigger a patch version release. }
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{00134 Pull requests to the development branch will also trigger a draft release only visible to the maintainers.}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136 Release files contain:}
+\DoxyCodeLine{00137 -\/ libmarkov-\/\{version\}-\/\{platform\}.zip}
+\DoxyCodeLine{00138   -\/ Depending on the platform, contains the libmarkov.so or markov.lib from that version.}
+\DoxyCodeLine{00139 -\/ libcudamarkov-\/\{version\}-\/\{platform\}.zip}
+\DoxyCodeLine{00140   -\/ Depending on the platform, contains the libcudamarkov.so or cudamarkov.lib from that version.}
+\DoxyCodeLine{00141 -\/ markopy-\/\{version\}-\/\{platform\}-\/py\{ver\}.\{extension\}.zip}
+\DoxyCodeLine{00142   -\/ Depending on the paltform, contains markopy.so or markopy.pyd. CPython extensions are compiled for specific versions.}
+\DoxyCodeLine{00143     If your python version is not supported by the releases, you can create an issue, or build it yourself using the python3.x-\/dev package.}
+\DoxyCodeLine{00144 -\/ cudamarkopy-\/\{version\}-\/\{platform\}-\/py\{ver\}.\{extension\}.zip}
+\DoxyCodeLine{00145   -\/ Depending on the paltform, contains cudamarkopy.so or cudamarkopy.pyd. CPython extensions are compiled for specific versions.}
+\DoxyCodeLine{00146     If your python version is not supported by the releases, you can create an issue, or build it yourself using the python3.x-\/dev package.}
+\DoxyCodeLine{00147 -\/ models-\/\{version\}.zip}
+\DoxyCodeLine{00148   -\/ Contains the latest models with the release version.}
+\DoxyCodeLine{00149     Contains base models (untrained), trained models, and language-\/specific models.}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151   }
+\DoxyCodeLine{00152 -\/-\/-\/}
+\DoxyCodeLine{00153 \#\# Building}
+\DoxyCodeLine{00154 <div id="{}building"{}></div>}
+\DoxyCodeLine{00155 You can build the project using cmake with g++ \& nvcc on linux, and msbuild \& nvcc on windows.}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157 \#\# Prerequisites}
+\DoxyCodeLine{00158 <div id="{}prequisites"{}></div>}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160 You can find a list of the dependencies below. If you have any missing, check out the <a href="{}\#setting-\/up-\/deps"{}>setting up prequisites</a> part.}
+\DoxyCodeLine{00161 }
+\DoxyCodeLine{00162 \#\#\# General prequisites}
+\DoxyCodeLine{00163 <div id="{}general-\/prequisites"{}></div>}
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{00165 To build the simple core of this project, you'll need:}
+\DoxyCodeLine{00166 \#\#\#\# Linux}
+\DoxyCodeLine{00167 -\/ CMake, preferably one of the latest versions.}
+\DoxyCodeLine{00168 -\/ CXX compiler, preferably g++ or clang++ (LLVM 3.9+).}
+\DoxyCodeLine{00169 }
+\DoxyCodeLine{00170 \#\#\#\# Windows}
+\DoxyCodeLine{00171 -\/ CMake, preferably one of the latest versions.}
+\DoxyCodeLine{00172 -\/ CXX compiler, preferably msbuild(cl.exe) or clang++ (LLVM 3.9+). }
+\DoxyCodeLine{00173   Please note that mingw is not recommended as it is not officially supported by the nvcc.exe, and might not be linkable if you are building the CUDA components too.}
+\DoxyCodeLine{00174 }
+\DoxyCodeLine{00175 }
+\DoxyCodeLine{00176 }
+\DoxyCodeLine{00177 \#\#\# MarkovModel}
+\DoxyCodeLine{00178 <div id="{}preq-\/mm"{}></div>}
+\DoxyCodeLine{00179 This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.}
+\DoxyCodeLine{00180 }
+\DoxyCodeLine{00181 \#\#\# MarkovAPI}
+\DoxyCodeLine{00182 <div id="{}preq-\/ma"{}></div>}
+\DoxyCodeLine{00183 This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.}
+\DoxyCodeLine{00184 }
+\DoxyCodeLine{00185 \#\#\# MarkovAPICLI}
+\DoxyCodeLine{00186 <div id="{}preq-\/mac"{}></div>}
+\DoxyCodeLine{00187 }
+\DoxyCodeLine{00188 -\/ Boost.program\_options (tested on 1.71.0-\/1.76.0)}
+\DoxyCodeLine{00189 }
+\DoxyCodeLine{00190 \#\#\# Markopy}
+\DoxyCodeLine{00191 <div id="{}preq-\/mac"{}></div>}
+\DoxyCodeLine{00192 }
+\DoxyCodeLine{00193 -\/ Boost.Python (tested on 1.71.0-\/1.76.0)}
+\DoxyCodeLine{00194 -\/ Python development package (tested on python 36-\/39)}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{00196 \#\#\# CudaMarkovAPI}
+\DoxyCodeLine{00197 <div id="{}preq-\/cma"{}></div>}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199 -\/ CUDA toolkit (11.0+, c++17 support required)}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201 \#\#\# CudaMarkopy}
+\DoxyCodeLine{00202 <div id="{}preq-\/cmpy"{}></div>}
+\DoxyCodeLine{00203 }
+\DoxyCodeLine{00204 -\/ CUDA toolkit (11.0+, c++17 support required)}
+\DoxyCodeLine{00205 -\/ Boost.Python (tested on 1.71.0-\/1.76.0)}
+\DoxyCodeLine{00206 -\/ Python development package (tested on python 36-\/39)}
+\DoxyCodeLine{00207 }
+\DoxyCodeLine{00208 \#\#\# MarkovPasswordsGUI}
+\DoxyCodeLine{00209 <div id="{}preq-\/mpgui"{}></div>}
+\DoxyCodeLine{00210 }
+\DoxyCodeLine{00211 -\/ QT5 development environment. (qt5-\/qmake on ubuntu apt-\/get)}
+\DoxyCodeLine{00212 -\/ QTWebEngine5 plugin. (qtwebengine5-\/dev on ubuntu apt-\/get)}
+\DoxyCodeLine{00213 }
+\DoxyCodeLine{00214 }
+\DoxyCodeLine{00215 \#\#\# CMake Configuration}
+\DoxyCodeLine{00216 <div id="{}cmake-\/configuration"{}></div>}
+\DoxyCodeLine{00217 }
+\DoxyCodeLine{00218 You can build this project with cmake. }
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{00220 If you don't have prequisites for some of the projects set up, you can use the partial set up configuration to ignore those projects when setting the project up.}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222 If you do not meet the prequisites, you'll have to partially set up the CMake file (you cant use -\/-\/target to build some of the targets, because configuration phase will fail too).}
+\DoxyCodeLine{00223 }
+\DoxyCodeLine{00224 Some examples for partially setting up and building the project are below.}
+\DoxyCodeLine{00225 }
+\DoxyCodeLine{00226 \#\#\#\# Build everything}
+\DoxyCodeLine{00227 <div id="{}build-\/all"{}></div>}
+\DoxyCodeLine{00228 }
+\DoxyCodeLine{00229 ```}
+\DoxyCodeLine{00230 \$ cmake . -\/DPYTHON\_VER=38 \&\& cmake -\/-\/build .}
+\DoxyCodeLine{00231 ```}
+\DoxyCodeLine{00232 }
+\DoxyCodeLine{00233 This will build all the libraries and executables. Requires python-\/dev, CUDA, QT5, QT5-\/Webview}
+\DoxyCodeLine{00234 }
+\DoxyCodeLine{00235 \#\#\#\# Build libraries only}
+\DoxyCodeLine{00236 <div id="{}build-\/libs"{}></div>}
+\DoxyCodeLine{00237 }
+\DoxyCodeLine{00238 ```}
+\DoxyCodeLine{00239 \$ cmake . -\/DPARTIAL=1 -\/DB\_LIBS=1 \&\& cmake -\/-\/build .}
+\DoxyCodeLine{00240 ```}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{00242 Only build basic libraries. Requires only CXX compiler.}
+\DoxyCodeLine{00243 }
+\DoxyCodeLine{00244 \#\#\#\# Build CUDA-\/accelerated libraries}
+\DoxyCodeLine{00245 <div id="{}build-\/cuda-\/libs"{}></div>}
+\DoxyCodeLine{00246 }
+\DoxyCodeLine{00247 ```}
+\DoxyCodeLine{00248 \$ cmake . -\/DPARTIAL=1 -\/DB\_CUDA=1 \&\& cmake -\/-\/build .}
+\DoxyCodeLine{00249 ```}
+\DoxyCodeLine{00250 }
+\DoxyCodeLine{00251 Build libraries along with cuda accelerated ones.}
+\DoxyCodeLine{00252 }
+\DoxyCodeLine{00253 \#\#\#\# Build python module \& libraries}
+\DoxyCodeLine{00254 <div id="{}build-\/py-\/libs"{}></div>}
+\DoxyCodeLine{00255 }
+\DoxyCodeLine{00256 ```}
+\DoxyCodeLine{00257 \$ cmake . -\/DPARTIAL=1 -\/DPYTHON\_VER=39 \&\& cmake -\/-\/build .}
+\DoxyCodeLine{00258 ```}
+\DoxyCodeLine{00259 }
+\DoxyCodeLine{00260 Will build basic libraries and python modules.}
+\DoxyCodeLine{00261 }
+\DoxyCodeLine{00262 \#\#\#\# Build CUDA accelerated python module}
+\DoxyCodeLine{00263 <div id="{}build-\/cpy-\/libs"{}></div>}
+\DoxyCodeLine{00264 }
+\DoxyCodeLine{00265 ```}
+\DoxyCodeLine{00266 \$ cmake . -\/DPARTIAL=1 -\/DPYTHON\_VER=39 -\/DB\_CUDA=1 \&\& cmake -\/-\/build .}
+\DoxyCodeLine{00267 ```}
+\DoxyCodeLine{00268 }
+\DoxyCodeLine{00269 Will build cudamarkopy.}
+\DoxyCodeLine{00270 }
+\DoxyCodeLine{00271 \#\#\#\# Build CUDA accelerated python module and the GUI}
+\DoxyCodeLine{00272 <div id="{}build-\/cpy-\/libs-\/and-\/gui"{}></div>}
+\DoxyCodeLine{00273 }
+\DoxyCodeLine{00274 ```}
+\DoxyCodeLine{00275 \$ cmake . -\/DPARTIAL=1 -\/DPYTHON\_VER=39 -\/DB\_CUDA=1 -\/DB\_GUI \&\& cmake -\/-\/build .}
+\DoxyCodeLine{00276 ```}
+\DoxyCodeLine{00277 }
+\DoxyCodeLine{00278 Combine methods}
+\DoxyCodeLine{00279 }
+\DoxyCodeLine{00280 }
+\DoxyCodeLine{00281 -\/-\/-\/}
+\DoxyCodeLine{00282 }
+\DoxyCodeLine{00283 \#\#\# Installing Dependencies}
+\DoxyCodeLine{00284 <div id="{}installing-\/deps"{}></div>}
+\DoxyCodeLine{00285 }
+\DoxyCodeLine{00286 \#\#\#\#\# Windows}
+\DoxyCodeLine{00287 <div id="{}installing-\/deps-\/win"{}></div>}
+\DoxyCodeLine{00288 }
+\DoxyCodeLine{00289 -\/ QT: Install [QT For Windows](https://doc.qt.io/qt-\/5/windows.html)}
+\DoxyCodeLine{00290 -\/ Boost (program\_options and python): }
+\DoxyCodeLine{00291   -\/ Download Boost from [its website](https://www.boost.org/users/download/). Prefer one of the tested versions, 1.71.0 to 1.76.0}
+\DoxyCodeLine{00292   -\/ Unzip the contents.}
+\DoxyCodeLine{00293   -\/ Launch "{}Visual Studio Developer Command Prompt"{} (If you don't have this, properly set up the \%PATH\% variable for cl.exe) }
+\DoxyCodeLine{00294   -\/ Move to the boost installation directory. Bootstrap libraries with your python version:}
+\DoxyCodeLine{00295   ```}
+\DoxyCodeLine{00296   .\(\backslash\)bootstrap.bat -\/-\/with-\/python=\$(which python3.6) -\/-\/with-\/python-\/version=3.6;}
+\DoxyCodeLine{00297   ```}
+\DoxyCodeLine{00298 }
+\DoxyCodeLine{00299   -\/ Run `b2` to build the libraries.}
+\DoxyCodeLine{00300   ```}
+\DoxyCodeLine{00301   .\(\backslash\)b2.exe -\/-\/layout=system address-\/model=64 variant=release link=static runtime-\/link=shared threading=multi -\/-\/with-\/program\_options -\/-\/with-\/python stage;}
+\DoxyCodeLine{00302   ```}
+\DoxyCodeLine{00303 }
+\DoxyCodeLine{00304 -\/ Python: You can use the windows app store to download python runtime and libraries.}
+\DoxyCodeLine{00305 }
+\DoxyCodeLine{00306 }
+\DoxyCodeLine{00307 \#\#\#\#\# Linux}
+\DoxyCodeLine{00308 <div id="{}installing-\/deps-\/lin"{}></div>}
+\DoxyCodeLine{00309 }
+\DoxyCodeLine{00310 -\/ QT: Follow [this guide](https://wiki.qt.io/Install\_Qt\_5\_on\_Ubuntu) to install QT on Linux.}
+\DoxyCodeLine{00311   Alternatively, on ubuntu you can `sudo apt-\/get install qt5-\/qmake qtwebengine5-\/dev`}
+\DoxyCodeLine{00312 -\/ Boost (program options and python):}
+\DoxyCodeLine{00313   -\/ Download Boost from [its website](https://www.boost.org/users/download/). Prefer one of the tested versions, 1.71.0 to 1.76.0}
+\DoxyCodeLine{00314   -\/ Unzip the contents.}
+\DoxyCodeLine{00315   -\/ Move to the boost installation directory. Bootstrap libraries with your python version:}
+\DoxyCodeLine{00316   ```}
+\DoxyCodeLine{00317   ./bootstrap.sh -\/-\/with-\/python=\$(which python3.6) -\/-\/with-\/python-\/version=3.6;}
+\DoxyCodeLine{00318   ```}
+\DoxyCodeLine{00319 }
+\DoxyCodeLine{00320   -\/ Run `b2` to build the libraries.}
+\DoxyCodeLine{00321   ```}
+\DoxyCodeLine{00322   ./b2 variant=release link=static threading=multi -\/-\/with-\/program\_options install;}
+\DoxyCodeLine{00323   ./b2 -\/-\/with-\/python -\/-\/buildid=3.6 install;}
+\DoxyCodeLine{00324   ```}
+\DoxyCodeLine{00325 }
+\DoxyCodeLine{00326 -\/ Boost (alternative)}
+\DoxyCodeLine{00327   -\/ Use a package manager to install boost}
+\DoxyCodeLine{00328   ```}
+\DoxyCodeLine{00329   sudo apt-\/get install libboost-\/all-\/dev}
+\DoxyCodeLine{00330   ```}
+\DoxyCodeLine{00331 }
+\DoxyCodeLine{00332 -\/ Python:}
+\DoxyCodeLine{00333   ```}
+\DoxyCodeLine{00334   sudo apt-\/get install python3-\/dev}
+\DoxyCodeLine{00335   ```}
+\DoxyCodeLine{00336 }
+\DoxyCodeLine{00337 -\/-\/-\/}
+\DoxyCodeLine{00338 }
+\DoxyCodeLine{00339 }
+\DoxyCodeLine{00340 \#\# Known Common issues}
+\DoxyCodeLine{00341 <div id="{}known-\/issues"{}></div>}
+\DoxyCodeLine{00342 }
+\DoxyCodeLine{00343 \#\#\# Linux}
+\DoxyCodeLine{00344 \#\#\#\# Markopy -\/ Python.h -\/ Not found}
+\DoxyCodeLine{00345 Make sure you have the development version of python package, which includes the required header files.}
+\DoxyCodeLine{00346 Check if header files exist: `/usr/include/python*` or `locate Python.h`.}
+\DoxyCodeLine{00347 }
+\DoxyCodeLine{00348 If it doesn't, run `sudo apt-\/get install python3-\/dev`}
+\DoxyCodeLine{00349 }
+\DoxyCodeLine{00350 \#\#\#\# Markopy/MarkovAPI -\/ *.so not found, or other library related issues when building}
+\DoxyCodeLine{00351 Run: }
+\DoxyCodeLine{00352 ```}
+\DoxyCodeLine{00353 ls /usr/lib/x86\_64-\/linux-\/gnu/ | grep boost}
+\DoxyCodeLine{00354 ```}
+\DoxyCodeLine{00355 }
+\DoxyCodeLine{00356 and check the shared object filenames. A common issue is that lboost is required but filenames are formatted as libboost, or vice versa.}
+\DoxyCodeLine{00357 }
+\DoxyCodeLine{00358 Do the same for python related library issues, run: }
+\DoxyCodeLine{00359 ```}
+\DoxyCodeLine{00360 ls /usr/lib/x86\_64-\/linux-\/gnu/ | grep python}
+\DoxyCodeLine{00361 ```}
+\DoxyCodeLine{00362 }
+\DoxyCodeLine{00363 to verify filename format is as required.}
+\DoxyCodeLine{00364 }
+\DoxyCodeLine{00365 If not, you can modify the makefile, or create symlinks such as:}
+\DoxyCodeLine{00366 ```}
+\DoxyCodeLine{00367 ln -\/s /usr/lib/x86\_64-\/linux-\/gnu/libboost\_python38.so /usr/lib/x86\_64-\/linux-\/gnu/boost\_python38.so}
+\DoxyCodeLine{00368 ```}
+\DoxyCodeLine{00369 }
+\DoxyCodeLine{00370 \#\#\# Windows}
+\DoxyCodeLine{00371 \#\#\#\# Boost -\/ Bootstrap.bat "{}ctype.h"{} not found}
+\DoxyCodeLine{00372 -\/ Make sure you are working in the "{}Visual Studio Developer Command Prompt"{} terminal.}
+\DoxyCodeLine{00373 -\/ Make sure you have Windows 10 SDK installed.}
+\DoxyCodeLine{00374 -\/ From VS developer terminal, run echo \%INCLUDE\%. If result does not have the windows sdk folders, run the following before running bootstrap (change your sdk version instead of 10.0.19041.0):}
+\DoxyCodeLine{00375 ```bat}
+\DoxyCodeLine{00376 set INCLUDE=\%INCLUDE\%;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)NETFXSDK\(\backslash\)4.8\(\backslash\)include\(\backslash\)um;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)include\(\backslash\)10.0.19041.0\(\backslash\)ucrt;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)include\(\backslash\)10.0.19041.0\(\backslash\)shared;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)include\(\backslash\)10.0.19041.0\(\backslash\)um;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)include\(\backslash\)10.0.19041.0\(\backslash\)winrt;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)include\(\backslash\)10.0.19041.0\(\backslash\)cppwinrt}
+\DoxyCodeLine{00377 }
+\DoxyCodeLine{00378 set LIB=\%LIB\%;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)lib\(\backslash\)10.0.19041.0\(\backslash\)ucrt\(\backslash\)x64;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)lib\(\backslash\)10.0.19041.0\(\backslash\)um\(\backslash\)x64}
+\DoxyCodeLine{00379 ```}
+\DoxyCodeLine{00380 }
+\DoxyCodeLine{00381 \#\#\#\# Cannot open file "{}*.lib"{}}
+\DoxyCodeLine{00382 Make sure you have set the BOOST\_ROOT environment variable correctly. Make sure you ran `b2` to build library files from boost sources.}
+\DoxyCodeLine{00383 }
+\DoxyCodeLine{00384 \#\#\#\# Python.h not found}
+\DoxyCodeLine{00385 Make sure you have python installed, and make sure you set PYTHON\_PATH environment variable.}
+\DoxyCodeLine{00386 }
+\DoxyCodeLine{00387 -\/-\/-\/}
+\DoxyCodeLine{00388 }
+\DoxyCodeLine{00389 }
+\DoxyCodeLine{00390 <!-\/-\/ CONTRIBUTING -\/-\/>}
+\DoxyCodeLine{00391 \#\# Contributing}
+\DoxyCodeLine{00392 <div id="{}contributing"{}></div>}
+\DoxyCodeLine{00393 }
+\DoxyCodeLine{00394 Feel free to contribute. We welcome all the issues and pull requests.}
+\DoxyCodeLine{00395 }
+\DoxyCodeLine{00396 }
+\DoxyCodeLine{00397 <!-\/-\/ CONTACT -\/-\/>}
+\DoxyCodeLine{00398 \#\# Contact}
+\DoxyCodeLine{00399 <div id="{}contact"{}></div>}
+\DoxyCodeLine{00400 }
+\DoxyCodeLine{00401 Twitter -\/ [@ahakcil](https://twitter.com/ahakcil)}
+\DoxyCodeLine{00402 }
+\DoxyCodeLine{00403 }
+\DoxyCodeLine{00404 }
+\DoxyCodeLine{00405 }
+\DoxyCodeLine{00406 [contributors-\/shield]: https://img.shields.io/github/contributors/ignis-\/sec/Markopy.svg?style=for-\/the-\/badge}
+\DoxyCodeLine{00407 [contributors-\/url]: https://github.com/ignis-\/sec/Markopy/graphs/contributors}
+\DoxyCodeLine{00408 [forks-\/shield]: https://img.shields.io/github/forks/ignis-\/sec/Markopy.svg?style=for-\/the-\/badge}
+\DoxyCodeLine{00409 [forks-\/url]: https://github.com/ignis-\/sec/Markopy/network/members}
+\DoxyCodeLine{00410 [stars-\/shield]: https://img.shields.io/github/stars/ignis-\/sec/Markopy.svg?style=for-\/the-\/badge}
+\DoxyCodeLine{00411 [stars-\/url]: https://github.com/ignis-\/sec/Markopy/stargazers}
+\DoxyCodeLine{00412 [issues-\/shield]: https://img.shields.io/github/issues/ignis-\/sec/Markopy.svg?style=for-\/the-\/badge}
+\DoxyCodeLine{00413 [issues-\/url]: https://github.com/ignis-\/sec/Markopy/issues}
+\DoxyCodeLine{00414 [license-\/shield]: https://img.shields.io/github/license/ignis-\/sec/Markopy.svg?style=for-\/the-\/badge}
+\DoxyCodeLine{00415 [license-\/url]: https://github.com/ignis-\/sec/Markopy/LICENSE}
+
+\end{DoxyCode}

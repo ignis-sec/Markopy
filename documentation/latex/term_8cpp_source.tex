@@ -1,5 +1,5 @@
 \hypertarget{term_8cpp_source}{}\doxysection{term.\+cpp}
-\label{term_8cpp_source}\index{term.cpp@{term.cpp}}
+\label{term_8cpp_source}\index{Markopy/MarkovAPICLI/src/color/term.cpp@{Markopy/MarkovAPICLI/src/color/term.cpp}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001 \textcolor{comment}{/** @file term.cpp}}
@@ -9,7 +9,7 @@
 \DoxyCodeLine{00005 \textcolor{comment}{ * @copydoc Markov::API::CLI::Terminal}}
 \DoxyCodeLine{00006 \textcolor{comment}{ */}}
 \DoxyCodeLine{00007 }
-\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{term_8h}{"term.h"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{term_8h}{"{}term.h"{}}}}
 \DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{string}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00010 }
 \DoxyCodeLine{00011 \textcolor{keyword}{using} \textcolor{keyword}{namespace} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i}{CLI}};}
@@ -69,8 +69,8 @@
 \DoxyCodeLine{00065 }
 \DoxyCodeLine{\Hypertarget{term_8cpp_source_l00066}\mbox{\hyperlink{term_8cpp_ad8a8c0db6261a3f70fc7536aed3488ae}{00066}} std::ostream\& operator<<(std::ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Terminal}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722}{color}}\& c) \{}
 \DoxyCodeLine{00067     \textcolor{keywordtype}{char} buf[6];}
-\DoxyCodeLine{00068     sprintf(buf,\textcolor{stringliteral}{"\%d"},\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Terminal}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_a296cac1426f648e426bd77fd3bcaf79d}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_a296cac1426f648e426bd77fd3bcaf79d}{colormap}}.find(c)-\/>second);}
-\DoxyCodeLine{00069     os << \textcolor{stringliteral}{"\(\backslash\)e[1;"} << buf << \textcolor{stringliteral}{"m"};}
+\DoxyCodeLine{00068     sprintf(buf,\textcolor{stringliteral}{"{}\%d"{}},\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal}{Terminal}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_a296cac1426f648e426bd77fd3bcaf79d}{::}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_a296cac1426f648e426bd77fd3bcaf79d}{colormap}}.find(c)-\/>second);}
+\DoxyCodeLine{00069     os << \textcolor{stringliteral}{"{}\(\backslash\)e[1;"{}} << buf << \textcolor{stringliteral}{"{}m"{}};}
 \DoxyCodeLine{00070     \textcolor{keywordflow}{return} os;}
 \DoxyCodeLine{00071 \}}
 \DoxyCodeLine{00072 }

@@ -1,6 +1,6 @@
-<map id="term.h" name="term.h">
-<area shape="rect" id="node1" title="Terminal handler for pretty stuff like colors." alt="" coords="166,5,241,35"/>
-<area shape="rect" id="node2" href="$argparse_8cpp.html" title="Arguement handler class for native CPP cli." alt="" coords="5,83,132,112"/>
-<area shape="rect" id="node3" href="$term_8cpp.html" title="Terminal handler for pretty stuff like colors." alt="" coords="157,83,250,112"/>
-<area shape="rect" id="node4" href="$_markov_a_p_i_c_l_i_2src_2main_8cpp.html" title="Test cases for Markov::API::ModelMatrix." alt="" coords="274,83,370,112"/>
+<map id="Markopy/MarkovAPICLI/src/color/term.h" name="Markopy/MarkovAPICLI/src/color/term.h">
+<area shape="rect" id="node1" title="Terminal handler for pretty stuff like colors." alt="" coords="236,5,443,52"/>
+<area shape="rect" id="node2" href="$argparse_8cpp.html" title="Arguement handler class for native CPP cli." alt="" coords="5,100,212,147"/>
+<area shape="rect" id="node3" href="$term_8cpp.html" title="Terminal handler for pretty stuff like colors." alt="" coords="236,100,443,147"/>
+<area shape="rect" id="node4" href="$_markov_a_p_i_c_l_i_2src_2main_8cpp.html" title="Test cases for Markov::API::ModelMatrix." alt="" coords="467,100,673,147"/>
 </map>

@@ -1,9 +1,20 @@
-""" @package markopy
- @file markopy_cli.py
- @namespace Python::Markopy::ModelMatrix
- @brief Command line class for ModelMatrix
- @authors Ata Hakçıl
-"""
+#!/usr/bin/env python3
+
+
+##
+# @namespace Python.Markopy
+# @brief wrapper scripts for Markopy
+#
+
+##
+# @namespace Python
+# @brief Python language scripts
+#
+
+##
+# @file markopy.py
+# @brief Entry point for markopy scripts.
+#
 
 from importlib.util import spec_from_loader, module_from_spec
 from importlib.machinery import SourceFileLoader, ExtensionFileLoader
@@ -46,8 +57,21 @@ from termcolor import colored
 from abc import abstractmethod
 
 class MarkopyCLI(BaseCLI):
+    """!
+        @brief Top level model selector for Markopy CLI.
+        This class is used for injecting the -mt parameter to the CLI, and determining the model type depending on that.
+        @belongsto Python::Markopy
+        @extends Python::Markopy::BaseCLI
+        @extends Python::Markopy::ModelMatrixCLI
+        @extends Python::Markopy::MarkovPasswordsCLI
+    """
+
     def __init__(self, add_help=False):
-        super().__init__(add_help)
+        """! 
+        @brief default constructor
+        """
+
+        BaseCLI.__init__(self,add_help)
         self.args = None
         self.parser.epilog = f"""
         {colored("Sample runs:", "yellow")}
@@ -58,13 +82,20 @@ class MarkopyCLI(BaseCLI):
             Import trained.mdl, and generate 500 lines to output.txt
         """
 
+    @abstractmethod
     def add_arguments(self):
+        """! 
+        @brief add -mt/--model_type constructor
+        """
         self.parser.add_argument("-mt", "--model_type", default="_MMX", help="Model type to use. Accepted values: MP, MMX")
         self.parser.add_argument("-h", "--help", action="store_true", help="Model type to use. Accepted values: MP, MMX")
         self.parser.print_help = self.help
 
     @abstractmethod
     def help(self):
+        """! 
+        @brief overload help function to print submodel helps
+        """
         self.parser.print_help = self.stub
         self.args = self.parser.parse_known_args()[0]
         if(self.args.model_type!="_MMX"):
@@ -93,6 +124,8 @@ class MarkopyCLI(BaseCLI):
 
     @abstractmethod
     def parse(self):
+        "! @brief overload parse function to parse for submodels"
+        
         self.add_arguments()
         self.parse_arguments()
         self.init_post_arguments()
@@ -107,14 +140,21 @@ class MarkopyCLI(BaseCLI):
         self.cli.parse()
     
     @abstractmethod
+    def init_post_arguments(self):
+        pass
+
+    @abstractmethod
     def parse_fail(self):
+        "! @brief failed to parse model type"
         print("Unrecognized model type.")
         exit()
 
     def process(self):
+        "! @brief pass the process request to selected submodel"
         return self.cli.process()
 
     def stub(self):
+        "! @brief stub function to hack help requests"
         return
         
 
