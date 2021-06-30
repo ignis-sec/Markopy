@@ -10,8 +10,28 @@
  */
 
 /**
+ * @dir Markopy/Markopy/src/CLI
+ * @brief Python CLI for Markopy
+ */
+
+/**
+ * @dir Markopy/Markopy/src/Module
+ * @brief CPP module for Markopy
+ */
+
+/**
  * @dir Markopy/CudaMarkopy
  * @brief CPython extension for CudaMarkovAPI
+ */
+
+/**
+ * @dir Markopy/CudaMarkopy/src/CLI
+ * @brief Python CLI for CudaMarkopy
+ */
+
+/**
+ * @dir Markopy/CudaMarkopy/src/Module
+ * @brief CPP module for CudaMarkopy
  */
 
 /**
