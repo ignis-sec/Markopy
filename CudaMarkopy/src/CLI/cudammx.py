@@ -1,4 +1,11 @@
 
+##
+# @file cudammx.py
+# @brief CUDAModelMatrix CLI wrapper
+#
+
+
+
 from importlib.util import spec_from_loader, module_from_spec
 from importlib.machinery import SourceFileLoader, ExtensionFileLoader
 import os
@@ -60,8 +67,6 @@ class CudaModelMatrixCLI(ModelMatrixCLI,AbstractGenerationModelCLI):
     def add_arguments(self):
         super().add_arguments()
         self.parser.add_argument("-if", "--infinite", action="store_true", help="Infinite generation mode")
-        
-
 
     def init_post_arguments(self):
         super().init_post_arguments()
