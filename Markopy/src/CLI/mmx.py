@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
+##
+# @file mmx.py
+# @brief ModelMatrix CLI wrapper
+#
+
+
 from mm import ModelMatrix
 
 from importer import import_markopy
@@ -18,8 +24,9 @@ class ModelMatrixCLI(AbstractGenerationModelCLI, ModelMatrix):
 
         adds -st/--stdout arguement to the command line.
     """
-    def __init__(self):
-        super().__init__()
+    def __init__(self, add_help:bool=True):
+        "! @brief initialize model with Markov::API::ModelMatrix"
+        super().__init__(add_help)
         self.model = markopy.ModelMatrix()
 
     def add_arguments(self):

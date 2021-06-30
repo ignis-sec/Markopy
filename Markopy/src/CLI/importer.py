@@ -1,6 +1,8 @@
 
-
-
+##
+# @file importer.py
+# @brief dynamic import wrapper for markopy model
+#
 
 from importlib.util import spec_from_loader, module_from_spec
 from importlib.machinery import SourceFileLoader, ExtensionFileLoader

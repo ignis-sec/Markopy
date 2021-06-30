@@ -1,17 +1,4 @@
 #!/usr/bin/python3
-##
-# @package Python.Markopy
-#
-
-##
-# @namespace Python.Markopy
-# @brief wrapper scripts for Markopy
-#
-
-##
-# @namespace Python
-# @brief Python language scripts
-#
 
 ##
 # @file base.py
@@ -30,7 +17,11 @@ class BaseCLI():
     """! @brief Base CLI class to handle user interactions        
          @belongsto Python::Markopy
     """
-    def __init__(self, add_help=True):
+    def __init__(self, add_help : bool=True):
+        """!
+        @brief initialize base CLI
+        @param add_help decide to overload the help function or not
+        """
         self.parser = argparse.ArgumentParser(description="Python wrapper for MarkovPasswords.",
         epilog=f"""{colored("Sample runs:", "yellow")}
         {__file__.split("/")[-1]} train untrained.mdl -d dataset.dat -s "\\t" -o trained.mdl
@@ -50,7 +41,7 @@ class BaseCLI():
      
     @abstractmethod
     def add_arguments(self):
-        "! Add command line arguements to the parser"
+        "! @brief Add command line arguements to the parser"
         self.parser.add_argument("mode",                             help="Process mode. Either 'Train', 'Generate', or 'Combine'.")
         self.parser.add_argument("-t", "--threads",default=10,       help="Number of lines to generate. Ignored in training mode.")
         self.parser.add_argument("-v", "--verbosity",action="count", help="Output verbosity.")
@@ -58,18 +49,18 @@ class BaseCLI():
 
     @abstractmethod
     def help(self):
-        "Handle help strings. Defaults to argparse's help"
+        "! @brief Handle help strings. Defaults to argparse's help"
         self.print_help()
 
     def parse(self):
-        "add, parse and hook arguements"
+        "! @brief add, parse and hook arguements"
         self.add_arguments()
         self.parse_arguments()
         self.init_post_arguments()
 
     @abstractmethod
     def init_post_arguments(self):
-        "set up stuff that is collected from command line arguements"
+        "! @brief set up stuff that is collected from command line arguements"
         logging.VERBOSITY = 0
         try:
             if self.args.verbosity:
@@ -80,11 +71,14 @@ class BaseCLI():
     
     @abstractmethod
     def parse_arguments(self):
-        "trigger parser"
+        "! @brief trigger parser"
         self.args = self.parser.parse_known_args()[0]
 
-    def import_model(self, filename):
-        "Import a model file"
+    def import_model(self, filename : str):
+        """! 
+        @brief Import a model file
+        @param filename filename to import
+        """
         logging.pprint("Importing model file.", 1)
 
         if not self.check_import_path(filename):
@@ -98,7 +92,8 @@ class BaseCLI():
 
 
     def train(self, dataset : str, seperator : str, output : str, output_forced : bool=False, bulk : bool=False):
-        """ Train a model via CLI parameters 
+        """! 
+            @brief Train a model via CLI parameters 
             @param model Model instance
             @param dataset filename for the dataset
             @param seperator seperator used with the dataset
@@ -140,12 +135,16 @@ class BaseCLI():
 
         return True
 
-    def export(self, filename):
-        "Export model to a file"
+    def export(self, filename : str):
+        """! 
+        @brief Export model to a file
+        @param filename filename to export to
+        """
         self.model.Export(filename)
 
     def generate(self, wordlist : str, bulk : bool=False):
-        """ Generate strings from the model
+        """! 
+            @brief Generate strings from the model
             @param model: model instance
             @param wordlist wordlist filename
             @param bulk marks bulk operation with directories
@@ -159,31 +158,51 @@ class BaseCLI():
         self._generate(wordlist)
 
     @abstractmethod
-    def _generate(self, wordlist):
+    def _generate(self, wordlist : str):
+        """!
+        @brief wrapper for generate function. This can be overloaded by other models
+        @param wordlist filename to generate to
+        """
         self.model.Generate(int(self.args.count), wordlist, int(self.args.min), int(self.args.max), int(self.args.threads))
 
     @staticmethod
-    def check_import_path(filename):
-        "Check given import path for validity"
+    def check_import_path(filename : str):
+        """!
+        @brief check import path for validity
+        @param filename filename to check
+        """
+        
         if(not os.path.isfile(filename)):
             return False
         else:
             return True
 
     @staticmethod
-    def check_corpus_path(filename):
-        "Check given corpus path for validity"
+    def check_corpus_path(filename : str):
+        """!
+        @brief check import path for validity
+        @param filename filename to check
+        """
+
         if(not os.path.isfile(filename)):
             return False
         return True
 
     @staticmethod
-    def check_export_path(filename):
+    def check_export_path(filename : str):
+        """!
+        @brief check import path for validity
+        @param filename filename to check
+        """
+
         if(filename and os.path.isfile(filename)):
             return True
         return True
 
     def process(self):
+        """!
+        @brief Process parameters for operation
+        """
         if(self.args.bulk):
             logging.pprint(f"Bulk mode operation chosen.", 4)
             if (self.args.mode.lower() == "train"):

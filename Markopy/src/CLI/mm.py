@@ -1,4 +1,10 @@
 
+
+##
+# @file mm.py
+# @brief Abstract representation of CPP/Python intermediate layer classes.
+#
+
 from abc import abstractmethod
 
 from importer import import_markopy
@@ -9,6 +15,8 @@ class MarkovModel(markopy.MarkovPasswords):
     @brief Abstract representation of a markov model
     @implements Markov::API::MarkovPasswords
     @belongsto Python::Markopy
+
+    To help with the python-cpp gateway documentation.
     """
     @abstractmethod
     def Import(filename : str):
@@ -32,6 +40,8 @@ class ModelMatrix(markopy.ModelMatrix):
     @brief Abstract representation of a matrix based model
     @implements Markov::API::ModelMatrix 
     @belongsto Python::Markopy
+
+    To help with the python-cpp gateway documentation.
     """
 
     @abstractmethod
