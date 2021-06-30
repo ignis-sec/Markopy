@@ -1,0 +1,12 @@
+<map id="Python.Markopy.ModelMatrixCLI" name="Python.Markopy.ModelMatrixCLI">
+<area shape="rect" id="node1" title="Extension of Python.Markopy.Base.BaseCLI for Markov::API::ModelMatrix." alt="" coords="174,332,451,361"/>
+<area shape="rect" id="node8" href="$class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i.html" title="Python CLI wrapper for CudaModelMatrix." alt="" coords="27,409,311,456"/>
+<area shape="rect" id="node10" href="$class_python_1_1_markopy_1_1_markopy_c_l_i.html" title="Top level model selector for Markopy CLI." alt="" coords="334,418,582,447"/>
+<area shape="rect" id="node2" href="$class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i.html" title="abstract class for generation capable models" alt="" coords="5,237,316,284"/>
+<area shape="rect" id="node3" href="$class_python_1_1_markopy_1_1_base_c_l_i.html" title="Base CLI class to handle user interactions" alt="" coords="51,160,270,189"/>
+<area shape="rect" id="node4" href="$class_python_1_1_markopy_1_1_model_matrix.html" title="Abstract representation of a matrix based model." alt="" coords="340,246,592,275"/>
+<area shape="rect" id="node5" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html" title="Class to flatten and reduce Markov::Model to a Matrix." alt="" coords="353,160,579,189"/>
+<area shape="rect" id="node6" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html" title="Markov::Model with char represented nodes." alt="" coords="333,83,599,112"/>
+<area shape="rect" id="node7" href="$class_markov_1_1_model.html" title=" " alt="" coords="361,5,571,35"/>
+<area shape="rect" id="node9" href="$class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html" title="CUDA extension to MarkopyCLI." alt="" coords="147,504,478,533"/>
+</map>

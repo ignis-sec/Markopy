@@ -1,9 +1,10 @@
 <map id="Markov::Model::Nodes" name="Markov::Model::Nodes">
-<area shape="rect" id="node1" title="Return starter Node." alt="" coords="868,63,1067,93"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html#ad490665eae3beb022afc7e2491583d0a" title="Buff expression of some characters in the model." alt="" coords="553,5,820,52"/>
-<area shape="rect" id="node4" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aafb5809808b9b0450a0bc98740121b5f" title="Construct the related Matrix data for the model." alt="" coords="574,89,799,136"/>
-<area shape="rect" id="node3" href="$_markov_a_p_i_c_l_i_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="87,31,150,61"/>
-<area shape="rect" id="node5" href="$namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" title=" " alt="" coords="5,115,232,161"/>
-<area shape="rect" id="node6" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aeba8bb79aa4dc2cfeda310f34b7c9427" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="280,53,505,100"/>
-<area shape="rect" id="node7" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#af42d40d7a5c80f0dfe126a574a17f423" title="Train the model with the dataset file." alt="" coords="280,176,505,223"/>
+<area shape="rect" id="node1" title="Return starter Node." alt="" coords="881,75,1080,105"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html#ad490665eae3beb022afc7e2491583d0a" title="Buff expression of some characters in the model." alt="" coords="567,5,833,52"/>
+<area shape="rect" id="node4" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aafb5809808b9b0450a0bc98740121b5f" title="Construct the related Matrix data for the model." alt="" coords="587,101,813,148"/>
+<area shape="rect" id="node3" href="$_markov_a_p_i_c_l_i_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="94,14,157,43"/>
+<area shape="rect" id="node5" href="$namespace_markov_1_1_markopy_1_1_c_u_d_a.html#a584fc8e70bb6cf08f544f52805245e19" title=" " alt="" coords="5,168,245,215"/>
+<area shape="rect" id="node6" href="$namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" title=" " alt="" coords="12,97,239,144"/>
+<area shape="rect" id="node7" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aeba8bb79aa4dc2cfeda310f34b7c9427" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="293,40,519,87"/>
+<area shape="rect" id="node8" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#af42d40d7a5c80f0dfe126a574a17f423" title="Train the model with the dataset file." alt="" coords="293,163,519,209"/>
 </map>

@@ -1,5 +1,7 @@
 <map id="Markov::API::CUDA::CUDADeviceController" name="Markov::API::CUDA::CUDADeviceController">
-<area shape="rect" id="node1" title="Controller class for CUDA device." alt="" coords="99,5,299,52"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html" title="Extension of Markov::API::ModelMatrix which is modified to run on GPU devices." alt="" coords="5,100,188,147"/>
-<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia.html" title="Extension of Markov::Random::Marsaglia which is capable o working on device space." alt="" coords="212,100,395,147"/>
+<area shape="rect" id="node1" title="Controller class for CUDA device." alt="" coords="173,5,373,52"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html" title="Extension of Markov::API::ModelMatrix which is modified to run on GPU devices." alt="" coords="79,100,262,147"/>
+<area shape="rect" id="node5" href="$class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random_1_1_marsaglia.html" title="Extension of Markov::Random::Marsaglia which is capable o working on device space." alt="" coords="286,100,469,147"/>
+<area shape="rect" id="node3" href="$class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i.html" title="Python CLI wrapper for CudaModelMatrix." alt="" coords="29,195,313,241"/>
+<area shape="rect" id="node4" href="$class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html" title="CUDA extension to MarkopyCLI." alt="" coords="5,289,336,319"/>
 </map>

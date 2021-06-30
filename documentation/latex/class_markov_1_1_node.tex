@@ -7,7 +7,7 @@ A node class that for the vertices of model. Connected with eachother using \mbo
 
 
 
-{\ttfamily \#include $<$model.\+h$>$}
+{\ttfamily \#include $<$node.\+h$>$}
 
 
 
@@ -38,7 +38,7 @@ bool \mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{U
 \begin{DoxyCompactList}\small\item\em Find an edge with its character representation. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}$<$ storage\+Type $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_node_adec94acba3fc021a2bbaded53d9e9730}{Find\+Edge}} (\mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ storage\+Type $>$ $\ast$target)
 \begin{DoxyCompactList}\small\item\em Find an edge with its pointer. Avoid unless neccessary because comptutational cost of find by character is cheaper (because of std\+::map) \end{DoxyCompactList}\item 
-unsigned \mbox{\hyperlink{classchar}{char}} \mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{Node\+Value}} ()
+unsigned char \mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{Node\+Value}} ()
 \begin{DoxyCompactList}\small\item\em Return character representation of this node. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_markov_1_1_node_ab254a9c976195fcb1cac4d463d030d3c}{Update\+Total\+Vertice\+Weight}} (long int offset)
 \begin{DoxyCompactList}\small\item\em Change total weights with offset. \end{DoxyCompactList}\item 
@@ -70,7 +70,7 @@ A node class that for the vertices of model. Connected with eachother using \mbo
 
 This class will later be templated to accept other data types than char$\ast$. 
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00027}{27}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{node_8h_source_l00024}{24}} of file \mbox{\hyperlink{node_8h_source}{node.\+h}}.
 
 
 
@@ -118,6 +118,7 @@ Constructor. Creates a \mbox{\hyperlink{class_markov_1_1_node}{Node}} with no ed
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* LeftNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'l'});}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* RightNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'r'});}
+
 \end{DoxyCode}
  
 
@@ -158,7 +159,7 @@ Definition at line \mbox{\hyperlink{node_8h_source_l00272}{272}} of file \mbox{\
 \end{DoxyCode}
 
 
-Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00153}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Buff()}}.
+Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00153}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Buff()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -217,6 +218,7 @@ Find an edge with its character representation.
 \DoxyCodeLine{src-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(target1);}
 \DoxyCodeLine{src-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(target2);         }
 \DoxyCodeLine{res = src-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(\textcolor{charliteral}{'b'});}
+
 \end{DoxyCode}
  
 
@@ -242,7 +244,7 @@ Definition at line \mbox{\hyperlink{node_8h_source_l00260}{260}} of file \mbox{\
 
 Link this node with another, with this node as its source. 
 
-{\itshape D\+O\+ES N\+OT} create a new \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}. 
+{\itshape DOES NOT} create a new \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}. 
 \begin{DoxyParams}{Parameters}
 {\em \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}} & -\/ \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} that will accept this node as its Left\+Node. \\
 \hline
@@ -256,6 +258,7 @@ the same edge as parameter target.
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* RightNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'r'});}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e = LeftNode-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(RightNode);}
 \DoxyCodeLine{LeftNode-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(e);}
+
 \end{DoxyCode}
  
 
@@ -294,6 +297,7 @@ A new node with Left\+Node as this, and Right\+Node as parameter target.
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* LeftNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'l'});}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* RightNode = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'r'});}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* e = LeftNode-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(RightNode);}
+
 \end{DoxyCode}
  
 
@@ -313,7 +317,7 @@ Definition at line \mbox{\hyperlink{node_8h_source_l00220}{220}} of file \mbox{\
 \index{NodeValue@{NodeValue}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}}
 \doxysubsubsection{\texorpdfstring{NodeValue()}{NodeValue()}}
 {\footnotesize\ttfamily template$<$typename storage\+Type $>$ \\
-unsigned \mbox{\hyperlink{classchar}{char}} \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$\+::Node\+Value\hspace{0.3cm}{\ttfamily [inline]}}
+unsigned char \mbox{\hyperlink{class_markov_1_1_node}{Markov\+::\+Node}}$<$ storage\+Type $>$\+::Node\+Value\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -335,7 +339,11 @@ Definition at line \mbox{\hyperlink{node_8h_source_l00215}{215}} of file \mbox{\
 \end{DoxyCode}
 
 
-Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}.
+References \mbox{\hyperlink{node_8h_source_l00179}{Markov\+::\+Node$<$ storage\+Type $>$\+::\+\_\+value}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -363,7 +371,7 @@ This operation is done by generating a random number in range of 0-\/this.\+tota
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{char}* buffer[64];}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} model;}
-\DoxyCodeLine{model.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{model.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"{}model.mdl"{}});}
 \DoxyCodeLine{   \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<char>}}* n = model.\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}};}
 \DoxyCodeLine{\textcolor{keywordtype}{int} len = 0;}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<char>}}* temp\_node;}
@@ -384,6 +392,7 @@ This operation is done by generating a random number in range of 0-\/this.\+tota
 \DoxyCodeLine{}
 \DoxyCodeLine{   buffer[len++] = n-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}();}
 \DoxyCodeLine{\}}
+
 \end{DoxyCode}
  
 
@@ -403,12 +412,24 @@ Definition at line \mbox{\hyperlink{node_8h_source_l00234}{234}} of file \mbox{\
 \DoxyCodeLine{00243     \}}
 \DoxyCodeLine{00244 }
 \DoxyCodeLine{00245     \textcolor{comment}{//if this assertion is reached, it means there is an implementation error above}}
-\DoxyCodeLine{00246     std::cout << \textcolor{stringliteral}{"This should never be reached (node failed to walk to next)\(\backslash\)n"}; \textcolor{comment}{//cant assert from child thread}}
-\DoxyCodeLine{00247     assert(\textcolor{keyword}{true} \&\& \textcolor{stringliteral}{"This should never be reached (node failed to walk to next)"});}
+\DoxyCodeLine{00246     std::cout << \textcolor{stringliteral}{"{}This should never be reached (node failed to walk to next)\(\backslash\)n"{}}; \textcolor{comment}{//cant assert from child thread}}
+\DoxyCodeLine{00247     assert(\textcolor{keyword}{true} \&\& \textcolor{stringliteral}{"{}This should never be reached (node failed to walk to next)"{}});}
 \DoxyCodeLine{00248     \textcolor{keywordflow}{return} NULL;}
 \DoxyCodeLine{00249 \}}
 
 \end{DoxyCode}
+
+
+References \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058}{Markov\+::\+Random\+::\+Random\+Engine\+::random()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_markov_1_1_node_a60166d8f501c016de104f48e46bff223}\label{class_markov_1_1_node_a60166d8f501c016de104f48e46bff223}} 
 \index{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!TotalEdgeWeights@{TotalEdgeWeights}}
 \index{TotalEdgeWeights@{TotalEdgeWeights}!Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}}
@@ -433,7 +454,7 @@ Definition at line \mbox{\hyperlink{node_8h_source_l00277}{277}} of file \mbox{\
 \end{DoxyCode}
 
 
-Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+A\+P\+I\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}.
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -475,6 +496,7 @@ true if insertion was successful, false if it fails.
 \DoxyCodeLine{src-\/>\mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{UpdateEdges}}(e1);}
 \DoxyCodeLine{e2-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(30);}
 \DoxyCodeLine{src-\/>\mbox{\hyperlink{class_markov_1_1_node_a77dbb90420f6199790a4fa986b93f85c}{UpdateEdges}}(e2);}
+
 \end{DoxyCode}
  
 
@@ -537,7 +559,7 @@ Definition at line \mbox{\hyperlink{node_8h_source_l00179}{179}} of file \mbox{\
 
 
 
-Referenced by \mbox{\hyperlink{node_8h_source_l00215}{Markov\+::\+Node$<$ Node\+Storage\+Type $>$\+::\+Node\+Value()}}.
+Referenced by \mbox{\hyperlink{node_8h_source_l00215}{Markov\+::\+Node$<$ storage\+Type $>$\+::\+Node\+Value()}}.
 
 \mbox{\Hypertarget{class_markov_1_1_node_ab93adf2f99ab396bdba8eeb6537b21fd}\label{class_markov_1_1_node_ab93adf2f99ab396bdba8eeb6537b21fd}} 
 \index{Markov::Node$<$ storageType $>$@{Markov::Node$<$ storageType $>$}!edges@{edges}}
@@ -584,5 +606,5 @@ Definition at line \mbox{\hyperlink{node_8h_source_l00184}{184}} of file \mbox{\
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{model_8h}{model.\+h}}\item 
-\mbox{\hyperlink{node_8h}{node.\+h}}\end{DoxyCompactItemize}
+Markopy/\+Markov\+Model/src/\mbox{\hyperlink{model_8h}{model.\+h}}\item 
+Markopy/\+Markov\+Model/src/\mbox{\hyperlink{node_8h}{node.\+h}}\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
-<map id="Train.h" name="Train.h">
-<area shape="rect" id="node1" title="training page for GUI" alt="" coords="65,5,139,35"/>
-<area shape="rect" id="node2" href="$_c_l_i_8cpp.html" title="CLI page." alt="" coords="5,83,87,112"/>
-<area shape="rect" id="node3" href="$_train_8cpp.html" title="training page for GUI" alt="" coords="111,83,205,112"/>
+<map id="Markopy/MarkovPasswordsGUI/src/Train.h" name="Markopy/MarkovPasswordsGUI/src/Train.h">
+<area shape="rect" id="node1" title="training page for GUI" alt="" coords="149,5,415,52"/>
+<area shape="rect" id="node2" href="$_c_l_i_8cpp.html" title="CLI page." alt="" coords="5,100,271,147"/>
+<area shape="rect" id="node3" href="$_train_8cpp.html" title="training page for GUI" alt="" coords="295,100,560,147"/>
 </map>

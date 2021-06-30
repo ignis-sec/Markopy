@@ -1,0 +1,110 @@
+\hypertarget{cudamarkopy_8py_source}{}\doxysection{cudamarkopy.\+py}
+\label{cudamarkopy_8py_source}\index{Markopy/CudaMarkopy/src/CLI/cudamarkopy.py@{Markopy/CudaMarkopy/src/CLI/cudamarkopy.py}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cudamarkopy_8py_source_l00001}\mbox{\hyperlink{namespacecudamarkopy}{00001}} \textcolor{comment}{\#!/usr/bin/python3}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{keyword}{import} sys}
+\DoxyCodeLine{00014 \textcolor{keyword}{import} os}
+\DoxyCodeLine{00015 \textcolor{keyword}{from} importlib.util \textcolor{keyword}{import} spec\_from\_loader, module\_from\_spec}
+\DoxyCodeLine{00016 \textcolor{keyword}{from} importlib.machinery \textcolor{keyword}{import} SourceFileLoader, ExtensionFileLoader}
+\DoxyCodeLine{00017 \textcolor{keyword}{import} inspect }
+\DoxyCodeLine{00018 \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{\Hypertarget{cudamarkopy_8py_source_l00019}\mbox{\hyperlink{namespacecudamarkopy_aae68ce185d78d0c6ad1ad957aba12c31}{00019}}     spec = spec\_from\_loader(\textcolor{stringliteral}{"{}markopy"{}}, SourceFileLoader(\textcolor{stringliteral}{"{}markopy"{}}, os.path.abspath(\textcolor{stringliteral}{"{}markopy.py"{}})))}
+\DoxyCodeLine{\Hypertarget{cudamarkopy_8py_source_l00020}\mbox{\hyperlink{namespacecudamarkopy_a7a87c11435bfa8306dd873cf62933c5f}{00020}}     markopy = module\_from\_spec(spec)}
+\DoxyCodeLine{00021     spec.loader.exec\_module(markopy)}
+\DoxyCodeLine{00022 \textcolor{keywordflow}{except} (ModuleNotFoundError,FileNotFoundError) \textcolor{keyword}{as} e:}
+\DoxyCodeLine{00023     if(os.path.exists(\textcolor{stringliteral}{"{}../../../Markopy/src/CLI/markopy.py"{}})):}
+\DoxyCodeLine{00024         spec = spec\_from\_loader(\textcolor{stringliteral}{"{}markopy"{}}, SourceFileLoader(\textcolor{stringliteral}{"{}markopy"{}}, \textcolor{stringliteral}{"{}../../../Markopy/src/CLI/markopy.py"{}}))}
+\DoxyCodeLine{00025         markopy = module\_from\_spec(spec)}
+\DoxyCodeLine{00026         spec.loader.exec\_module(markopy)}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{00029     \textcolor{keyword}{from} cudammx \textcolor{keyword}{import} CudaModelMatrixCLI}
+\DoxyCodeLine{00030     \textcolor{keyword}{from} mmx \textcolor{keyword}{import} ModelMatrixCLI}
+\DoxyCodeLine{00031     \textcolor{keyword}{from} mp \textcolor{keyword}{import} MarkovPasswordsCLI}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033 \textcolor{keywordflow}{except} ModuleNotFoundError \textcolor{keyword}{as} e:}
+\DoxyCodeLine{00034     print(\textcolor{stringliteral}{"{}Working in development mode. Trying to load markopy.py from ../../../Markopy/"{}})}
+\DoxyCodeLine{00035     if(os.path.exists(\textcolor{stringliteral}{"{}../../../Markopy/src/CLI/cudammx.py"{}})):}
+\DoxyCodeLine{00036         sys.path.insert(1, \textcolor{stringliteral}{'../../../Markopy/src/CLI/'})}
+\DoxyCodeLine{00037         \textcolor{keyword}{from} cudammx \textcolor{keyword}{import} CudaModelMatrixCLI}
+\DoxyCodeLine{00038         \textcolor{keyword}{from} mmx \textcolor{keyword}{import} ModelMatrixCLI}
+\DoxyCodeLine{00039         \textcolor{keyword}{from} mp \textcolor{keyword}{import} MarkovPasswordsCLI}
+\DoxyCodeLine{00040     \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{raise} e }
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043 \textcolor{keyword}{from} termcolor \textcolor{keyword}{import} colored}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{\Hypertarget{cudamarkopy_8py_source_l00046}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i}{00046}} \textcolor{keyword}{class }\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i}{CudaMarkopyCLI}}(markopy.MarkopyCLI, \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i}{CudaModelMatrixCLI}}):}
+\DoxyCodeLine{00047     \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00048 \textcolor{stringliteral}{         @brief CUDA extension to MarkopyCLI. Adds CudaModelMatrixCLI to the interface.}}
+\DoxyCodeLine{00049 \textcolor{stringliteral}{         @belongsto Python::CudaMarkopy}}
+\DoxyCodeLine{00050 \textcolor{stringliteral}{         @extends Python::Markopy::MarkopyCLI}}
+\DoxyCodeLine{00051 \textcolor{stringliteral}{         @extends Python::CudaMarkopy::CudaModelMatrixCLI}}
+\DoxyCodeLine{00052 \textcolor{stringliteral}{    "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{cudamarkopy_8py_source_l00053}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_aa7d4a8f1c2eb2174c1b2c603c79d3271}{00053}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_aa7d4a8f1c2eb2174c1b2c603c79d3271}{\_\_init\_\_}}(self) -\/> None:}
+\DoxyCodeLine{00054         \textcolor{stringliteral}{"{}! @brief initialize CLI selector"{}}}
+\DoxyCodeLine{00055         markopy.MarkopyCLI.\_\_init\_\_(self,add\_help=\textcolor{keyword}{False})}
+\DoxyCodeLine{00056         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_abc1d9ff41df2198aa2ddee090fedc91f}{parser}}parser.epilog+=f\textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00057 \textcolor{stringliteral}{        \{\_\_file\_\_.split("{}/"{})[-\/1]\} -\/mt CUDA generate trained.mdl -\/n 500 -\/w output.txt}}
+\DoxyCodeLine{00058 \textcolor{stringliteral}{            Import trained.mdl, and generate 500 lines to output.txt}}
+\DoxyCodeLine{00059 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{\Hypertarget{cudamarkopy_8py_source_l00061}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_acb946950d9dbc1402ba081523d497dd3}{00061}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_acb946950d9dbc1402ba081523d497dd3}{help}}(self):}
+\DoxyCodeLine{00062         \textcolor{stringliteral}{"{}! @brief overload help string"{}}}
+\DoxyCodeLine{00063         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_abc1d9ff41df2198aa2ddee090fedc91f}{parser}}parser.print\_help = self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a80bd3c93aead66d0d7c264a7d387196f}{stub}}stub}
+\DoxyCodeLine{\Hypertarget{cudamarkopy_8py_source_l00064}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a148e1164edf37f4f8eee83b3e00186e2}{00064}}         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a360c48268fe72386c7c666da3a6304ef}{args}}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a148e1164edf37f4f8eee83b3e00186e2}{args}}args = self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_abc1d9ff41df2198aa2ddee090fedc91f}{parser}}parser.parse\_known\_args()[0]}
+\DoxyCodeLine{00065         if(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a360c48268fe72386c7c666da3a6304ef}{args}}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a148e1164edf37f4f8eee83b3e00186e2}{args}}args.model\_type!=\textcolor{stringliteral}{"{}\_MMX"{}}):}
+\DoxyCodeLine{00066             if(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a360c48268fe72386c7c666da3a6304ef}{args}}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a148e1164edf37f4f8eee83b3e00186e2}{args}}args.model\_type==\textcolor{stringliteral}{"{}MP"{}}):}
+\DoxyCodeLine{00067                 mp = MarkovPasswordsCLI()}
+\DoxyCodeLine{00068                 mp.add\_arguments()}
+\DoxyCodeLine{00069                 mp.parser.print\_help()}
+\DoxyCodeLine{00070             elif(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a360c48268fe72386c7c666da3a6304ef}{args}}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a148e1164edf37f4f8eee83b3e00186e2}{args}}args.model\_type==\textcolor{stringliteral}{"{}MMX"{}}):}
+\DoxyCodeLine{00071                 mp = ModelMatrixCLI()}
+\DoxyCodeLine{00072                 mp.add\_arguments()}
+\DoxyCodeLine{00073                 mp.parser.print\_help()}
+\DoxyCodeLine{00074             elif(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a360c48268fe72386c7c666da3a6304ef}{args}}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a148e1164edf37f4f8eee83b3e00186e2}{args}}args.model\_type == \textcolor{stringliteral}{"{}CUDA"{}}):}
+\DoxyCodeLine{00075                 mp = \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i}{CudaModelMatrixCLI}}()}
+\DoxyCodeLine{00076                 mp.add\_arguments()}
+\DoxyCodeLine{00077                 mp.parser.print\_help()}
+\DoxyCodeLine{00078         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00079             print(colored(\textcolor{stringliteral}{"{}Model Mode selection choices:"{}}, \textcolor{stringliteral}{"{}green"{}}))}
+\DoxyCodeLine{00080             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a54cb76c3f1109080b94237738542297e}{print\_help}}print\_help()}
+\DoxyCodeLine{00081             print(colored(\textcolor{stringliteral}{"{}Following are applicable for -\/mt MP mode:"{}}, \textcolor{stringliteral}{"{}green"{}}))}
+\DoxyCodeLine{00082             mp = MarkovPasswordsCLI()}
+\DoxyCodeLine{00083             mp.add\_arguments()}
+\DoxyCodeLine{00084             mp.parser.print\_help()}
+\DoxyCodeLine{00085             print(colored(\textcolor{stringliteral}{"{}Following are applicable for -\/mt MMX mode:"{}}, \textcolor{stringliteral}{"{}green"{}}))}
+\DoxyCodeLine{00086             mp = ModelMatrixCLI()}
+\DoxyCodeLine{00087             mp.add\_arguments()}
+\DoxyCodeLine{00088             mp.parser.print\_help()}
+\DoxyCodeLine{00089             print(colored(\textcolor{stringliteral}{"{}Following are applicable for -\/mt CUDA mode:"{}}, \textcolor{stringliteral}{"{}green"{}}))}
+\DoxyCodeLine{00090             mp = \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i}{CudaModelMatrixCLI}}()}
+\DoxyCodeLine{00091             mp.add\_arguments()}
+\DoxyCodeLine{00092             mp.parser.print\_help()}
+\DoxyCodeLine{00093         exit()}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{\Hypertarget{cudamarkopy_8py_source_l00095}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a222b7d4b86acbdccc103281f80d27f68}{00095}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a222b7d4b86acbdccc103281f80d27f68}{parse}}(self):}
+\DoxyCodeLine{00096         markopy.MarkopyCLI.parse(self)}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{\Hypertarget{cudamarkopy_8py_source_l00098}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_ad375f03e2f0f22edb19b25d29ed7d54c}{00098}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_ad375f03e2f0f22edb19b25d29ed7d54c}{parse\_fail}}(self):}
+\DoxyCodeLine{00099         \textcolor{stringliteral}{"{}! @brief Not a valid model type"{}}}
+\DoxyCodeLine{00100         if(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a360c48268fe72386c7c666da3a6304ef}{args}}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a148e1164edf37f4f8eee83b3e00186e2}{args}}args.model\_type == \textcolor{stringliteral}{"{}CUDA"{}}):}
+\DoxyCodeLine{\Hypertarget{cudamarkopy_8py_source_l00101}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a96aa5e242da89678a491acf5ac548c1c}{00101}}             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a5ee8e93b228b09d092d2807c57a66a1b}{cli}}\mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a96aa5e242da89678a491acf5ac548c1c}{cli}}cli = \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i}{CudaModelMatrixCLI}}()}
+\DoxyCodeLine{00102         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00103             markopy.MarkopyCLI.parse\_fail(self)}
+\DoxyCodeLine{00104         }
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{cudamarkopy_8py_source_l00107}\mbox{\hyperlink{namespacecudamarkopy_a5d14b257d212c9335b108ffa568983fb}{00107}}     mp = CudaMarkopyCLI()}
+\DoxyCodeLine{00108     \textcolor{comment}{\#mp = markopy\_cli.MarkopyCLI()}}
+\DoxyCodeLine{00109     mp.parse()}
+\DoxyCodeLine{00110     mp.process()}
+
+\end{DoxyCode}

@@ -1,0 +1,2763 @@
+\hypertarget{class_python_1_1_markopy_1_1_model_matrix_c_l_i}{}\doxysection{Python.\+Markopy.\+Model\+Matrix\+CLI Class Reference}
+\label{class_python_1_1_markopy_1_1_model_matrix_c_l_i}\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+
+
+Extension of Python.\+Markopy.\+Base.\+Base\+CLI for \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+API\+::\+Model\+Matrix}}.  
+
+
+
+
+Inheritance diagram for Python.\+Markopy.\+Model\+Matrix\+CLI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_python_1_1_markopy_1_1_model_matrix_c_l_i__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Python.\+Markopy.\+Model\+Matrix\+CLI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_python_1_1_markopy_1_1_model_matrix_c_l_i__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_ad35db5fba1064c34f86c56ae634b51ab}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, bool add\+\_\+help=True)
+\begin{DoxyCompactList}\small\item\em initialize base CLI \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a8a335e71b4f9ff50511ff1d646f30969}{add\+\_\+arguments}} (self)
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_aedd02a1510ad98bec9b755686fbcec23}{init\+\_\+post\+\_\+arguments}} (self)
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_ab367a1505f21191f550087707288b575}{help}} (self)
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a290240acf366fc65cf0639698dbf662b}{parse}} (self)
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a9ad725de8fe9de68dc7c4f4aece8bb83}{parse\+\_\+arguments}} (self)
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a70c7dc0679d8e37e1b5d6c65405eeedb}{import\+\_\+model}} (self, str filename)
+\begin{DoxyCompactList}\small\item\em Import a model file. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a4d0f291accfd276eb967e1121124274b}{train}} (self, str dataset, str seperator, str output, bool output\+\_\+forced=False, bool bulk=False)
+\begin{DoxyCompactList}\small\item\em Train a model via CLI parameters. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_ad8e1d099c1958e06177c034d1d2ed52e}{export}} (self, str filename)
+\begin{DoxyCompactList}\small\item\em Export model to a file. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_ad2823b484ee975432aebb4e50875f8a6}{generate}} (self, str wordlist, bool bulk=False)
+\begin{DoxyCompactList}\small\item\em Generate strings from the model. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_aab389488e1f530cf444d9d2ef59a6998}{process}} (self)
+\begin{DoxyCompactList}\small\item\em Process parameters for operation. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_ae42271d3f464fd17b5e91a95b3cffd27}{Fast\+Random\+Walk}} (int count, str wordlist, int minlen, int maxlen)
+\item 
+int \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a3bb4d49f1fbc10e1649dc9bf73529520}{Fast\+Random\+Walk}} (unsigned long int n, const char $\ast$wordlist\+File\+Name, int min\+Len=6, int max\+Len=12, int threads=20, bool b\+File\+IO=true)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} walk on the Matrix-\/reduced \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{Construct\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Construct the related Matrix data for the model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}{Dump\+JSON}} ()
+\begin{DoxyCompactList}\small\item\em Debug function to dump the model to a JSON file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{Import}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Open a file to import with filename, and call bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Model\+::\+Import}} with std\+::ifstream. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}} (std\+::ifstream $\ast$)
+\begin{DoxyCompactList}\small\item\em Import a file to construct the model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}{Train}} (const char $\ast$dataset\+File\+Name, char delimiter, int threads)
+\begin{DoxyCompactList}\small\item\em Train the model with the dataset file. \end{DoxyCompactList}\item 
+std\+::ifstream $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ac3fb665ee48937ca845d930e72e07917}{Open\+Dataset\+File}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Open dataset file and return the ifstream pointer. \end{DoxyCompactList}\item 
+std\+::ofstream $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660}{Save}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Export model to file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Generate}} (unsigned long int n, const char $\ast$wordlist\+File\+Name, int min\+Len=6, int max\+Len=12, int threads=20)
+\begin{DoxyCompactList}\small\item\em Call \mbox{\hyperlink{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}{Markov\+::\+Model\+::\+Random\+Walk}} n times, and collect output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ad490665eae3beb022afc7e2491583d0a}{Buff}} (const char $\ast$str, double multiplier, bool b\+Dont\+Adjust\+Self\+Loops=true, bool b\+Dont\+Adjust\+Extended\+Loops=false)
+\begin{DoxyCompactList}\small\item\em Buff expression of some characters in the model. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}{Random\+Walk}} (\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{Markov\+::\+Random\+::\+Random\+Engine}} $\ast$random\+Engine, int min\+Setting, int max\+Setting, char $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Do a random walk on this model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_model_ad252913f83fa3eb14cc3f9f92c5ee37a}{Adjust\+Edge}} (const char $\ast$payload, long int occurrence)
+\begin{DoxyCompactList}\small\item\em Adjust the model with a single string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}} (std\+::ofstream $\ast$)
+\begin{DoxyCompactList}\small\item\em Export a file of the model. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{Export}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Open a file to export with filename, and call bool Model\+::\+Export with std\+::ofstream. \end{DoxyCompactList}\item 
+Node$<$ char $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a0e53104e4ec665f005529f51a80c857d}{Starter\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Return starter Node. \end{DoxyCompactList}\item 
+std\+::vector$<$ Edge$<$ char $>$ $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a2e08608905d7b042627ea844b08045fe}{Edges}} ()
+\begin{DoxyCompactList}\small\item\em Return a vector of all the edges in the model. \end{DoxyCompactList}\item 
+std\+::map$<$ char, Node$<$ char $>$ $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a71f6df805e340ce96e9dc4ee4ebc6537}{Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Return starter Node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_model_adf22db37833ae6a4c707b446bef4359d}{Optimize\+Edge\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Sort edges of all nodes in the model ordered by edge weights. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a14f0a0280b7cc4a16ff018eeefdf1020}{check\+\_\+import\+\_\+path}} (str filename)
+\begin{DoxyCompactList}\small\item\em check import path for validity \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a2ec72a3621f55a9b4e995ade128e1b60}{check\+\_\+corpus\+\_\+path}} (str filename)
+\begin{DoxyCompactList}\small\item\em check import path for validity \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_abd2f15b87ebfedc510ad7e95375f1a5c}{check\+\_\+export\+\_\+path}} (str filename)
+\begin{DoxyCompactList}\small\item\em check import path for validity \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a6a74b627a264dc994281335ab354ae13}{file\+IO}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_abc1d9ff41df2198aa2ddee090fedc91f}{parser}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a54cb76c3f1109080b94237738542297e}{print\+\_\+help}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a09a6793164aeccc4875c25151ca2ab14}{Fast\+Random\+Walk}} (unsigned long int n, std\+::ofstream $\ast$wordlist, int min\+Len=6, int max\+Len=12, int threads=20, bool b\+File\+IO=true)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_markov_1_1_random}{Random}} walk on the Matrix-\/reduced \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{Fast\+Random\+Walk\+Partition}} (std\+::mutex $\ast$mlock, std\+::ofstream $\ast$wordlist, unsigned long int n, int min\+Len, int max\+Len, bool b\+File\+IO, int threads)
+\begin{DoxyCompactList}\small\item\em A single partition of Fast\+Random\+Walk event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}{Fast\+Random\+Walk\+Thread}} (std\+::mutex $\ast$mlock, std\+::ofstream $\ast$wordlist, unsigned long int n, int min\+Len, int max\+Len, int id, bool b\+File\+IO)
+\begin{DoxyCompactList}\small\item\em A single thread of a single partition of Fast\+Random\+Walk. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a0f95257e1344225233ab49602cd9551c}{Deallocate\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Deallocate matrix and make it ready for re-\/construction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edge\+Matrix}}
+\begin{DoxyCompactList}\small\item\em 2-\/D Character array for the edge Matrix (The characters of Nodes) \end{DoxyCompactList}\item 
+long int $\ast$$\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{value\+Matrix}}
+\begin{DoxyCompactList}\small\item\em 2-\/d Integer array for the value Matrix (For the weights of Edges) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrix\+Size}}
+\begin{DoxyCompactList}\small\item\em to hold Matrix size \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrix\+Index}}
+\begin{DoxyCompactList}\small\item\em to hold the Matrix index (To hold the orders of 2-\/D arrays\textquotesingle{}) \end{DoxyCompactList}\item 
+long int $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{total\+Edge\+Weights}}
+\begin{DoxyCompactList}\small\item\em Array of the Total \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} Weights. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}{ready}}
+\begin{DoxyCompactList}\small\item\em True when matrix is constructed. False if not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a734d179536d25323ae0b421c48f61716}{\+\_\+generate}} (self, str wordlist)
+\begin{DoxyCompactList}\small\item\em wrapper for generate function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a5f51b0fdb75101b797f38b08da84848e}{Train\+Thread}} (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}{Markov\+::\+API\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler}} $\ast$listhandler, char delimiter)
+\begin{DoxyCompactList}\small\item\em A single thread invoked by the Train function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756}{Generate\+Thread}} (std\+::mutex $\ast$output\+Lock, unsigned long int n, std\+::ofstream $\ast$wordlist, int min\+Len, int max\+Len)
+\begin{DoxyCompactList}\small\item\em A single thread invoked by the Generate function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ifstream $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}{dataset\+File}}
+\item 
+std\+::ofstream $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_af5f012dcc495dbe769e663d6cb161d6a}{model\+Savefile}}
+\begin{DoxyCompactList}\small\item\em Dataset file input of our system ~\newline
+ \end{DoxyCompactList}\item 
+std\+::ofstream $\ast$ \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ac05e60de64e866027410d4fa1cd03248}{output\+File}}
+\begin{DoxyCompactList}\small\item\em File to save model of our system ~\newline
+ \end{DoxyCompactList}\item 
+std\+::map$<$ char, Node$<$ char $>$ $\ast$ $>$ \mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}
+\begin{DoxyCompactList}\small\item\em Map Left\+Node is the Nodes Node\+Value Map Right\+Node is the node pointer. \end{DoxyCompactList}\item 
+Node$<$ char $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starter\+Node}}
+\begin{DoxyCompactList}\small\item\em Starter Node of this model. \end{DoxyCompactList}\item 
+std\+::vector$<$ Edge$<$ char $>$ $\ast$ $>$ \mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}
+\begin{DoxyCompactList}\small\item\em A list of all edges in this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Extension of Python.\+Markopy.\+Base.\+Base\+CLI for \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov\+::\+API\+::\+Model\+Matrix}}. 
+
+adds -\/st/--stdout arguement to the command line. 
+
+Definition at line \mbox{\hyperlink{mmx_8py_source_l00018}{18}} of file \mbox{\hyperlink{mmx_8py_source}{mmx.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_model_matrix_c_l_i_ad35db5fba1064c34f86c56ae634b51ab}\label{class_python_1_1_markopy_1_1_model_matrix_c_l_i_ad35db5fba1064c34f86c56ae634b51ab}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Model\+Matrix\+CLI.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool}]{add\+\_\+help = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+initialize base CLI 
+
+
+\begin{DoxyParams}{Parameters}
+{\em add\+\_\+help} & decide to overload the help function or not \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a7cac2b153ec149a504dd947f7a4a6e4c}{Python.\+Markopy.\+Base\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{mmx_8py_source_l00027}{27}} of file \mbox{\hyperlink{mmx_8py_source}{mmx.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027     \textcolor{keyword}{def }\_\_init\_\_(self, add\_help:bool=\textcolor{keyword}{True}):}
+\DoxyCodeLine{00028         \textcolor{stringliteral}{"{}! @brief initialize model with Markov::API::ModelMatrix"{}}}
+\DoxyCodeLine{00029         super().\_\_init\_\_(add\_help)}
+\DoxyCodeLine{00030         self.model = markopy.ModelMatrix()}
+\DoxyCodeLine{00031 }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a734d179536d25323ae0b421c48f61716}\label{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a734d179536d25323ae0b421c48f61716}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!\_generate@{\_generate}}
+\index{\_generate@{\_generate}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{\_generate()}{\_generate()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Model\+Matrix\+CLI.\+\_\+generate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{wordlist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+wrapper for generate function. 
+
+This can be overloaded by other models 
+\begin{DoxyParams}{Parameters}
+{\em wordlist} & filename to generate to \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_acbe1962e0ebdc177414fc4eb7f70be69}{Python.\+Markopy.\+Base\+CLI}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i_acfaa19f0478a88a143282431aa89786d}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{mmx_8py_source_l00040}{40}} of file \mbox{\hyperlink{mmx_8py_source}{mmx.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040     \textcolor{keyword}{def }\_generate(self, wordlist : str, ):}
+\DoxyCodeLine{00041         self.model.FastRandomWalk(int(self.args.count), wordlist, int(self.args.min), int(self.args.max), int(self.args.threads), self.fileIO)}
+\DoxyCodeLine{00042 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudamarkopy_8py_source_l00064}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00075}{Python.\+Markopy.\+Base\+CLI.\+args}}, \mbox{\hyperlink{markopy_8py_source_l00075}{Python.\+Markopy.\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{mm_8py_source_l00048}{Python.\+Markopy.\+Model\+Matrix.\+Fast\+Random\+Walk()}}, \mbox{\hyperlink{mmx_8py_source_l00038}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+file\+IO}}, \mbox{\hyperlink{cudammx_8py_source_l00065}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{base_8py_source_l00040}{Python.\+Markopy.\+Base\+CLI.\+model}}, \mbox{\hyperlink{mmx_8py_source_l00030}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{mp_8py_source_l00029}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+model}}, and \mbox{\hyperlink{_markov_passwords_g_u_i_8cpp_source_l00042}{Markov\+::\+GUI\+::\+Markov\+Passwords\+GUI.\+model()}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00145}{Python.\+Markopy.\+Base\+CLI.\+generate()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a734d179536d25323ae0b421c48f61716_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a734d179536d25323ae0b421c48f61716_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a8a335e71b4f9ff50511ff1d646f30969}\label{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a8a335e71b4f9ff50511ff1d646f30969}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!add\_arguments@{add\_arguments}}
+\index{add\_arguments@{add\_arguments}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{add\_arguments()}{add\_arguments()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Model\+Matrix\+CLI.\+add\+\_\+arguments (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i_a12cdb40dd92b92141b9ecb0a30b5d943}{Python.\+Markopy.\+Abstract\+Generation\+Model\+CLI}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a8f169bd88086d1711dd06c974e87c69b}{Python.\+Markopy.\+Markopy\+CLI}}, and \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i_abde98354ae5895627039bf702a02ecaa}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{mmx_8py_source_l00032}{32}} of file \mbox{\hyperlink{mmx_8py_source}{mmx.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032     \textcolor{keyword}{def }add\_arguments(self):}
+\DoxyCodeLine{00033         super().add\_arguments()}
+\DoxyCodeLine{00034         self.parser.add\_argument(\textcolor{stringliteral}{"{}-\/st"{}}, \textcolor{stringliteral}{"{}-\/-\/stdout"{}}, action=\textcolor{stringliteral}{"{}store\_true"{}}, help=\textcolor{stringliteral}{"{}Stdout mode"{}})}
+\DoxyCodeLine{00035     }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{base_8py_source_l00025}{Python.\+Markopy.\+Base\+CLI.\+parser}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00055}{Python.\+Markopy.\+Base\+CLI.\+parse()}}, and \mbox{\hyperlink{markopy_8py_source_l00126}{Python.\+Markopy.\+Markopy\+CLI.\+parse()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a8a335e71b4f9ff50511ff1d646f30969_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_model_ad252913f83fa3eb14cc3f9f92c5ee37a}\label{class_markov_1_1_model_ad252913f83fa3eb14cc3f9f92c5ee37a}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!AdjustEdge@{AdjustEdge}}
+\index{AdjustEdge@{AdjustEdge}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{AdjustEdge()}{AdjustEdge()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Adjust\+Edge (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_node_storage_type}{Node\+Storage\+Type}} $\ast$}]{payload,  }\item[{long int}]{occurrence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Adjust the model with a single string. 
+
+Start from the starter node, and for each character, Adjust\+Edge the edge Edge\+Weight from current node to the next, until NULL character is reached.
+
+Then, update the edge Edge\+Weight from current node, to the terminator node.
+
+This function is used for training purposes, as it can be used for adjusting the model with each line of the corpus file.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Create an empty model and train it with string\+: \char`\"{}testdata\char`\"{} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} test[] = \textcolor{stringliteral}{"{}testdata"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}}.AdjustEdge(test, 15); }
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ String that is passed from the training, and will be used to Adjust\+Edge the model with \\
+\hline
+{\em occurrence} & -\/ Occurrence of this string. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00109}{109}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00337                                                                                                  \{}
+\DoxyCodeLine{00338     \mbox{\hyperlink{class_node_storage_type}{NodeStorageType}} p = payload[0];}
+\DoxyCodeLine{00339     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* curnode = this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}};}
+\DoxyCodeLine{00340     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<NodeStorageType>}}* e;}
+\DoxyCodeLine{00341     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00342 }
+\DoxyCodeLine{00343     \textcolor{keywordflow}{if} (p == 0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00344     \textcolor{keywordflow}{while} (p != 0) \{}
+\DoxyCodeLine{00345         e = curnode-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(p);}
+\DoxyCodeLine{00346         \textcolor{keywordflow}{if} (e == NULL) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00347         e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(occurrence);}
+\DoxyCodeLine{00348         curnode = e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}();}
+\DoxyCodeLine{00349         p = payload[++i];}
+\DoxyCodeLine{00350     \}}
+\DoxyCodeLine{00351 }
+\DoxyCodeLine{00352     e = curnode-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(\textcolor{stringliteral}{'\(\backslash\)xff'});}
+\DoxyCodeLine{00353     e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(occurrence);}
+\DoxyCodeLine{00354     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00355 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_ad490665eae3beb022afc7e2491583d0a}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_ad490665eae3beb022afc7e2491583d0a}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!Buff@{Buff}}
+\index{Buff@{Buff}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{Buff()}{Buff()}}
+{\footnotesize\ttfamily void Markov\+::\+API\+::\+Markov\+Passwords\+::\+Buff (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{double}]{multiplier,  }\item[{bool}]{b\+Dont\+Adjust\+Self\+Loops = {\ttfamily true},  }\item[{bool}]{b\+Dont\+Adjust\+Extended\+Loops = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Buff expression of some characters in the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & A string containing all the characters to be buffed \\
+\hline
+{\em multiplier} & A constant value to buff the nodes with. \\
+\hline
+{\em b\+Dont\+Adjust\+Self\+Edges} & Do not adjust weights if target node is same as source node \\
+\hline
+{\em b\+Dont\+Adjust\+Extended\+Loops} & Do not adjust if both source and target nodes are in first parameter \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8cpp_source_l00153}{153}} of file \mbox{\hyperlink{markov_passwords_8cpp_source}{markov\+Passwords.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00153                                                                                                                                \{}
+\DoxyCodeLine{00154     std::string buffstr(str);}
+\DoxyCodeLine{00155     std::map< char, Node< char > * > *\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}};}
+\DoxyCodeLine{00156     std::map< char, Edge< char > * > *\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}};}
+\DoxyCodeLine{00157     \mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}} = this-\/>\mbox{\hyperlink{class_markov_1_1_model_a71f6df805e340ce96e9dc4ee4ebc6537}{Nodes}}();}
+\DoxyCodeLine{00158     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{00159     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \textcolor{keyword}{const}\& [repr, node] : *\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}})\{}
+\DoxyCodeLine{00160         \mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}} = node-\/>Edges();}
+\DoxyCodeLine{00161         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \textcolor{keyword}{const}\& [targetrepr, edge] : *\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}})\{}
+\DoxyCodeLine{00162             \textcolor{keywordflow}{if}(buffstr.find(targetrepr)!= std::string::npos)\{}
+\DoxyCodeLine{00163                 \textcolor{keywordflow}{if}(bDontAdjustSelfLoops \&\& repr==targetrepr) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00164                 \textcolor{keywordflow}{if}(bDontAdjustExtendedLoops)\{}
+\DoxyCodeLine{00165                     \textcolor{keywordflow}{if}(buffstr.find(repr)!= std::string::npos)\{}
+\DoxyCodeLine{00166                         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00167                     \}}
+\DoxyCodeLine{00168                 \}}
+\DoxyCodeLine{00169                 \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} weight = edge-\/>EdgeWeight();}
+\DoxyCodeLine{00170                 weight = weight*multiplier;     }
+\DoxyCodeLine{00171                 edge-\/>AdjustEdge(weight);}
+\DoxyCodeLine{00172             \}}
+\DoxyCodeLine{00173 }
+\DoxyCodeLine{00174         \}}
+\DoxyCodeLine{00175         i++;}
+\DoxyCodeLine{00176     \}}
+\DoxyCodeLine{00177 }
+\DoxyCodeLine{00178     this-\/>\mbox{\hyperlink{class_markov_1_1_model_adf22db37833ae6a4c707b446bef4359d}{OptimizeEdgeOrder}}();}
+\DoxyCodeLine{00179 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{edge_8h_source_l00137}{Markov\+::\+Edge$<$ Node\+Storage\+Type $>$\+::\+Adjust\+Edge()}}, \mbox{\hyperlink{node_8h_source_l00272}{Markov\+::\+Node$<$ storage\+Type $>$\+::\+Edges()}}, \mbox{\hyperlink{edge_8h_source_l00160}{Markov\+::\+Edge$<$ Node\+Storage\+Type $>$\+::\+Edge\+Weight()}}, \mbox{\hyperlink{model_8h_source_l00181}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Nodes()}}, and \mbox{\hyperlink{model_8h_source_l00265}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Optimize\+Edge\+Order()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_markov_a_p_i_c_l_i_2src_2main_8cpp_source_l00023}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_ad490665eae3beb022afc7e2491583d0a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_ad490665eae3beb022afc7e2491583d0a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a2ec72a3621f55a9b4e995ade128e1b60}\label{class_python_1_1_markopy_1_1_base_c_l_i_a2ec72a3621f55a9b4e995ade128e1b60}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!check\_corpus\_path@{check\_corpus\_path}}
+\index{check\_corpus\_path@{check\_corpus\_path}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{check\_corpus\_path()}{check\_corpus\_path()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+check\+\_\+corpus\+\_\+path (\begin{DoxyParamCaption}\item[{str}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
+
+
+
+check import path for validity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename to check \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00181}{181}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181     \textcolor{keyword}{def }check\_corpus\_path(filename : str):}
+\DoxyCodeLine{00182         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00183 \textcolor{stringliteral}{        @brief check import path for validity}}
+\DoxyCodeLine{00184 \textcolor{stringliteral}{        @param filename filename to check}}
+\DoxyCodeLine{00185 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00186 }
+\DoxyCodeLine{00187         if(\textcolor{keywordflow}{not} os.path.isfile(filename)):}
+\DoxyCodeLine{00188             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00189         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00190 }
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00094}{Python.\+Markopy.\+Base\+CLI.\+train()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a2ec72a3621f55a9b4e995ade128e1b60_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_abd2f15b87ebfedc510ad7e95375f1a5c}\label{class_python_1_1_markopy_1_1_base_c_l_i_abd2f15b87ebfedc510ad7e95375f1a5c}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!check\_export\_path@{check\_export\_path}}
+\index{check\_export\_path@{check\_export\_path}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{check\_export\_path()}{check\_export\_path()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+check\+\_\+export\+\_\+path (\begin{DoxyParamCaption}\item[{str}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
+
+
+
+check import path for validity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename to check \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00192}{192}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00192     \textcolor{keyword}{def }check\_export\_path(filename : str):}
+\DoxyCodeLine{00193         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00194 \textcolor{stringliteral}{        @brief check import path for validity}}
+\DoxyCodeLine{00195 \textcolor{stringliteral}{        @param filename filename to check}}
+\DoxyCodeLine{00196 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00197 }
+\DoxyCodeLine{00198         if(filename \textcolor{keywordflow}{and} os.path.isfile(filename)):}
+\DoxyCodeLine{00199             \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00200         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00201 }
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00094}{Python.\+Markopy.\+Base\+CLI.\+train()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_abd2f15b87ebfedc510ad7e95375f1a5c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a14f0a0280b7cc4a16ff018eeefdf1020}\label{class_python_1_1_markopy_1_1_base_c_l_i_a14f0a0280b7cc4a16ff018eeefdf1020}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!check\_import\_path@{check\_import\_path}}
+\index{check\_import\_path@{check\_import\_path}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{check\_import\_path()}{check\_import\_path()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+check\+\_\+import\+\_\+path (\begin{DoxyParamCaption}\item[{str}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
+
+
+
+check import path for validity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename to check \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00169}{169}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169     \textcolor{keyword}{def }check\_import\_path(filename : str):}
+\DoxyCodeLine{00170         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00171 \textcolor{stringliteral}{        @brief check import path for validity}}
+\DoxyCodeLine{00172 \textcolor{stringliteral}{        @param filename filename to check}}
+\DoxyCodeLine{00173 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00174         }
+\DoxyCodeLine{00175         if(\textcolor{keywordflow}{not} os.path.isfile(filename)):}
+\DoxyCodeLine{00176             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00177         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00178             \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00179 }
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00077}{Python.\+Markopy.\+Base\+CLI.\+import\+\_\+model()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a14f0a0280b7cc4a16ff018eeefdf1020_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}\label{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!ConstructMatrix@{ConstructMatrix}}
+\index{ConstructMatrix@{ConstructMatrix}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{ConstructMatrix()}{ConstructMatrix()}}
+{\footnotesize\ttfamily bool Markov\+::\+API\+::\+Model\+Matrix\+::\+Construct\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Construct the related Matrix data for the model. 
+
+This operation can be used after importing/training to allocate and populate the matrix content.
+
+this will initialize\+: char$\ast$$\ast$ edge\+Matrix -\/$>$ a 2D array of mapping left and right connections of each edge. long int $\ast$$\ast$value\+Matrix -\/$>$ a 2D array representing the edge weights. int matrix\+Size -\/$>$ Size of the matrix, aka total number of nodes. char$\ast$ matrix\+Index -\/$>$ order of nodes in the model long int $\ast$total\+Edge\+Weights -\/$>$ total edge weights of each Node.
+
+\begin{DoxyReturn}{Returns}
+True if constructed. False if already construced. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031                                           \{}
+\DoxyCodeLine{00032     \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}{ready}}) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00033     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}} = this-\/>\mbox{\hyperlink{class_markov_1_1_model_a0e53104e4ec665f005529f51a80c857d}{StarterNode}}()-\/>\mbox{\hyperlink{class_markov_1_1_node_ad2ac18d9abd220dfd90b9df6f92c5d59}{edgesV}}.size() + 2;}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}} = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00036     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}} = \textcolor{keyword}{new} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}} = \textcolor{keyword}{new} \textcolor{keywordtype}{char}*[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00039     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00040         this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00041     \}}
+\DoxyCodeLine{00042     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}} = \textcolor{keyword}{new} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}*[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00043     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00044         this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
+\DoxyCodeLine{00045     \}}
+\DoxyCodeLine{00046     std::map< char, Node< char > * > *\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}};}
+\DoxyCodeLine{00047     \mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}} = this-\/>\mbox{\hyperlink{class_markov_1_1_model_a71f6df805e340ce96e9dc4ee4ebc6537}{Nodes}}();}
+\DoxyCodeLine{00048     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{00049     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \textcolor{keyword}{const}\& [repr, node] : *\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}})\{}
+\DoxyCodeLine{00050         \textcolor{keywordflow}{if}(repr!=0) this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i] = repr;}
+\DoxyCodeLine{00051         \textcolor{keywordflow}{else} this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i] = 199;}
+\DoxyCodeLine{00052         this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}}[i] = node-\/>TotalEdgeWeights();}
+\DoxyCodeLine{00053         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};j++)\{}
+\DoxyCodeLine{00054             \textcolor{keywordtype}{char} val = node-\/>NodeValue();}
+\DoxyCodeLine{00055             \textcolor{keywordflow}{if}(val < 0)\{}
+\DoxyCodeLine{00056                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0;k<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};k++)\{}
+\DoxyCodeLine{00057                     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i][k] = 0;}
+\DoxyCodeLine{00058                     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][k] = 255;}
+\DoxyCodeLine{00059                 \}}
+\DoxyCodeLine{00060                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00061             \}}
+\DoxyCodeLine{00062             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(node-\/>NodeValue() == 0 \&\& j>(this-\/>matrixSize-\/3))\{}
+\DoxyCodeLine{00063                 this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i][j] = 0;}
+\DoxyCodeLine{00064                 this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j] = 255;}
+\DoxyCodeLine{00065             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(j==(this-\/>matrixSize-\/1)) \{}
+\DoxyCodeLine{00066                 this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i][j] = 0;}
+\DoxyCodeLine{00067                 this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j] = 255;}
+\DoxyCodeLine{00068             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00069                 this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i][j] = node-\/>edgesV[j]-\/>EdgeWeight();}
+\DoxyCodeLine{00070                 this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j]  = node-\/>edgesV[j]-\/>RightNode()-\/>NodeValue();}
+\DoxyCodeLine{00071             \}}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073         \}}
+\DoxyCodeLine{00074         i++;}
+\DoxyCodeLine{00075     \}}
+\DoxyCodeLine{00076     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}{ready}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00077     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00078     \textcolor{comment}{//this-\/>DumpJSON();}}
+\DoxyCodeLine{00079 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8h_source_l00175}{Markov\+::\+API\+::\+Model\+Matrix\+::edge\+Matrix}}, \mbox{\hyperlink{edge_8h_source_l00160}{Markov\+::\+Edge$<$ Node\+Storage\+Type $>$\+::\+Edge\+Weight()}}, \mbox{\hyperlink{model_matrix_8h_source_l00190}{Markov\+::\+API\+::\+Model\+Matrix\+::matrix\+Index}}, \mbox{\hyperlink{model_matrix_8h_source_l00185}{Markov\+::\+API\+::\+Model\+Matrix\+::matrix\+Size}}, \mbox{\hyperlink{model_8h_source_l00181}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Nodes()}}, \mbox{\hyperlink{node_8h_source_l00215}{Markov\+::\+Node$<$ storage\+Type $>$\+::\+Node\+Value()}}, \mbox{\hyperlink{model_matrix_8h_source_l00200}{Markov\+::\+API\+::\+Model\+Matrix\+::ready}}, \mbox{\hyperlink{edge_8h_source_l00170}{Markov\+::\+Edge$<$ Node\+Storage\+Type $>$\+::\+Right\+Node()}}, \mbox{\hyperlink{model_8h_source_l00171}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Starter\+Node()}}, \mbox{\hyperlink{model_matrix_8h_source_l00195}{Markov\+::\+API\+::\+Model\+Matrix\+::total\+Edge\+Weights}}, \mbox{\hyperlink{node_8h_source_l00277}{Markov\+::\+Node$<$ storage\+Type $>$\+::\+Total\+Edge\+Weights()}}, and \mbox{\hyperlink{model_matrix_8h_source_l00180}{Markov\+::\+API\+::\+Model\+Matrix\+::value\+Matrix}}.
+
+
+
+Referenced by \mbox{\hyperlink{cuda_markopy_8cu_source_l00020}{Markov\+::\+Markopy\+::\+CUDA\+::\+BOOST\+\_\+\+PYTHON\+\_\+\+MODULE()}}, \mbox{\hyperlink{markopy_8cpp_source_l00037}{Markov\+::\+Markopy\+::\+BOOST\+\_\+\+PYTHON\+\_\+\+MODULE()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00019}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Import()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00025}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Train()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a0f95257e1344225233ab49602cd9551c}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a0f95257e1344225233ab49602cd9551c}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!DeallocateMatrix@{DeallocateMatrix}}
+\index{DeallocateMatrix@{DeallocateMatrix}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{DeallocateMatrix()}{DeallocateMatrix()}}
+{\footnotesize\ttfamily bool Markov\+::\+API\+::\+Model\+Matrix\+::\+Deallocate\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Deallocate matrix and make it ready for re-\/construction. 
+
+\begin{DoxyReturn}{Returns}
+True if deallocated. False if matrix was not initialized 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081                                            \{}
+\DoxyCodeLine{00082     \textcolor{keywordflow}{if}(!this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}{ready}}) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00083     \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}};}
+\DoxyCodeLine{00084     \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}};}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00087         \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i];}
+\DoxyCodeLine{00088     \}}
+\DoxyCodeLine{00089     \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}};}
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00091     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00092         \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i];}
+\DoxyCodeLine{00093     \}}
+\DoxyCodeLine{00094     \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}};}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096     this-\/>matrixSize = -\/1;}
+\DoxyCodeLine{00097     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}{ready}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00098     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00099 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8h_source_l00175}{Markov\+::\+API\+::\+Model\+Matrix\+::edge\+Matrix}}, \mbox{\hyperlink{model_matrix_8h_source_l00190}{Markov\+::\+API\+::\+Model\+Matrix\+::matrix\+Index}}, \mbox{\hyperlink{model_matrix_8h_source_l00185}{Markov\+::\+API\+::\+Model\+Matrix\+::matrix\+Size}}, \mbox{\hyperlink{model_matrix_8h_source_l00200}{Markov\+::\+API\+::\+Model\+Matrix\+::ready}}, \mbox{\hyperlink{model_matrix_8h_source_l00195}{Markov\+::\+API\+::\+Model\+Matrix\+::total\+Edge\+Weights}}, and \mbox{\hyperlink{model_matrix_8h_source_l00180}{Markov\+::\+API\+::\+Model\+Matrix\+::value\+Matrix}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00019}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Import()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00025}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Train()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a0f95257e1344225233ab49602cd9551c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!DumpJSON@{DumpJSON}}
+\index{DumpJSON@{DumpJSON}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{DumpJSON()}{DumpJSON()}}
+{\footnotesize\ttfamily void Markov\+::\+API\+::\+Model\+Matrix\+::\+Dump\+JSON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Debug function to dump the model to a JSON file. 
+
+Might not work 100\%. Not meant for production use. 
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00101}{101}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101                                    \{}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     std::cout << \textcolor{stringliteral}{"{}\{\(\backslash\)n   \(\backslash\)"{}index\(\backslash\)"{}: \(\backslash\)"{}"{}};}
+\DoxyCodeLine{00104     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00105         \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==\textcolor{charliteral}{'"{}'}) std::cout << \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)\(\backslash\)"{}"{}};}
+\DoxyCodeLine{00106         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}) std::cout << \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)"{}};}
+\DoxyCodeLine{00107         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==0) std::cout << \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)x00"{}};}
+\DoxyCodeLine{00108         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(i==0) std::cout << \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)xff"{}};}
+\DoxyCodeLine{00109         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==\textcolor{charliteral}{'\(\backslash\)n'}) std::cout << \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)n"{}};}
+\DoxyCodeLine{00110         \textcolor{keywordflow}{else} std::cout << this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i];}
+\DoxyCodeLine{00111     \}}
+\DoxyCodeLine{00112     std::cout << }
+\DoxyCodeLine{00113     \textcolor{stringliteral}{"{}\(\backslash\)"{},\(\backslash\)n"{}}}
+\DoxyCodeLine{00114     \textcolor{stringliteral}{"{}   \(\backslash\)"{}edgemap\(\backslash\)"{}: \{\(\backslash\)n"{}};}
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00117         \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==\textcolor{charliteral}{'"{}'}) std::cout << \textcolor{stringliteral}{"{}      \(\backslash\)"{}\(\backslash\)\(\backslash\)\(\backslash\)"{}\(\backslash\)"{}: ["{}};}
+\DoxyCodeLine{00118         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}) std::cout << \textcolor{stringliteral}{"{}      \(\backslash\)"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)"{}: ["{}};}
+\DoxyCodeLine{00119         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]==0) std::cout << \textcolor{stringliteral}{"{}      \(\backslash\)"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)x00\(\backslash\)"{}: ["{}};}
+\DoxyCodeLine{00120         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i]<0) std::cout << \textcolor{stringliteral}{"{}      \(\backslash\)"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)xff\(\backslash\)"{}: ["{}};}
+\DoxyCodeLine{00121         \textcolor{keywordflow}{else} std::cout << \textcolor{stringliteral}{"{}      \(\backslash\)"{}"{}} << this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}[i] << \textcolor{stringliteral}{"{}\(\backslash\)"{}: ["{}};}
+\DoxyCodeLine{00122         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};j++)\{}
+\DoxyCodeLine{00123             \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j]==\textcolor{charliteral}{'"{}'}) std::cout << \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)\(\backslash\)\(\backslash\)"{}\(\backslash\)"{}"{}};}
+\DoxyCodeLine{00124             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j]==\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}) std::cout << \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)"{}"{}};}
+\DoxyCodeLine{00125             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j]==0) std::cout << \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)x00\(\backslash\)"{}"{}};}
+\DoxyCodeLine{00126             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j]<0) std::cout << \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)xff\(\backslash\)"{}"{}};}
+\DoxyCodeLine{00127             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>matrixIndex[i]==\textcolor{charliteral}{'\(\backslash\)n'}) std::cout << \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)\(\backslash\)n\(\backslash\)"{}"{}};}
+\DoxyCodeLine{00128             \textcolor{keywordflow}{else} std::cout << \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}} << this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[i][j] << \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}};}
+\DoxyCodeLine{00129             \textcolor{keywordflow}{if}(j!=this-\/>matrixSize-\/1) std::cout << \textcolor{stringliteral}{"{}, "{}};}
+\DoxyCodeLine{00130         \}}
+\DoxyCodeLine{00131         std::cout << \textcolor{stringliteral}{"{}],\(\backslash\)n"{}};}
+\DoxyCodeLine{00132     \}}
+\DoxyCodeLine{00133     std::cout << \textcolor{stringliteral}{"{}\},\(\backslash\)n"{}};}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{00135     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)"{}   weightmap\(\backslash\)"{}: \{\(\backslash\)n"{}};}
+\DoxyCodeLine{00136     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};i++)\{}
+\DoxyCodeLine{00137         \textcolor{keywordflow}{if}(this-\/>matrixIndex[i]==\textcolor{charliteral}{'"{}'}) std::cout << \textcolor{stringliteral}{"{}      \(\backslash\)"{}\(\backslash\)\(\backslash\)\(\backslash\)"{}\(\backslash\)"{}: ["{}};}
+\DoxyCodeLine{00138         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>matrixIndex[i]==\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}) std::cout << \textcolor{stringliteral}{"{}      \(\backslash\)"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)"{}: ["{}};}
+\DoxyCodeLine{00139         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>matrixIndex[i]==0) std::cout << \textcolor{stringliteral}{"{}      \(\backslash\)"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)x00\(\backslash\)"{}: ["{}};}
+\DoxyCodeLine{00140         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(this-\/>matrixIndex[i]<0) std::cout << \textcolor{stringliteral}{"{}      \(\backslash\)"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)xff\(\backslash\)"{}: ["{}};}
+\DoxyCodeLine{00141         \textcolor{keywordflow}{else} std::cout << \textcolor{stringliteral}{"{}      \(\backslash\)"{}"{}} << this-\/>matrixIndex[i] << \textcolor{stringliteral}{"{}\(\backslash\)"{}: ["{}};}
+\DoxyCodeLine{00142 }
+\DoxyCodeLine{00143         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};j++)\{}
+\DoxyCodeLine{00144             std::cout << this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[i][j];}
+\DoxyCodeLine{00145             \textcolor{keywordflow}{if}(j!=this-\/>matrixSize-\/1) std::cout << \textcolor{stringliteral}{"{}, "{}};}
+\DoxyCodeLine{00146         \}}
+\DoxyCodeLine{00147         std::cout << \textcolor{stringliteral}{"{}],\(\backslash\)n"{}};}
+\DoxyCodeLine{00148     \}}
+\DoxyCodeLine{00149     std::cout << \textcolor{stringliteral}{"{}  \}\(\backslash\)n\}\(\backslash\)n"{}};}
+\DoxyCodeLine{00150 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8h_source_l00175}{Markov\+::\+API\+::\+Model\+Matrix\+::edge\+Matrix}}, \mbox{\hyperlink{model_matrix_8h_source_l00190}{Markov\+::\+API\+::\+Model\+Matrix\+::matrix\+Index}}, \mbox{\hyperlink{model_matrix_8h_source_l00185}{Markov\+::\+API\+::\+Model\+Matrix\+::matrix\+Size}}, and \mbox{\hyperlink{model_matrix_8h_source_l00180}{Markov\+::\+API\+::\+Model\+Matrix\+::value\+Matrix}}.
+
+
+
+Referenced by \mbox{\hyperlink{cuda_markopy_8cu_source_l00020}{Markov\+::\+Markopy\+::\+CUDA\+::\+BOOST\+\_\+\+PYTHON\+\_\+\+MODULE()}}, and \mbox{\hyperlink{markopy_8cpp_source_l00037}{Markov\+::\+Markopy\+::\+BOOST\+\_\+\+PYTHON\+\_\+\+MODULE()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_model_a2e08608905d7b042627ea844b08045fe}\label{class_markov_1_1_model_a2e08608905d7b042627ea844b08045fe}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!Edges@{Edges}}
+\index{Edges@{Edges}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{Edges()}{Edges()}}
+{\footnotesize\ttfamily std\+::vector$<$Edge$<$char $>$$\ast$$>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Return a vector of all the edges in the model. 
+
+\begin{DoxyReturn}{Returns}
+vector of edges 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00176}{176}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00176 \{ \textcolor{keywordflow}{return} \&\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}\label{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!Export@{Export}}
+\index{Export@{Export}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{Export()}{Export()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Export (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Open a file to export with filename, and call bool Model\+::\+Export with std\+::ofstream. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, False for incomplete models or corrupt file formats
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{Use\+:}} Export file to filename 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}};}
+\DoxyCodeLine{\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}}.Export(\textcolor{stringliteral}{"{}test.mdl"{}});}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00166}{166}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00300                                                               \{}
+\DoxyCodeLine{00301     std::ofstream exportfile;}
+\DoxyCodeLine{00302     exportfile.open(filename);}
+\DoxyCodeLine{00303     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}}(\&exportfile);}
+\DoxyCodeLine{00304 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_ad8e1d099c1958e06177c034d1d2ed52e}\label{class_python_1_1_markopy_1_1_base_c_l_i_ad8e1d099c1958e06177c034d1d2ed52e}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!export@{export}}
+\index{export@{export}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{export()}{export()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+export (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Export model to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename to export to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00138}{138}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138     \textcolor{keyword}{def }export(self, filename : str):}
+\DoxyCodeLine{00139         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00140 \textcolor{stringliteral}{        @brief Export model to a file}}
+\DoxyCodeLine{00141 \textcolor{stringliteral}{        @param filename filename to export to}}
+\DoxyCodeLine{00142 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00143         self.model.Export(filename)}
+\DoxyCodeLine{00144 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudammx_8py_source_l00065}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{base_8py_source_l00040}{Python.\+Markopy.\+Base\+CLI.\+model}}, \mbox{\hyperlink{mmx_8py_source_l00030}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{mp_8py_source_l00029}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+model}}, and \mbox{\hyperlink{_markov_passwords_g_u_i_8cpp_source_l00042}{Markov\+::\+GUI\+::\+Markov\+Passwords\+GUI.\+model()}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00094}{Python.\+Markopy.\+Base\+CLI.\+train()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_ad8e1d099c1958e06177c034d1d2ed52e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_ad8e1d099c1958e06177c034d1d2ed52e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}\label{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!Export@{Export}}
+\index{Export@{Export}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{Export()}{Export()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Export (\begin{DoxyParamCaption}\item[{std\+::ofstream $\ast$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Export a file of the model. 
+
+File contains a list of edges. Format is\+: Left\+\_\+repr;Edge\+Weight;right\+\_\+repr. For more information on the format, check out the project wiki or github readme.
+
+Iterate over this vertices, and their edges, and write them to file. \begin{DoxyReturn}{Returns}
+True if successful, False for incomplete models.
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{Use\+:}} Export file to ofstream 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}};}
+\DoxyCodeLine{std::ofstream file(\textcolor{stringliteral}{"{}test.mdl"{}});}
+\DoxyCodeLine{\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}}.Export(\&file);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00155}{155}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00288                                                         \{}
+\DoxyCodeLine{00289     \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<NodeStorageType>}}* e;}
+\DoxyCodeLine{00290     \textcolor{keywordflow}{for} (std::vector<int>::size\_type i = 0; i != this-\/>\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}.size(); i++) \{}
+\DoxyCodeLine{00291         e = this-\/>\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}[i];}
+\DoxyCodeLine{00292         \textcolor{comment}{//std::cout << e-\/>LeftNode()-\/>NodeValue() << "{},"{} << e-\/>EdgeWeight() << "{},"{} << e-\/>RightNode()-\/>NodeValue() << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{00293         *\mbox{\hyperlink{namespacemodel__2gram_a2c21010331f2adf96f64d1e90d019e76}{f}} << e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a3975b42a420de76e216d343dca059f88}{LeftNode}}()-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}() << \textcolor{stringliteral}{"{},"{}} << e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2b1e5a6e6f81502cd8ac6b20ed38b677}{EdgeWeight}}() << \textcolor{stringliteral}{"{},"{}} << e-\/>\mbox{\hyperlink{class_markov_1_1_edge_a2e7d14e46631c85c84f6f8f1dd2949cd}{RightNode}}()-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00294     \}}
+\DoxyCodeLine{00295 }
+\DoxyCodeLine{00296     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00297 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_model_matrix_ae42271d3f464fd17b5e91a95b3cffd27}\label{class_python_1_1_markopy_1_1_model_matrix_ae42271d3f464fd17b5e91a95b3cffd27}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!FastRandomWalk@{FastRandomWalk}}
+\index{FastRandomWalk@{FastRandomWalk}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{FastRandomWalk()}{FastRandomWalk()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Model\+Matrix.\+Fast\+Random\+Walk (\begin{DoxyParamCaption}\item[{int}]{count,  }\item[{str}]{wordlist,  }\item[{int}]{minlen,  }\item[{int}]{maxlen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{mm_8py_source_l00048}{48}} of file \mbox{\hyperlink{mm_8py_source}{mm.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048     \textcolor{keyword}{def }FastRandomWalk(count : int, wordlist : str, minlen : int, maxlen : int):}
+\DoxyCodeLine{00049         \textcolor{keywordflow}{pass}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{mmx_8py_source_l00040}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+\_\+generate()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_model_matrix_ae42271d3f464fd17b5e91a95b3cffd27_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a3bb4d49f1fbc10e1649dc9bf73529520}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a3bb4d49f1fbc10e1649dc9bf73529520}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!FastRandomWalk@{FastRandomWalk}}
+\index{FastRandomWalk@{FastRandomWalk}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{FastRandomWalk()}{FastRandomWalk()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily int Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk (\begin{DoxyParamCaption}\item[{unsigned long int}]{n,  }\item[{const char $\ast$}]{wordlist\+File\+Name,  }\item[{int}]{min\+Len = {\ttfamily 6},  }\item[{int}]{max\+Len = {\ttfamily 12},  }\item[{int}]{threads = {\ttfamily 20},  }\item[{bool}]{b\+File\+IO = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Random walk on the Matrix-\/reduced \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}. 
+
+This has an O(\+N) Memory complexity. To limit the maximum usage, requests with n$>$50M are partitioned using \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Partition}}.
+
+If n$>$50M, threads are going to be synced, files are going to be flushed, and buffers will be reallocated every 50M generations. This comes at a minor performance penalty.
+
+While it has the same functionality, this operation reduces \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Generate}} runtime by \%96.\+5
+
+This function has deprecated \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Generate}}, and will eventually replace it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ Number of passwords to generate. \\
+\hline
+{\em wordlist\+File\+Name} & -\/ Filename to write to \\
+\hline
+{\em min\+Len} & -\/ Minimum password length to generate \\
+\hline
+{\em max\+Len} & -\/ Maximum password length to generate \\
+\hline
+{\em threads} & -\/ number of OS threads to spawn \\
+\hline
+{\em b\+File\+IO} & -\/ If false, filename will be ignored and will output to stdout.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov::API::ModelMatrix}} \mbox{\hyperlink{namespacemarkopy_a2626224ad1569dd3ce7c37599cb1e6fe}{mp}};}
+\DoxyCodeLine{\mbox{\hyperlink{namespacemp}{mp}}.Import(\textcolor{stringliteral}{"{}models/finished.mdl"{}});}
+\DoxyCodeLine{\mbox{\hyperlink{namespacemp}{mp}}.FastRandomWalk(50000000,\textcolor{stringliteral}{"{}./wordlist.txt"{}},6,12,25, \textcolor{keyword}{true});}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00217}{217}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00217                                                                                                                                             \{}
+\DoxyCodeLine{00218     std::ofstream wordlist; }
+\DoxyCodeLine{00219     \textcolor{keywordflow}{if}(bFileIO)}
+\DoxyCodeLine{00220         wordlist.open(wordlistFileName);}
+\DoxyCodeLine{00221     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a3bb4d49f1fbc10e1649dc9bf73529520}{FastRandomWalk}}(n, \&wordlist, minLen, maxLen, threads, bFileIO);}
+\DoxyCodeLine{00222     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00223 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8cpp_source_l00204}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk()}}.
+
+
+
+Referenced by \mbox{\hyperlink{markopy_8cpp_source_l00037}{Markov\+::\+Markopy\+::\+BOOST\+\_\+\+PYTHON\+\_\+\+MODULE()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a3bb4d49f1fbc10e1649dc9bf73529520_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a3bb4d49f1fbc10e1649dc9bf73529520_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a09a6793164aeccc4875c25151ca2ab14}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a09a6793164aeccc4875c25151ca2ab14}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!FastRandomWalk@{FastRandomWalk}}
+\index{FastRandomWalk@{FastRandomWalk}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{FastRandomWalk()}{FastRandomWalk()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk (\begin{DoxyParamCaption}\item[{unsigned long int}]{n,  }\item[{std\+::ofstream $\ast$}]{wordlist,  }\item[{int}]{min\+Len = {\ttfamily 6},  }\item[{int}]{max\+Len = {\ttfamily 12},  }\item[{int}]{threads = {\ttfamily 20},  }\item[{bool}]{b\+File\+IO = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Random walk on the Matrix-\/reduced \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}. 
+
+This has an O(\+N) Memory complexity. To limit the maximum usage, requests with n$>$50M are partitioned using \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Partition}}.
+
+If n$>$50M, threads are going to be synced, files are going to be flushed, and buffers will be reallocated every 50M generations. This comes at a minor performance penalty.
+
+While it has the same functionality, this operation reduces \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Generate}} runtime by \%96.\+5
+
+This function has deprecated \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Generate}}, and will eventually replace it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ Number of passwords to generate. \\
+\hline
+{\em wordlist\+File\+Name} & -\/ Filename to write to \\
+\hline
+{\em min\+Len} & -\/ Minimum password length to generate \\
+\hline
+{\em max\+Len} & -\/ Maximum password length to generate \\
+\hline
+{\em threads} & -\/ number of OS threads to spawn \\
+\hline
+{\em b\+File\+IO} & -\/ If false, filename will be ignored and will output to stdout.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix}{Markov::API::ModelMatrix}} \mbox{\hyperlink{namespacemarkopy_a2626224ad1569dd3ce7c37599cb1e6fe}{mp}};}
+\DoxyCodeLine{\mbox{\hyperlink{namespacemp}{mp}}.Import(\textcolor{stringliteral}{"{}models/finished.mdl"{}});}
+\DoxyCodeLine{\mbox{\hyperlink{namespacemp}{mp}}.FastRandomWalk(50000000,\textcolor{stringliteral}{"{}./wordlist.txt"{}},6,12,25, \textcolor{keyword}{true});}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00204}{204}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00204                                                                                                                                      \{}
+\DoxyCodeLine{00205     }
+\DoxyCodeLine{00206 }
+\DoxyCodeLine{00207     std::mutex mlock;}
+\DoxyCodeLine{00208     \textcolor{keywordflow}{if}(n<=50000000ull) this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{FastRandomWalkPartition}}(\&mlock, wordlist, n, minLen, maxLen, bFileIO, threads);}
+\DoxyCodeLine{00209     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00210         \textcolor{keywordtype}{int} numberOfPartitions = n/50000000ull;}
+\DoxyCodeLine{00211         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<numberOfPartitions;i++)}
+\DoxyCodeLine{00212             this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}{FastRandomWalkPartition}}(\&mlock, wordlist, 50000000ull, minLen, maxLen, bFileIO, threads);}
+\DoxyCodeLine{00213     \}}
+\DoxyCodeLine{00214     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00215 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8cpp_source_l00225}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Partition()}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00217}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a09a6793164aeccc4875c25151ca2ab14_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a09a6793164aeccc4875c25151ca2ab14_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}\label{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!FastRandomWalkPartition@{FastRandomWalkPartition}}
+\index{FastRandomWalkPartition@{FastRandomWalkPartition}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{FastRandomWalkPartition()}{FastRandomWalkPartition()}}
+{\footnotesize\ttfamily void Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Partition (\begin{DoxyParamCaption}\item[{std\+::mutex $\ast$}]{mlock,  }\item[{std\+::ofstream $\ast$}]{wordlist,  }\item[{unsigned long int}]{n,  }\item[{int}]{min\+Len,  }\item[{int}]{max\+Len,  }\item[{bool}]{b\+File\+IO,  }\item[{int}]{threads }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+A single partition of Fast\+Random\+Walk event. 
+
+Since Fast\+Random\+Walk has to allocate its output buffer before operation starts and writes data in chunks, large n parameters would lead to huge memory allocations. {\bfseries{Without}} {\bfseries{Partitioning\+:}} 
+\begin{DoxyItemize}
+\item 50M results 12 characters max -\/$>$ 550 Mb Memory allocation
+\item 5B results 12 characters max -\/$>$ 55 Gb Memory allocation
+\item 50B results 12 characters max -\/$>$ 550GB Memory allocation
+\end{DoxyItemize}
+
+Instead, Fast\+Random\+Walk is partitioned per 50M generations to limit the top memory need.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mlock} & -\/ mutex lock to distribute to child threads \\
+\hline
+{\em wordlist} & -\/ Reference to the wordlist file to write to \\
+\hline
+{\em n} & -\/ Number of passwords to generate. \\
+\hline
+{\em wordlist\+File\+Name} & -\/ Filename to write to \\
+\hline
+{\em min\+Len} & -\/ Minimum password length to generate \\
+\hline
+{\em max\+Len} & -\/ Maximum password length to generate \\
+\hline
+{\em threads} & -\/ number of OS threads to spawn \\
+\hline
+{\em b\+File\+IO} & -\/ If false, filename will be ignored and will output to stdout. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00225}{225}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00225                                                                                                                                                                 \{}
+\DoxyCodeLine{00226     }
+\DoxyCodeLine{00227     \textcolor{keywordtype}{int} iterationsPerThread = n/threads;}
+\DoxyCodeLine{00228     \textcolor{keywordtype}{int} iterationsPerThreadCarryOver = n\%threads;}
+\DoxyCodeLine{00229 }
+\DoxyCodeLine{00230     std::vector<std::thread*> threadsV;}
+\DoxyCodeLine{00231     }
+\DoxyCodeLine{00232     \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = 0;}
+\DoxyCodeLine{00233     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<threads;i++)\{}
+\DoxyCodeLine{00234         threadsV.push\_back(\textcolor{keyword}{new} std::thread(\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}{Markov::API::ModelMatrix::FastRandomWalkThread}}, \textcolor{keyword}{this}, mlock, wordlist, iterationsPerThread, minLen, maxLen, \textcolor{keywordtype}{id}, bFileIO));}
+\DoxyCodeLine{00235         \textcolor{keywordtype}{id}++;}
+\DoxyCodeLine{00236     \}}
+\DoxyCodeLine{00237 }
+\DoxyCodeLine{00238     threadsV.push\_back(\textcolor{keyword}{new} std::thread(\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}{Markov::API::ModelMatrix::FastRandomWalkThread}}, \textcolor{keyword}{this}, mlock, wordlist, iterationsPerThreadCarryOver, minLen, maxLen, \textcolor{keywordtype}{id}, bFileIO));}
+\DoxyCodeLine{00239 }
+\DoxyCodeLine{00240     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<threads;i++)\{}
+\DoxyCodeLine{00241         threadsV[i]-\/>join();}
+\DoxyCodeLine{00242     \}}
+\DoxyCodeLine{00243 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8cpp_source_l00153}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Thread()}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00204}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_ad775d2e9c35e6f78c53f796df11405b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!FastRandomWalkThread@{FastRandomWalkThread}}
+\index{FastRandomWalkThread@{FastRandomWalkThread}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{FastRandomWalkThread()}{FastRandomWalkThread()}}
+{\footnotesize\ttfamily void Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Thread (\begin{DoxyParamCaption}\item[{std\+::mutex $\ast$}]{mlock,  }\item[{std\+::ofstream $\ast$}]{wordlist,  }\item[{unsigned long int}]{n,  }\item[{int}]{min\+Len,  }\item[{int}]{max\+Len,  }\item[{int}]{id,  }\item[{bool}]{b\+File\+IO }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+A single thread of a single partition of Fast\+Random\+Walk. 
+
+A Fast\+Random\+Walk\+Partition will initiate as many of this function as requested.
+
+This function contains the bulk of the generation algorithm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mlock} & -\/ mutex lock to distribute to child threads \\
+\hline
+{\em wordlist} & -\/ Reference to the wordlist file to write to \\
+\hline
+{\em n} & -\/ Number of passwords to generate. \\
+\hline
+{\em wordlist\+File\+Name} & -\/ Filename to write to \\
+\hline
+{\em min\+Len} & -\/ Minimum password length to generate \\
+\hline
+{\em max\+Len} & -\/ Maximum password length to generate \\
+\hline
+{\em id} & -\/ {\bfseries{DEPRECATED}} Thread id -\/ No longer used \\
+\hline
+{\em b\+File\+IO} & -\/ If false, filename will be ignored and will output to stdout. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00153}{153}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00153                                                                                                                                                         \{}
+\DoxyCodeLine{00154     \textcolor{keywordflow}{if}(n==0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00155 }
+\DoxyCodeLine{00156     \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{00157     \textcolor{keywordtype}{char}* e;}
+\DoxyCodeLine{00158     \textcolor{keywordtype}{char} *res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[(maxLen+2)*n];}
+\DoxyCodeLine{00159     \textcolor{keywordtype}{int} index = 0;}
+\DoxyCodeLine{00160     \textcolor{keywordtype}{char} next;}
+\DoxyCodeLine{00161     \textcolor{keywordtype}{int} len=0;}
+\DoxyCodeLine{00162     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} selection;}
+\DoxyCodeLine{00163     \textcolor{keywordtype}{char} cur;}
+\DoxyCodeLine{00164     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} bufferctr = 0;}
+\DoxyCodeLine{00165     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; i++) \{}
+\DoxyCodeLine{00166         cur=199;}
+\DoxyCodeLine{00167         len=0;}
+\DoxyCodeLine{00168         \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{00169             e = \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a_a6e4f16a152d93ed2aa9e854bf173de54}{strchr}}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}}, cur);}
+\DoxyCodeLine{00170             index = e -\/ this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}};}
+\DoxyCodeLine{00171             selection = MarsagliaRandomEngine.\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{random}}() \% this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}}[index];}
+\DoxyCodeLine{00172             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}};j++)\{}
+\DoxyCodeLine{00173                 selection -\/= this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}{valueMatrix}}[index][j];}
+\DoxyCodeLine{00174                 \textcolor{keywordflow}{if} (selection < 0)\{}
+\DoxyCodeLine{00175                     next = this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}{edgeMatrix}}[index][j];}
+\DoxyCodeLine{00176                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00177                 \}}
+\DoxyCodeLine{00178             \}}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{00180             \textcolor{keywordflow}{if} (len >= maxLen)  \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00181             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((next < 0) \&\& (len < minLen)) \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00182             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (next < 0) \textcolor{keywordflow}{break};  }
+\DoxyCodeLine{00183             cur = next;}
+\DoxyCodeLine{00184             res[bufferctr + len++] = cur;}
+\DoxyCodeLine{00185         \}}
+\DoxyCodeLine{00186         res[bufferctr + len++] = \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00187         bufferctr+=len;}
+\DoxyCodeLine{00188         }
+\DoxyCodeLine{00189     \}}
+\DoxyCodeLine{00190     \textcolor{keywordflow}{if}(bFileIO)\{}
+\DoxyCodeLine{00191         mlock-\/>lock();}
+\DoxyCodeLine{00192         *wordlist << res;}
+\DoxyCodeLine{00193         mlock-\/>unlock();}
+\DoxyCodeLine{00194     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00195         mlock-\/>lock();}
+\DoxyCodeLine{00196         std::cout << res;}
+\DoxyCodeLine{00197         mlock-\/>unlock();}
+\DoxyCodeLine{00198     \}}
+\DoxyCodeLine{00199     \textcolor{keyword}{delete} res;}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8h_source_l00175}{Markov\+::\+API\+::\+Model\+Matrix\+::edge\+Matrix}}, \mbox{\hyperlink{model_matrix_8h_source_l00190}{Markov\+::\+API\+::\+Model\+Matrix\+::matrix\+Index}}, \mbox{\hyperlink{model_matrix_8h_source_l00185}{Markov\+::\+API\+::\+Model\+Matrix\+::matrix\+Size}}, \mbox{\hyperlink{random_8h_source_l00140}{Markov\+::\+Random\+::\+Marsaglia\+::random()}}, \mbox{\hyperlink{model_matrix_8h_source_l00195}{Markov\+::\+API\+::\+Model\+Matrix\+::total\+Edge\+Weights}}, and \mbox{\hyperlink{model_matrix_8h_source_l00180}{Markov\+::\+API\+::\+Model\+Matrix\+::value\+Matrix}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00225}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Partition()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_a96f2885aac69b49b21c66ad5a32514b9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_ad2823b484ee975432aebb4e50875f8a6}\label{class_python_1_1_markopy_1_1_base_c_l_i_ad2823b484ee975432aebb4e50875f8a6}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!generate@{generate}}
+\index{generate@{generate}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+generate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{wordlist,  }\item[{bool}]{bulk = {\ttfamily False} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Generate strings from the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & model instance \\
+\hline
+{\em wordlist} & wordlist filename \\
+\hline
+{\em bulk} & marks bulk operation with directories \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00145}{145}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00145     \textcolor{keyword}{def }generate(self, wordlist : str, bulk : bool=\textcolor{keyword}{False}):}
+\DoxyCodeLine{00146         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00147 \textcolor{stringliteral}{            @brief Generate strings from the model}}
+\DoxyCodeLine{00148 \textcolor{stringliteral}{            @param model: model instance}}
+\DoxyCodeLine{00149 \textcolor{stringliteral}{            @param wordlist wordlist filename}}
+\DoxyCodeLine{00150 \textcolor{stringliteral}{            @param bulk marks bulk operation with directories}}
+\DoxyCodeLine{00151 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00152         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} (wordlist \textcolor{keywordflow}{or} self.args.count):}
+\DoxyCodeLine{00153             logging.pprint(\textcolor{stringliteral}{"{}Generation mode requires -\/w/-\/-\/wordlist and -\/n/-\/-\/count parameters. Exiting."{}})}
+\DoxyCodeLine{00154             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00155     }
+\DoxyCodeLine{00156         if(bulk \textcolor{keywordflow}{and} os.path.isfile(wordlist)):}
+\DoxyCodeLine{00157             logging.pprint(f\textcolor{stringliteral}{"{}\{wordlist\} exists and will be overwritten."{}}, 1)}
+\DoxyCodeLine{00158         self.\_generate(wordlist)}
+\DoxyCodeLine{00159 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudammx_8py_source_l00075}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{base_8py_source_l00161}{Python.\+Markopy.\+Base\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{mmx_8py_source_l00040}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{mp_8py_source_l00031}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{cudamarkopy_8py_source_l00064}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00075}{Python.\+Markopy.\+Base\+CLI.\+args}}, and \mbox{\hyperlink{markopy_8py_source_l00075}{Python.\+Markopy.\+Markopy\+CLI.\+args}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00202}{Python.\+Markopy.\+Base\+CLI.\+process()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_ad2823b484ee975432aebb4e50875f8a6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_ad2823b484ee975432aebb4e50875f8a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!Generate@{Generate}}
+\index{Generate@{Generate}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{Generate()}{Generate()}}
+{\footnotesize\ttfamily void Markov\+::\+API\+::\+Markov\+Passwords\+::\+Generate (\begin{DoxyParamCaption}\item[{unsigned long int}]{n,  }\item[{const char $\ast$}]{wordlist\+File\+Name,  }\item[{int}]{min\+Len = {\ttfamily 6},  }\item[{int}]{max\+Len = {\ttfamily 12},  }\item[{int}]{threads = {\ttfamily 20} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Call \mbox{\hyperlink{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}{Markov\+::\+Model\+::\+Random\+Walk}} n times, and collect output. 
+
+Generate from model and write results to a file. a much more performance-\/optimized method. Fast\+Random\+Walk will reduce the runtime by \%96.\+5 on average.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]See Markov\+::\+API\+::\+Matrix\+Model\+::\+Fast\+Random\+Walk for more information. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/ Number of passwords to generate. \\
+\hline
+{\em wordlist\+File\+Name} & -\/ Filename to write to \\
+\hline
+{\em min\+Len} & -\/ Minimum password length to generate \\
+\hline
+{\em max\+Len} & -\/ Maximum password length to generate \\
+\hline
+{\em threads} & -\/ number of OS threads to spawn \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8cpp_source_l00118}{118}} of file \mbox{\hyperlink{markov_passwords_8cpp_source}{markov\+Passwords.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118                                                                                                                                \{}
+\DoxyCodeLine{00119     \textcolor{keywordtype}{char}* res;}
+\DoxyCodeLine{00120     \textcolor{keywordtype}{char} print[100];}
+\DoxyCodeLine{00121     std::ofstream wordlist; }
+\DoxyCodeLine{00122     wordlist.open(wordlistFileName);}
+\DoxyCodeLine{00123     std::mutex mlock;}
+\DoxyCodeLine{00124     \textcolor{keywordtype}{int} iterationsPerThread = n/threads;}
+\DoxyCodeLine{00125     \textcolor{keywordtype}{int} iterationsCarryOver = n\%threads;}
+\DoxyCodeLine{00126     std::vector<std::thread*> threadsV;}
+\DoxyCodeLine{00127     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<threads;i++)\{}
+\DoxyCodeLine{00128         threadsV.push\_back(\textcolor{keyword}{new} std::thread(\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756}{Markov::API::MarkovPasswords::GenerateThread}}, \textcolor{keyword}{this}, \&mlock, iterationsPerThread, \&wordlist, minLen, maxLen));}
+\DoxyCodeLine{00129     \}}
+\DoxyCodeLine{00130 }
+\DoxyCodeLine{00131     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<threads;i++)\{}
+\DoxyCodeLine{00132         threadsV[i]-\/>join();}
+\DoxyCodeLine{00133         \textcolor{keyword}{delete} threadsV[i];}
+\DoxyCodeLine{00134     \}}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756}{GenerateThread}}(\&mlock, iterationsCarryOver, \&wordlist, minLen, maxLen);}
+\DoxyCodeLine{00137     }
+\DoxyCodeLine{00138 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{markov_passwords_8cpp_source_l00140}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Generate\+Thread()}}.
+
+
+
+Referenced by \mbox{\hyperlink{markopy_8cpp_source_l00037}{Markov\+::\+Markopy\+::\+BOOST\+\_\+\+PYTHON\+\_\+\+MODULE()}}, and \mbox{\hyperlink{_generate_8cpp_source_l00042}{Markov\+::\+GUI\+::\+Generate\+::generation()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!GenerateThread@{GenerateThread}}
+\index{GenerateThread@{GenerateThread}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{GenerateThread()}{GenerateThread()}}
+{\footnotesize\ttfamily void Markov\+::\+API\+::\+Markov\+Passwords\+::\+Generate\+Thread (\begin{DoxyParamCaption}\item[{std\+::mutex $\ast$}]{output\+Lock,  }\item[{unsigned long int}]{n,  }\item[{std\+::ofstream $\ast$}]{wordlist,  }\item[{int}]{min\+Len,  }\item[{int}]{max\+Len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+A single thread invoked by the Generate function. 
+
+{\bfseries{DEPRECATED\+:}} See Markov\+::\+API\+::\+Matrix\+Model\+::\+Fast\+Random\+Walk\+Thread for more information. This has been replaced with a much more performance-\/optimized method. Fast\+Random\+Walk will reduce the runtime by \%96.\+5 on average.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+Lock} & -\/ shared mutex lock to lock during output operation. Prevents race condition on write. \\
+\hline
+{\em n} & number of lines to be generated by this thread \\
+\hline
+{\em wordlist} & wordlistfile \\
+\hline
+{\em min\+Len} & -\/ Minimum password length to generate \\
+\hline
+{\em max\+Len} & -\/ Maximum password length to generate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8cpp_source_l00140}{140}} of file \mbox{\hyperlink{markov_passwords_8cpp_source}{markov\+Passwords.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00140                                                                                                                                        \{}
+\DoxyCodeLine{00141     \textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[maxLen+5];}
+\DoxyCodeLine{00142     \textcolor{keywordflow}{if}(n==0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00143 }
+\DoxyCodeLine{00144     \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{00145     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; i++) \{}
+\DoxyCodeLine{00146         this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}{RandomWalk}}(\&MarsagliaRandomEngine, minLen, maxLen, res); }
+\DoxyCodeLine{00147         outputLock-\/>lock();}
+\DoxyCodeLine{00148         *wordlist << res << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00149         outputLock-\/>unlock();}
+\DoxyCodeLine{00150     \}}
+\DoxyCodeLine{00151 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_8h_source_l00307}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Random\+Walk()}}.
+
+
+
+Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00118}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Generate()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_ac2703ec2d5c97adaf8d205000ca34756_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_ab367a1505f21191f550087707288b575}\label{class_python_1_1_markopy_1_1_base_c_l_i_ab367a1505f21191f550087707288b575}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!help@{help}}
+\index{help@{help}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+help (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a76e6c5fbea009bb2cc5cd1fc7278e2fd}{Python.\+Markopy.\+Markopy\+CLI}}, and \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_acb946950d9dbc1402ba081523d497dd3}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00051}{51}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051     \textcolor{keyword}{def }help(self):}
+\DoxyCodeLine{00052         \textcolor{stringliteral}{"{}! @brief Handle help strings. Defaults to argparse's help"{}}}
+\DoxyCodeLine{00053         self.print\_help()}
+\DoxyCodeLine{00054 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{base_8py_source_l00039}{Python.\+Markopy.\+Base\+CLI.\+print\+\_\+help}}.
+
+
+
+Referenced by \mbox{\hyperlink{markopy_8py_source_l00086}{Python.\+Markopy.\+Markopy\+CLI.\+add\+\_\+arguments()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_ab367a1505f21191f550087707288b575_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}\label{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!Import@{Import}}
+\index{Import@{Import}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{Import()}{Import()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Markov\+::\+API\+::\+Model\+Matrix\+::\+Import (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Open a file to import with filename, and call bool Model\+::\+Import with std\+::ifstream. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, False for incomplete models or corrupt file formats
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{Use\+:}} Import a file with filename 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}};}
+\DoxyCodeLine{\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}}.Import(\textcolor{stringliteral}{"{}test.mdl"{}});}
+
+\end{DoxyCode}
+ Construct the matrix when done. 
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019                                                      \{}
+\DoxyCodeLine{00020     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a0f95257e1344225233ab49602cd9551c}{DeallocateMatrix}}();}
+\DoxyCodeLine{00021     this-\/>\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Markov::API::MarkovPasswords::Import}}(filename);}
+\DoxyCodeLine{00022     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{ConstructMatrix}}();}
+\DoxyCodeLine{00023 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00081}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Deallocate\+Matrix()}}, and \mbox{\hyperlink{model_8h_source_l00280}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Import()}}.
+
+
+
+Referenced by \mbox{\hyperlink{cuda_markopy_8cu_source_l00020}{Markov\+::\+Markopy\+::\+CUDA\+::\+BOOST\+\_\+\+PYTHON\+\_\+\+MODULE()}}, \mbox{\hyperlink{markopy_8cpp_source_l00037}{Markov\+::\+Markopy\+::\+BOOST\+\_\+\+PYTHON\+\_\+\+MODULE()}}, and \mbox{\hyperlink{_markov_a_p_i_c_l_i_2src_2main_8cpp_source_l00023}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}\label{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!Import@{Import}}
+\index{Import@{Import}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{Import()}{Import()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Import (\begin{DoxyParamCaption}\item[{std\+::ifstream $\ast$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Import a file to construct the model. 
+
+File contains a list of edges. For more info on the file format, check out the wiki and github readme pages. Format is\+: Left\+\_\+repr;Edge\+Weight;right\+\_\+repr
+
+Iterate over this list, and construct nodes and edges accordingly. \begin{DoxyReturn}{Returns}
+True if successful, False for incomplete models or corrupt file formats
+\end{DoxyReturn}
+{\bfseries{Example}} {\bfseries{Use\+:}} Import a file from ifstream 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}};}
+\DoxyCodeLine{std::ifstream file(\textcolor{stringliteral}{"{}test.mdl"{}});}
+\DoxyCodeLine{\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}}.Import(\&file);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00126}{126}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00216                                                         \{}
+\DoxyCodeLine{00217     std::string cell;}
+\DoxyCodeLine{00218 }
+\DoxyCodeLine{00219     \textcolor{keywordtype}{char} src;}
+\DoxyCodeLine{00220     \textcolor{keywordtype}{char} target;}
+\DoxyCodeLine{00221     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} oc;}
+\DoxyCodeLine{00222 }
+\DoxyCodeLine{00223     \textcolor{keywordflow}{while} (std::getline(*\mbox{\hyperlink{namespacemodel__2gram_a2c21010331f2adf96f64d1e90d019e76}{f}}, cell)) \{}
+\DoxyCodeLine{00224         \textcolor{comment}{//std::cout << "{}cell: "{} << cell << std::endl;}}
+\DoxyCodeLine{00225         src = cell[0];}
+\DoxyCodeLine{00226         target = cell[cell.length() -\/ 1];}
+\DoxyCodeLine{00227         \textcolor{keywordtype}{char}* j;}
+\DoxyCodeLine{00228         oc = std::strtol(cell.substr(2, cell.length() -\/ 2).c\_str(),\&j,10);}
+\DoxyCodeLine{00229         \textcolor{comment}{//std::cout << oc << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{00230         \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* srcN;}
+\DoxyCodeLine{00231         \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* targetN;}
+\DoxyCodeLine{00232         \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<NodeStorageType>}}* e;}
+\DoxyCodeLine{00233         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(src) == this-\/>nodes.end()) \{}
+\DoxyCodeLine{00234             srcN = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}(src);}
+\DoxyCodeLine{00235             this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.insert(std::pair<\textcolor{keywordtype}{char}, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}*>(src, srcN));}
+\DoxyCodeLine{00236             \textcolor{comment}{//std::cout << "{}Creating new node at start.\(\backslash\)n"{};}}
+\DoxyCodeLine{00237         \}}
+\DoxyCodeLine{00238         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00239             srcN = this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(src)-\/>second;}
+\DoxyCodeLine{00240         \}}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{00242         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(target) == this-\/>nodes.end()) \{}
+\DoxyCodeLine{00243             targetN = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}(target);}
+\DoxyCodeLine{00244             this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.insert(std::pair<\textcolor{keywordtype}{char}, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}*>(target, targetN));}
+\DoxyCodeLine{00245             \textcolor{comment}{//std::cout << "{}Creating new node at end.\(\backslash\)n"{};}}
+\DoxyCodeLine{00246         \}}
+\DoxyCodeLine{00247         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00248             targetN = this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}.find(target)-\/>second;}
+\DoxyCodeLine{00249         \}}
+\DoxyCodeLine{00250         e = srcN-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(targetN);}
+\DoxyCodeLine{00251         e-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(oc);}
+\DoxyCodeLine{00252         this-\/>\mbox{\hyperlink{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}{edges}}.push\_back(e);}
+\DoxyCodeLine{00253 }
+\DoxyCodeLine{00254         \textcolor{comment}{//std::cout << int(srcN-\/>NodeValue()) << "{} -\/-\/"{} << e-\/>EdgeWeight() << "{}-\/-\/> "{} << int(targetN-\/>NodeValue()) << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{00255 }
+\DoxyCodeLine{00256 }
+\DoxyCodeLine{00257     \}}
+\DoxyCodeLine{00258 }
+\DoxyCodeLine{00259     this-\/>\mbox{\hyperlink{class_markov_1_1_model_adf22db37833ae6a4c707b446bef4359d}{OptimizeEdgeOrder}}();}
+\DoxyCodeLine{00260 }
+\DoxyCodeLine{00261     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00262 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a70c7dc0679d8e37e1b5d6c65405eeedb}\label{class_python_1_1_markopy_1_1_base_c_l_i_a70c7dc0679d8e37e1b5d6c65405eeedb}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!import\_model@{import\_model}}
+\index{import\_model@{import\_model}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{import\_model()}{import\_model()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+import\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Import a model file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename to import \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00077}{77}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077     \textcolor{keyword}{def }import\_model(self, filename : str):}
+\DoxyCodeLine{00078         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00079 \textcolor{stringliteral}{        @brief Import a model file}}
+\DoxyCodeLine{00080 \textcolor{stringliteral}{        @param filename filename to import}}
+\DoxyCodeLine{00081 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00082         logging.pprint(\textcolor{stringliteral}{"{}Importing model file."{}}, 1)}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.check\_import\_path(filename):}
+\DoxyCodeLine{00085             logging.pprint(f\textcolor{stringliteral}{"{}Model file at \{filename\} not found. Check the file path, or working directory"{}})}
+\DoxyCodeLine{00086             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088         self.model.Import(filename)}
+\DoxyCodeLine{00089         logging.pprint(\textcolor{stringliteral}{"{}Model imported successfully."{}}, 2)}
+\DoxyCodeLine{00090         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{base_8py_source_l00169}{Python.\+Markopy.\+Base\+CLI.\+check\+\_\+import\+\_\+path()}}, \mbox{\hyperlink{cudammx_8py_source_l00065}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{base_8py_source_l00040}{Python.\+Markopy.\+Base\+CLI.\+model}}, \mbox{\hyperlink{mmx_8py_source_l00030}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{mp_8py_source_l00029}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+model}}, and \mbox{\hyperlink{_markov_passwords_g_u_i_8cpp_source_l00042}{Markov\+::\+GUI\+::\+Markov\+Passwords\+GUI.\+model()}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00202}{Python.\+Markopy.\+Base\+CLI.\+process()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a70c7dc0679d8e37e1b5d6c65405eeedb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a70c7dc0679d8e37e1b5d6c65405eeedb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_model_matrix_c_l_i_aedd02a1510ad98bec9b755686fbcec23}\label{class_python_1_1_markopy_1_1_model_matrix_c_l_i_aedd02a1510ad98bec9b755686fbcec23}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!init\_post\_arguments@{init\_post\_arguments}}
+\index{init\_post\_arguments@{init\_post\_arguments}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{init\_post\_arguments()}{init\_post\_arguments()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Model\+Matrix\+CLI.\+init\+\_\+post\+\_\+arguments (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a4c7fdd1e03b5bf1ac6a6c0cb40df13da}{Python.\+Markopy.\+Base\+CLI}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a84df41ce62183c3c41afee0389d7a3d4}{Python.\+Markopy.\+Markopy\+CLI}}, and \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i_a824030379405eded4fa2561c1a1e8610}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{mmx_8py_source_l00036}{36}} of file \mbox{\hyperlink{mmx_8py_source}{mmx.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036     \textcolor{keyword}{def }init\_post\_arguments(self):}
+\DoxyCodeLine{00037         super().init\_post\_arguments()}
+\DoxyCodeLine{00038         self.fileIO = \textcolor{keywordflow}{not} self.args.stdout}
+\DoxyCodeLine{00039         }
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00055}{Python.\+Markopy.\+Base\+CLI.\+parse()}}, and \mbox{\hyperlink{markopy_8py_source_l00126}{Python.\+Markopy.\+Markopy\+CLI.\+parse()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_model_matrix_c_l_i_aedd02a1510ad98bec9b755686fbcec23_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_model_a71f6df805e340ce96e9dc4ee4ebc6537}\label{class_markov_1_1_model_a71f6df805e340ce96e9dc4ee4ebc6537}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!Nodes@{Nodes}}
+\index{Nodes@{Nodes}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{Nodes()}{Nodes()}}
+{\footnotesize\ttfamily std\+::map$<$char , Node$<$char $>$$\ast$$>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Return starter Node. 
+
+\begin{DoxyReturn}{Returns}
+starter node with 00 Node\+Value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00181}{181}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181 \{ \textcolor{keywordflow}{return} \&\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_ac3fb665ee48937ca845d930e72e07917}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_ac3fb665ee48937ca845d930e72e07917}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!OpenDatasetFile@{OpenDatasetFile}}
+\index{OpenDatasetFile@{OpenDatasetFile}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{OpenDatasetFile()}{OpenDatasetFile()}}
+{\footnotesize\ttfamily std\+::ifstream $\ast$ Markov\+::\+API\+::\+Markov\+Passwords\+::\+Open\+Dataset\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Open dataset file and return the ifstream pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ Filename to open \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ifstream$\ast$ to the the dataset file 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{markov_passwords_8cpp_source}{markov\+Passwords.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051                                                                           \{}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053     std::ifstream* \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}{datasetFile}};}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055     std::ifstream newFile(filename);}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}{datasetFile}} = \&newFile;}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059     this-\/>\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(datasetFile);}
+\DoxyCodeLine{00060     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}{datasetFile}};}
+\DoxyCodeLine{00061 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_8h_source_l00216}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Import()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_ac3fb665ee48937ca845d930e72e07917_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_model_adf22db37833ae6a4c707b446bef4359d}\label{class_markov_1_1_model_adf22db37833ae6a4c707b446bef4359d}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!OptimizeEdgeOrder@{OptimizeEdgeOrder}}
+\index{OptimizeEdgeOrder@{OptimizeEdgeOrder}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{OptimizeEdgeOrder()}{OptimizeEdgeOrder()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Optimize\+Edge\+Order\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Sort edges of all nodes in the model ordered by edge weights. 
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00186}{186}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00265                                                     \{}
+\DoxyCodeLine{00266     \textcolor{keywordflow}{for} (std::pair<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}, \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}*> \textcolor{keyword}{const}\& x : this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}{nodes}}) \{}
+\DoxyCodeLine{00267         \textcolor{comment}{//std::cout << "{}Total edges in EdgesV: "{} << x.second-\/>edgesV.size() << "{}\(\backslash\)n"{}; }}
+\DoxyCodeLine{00268         std::sort (x.second-\/>edgesV.begin(), x.second-\/>edgesV.end(), [](Edge<NodeStorageType> *lhs, Edge<NodeStorageType> *rhs)-\/>bool\{}
+\DoxyCodeLine{00269             return lhs-\/>EdgeWeight() > rhs-\/>EdgeWeight();}
+\DoxyCodeLine{00270         \});}
+\DoxyCodeLine{00271         \textcolor{comment}{//for(int i=0;i<x.second-\/>edgesV.size();i++)}}
+\DoxyCodeLine{00272         \textcolor{comment}{//  std::cout << x.second-\/>edgesV[i]-\/>EdgeWeight() << "{}, "{};}}
+\DoxyCodeLine{00273         \textcolor{comment}{//std::cout << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{00274     \}}
+\DoxyCodeLine{00275     \textcolor{comment}{//std::cout << "{}Total number of nodes: "{} << this-\/>nodes.size() << std::endl;}}
+\DoxyCodeLine{00276     \textcolor{comment}{//std::cout << "{}Total number of edges: "{} << this-\/>edges.size() << std::endl;}}
+\DoxyCodeLine{00277 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a290240acf366fc65cf0639698dbf662b}\label{class_python_1_1_markopy_1_1_base_c_l_i_a290240acf366fc65cf0639698dbf662b}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!parse@{parse}}
+\index{parse@{parse}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+parse (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_ab3660c4d0e9e5ab1889e76264a2c6e02}{Python.\+Markopy.\+Markopy\+CLI}}, and \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a222b7d4b86acbdccc103281f80d27f68}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00055}{55}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055     \textcolor{keyword}{def }parse(self):}
+\DoxyCodeLine{00056         \textcolor{stringliteral}{"{}! @brief add, parse and hook arguements"{}}}
+\DoxyCodeLine{00057         self.add\_arguments()}
+\DoxyCodeLine{00058         self.parse\_arguments()}
+\DoxyCodeLine{00059         self.init\_post\_arguments()}
+\DoxyCodeLine{00060 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudammx_8py_source_l00067}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00043}{Python.\+Markopy.\+Base\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00264}{Python.\+Markopy.\+Abstract\+Generation\+Model\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00282}{Python.\+Markopy.\+Abstract\+Training\+Model\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{markopy_8py_source_l00086}{Python.\+Markopy.\+Markopy\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{mmx_8py_source_l00032}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{cudammx_8py_source_l00071}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+init\+\_\+post\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00062}{Python.\+Markopy.\+Base\+CLI.\+init\+\_\+post\+\_\+arguments()}}, \mbox{\hyperlink{markopy_8py_source_l00143}{Python.\+Markopy.\+Markopy\+CLI.\+init\+\_\+post\+\_\+arguments()}}, \mbox{\hyperlink{mmx_8py_source_l00036}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+init\+\_\+post\+\_\+arguments()}}, and \mbox{\hyperlink{base_8py_source_l00073}{Python.\+Markopy.\+Base\+CLI.\+parse\+\_\+arguments()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a290240acf366fc65cf0639698dbf662b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a9ad725de8fe9de68dc7c4f4aece8bb83}\label{class_python_1_1_markopy_1_1_base_c_l_i_a9ad725de8fe9de68dc7c4f4aece8bb83}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!parse\_arguments@{parse\_arguments}}
+\index{parse\_arguments@{parse\_arguments}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{parse\_arguments()}{parse\_arguments()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+parse\+\_\+arguments (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00073}{73}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073     \textcolor{keyword}{def }parse\_arguments(self):}
+\DoxyCodeLine{00074         \textcolor{stringliteral}{"{}! @brief trigger parser"{}}}
+\DoxyCodeLine{00075         self.args = self.parser.parse\_known\_args()[0]}
+\DoxyCodeLine{00076 }
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00055}{Python.\+Markopy.\+Base\+CLI.\+parse()}}, and \mbox{\hyperlink{markopy_8py_source_l00126}{Python.\+Markopy.\+Markopy\+CLI.\+parse()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a9ad725de8fe9de68dc7c4f4aece8bb83_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_aab389488e1f530cf444d9d2ef59a6998}\label{class_python_1_1_markopy_1_1_base_c_l_i_aab389488e1f530cf444d9d2ef59a6998}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!process@{process}}
+\index{process@{process}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+process (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Process parameters for operation. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_ae6d4af407d5b64f5cb4f1f0ec0cbe0fe}{Python.\+Markopy.\+Markopy\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00202}{202}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00202     \textcolor{keyword}{def }process(self):}
+\DoxyCodeLine{00203         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00204 \textcolor{stringliteral}{        @brief Process parameters for operation}}
+\DoxyCodeLine{00205 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00206         if(self.args.bulk):}
+\DoxyCodeLine{00207             logging.pprint(f\textcolor{stringliteral}{"{}Bulk mode operation chosen."{}}, 4)}
+\DoxyCodeLine{00208             \textcolor{keywordflow}{if} (self.args.mode.lower() == \textcolor{stringliteral}{"{}train"{}}):}
+\DoxyCodeLine{00209                 \textcolor{keywordflow}{if} (os.path.isdir(self.args.output) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(self.args.output)) \textcolor{keywordflow}{and} (os.path.isdir(self.args.dataset) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(self.args.dataset)):}
+\DoxyCodeLine{00210                     corpus\_list = os.listdir(self.args.dataset)}
+\DoxyCodeLine{00211                     \textcolor{keywordflow}{for} corpus \textcolor{keywordflow}{in} corpus\_list:}
+\DoxyCodeLine{00212                         self.import\_model(self.args.input)}
+\DoxyCodeLine{00213                         logging.pprint(f\textcolor{stringliteral}{"{}Training \{self.args.input\} with \{corpus\}"{}}, 2)}
+\DoxyCodeLine{00214                         output\_file\_name = corpus}
+\DoxyCodeLine{00215                         model\_extension = \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{00216                         \textcolor{keywordflow}{if} \textcolor{stringliteral}{"{}."{}} \textcolor{keywordflow}{in} self.args.input:}
+\DoxyCodeLine{00217                             model\_extension = self.args.input.split(\textcolor{stringliteral}{"{}."{}})[-\/1]}
+\DoxyCodeLine{00218                         self.train(f\textcolor{stringliteral}{"{}\{self.args.dataset\}/\{corpus\}"{}}, self.args.seperator, f\textcolor{stringliteral}{"{}\{self.args.output\}/\{corpus\}.\{model\_extension\}"{}}, output\_forced=\textcolor{keyword}{True}, bulk=\textcolor{keyword}{True})}
+\DoxyCodeLine{00219                 \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00220                     logging.pprint(\textcolor{stringliteral}{"{}In bulk training, output and dataset should be a directory."{}})}
+\DoxyCodeLine{00221                     exit(1)}
+\DoxyCodeLine{00222 }
+\DoxyCodeLine{00223             \textcolor{keywordflow}{elif} (self.args.mode.lower() == \textcolor{stringliteral}{"{}generate"{}}):}
+\DoxyCodeLine{00224                 \textcolor{keywordflow}{if} (os.path.isdir(self.args.wordlist) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(self.args.wordlist)) \textcolor{keywordflow}{and} (os.path.isdir(self.args.input) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(self.args.input)):}
+\DoxyCodeLine{00225                     model\_list = os.listdir(self.args.input)}
+\DoxyCodeLine{00226                     print(model\_list)}
+\DoxyCodeLine{00227                     \textcolor{keywordflow}{for} input \textcolor{keywordflow}{in} model\_list:}
+\DoxyCodeLine{00228                         logging.pprint(f\textcolor{stringliteral}{"{}Generating from \{self.args.input\}/\{input\} to \{self.args.wordlist\}/\{input\}.txt"{}}, 2)}
+\DoxyCodeLine{00229                         self.import\_model(f\textcolor{stringliteral}{"{}\{self.args.input\}/\{input\}"{}})}
+\DoxyCodeLine{00230                         model\_base = input}
+\DoxyCodeLine{00231                         \textcolor{keywordflow}{if} \textcolor{stringliteral}{"{}."{}} \textcolor{keywordflow}{in} self.args.input:}
+\DoxyCodeLine{00232                             model\_base = input.split(\textcolor{stringliteral}{"{}."{}})[1]}
+\DoxyCodeLine{00233                         self.generate(f\textcolor{stringliteral}{"{}\{self.args.wordlist\}/\{model\_base\}.txt"{}}, bulk=\textcolor{keyword}{True})}
+\DoxyCodeLine{00234                 \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00235                     logging.pprint(\textcolor{stringliteral}{"{}In bulk generation, input and wordlist should be directory."{}})}
+\DoxyCodeLine{00236 }
+\DoxyCodeLine{00237         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00238             self.import\_model(self.args.input)}
+\DoxyCodeLine{00239             \textcolor{keywordflow}{if} (self.args.mode.lower() == \textcolor{stringliteral}{"{}generate"{}}):}
+\DoxyCodeLine{00240                 self.generate(self.args.wordlist)}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{00242 }
+\DoxyCodeLine{00243             \textcolor{keywordflow}{elif} (self.args.mode.lower() == \textcolor{stringliteral}{"{}train"{}}):}
+\DoxyCodeLine{00244                 self.train(self.args.dataset, self.args.seperator, self.args.output, output\_forced=\textcolor{keyword}{True})}
+\DoxyCodeLine{00245 }
+\DoxyCodeLine{00246 }
+\DoxyCodeLine{00247             elif(self.args.mode.lower() == \textcolor{stringliteral}{"{}combine"{}}):}
+\DoxyCodeLine{00248                 self.train(self.args.dataset, self.args.seperator, self.args.output)}
+\DoxyCodeLine{00249                 self.generate(self.args.wordlist)}
+\DoxyCodeLine{00250 }
+\DoxyCodeLine{00251 }
+\DoxyCodeLine{00252             \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00253                 logging.pprint(\textcolor{stringliteral}{"{}Invalid mode arguement given."{}})}
+\DoxyCodeLine{00254                 logging.pprint(\textcolor{stringliteral}{"{}Accepted modes: 'Generate', 'Train', 'Combine'"{}})}
+\DoxyCodeLine{00255                 exit(5)}
+\DoxyCodeLine{00256 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudamarkopy_8py_source_l00064}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00075}{Python.\+Markopy.\+Base\+CLI.\+args}}, \mbox{\hyperlink{markopy_8py_source_l00075}{Python.\+Markopy.\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00145}{Python.\+Markopy.\+Base\+CLI.\+generate()}}, \mbox{\hyperlink{base_8py_source_l00077}{Python.\+Markopy.\+Base\+CLI.\+import\+\_\+model()}}, \mbox{\hyperlink{_generate_8cpp_source_l00082}{Markov\+::\+GUI\+::\+Generate.\+train()}}, \mbox{\hyperlink{_train_8cpp_source_l00038}{Markov\+::\+GUI\+::\+Train.\+train()}}, and \mbox{\hyperlink{base_8py_source_l00094}{Python.\+Markopy.\+Base\+CLI.\+train()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_aab389488e1f530cf444d9d2ef59a6998_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}\label{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!RandomWalk@{RandomWalk}}
+\index{RandomWalk@{RandomWalk}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{RandomWalk()}{RandomWalk()}}
+{\footnotesize\ttfamily char  $\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Random\+Walk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{Markov\+::\+Random\+::\+Random\+Engine}} $\ast$}]{random\+Engine,  }\item[{int}]{min\+Setting,  }\item[{int}]{max\+Setting,  }\item[{\mbox{\hyperlink{class_node_storage_type}{Node\+Storage\+Type}} $\ast$}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Do a random walk on this model. 
+
+Start from the starter node, on each node, invoke Random\+Next using the random engine on current node, until terminator node is reached. If terminator node is reached before minimum length criateria is reached, ignore the last selection and re-\/invoke random\+Next
+
+If maximum length criteria is reached but final node is not, cut off the generation and proceed to the final node. This function takes \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{Markov\+::\+Random\+::\+Random\+Engine}} as a parameter to generate pseudo random numbers from
+
+This library is shipped with two random engines, Marsaglia and Mersenne. While mersenne output is higher in entropy, most use cases don\textquotesingle{}t really need super high entropy output, so \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} is preferable for better performance.
+
+This function WILL NOT reallocate buffer. Make sure no out of bound writes are happening via maximum length criteria.
+
+{\bfseries{Example}} {\bfseries{Use\+:}} Generate 10 lines, with 5 to 10 characters, and print the output. Use Marsaglia 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}};}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model_ae1d564c132cbf681f10f8ed0dfc772df}{Model}}.import(\textcolor{stringliteral}{"{}model.mdl"{}});}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
+\DoxyCodeLine{    this-\/>\mbox{\hyperlink{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}{RandomWalk}}(\&MarsagliaRandomEngine, 5, 10, res); }
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{ \}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em random\+Engine} & Random Engine to use for the random walks. For examples, see \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Markov\+::\+Random\+::\+Mersenne}} and \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov\+::\+Random\+::\+Marsaglia}} \\
+\hline
+{\em min\+Setting} & Minimum number of characters to generate \\
+\hline
+{\em max\+Setting} & Maximum number of character to generate \\
+\hline
+{\em buffer} & buffer to write the result to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Null terminated string that was generated. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00086}{86}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00307                                                                                                                                                          \{}
+\DoxyCodeLine{00308     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* n = this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}};}
+\DoxyCodeLine{00309     \textcolor{keywordtype}{int} len = 0;}
+\DoxyCodeLine{00310     \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<NodeStorageType>}}* temp\_node;}
+\DoxyCodeLine{00311     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{00312         temp\_node = n-\/>\mbox{\hyperlink{class_markov_1_1_node_a87224bed22e5da09e0ddb91c681a6b2c}{RandomNext}}(randomEngine);}
+\DoxyCodeLine{00313         \textcolor{keywordflow}{if} (len >= maxSetting) \{}
+\DoxyCodeLine{00314             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00315         \}}
+\DoxyCodeLine{00316         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((temp\_node == NULL) \&\& (len < minSetting)) \{}
+\DoxyCodeLine{00317             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00318         \}}
+\DoxyCodeLine{00319 }
+\DoxyCodeLine{00320         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (temp\_node == NULL)\{}
+\DoxyCodeLine{00321             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00322         \}}
+\DoxyCodeLine{00323             }
+\DoxyCodeLine{00324         n = temp\_node;}
+\DoxyCodeLine{00325 }
+\DoxyCodeLine{00326         buffer[len++] = n-\/>\mbox{\hyperlink{class_markov_1_1_node_ac7cce56376f2a00764f64a0194cbb498}{NodeValue}}();}
+\DoxyCodeLine{00327     \}}
+\DoxyCodeLine{00328 }
+\DoxyCodeLine{00329     \textcolor{comment}{//null terminate the string}}
+\DoxyCodeLine{00330     buffer[len] = 0x00;}
+\DoxyCodeLine{00331 }
+\DoxyCodeLine{00332     \textcolor{comment}{//do something with the generated string}}
+\DoxyCodeLine{00333     \textcolor{keywordflow}{return} buffer; \textcolor{comment}{//for now}}
+\DoxyCodeLine{00334 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!Save@{Save}}
+\index{Save@{Save}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily std\+::ofstream $\ast$ Markov\+::\+API\+::\+Markov\+Passwords\+::\+Save (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Export model to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ Export filename. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ofstream$\ast$ of the exported file. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8cpp_source_l00106}{106}} of file \mbox{\hyperlink{markov_passwords_8cpp_source}{markov\+Passwords.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106                                                                 \{}
+\DoxyCodeLine{00107     std::ofstream* exportFile;}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109     std::ofstream newFile(filename);}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111     exportFile = \&newFile;}
+\DoxyCodeLine{00112     }
+\DoxyCodeLine{00113     this-\/>\mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}}(exportFile);}
+\DoxyCodeLine{00114     \textcolor{keywordflow}{return} exportFile;}
+\DoxyCodeLine{00115 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_8h_source_l00288}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Export()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_model_a0e53104e4ec665f005529f51a80c857d}\label{class_markov_1_1_model_a0e53104e4ec665f005529f51a80c857d}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!StarterNode@{StarterNode}}
+\index{StarterNode@{StarterNode}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{StarterNode()}{StarterNode()}}
+{\footnotesize\ttfamily Node$<$ char  $>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Starter\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Return starter Node. 
+
+\begin{DoxyReturn}{Returns}
+starter node with 00 Node\+Value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00171}{171}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00171 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}{starterNode}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}\label{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!Train@{Train}}
+\index{Train@{Train}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{Train()}{Train()}}
+{\footnotesize\ttfamily void Markov\+::\+API\+::\+Model\+Matrix\+::\+Train (\begin{DoxyParamCaption}\item[{const char $\ast$}]{dataset\+File\+Name,  }\item[{char}]{delimiter,  }\item[{int}]{threads }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Train the model with the dataset file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataset\+File\+Name} & -\/ Ifstream$\ast$ to the dataset. If null, use class member \\
+\hline
+{\em delimiter} & -\/ a character, same as the delimiter in dataset content \\
+\hline
+{\em threads} & -\/ number of OS threads to spawn\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}} \mbox{\hyperlink{namespacemarkopy_a2626224ad1569dd3ce7c37599cb1e6fe}{mp}};}
+\DoxyCodeLine{\mbox{\hyperlink{namespacemp}{mp}}.Import(\textcolor{stringliteral}{"{}models/2gram.mdl"{}});}
+\DoxyCodeLine{\mbox{\hyperlink{namespacemp}{mp}}.Train(\textcolor{stringliteral}{"{}password.corpus"{}});}
+
+\end{DoxyCode}
+ Construct the matrix when done. 
+
+Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{model_matrix_8cpp_source}{model\+Matrix.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025                                                                                         \{}
+\DoxyCodeLine{00026     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a0f95257e1344225233ab49602cd9551c}{DeallocateMatrix}}();}
+\DoxyCodeLine{00027     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Markov::API::MarkovPasswords::Train}}(datasetFileName,delimiter,threads);}
+\DoxyCodeLine{00028     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{ConstructMatrix}}();}
+\DoxyCodeLine{00029 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00081}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Deallocate\+Matrix()}}, and \mbox{\hyperlink{markov_passwords_8cpp_source_l00065}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Train()}}.
+
+
+
+Referenced by \mbox{\hyperlink{cuda_markopy_8cu_source_l00020}{Markov\+::\+Markopy\+::\+CUDA\+::\+BOOST\+\_\+\+PYTHON\+\_\+\+MODULE()}}, and \mbox{\hyperlink{markopy_8cpp_source_l00037}{Markov\+::\+Markopy\+::\+BOOST\+\_\+\+PYTHON\+\_\+\+MODULE()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a4d0f291accfd276eb967e1121124274b}\label{class_python_1_1_markopy_1_1_base_c_l_i_a4d0f291accfd276eb967e1121124274b}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!train@{train}}
+\index{train@{train}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+train (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{dataset,  }\item[{str}]{seperator,  }\item[{str}]{output,  }\item[{bool}]{output\+\_\+forced = {\ttfamily False},  }\item[{bool}]{bulk = {\ttfamily False} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Train a model via CLI parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & Model instance \\
+\hline
+{\em dataset} & filename for the dataset \\
+\hline
+{\em seperator} & seperator used with the dataset \\
+\hline
+{\em output} & output filename \\
+\hline
+{\em output\+\_\+forced} & force overwrite \\
+\hline
+{\em bulk} & marks bulk operation with directories \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00094}{94}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094     \textcolor{keyword}{def }train(self, dataset : str, seperator : str, output : str, output\_forced : bool=\textcolor{keyword}{False}, bulk : bool=\textcolor{keyword}{False}):}
+\DoxyCodeLine{00095         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00096 \textcolor{stringliteral}{            @brief Train a model via CLI parameters }}
+\DoxyCodeLine{00097 \textcolor{stringliteral}{            @param model Model instance}}
+\DoxyCodeLine{00098 \textcolor{stringliteral}{            @param dataset filename for the dataset}}
+\DoxyCodeLine{00099 \textcolor{stringliteral}{            @param seperator seperator used with the dataset}}
+\DoxyCodeLine{00100 \textcolor{stringliteral}{            @param output output filename}}
+\DoxyCodeLine{00101 \textcolor{stringliteral}{            @param output\_forced force overwrite}}
+\DoxyCodeLine{00102 \textcolor{stringliteral}{            @param bulk marks bulk operation with directories}}
+\DoxyCodeLine{00103 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00104         logging.pprint(\textcolor{stringliteral}{"{}Training."{}})}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} (dataset \textcolor{keywordflow}{and} seperator \textcolor{keywordflow}{and} (output \textcolor{keywordflow}{or} \textcolor{keywordflow}{not} output\_forced)):}
+\DoxyCodeLine{00107             logging.pprint(f\textcolor{stringliteral}{"{}Training mode requires -\/d/-\/-\/dataset\{', -\/o/-\/-\/output' if output\_forced else''\} and -\/s/-\/-\/seperator parameters. Exiting."{}})}
+\DoxyCodeLine{00108             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{00110         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} bulk \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} self.check\_corpus\_path(dataset):}
+\DoxyCodeLine{00111             logging.pprint(f\textcolor{stringliteral}{"{}\{dataset\} doesn't exists. Check the file path, or working directory"{}})}
+\DoxyCodeLine{00112             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00113 }
+\DoxyCodeLine{00114         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.check\_export\_path(output):}
+\DoxyCodeLine{00115             logging.pprint(f\textcolor{stringliteral}{"{}Cannot create output at \{output\}"{}})}
+\DoxyCodeLine{00116             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118         if(seperator == \textcolor{stringliteral}{'\(\backslash\)\(\backslash\)t'}):}
+\DoxyCodeLine{00119             logging.pprint(\textcolor{stringliteral}{"{}Escaping seperator."{}}, 3)}
+\DoxyCodeLine{00120             seperator = \textcolor{stringliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00121         }
+\DoxyCodeLine{00122         if(len(seperator)!=1):}
+\DoxyCodeLine{00123             logging.pprint(f\textcolor{stringliteral}{'Delimiter must be a single character, and "{}\{seperator\}"{} is not accepted.'})}
+\DoxyCodeLine{00124             exit(4)}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126         logging.pprint(f\textcolor{stringliteral}{'Starting training.'}, 3)}
+\DoxyCodeLine{00127         self.model.Train(dataset,seperator, int(self.args.threads))}
+\DoxyCodeLine{00128         logging.pprint(f\textcolor{stringliteral}{'Training completed.'}, 2)}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130         if(output):}
+\DoxyCodeLine{00131             logging.pprint(f\textcolor{stringliteral}{'Exporting model to \{output\}'}, 2)}
+\DoxyCodeLine{00132             self.export(output)}
+\DoxyCodeLine{00133         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00134             logging.pprint(f\textcolor{stringliteral}{'Model will not be exported.'}, 1)}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00137 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudamarkopy_8py_source_l00064}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00075}{Python.\+Markopy.\+Base\+CLI.\+args}}, \mbox{\hyperlink{markopy_8py_source_l00075}{Python.\+Markopy.\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00181}{Python.\+Markopy.\+Base\+CLI.\+check\+\_\+corpus\+\_\+path()}}, \mbox{\hyperlink{base_8py_source_l00192}{Python.\+Markopy.\+Base\+CLI.\+check\+\_\+export\+\_\+path()}}, \mbox{\hyperlink{base_8py_source_l00138}{Python.\+Markopy.\+Base\+CLI.\+export()}}, \mbox{\hyperlink{cudammx_8py_source_l00065}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{base_8py_source_l00040}{Python.\+Markopy.\+Base\+CLI.\+model}}, \mbox{\hyperlink{mmx_8py_source_l00030}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{mp_8py_source_l00029}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+model}}, and \mbox{\hyperlink{_markov_passwords_g_u_i_8cpp_source_l00042}{Markov\+::\+GUI\+::\+Markov\+Passwords\+GUI.\+model()}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00202}{Python.\+Markopy.\+Base\+CLI.\+process()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a4d0f291accfd276eb967e1121124274b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a4d0f291accfd276eb967e1121124274b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_a5f51b0fdb75101b797f38b08da84848e}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_a5f51b0fdb75101b797f38b08da84848e}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!TrainThread@{TrainThread}}
+\index{TrainThread@{TrainThread}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{TrainThread()}{TrainThread()}}
+{\footnotesize\ttfamily void Markov\+::\+API\+::\+Markov\+Passwords\+::\+Train\+Thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}{Markov\+::\+API\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler}} $\ast$}]{listhandler,  }\item[{char}]{delimiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+A single thread invoked by the Train function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listhandler} & -\/ Listhandler class to read corpus from \\
+\hline
+{\em delimiter} & -\/ a character, same as the delimiter in dataset content \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{markov_passwords_8cpp_source}{markov\+Passwords.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085                                                                                                                   \{}
+\DoxyCodeLine{00086     \textcolor{keywordtype}{char} format\_str[] =\textcolor{stringliteral}{"{}\%ld,\%s"{}};}
+\DoxyCodeLine{00087     format\_str[3]=delimiter;}
+\DoxyCodeLine{00088     std::string line;}
+\DoxyCodeLine{00089     \textcolor{keywordflow}{while} (listhandler-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a068e1a9ff477de23a44c10230df416a5}{next}}(\&line) \&\& \mbox{\hyperlink{markov_passwords_8cpp_a8e56c23aec0c3ae06851ab864c1f67e5}{keepRunning}}) \{}
+\DoxyCodeLine{00090         \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} oc;}
+\DoxyCodeLine{00091         \textcolor{keywordflow}{if} (line.size() > 100) \{}
+\DoxyCodeLine{00092             line = line.substr(0, 100);}
+\DoxyCodeLine{00093         \}}
+\DoxyCodeLine{00094         \textcolor{keywordtype}{char}* linebuf = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[line.length()+5];}
+\DoxyCodeLine{00095 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{00096         sscanf\_s(line.c\_str(), \textcolor{stringliteral}{"{}\%ld,\%s"{}}, \&oc, linebuf, line.length()+5); \textcolor{comment}{//<== changed format\_str to-\/> "{}\%ld,\%s"{}}}
+\DoxyCodeLine{00097 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00098         sscanf(line.c\_str(), format\_str, \&oc, linebuf);}
+\DoxyCodeLine{00099 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00100         this-\/>\mbox{\hyperlink{class_markov_1_1_model_ad252913f83fa3eb14cc3f9f92c5ee37a}{AdjustEdge}}((\textcolor{keyword}{const} \textcolor{keywordtype}{char}*)linebuf, oc); }
+\DoxyCodeLine{00101         \textcolor{keyword}{delete} linebuf;}
+\DoxyCodeLine{00102     \}}
+\DoxyCodeLine{00103 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_8h_source_l00337}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Adjust\+Edge()}}, \mbox{\hyperlink{markov_passwords_8cpp_source_l00024}{keep\+Running}}, and \mbox{\hyperlink{thread_shared_list_handler_8cpp_source_l00018}{Markov\+::\+API\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler\+::next()}}.
+
+
+
+Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00065}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Train()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_a5f51b0fdb75101b797f38b08da84848e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_a5f51b0fdb75101b797f38b08da84848e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}\label{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!args@{args}}
+\index{args@{args}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Base\+CLI.\+args\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00075}{75}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{cudammx_8py_source_l00075}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{base_8py_source_l00161}{Python.\+Markopy.\+Base\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{mmx_8py_source_l00040}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{mp_8py_source_l00031}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{base_8py_source_l00145}{Python.\+Markopy.\+Base\+CLI.\+generate()}}, \mbox{\hyperlink{markopy_8py_source_l00095}{Python.\+Markopy.\+Markopy\+CLI.\+help()}}, \mbox{\hyperlink{base_8py_source_l00062}{Python.\+Markopy.\+Base\+CLI.\+init\+\_\+post\+\_\+arguments()}}, \mbox{\hyperlink{markopy_8py_source_l00126}{Python.\+Markopy.\+Markopy\+CLI.\+parse()}}, \mbox{\hyperlink{cudamarkopy_8py_source_l00098}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+parse\+\_\+fail()}}, \mbox{\hyperlink{base_8py_source_l00202}{Python.\+Markopy.\+Base\+CLI.\+process()}}, and \mbox{\hyperlink{base_8py_source_l00094}{Python.\+Markopy.\+Base\+CLI.\+train()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_ab4794af67fd4513921fee8ae669f2dd4}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!datasetFile@{datasetFile}}
+\index{datasetFile@{datasetFile}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{datasetFile}{datasetFile}}
+{\footnotesize\ttfamily std\+::ifstream$\ast$ Markov\+::\+API\+::\+Markov\+Passwords\+::dataset\+File\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8h_source_l00123}{123}} of file \mbox{\hyperlink{markov_passwords_8h_source}{markov\+Passwords.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}\label{class_markov_1_1_a_p_i_1_1_model_matrix_aa05bf3d2838be25198557b9f023d2980}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!edgeMatrix@{edgeMatrix}}
+\index{edgeMatrix@{edgeMatrix}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{edgeMatrix}{edgeMatrix}}
+{\footnotesize\ttfamily char$\ast$$\ast$ Markov\+::\+API\+::\+Model\+Matrix\+::edge\+Matrix\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+2-\/D Character array for the edge Matrix (The characters of Nodes) 
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00175}{175}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00081}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Deallocate\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00101}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Dump\+JSON()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00153}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Thread()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}\label{class_markov_1_1_model_a06d54b6e00a7e92b2c3bf72e1bfa560a}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!edges@{edges}}
+\index{edges@{edges}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily std\+::vector$<$Edge$<$char $>$$\ast$$>$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::edges\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+A list of all edges in this model. 
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00204}{204}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a6a74b627a264dc994281335ab354ae13}\label{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a6a74b627a264dc994281335ab354ae13}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!fileIO@{fileIO}}
+\index{fileIO@{fileIO}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{fileIO}{fileIO}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Model\+Matrix\+CLI.\+file\+IO}
+
+
+
+Definition at line \mbox{\hyperlink{mmx_8py_source_l00038}{38}} of file \mbox{\hyperlink{mmx_8py_source}{mmx.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{cudammx_8py_source_l00075}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+\_\+generate()}}, and \mbox{\hyperlink{mmx_8py_source_l00040}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+\_\+generate()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}\label{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!matrixIndex@{matrixIndex}}
+\index{matrixIndex@{matrixIndex}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{matrixIndex}{matrixIndex}}
+{\footnotesize\ttfamily char$\ast$ Markov\+::\+API\+::\+Model\+Matrix\+::matrix\+Index\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+to hold the Matrix index (To hold the orders of 2-\/D arrays\textquotesingle{}) 
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00190}{190}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00081}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Deallocate\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00101}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Dump\+JSON()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00153}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Thread()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!matrixSize@{matrixSize}}
+\index{matrixSize@{matrixSize}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{matrixSize}{matrixSize}}
+{\footnotesize\ttfamily int Markov\+::\+API\+::\+Model\+Matrix\+::matrix\+Size\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+to hold Matrix size 
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00185}{185}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00081}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Deallocate\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00101}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Dump\+JSON()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00153}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Thread()}}, and \mbox{\hyperlink{cuda_model_matrix_8cu_source_l00261}{Markov\+::\+API\+::\+CUDA\+::\+CUDAModel\+Matrix\+::\+Flatten\+Matrix()}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}\label{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!model@{model}}
+\index{model@{model}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Model\+Matrix\+CLI.\+model}
+
+
+
+Definition at line \mbox{\hyperlink{mmx_8py_source_l00030}{30}} of file \mbox{\hyperlink{mmx_8py_source}{mmx.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{cudammx_8py_source_l00075}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{base_8py_source_l00161}{Python.\+Markopy.\+Base\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{mmx_8py_source_l00040}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{mp_8py_source_l00031}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{base_8py_source_l00138}{Python.\+Markopy.\+Base\+CLI.\+export()}}, \mbox{\hyperlink{base_8py_source_l00077}{Python.\+Markopy.\+Base\+CLI.\+import\+\_\+model()}}, and \mbox{\hyperlink{base_8py_source_l00094}{Python.\+Markopy.\+Base\+CLI.\+train()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_af5f012dcc495dbe769e663d6cb161d6a}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_af5f012dcc495dbe769e663d6cb161d6a}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!modelSavefile@{modelSavefile}}
+\index{modelSavefile@{modelSavefile}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{modelSavefile}{modelSavefile}}
+{\footnotesize\ttfamily std\+::ofstream$\ast$ Markov\+::\+API\+::\+Markov\+Passwords\+::model\+Savefile\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Dataset file input of our system ~\newline
+ 
+
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8h_source_l00124}{124}} of file \mbox{\hyperlink{markov_passwords_8h_source}{markov\+Passwords.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}\label{class_markov_1_1_model_aa772f79f444c2971f615df7be5e28bca}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!nodes@{nodes}}
+\index{nodes@{nodes}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily std\+::map$<$char , Node$<$char $>$$\ast$$>$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::nodes\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Map Left\+Node is the Nodes Node\+Value Map Right\+Node is the node pointer. 
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00193}{193}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_markov_passwords_ac05e60de64e866027410d4fa1cd03248}\label{class_markov_1_1_a_p_i_1_1_markov_passwords_ac05e60de64e866027410d4fa1cd03248}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!outputFile@{outputFile}}
+\index{outputFile@{outputFile}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{outputFile}{outputFile}}
+{\footnotesize\ttfamily std\+::ofstream$\ast$ Markov\+::\+API\+::\+Markov\+Passwords\+::output\+File\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+File to save model of our system ~\newline
+ 
+
+
+
+Definition at line \mbox{\hyperlink{markov_passwords_8h_source_l00125}{125}} of file \mbox{\hyperlink{markov_passwords_8h_source}{markov\+Passwords.\+h}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_abc1d9ff41df2198aa2ddee090fedc91f}\label{class_python_1_1_markopy_1_1_base_c_l_i_abc1d9ff41df2198aa2ddee090fedc91f}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!parser@{parser}}
+\index{parser@{parser}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Base\+CLI.\+parser\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00025}{25}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{cudamarkopy_8py_source_l00053}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+\_\+\+\_\+init\+\_\+\+\_\+()}}, \mbox{\hyperlink{cudammx_8py_source_l00067}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00043}{Python.\+Markopy.\+Base\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00264}{Python.\+Markopy.\+Abstract\+Generation\+Model\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00282}{Python.\+Markopy.\+Abstract\+Training\+Model\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{markopy_8py_source_l00086}{Python.\+Markopy.\+Markopy\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{mmx_8py_source_l00032}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{cudamarkopy_8py_source_l00061}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+help()}}, and \mbox{\hyperlink{markopy_8py_source_l00095}{Python.\+Markopy.\+Markopy\+CLI.\+help()}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a54cb76c3f1109080b94237738542297e}\label{class_python_1_1_markopy_1_1_base_c_l_i_a54cb76c3f1109080b94237738542297e}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!print\_help@{print\_help}}
+\index{print\_help@{print\_help}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{print\_help}{print\_help}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Base\+CLI.\+print\+\_\+help\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00039}{39}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00051}{Python.\+Markopy.\+Base\+CLI.\+help()}}, and \mbox{\hyperlink{markopy_8py_source_l00095}{Python.\+Markopy.\+Markopy\+CLI.\+help()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!ready@{ready}}
+\index{ready@{ready}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{ready}{ready}}
+{\footnotesize\ttfamily bool Markov\+::\+API\+::\+Model\+Matrix\+::ready\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+True when matrix is constructed. False if not. 
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00200}{200}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00081}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Deallocate\+Matrix()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00015}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Model\+Matrix()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}\label{class_markov_1_1_model_ad2d9bf601df78f80076f5d3fbb65fe28}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!starterNode@{starterNode}}
+\index{starterNode@{starterNode}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{starterNode}{starterNode}}
+{\footnotesize\ttfamily Node$<$char $>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::starter\+Node\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [inherited]}}
+
+
+
+Starter Node of this model. 
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00198}{198}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!totalEdgeWeights@{totalEdgeWeights}}
+\index{totalEdgeWeights@{totalEdgeWeights}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{totalEdgeWeights}{totalEdgeWeights}}
+{\footnotesize\ttfamily long int$\ast$ Markov\+::\+API\+::\+Model\+Matrix\+::total\+Edge\+Weights\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Array of the Total Edge Weights. 
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00195}{195}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00081}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Deallocate\+Matrix()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00153}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Thread()}}.
+
+\mbox{\Hypertarget{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}\label{class_markov_1_1_a_p_i_1_1_model_matrix_a13399cfee212b026d2ad40af5137f328}} 
+\index{Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}!valueMatrix@{valueMatrix}}
+\index{valueMatrix@{valueMatrix}!Python.Markopy.ModelMatrixCLI@{Python.Markopy.ModelMatrixCLI}}
+\doxysubsubsection{\texorpdfstring{valueMatrix}{valueMatrix}}
+{\footnotesize\ttfamily long int$\ast$$\ast$ Markov\+::\+API\+::\+Model\+Matrix\+::value\+Matrix\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+2-\/d Integer array for the value Matrix (For the weights of Edges) 
+
+
+
+Definition at line \mbox{\hyperlink{model_matrix_8h_source_l00180}{180}} of file \mbox{\hyperlink{model_matrix_8h_source}{model\+Matrix.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00081}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Deallocate\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00101}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Dump\+JSON()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00153}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Fast\+Random\+Walk\+Thread()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Markopy/\+Markopy/src/\+CLI/\mbox{\hyperlink{mmx_8py}{mmx.\+py}}\end{DoxyCompactItemize}
