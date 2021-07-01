@@ -1,9 +1,14 @@
-""" @package cudamarkopy
- @file cudamarkopy_cli.py
- @namespace Python::CUDA::Markopy
- @brief Command line 
- @authors Ata Hakçıl
-"""
+#!/usr/bin/python3
+
+##
+# @namespace Python.CudaMarkopy
+# @brief wrapper scripts for CudaMarkopy
+#
+
+##
+# @file cudamarkopy.py
+# @brief base command line interface for python
+#
 
 import sys
 import os
@@ -35,24 +40,26 @@ except ModuleNotFoundError as e:
     else:
         raise e 
 
-
-#print(markopy)
-#print(inspect.getmembers(markopy))
-#import code
-#code.interact(local=locals())
-
 from termcolor import colored
 
 
-class CudaMarkopyCLI(markopy.MarkopyCLI):
+class CudaMarkopyCLI(markopy.MarkopyCLI, CudaModelMatrixCLI):
+    """!
+         @brief CUDA extension to MarkopyCLI. Adds CudaModelMatrixCLI to the interface.
+         @belongsto Python::CudaMarkopy
+         @extends Python::Markopy::MarkopyCLI
+         @extends Python::CudaMarkopy::CudaModelMatrixCLI
+    """
     def __init__(self) -> None:
-        super().__init__(add_help=False)
+        "! @brief initialize CLI selector"
+        markopy.MarkopyCLI.__init__(self,add_help=False)
         self.parser.epilog+=f"""
         {__file__.split("/")[-1]} -mt CUDA generate trained.mdl -n 500 -w output.txt
             Import trained.mdl, and generate 500 lines to output.txt
         """
 
     def help(self):
+        "! @brief overload help string"
         self.parser.print_help = self.stub
         self.args = self.parser.parse_known_args()[0]
         if(self.args.model_type!="_MMX"):
@@ -85,11 +92,15 @@ class CudaMarkopyCLI(markopy.MarkopyCLI):
             mp.parser.print_help()
         exit()
 
+    def parse(self):
+        markopy.MarkopyCLI.parse(self)
+
     def parse_fail(self):
+        "! @brief Not a valid model type"
         if(self.args.model_type == "CUDA"):
             self.cli = CudaModelMatrixCLI()
         else:
-            super().parse_fail()
+            markopy.MarkopyCLI.parse_fail(self)
         
 
 if __name__ == "__main__":

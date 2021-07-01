@@ -1,0 +1,41 @@
+\hypertarget{mp_8py_source}{}\doxysection{mp.\+py}
+\label{mp_8py_source}\index{Markopy/Markopy/src/CLI/mp.py@{Markopy/Markopy/src/CLI/mp.py}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mp_8py_source_l00001}\mbox{\hyperlink{namespacemp}{00001}} \textcolor{comment}{\#!/usr/bin/python3}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{keyword}{from} importlib.util \textcolor{keyword}{import} spec\_from\_loader, module\_from\_spec}
+\DoxyCodeLine{00009 \textcolor{keyword}{from} importlib.machinery \textcolor{keyword}{import} SourceFileLoader, ExtensionFileLoader}
+\DoxyCodeLine{00010 \textcolor{keyword}{import} os}
+\DoxyCodeLine{00011 \textcolor{keyword}{from} mm \textcolor{keyword}{import} MarkovModel}
+\DoxyCodeLine{00012 \textcolor{keyword}{from} importer \textcolor{keyword}{import} import\_markopy}
+\DoxyCodeLine{\Hypertarget{mp_8py_source_l00013}\mbox{\hyperlink{namespacemp_a3a8f6d5230358c7b9d783608fc6e3eed}{00013}} markopy = \mbox{\hyperlink{namespaceimporter_a94ba10dfc732b45384713b2908257fb8}{import\_markopy}}()}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015 \textcolor{keyword}{from} base \textcolor{keyword}{import} BaseCLI,AbstractGenerationModelCLI, AbstractTrainingModelCLI}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{\Hypertarget{mp_8py_source_l00017}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_passwords_c_l_i}{00017}} \textcolor{keyword}{class }\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_passwords_c_l_i}{MarkovPasswordsCLI}}(\mbox{\hyperlink{class_python_1_1_markopy_1_1_abstract_training_model_c_l_i}{AbstractTrainingModelCLI}},\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_model}{MarkovModel}}):}
+\DoxyCodeLine{00018     \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00019 \textcolor{stringliteral}{        @brief Extension of Python.Markopy.Base.BaseCLI for Markov::API::MarkovPasswords}}
+\DoxyCodeLine{00020 \textcolor{stringliteral}{        @belongsto Python::Markopy}}
+\DoxyCodeLine{00021 \textcolor{stringliteral}{        @extends Python::Markopy::MarkovModel}}
+\DoxyCodeLine{00022 \textcolor{stringliteral}{        @extends Python::Markopy::AbstractTrainingModelCLI}}
+\DoxyCodeLine{00023 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00024 \textcolor{stringliteral}{        adds -\/st/-\/-\/stdout arguement to the command line.}}
+\DoxyCodeLine{00025 \textcolor{stringliteral}{    "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{mp_8py_source_l00026}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_passwords_c_l_i_afb1e4694aa6b409bdd17d4d5856bb657}{00026}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_passwords_c_l_i_afb1e4694aa6b409bdd17d4d5856bb657}{\_\_init\_\_}}(self, add\_help:bool=\textcolor{keyword}{True}):}
+\DoxyCodeLine{00027         \textcolor{stringliteral}{"{}! @brief initialize model with Markov::API::MarkovPasswords"{}}}
+\DoxyCodeLine{00028         super().\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_passwords_c_l_i_afb1e4694aa6b409bdd17d4d5856bb657}{\_\_init\_\_}}(add\_help)}
+\DoxyCodeLine{\Hypertarget{mp_8py_source_l00029}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_passwords_c_l_i_a246811d35cc6b308d0c1efd67bba5bec}{00029}}         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a8dee51fa6e7fbad6ff1a5a3789fd2d0f}{model}}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_passwords_c_l_i_a246811d35cc6b308d0c1efd67bba5bec}{model}}model = markopy.MarkovPasswords()}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{\Hypertarget{mp_8py_source_l00031}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_passwords_c_l_i_a9da87ee9e7809f86dbff169a14229cef}{00031}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_passwords_c_l_i_a9da87ee9e7809f86dbff169a14229cef}{\_generate}}(self, wordlist):}
+\DoxyCodeLine{00032         \textcolor{stringliteral}{"{}! @brief map generation function to Markov::API::MarkovPasswords::Generate"{}}}
+\DoxyCodeLine{00033         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a8dee51fa6e7fbad6ff1a5a3789fd2d0f}{model}}\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_passwords_c_l_i_a246811d35cc6b308d0c1efd67bba5bec}{model}}model.\mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_model_a053683d627aaab8dec11ae020a2d09d3}{Generate}}(int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}args.count), wordlist, int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}args.min), int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}args.max), int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}args.threads))}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{mp_8py_source_l00036}\mbox{\hyperlink{namespacemp_ae960c2baa18cc446114bfddcf582cf24}{00036}}     mp = MarkovPasswordsCLI()}
+\DoxyCodeLine{00037     mp.parse()}
+\DoxyCodeLine{00038     mp.process()}
+
+\end{DoxyCode}

@@ -1,5 +1,5 @@
 \hypertarget{cuda_device_controller_8cu_source}{}\doxysection{cuda\+Device\+Controller.\+cu}
-\label{cuda_device_controller_8cu_source}\index{cudaDeviceController.cu@{cudaDeviceController.cu}}
+\label{cuda_device_controller_8cu_source}\index{Markopy/CudaMarkovAPI/src/cudaDeviceController.cu@{Markopy/CudaMarkovAPI/src/cudaDeviceController.cu}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001 \textcolor{comment}{/** @file cudaDeviceController.cu}}
@@ -9,7 +9,7 @@
 \DoxyCodeLine{00005 \textcolor{comment}{ * @copydoc Markov::API::CUDA::CUDADeviceController}}
 \DoxyCodeLine{00006 \textcolor{comment}{ */}}
 \DoxyCodeLine{00007 }
-\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{cuda_device_controller_8h}{"cudaDeviceController.h"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{cuda_device_controller_8h}{"{}cudaDeviceController.h"{}}}}
 \DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{iostream}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00010 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{curand\_kernel}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00011 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cuda}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
@@ -23,19 +23,19 @@
 \DoxyCodeLine{00019         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nDevices; i++) \{}
 \DoxyCodeLine{00020             cudaDeviceProp prop;}
 \DoxyCodeLine{00021             cudaGetDeviceProperties(\&prop, i);}
-\DoxyCodeLine{00022             std::cerr << \textcolor{stringliteral}{"Device Number: "} <<  i  << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00023             std::cerr << \textcolor{stringliteral}{"Device name: "} << prop.name << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00024             std::cerr << \textcolor{stringliteral}{"Memory Clock Rate (KHz): "} << prop.memoryClockRate << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00025             std::cerr << \textcolor{stringliteral}{"Memory Bus Width (bits): "} << prop.memoryBusWidth << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00026             std::cerr << \textcolor{stringliteral}{"Peak Memory Bandwidth (GB/s): "} << 2.0 * prop.memoryClockRate * (prop.memoryBusWidth / 8) / 1.0e6 << \textcolor{stringliteral}{"\(\backslash\)n"};}
-\DoxyCodeLine{00027             std::cerr << \textcolor{stringliteral}{"Max Linear Threads: "} << prop.maxThreadsDim[0] << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00022             std::cerr << \textcolor{stringliteral}{"{}Device Number: "{}} <<  i  << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00023             std::cerr << \textcolor{stringliteral}{"{}Device name: "{}} << prop.name << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00024             std::cerr << \textcolor{stringliteral}{"{}Memory Clock Rate (KHz): "{}} << prop.memoryClockRate << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00025             std::cerr << \textcolor{stringliteral}{"{}Memory Bus Width (bits): "{}} << prop.memoryBusWidth << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00026             std::cerr << \textcolor{stringliteral}{"{}Peak Memory Bandwidth (GB/s): "{}} << 2.0 * prop.memoryClockRate * (prop.memoryBusWidth / 8) / 1.0e6 << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00027             std::cerr << \textcolor{stringliteral}{"{}Max Linear Threads: "{}} << prop.maxThreadsDim[0] << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
 \DoxyCodeLine{00028 }
 \DoxyCodeLine{00029         \}}
 \DoxyCodeLine{00030     \}}
 \DoxyCodeLine{00031 }
 \DoxyCodeLine{\Hypertarget{cuda_device_controller_8cu_source_l00032}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_aeced847407d758d2f391289fb9884702}{00032}}     \_\_host\_\_ \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller_abb56db7c9437eb4d71c390fa2b22c738}{CUDADeviceController}}::CudaCheckNotifyErr(cudaError\_t \_status, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg, \textcolor{keywordtype}{bool} bExit) \{}
 \DoxyCodeLine{00033         \textcolor{keywordflow}{if} (\_status != cudaSuccess) \{}
-\DoxyCodeLine{00034             std::cerr << \textcolor{stringliteral}{"\(\backslash\)033[1;31m"} << msg  << \textcolor{stringliteral}{" -\/> "} << cudaGetErrorString(\_status)  << \textcolor{stringliteral}{" ("}<< \_status << \textcolor{stringliteral}{")"} << \textcolor{stringliteral}{"\(\backslash\)033[0m"} << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00034             std::cerr << \textcolor{stringliteral}{"{}\(\backslash\)033[1;31m"{}} << msg  << \textcolor{stringliteral}{"{} -\/> "{}} << cudaGetErrorString(\_status)  << \textcolor{stringliteral}{"{} ("{}}<< \_status << \textcolor{stringliteral}{"{})"{}} << \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}} << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
 \DoxyCodeLine{00035 }
 \DoxyCodeLine{00036             \textcolor{keywordflow}{if}(bExit) \{}
 \DoxyCodeLine{00037                 cudaDeviceReset();}

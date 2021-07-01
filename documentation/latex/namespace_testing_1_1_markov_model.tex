@@ -8,11 +8,11 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespace_testing_1_1_markov_model_a2f641a67bea75fff3e4c55c74926132f}{T\+E\+S\+T\+\_\+\+C\+L\+A\+SS}} (Edge)
+\mbox{\hyperlink{namespace_testing_1_1_markov_model_a2f641a67bea75fff3e4c55c74926132f}{TEST\+\_\+\+CLASS}} (Edge)
 \begin{DoxyCompactList}\small\item\em Test class for rest of Edge cases. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespace_testing_1_1_markov_model_ad59534ad9237abf1a8b09bd7f9263da2}{T\+E\+S\+T\+\_\+\+C\+L\+A\+SS}} (Node)
+\mbox{\hyperlink{namespace_testing_1_1_markov_model_ad59534ad9237abf1a8b09bd7f9263da2}{TEST\+\_\+\+CLASS}} (Node)
 \begin{DoxyCompactList}\small\item\em Test class for rest of Node cases. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespace_testing_1_1_markov_model_a84a573ca81cb8cb3db9845b0cdcf06a6}{T\+E\+S\+T\+\_\+\+C\+L\+A\+SS}} (Model)
+\mbox{\hyperlink{namespace_testing_1_1_markov_model_a84a573ca81cb8cb3db9845b0cdcf06a6}{TEST\+\_\+\+CLASS}} (Model)
 \begin{DoxyCompactList}\small\item\em Test class for rest of model cases. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -24,7 +24,7 @@
 \index{Testing::MarkovModel@{Testing::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}}
 \index{TEST\_CLASS@{TEST\_CLASS}!Testing::MarkovModel@{Testing::MarkovModel}}
 \doxysubsubsection{\texorpdfstring{TEST\_CLASS()}{TEST\_CLASS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily Testing\+::\+Markov\+Model\+::\+T\+E\+S\+T\+\_\+\+C\+L\+A\+SS (\begin{DoxyParamCaption}\item[{Edge}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Testing\+::\+Markov\+Model\+::\+TEST\+\_\+\+CLASS (\begin{DoxyParamCaption}\item[{Edge}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -72,7 +72,7 @@ Definition at line \mbox{\hyperlink{_unit_tests_8cpp_source_l00500}{500}} of fil
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_unit_tests_8cpp_source_l00598}{T\+E\+S\+T\+\_\+\+C\+L\+A\+S\+S()}}.
+References \mbox{\hyperlink{_unit_tests_8cpp_source_l00598}{TEST\+\_\+\+CLASS()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -86,7 +86,7 @@ Here is the call graph for this function\+:
 \index{Testing::MarkovModel@{Testing::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}}
 \index{TEST\_CLASS@{TEST\_CLASS}!Testing::MarkovModel@{Testing::MarkovModel}}
 \doxysubsubsection{\texorpdfstring{TEST\_CLASS()}{TEST\_CLASS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Testing\+::\+Markov\+Model\+::\+T\+E\+S\+T\+\_\+\+C\+L\+A\+SS (\begin{DoxyParamCaption}\item[{Model}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Testing\+::\+Markov\+Model\+::\+TEST\+\_\+\+CLASS (\begin{DoxyParamCaption}\item[{Model}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -104,31 +104,31 @@ Definition at line \mbox{\hyperlink{_unit_tests_8cpp_source_l00598}{598}} of fil
 \DoxyCodeLine{00602                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* res2 = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}[12 + 5];}
 \DoxyCodeLine{00603                 \mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
 \DoxyCodeLine{00604                 \mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<unsigned char>}} m;}
-\DoxyCodeLine{00605                 \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* starter = m.\mbox{\hyperlink{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}{StarterNode}}();}
+\DoxyCodeLine{00605                 \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* starter = m.\mbox{\hyperlink{class_markov_1_1_model_a0e53104e4ec665f005529f51a80c857d}{StarterNode}}();}
 \DoxyCodeLine{00606                 \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* a = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'a'});}
 \DoxyCodeLine{00607                 \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* b = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'b'});}
 \DoxyCodeLine{00608                 \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* c = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'c'});}
 \DoxyCodeLine{00609                 \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* end = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(0xff);}
-\DoxyCodeLine{00610                 starter-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(a)-\/>AdjustEdge(1);}
-\DoxyCodeLine{00611                 a-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(b)-\/>AdjustEdge(1);}
-\DoxyCodeLine{00612                 b-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(c)-\/>AdjustEdge(1);}
-\DoxyCodeLine{00613                 c-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(end)-\/>AdjustEdge(1);}
+\DoxyCodeLine{00610                 starter-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(a)-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(1);}
+\DoxyCodeLine{00611                 a-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(b)-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(1);}
+\DoxyCodeLine{00612                 b-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(c)-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(1);}
+\DoxyCodeLine{00613                 c-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(end)-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(1);}
 \DoxyCodeLine{00614 }
 \DoxyCodeLine{00615                 \textcolor{keywordtype}{char}* res = (\textcolor{keywordtype}{char}*)m.\mbox{\hyperlink{class_markov_1_1_model_aa4a11c6679c998936332f8409ae95375}{RandomWalk}}(\&MarsagliaRandomEngine,1,12,res2);}
-\DoxyCodeLine{00616                 Assert::IsFalse(strcmp(res, \textcolor{stringliteral}{"abc"}));}
+\DoxyCodeLine{00616                 Assert::IsFalse(strcmp(res, \textcolor{stringliteral}{"{}abc"{}}));}
 \DoxyCodeLine{00617             \}}
 \DoxyCodeLine{00618             TEST\_METHOD(functionoal\_random\_walk\_without\_any) \{}
 \DoxyCodeLine{00619                 \mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<unsigned char>}} m;}
-\DoxyCodeLine{00620                 \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* starter = m.\mbox{\hyperlink{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}{StarterNode}}();}
+\DoxyCodeLine{00620                 \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* starter = m.\mbox{\hyperlink{class_markov_1_1_model_a0e53104e4ec665f005529f51a80c857d}{StarterNode}}();}
 \DoxyCodeLine{00621                 \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* a = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'a'});}
 \DoxyCodeLine{00622                 \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* b = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'b'});}
 \DoxyCodeLine{00623                 \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* c = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(\textcolor{charliteral}{'c'});}
 \DoxyCodeLine{00624                 \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}* end = \textcolor{keyword}{new} \mbox{\hyperlink{class_markov_1_1_node}{Markov::Node<unsigned char>}}(0xff);}
 \DoxyCodeLine{00625                 \mbox{\hyperlink{class_markov_1_1_edge}{Markov::Edge<unsigned char>}}* res = NULL;}
-\DoxyCodeLine{00626                 starter-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(a)-\/>AdjustEdge(1);}
-\DoxyCodeLine{00627                 a-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(b)-\/>AdjustEdge(1);}
-\DoxyCodeLine{00628                 b-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(c)-\/>AdjustEdge(1);}
-\DoxyCodeLine{00629                 c-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(end)-\/>AdjustEdge(1);}
+\DoxyCodeLine{00626                 starter-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(a)-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(1);}
+\DoxyCodeLine{00627                 a-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(b)-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(1);}
+\DoxyCodeLine{00628                 b-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(c)-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(1);}
+\DoxyCodeLine{00629                 c-\/>\mbox{\hyperlink{class_markov_1_1_node_a0e867cddf6b8dd784c36b12aa820fee9}{Link}}(end)-\/>\mbox{\hyperlink{class_markov_1_1_edge_aa9d6cc6e631f1b515b4db604c96ad4ad}{AdjustEdge}}(1);}
 \DoxyCodeLine{00630 }
 \DoxyCodeLine{00631                 res = starter-\/>\mbox{\hyperlink{class_markov_1_1_node_ad836573fbdec1c6d7e72945f48ed081c}{FindEdge}}(\textcolor{charliteral}{'D'});}
 \DoxyCodeLine{00632                 Assert::IsNull(res);}
@@ -139,11 +139,11 @@ Definition at line \mbox{\hyperlink{_unit_tests_8cpp_source_l00598}{598}} of fil
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_unit_tests_8cpp_source_l00598}{T\+E\+S\+T\+\_\+\+C\+L\+A\+S\+S()}}.
+References \mbox{\hyperlink{_unit_tests_8cpp_source_l00598}{TEST\+\_\+\+CLASS()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_unit_tests_8cpp_source_l00500}{T\+E\+S\+T\+\_\+\+C\+L\+A\+S\+S()}}.
+Referenced by \mbox{\hyperlink{_unit_tests_8cpp_source_l00500}{TEST\+\_\+\+CLASS()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -165,7 +165,7 @@ Here is the caller graph for this function\+:
 \index{Testing::MarkovModel@{Testing::MarkovModel}!TEST\_CLASS@{TEST\_CLASS}}
 \index{TEST\_CLASS@{TEST\_CLASS}!Testing::MarkovModel@{Testing::MarkovModel}}
 \doxysubsubsection{\texorpdfstring{TEST\_CLASS()}{TEST\_CLASS()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Testing\+::\+Markov\+Model\+::\+T\+E\+S\+T\+\_\+\+C\+L\+A\+SS (\begin{DoxyParamCaption}\item[{Node}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Testing\+::\+Markov\+Model\+::\+TEST\+\_\+\+CLASS (\begin{DoxyParamCaption}\item[{Node}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -235,7 +235,7 @@ Definition at line \mbox{\hyperlink{_unit_tests_8cpp_source_l00538}{538}} of fil
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_unit_tests_8cpp_source_l00598}{T\+E\+S\+T\+\_\+\+C\+L\+A\+S\+S()}}.
+References \mbox{\hyperlink{_unit_tests_8cpp_source_l00598}{TEST\+\_\+\+CLASS()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

@@ -1,5 +1,5 @@
 \hypertarget{argparse_8h_source}{}\doxysection{argparse.\+h}
-\label{argparse_8h_source}\index{argparse.h@{argparse.h}}
+\label{argparse_8h_source}\index{Markopy/MarkovAPICLI/src/argparse.h@{Markopy/MarkovAPICLI/src/argparse.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001 \textcolor{comment}{/** @file argparse.h}}
@@ -44,7 +44,7 @@
 \DoxyCodeLine{\Hypertarget{argparse_8h_source_l00040}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a023e251e3bffa25209efd7bb9a3ffbe6}{00040}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a023e251e3bffa25209efd7bb9a3ffbe6}{bFailure}};}
 \DoxyCodeLine{00041 }
 \DoxyCodeLine{00042         \textcolor{comment}{/** }}
-\DoxyCodeLine{00043 \textcolor{comment}{            @brief Seperator character to use with training data. (character between occurence and value)"  }}
+\DoxyCodeLine{00043 \textcolor{comment}{            @brief Seperator character to use with training data. (character between occurence and value)"{}  }}
 \DoxyCodeLine{00044 \textcolor{comment}{        */}}
 \DoxyCodeLine{\Hypertarget{argparse_8h_source_l00045}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_ac558e96f2f1d618782339c27bd0f7abb}{00045}}         \textcolor{keywordtype}{char} \mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_ac558e96f2f1d618782339c27bd0f7abb}{seperator}};}
 \DoxyCodeLine{00046 }
@@ -78,7 +78,7 @@
 \DoxyCodeLine{00074 \textcolor{comment}{        */}}
 \DoxyCodeLine{\Hypertarget{argparse_8h_source_l00075}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf5a58de13f5a85f2af513798c491c08}{00075}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf5a58de13f5a85f2af513798c491c08}{generateN}};}
 \DoxyCodeLine{00076 }
-\DoxyCodeLine{00077     \} ProgramOptions;}
+\DoxyCodeLine{\Hypertarget{argparse_8h_source_l00077}\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_l_i_acdf1c80e63d183095fe2956cc38bf042}{00077}}     \} ProgramOptions;}
 \DoxyCodeLine{00078 }
 \DoxyCodeLine{00079 }
 \DoxyCodeLine{00080     \textcolor{comment}{/** @brief Parse command line arguements }}
@@ -86,7 +86,7 @@
 \DoxyCodeLine{\Hypertarget{argparse_8h_source_l00082}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse}{00082}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse}{Argparse}} \{}
 \DoxyCodeLine{00083     \textcolor{keyword}{public}:}
 \DoxyCodeLine{00084 }
-\DoxyCodeLine{00085         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_ac8aafb4b712616440ab0e8ed5e25f02e}{Argparse}}();}
+\DoxyCodeLine{\Hypertarget{argparse_8h_source_l00085}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_ac8aafb4b712616440ab0e8ed5e25f02e}{00085}}         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_ac8aafb4b712616440ab0e8ed5e25f02e}{Argparse}}();}
 \DoxyCodeLine{00086 }
 \DoxyCodeLine{00087         \textcolor{comment}{/** @brief Parse command line arguements.}}
 \DoxyCodeLine{00088 \textcolor{comment}{         * }}
@@ -107,21 +107,21 @@
 \DoxyCodeLine{00103 \textcolor{comment}{            std::string datasets;}}
 \DoxyCodeLine{00104 \textcolor{comment}{            int generateN;}}
 \DoxyCodeLine{00105 \textcolor{comment}{            */}}
-\DoxyCodeLine{00106             opt::options\_description desc(\textcolor{stringliteral}{"Options"});}
+\DoxyCodeLine{00106             opt::options\_description desc(\textcolor{stringliteral}{"{}Options"{}});}
 \DoxyCodeLine{00107 }
 \DoxyCodeLine{00108 }
 \DoxyCodeLine{00109             desc.add\_options()}
-\DoxyCodeLine{00110                 (\textcolor{stringliteral}{"generate"}, \textcolor{stringliteral}{"Generate strings with given parameters"})}
-\DoxyCodeLine{00111                 (\textcolor{stringliteral}{"train"}, \textcolor{stringliteral}{"Train model with given parameters"})}
-\DoxyCodeLine{00112                 (\textcolor{stringliteral}{"combine"}, \textcolor{stringliteral}{"Combine"})}
-\DoxyCodeLine{00113                 (\textcolor{stringliteral}{"import"}, opt::value<std::string>(), \textcolor{stringliteral}{"Import model file"})}
-\DoxyCodeLine{00114                 (\textcolor{stringliteral}{"output"}, opt::value<std::string>(), \textcolor{stringliteral}{"Output model file. This model will be exported when done. Will be ignored for generation mode"})}
-\DoxyCodeLine{00115                 (\textcolor{stringliteral}{"dataset"}, opt::value<std::string>(), \textcolor{stringliteral}{"Dataset file to read input from training. Will be ignored for generation mode"})}
-\DoxyCodeLine{00116                 (\textcolor{stringliteral}{"seperator"}, opt::value<\textcolor{keywordtype}{char}>(), \textcolor{stringliteral}{"Seperator character to use with training data. (character between occurence and value)"})}
-\DoxyCodeLine{00117                 (\textcolor{stringliteral}{"wordlist"}, opt::value<std::string>(), \textcolor{stringliteral}{"Wordlist file path to export generation results to. Will be ignored for training mode"})}
-\DoxyCodeLine{00118                 (\textcolor{stringliteral}{"count"}, opt::value<\textcolor{keywordtype}{int}>(), \textcolor{stringliteral}{"Number of lines to generate. Ignored in training mode"})}
-\DoxyCodeLine{00119                 (\textcolor{stringliteral}{"verbosity"}, \textcolor{stringliteral}{"Output verbosity"})}
-\DoxyCodeLine{00120                 (\textcolor{stringliteral}{"help"}, \textcolor{stringliteral}{"Option definitions"});}
+\DoxyCodeLine{00110                 (\textcolor{stringliteral}{"{}generate"{}}, \textcolor{stringliteral}{"{}Generate strings with given parameters"{}})}
+\DoxyCodeLine{00111                 (\textcolor{stringliteral}{"{}train"{}}, \textcolor{stringliteral}{"{}Train model with given parameters"{}})}
+\DoxyCodeLine{00112                 (\textcolor{stringliteral}{"{}combine"{}}, \textcolor{stringliteral}{"{}Combine"{}})}
+\DoxyCodeLine{00113                 (\textcolor{stringliteral}{"{}import"{}}, opt::value<std::string>(), \textcolor{stringliteral}{"{}Import model file"{}})}
+\DoxyCodeLine{00114                 (\textcolor{stringliteral}{"{}output"{}}, opt::value<std::string>(), \textcolor{stringliteral}{"{}Output model file. This model will be exported when done. Will be ignored for generation mode"{}})}
+\DoxyCodeLine{00115                 (\textcolor{stringliteral}{"{}dataset"{}}, opt::value<std::string>(), \textcolor{stringliteral}{"{}Dataset file to read input from training. Will be ignored for generation mode"{}})}
+\DoxyCodeLine{00116                 (\textcolor{stringliteral}{"{}seperator"{}}, opt::value<\textcolor{keywordtype}{char}>(), \textcolor{stringliteral}{"{}Seperator character to use with training data. (character between occurence and value)"{}})}
+\DoxyCodeLine{00117                 (\textcolor{stringliteral}{"{}wordlist"{}}, opt::value<std::string>(), \textcolor{stringliteral}{"{}Wordlist file path to export generation results to. Will be ignored for training mode"{}})}
+\DoxyCodeLine{00118                 (\textcolor{stringliteral}{"{}count"{}}, opt::value<\textcolor{keywordtype}{int}>(), \textcolor{stringliteral}{"{}Number of lines to generate. Ignored in training mode"{}})}
+\DoxyCodeLine{00119                 (\textcolor{stringliteral}{"{}verbosity"{}}, \textcolor{stringliteral}{"{}Output verbosity"{}})}
+\DoxyCodeLine{00120                 (\textcolor{stringliteral}{"{}help"{}}, \textcolor{stringliteral}{"{}Option definitions"{}});}
 \DoxyCodeLine{00121 }
 \DoxyCodeLine{00122                 opt::variables\_map vm;}
 \DoxyCodeLine{00123 }
@@ -130,73 +130,73 @@
 \DoxyCodeLine{00126                 opt::notify(vm);}
 \DoxyCodeLine{00127 }
 \DoxyCodeLine{00128                 \textcolor{comment}{//std::cout << desc << std::endl;}}
-\DoxyCodeLine{00129                 \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"help"})) \{}
+\DoxyCodeLine{00129                 \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"{}help"{}})) \{}
 \DoxyCodeLine{00130                 std::cout << desc << std::endl;}
 \DoxyCodeLine{00131                 \}}
 \DoxyCodeLine{00132 }
-\DoxyCodeLine{00133                 \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"output"}) == 0) \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a400a7aeef489e43ba4ff017492ecce8d}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a400a7aeef489e43ba4ff017492ecce8d}{outputfilename}} = \textcolor{stringliteral}{"NULL"};}
-\DoxyCodeLine{00134                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"output"}) == 1) \{}
-\DoxyCodeLine{00135                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a400a7aeef489e43ba4ff017492ecce8d}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a400a7aeef489e43ba4ff017492ecce8d}{outputfilename}} = vm[\textcolor{stringliteral}{"output"}].as<std::string>();}
+\DoxyCodeLine{00133                 \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"{}output"{}}) == 0) \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a400a7aeef489e43ba4ff017492ecce8d}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a400a7aeef489e43ba4ff017492ecce8d}{outputfilename}} = \textcolor{stringliteral}{"{}NULL"{}};}
+\DoxyCodeLine{00134                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"{}output"{}}) == 1) \{}
+\DoxyCodeLine{00135                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a400a7aeef489e43ba4ff017492ecce8d}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a400a7aeef489e43ba4ff017492ecce8d}{outputfilename}} = vm[\textcolor{stringliteral}{"{}output"{}}].as<std::string>();}
 \DoxyCodeLine{00136                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a592853a506c650259ebb26e1a6a64f5c}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a592853a506c650259ebb26e1a6a64f5c}{bExport}} = \textcolor{keyword}{true};}
 \DoxyCodeLine{00137                 \}}
 \DoxyCodeLine{00138                 \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{00139                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a023e251e3bffa25209efd7bb9a3ffbe6}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a023e251e3bffa25209efd7bb9a3ffbe6}{bFailure}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{00140                     std::cout << \textcolor{stringliteral}{"UNIDENTIFIED INPUT"} << std::endl;}
+\DoxyCodeLine{00140                     std::cout << \textcolor{stringliteral}{"{}UNIDENTIFIED INPUT"{}} << std::endl;}
 \DoxyCodeLine{00141                     std::cout << desc << std::endl;}
 \DoxyCodeLine{00142                 \}}
 \DoxyCodeLine{00143 }
 \DoxyCodeLine{00144 }
-\DoxyCodeLine{00145                 \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"dataset"}) == 0) \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a616de3cae109698c5d0fb6968e0dcc3b}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a616de3cae109698c5d0fb6968e0dcc3b}{datasetname}} = \textcolor{stringliteral}{"NULL"};}
-\DoxyCodeLine{00146                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"dataset"}) == 1) \{}
-\DoxyCodeLine{00147                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a616de3cae109698c5d0fb6968e0dcc3b}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a616de3cae109698c5d0fb6968e0dcc3b}{datasetname}} = vm[\textcolor{stringliteral}{"dataset"}].as<std::string>();}
+\DoxyCodeLine{00145                 \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"{}dataset"{}}) == 0) \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a616de3cae109698c5d0fb6968e0dcc3b}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a616de3cae109698c5d0fb6968e0dcc3b}{datasetname}} = \textcolor{stringliteral}{"{}NULL"{}};}
+\DoxyCodeLine{00146                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"{}dataset"{}}) == 1) \{}
+\DoxyCodeLine{00147                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a616de3cae109698c5d0fb6968e0dcc3b}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a616de3cae109698c5d0fb6968e0dcc3b}{datasetname}} = vm[\textcolor{stringliteral}{"{}dataset"{}}].as<std::string>();}
 \DoxyCodeLine{00148                 \}}
 \DoxyCodeLine{00149                 \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{00150                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a023e251e3bffa25209efd7bb9a3ffbe6}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a023e251e3bffa25209efd7bb9a3ffbe6}{bFailure}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{00151                     std::cout << \textcolor{stringliteral}{"UNIDENTIFIED INPUT"} << std::endl;}
+\DoxyCodeLine{00151                     std::cout << \textcolor{stringliteral}{"{}UNIDENTIFIED INPUT"{}} << std::endl;}
 \DoxyCodeLine{00152                     std::cout << desc << std::endl;}
 \DoxyCodeLine{00153                 \}}
 \DoxyCodeLine{00154 }
 \DoxyCodeLine{00155 }
-\DoxyCodeLine{00156                 \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"wordlist"}) == 0) \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_aaa883eb76c76e4647acbf6c258eb3ae2}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_aaa883eb76c76e4647acbf6c258eb3ae2}{wordlistname}} = \textcolor{stringliteral}{"NULL"};}
-\DoxyCodeLine{00157                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"wordlist"}) == 1) \{}
-\DoxyCodeLine{00158                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_aaa883eb76c76e4647acbf6c258eb3ae2}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_aaa883eb76c76e4647acbf6c258eb3ae2}{wordlistname}} = vm[\textcolor{stringliteral}{"wordlist"}].as<std::string>();}
+\DoxyCodeLine{00156                 \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"{}wordlist"{}}) == 0) \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_aaa883eb76c76e4647acbf6c258eb3ae2}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_aaa883eb76c76e4647acbf6c258eb3ae2}{wordlistname}} = \textcolor{stringliteral}{"{}NULL"{}};}
+\DoxyCodeLine{00157                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"{}wordlist"{}}) == 1) \{}
+\DoxyCodeLine{00158                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_aaa883eb76c76e4647acbf6c258eb3ae2}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_aaa883eb76c76e4647acbf6c258eb3ae2}{wordlistname}} = vm[\textcolor{stringliteral}{"{}wordlist"{}}].as<std::string>();}
 \DoxyCodeLine{00159                 \}}
 \DoxyCodeLine{00160                 \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{00161                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a023e251e3bffa25209efd7bb9a3ffbe6}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a023e251e3bffa25209efd7bb9a3ffbe6}{bFailure}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{00162                     std::cout << \textcolor{stringliteral}{"UNIDENTIFIED INPUT"} << std::endl;}
+\DoxyCodeLine{00162                     std::cout << \textcolor{stringliteral}{"{}UNIDENTIFIED INPUT"{}} << std::endl;}
 \DoxyCodeLine{00163                     std::cout << desc << std::endl;}
 \DoxyCodeLine{00164                 \}}
 \DoxyCodeLine{00165 }
-\DoxyCodeLine{00166                 \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"import"}) == 0) \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf117f288aafb490d2aa38cf7332db8c}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf117f288aafb490d2aa38cf7332db8c}{importname}} = \textcolor{stringliteral}{"NULL"};}
-\DoxyCodeLine{00167                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"import"}) == 1) \{}
-\DoxyCodeLine{00168                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf117f288aafb490d2aa38cf7332db8c}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf117f288aafb490d2aa38cf7332db8c}{importname}} = vm[\textcolor{stringliteral}{"import"}].as<std::string>();}
+\DoxyCodeLine{00166                 \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"{}import"{}}) == 0) \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf117f288aafb490d2aa38cf7332db8c}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf117f288aafb490d2aa38cf7332db8c}{importname}} = \textcolor{stringliteral}{"{}NULL"{}};}
+\DoxyCodeLine{00167                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"{}import"{}}) == 1) \{}
+\DoxyCodeLine{00168                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf117f288aafb490d2aa38cf7332db8c}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf117f288aafb490d2aa38cf7332db8c}{importname}} = vm[\textcolor{stringliteral}{"{}import"{}}].as<std::string>();}
 \DoxyCodeLine{00169                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_ade5ad5ab58d7ba472a1886ac90a854f7}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_ade5ad5ab58d7ba472a1886ac90a854f7}{bImport}} = \textcolor{keyword}{true};}
 \DoxyCodeLine{00170                 \}}
 \DoxyCodeLine{00171                 \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{00172                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a023e251e3bffa25209efd7bb9a3ffbe6}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a023e251e3bffa25209efd7bb9a3ffbe6}{bFailure}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{00173                     std::cout << \textcolor{stringliteral}{"UNIDENTIFIED INPUT"} << std::endl;}
+\DoxyCodeLine{00173                     std::cout << \textcolor{stringliteral}{"{}UNIDENTIFIED INPUT"{}} << std::endl;}
 \DoxyCodeLine{00174                     std::cout << desc << std::endl;}
 \DoxyCodeLine{00175                 \}}
 \DoxyCodeLine{00176 }
 \DoxyCodeLine{00177 }
-\DoxyCodeLine{00178                 \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"count"}) == 0) \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf5a58de13f5a85f2af513798c491c08}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf5a58de13f5a85f2af513798c491c08}{generateN}} = 0;}
-\DoxyCodeLine{00179                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"count"}) == 1) \{}
-\DoxyCodeLine{00180                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf5a58de13f5a85f2af513798c491c08}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf5a58de13f5a85f2af513798c491c08}{generateN}} = vm[\textcolor{stringliteral}{"count"}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00178                 \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"{}count"{}}) == 0) \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf5a58de13f5a85f2af513798c491c08}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf5a58de13f5a85f2af513798c491c08}{generateN}} = 0;}
+\DoxyCodeLine{00179                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"{}count"{}}) == 1) \{}
+\DoxyCodeLine{00180                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf5a58de13f5a85f2af513798c491c08}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_adf5a58de13f5a85f2af513798c491c08}{generateN}} = vm[\textcolor{stringliteral}{"{}count"{}}].as<\textcolor{keywordtype}{int}>();}
 \DoxyCodeLine{00181                 \}}
 \DoxyCodeLine{00182                 \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{00183                     \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse_a7cce367bd032897cc433adf667099a6c}{po}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a023e251e3bffa25209efd7bb9a3ffbe6}{.}}\mbox{\hyperlink{struct_markov_1_1_a_p_i_1_1_c_l_i_1_1__program_options_a023e251e3bffa25209efd7bb9a3ffbe6}{bFailure}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{00184                     std::cout << \textcolor{stringliteral}{"UNIDENTIFIED INPUT"} << std::endl;}
+\DoxyCodeLine{00184                     std::cout << \textcolor{stringliteral}{"{}UNIDENTIFIED INPUT"{}} << std::endl;}
 \DoxyCodeLine{00185                     std::cout << desc << std::endl;}
 \DoxyCodeLine{00186                 \}}
 \DoxyCodeLine{00187 }
-\DoxyCodeLine{00188                 \textcolor{comment}{/*std::cout << vm["output"].as<std::string>() << std::endl;}}
-\DoxyCodeLine{00189 \textcolor{comment}{                std::cout << vm["dataset"].as<std::string>() << std::endl;}}
-\DoxyCodeLine{00190 \textcolor{comment}{                std::cout << vm["wordlist"].as<std::string>() << std::endl;}}
-\DoxyCodeLine{00191 \textcolor{comment}{                std::cout << vm["output"].as<std::string>() << std::endl;}}
-\DoxyCodeLine{00192 \textcolor{comment}{                std::cout << vm["count"].as<int>() << std::endl;*/}}
+\DoxyCodeLine{00188                 \textcolor{comment}{/*std::cout << vm["{}output"{}].as<std::string>() << std::endl;}}
+\DoxyCodeLine{00189 \textcolor{comment}{                std::cout << vm["{}dataset"{}].as<std::string>() << std::endl;}}
+\DoxyCodeLine{00190 \textcolor{comment}{                std::cout << vm["{}wordlist"{}].as<std::string>() << std::endl;}}
+\DoxyCodeLine{00191 \textcolor{comment}{                std::cout << vm["{}output"{}].as<std::string>() << std::endl;}}
+\DoxyCodeLine{00192 \textcolor{comment}{                std::cout << vm["{}count"{}].as<int>() << std::endl;*/}}
 \DoxyCodeLine{00193 }
 \DoxyCodeLine{00194 }
-\DoxyCodeLine{00195                 \textcolor{comment}{//else if (vm.count("train")) std::cout << "train oldu" << std::endl;}}
+\DoxyCodeLine{00195                 \textcolor{comment}{//else if (vm.count("{}train"{})) std::cout << "{}train oldu"{} << std::endl;}}
 \DoxyCodeLine{00196         \}}
 \DoxyCodeLine{00197 }
 \DoxyCodeLine{00198         \textcolor{comment}{/** @brief Getter for command line options}}

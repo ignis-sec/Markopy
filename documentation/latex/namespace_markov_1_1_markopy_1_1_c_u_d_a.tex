@@ -1,0 +1,59 @@
+\hypertarget{namespace_markov_1_1_markopy_1_1_c_u_d_a}{}\doxysection{Markov\+::Markopy\+::CUDA Namespace Reference}
+\label{namespace_markov_1_1_markopy_1_1_c_u_d_a}\index{Markov::Markopy::CUDA@{Markov::Markopy::CUDA}}
+
+
+CPython module for \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{Markov\+::\+API\+::\+CUDA}} objects.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_markov_1_1_markopy_1_1_c_u_d_a_a584fc8e70bb6cf08f544f52805245e19}{BOOST\+\_\+\+PYTHON\+\_\+\+MODULE}} (cudamarkopy)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CPython module for \mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{Markov\+::\+API\+::\+CUDA}} objects. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_markov_1_1_markopy_1_1_c_u_d_a_a584fc8e70bb6cf08f544f52805245e19}\label{namespace_markov_1_1_markopy_1_1_c_u_d_a_a584fc8e70bb6cf08f544f52805245e19}} 
+\index{Markov::Markopy::CUDA@{Markov::Markopy::CUDA}!BOOST\_PYTHON\_MODULE@{BOOST\_PYTHON\_MODULE}}
+\index{BOOST\_PYTHON\_MODULE@{BOOST\_PYTHON\_MODULE}!Markov::Markopy::CUDA@{Markov::Markopy::CUDA}}
+\doxysubsubsection{\texorpdfstring{BOOST\_PYTHON\_MODULE()}{BOOST\_PYTHON\_MODULE()}}
+{\footnotesize\ttfamily Markov\+::\+Markopy\+::\+CUDA\+::\+BOOST\+\_\+\+PYTHON\+\_\+\+MODULE (\begin{DoxyParamCaption}\item[{cudamarkopy}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{cuda_markopy_8cu_source_l00020}{20}} of file \mbox{\hyperlink{cuda_markopy_8cu_source}{cuda\+Markopy.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021     \{}
+\DoxyCodeLine{00022         bool (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}}::*Export)(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*) = \&\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>::Export}};}
+\DoxyCodeLine{00023         void (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{Markov::API::CUDA::CUDAModelMatrix}}::*FastRandomWalk)(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} int, \textcolor{keyword}{const} \textcolor{keywordtype}{char}*, int, int, bool, bool) = \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ac9d971ef67f5062f2fe756a7286a15b9}{Markov::API::CUDA::CUDAModelMatrix::FastRandomWalk}};}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025         class\_<Markov::API::CUDA::CUDAModelMatrix>(\textcolor{stringliteral}{"{}CUDAModelMatrix"{}}, init<>())}
+\DoxyCodeLine{00026             }
+\DoxyCodeLine{00027             .def(init<>())}
+\DoxyCodeLine{00028             .def(\textcolor{stringliteral}{"{}Train"{}}, \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af42d40d7a5c80f0dfe126a574a17f423}{Markov::API::ModelMatrix::Train}})}
+\DoxyCodeLine{00029             .def(\textcolor{stringliteral}{"{}Import"{}}, \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aeba8bb79aa4dc2cfeda310f34b7c9427}{Markov::API::ModelMatrix::Import}}, \textcolor{stringliteral}{"{}Import a model file."{}})}
+\DoxyCodeLine{00030             .def(\textcolor{stringliteral}{"{}Export"{}}, Export, \textcolor{stringliteral}{"{}Export a model to file."{}})}
+\DoxyCodeLine{00031             .def(\textcolor{stringliteral}{"{}ConstructMatrix"{}},\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_aafb5809808b9b0450a0bc98740121b5f}{Markov::API::ModelMatrix::ConstructMatrix}})}
+\DoxyCodeLine{00032             .def(\textcolor{stringliteral}{"{}DumpJSON"{}},\&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a405a1c967dfea8d829aa41ad2c14f709}{Markov::API::ModelMatrix::DumpJSON}})}
+\DoxyCodeLine{00033             .def(\textcolor{stringliteral}{"{}FastRandomWalk"{}}, FastRandomWalk)}
+\DoxyCodeLine{00034             ;}
+\DoxyCodeLine{00035     \};}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Construct\+Matrix()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00101}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Dump\+JSON()}}, \mbox{\hyperlink{model_8h_source_l00300}{Markov\+::\+Model$<$ Node\+Storage\+Type $>$\+::\+Export()}}, \mbox{\hyperlink{model_matrix_8cpp_source_l00019}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Import()}}, and \mbox{\hyperlink{model_matrix_8cpp_source_l00025}{Markov\+::\+API\+::\+Model\+Matrix\+::\+Train()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_markov_1_1_markopy_1_1_c_u_d_a_a584fc8e70bb6cf08f544f52805245e19_cgraph}
+\end{center}
+\end{figure}

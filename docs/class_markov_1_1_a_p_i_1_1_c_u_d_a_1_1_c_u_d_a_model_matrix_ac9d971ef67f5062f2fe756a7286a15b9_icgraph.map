@@ -1,0 +1,6 @@
+<map id="Markov::API::CUDA::CUDAModelMatrix::FastRandomWalk" name="Markov::API::CUDA::CUDAModelMatrix::FastRandomWalk">
+<area shape="rect" id="node1" title="Random walk on the Matrix&#45;reduced Markov::Model." alt="" coords="1013,5,1324,52"/>
+<area shape="rect" id="node2" href="$class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i.html#acfaa19f0478a88a143282431aa89786d" title="wrapper for generate function." alt="" coords="681,5,965,52"/>
+<area shape="rect" id="node3" href="$class_python_1_1_markopy_1_1_base_c_l_i.html#ad2823b484ee975432aebb4e50875f8a6" title="Generate strings from the model." alt="" coords="337,14,633,43"/>
+<area shape="rect" id="node4" href="$class_python_1_1_markopy_1_1_base_c_l_i.html#aab389488e1f530cf444d9d2ef59a6998" title="Process parameters for operation." alt="" coords="5,14,289,43"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="Python.Markopy.MarkopyCLI.add_arguments" name="Python.Markopy.MarkopyCLI.add_arguments">
+<area shape="rect" id="node1" title="add &#45;mt/–model_type constructor" alt="" coords="5,108,288,155"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#ac7aaf4edf169e3aab32aca083984d914" title="Print help string." alt="" coords="371,5,606,52"/>
+<area shape="rect" id="node3" href="$class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html#acb946950d9dbc1402ba081523d497dd3" title="overload help function to print submodel helps" alt="" coords="336,76,641,123"/>
+<area shape="rect" id="node5" href="$class_python_1_1_markopy_1_1_base_c_l_i.html#ab367a1505f21191f550087707288b575" title=" " alt="" coords="360,147,617,177"/>
+<area shape="rect" id="node6" href="$class_python_1_1_markopy_1_1_markopy_c_l_i.html#a76e6c5fbea009bb2cc5cd1fc7278e2fd" title="overload help function to print submodel helps" alt="" coords="345,201,632,230"/>
+<area shape="rect" id="node4" href="$class_python_1_1_markopy_1_1_markopy_c_l_i.html#a80bd3c93aead66d0d7c264a7d387196f" title=" " alt="" coords="689,143,976,173"/>
+</map>

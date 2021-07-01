@@ -1,5 +1,5 @@
-<map id="random.h" name="random.h">
-<area shape="rect" id="node1" title="Random engine implementations for Markov." alt="" coords="54,5,154,35"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,83,91,112"/>
-<area shape="rect" id="node3" title=" " alt="" coords="115,83,207,112"/>
+<map id="Markopy/MarkovModel/src/random.h" name="Markopy/MarkovModel/src/random.h">
+<area shape="rect" id="node1" title="Random engine implementations for Markov." alt="" coords="5,5,208,52"/>
+<area shape="rect" id="node2" title=" " alt="" coords="8,100,93,129"/>
+<area shape="rect" id="node3" title=" " alt="" coords="118,100,210,129"/>
 </map>

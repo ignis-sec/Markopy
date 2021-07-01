@@ -1,0 +1,10 @@
+<map id="Python.Markopy.AbstractGenerationModelCLI" name="Python.Markopy.AbstractGenerationModelCLI">
+<area shape="rect" id="node1" title="abstract class for generation capable models" alt="" coords="117,676,428,779"/>
+<area shape="rect" id="node3" href="$class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i.html" title="Python CLI wrapper for CudaModelMatrix." alt="" coords="5,1081,289,1288"/>
+<area shape="rect" id="node5" href="$class_python_1_1_markopy_1_1_abstract_training_model_c_l_i.html" title="abstract class for training capable models" alt="" coords="435,879,718,981"/>
+<area shape="rect" id="node8" href="$class_python_1_1_markopy_1_1_model_matrix_c_l_i.html" title="Extension of Python.Markopy.Base.BaseCLI for Markov::API::ModelMatrix." alt="" coords="134,827,411,1033"/>
+<area shape="rect" id="node2" href="$class_python_1_1_markopy_1_1_base_c_l_i.html" title="Base CLI class to handle user interactions" alt="" coords="136,5,409,628"/>
+<area shape="rect" id="node4" href="$class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html" title="CUDA extension to MarkopyCLI." alt="" coords="71,1643,402,1797"/>
+<area shape="rect" id="node6" href="$class_python_1_1_markopy_1_1_markov_passwords_c_l_i.html" title="Extension of Python.Markopy.Base.BaseCLI for Markov::API::MarkovPasswords." alt="" coords="391,1116,709,1253"/>
+<area shape="rect" id="node7" href="$class_python_1_1_markopy_1_1_markopy_c_l_i.html" title="Top level model selector for Markopy CLI." alt="" coords="203,1336,451,1595"/>
+</map>

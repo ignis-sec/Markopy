@@ -1,4 +1,4 @@
-\hypertarget{class_markov_1_1_g_u_i_1_1_train}{}\doxysection{Markov\+::G\+UI\+::Train Class Reference}
+\hypertarget{class_markov_1_1_g_u_i_1_1_train}{}\doxysection{Markov\+::GUI\+::Train Class Reference}
 \label{class_markov_1_1_g_u_i_1_1_train}\index{Markov::GUI::Train@{Markov::GUI::Train}}
 
 
@@ -11,22 +11,22 @@ QT Training page class.
 
 
 
-Inheritance diagram for Markov\+::G\+UI\+::Train\+:
+Inheritance diagram for Markov\+::GUI\+::Train\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=206pt]{class_markov_1_1_g_u_i_1_1_train__inherit__graph}
+\includegraphics[width=244pt]{class_markov_1_1_g_u_i_1_1_train__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Markov\+::G\+UI\+::Train\+:
+Collaboration diagram for Markov\+::GUI\+::Train\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=246pt]{class_markov_1_1_g_u_i_1_1_train__coll__graph}
+\includegraphics[width=259pt]{class_markov_1_1_g_u_i_1_1_train__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Slots}
@@ -39,7 +39,7 @@ void \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_a6f74c2948379df5e7f0d8eba
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_a81b5ca7eb56318ff1cefbc7c228a97cd}{Train}} (Q\+Widget $\ast$parent=Q\+\_\+\+N\+U\+L\+L\+P\+TR)
+\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_a81b5ca7eb56318ff1cefbc7c228a97cd}{Train}} (QWidget $\ast$parent=Q\+\_\+\+NULLPTR)
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -60,7 +60,7 @@ Definition at line \mbox{\hyperlink{_train_8h_source_l00015}{15}} of file \mbox{
 \index{Markov::GUI::Train@{Markov::GUI::Train}!Train@{Train}}
 \index{Train@{Train}!Markov::GUI::Train@{Markov::GUI::Train}}
 \doxysubsubsection{\texorpdfstring{Train()}{Train()}}
-{\footnotesize\ttfamily Markov\+::\+G\+U\+I\+::\+Train\+::\+Train (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily Q\+\_\+NULLPTR} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Markov\+::\+GUI\+::\+Train\+::\+Train (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily Q\+\_\+NULLPTR} }\end{DoxyParamCaption})}
 
 
 
@@ -95,7 +95,7 @@ References \mbox{\hyperlink{_train_8h_source_l00021}{ui}}.
 \index{Markov::GUI::Train@{Markov::GUI::Train}!home@{home}}
 \index{home@{home}!Markov::GUI::Train@{Markov::GUI::Train}}
 \doxysubsubsection{\texorpdfstring{home}{home}}
-{\footnotesize\ttfamily void Markov\+::\+G\+U\+I\+::\+Train\+::home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+{\footnotesize\ttfamily void Markov\+::\+GUI\+::\+Train\+::home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
 
@@ -114,7 +114,7 @@ Definition at line \mbox{\hyperlink{_train_8cpp_source_l00073}{73}} of file \mbo
 \index{Markov::GUI::Train@{Markov::GUI::Train}!train@{train}}
 \index{train@{train}!Markov::GUI::Train@{Markov::GUI::Train}}
 \doxysubsubsection{\texorpdfstring{train}{train}}
-{\footnotesize\ttfamily void Markov\+::\+G\+U\+I\+::\+Train\+::train (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+{\footnotesize\ttfamily void Markov\+::\+GUI\+::\+Train\+::train (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
 
@@ -126,11 +126,11 @@ Definition at line \mbox{\hyperlink{_train_8cpp_source_l00038}{38}} of file \mbo
 \DoxyCodeLine{00039 }
 \DoxyCodeLine{00040     }
 \DoxyCodeLine{00041 }
-\DoxyCodeLine{00042     QString file\_name = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Open a File"}, QDir::homePath());}
+\DoxyCodeLine{00042     QString file\_name = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Open a File"{}}, QDir::homePath());}
 \DoxyCodeLine{00043     QFile file(file\_name);}
 \DoxyCodeLine{00044 }
 \DoxyCodeLine{00045     \textcolor{keywordflow}{if} (!file.open(QFile::ReadOnly | QFile::Text)) \{}
-\DoxyCodeLine{00046         QMessageBox::warning(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Error"}, \textcolor{stringliteral}{"File Not Open!"});}
+\DoxyCodeLine{00046         QMessageBox::warning(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Error"{}}, \textcolor{stringliteral}{"{}File Not Open!"{}});}
 \DoxyCodeLine{00047     \}}
 \DoxyCodeLine{00048     QTextStream in(\&file);}
 \DoxyCodeLine{00049     QString text = in.readAll();}
@@ -145,12 +145,12 @@ Definition at line \mbox{\hyperlink{_train_8cpp_source_l00038}{38}} of file \mbo
 \DoxyCodeLine{00058 }
 \DoxyCodeLine{00059    }
 \DoxyCodeLine{00060     \textcolor{keywordtype}{char} a=\textcolor{charliteral}{','};}
-\DoxyCodeLine{00061     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}} mp;}
-\DoxyCodeLine{00062     mp.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"models/2gram.mdl"});}
-\DoxyCodeLine{00063     mp.\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Train}}(cstr, a, 10); \textcolor{comment}{//please parameterize this hardcoded 10 threads}}
-\DoxyCodeLine{00064     mp.\mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}}(\textcolor{stringliteral}{"models/finished.mdl"}); }
+\DoxyCodeLine{00061     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}} \mbox{\hyperlink{namespacemarkopy_a2626224ad1569dd3ce7c37599cb1e6fe}{mp}};}
+\DoxyCodeLine{00062     \mbox{\hyperlink{namespacemp}{mp}}.Import(\textcolor{stringliteral}{"{}models/2gram.mdl"{}});}
+\DoxyCodeLine{00063     \mbox{\hyperlink{namespacemp}{mp}}.Train(cstr, a, 10); \textcolor{comment}{//please parameterize this hardcoded 10 threads}}
+\DoxyCodeLine{00064     \mbox{\hyperlink{namespacemp}{mp}}.Export(\textcolor{stringliteral}{"{}models/finished.mdl"{}}); }
 \DoxyCodeLine{00065 }
-\DoxyCodeLine{00066     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_aca81fef5702a620bf650aa8a4c2bdaea}{ui}}.label\_2-\/>setText(\textcolor{stringliteral}{"Training DONE!"});}
+\DoxyCodeLine{00066     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_train_aca81fef5702a620bf650aa8a4c2bdaea}{ui}}.label\_2-\/>setText(\textcolor{stringliteral}{"{}Training DONE!"{}});}
 \DoxyCodeLine{00067     \textcolor{comment}{//ui.pushButton\_3-\/>setVisible(true);}}
 \DoxyCodeLine{00068 }
 \DoxyCodeLine{00069 }
@@ -160,7 +160,11 @@ Definition at line \mbox{\hyperlink{_train_8cpp_source_l00038}{38}} of file \mbo
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{markov_passwords_8cpp_source_l00065}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train()}}, and \mbox{\hyperlink{_train_8h_source_l00021}{ui}}.
+References \mbox{\hyperlink{markov_passwords_8cpp_source_l00065}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Train()}}, and \mbox{\hyperlink{_train_8h_source_l00021}{ui}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00202}{Python.\+Markopy.\+Base\+CLI\+::process()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -170,6 +174,14 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_markov_1_1_g_u_i_1_1_train_a6f74c2948379df5e7f0d8eba96c97fb0_cgraph}
 \end{center}
 \end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_g_u_i_1_1_train_a6f74c2948379df5e7f0d8eba96c97fb0_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
@@ -177,7 +189,7 @@ Here is the call graph for this function\+:
 \index{Markov::GUI::Train@{Markov::GUI::Train}!ui@{ui}}
 \index{ui@{ui}!Markov::GUI::Train@{Markov::GUI::Train}}
 \doxysubsubsection{\texorpdfstring{ui}{ui}}
-{\footnotesize\ttfamily Ui\+::\+Train Markov\+::\+G\+U\+I\+::\+Train\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily Ui\+::\+Train Markov\+::\+GUI\+::\+Train\+::ui\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -185,11 +197,11 @@ Definition at line \mbox{\hyperlink{_train_8h_source_l00021}{21}} of file \mbox{
 
 
 
-Referenced by \mbox{\hyperlink{_train_8cpp_source_l00022}{Train()}}, and \mbox{\hyperlink{_train_8cpp_source_l00038}{train()}}.
+Referenced by \mbox{\hyperlink{_train_8cpp_source_l00038}{train()}}, and \mbox{\hyperlink{_train_8cpp_source_l00022}{Train()}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_train_8h}{Train.\+h}}\item 
-\mbox{\hyperlink{_train_8cpp}{Train.\+cpp}}\end{DoxyCompactItemize}
+Markopy/\+Markov\+Passwords\+GUI/src/\mbox{\hyperlink{_train_8h}{Train.\+h}}\item 
+Markopy/\+Markov\+Passwords\+GUI/src/\mbox{\hyperlink{_train_8cpp}{Train.\+cpp}}\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
-\hypertarget{term_8cpp}{}\doxysection{term.\+cpp File Reference}
-\label{term_8cpp}\index{term.cpp@{term.cpp}}
+\hypertarget{term_8cpp}{}\doxysection{Markopy/\+Markov\+APICLI/src/color/term.cpp File Reference}
+\label{term_8cpp}\index{Markopy/MarkovAPICLI/src/color/term.cpp@{Markopy/MarkovAPICLI/src/color/term.cpp}}
 
 
 Terminal handler for pretty stuff like colors.  
@@ -12,7 +12,7 @@ Include dependency graph for term.\+cpp\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=248pt]{term_8cpp__incl}
+\includegraphics[width=264pt]{term_8cpp__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Functions}
@@ -39,9 +39,9 @@ Definition in file \mbox{\hyperlink{term_8cpp_source}{term.\+cpp}}.
 \index{term.cpp@{term.cpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!term.cpp@{term.cpp}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
-{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722}{Markov\+::\+A\+P\+I\+::\+C\+L\+I\+::\+Terminal\+::color}} \&}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal_abd812d8a82872e9fca1f0df632fa3722}{Terminal\+::color}} \&}]{c }\end{DoxyParamCaption})}
 
-overload for std\+::cout. 
+
 
 Definition at line \mbox{\hyperlink{term_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{term_8cpp_source}{term.\+cpp}}.
 
@@ -49,13 +49,13 @@ Definition at line \mbox{\hyperlink{term_8cpp_source_l00066}{66}} of file \mbox{
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00066                                                                \{}
 \DoxyCodeLine{00067     \textcolor{keywordtype}{char} buf[6];}
-\DoxyCodeLine{00068     sprintf(buf,\textcolor{stringliteral}{"\%d"},Terminal::colormap.find(c)-\/>second);}
-\DoxyCodeLine{00069     os << \textcolor{stringliteral}{"\(\backslash\)e[1;"} << buf << \textcolor{stringliteral}{"m"};}
+\DoxyCodeLine{00068     sprintf(buf,\textcolor{stringliteral}{"{}\%d"{}},Terminal::colormap.find(c)-\/>second);}
+\DoxyCodeLine{00069     os << \textcolor{stringliteral}{"{}\(\backslash\)e[1;"{}} << buf << \textcolor{stringliteral}{"{}m"{}};}
 \DoxyCodeLine{00070     \textcolor{keywordflow}{return} os;}
 \DoxyCodeLine{00071 \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{term_8h_source_l00039}{Markov\+::\+A\+P\+I\+::\+C\+L\+I\+::\+Terminal\+::colormap}}.
+References \mbox{\hyperlink{term_8h_source_l00039}{Markov\+::\+API\+::\+CLI\+::\+Terminal\+::colormap}}.
 

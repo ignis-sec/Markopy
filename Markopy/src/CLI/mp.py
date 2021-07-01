@@ -1,38 +1,35 @@
-""" @package markopy
- @file mp_cli.py
- @namespace Python::Markopy::MarkovPasswords
- @brief Command line class for MarkovPasswords
- @authors Ata Hakçıl
-"""
+#!/usr/bin/python3
+
+##
+# @file mp.py
+# @brief CLI wrapper for MarkovPasswords
+#
+
 from importlib.util import spec_from_loader, module_from_spec
 from importlib.machinery import SourceFileLoader, ExtensionFileLoader
 import os
-ext = "so"
-if os.name == 'nt':
-    ext="pyd"
-try:
-    spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", os.path.abspath(f"markopy.{ext}")))
-    markopy = module_from_spec(spec)
-    spec.loader.exec_module(markopy)
-except ImportError as e:
-    print(f"({__file__}) Working in development mode. Trying to load markopy.{ext} from ../../../out/")
-    if(os.path.exists(f"../../../out/lib/markopy.{ext}")):
-        spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", os.path.abspath(f"../../../out/lib/markopy.{ext}")))
-        markopy = module_from_spec(spec)
-        spec.loader.exec_module(markopy)
-    else:
-        raise e
+from mm import MarkovModel
+from importer import import_markopy
+markopy = import_markopy()
 
 from base import BaseCLI,AbstractGenerationModelCLI, AbstractTrainingModelCLI
 
+class MarkovPasswordsCLI(AbstractTrainingModelCLI,MarkovModel):
+    """!
+        @brief Extension of Python.Markopy.Base.BaseCLI for Markov::API::MarkovPasswords
+        @belongsto Python::Markopy
+        @extends Python::Markopy::MarkovModel
+        @extends Python::Markopy::AbstractTrainingModelCLI
 
-
-class MarkovPasswordsCLI(AbstractTrainingModelCLI):
-    def __init__(self):
-        super().__init__()
+        adds -st/--stdout arguement to the command line.
+    """
+    def __init__(self, add_help:bool=True):
+        "! @brief initialize model with Markov::API::MarkovPasswords"
+        super().__init__(add_help)
         self.model = markopy.MarkovPasswords()
 
     def _generate(self, wordlist):
+        "! @brief map generation function to Markov::API::MarkovPasswords::Generate"
         self.model.Generate(int(self.args.count), wordlist, int(self.args.min), int(self.args.max), int(self.args.threads))
 
 if __name__ == "__main__":

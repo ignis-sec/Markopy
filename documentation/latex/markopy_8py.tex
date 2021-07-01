@@ -1,29 +1,39 @@
-\hypertarget{markopy_8py}{}\doxysection{markopy.\+py File Reference}
-\label{markopy_8py}\index{markopy.py@{markopy.py}}
+\hypertarget{markopy_8py}{}\doxysection{Markopy/\+Markopy/src/\+CLI/markopy.py File Reference}
+\label{markopy_8py}\index{Markopy/Markopy/src/CLI/markopy.py@{Markopy/Markopy/src/CLI/markopy.py}}
+
+
+Entry point for markopy scripts.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i}{Python.\+Markopy.\+Markopy\+CLI}}
+\begin{DoxyCompactList}\small\item\em Top level model selector for \mbox{\hyperlink{namespace_python_1_1_markopy}{Markopy}} CLI. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
  \mbox{\hyperlink{namespacemarkopy}{markopy}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Functions}
-\begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{namespacemarkopy_a2339398e991abb1c095994eb07f12af6}{markopy.\+cli\+\_\+init}} (str input\+\_\+model)
-\item 
-def \mbox{\hyperlink{namespacemarkopy_ab5b767749715ed49aacf40c4b839f3a9}{markopy.\+cli\+\_\+train}} (markopy.\+Model\+Matrix model, str dataset, str seperator, str output, bool output\+\_\+forced=False, bool bulk=False)
-\item 
-def \mbox{\hyperlink{namespacemarkopy_a6b08ef2823dcc7c0bc8690e223ea9c80}{markopy.\+cli\+\_\+generate}} (markopy.\+Model\+Matrix model, str wordlist, bool bulk=False)
-\end{DoxyCompactItemize}
+ \mbox{\hyperlink{namespace_python_1_1_markopy}{Python.\+Markopy}}
+\begin{DoxyCompactList}\small\item\em wrapper scripts for \mbox{\hyperlink{namespace_python_1_1_markopy}{Markopy}} \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespacemarkopy_ad5187b752577f4de390b183b9c31ba33}{markopy.\+parser}}
+string \mbox{\hyperlink{namespacemarkopy_a2dfb37b0e0f42f5dd4545a54892ea9c9}{markopy.\+ext}} = \char`\"{}so\char`\"{}
 \item 
-\mbox{\hyperlink{namespacemarkopy_af0bdb445023da76e7f85a8d9499759cc}{markopy.\+help}}
+\mbox{\hyperlink{namespacemarkopy_ace4852aaa5eb79f25ec7693ddb574d9a}{markopy.\+spec}} = spec\+\_\+from\+\_\+loader(\char`\"{}markopy\char`\"{}, Extension\+File\+Loader(\char`\"{}markopy\char`\"{}, os.\+path.\+abspath(f\char`\"{}markopy.\{ext\}\char`\"{})))
 \item 
-\mbox{\hyperlink{namespacemarkopy_abb9bff08b408153eb76a826d5da1f58d}{markopy.\+default}}
+\mbox{\hyperlink{namespacemarkopy_a75a951b1fac43ad19ac4fd89ed0026a9}{markopy.\+markopy}} = module\+\_\+from\+\_\+spec(spec)
 \item 
-\mbox{\hyperlink{namespacemarkopy_a0060c95c4eab77bd5bd97e726184eede}{markopy.\+action}}
-\item 
-\mbox{\hyperlink{namespacemarkopy_ae63e871240a7b671be13b268efdba52f}{markopy.\+args}} = parser.\+parse\+\_\+args()
+\mbox{\hyperlink{namespacemarkopy_a2626224ad1569dd3ce7c37599cb1e6fe}{markopy.\+mp}} = Markopy\+CLI()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entry point for markopy scripts. 
+
+
+
+Definition in file \mbox{\hyperlink{markopy_8py_source}{markopy.\+py}}.
+

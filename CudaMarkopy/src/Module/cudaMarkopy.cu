@@ -13,6 +13,9 @@
 
 using namespace boost::python;
 
+/**
+ * @brief CPython module for Markov::API::CUDA objects
+ */
 namespace Markov::Markopy::CUDA{
     BOOST_PYTHON_MODULE(cudamarkopy)
     {

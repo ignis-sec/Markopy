@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['action_423',['action',['../namespacemarkopy.html#a0060c95c4eab77bd5bd97e726184eede',1,'markopy']]],
-  ['alphabet_424',['alphabet',['../namespacemodel__2gram.html#a68f5dbc2bf9fcf3e68e119c6667d8a6d',1,'model_2gram.alphabet()'],['../namespacerandom-model.html#a3c3d503537d1d214563fda6555ee007a',1,'random-model.alphabet()']]],
-  ['alternatingkernels_425',['alternatingKernels',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ad8d2ede773004722efa2bba39f76e186',1,'Markov::API::CUDA::CUDAModelMatrix']]],
-  ['args_426',['args',['../namespacemarkopy.html#ae63e871240a7b671be13b268efdba52f',1,'markopy']]]
+  ['alphabet_503',['alphabet',['../namespacemodel__2gram.html#a68f5dbc2bf9fcf3e68e119c6667d8a6d',1,'model_2gram.alphabet()'],['../namespacerandom__model.html#acd7b50c756b5bd40c268042db4c8eed6',1,'random_model.alphabet()']]],
+  ['alternatingkernels_504',['alternatingKernels',['../class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ad8d2ede773004722efa2bba39f76e186',1,'Markov::API::CUDA::CUDAModelMatrix']]],
+  ['args_505',['args',['../class_python_1_1_markopy_1_1_base_c_l_i.html#a5ec7b479c87a31789b026eca6968ce5a',1,'Python.Markopy.BaseCLI.args()'],['../class_python_1_1_markopy_1_1_markopy_c_l_i.html#a360c48268fe72386c7c666da3a6304ef',1,'Python.Markopy.MarkopyCLI.args()'],['../class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html#a148e1164edf37f4f8eee83b3e00186e2',1,'Python.CudaMarkopy.CudaMarkopyCLI.args()']]]
 ];

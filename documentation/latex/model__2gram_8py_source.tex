@@ -1,11 +1,11 @@
 \hypertarget{model__2gram_8py_source}{}\doxysection{model\+\_\+2gram.\+py}
-\label{model__2gram_8py_source}\index{model\_2gram.py@{model\_2gram.py}}
+\label{model__2gram_8py_source}\index{Markopy/MarkovAPICLI/src/scripts/model\_2gram.py@{Markopy/MarkovAPICLI/src/scripts/model\_2gram.py}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{model__2gram_8py_source_l00001}\mbox{\hyperlink{namespacemodel__2gram}{00001}} \textcolor{comment}{\#!/usr/bin/python3}}
-\DoxyCodeLine{00002 \textcolor{stringliteral}{""" }}
+\DoxyCodeLine{00002 \textcolor{stringliteral}{"{}"{}"{} }}
 \DoxyCodeLine{00003 \textcolor{stringliteral}{  python script for generating a 2gram model}}
-\DoxyCodeLine{00004 \textcolor{stringliteral}{"""}}
+\DoxyCodeLine{00004 \textcolor{stringliteral}{"{}"{}"{}}}
 \DoxyCodeLine{00005 }
 \DoxyCodeLine{00006 \textcolor{keyword}{import} string}
 \DoxyCodeLine{00007 \textcolor{keyword}{import} re}
@@ -13,22 +13,22 @@
 \DoxyCodeLine{00009 }
 \DoxyCodeLine{\Hypertarget{model__2gram_8py_source_l00010}\mbox{\hyperlink{namespacemodel__2gram_a68f5dbc2bf9fcf3e68e119c6667d8a6d}{00010}} alphabet = string.printable}
 \DoxyCodeLine{00011 alphabet = re.sub(\textcolor{stringliteral}{'\(\backslash\)s'}, \textcolor{stringliteral}{''}, alphabet)}
-\DoxyCodeLine{00012 print(f\textcolor{stringliteral}{"alphabet=\{alphabet\}"})}
+\DoxyCodeLine{00012 print(f\textcolor{stringliteral}{"{}alphabet=\{alphabet\}"{}})}
 \DoxyCodeLine{00013 \textcolor{comment}{\#exit()}}
 \DoxyCodeLine{00014 }
 \DoxyCodeLine{00015 }
-\DoxyCodeLine{\Hypertarget{model__2gram_8py_source_l00016}\mbox{\hyperlink{namespacemodel__2gram_a2c21010331f2adf96f64d1e90d019e76}{00016}} f = open(\textcolor{stringliteral}{'../../models/2gram.mdl'}, \textcolor{stringliteral}{"wb"})}
+\DoxyCodeLine{\Hypertarget{model__2gram_8py_source_l00016}\mbox{\hyperlink{namespacemodel__2gram_a2c21010331f2adf96f64d1e90d019e76}{00016}} f = open(\textcolor{stringliteral}{'../../models/2gram.mdl'}, \textcolor{stringliteral}{"{}wb"{}})}
 \DoxyCodeLine{00017 \textcolor{comment}{\#tie start nodes}}
 \DoxyCodeLine{00018 \textcolor{keywordflow}{for} sym \textcolor{keywordflow}{in} alphabet:}
-\DoxyCodeLine{00019     f.write(b\textcolor{stringliteral}{"\(\backslash\)x00,1,"} + bytes(sym, encoding=\textcolor{stringliteral}{'ascii'}) + b\textcolor{stringliteral}{"\(\backslash\)n"})}
+\DoxyCodeLine{00019     f.write(b\textcolor{stringliteral}{"{}\(\backslash\)x00,1,"{}} + bytes(sym, encoding=\textcolor{stringliteral}{'ascii'}) + b\textcolor{stringliteral}{"{}\(\backslash\)n"{}})}
 \DoxyCodeLine{00020 }
 \DoxyCodeLine{00021 \textcolor{comment}{\#tie terminator nodes}}
 \DoxyCodeLine{00022 \textcolor{keywordflow}{for} sym \textcolor{keywordflow}{in} alphabet:}
-\DoxyCodeLine{00023     f.write(bytes(sym, encoding=\textcolor{stringliteral}{'ascii'})+ b\textcolor{stringliteral}{",1,\(\backslash\)xff\(\backslash\)n"})}
+\DoxyCodeLine{00023     f.write(bytes(sym, encoding=\textcolor{stringliteral}{'ascii'})+ b\textcolor{stringliteral}{"{},1,\(\backslash\)xff\(\backslash\)n"{}})}
 \DoxyCodeLine{00024 }
 \DoxyCodeLine{00025 \textcolor{comment}{\#tie internals}}
 \DoxyCodeLine{00026 \textcolor{keywordflow}{for} src \textcolor{keywordflow}{in} alphabet:}
 \DoxyCodeLine{00027     \textcolor{keywordflow}{for} target \textcolor{keywordflow}{in} alphabet:}
-\DoxyCodeLine{00028         f.write(bytes(src, encoding=\textcolor{stringliteral}{'ascii'}) + b\textcolor{stringliteral}{",1,"} + bytes(target, encoding=\textcolor{stringliteral}{'ascii'}) + b\textcolor{stringliteral}{"\(\backslash\)n"})}
+\DoxyCodeLine{00028         f.write(bytes(src, encoding=\textcolor{stringliteral}{'ascii'}) + b\textcolor{stringliteral}{"{},1,"{}} + bytes(target, encoding=\textcolor{stringliteral}{'ascii'}) + b\textcolor{stringliteral}{"{}\(\backslash\)n"{}})}
 
 \end{DoxyCode}

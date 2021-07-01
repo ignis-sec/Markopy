@@ -1,21 +1,21 @@
-<map id="modelMatrix.h" name="modelMatrix.h">
-<area shape="rect" id="node1" title="An extension of Markov::API::MarkovPasswords." alt="" coords="729,5,867,35"/>
-<area shape="rect" id="node2" href="$markov_passwords_8h.html" title="Wrapper for Markov::Model to use with char represented models." alt="" coords="631,83,810,112"/>
-<area shape="rect" id="node6" title=" " alt="" coords="827,237,900,267"/>
-<area shape="rect" id="node3" href="$thread_shared_list_handler_8h.html" title="Thread&#45;safe wrapper for std::ifstream." alt="" coords="604,160,837,189"/>
-<area shape="rect" id="node7" href="$model_8h.html" title="Model class template." alt="" coords="353,160,579,189"/>
-<area shape="rect" id="node4" title=" " alt="" coords="711,237,778,267"/>
-<area shape="rect" id="node5" title=" " alt="" coords="603,237,687,267"/>
-<area shape="rect" id="node8" title=" " alt="" coords="614,315,673,344"/>
-<area shape="rect" id="node9" title=" " alt="" coords="5,315,79,344"/>
-<area shape="rect" id="node10" title=" " alt="" coords="103,315,189,344"/>
-<area shape="rect" id="node11" title=" " alt="" coords="429,237,527,267"/>
-<area shape="rect" id="node12" href="$node_8h.html" title="Node class template." alt="" coords="277,237,354,267"/>
-<area shape="rect" id="node15" href="$edge_8h.html" title="Edge class template." alt="" coords="513,315,590,344"/>
-<area shape="rect" id="node13" title=" " alt="" coords="181,392,273,421"/>
-<area shape="rect" id="node14" title=" " alt="" coords="389,315,489,344"/>
-<area shape="rect" id="node18" href="$random_8h.html" title="Random engine implementations for Markov." alt="" coords="265,315,365,344"/>
-<area shape="rect" id="node16" title=" " alt="" coords="462,392,537,421"/>
-<area shape="rect" id="node17" title=" " alt="" coords="561,392,643,421"/>
-<area shape="rect" id="node19" title=" " alt="" coords="298,392,383,421"/>
+<map id="Markopy/MarkovAPI/src/modelMatrix.h" name="Markopy/MarkovAPI/src/modelMatrix.h">
+<area shape="rect" id="node1" title="An extension of Markov::API::MarkovPasswords." alt="" coords="693,5,903,52"/>
+<area shape="rect" id="node2" href="$markov_passwords_8h.html" title="Wrapper for Markov::Model to use with char represented models." alt="" coords="631,100,810,129"/>
+<area shape="rect" id="node6" title=" " alt="" coords="827,255,900,284"/>
+<area shape="rect" id="node3" href="$thread_shared_list_handler_8h.html" title="Thread&#45;safe wrapper for std::ifstream." alt="" coords="604,177,837,207"/>
+<area shape="rect" id="node7" href="$model_8h.html" title="Model class template." alt="" coords="353,177,579,207"/>
+<area shape="rect" id="node4" title=" " alt="" coords="711,255,778,284"/>
+<area shape="rect" id="node5" title=" " alt="" coords="603,255,687,284"/>
+<area shape="rect" id="node8" title=" " alt="" coords="614,332,673,361"/>
+<area shape="rect" id="node9" title=" " alt="" coords="5,332,79,361"/>
+<area shape="rect" id="node10" title=" " alt="" coords="103,332,189,361"/>
+<area shape="rect" id="node11" title=" " alt="" coords="429,255,527,284"/>
+<area shape="rect" id="node12" href="$node_8h.html" title="Node class template." alt="" coords="277,255,354,284"/>
+<area shape="rect" id="node15" href="$edge_8h.html" title="Edge class template." alt="" coords="513,332,590,361"/>
+<area shape="rect" id="node13" title=" " alt="" coords="181,409,273,439"/>
+<area shape="rect" id="node14" title=" " alt="" coords="389,332,489,361"/>
+<area shape="rect" id="node18" href="$random_8h.html" title="Random engine implementations for Markov." alt="" coords="265,332,365,361"/>
+<area shape="rect" id="node16" title=" " alt="" coords="462,409,537,439"/>
+<area shape="rect" id="node17" title=" " alt="" coords="561,409,643,439"/>
+<area shape="rect" id="node19" title=" " alt="" coords="298,409,383,439"/>
 </map>

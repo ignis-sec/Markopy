@@ -1,5 +1,5 @@
 \hypertarget{cuda_model_matrix_8cu_source}{}\doxysection{cuda\+Model\+Matrix.\+cu}
-\label{cuda_model_matrix_8cu_source}\index{cudaModelMatrix.cu@{cudaModelMatrix.cu}}
+\label{cuda_model_matrix_8cu_source}\index{Markopy/CudaMarkovAPI/src/cudaModelMatrix.cu@{Markopy/CudaMarkovAPI/src/cudaModelMatrix.cu}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001 \textcolor{comment}{/** @file cudaModelMatrix.cu}}
@@ -9,8 +9,8 @@
 \DoxyCodeLine{00005 \textcolor{comment}{ * @copydoc Markov::API::CUDA::CUDAModelMatrix}}
 \DoxyCodeLine{00006 \textcolor{comment}{ */}}
 \DoxyCodeLine{00007 }
-\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{cuda_model_matrix_8h}{"cudaModelMatrix.h"}}}
-\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{cudarandom_8h}{"cudarandom.h"}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{cuda_model_matrix_8h}{"{}cudaModelMatrix.h"{}}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{cudarandom_8h}{"{}cudarandom.h"{}}}}
 \DoxyCodeLine{00010 }
 \DoxyCodeLine{00011 }
 \DoxyCodeLine{00012 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{curand\_kernel}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
@@ -26,33 +26,33 @@
 \DoxyCodeLine{00022 }
 \DoxyCodeLine{00023         cudastatus = cudaMalloc((\textcolor{keywordtype}{char}**)\&(\textcolor{keyword}{this}-\/>device\_matrixIndex),}
 \DoxyCodeLine{00024             \textcolor{keyword}{this}-\/>matrixSize*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
-\DoxyCodeLine{00025         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"Cuda failed to initialize device\_matrixIndex."});}
+\DoxyCodeLine{00025         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"{}Cuda failed to initialize device\_matrixIndex."{}});}
 \DoxyCodeLine{00026 }
 \DoxyCodeLine{00027         cudastatus = cudaMalloc((\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} **)\&(\textcolor{keyword}{this}-\/>device\_totalEdgeWeights), \textcolor{keyword}{this}-\/>matrixSize*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int}));}
-\DoxyCodeLine{00028         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"Cuda failed to initialize device\_totalEdgeWeights."});}
+\DoxyCodeLine{00028         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"{}Cuda failed to initialize device\_totalEdgeWeights."{}});}
 \DoxyCodeLine{00029 }
 \DoxyCodeLine{00030         cudastatus = cudaMemcpy(\textcolor{keyword}{this}-\/>device\_matrixIndex, \textcolor{keyword}{this}-\/>matrixIndex,}
 \DoxyCodeLine{00031             \textcolor{keyword}{this}-\/>matrixSize*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), cudaMemcpyHostToDevice);}
-\DoxyCodeLine{00032         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"Cuda failed to copy to device memory. (Index)"});}
+\DoxyCodeLine{00032         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"{}Cuda failed to copy to device memory. (Index)"{}});}
 \DoxyCodeLine{00033 }
 \DoxyCodeLine{00034         cudastatus = cudaMemcpy(\textcolor{keyword}{this}-\/>device\_totalEdgeWeights, \textcolor{keyword}{this}-\/>totalEdgeWeights,}
 \DoxyCodeLine{00035             \textcolor{keyword}{this}-\/>matrixSize*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int}), cudaMemcpyHostToDevice);}
-\DoxyCodeLine{00036         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"Cuda failed to copy to device memory. (Total Edge Values)"});}
+\DoxyCodeLine{00036         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"{}Cuda failed to copy to device memory. (Total Edge Values)"{}});}
 \DoxyCodeLine{00037 }
 \DoxyCodeLine{00038         cudastatus = CudaMigrate2DFlat<\textcolor{keywordtype}{char}>(}
 \DoxyCodeLine{00039             \&(\textcolor{keyword}{this}-\/>device\_edgeMatrix), \textcolor{keyword}{this}-\/>edgeMatrix, \textcolor{keyword}{this}-\/>matrixSize, \textcolor{keyword}{this}-\/>matrixSize);}
-\DoxyCodeLine{00040         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"    Cuda failed to initialize edge matrix."});}
+\DoxyCodeLine{00040         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"{}    Cuda failed to initialize edge matrix."{}});}
 \DoxyCodeLine{00041 }
 \DoxyCodeLine{00042         cudastatus = CudaMigrate2DFlat<\textcolor{keywordtype}{long} \textcolor{keywordtype}{int}>(}
 \DoxyCodeLine{00043             \&(\textcolor{keyword}{this}-\/>device\_valueMatrix), \textcolor{keyword}{this}-\/>valueMatrix, \textcolor{keyword}{this}-\/>matrixSize, \textcolor{keyword}{this}-\/>matrixSize);}
-\DoxyCodeLine{00044         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"    Cuda failed to initialize value matrix row."});}
+\DoxyCodeLine{00044         CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"{}    Cuda failed to initialize value matrix row."{}});}
 \DoxyCodeLine{00045 }
 \DoxyCodeLine{00046     \}}
 \DoxyCodeLine{00047 }
 \DoxyCodeLine{00048     \textcolor{comment}{/*\_\_host\_\_ char*  Markov::API::CUDA::CUDAModelMatrix::AllocVRAMOutputBuffer(long int n, long int singleGenMaxLen, long int CUDAKernelGridSize,long int sizePerGrid)\{}}
 \DoxyCodeLine{00049 \textcolor{comment}{        cudaError\_t cudastatus;}}
 \DoxyCodeLine{00050 \textcolor{comment}{        cudastatus = cudaMalloc((char **)\&this-\/>device\_outputBuffer1, CUDAKernelGridSize*sizePerGrid);}}
-\DoxyCodeLine{00051 \textcolor{comment}{        CudaCheckNotifyErr(cudastatus, "Failed to allocate VRAM buffer. (Possibly out of VRAM.)");}}
+\DoxyCodeLine{00051 \textcolor{comment}{        CudaCheckNotifyErr(cudastatus, "{}Failed to allocate VRAM buffer. (Possibly out of VRAM.)"{});}}
 \DoxyCodeLine{00052 \textcolor{comment}{        }}
 \DoxyCodeLine{00053 \textcolor{comment}{        return this-\/>device\_outputBuffer1;}}
 \DoxyCodeLine{00054 \textcolor{comment}{    \}*/}}
@@ -64,11 +64,11 @@
 \DoxyCodeLine{00060         \textcolor{keywordtype}{int} device=0;}
 \DoxyCodeLine{00061         cudaGetDeviceProperties(\&prop, device);}
 \DoxyCodeLine{00062         cudaChooseDevice(\&device, \&prop);}
-\DoxyCodeLine{00063         \textcolor{comment}{//std::cout << "Flattening matrix." << std::endl;}}
+\DoxyCodeLine{00063         \textcolor{comment}{//std::cout << "{}Flattening matrix."{} << std::endl;}}
 \DoxyCodeLine{00064         \textcolor{keyword}{this}-\/>FlattenMatrix();}
-\DoxyCodeLine{00065         \textcolor{comment}{//std::cout << "Migrating matrix." << std::endl;}}
+\DoxyCodeLine{00065         \textcolor{comment}{//std::cout << "{}Migrating matrix."{} << std::endl;}}
 \DoxyCodeLine{00066         \textcolor{keyword}{this}-\/>MigrateMatrix();}
-\DoxyCodeLine{00067         \textcolor{comment}{//std::cout << "Migrated matrix." << std::endl;}}
+\DoxyCodeLine{00067         \textcolor{comment}{//std::cout << "{}Migrated matrix."{} << std::endl;}}
 \DoxyCodeLine{00068         std::ofstream wordlist;}
 \DoxyCodeLine{00069         \textcolor{keywordflow}{if}(bFileIO)}
 \DoxyCodeLine{00070             wordlist.open(wordlistFileName);}
@@ -89,9 +89,9 @@
 \DoxyCodeLine{00085         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} leftover = n -\/ (\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a37c46cbceec37984c029be96402c60bf}{totalOutputPerSync}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a91f9343a8d6eb14f094b8fecf9bf740a}{numberOfPartitions}});}
 \DoxyCodeLine{00086 }
 \DoxyCodeLine{00087         \textcolor{keywordflow}{if}(bInfinite \&\& !\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a91f9343a8d6eb14f094b8fecf9bf740a}{numberOfPartitions}}) \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a91f9343a8d6eb14f094b8fecf9bf740a}{numberOfPartitions}}=5;}
-\DoxyCodeLine{00088         std::cerr << \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a306164e3689c651ec597a2f183a2115c}{cudaPerKernelAllocationSize}} << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{00088         std::cerr << \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a306164e3689c651ec597a2f183a2115c}{cudaPerKernelAllocationSize}} << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
 \DoxyCodeLine{00089 }
-\DoxyCodeLine{00090         \textcolor{keywordflow}{if}(n\%\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a37c46cbceec37984c029be96402c60bf}{totalOutputPerSync}}) std::cerr << \textcolor{stringliteral}{"For optimization, request outputs muliples of "}<< \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a37c46cbceec37984c029be96402c60bf}{totalOutputPerSync}} << \textcolor{stringliteral}{".\(\backslash\)n"};}
+\DoxyCodeLine{00090         \textcolor{keywordflow}{if}(n\%\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a37c46cbceec37984c029be96402c60bf}{totalOutputPerSync}}) std::cerr << \textcolor{stringliteral}{"{}For optimization, request outputs muliples of "{}}<< \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a37c46cbceec37984c029be96402c60bf}{totalOutputPerSync}} << \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
 \DoxyCodeLine{00091 }
 \DoxyCodeLine{00092         \textcolor{comment}{//start kernelID 1}}
 \DoxyCodeLine{00093         \textcolor{keyword}{this}-\/>LaunchAsyncKernel(1, minLen, maxLen);}
@@ -125,7 +125,7 @@
 \DoxyCodeLine{00121 }
 \DoxyCodeLine{00122         \textcolor{keywordflow}{if}(!leftover) \textcolor{keywordflow}{return};}
 \DoxyCodeLine{00123         \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ad8d2ede773004722efa2bba39f76e186}{alternatingKernels}}=1;}
-\DoxyCodeLine{00124         std::cerr << \textcolor{stringliteral}{"Remaining line count ("} << leftover << \textcolor{stringliteral}{") is lower than partition. Adjusting CUDA workload..\(\backslash\)n"};}
+\DoxyCodeLine{00124         std::cerr << \textcolor{stringliteral}{"{}Remaining line count ("{}} << leftover << \textcolor{stringliteral}{"{}) is lower than partition. Adjusting CUDA workload..\(\backslash\)n"{}};}
 \DoxyCodeLine{00125         \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{iterationsPerKernelThread}} = leftover/\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_afaa4601b838fb62a5c95e4d7dc44dea8}{cudaGridSize}};}
 \DoxyCodeLine{00126         \textcolor{keyword}{this}-\/>LaunchAsyncKernel(0, minLen, maxLen);}
 \DoxyCodeLine{00127         cudaStreamSynchronize(\textcolor{keyword}{this}-\/>cudastreams[0]);}
@@ -134,13 +134,13 @@
 \DoxyCodeLine{00130         leftover -\/= \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{iterationsPerKernelThread}}*\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_afaa4601b838fb62a5c95e4d7dc44dea8}{cudaGridSize}};}
 \DoxyCodeLine{00131         \textcolor{keywordflow}{if}(!leftover) \textcolor{keywordflow}{return};}
 \DoxyCodeLine{00132 }
-\DoxyCodeLine{00133         std::cerr << \textcolor{stringliteral}{"Remaining line count ("} << leftover << \textcolor{stringliteral}{") is lower than minimum possible. Handing over to CPU generation.\(\backslash\)n"};}
+\DoxyCodeLine{00133         std::cerr << \textcolor{stringliteral}{"{}Remaining line count ("{}} << leftover << \textcolor{stringliteral}{"{}) is lower than minimum possible. Handing over to CPU generation.\(\backslash\)n"{}};}
 \DoxyCodeLine{00134         \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{iterationsPerKernelThread}} = leftover/\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_afaa4601b838fb62a5c95e4d7dc44dea8}{cudaGridSize}};}
 \DoxyCodeLine{00135 }
 \DoxyCodeLine{00136         leftover -\/= \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_ab2347c194dfe3dc6538416dab92d2780}{iterationsPerKernelThread}};}
 \DoxyCodeLine{00137 }
 \DoxyCodeLine{00138         \textcolor{keywordflow}{if}(!leftover) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00139         std::cerr << \textcolor{stringliteral}{"Remaining "} << leftover << \textcolor{stringliteral}{" lines are absolutely not worth printing.\(\backslash\)n"};}
+\DoxyCodeLine{00139         std::cerr << \textcolor{stringliteral}{"{}Remaining "{}} << leftover << \textcolor{stringliteral}{"{} lines are absolutely not worth printing.\(\backslash\)n"{}};}
 \DoxyCodeLine{00140         Markov::API::ModelMatrix::ConstructMatrix();}
 \DoxyCodeLine{00141         Markov::API::ModelMatrix::FastRandomWalk(leftover, \&wordlist, minLen, maxLen, 1, bFileIO);}
 \DoxyCodeLine{00142 }
@@ -160,7 +160,7 @@
 \DoxyCodeLine{00156         \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a589f82de68793f8fbc570827d092fd1a}{-\/>}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a589f82de68793f8fbc570827d092fd1a}{device\_outputBuffer}} = \textcolor{keyword}{new} \textcolor{keywordtype}{char}*[numberOfStreams];}
 \DoxyCodeLine{00157             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<numberOfStreams;i++)\{}
 \DoxyCodeLine{00158                 cudastatus = cudaMalloc((\textcolor{keywordtype}{char}**)\&(device\_outputBuffer[i]), cudaPerKernelAllocationSize);}
-\DoxyCodeLine{00159                 CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"Failed to establish memory channel. Possibly out of VRAM?"});}
+\DoxyCodeLine{00159                 CudaCheckNotifyErr(cudastatus, \textcolor{stringliteral}{"{}Failed to establish memory channel. Possibly out of VRAM?"{}});}
 \DoxyCodeLine{00160             \}}
 \DoxyCodeLine{00161 }
 \DoxyCodeLine{00162         \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1bdd84e951e4afff952f80be85a3e6c0}{-\/>}} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a1bdd84e951e4afff952f80be85a3e6c0}{device\_seeds}} = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}*[numberOfStreams];}
@@ -178,12 +178,12 @@
 \DoxyCodeLine{00174         \textcolor{comment}{//else cudaStreamSynchronize(this-\/>cudastreams[kernelID-\/1]);}}
 \DoxyCodeLine{00175         FastRandomWalkCUDAKernel<<<cudaBlocks,cudaThreads,0, \textcolor{keyword}{this}-\/>cudastreams[kernelID]>>>(iterationsPerKernelThread, minLen, maxLen, \textcolor{keyword}{this}-\/>device\_outputBuffer[kernelID], \textcolor{keyword}{this}-\/>device\_matrixIndex,}
 \DoxyCodeLine{00176             \textcolor{keyword}{this}-\/>device\_totalEdgeWeights, \textcolor{keyword}{this}-\/>device\_valueMatrix, \textcolor{keyword}{this}-\/>device\_edgeMatrix, \textcolor{keyword}{this}-\/>matrixSize, cudaMemPerGrid, \textcolor{keyword}{this}-\/>device\_seeds[kernelID]);}
-\DoxyCodeLine{00177         \textcolor{comment}{//std::cerr << "Started kernel" << kernelID << "\(\backslash\)n";}}
+\DoxyCodeLine{00177         \textcolor{comment}{//std::cerr << "{}Started kernel"{} << kernelID << "{}\(\backslash\)n"{};}}
 \DoxyCodeLine{00178     \}}
 \DoxyCodeLine{00179 }
 \DoxyCodeLine{\Hypertarget{cuda_model_matrix_8cu_source_l00180}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{00180}}     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{\_\_host\_\_}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{CUDAModelMatrix}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{GatherAsyncKernelOutput}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{kernelID}}, \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{bFileIO}}, \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{std}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{ofstream}} \&\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a9e7c10fa39fe69e23ebc7aa812c30e71}{wordlist}})\{}
 \DoxyCodeLine{00181         cudaMemcpy(\textcolor{keyword}{this}-\/>outputBuffer[kernelID],\textcolor{keyword}{this}-\/>device\_outputBuffer[kernelID],cudaPerKernelAllocationSize, cudaMemcpyDeviceToHost);}
-\DoxyCodeLine{00182         \textcolor{comment}{//std::cerr << "Kernel" << kernelID << " output copied\(\backslash\)n";}}
+\DoxyCodeLine{00182         \textcolor{comment}{//std::cerr << "{}Kernel"{} << kernelID << "{} output copied\(\backslash\)n"{};}}
 \DoxyCodeLine{00183         \textcolor{keywordflow}{if}(bFileIO)\{}
 \DoxyCodeLine{00184             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} j=0;j<\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a306164e3689c651ec597a2f183a2115c}{cudaPerKernelAllocationSize}};j+=\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a27101ee4851ec3aa480d3d2df3610535}{cudaMemPerGrid}})\{}
 \DoxyCodeLine{00185                 wordlist << \&\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a7b18ffe2f94cb380dccfdd996e4157e9}{-\/>}}\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix_a7b18ffe2f94cb380dccfdd996e4157e9}{outputBuffer}}[kernelID][j];}

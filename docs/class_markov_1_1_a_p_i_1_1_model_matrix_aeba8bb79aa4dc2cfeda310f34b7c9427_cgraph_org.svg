@@ -128,7 +128,7 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="class_markov_1_1_model.html#a35cb15a14d034f3365b9d2d3efa1ffc0" target="_top" xlink:title="Return starter Node.">
+<g id="a_node7"><a xlink:href="class_markov_1_1_model.html#a0e53104e4ec665f005529f51a80c857d" target="_top" xlink:title="Return starter Node.">
 <polygon fill="none" stroke="black" points="423,-40.5 423,-61.5 608,-61.5 608,-40.5 423,-40.5"/>
 <text text-anchor="middle" x="515.5" y="-47.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::Model::StarterNode</text>
 </a>

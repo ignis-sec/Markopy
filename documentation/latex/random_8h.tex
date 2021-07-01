@@ -1,5 +1,5 @@
-\hypertarget{random_8h}{}\doxysection{random.\+h File Reference}
-\label{random_8h}\index{random.h@{random.h}}
+\hypertarget{random_8h}{}\doxysection{Markopy/\+Markov\+Model/src/random.h File Reference}
+\label{random_8h}\index{Markopy/MarkovModel/src/random.h@{Markopy/MarkovModel/src/random.h}}
 
 
 Random engine implementations for \mbox{\hyperlink{namespace_markov}{Markov}}.  
@@ -12,7 +12,7 @@ Include dependency graph for random.\+h\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=232pt]{random_8h__incl}
+\includegraphics[width=234pt]{random_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -40,7 +40,7 @@ class \mbox{\hyperlink{class_markov_1_1_random_1_1_mersenne}{Markov\+::\+Random\
  \mbox{\hyperlink{namespace_markov}{Markov}}
 \begin{DoxyCompactList}\small\item\em Namespace for the markov-\/model related classes. Contains \mbox{\hyperlink{class_markov_1_1_model}{Model}}, \mbox{\hyperlink{class_markov_1_1_node}{Node}} and \mbox{\hyperlink{class_markov_1_1_edge}{Edge}} classes. \end{DoxyCompactList}\item 
  \mbox{\hyperlink{namespace_markov_1_1_random}{Markov\+::\+Random}}
-\begin{DoxyCompactList}\small\item\em Objects related to R\+NG. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Objects related to RNG. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -60,13 +60,14 @@ Implementation using \mbox{\hyperlink{random_8h}{Random.\+h}} default random eng
 {\bfseries{Example}} {\bfseries{Use\+:}} Using Default Engine with Random\+Walk 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} model;}
-\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"{}model.mdl"{}});}
 \DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{Markov::Random::DefaultRandomEngine}} randomEngine;}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
 \DoxyCodeLine{    this-\/>RandomWalk(\&randomEngine, 5, 10, res); }
-\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
 \DoxyCodeLine{ \}}
+
 \end{DoxyCode}
 
 
@@ -74,6 +75,7 @@ Implementation using \mbox{\hyperlink{random_8h}{Random.\+h}} default random eng
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine}{Markov::Random::DefaultRandomEngine}} de;}
 \DoxyCodeLine{std::cout << de.\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_afd4233366727e5c2dd14d7e5c3ebfec1}{random}}();}
+
 \end{DoxyCode}
 
 
@@ -84,13 +86,14 @@ This implementation of the Marsaglia Engine is seeded by \mbox{\hyperlink{random
 {\bfseries{Example}} {\bfseries{Use\+:}} Using Marsaglia Engine with Random\+Walk 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_model}{Markov::Model<char>}} model;}
-\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"model.mdl"});}
+\DoxyCodeLine{Model.import(\textcolor{stringliteral}{"{}model.mdl"{}});}
 \DoxyCodeLine{\textcolor{keywordtype}{char}* res = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[11];}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} MarsagliaRandomEngine;}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{}
 \DoxyCodeLine{    this-\/>RandomWalk(\&MarsagliaRandomEngine, 5, 10, res); }
-\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{    std::cout << res << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
 \DoxyCodeLine{ \}}
+
 \end{DoxyCode}
 
 
@@ -98,6 +101,7 @@ This implementation of the Marsaglia Engine is seeded by \mbox{\hyperlink{random
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia}{Markov::Random::Marsaglia}} me;}
 \DoxyCodeLine{std::cout << me.\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a0a56da316d520b80be6b6df6c9e0b537}{random}}();}
+
 \end{DoxyCode}
  
 

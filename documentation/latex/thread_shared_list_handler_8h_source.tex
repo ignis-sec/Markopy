@@ -1,5 +1,5 @@
 \hypertarget{thread_shared_list_handler_8h_source}{}\doxysection{thread\+Shared\+List\+Handler.\+h}
-\label{thread_shared_list_handler_8h_source}\index{threadSharedListHandler.h@{threadSharedListHandler.h}}
+\label{thread_shared_list_handler_8h_source}\index{Markopy/MarkovAPI/src/threadSharedListHandler.h@{Markopy/MarkovAPI/src/threadSharedListHandler.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001 \textcolor{comment}{/** @file threadSharedListHandler.h}}
@@ -34,9 +34,9 @@
 \DoxyCodeLine{00030 \textcolor{comment}{     * }}
 \DoxyCodeLine{00031 \textcolor{comment}{     * @b Example @b Use: Simple file read}}
 \DoxyCodeLine{00032 \textcolor{comment}{     * @code\{.cpp\}}}
-\DoxyCodeLine{00033 \textcolor{comment}{     * ThreadSharedListHandler listhandler("test.txt");}}
+\DoxyCodeLine{00033 \textcolor{comment}{     * ThreadSharedListHandler listhandler("{}test.txt"{});}}
 \DoxyCodeLine{00034 \textcolor{comment}{     * std::string line;}}
-\DoxyCodeLine{00035 \textcolor{comment}{     * std::cout << listhandler-\/>next(\&line) << "\(\backslash\)n";}}
+\DoxyCodeLine{00035 \textcolor{comment}{     * std::cout << listhandler-\/>next(\&line) << "{}\(\backslash\)n"{};}}
 \DoxyCodeLine{00036 \textcolor{comment}{     * @endcode}}
 \DoxyCodeLine{00037 \textcolor{comment}{     * }}
 \DoxyCodeLine{00038 \textcolor{comment}{     * @b Example @b Use: Example use case from MarkovPasswords showing multithreaded access}}
@@ -56,12 +56,12 @@
 \DoxyCodeLine{00052 \textcolor{comment}{     *       \}}}
 \DoxyCodeLine{00053 \textcolor{comment}{     *       auto finish = std::chrono::high\_resolution\_clock::now();}}
 \DoxyCodeLine{00054 \textcolor{comment}{     *       std::chrono::duration<double> elapsed = finish -\/ start;}}
-\DoxyCodeLine{00055 \textcolor{comment}{     *       std::cout << "Elapsed time: " << elapsed.count() << " s\(\backslash\)n";}}
+\DoxyCodeLine{00055 \textcolor{comment}{     *       std::cout << "{}Elapsed time: "{} << elapsed.count() << "{} s\(\backslash\)n"{};}}
 \DoxyCodeLine{00056 \textcolor{comment}{     * }}
 \DoxyCodeLine{00057 \textcolor{comment}{     *   \}}}
 \DoxyCodeLine{00058 \textcolor{comment}{     * }}
 \DoxyCodeLine{00059 \textcolor{comment}{     *   void MarkovPasswords::TrainThread(ThreadSharedListHandler *listhandler, const char* datasetFileName, char delimiter)\{}}
-\DoxyCodeLine{00060 \textcolor{comment}{     *       char format\_str[] ="\%ld,\%s";}}
+\DoxyCodeLine{00060 \textcolor{comment}{     *       char format\_str[] ="{}\%ld,\%s"{};}}
 \DoxyCodeLine{00061 \textcolor{comment}{     *       format\_str[2]=delimiter;}}
 \DoxyCodeLine{00062 \textcolor{comment}{     *       std::string line;}}
 \DoxyCodeLine{00063 \textcolor{comment}{     *       while (listhandler-\/>next(\&line)) \{}}
@@ -87,9 +87,9 @@
 \DoxyCodeLine{00083 \textcolor{comment}{     * }}
 \DoxyCodeLine{00084 \textcolor{comment}{     * @b Example @b Use: Simple file read}}
 \DoxyCodeLine{00085 \textcolor{comment}{     * @code\{.cpp\}}}
-\DoxyCodeLine{00086 \textcolor{comment}{     * ThreadSharedListHandler listhandler("test.txt");}}
+\DoxyCodeLine{00086 \textcolor{comment}{     * ThreadSharedListHandler listhandler("{}test.txt"{});}}
 \DoxyCodeLine{00087 \textcolor{comment}{     * std::string line;}}
-\DoxyCodeLine{00088 \textcolor{comment}{     * std::cout << listhandler-\/>next(\&line) << "\(\backslash\)n";}}
+\DoxyCodeLine{00088 \textcolor{comment}{     * std::cout << listhandler-\/>next(\&line) << "{}\(\backslash\)n"{};}}
 \DoxyCodeLine{00089 \textcolor{comment}{     * @endcode}}
 \DoxyCodeLine{00090 \textcolor{comment}{     * }}
 \DoxyCodeLine{00091 \textcolor{comment}{    */}}
