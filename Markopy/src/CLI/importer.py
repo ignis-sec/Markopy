@@ -22,7 +22,7 @@ def import_markopy():
         spec.loader.exec_module(markopy)
         return markopy
     except ImportError as e:
-        print(f"({__file__}) Working in development mode. Trying to load markopy.{ext} from ../../../out/")
+        #print(f"({__file__}) Working in development mode. Trying to load markopy.{ext} from ../../../out/")
         if(os.path.exists(f"../../../out/lib/markopy.{ext}")):
             spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", os.path.abspath(f"../../../out/lib/markopy.{ext}")))
             markopy = module_from_spec(spec)

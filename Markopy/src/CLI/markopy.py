@@ -43,7 +43,7 @@ try:
     from mmx import ModelMatrixCLI
 
 except ModuleNotFoundError as e:
-    print("Working in development mode. Trying to load markopy.py from ../../../Markopy/")
+    #print("Working in development mode. Trying to load markopy.py from ../../../Markopy/")
     if(os.path.exists("../../../Markopy/src/CLI/base.py")):
         sys.path.insert(1, '../../../Markopy/src/CLI/')
         from base import BaseCLI
