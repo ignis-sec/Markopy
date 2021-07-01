@@ -24,23 +24,16 @@ import sys
 ext = "so"
 if os.name == 'nt':
     ext="pyd"
-try:
-    spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", os.path.abspath(f"markopy.{ext}")))
-    markopy = module_from_spec(spec)
-    spec.loader.exec_module(markopy)
-except ImportError as e:
-    print(f"({__file__}) Working in development mode. Trying to load markopy.{ext} from ../../../out/")
-    if(os.path.exists("../../../out/lib/markopy.so")):
-        spec = spec_from_loader("markopy", ExtensionFileLoader("markopy", os.path.abspath(f"../../../out/lib/markopy.{ext}")))
-        markopy = module_from_spec(spec)
-        spec.loader.exec_module(markopy)
-    else:
-        raise e
+
 
 try:
     from base import BaseCLI
     from mp import MarkovPasswordsCLI
     from mmx import ModelMatrixCLI
+    from evaluate import CorpusEvaluator, ModelEvaluator
+    from importer import import_markopy
+    markopy = import_markopy()
+
 
 except ModuleNotFoundError as e:
     #print("Working in development mode. Trying to load markopy.py from ../../../Markopy/")
@@ -49,6 +42,10 @@ except ModuleNotFoundError as e:
         from base import BaseCLI
         from mp import MarkovPasswordsCLI
         from mmx import ModelMatrixCLI
+        from evaluate import CorpusEvaluator, ModelEvaluator
+        from importer import import_markopy
+        markopy = import_markopy()
+
     else:
         raise e 
 
@@ -89,6 +86,8 @@ class MarkopyCLI(BaseCLI):
         """
         self.parser.add_argument("-mt", "--model_type", default="_MMX", help="Model type to use. Accepted values: MP, MMX")
         self.parser.add_argument("-h", "--help", action="store_true", help="Model type to use. Accepted values: MP, MMX")
+        self.parser.add_argument("-ev", "--evaluate", help="Evaluate a models integrity")
+        self.parser.add_argument("-evt", "--evaluate_type", help="Evaluation type, model or corpus")
         self.parser.print_help = self.help
 
     @abstractmethod
@@ -129,6 +128,9 @@ class MarkopyCLI(BaseCLI):
         self.add_arguments()
         self.parse_arguments()
         self.init_post_arguments()
+        if(self.args.evaluate): 
+            self.evaluate(self.args.evaluate)
+            exit()
         if(self.args.model_type == "MP"):
             self.cli = MarkovPasswordsCLI()
         elif(self.args.model_type == "MMX" or self.args.model_type == "_MMX"):
@@ -157,6 +159,21 @@ class MarkopyCLI(BaseCLI):
         "! @brief stub function to hack help requests"
         return
         
+    
+    def evaluate(self,filename : str):
+        if(not self.args.evaluate_type):
+            if(filename.endswith(".mdl")):
+                ModelEvaluator(filename).evaluate()
+            else:
+                CorpusEvaluator(filename).evaluate()
+        else:
+            if(self.args.evaluate_type == "model"):
+                ModelEvaluator(filename).evaluate()
+            else:
+                CorpusEvaluator(filename).evaluate()
+    
+    def init_post_arguments(sel):
+        pass
 
 if __name__ == "__main__":
     mp = MarkopyCLI()
