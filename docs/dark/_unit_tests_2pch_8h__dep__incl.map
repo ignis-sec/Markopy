@@ -1,5 +1,5 @@
-<map id="pch.h" name="pch.h">
-<area shape="rect" id="node1" title="For windows dynamic library." alt="" coords="80,5,147,35"/>
-<area shape="rect" id="node2" href="$_unit_tests_2pch_8cpp.html" title="For windows dynamic library." alt="" coords="5,83,91,112"/>
-<area shape="rect" id="node3" href="$_unit_tests_8cpp.html" title="Unit tests with Microsoft::VisualStudio::CppUnitTestFramework." alt="" coords="115,83,242,112"/>
+<map id="Markopy/UnitTests/pch.h" name="Markopy/UnitTests/pch.h">
+<area shape="rect" id="node1" title="For windows dynamic library." alt="" coords="154,5,369,35"/>
+<area shape="rect" id="node2" href="$_unit_tests_2pch_8cpp.html" title="For windows dynamic library." alt="" coords="5,83,240,112"/>
+<area shape="rect" id="node3" href="$_unit_tests_8cpp.html" title="Unit tests with Microsoft::VisualStudio::CppUnitTestFramework." alt="" coords="264,83,539,112"/>
 </map>

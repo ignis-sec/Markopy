@@ -30,6 +30,9 @@
 
 using namespace boost::python;
 
+/**
+ * @brief CPython module for Markov::API objects
+ */
 namespace Markov::Markopy{
     BOOST_PYTHON_MODULE(markopy)
     {

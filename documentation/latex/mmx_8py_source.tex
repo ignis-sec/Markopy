@@ -1,0 +1,49 @@
+\hypertarget{mmx_8py_source}{}\doxysection{mmx.\+py}
+\label{mmx_8py_source}\index{Markopy/Markopy/src/CLI/mmx.py@{Markopy/Markopy/src/CLI/mmx.py}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mmx_8py_source_l00001}\mbox{\hyperlink{namespacemmx}{00001}} \textcolor{comment}{\#!/usr/bin/python3}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009 \textcolor{keyword}{from} mm \textcolor{keyword}{import} ModelMatrix}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 \textcolor{keyword}{from} importer \textcolor{keyword}{import} import\_markopy}
+\DoxyCodeLine{\Hypertarget{mmx_8py_source_l00012}\mbox{\hyperlink{namespacemmx_a5720348b4a35fe9b211e3c83f464d299}{00012}} markopy = \mbox{\hyperlink{namespaceimporter_a94ba10dfc732b45384713b2908257fb8}{import\_markopy}}()}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014 \textcolor{keyword}{from} base \textcolor{keyword}{import} BaseCLI, AbstractGenerationModelCLI}
+\DoxyCodeLine{00015 \textcolor{keyword}{import} os}
+\DoxyCodeLine{00016 \textcolor{keyword}{import} allogate \textcolor{keyword}{as} logging}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{\Hypertarget{mmx_8py_source_l00018}\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i}{00018}} \textcolor{keyword}{class }\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i}{ModelMatrixCLI}}(\mbox{\hyperlink{class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i}{AbstractGenerationModelCLI}}, \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix}{ModelMatrix}}):}
+\DoxyCodeLine{00019     \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00020 \textcolor{stringliteral}{        @brief Extension of Python.Markopy.Base.BaseCLI  for Markov::API::ModelMatrix}}
+\DoxyCodeLine{00021 \textcolor{stringliteral}{        @belongsto Python::Markopy}}
+\DoxyCodeLine{00022 \textcolor{stringliteral}{        @extends Python::Markopy::AbstractGenerationModelCLI}}
+\DoxyCodeLine{00023 \textcolor{stringliteral}{        @extends Python::Markopy::ModelMatrix}}
+\DoxyCodeLine{00024 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00025 \textcolor{stringliteral}{        adds -\/st/-\/-\/stdout arguement to the command line.}}
+\DoxyCodeLine{00026 \textcolor{stringliteral}{    "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{mmx_8py_source_l00027}\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_ad35db5fba1064c34f86c56ae634b51ab}{00027}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_ad35db5fba1064c34f86c56ae634b51ab}{\_\_init\_\_}}(self, add\_help:bool=\textcolor{keyword}{True}):}
+\DoxyCodeLine{00028         \textcolor{stringliteral}{"{}! @brief initialize model with Markov::API::ModelMatrix"{}}}
+\DoxyCodeLine{00029         super().\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_ad35db5fba1064c34f86c56ae634b51ab}{\_\_init\_\_}}(add\_help)}
+\DoxyCodeLine{\Hypertarget{mmx_8py_source_l00030}\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{00030}}         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a8dee51fa6e7fbad6ff1a5a3789fd2d0f}{model}}\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}}model = markopy.ModelMatrix()}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{\Hypertarget{mmx_8py_source_l00032}\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a8a335e71b4f9ff50511ff1d646f30969}{00032}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a8a335e71b4f9ff50511ff1d646f30969}{add\_arguments}}(self):}
+\DoxyCodeLine{00033         super().\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a8a335e71b4f9ff50511ff1d646f30969}{add\_arguments}}()}
+\DoxyCodeLine{00034         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_abc1d9ff41df2198aa2ddee090fedc91f}{parser}}parser.add\_argument(\textcolor{stringliteral}{"{}-\/st"{}}, \textcolor{stringliteral}{"{}-\/-\/stdout"{}}, action=\textcolor{stringliteral}{"{}store\_true"{}}, help=\textcolor{stringliteral}{"{}Stdout mode"{}})}
+\DoxyCodeLine{00035     }
+\DoxyCodeLine{\Hypertarget{mmx_8py_source_l00036}\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_aedd02a1510ad98bec9b755686fbcec23}{00036}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_aedd02a1510ad98bec9b755686fbcec23}{init\_post\_arguments}}(self):}
+\DoxyCodeLine{00037         super().\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_aedd02a1510ad98bec9b755686fbcec23}{init\_post\_arguments}}()}
+\DoxyCodeLine{\Hypertarget{mmx_8py_source_l00038}\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a6a74b627a264dc994281335ab354ae13}{00038}}         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a6a74b627a264dc994281335ab354ae13}{fileIO}}fileIO = \textcolor{keywordflow}{not} self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}args.stdout}
+\DoxyCodeLine{00039         }
+\DoxyCodeLine{\Hypertarget{mmx_8py_source_l00040}\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a734d179536d25323ae0b421c48f61716}{00040}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a734d179536d25323ae0b421c48f61716}{\_generate}}(self, wordlist : str, ):}
+\DoxyCodeLine{00041         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a8dee51fa6e7fbad6ff1a5a3789fd2d0f}{model}}\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a14dc4a25ff4302885ac74904cff28820}{model}}model.\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_ae42271d3f464fd17b5e91a95b3cffd27}{FastRandomWalk}}(int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}args.count), wordlist, int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}args.min), int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}args.max), int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}args.threads), self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a6a74b627a264dc994281335ab354ae13}{fileIO}}fileIO)}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{mmx_8py_source_l00044}\mbox{\hyperlink{namespacemmx_aba38679f972536f6c0dde564a020c4f7}{00044}}     mp = ModelMatrixCLI()}
+\DoxyCodeLine{00045     mp.parse()}
+\DoxyCodeLine{00046     mp.process()}
+
+\end{DoxyCode}

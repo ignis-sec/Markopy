@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['parser_469',['parser',['../namespacemarkopy.html#ad5187b752577f4de390b183b9c31ba33',1,'markopy']]],
-  ['po_470',['po',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#a7cce367bd032897cc433adf667099a6c',1,'Markov::API::CLI::Argparse']]]
+  ['ready_557',['ready',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a6e6994aef7ad847300be6e158e6b3322',1,'Markov::API::ModelMatrix']]]
 ];

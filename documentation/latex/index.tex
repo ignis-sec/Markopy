@@ -1,10 +1,14 @@
+\label{index_md_Markopy_README}%
+\Hypertarget{index_md_Markopy_README}%
+
+
 \href{https://github.com/ignis-sec/Markopy/graphs/contributors}{\texttt{ }} \href{https://github.com/ignis-sec/Markopy/network/members}{\texttt{ }} \href{https://github.com/ignis-sec/Markopy/stargazers}{\texttt{ }} \href{https://github.com/ignis-sec/Markopy/issues}{\texttt{ }} 
 
 ~\newline
   \doxysubsubsection*{Markopy}
 
   Generate wordlists with markov models. ~\newline
- \href{https://markov.ignis.wtf}{\texttt{ H\+T\+ML documentation}} · \href{https://markov.ignis.wtf/documentation.pdf}{\texttt{ P\+DF documentation}} · \href{https://github.com/ignis-sec/Markopy}{\texttt{ Github Page}} · \href{https://github.com/ignis-sec/Markopy/issues}{\texttt{ Report Bug}} · \href{https://github.com/ignis-sec/Markopy/pulls}{\texttt{ Add a Bug}}  
+ \href{https://markov.ignis.wtf}{\texttt{ HTML documentation}} · \href{https://markov.ignis.wtf/documentation.pdf}{\texttt{ PDF documentation}} · \href{https://github.com/ignis-sec/Markopy}{\texttt{ Github Page}} · \href{https://github.com/ignis-sec/Markopy/issues}{\texttt{ Report Bug}} · \href{https://github.com/ignis-sec/Markopy/pulls}{\texttt{ Add a Bug}}  
 
  \doxyparagraph*{Table of Contents}
 
@@ -18,14 +22,14 @@
 \end{DoxyItemize}
 \item \href{\#building}{\texttt{ Building}} 
 \begin{DoxyItemize}
-\item \href{\#cmake-configuration}{\texttt{ C\+Make configuration}} 
+\item \href{\#cmake-configuration}{\texttt{ CMake configuration}} 
 \begin{DoxyItemize}
 \item \href{\#build-all}{\texttt{ Build everything}} 
 \item \href{\#build-libs}{\texttt{ Build libraries only}} 
-\item \href{\#build-cuda-libs}{\texttt{ Build C\+U\+D\+A-\/accelerated libraries}} 
+\item \href{\#build-cuda-libs}{\texttt{ Build CUDA-\/accelerated libraries}} 
 \item \href{\#build-py-libs}{\texttt{ Build python module \& libraries}} 
-\item \href{\#build-cpy-libs}{\texttt{ Build C\+U\+DA accelerated python module}} 
-\item \href{\#build-cpy-libs-and-gui}{\texttt{ Build C\+U\+DA accelerated python module and the G\+UI}} 
+\item \href{\#build-cpy-libs}{\texttt{ Build CUDA accelerated python module}} 
+\item \href{\#build-cpy-libs-and-gui}{\texttt{ Build CUDA accelerated python module and the GUI}} 
 \end{DoxyItemize}
 \item \href{\#prequisites}{\texttt{ Prequisites}} 
 \begin{DoxyItemize}
@@ -35,12 +39,12 @@
 \item \href{\#general-prequisites-win}{\texttt{ Windows}} 
 \end{DoxyItemize}
 \item \href{\#preq-mm}{\texttt{ Markov\+Model}} 
-\item \href{\#preq-ma}{\texttt{ Markov\+A\+PI}} 
-\item \href{\#preq-mac}{\texttt{ Markov\+A\+P\+I\+C\+LI}} 
+\item \href{\#preq-ma}{\texttt{ Markov\+API}} 
+\item \href{\#preq-mac}{\texttt{ Markov\+APICLI}} 
 \item \href{\#preq-mpy}{\texttt{ Markopy}} 
-\item \href{\#preq-cma}{\texttt{ Cuda\+Markov\+A\+PI}} 
+\item \href{\#preq-cma}{\texttt{ Cuda\+Markov\+API}} 
 \item \href{\#preq-cmpy}{\texttt{ Cuda\+Markopy}} 
-\item \href{\#preq-mpgui}{\texttt{ Markov\+Passwords\+G\+UI}} 
+\item \href{\#preq-mpgui}{\texttt{ Markov\+Passwords\+GUI}} 
 \end{DoxyItemize}
 \item \href{\#installing-deps}{\texttt{ Installing Dependencies}} 
 \begin{DoxyItemize}
@@ -67,29 +71,29 @@ This project contains following sub-\/projects\+:
 \begin{DoxyItemize}
 \item A versatile header-\/only template library for basic \mbox{\hyperlink{namespace_markov}{Markov}} Model structure.
 \end{DoxyItemize}
-\item Markov\+A\+PI
+\item Markov\+API
 \begin{DoxyItemize}
 \item A static/dynamic library built on Markov\+Model, specialized to generate single-\/word lines.
 \end{DoxyItemize}
-\item Markov\+A\+P\+I\+C\+LI
+\item Markov\+APICLI
 \begin{DoxyItemize}
-\item A command line interface built on top of Markov\+A\+PI
+\item A command line interface built on top of Markov\+API
 \end{DoxyItemize}
 \item Markopy
 \begin{DoxyItemize}
-\item A C\+Python extension wrapper for Markov\+A\+PI, along with its own command line interface.
+\item A CPython extension wrapper for Markov\+API, along with its own command line interface.
 \end{DoxyItemize}
-\item Markov\+Passwords\+G\+UI
+\item Markov\+Passwords\+GUI
 \begin{DoxyItemize}
-\item A graphical user interface for Markov\+A\+PI
+\item A graphical user interface for Markov\+API
 \end{DoxyItemize}
-\item Cuda\+Markov\+A\+PI
+\item Cuda\+Markov\+API
 \begin{DoxyItemize}
-\item G\+P\+U-\/accelerated wrapper for Markov\+A\+PI
+\item GPU-\/accelerated wrapper for Markov\+API
 \end{DoxyItemize}
 \item Cuda\+Markopy
 \begin{DoxyItemize}
-\item G\+P\+U-\/accelereted wrapper for Cuda\+Markov\+A\+PI
+\item GPU-\/accelereted wrapper for Cuda\+Markov\+API
 \end{DoxyItemize}
 \end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysubsection{Possible Use Cases}\label{index_autotoc_md3}
 
@@ -116,11 +120,11 @@ Release files contain\+:
 \end{DoxyItemize}
 \item markopy-\/\{version\}-\/\{platform\}-\/py\{ver\}.\{extension\}.zip
 \begin{DoxyItemize}
-\item Depending on the paltform, contains markopy.\+so or markopy.\+pyd. C\+Python extensions are compiled for specific versions. If your python version is not supported by the releases, you can create an issue, or build it yourself using the python3.\+x-\/dev package.
+\item Depending on the paltform, contains markopy.\+so or markopy.\+pyd. CPython extensions are compiled for specific versions. If your python version is not supported by the releases, you can create an issue, or build it yourself using the python3.\+x-\/dev package.
 \end{DoxyItemize}
 \item cudamarkopy-\/\{version\}-\/\{platform\}-\/py\{ver\}.\{extension\}.zip
 \begin{DoxyItemize}
-\item Depending on the paltform, contains cudamarkopy.\+so or cudamarkopy.\+pyd. C\+Python extensions are compiled for specific versions. If your python version is not supported by the releases, you can create an issue, or build it yourself using the python3.\+x-\/dev package.
+\item Depending on the paltform, contains cudamarkopy.\+so or cudamarkopy.\+pyd. CPython extensions are compiled for specific versions. If your python version is not supported by the releases, you can create an issue, or build it yourself using the python3.\+x-\/dev package.
 \end{DoxyItemize}
 \item models-\/\{version\}.zip
 \begin{DoxyItemize}
@@ -139,16 +143,16 @@ You can find a list of the dependencies below. If you have any missing, check ou
 To build the simple core of this project, you\textquotesingle{}ll need\+: \hypertarget{index_autotoc_md10}{}\doxysubsubsection{Linux}\label{index_autotoc_md10}
 
 \begin{DoxyItemize}
-\item C\+Make, preferably one of the latest versions.
-\item C\+XX compiler, preferably g++ or clang++ (L\+L\+VM 3.\+9+).
+\item CMake, preferably one of the latest versions.
+\item CXX compiler, preferably g++ or clang++ (LLVM 3.\+9+).
 \end{DoxyItemize}\hypertarget{index_autotoc_md11}{}\doxysubsubsection{Windows}\label{index_autotoc_md11}
 
 \begin{DoxyItemize}
-\item C\+Make, preferably one of the latest versions.
-\item C\+XX compiler, preferably msbuild(cl.\+exe) or clang++ (L\+L\+VM 3.\+9+). Please note that mingw is not recommended as it is not officially supported by the nvcc.\+exe, and might not be linkable if you are building the C\+U\+DA components too.
+\item CMake, preferably one of the latest versions.
+\item CXX compiler, preferably msbuild(cl.\+exe) or clang++ (LLVM 3.\+9+). Please note that mingw is not recommended as it is not officially supported by the nvcc.\+exe, and might not be linkable if you are building the CUDA components too.
 \end{DoxyItemize}\hypertarget{index_autotoc_md12}{}\doxysubsection{Markov\+Model}\label{index_autotoc_md12}
- This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.\hypertarget{index_autotoc_md13}{}\doxysubsection{Markov\+A\+PI}\label{index_autotoc_md13}
- This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.\hypertarget{index_autotoc_md14}{}\doxysubsection{Markov\+A\+P\+I\+C\+LI}\label{index_autotoc_md14}
+ This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.\hypertarget{index_autotoc_md13}{}\doxysubsection{Markov\+API}\label{index_autotoc_md13}
+ This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.\hypertarget{index_autotoc_md14}{}\doxysubsection{Markov\+APICLI}\label{index_autotoc_md14}
 
 
 
@@ -161,35 +165,35 @@ To build the simple core of this project, you\textquotesingle{}ll need\+: \hyper
 \begin{DoxyItemize}
 \item Boost.\+Python (tested on 1.\+71.\+0-\/1.\+76.\+0)
 \item Python development package (tested on python 36-\/39)
-\end{DoxyItemize}\hypertarget{index_autotoc_md16}{}\doxysubsection{Cuda\+Markov\+A\+PI}\label{index_autotoc_md16}
+\end{DoxyItemize}\hypertarget{index_autotoc_md16}{}\doxysubsection{Cuda\+Markov\+API}\label{index_autotoc_md16}
 
 
 
 \begin{DoxyItemize}
-\item C\+U\+DA toolkit (11.\+0+, c++17 support required)
+\item CUDA toolkit (11.\+0+, c++17 support required)
 \end{DoxyItemize}\hypertarget{index_autotoc_md17}{}\doxysubsection{Cuda\+Markopy}\label{index_autotoc_md17}
 
 
 
 \begin{DoxyItemize}
-\item C\+U\+DA toolkit (11.\+0+, c++17 support required)
+\item CUDA toolkit (11.\+0+, c++17 support required)
 \item Boost.\+Python (tested on 1.\+71.\+0-\/1.\+76.\+0)
 \item Python development package (tested on python 36-\/39)
-\end{DoxyItemize}\hypertarget{index_autotoc_md18}{}\doxysubsection{Markov\+Passwords\+G\+UI}\label{index_autotoc_md18}
+\end{DoxyItemize}\hypertarget{index_autotoc_md18}{}\doxysubsection{Markov\+Passwords\+GUI}\label{index_autotoc_md18}
 
 
 
 \begin{DoxyItemize}
-\item Q\+T5 development environment. (qt5-\/qmake on ubuntu apt-\/get)
-\item Q\+T\+Web\+Engine5 plugin. (qtwebengine5-\/dev on ubuntu apt-\/get)
-\end{DoxyItemize}\hypertarget{index_autotoc_md19}{}\doxysubsection{C\+Make Configuration}\label{index_autotoc_md19}
+\item QT5 development environment. (qt5-\/qmake on ubuntu apt-\/get)
+\item QTWeb\+Engine5 plugin. (qtwebengine5-\/dev on ubuntu apt-\/get)
+\end{DoxyItemize}\hypertarget{index_autotoc_md19}{}\doxysubsection{CMake Configuration}\label{index_autotoc_md19}
 
 
 You can build this project with cmake.
 
 If you don\textquotesingle{}t have prequisites for some of the projects set up, you can use the partial set up configuration to ignore those projects when setting the project up.
 
-If you do not meet the prequisites, you\textquotesingle{}ll have to partially set up the C\+Make file (you cant use --target to build some of the targets, because configuration phase will fail too).
+If you do not meet the prequisites, you\textquotesingle{}ll have to partially set up the CMake file (you cant use --target to build some of the targets, because configuration phase will fail too).
 
 Some examples for partially setting up and building the project are below.\hypertarget{index_autotoc_md20}{}\doxysubsubsection{Build everything}\label{index_autotoc_md20}
 
@@ -197,24 +201,27 @@ Some examples for partially setting up and building the project are below.\hyper
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$ cmake . -\/DPYTHON\_VER=38 \&\& cmake -\/-\/build .}
+
 \end{DoxyCode}
 
 
-This will build all the libraries and executables. Requires python-\/dev, C\+U\+DA, Q\+T5, Q\+T5-\/\+Webview\hypertarget{index_autotoc_md21}{}\doxysubsubsection{Build libraries only}\label{index_autotoc_md21}
+This will build all the libraries and executables. Requires python-\/dev, CUDA, QT5, QT5-\/\+Webview\hypertarget{index_autotoc_md21}{}\doxysubsubsection{Build libraries only}\label{index_autotoc_md21}
 
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$ cmake . -\/DPARTIAL=1 -\/DB\_LIBS=1 \&\& cmake -\/-\/build .}
+
 \end{DoxyCode}
 
 
-Only build basic libraries. Requires only C\+XX compiler.\hypertarget{index_autotoc_md22}{}\doxysubsubsection{Build C\+U\+D\+A-\/accelerated libraries}\label{index_autotoc_md22}
+Only build basic libraries. Requires only CXX compiler.\hypertarget{index_autotoc_md22}{}\doxysubsubsection{Build CUDA-\/accelerated libraries}\label{index_autotoc_md22}
 
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$ cmake . -\/DPARTIAL=1 -\/DB\_CUDA=1 \&\& cmake -\/-\/build .}
+
 \end{DoxyCode}
 
 
@@ -224,24 +231,27 @@ Build libraries along with cuda accelerated ones.\hypertarget{index_autotoc_md23
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$ cmake . -\/DPARTIAL=1 -\/DPYTHON\_VER=39 \&\& cmake -\/-\/build .}
+
 \end{DoxyCode}
 
 
-Will build basic libraries and python modules.\hypertarget{index_autotoc_md24}{}\doxysubsubsection{Build C\+U\+D\+A accelerated python module}\label{index_autotoc_md24}
+Will build basic libraries and python modules.\hypertarget{index_autotoc_md24}{}\doxysubsubsection{Build CUDA accelerated python module}\label{index_autotoc_md24}
 
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$ cmake . -\/DPARTIAL=1 -\/DPYTHON\_VER=39 -\/DB\_CUDA=1 \&\& cmake -\/-\/build .}
+
 \end{DoxyCode}
 
 
-Will build cudamarkopy.\hypertarget{index_autotoc_md25}{}\doxysubsubsection{Build C\+U\+D\+A accelerated python module and the G\+UI}\label{index_autotoc_md25}
+Will build cudamarkopy.\hypertarget{index_autotoc_md25}{}\doxysubsubsection{Build CUDA accelerated python module and the GUI}\label{index_autotoc_md25}
 
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$ cmake . -\/DPARTIAL=1 -\/DPYTHON\_VER=39 -\/DB\_CUDA=1 -\/DB\_GUI \&\& cmake -\/-\/build .}
+
 \end{DoxyCode}
 
 
@@ -259,15 +269,17 @@ Combine methods
 \begin{DoxyItemize}
 \item Download Boost from \href{https://www.boost.org/users/download/}{\texttt{ its website}}. Prefer one of the tested versions, 1.\+71.\+0 to 1.\+76.\+0
 \item Unzip the contents.
-\item Launch \char`\"{}\+Visual Studio Developer Command Prompt\char`\"{} (If you don\textquotesingle{}t have this, properly set up the P\+A\+TH\% variable for cl.\+exe)
+\item Launch \char`\"{}\+Visual Studio Developer Command Prompt\char`\"{} (If you don\textquotesingle{}t have this, properly set up the PATH\% variable for cl.\+exe)
 \item Move to the boost installation directory. Bootstrap libraries with your python version\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{.\(\backslash\)bootstrap.bat -\/-\/with-\/python=\$(which python3.6) -\/-\/with-\/python-\/version=3.6;}
+
 \end{DoxyCode}
 
 \item Run {\ttfamily b2} to build the libraries. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{.\(\backslash\)b2.exe -\/-\/layout=system address-\/model=64 variant=release link=static runtime-\/link=shared threading=multi -\/-\/with-\/program\_options -\/-\/with-\/python stage;}
+
 \end{DoxyCode}
 
 \end{DoxyItemize}
@@ -285,12 +297,14 @@ Combine methods
 \item Move to the boost installation directory. Bootstrap libraries with your python version\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{./bootstrap.sh -\/-\/with-\/python=\$(which python3.6) -\/-\/with-\/python-\/version=3.6;}
+
 \end{DoxyCode}
 
 \item Run {\ttfamily b2} to build the libraries. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{./b2 variant=release link=static threading=multi -\/-\/with-\/program\_options install;}
 \DoxyCodeLine{./b2 -\/-\/with-\/python -\/-\/buildid=3.6 install;}
+
 \end{DoxyCode}
 
 \end{DoxyItemize}
@@ -299,12 +313,14 @@ Combine methods
 \item Use a package manager to install boost 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{sudo apt-\/get install libboost-\/all-\/dev}
+
 \end{DoxyCode}
 
 \end{DoxyItemize}
 \item Python\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{sudo apt-\/get install python3-\/dev}
+
 \end{DoxyCode}
 
 \end{DoxyItemize}
@@ -315,10 +331,11 @@ Combine methods
 \hypertarget{index_autotoc_md33}{}\doxysubsubsection{Markopy -\/ Python.\+h -\/ Not found}\label{index_autotoc_md33}
 Make sure you have the development version of python package, which includes the required header files. Check if header files exist\+: {\ttfamily /usr/include/python$\ast$} or {\ttfamily locate Python.\+h}.
 
-If it doesn\textquotesingle{}t, run {\ttfamily sudo apt-\/get install python3-\/dev}\hypertarget{index_autotoc_md34}{}\doxysubsubsection{Markopy/\+Markov\+A\+P\+I -\/ $\ast$.\+so not found, or other library related issues when building}\label{index_autotoc_md34}
+If it doesn\textquotesingle{}t, run {\ttfamily sudo apt-\/get install python3-\/dev}\hypertarget{index_autotoc_md34}{}\doxysubsubsection{Markopy/\+Markov\+API -\/ $\ast$.\+so not found, or other library related issues when building}\label{index_autotoc_md34}
 Run\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{ls /usr/lib/x86\_64-\/linux-\/gnu/ | grep boost}
+
 \end{DoxyCode}
 
 
@@ -327,6 +344,7 @@ and check the shared object filenames. A common issue is that lboost is required
 Do the same for python related library issues, run\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{ls /usr/lib/x86\_64-\/linux-\/gnu/ | grep python}
+
 \end{DoxyCode}
 
 
@@ -335,23 +353,25 @@ to verify filename format is as required.
 If not, you can modify the makefile, or create symlinks such as\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{ln -\/s /usr/lib/x86\_64-\/linux-\/gnu/libboost\_python38.so /usr/lib/x86\_64-\/linux-\/gnu/boost\_python38.so}
+
 \end{DoxyCode}
 \hypertarget{index_autotoc_md35}{}\doxysubsection{Windows}\label{index_autotoc_md35}
 \hypertarget{index_autotoc_md36}{}\doxysubsubsection{Boost -\/ Bootstrap.\+bat \char`\"{}ctype.\+h\char`\"{} not found}\label{index_autotoc_md36}
 
 \begin{DoxyItemize}
 \item Make sure you are working in the \char`\"{}\+Visual Studio Developer Command Prompt\char`\"{} terminal.
-\item Make sure you have Windows 10 S\+DK installed.
-\item From VS developer terminal, run echo I\+N\+C\+L\+U\+DE\%. If result does not have the windows sdk folders, run the following before running bootstrap (change your sdk version instead of 10.\+0.\+19041.\+0)\+: 
+\item Make sure you have Windows 10 SDK installed.
+\item From VS developer terminal, run echo INCLUDE\%. If result does not have the windows sdk folders, run the following before running bootstrap (change your sdk version instead of 10.\+0.\+19041.\+0)\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{set INCLUDE=\%INCLUDE\%;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)NETFXSDK\(\backslash\)4.8\(\backslash\)include\(\backslash\)um;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)include\(\backslash\)10.0.19041.0\(\backslash\)ucrt;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)include\(\backslash\)10.0.19041.0\(\backslash\)shared;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)include\(\backslash\)10.0.19041.0\(\backslash\)um;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)include\(\backslash\)10.0.19041.0\(\backslash\)winrt;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)include\(\backslash\)10.0.19041.0\(\backslash\)cppwinrt}
 \DoxyCodeLine{}
 \DoxyCodeLine{set LIB=\%LIB\%;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)lib\(\backslash\)10.0.19041.0\(\backslash\)ucrt\(\backslash\)x64;C:\(\backslash\)Program Files (x86)\(\backslash\)Windows Kits\(\backslash\)10\(\backslash\)lib\(\backslash\)10.0.19041.0\(\backslash\)um\(\backslash\)x64}
+
 \end{DoxyCode}
 
 \end{DoxyItemize}\hypertarget{index_autotoc_md37}{}\doxysubsubsection{Cannot open file \char`\"{}$\ast$.\+lib\char`\"{}}\label{index_autotoc_md37}
-Make sure you have set the B\+O\+O\+S\+T\+\_\+\+R\+O\+OT environment variable correctly. Make sure you ran {\ttfamily b2} to build library files from boost sources.\hypertarget{index_autotoc_md38}{}\doxysubsubsection{Python.\+h not found}\label{index_autotoc_md38}
-Make sure you have python installed, and make sure you set P\+Y\+T\+H\+O\+N\+\_\+\+P\+A\+TH environment variable.
+Make sure you have set the BOOST\+\_\+\+ROOT environment variable correctly. Make sure you ran {\ttfamily b2} to build library files from boost sources.\hypertarget{index_autotoc_md38}{}\doxysubsubsection{Python.\+h not found}\label{index_autotoc_md38}
+Make sure you have python installed, and make sure you set PYTHON\+\_\+\+PATH environment variable.
 
 \DoxyHorRuler{0}
 \hypertarget{index_autotoc_md40}{}\doxysection{Contributing}\label{index_autotoc_md40}

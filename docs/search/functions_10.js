@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['terminal_408',['Terminal',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_terminal.html#aa448509b5aa1ece53c3d86385655be0e',1,'Markov::API::CLI::Terminal']]],
-  ['test_5fclass_409',['TEST_CLASS',['../namespace_testing_1_1_m_v_p_1_1_markov_model.html#a0e3a45b149abd9dff30adc9b877f94cd',1,'Testing::MVP::MarkovModel::TEST_CLASS(Edge)'],['../namespace_testing_1_1_m_v_p_1_1_markov_model.html#a6e9e664c5a60cb3af863f384a47952ce',1,'Testing::MVP::MarkovModel::TEST_CLASS(Node)'],['../namespace_testing_1_1_m_v_p_1_1_markov_model.html#af8b6c0d926618a1037c1f30bfc15b87a',1,'Testing::MVP::MarkovModel::TEST_CLASS(Model)'],['../namespace_testing_1_1_m_v_p_1_1_markov_passwords.html#a84eafe3eab402e44e2a77f9c34e275b0',1,'Testing::MVP::MarkovPasswords::TEST_CLASS()'],['../namespace_testing_1_1_markov_model.html#a2f641a67bea75fff3e4c55c74926132f',1,'Testing::MarkovModel::TEST_CLASS(Edge)'],['../namespace_testing_1_1_markov_model.html#ad59534ad9237abf1a8b09bd7f9263da2',1,'Testing::MarkovModel::TEST_CLASS(Node)'],['../namespace_testing_1_1_markov_model.html#a84a573ca81cb8cb3db9845b0cdcf06a6',1,'Testing::MarkovModel::TEST_CLASS(Model)']]],
-  ['threadsharedlisthandler_410',['ThreadSharedListHandler',['../class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#a08d468aa4146a30f4176bc91a40ed292',1,'Markov::API::Concurrency::ThreadSharedListHandler']]],
-  ['totaledgeweights_411',['TotalEdgeWeights',['../class_markov_1_1_node.html#a60166d8f501c016de104f48e46bff223',1,'Markov::Node']]],
-  ['train_412',['train',['../class_markov_1_1_g_u_i_1_1_train.html#a6f74c2948379df5e7f0d8eba96c97fb0',1,'Markov::GUI::Train::train()'],['../class_markov_1_1_g_u_i_1_1_generate.html#af5f5d0fcc5530157d882e35e35d1649e',1,'Markov::GUI::Generate::train()'],['../class_markov_1_1_a_p_i_1_1_markov_passwords.html#a2fd4423ae3850e258dcb6b11a7feb9b2',1,'Markov::API::MarkovPasswords::Train()'],['../class_markov_1_1_a_p_i_1_1_model_matrix.html#af42d40d7a5c80f0dfe126a574a17f423',1,'Markov::API::ModelMatrix::Train()'],['../class_markov_1_1_g_u_i_1_1_train.html#a81b5ca7eb56318ff1cefbc7c228a97cd',1,'Markov::GUI::Train::Train()']]],
-  ['trainthread_413',['TrainThread',['../class_markov_1_1_a_p_i_1_1_markov_passwords.html#a5f51b0fdb75101b797f38b08da84848e',1,'Markov::API::MarkovPasswords']]],
-  ['traversenode_414',['TraverseNode',['../class_markov_1_1_edge.html#a97e403fa0cf2666b2f142f28372de990',1,'Markov::Edge']]]
+  ['save_479',['Save',['../class_markov_1_1_a_p_i_1_1_markov_passwords.html#a4f4997da3a6cd3bd2717ce9759736660',1,'Markov::API::MarkovPasswords']]],
+  ['setleftedge_480',['SetLeftEdge',['../class_markov_1_1_edge.html#a174cd2f818b7c929decee6f2bcea7025',1,'Markov::Edge']]],
+  ['setprogramoptions_481',['setProgramOptions',['../class_markov_1_1_a_p_i_1_1_c_l_i_1_1_argparse.html#ababd0e2bc5fb360425225b12f70f3836',1,'Markov::API::CLI::Argparse']]],
+  ['setrightedge_482',['SetRightEdge',['../class_markov_1_1_edge.html#add40b694fce402c316540c50d0fd3b3c',1,'Markov::Edge']]],
+  ['start_483',['start',['../class_markov_1_1_g_u_i_1_1_c_l_i.html#aff8081f3baac288e70163e720a60a1e7',1,'Markov::GUI::CLI']]],
+  ['starternode_484',['StarterNode',['../class_markov_1_1_model.html#a0e53104e4ec665f005529f51a80c857d',1,'Markov::Model']]],
+  ['statistics_485',['statistics',['../class_markov_1_1_g_u_i_1_1_c_l_i.html#a1695cccf724c76f48e4931e2f636512d',1,'Markov::GUI::CLI']]],
+  ['strchr_486',['strchr',['../namespace_markov_1_1_a_p_i_1_1_c_u_d_a.html#a6e4f16a152d93ed2aa9e854bf173de54',1,'Markov::API::CUDA']]],
+  ['stub_487',['stub',['../class_python_1_1_markopy_1_1_markopy_c_l_i.html#a80bd3c93aead66d0d7c264a7d387196f',1,'Python::Markopy::MarkopyCLI']]]
 ];

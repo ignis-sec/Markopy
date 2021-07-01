@@ -1,0 +1,71 @@
+
+/**
+ * @file dirs.docs
+ * @brief doxygen information about the directories
+ */
+
+/**
+ * @dir Markopy/Markopy
+ * @brief CPython extension for MarkovAPI
+ */
+
+/**
+ * @dir Markopy/Markopy/src/CLI
+ * @brief Python CLI for Markopy
+ */
+
+/**
+ * @dir Markopy/Markopy/src/Module
+ * @brief CPP module for Markopy
+ */
+
+/**
+ * @dir Markopy/CudaMarkopy
+ * @brief CPython extension for CudaMarkovAPI
+ */
+
+/**
+ * @dir Markopy/CudaMarkopy/src/CLI
+ * @brief Python CLI for CudaMarkopy
+ */
+
+/**
+ * @dir Markopy/CudaMarkopy/src/Module
+ * @brief CPP module for CudaMarkopy
+ */
+
+/**
+ * @dir Markopy/MarkovAPI
+ * @brief Base project
+ */
+
+/**
+ * @dir Markopy/CudaMarkovAPI
+ * @brief Markov API with CUDA Acceleration
+ */
+
+/**
+ * @dir Markopy/MarkovAPICLI
+ * @brief Test utility for MarkovAPI
+ */
+
+/**
+ * @dir Markopy/MarkovModel
+ * @brief Header only markov library
+ */
+
+/**
+ * @dir Markopy/MarkovPasswordsGUI
+ * @brief Graphical Interface for MarkovAPI
+ */
+
+/**
+ * @dir Markopy/UnitTests
+ * @brief Unit tests for MarkovAPI
+ */
+
+/**
+ * @dir Markopy/documentation
+ * @brief Files related to documentation generation
+ */
+

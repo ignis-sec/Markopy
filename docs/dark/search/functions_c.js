@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['opendatasetfile_389',['OpenDatasetFile',['../class_markov_1_1_a_p_i_1_1_markov_passwords.html#ac3fb665ee48937ca845d930e72e07917',1,'Markov::API::MarkovPasswords']]],
-  ['operator_3c_3c_390',['operator&lt;&lt;',['../namespace_markov_1_1_a_p_i_1_1_c_l_i.html#ac91ec1d9a601445bd4e3ee362e3dbd3f',1,'Markov::API::CLI::operator&lt;&lt;()'],['../term_8cpp.html#ad8a8c0db6261a3f70fc7536aed3488ae',1,'operator&lt;&lt;():&#160;term.cpp']]],
-  ['optimizeedgeorder_391',['OptimizeEdgeOrder',['../class_markov_1_1_model.html#adf22db37833ae6a4c707b446bef4359d',1,'Markov::Model']]]
+  ['next_461',['next',['../class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler.html#a068e1a9ff477de23a44c10230df416a5',1,'Markov::API::Concurrency::ThreadSharedListHandler']]],
+  ['node_462',['Node',['../class_markov_1_1_node.html#a29468e9baf4e7cec86116ef3cbcfcb47',1,'Markov::Node::Node()'],['../class_markov_1_1_node.html#ae89b442197e67a84948ba251f6824ad0',1,'Markov::Node::Node(storageType _value)']]],
+  ['nodes_463',['Nodes',['../class_markov_1_1_model.html#a71f6df805e340ce96e9dc4ee4ebc6537',1,'Markov::Model']]],
+  ['nodevalue_464',['NodeValue',['../class_markov_1_1_node.html#ac7cce56376f2a00764f64a0194cbb498',1,'Markov::Node']]]
 ];

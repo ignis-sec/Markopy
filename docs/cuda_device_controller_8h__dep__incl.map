@@ -1,8 +1,9 @@
-<map id="cudaDeviceController.h" name="cudaDeviceController.h">
-<area shape="rect" id="node1" title="Simple static class for basic CUDA device controls." alt="" coords="211,5,417,35"/>
-<area shape="rect" id="node2" href="$cuda_device_controller_8cu.html" title="Simple static class for basic CUDA device controls." alt="" coords="5,83,220,112"/>
-<area shape="rect" id="node3" href="$cuda_model_matrix_8h.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="408,83,583,112"/>
-<area shape="rect" id="node6" href="$cudarandom_8h.html" title="Extension of Markov::Random::Marsaglia for CUDA." alt="" coords="245,83,383,112"/>
-<area shape="rect" id="node4" href="$cuda_model_matrix_8cu.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="235,160,417,189"/>
-<area shape="rect" id="node5" href="$main_8cu.html" title="Simple test file to check libcudamarkov." alt="" coords="452,160,539,189"/>
+<map id="Markopy/CudaMarkovAPI/src/cudaDeviceController.h" name="Markopy/CudaMarkovAPI/src/cudaDeviceController.h">
+<area shape="rect" id="node1" title="Simple static class for basic CUDA device controls." alt="" coords="269,5,507,52"/>
+<area shape="rect" id="node2" href="$cuda_device_controller_8cu.html" title="Simple static class for basic CUDA device controls." alt="" coords="5,100,253,147"/>
+<area shape="rect" id="node3" href="$cuda_model_matrix_8h.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="523,100,746,147"/>
+<area shape="rect" id="node7" href="$cudarandom_8h.html" title="Extension of Markov::Random::Marsaglia for CUDA." alt="" coords="277,100,499,147"/>
+<area shape="rect" id="node4" href="$cuda_model_matrix_8cu.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="277,195,499,241"/>
+<area shape="rect" id="node5" href="$main_8cu.html" title="Simple test file to check libcudamarkov." alt="" coords="523,195,746,241"/>
+<area shape="rect" id="node6" href="$cuda_markopy_8cu.html" title=" " alt="" coords="769,195,1017,241"/>
 </map>

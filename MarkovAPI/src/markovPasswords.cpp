@@ -24,7 +24,7 @@
 static volatile int keepRunning = 1;
 
 void intHandler(int dummy) {
-	std::cout << "You wanted this man by presing CTRL-C ! Ok bye.";
+	std::cout << "Terminating.\n";
 	//Sleep(5000);
 	keepRunning = 0;
 	exit(0);
@@ -63,7 +63,7 @@ std::ifstream* Markov::API::MarkovPasswords::OpenDatasetFile(const char* filenam
 
 
 void Markov::API::MarkovPasswords::Train(const char* datasetFileName, char delimiter, int threads)   {
-  signal(SIGINT, intHandler);
+  	signal(SIGINT, intHandler);
 	Markov::API::Concurrency::ThreadSharedListHandler listhandler(datasetFileName);
 	auto start = std::chrono::high_resolution_clock::now();
 

@@ -25,12 +25,12 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classchar.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="0,-178.5 0,-241.5 44,-241.5 44,-178.5 0,-178.5"/>
+<g id="a_node2"><a xlink:title=" ">
+<polygon fill="none" stroke="#bfbfbf" points="0,-178.5 0,-241.5 44,-241.5 44,-178.5 0,-178.5"/>
 <text text-anchor="middle" x="22" y="-227.9" font-family="Helvetica,sans-Serif" font-size="12.00">char</text>
-<polyline fill="none" stroke="black" points="0,-220.5 44,-220.5 "/>
+<polyline fill="none" stroke="#bfbfbf" points="0,-220.5 44,-220.5 "/>
 <text text-anchor="middle" x="22" y="-206.9" font-family="Helvetica,sans-Serif" font-size="12.00"> </text>
-<polyline fill="none" stroke="black" points="0,-199.5 44,-199.5 "/>
+<polyline fill="none" stroke="#bfbfbf" points="0,-199.5 44,-199.5 "/>
 <text text-anchor="middle" x="22" y="-185.9" font-family="Helvetica,sans-Serif" font-size="12.00"> </text>
 </a>
 </g>
@@ -65,7 +65,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:title="STL class.">
+<g id="a_node4"><a xlink:title=" ">
 <polygon fill="none" stroke="#bfbfbf" points="181,-178.5 181,-241.5 257,-241.5 257,-178.5 181,-178.5"/>
 <text text-anchor="middle" x="219" y="-227.9" font-family="Helvetica,sans-Serif" font-size="12.00">std::string</text>
 <polyline fill="none" stroke="#bfbfbf" points="181,-220.5 257,-220.5 "/>
@@ -80,19 +80,19 @@
 <title>Node4&#45;&gt;Node1</title>
 <path fill="none" stroke="#404040" d="M215.55,-178.37C212.34,-155.05 206.57,-122.4 197,-95 196.17,-92.63 195.26,-90.25 194.28,-87.86"/>
 <polygon fill="none" stroke="#404040" points="194.22,-87.72 188.12,-83.87 189.33,-76.76 195.43,-80.61 194.22,-87.72"/>
-<text text-anchor="middle" x="264" y="-150.4" font-family="Helvetica,sans-Serif" font-size="12.00"> +importname</text>
-<text text-anchor="middle" x="264" y="-137.4" font-family="Helvetica,sans-Serif" font-size="12.00">+outputfilename</text>
-<text text-anchor="middle" x="264" y="-124.4" font-family="Helvetica,sans-Serif" font-size="12.00">+exportname</text>
-<text text-anchor="middle" x="264" y="-111.4" font-family="Helvetica,sans-Serif" font-size="12.00">+datasetname</text>
+<text text-anchor="middle" x="264" y="-150.4" font-family="Helvetica,sans-Serif" font-size="12.00"> +datasetname</text>
+<text text-anchor="middle" x="264" y="-137.4" font-family="Helvetica,sans-Serif" font-size="12.00">+exportname</text>
+<text text-anchor="middle" x="264" y="-124.4" font-family="Helvetica,sans-Serif" font-size="12.00">+importname</text>
+<text text-anchor="middle" x="264" y="-111.4" font-family="Helvetica,sans-Serif" font-size="12.00">+outputfilename</text>
 <text text-anchor="middle" x="264" y="-98.4" font-family="Helvetica,sans-Serif" font-size="12.00">+wordlistname</text>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:title="STL class.">
+<g id="a_node5"><a xlink:title=" ">
 <polygon fill="none" stroke="#bfbfbf" points="158,-279.5 158,-355.5 280,-355.5 280,-279.5 158,-279.5"/>
 <text text-anchor="start" x="166" y="-341.9" font-family="Helvetica,sans-Serif" font-size="12.00">std::basic_string&lt;</text>
-<text text-anchor="middle" x="219" y="-328.9" font-family="Helvetica,sans-Serif" font-size="12.00"> char &gt;</text>
+<text text-anchor="middle" x="219" y="-328.9" font-family="Helvetica,sans-Serif" font-size="12.00"> Char &gt;</text>
 <polyline fill="none" stroke="#bfbfbf" points="158,-321.5 280,-321.5 "/>
 <text text-anchor="middle" x="219" y="-307.9" font-family="Helvetica,sans-Serif" font-size="12.00"> </text>
 <polyline fill="none" stroke="#bfbfbf" points="158,-300.5 280,-300.5 "/>
@@ -125,8 +125,8 @@
 <path fill="none" stroke="#404040" d="M344.97,-178.33C344.13,-153.11 338.98,-117.91 319,-95 299.16,-72.25 269.17,-58.82 241.12,-50.89"/>
 <polygon fill="none" stroke="#404040" points="240.88,-50.83 234.06,-53.2 229.26,-47.82 236.07,-45.45 240.88,-50.83"/>
 <text text-anchor="middle" x="373.5" y="-137.4" font-family="Helvetica,sans-Serif" font-size="12.00"> +bExport</text>
-<text text-anchor="middle" x="373.5" y="-124.4" font-family="Helvetica,sans-Serif" font-size="12.00">+bImport</text>
-<text text-anchor="middle" x="373.5" y="-111.4" font-family="Helvetica,sans-Serif" font-size="12.00">+bFailure</text>
+<text text-anchor="middle" x="373.5" y="-124.4" font-family="Helvetica,sans-Serif" font-size="12.00">+bFailure</text>
+<text text-anchor="middle" x="373.5" y="-111.4" font-family="Helvetica,sans-Serif" font-size="12.00">+bImport</text>
 </g>
 </g>
 </svg>

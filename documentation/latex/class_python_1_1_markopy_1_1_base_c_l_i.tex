@@ -1,0 +1,962 @@
+\hypertarget{class_python_1_1_markopy_1_1_base_c_l_i}{}\doxysection{Python.\+Markopy.\+Base\+CLI Class Reference}
+\label{class_python_1_1_markopy_1_1_base_c_l_i}\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+
+
+Base CLI class to handle user interactions ~\newline
+  
+
+
+
+
+Inheritance diagram for Python.\+Markopy.\+Base\+CLI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_python_1_1_markopy_1_1_base_c_l_i__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Python.\+Markopy.\+Base\+CLI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_python_1_1_markopy_1_1_base_c_l_i__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a7cac2b153ec149a504dd947f7a4a6e4c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, bool add\+\_\+help=True)
+\begin{DoxyCompactList}\small\item\em initialize base CLI \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a7d5836dec84f1a14565fee372d31323b}{add\+\_\+arguments}} (self)
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_ab367a1505f21191f550087707288b575}{help}} (self)
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a290240acf366fc65cf0639698dbf662b}{parse}} (self)
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a4c7fdd1e03b5bf1ac6a6c0cb40df13da}{init\+\_\+post\+\_\+arguments}} (self)
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a9ad725de8fe9de68dc7c4f4aece8bb83}{parse\+\_\+arguments}} (self)
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a70c7dc0679d8e37e1b5d6c65405eeedb}{import\+\_\+model}} (self, str filename)
+\begin{DoxyCompactList}\small\item\em Import a model file. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a4d0f291accfd276eb967e1121124274b}{train}} (self, str dataset, str seperator, str output, bool output\+\_\+forced=False, bool bulk=False)
+\begin{DoxyCompactList}\small\item\em Train a model via CLI parameters. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_ad8e1d099c1958e06177c034d1d2ed52e}{export}} (self, str filename)
+\begin{DoxyCompactList}\small\item\em Export model to a file. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_ad2823b484ee975432aebb4e50875f8a6}{generate}} (self, str wordlist, bool bulk=False)
+\begin{DoxyCompactList}\small\item\em Generate strings from the model. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_aab389488e1f530cf444d9d2ef59a6998}{process}} (self)
+\begin{DoxyCompactList}\small\item\em Process parameters for operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a14f0a0280b7cc4a16ff018eeefdf1020}{check\+\_\+import\+\_\+path}} (str filename)
+\begin{DoxyCompactList}\small\item\em check import path for validity \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a2ec72a3621f55a9b4e995ade128e1b60}{check\+\_\+corpus\+\_\+path}} (str filename)
+\begin{DoxyCompactList}\small\item\em check import path for validity \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_abd2f15b87ebfedc510ad7e95375f1a5c}{check\+\_\+export\+\_\+path}} (str filename)
+\begin{DoxyCompactList}\small\item\em check import path for validity \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_abc1d9ff41df2198aa2ddee090fedc91f}{parser}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a54cb76c3f1109080b94237738542297e}{print\+\_\+help}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a8dee51fa6e7fbad6ff1a5a3789fd2d0f}{model}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}{args}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_base_c_l_i_acbe1962e0ebdc177414fc4eb7f70be69}{\+\_\+generate}} (self, str wordlist)
+\begin{DoxyCompactList}\small\item\em wrapper for generate function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base CLI class to handle user interactions ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00016}{16}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a7cac2b153ec149a504dd947f7a4a6e4c}\label{class_python_1_1_markopy_1_1_base_c_l_i_a7cac2b153ec149a504dd947f7a4a6e4c}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool}]{add\+\_\+help = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+initialize base CLI 
+
+
+\begin{DoxyParams}{Parameters}
+{\em add\+\_\+help} & decide to overload the help function or not \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_markov_passwords_c_l_i_afb1e4694aa6b409bdd17d4d5856bb657}{Python.\+Markopy.\+Markov\+Passwords\+CLI}}, and \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_ad35db5fba1064c34f86c56ae634b51ab}{Python.\+Markopy.\+Model\+Matrix\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00020}{20}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020     \textcolor{keyword}{def }\_\_init\_\_(self, add\_help : bool=\textcolor{keyword}{True}):}
+\DoxyCodeLine{00021         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00022 \textcolor{stringliteral}{        @brief initialize base CLI}}
+\DoxyCodeLine{00023 \textcolor{stringliteral}{        @param add\_help decide to overload the help function or not}}
+\DoxyCodeLine{00024 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00025         self.parser = argparse.ArgumentParser(description=\textcolor{stringliteral}{"{}Python wrapper for MarkovPasswords."{}},}
+\DoxyCodeLine{00026         epilog=f\textcolor{stringliteral}{"{}"{}"{}\{colored("{}Sample runs:"{}, "{}yellow"{})\}}}
+\DoxyCodeLine{00027 \textcolor{stringliteral}{        \{\_\_file\_\_.split("{}/"{})[-\/1]\} train untrained.mdl -\/d dataset.dat -\/s "{}\(\backslash\)\(\backslash\)t"{} -\/o trained.mdl}}
+\DoxyCodeLine{00028 \textcolor{stringliteral}{            Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl\(\backslash\)n}}
+\DoxyCodeLine{00029 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00030 \textcolor{stringliteral}{        \{\_\_file\_\_.split("{}/"{})[-\/1]\} generate trained.mdl -\/n 500 -\/w output.txt}}
+\DoxyCodeLine{00031 \textcolor{stringliteral}{            Import trained.mdl, and generate 500 lines to output.txt}}
+\DoxyCodeLine{00032 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00033 \textcolor{stringliteral}{        \{\_\_file\_\_.split("{}/"{})[-\/1]\} combine untrained.mdl -\/d dataset.dat -\/s "{}\(\backslash\)\(\backslash\)t"{} -\/n 500 -\/w output.txt}}
+\DoxyCodeLine{00034 \textcolor{stringliteral}{            Train and immediately generate 500 lines to output.txt. Do not export trained model.}}
+\DoxyCodeLine{00035 \textcolor{stringliteral}{}}
+\DoxyCodeLine{00036 \textcolor{stringliteral}{        \{\_\_file\_\_.split("{}/"{})[-\/1]\} combine untrained.mdl -\/d dataset.dat -\/s "{}\(\backslash\)\(\backslash\)t"{} -\/n 500 -\/w output.txt -\/o trained.mdl}}
+\DoxyCodeLine{00037 \textcolor{stringliteral}{            Train and immediately generate 500 lines to output.txt. Export trained model.}}
+\DoxyCodeLine{00038 \textcolor{stringliteral}{        "{}"{}"{}}, add\_help=add\_help, formatter\_class=argparse.RawTextHelpFormatter)}
+\DoxyCodeLine{00039         self.print\_help = self.parser.print\_help}
+\DoxyCodeLine{00040         self.model = MarkovModel()}
+\DoxyCodeLine{00041      }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_acbe1962e0ebdc177414fc4eb7f70be69}\label{class_python_1_1_markopy_1_1_base_c_l_i_acbe1962e0ebdc177414fc4eb7f70be69}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!\_generate@{\_generate}}
+\index{\_generate@{\_generate}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{\_generate()}{\_generate()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+\_\+generate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{wordlist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+wrapper for generate function. 
+
+This can be overloaded by other models 
+\begin{DoxyParams}{Parameters}
+{\em wordlist} & filename to generate to \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a734d179536d25323ae0b421c48f61716}{Python.\+Markopy.\+Model\+Matrix\+CLI}}, and \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i_acfaa19f0478a88a143282431aa89786d}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00161}{161}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161     \textcolor{keyword}{def }\_generate(self, wordlist : str):}
+\DoxyCodeLine{00162         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00163 \textcolor{stringliteral}{        @brief wrapper for generate function. This can be overloaded by other models}}
+\DoxyCodeLine{00164 \textcolor{stringliteral}{        @param wordlist filename to generate to}}
+\DoxyCodeLine{00165 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00166         self.model.Generate(int(self.args.count), wordlist, int(self.args.min), int(self.args.max), int(self.args.threads))}
+\DoxyCodeLine{00167 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudamarkopy_8py_source_l00064}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00075}{Python.\+Markopy.\+Base\+CLI.\+args}}, \mbox{\hyperlink{markopy_8py_source_l00075}{Python.\+Markopy.\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{cudammx_8py_source_l00065}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{base_8py_source_l00040}{Python.\+Markopy.\+Base\+CLI.\+model}}, \mbox{\hyperlink{mmx_8py_source_l00030}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{mp_8py_source_l00029}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+model}}, and \mbox{\hyperlink{_markov_passwords_g_u_i_8cpp_source_l00042}{Markov\+::\+GUI\+::\+Markov\+Passwords\+GUI.\+model()}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00145}{Python.\+Markopy.\+Base\+CLI.\+generate()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_acbe1962e0ebdc177414fc4eb7f70be69_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_acbe1962e0ebdc177414fc4eb7f70be69_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a7d5836dec84f1a14565fee372d31323b}\label{class_python_1_1_markopy_1_1_base_c_l_i_a7d5836dec84f1a14565fee372d31323b}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!add\_arguments@{add\_arguments}}
+\index{add\_arguments@{add\_arguments}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{add\_arguments()}{add\_arguments()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+add\+\_\+arguments (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_a8a335e71b4f9ff50511ff1d646f30969}{Python.\+Markopy.\+Model\+Matrix\+CLI}}, \mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a8f169bd88086d1711dd06c974e87c69b}{Python.\+Markopy.\+Markopy\+CLI}}, \mbox{\hyperlink{class_python_1_1_markopy_1_1_abstract_training_model_c_l_i_a714875f2e1227f1d152492a100983b69}{Python.\+Markopy.\+Abstract\+Training\+Model\+CLI}}, \mbox{\hyperlink{class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i_a12cdb40dd92b92141b9ecb0a30b5d943}{Python.\+Markopy.\+Abstract\+Generation\+Model\+CLI}}, and \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i_abde98354ae5895627039bf702a02ecaa}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00043}{43}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043     \textcolor{keyword}{def }add\_arguments(self):}
+\DoxyCodeLine{00044         \textcolor{stringliteral}{"{}! @brief Add command line arguements to the parser"{}}}
+\DoxyCodeLine{00045         self.parser.add\_argument(\textcolor{stringliteral}{"{}mode"{}},                             help=\textcolor{stringliteral}{"{}Process mode. Either 'Train', 'Generate', or 'Combine'."{}})}
+\DoxyCodeLine{00046         self.parser.add\_argument(\textcolor{stringliteral}{"{}-\/t"{}}, \textcolor{stringliteral}{"{}-\/-\/threads"{}},default=10,       help=\textcolor{stringliteral}{"{}Number of lines to generate. Ignored in training mode."{}})}
+\DoxyCodeLine{00047         self.parser.add\_argument(\textcolor{stringliteral}{"{}-\/v"{}}, \textcolor{stringliteral}{"{}-\/-\/verbosity"{}},action=\textcolor{stringliteral}{"{}count"{}}, help=\textcolor{stringliteral}{"{}Output verbosity."{}})}
+\DoxyCodeLine{00048         self.parser.add\_argument(\textcolor{stringliteral}{"{}-\/b"{}}, \textcolor{stringliteral}{"{}-\/-\/bulk"{}},action=\textcolor{stringliteral}{"{}store\_true"{}}, help=\textcolor{stringliteral}{"{}Bulk generate or bulk train every corpus/model in the folder."{}})}
+\DoxyCodeLine{00049 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{base_8py_source_l00025}{Python.\+Markopy.\+Base\+CLI.\+parser}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00055}{Python.\+Markopy.\+Base\+CLI.\+parse()}}, and \mbox{\hyperlink{markopy_8py_source_l00126}{Python.\+Markopy.\+Markopy\+CLI.\+parse()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a7d5836dec84f1a14565fee372d31323b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a2ec72a3621f55a9b4e995ade128e1b60}\label{class_python_1_1_markopy_1_1_base_c_l_i_a2ec72a3621f55a9b4e995ade128e1b60}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!check\_corpus\_path@{check\_corpus\_path}}
+\index{check\_corpus\_path@{check\_corpus\_path}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{check\_corpus\_path()}{check\_corpus\_path()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+check\+\_\+corpus\+\_\+path (\begin{DoxyParamCaption}\item[{str}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+check import path for validity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename to check \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00181}{181}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181     \textcolor{keyword}{def }check\_corpus\_path(filename : str):}
+\DoxyCodeLine{00182         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00183 \textcolor{stringliteral}{        @brief check import path for validity}}
+\DoxyCodeLine{00184 \textcolor{stringliteral}{        @param filename filename to check}}
+\DoxyCodeLine{00185 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00186 }
+\DoxyCodeLine{00187         if(\textcolor{keywordflow}{not} os.path.isfile(filename)):}
+\DoxyCodeLine{00188             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00189         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00190 }
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00094}{Python.\+Markopy.\+Base\+CLI.\+train()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a2ec72a3621f55a9b4e995ade128e1b60_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_abd2f15b87ebfedc510ad7e95375f1a5c}\label{class_python_1_1_markopy_1_1_base_c_l_i_abd2f15b87ebfedc510ad7e95375f1a5c}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!check\_export\_path@{check\_export\_path}}
+\index{check\_export\_path@{check\_export\_path}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{check\_export\_path()}{check\_export\_path()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+check\+\_\+export\+\_\+path (\begin{DoxyParamCaption}\item[{str}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+check import path for validity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename to check \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00192}{192}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00192     \textcolor{keyword}{def }check\_export\_path(filename : str):}
+\DoxyCodeLine{00193         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00194 \textcolor{stringliteral}{        @brief check import path for validity}}
+\DoxyCodeLine{00195 \textcolor{stringliteral}{        @param filename filename to check}}
+\DoxyCodeLine{00196 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00197 }
+\DoxyCodeLine{00198         if(filename \textcolor{keywordflow}{and} os.path.isfile(filename)):}
+\DoxyCodeLine{00199             \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00200         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00201 }
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00094}{Python.\+Markopy.\+Base\+CLI.\+train()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_abd2f15b87ebfedc510ad7e95375f1a5c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a14f0a0280b7cc4a16ff018eeefdf1020}\label{class_python_1_1_markopy_1_1_base_c_l_i_a14f0a0280b7cc4a16ff018eeefdf1020}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!check\_import\_path@{check\_import\_path}}
+\index{check\_import\_path@{check\_import\_path}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{check\_import\_path()}{check\_import\_path()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+check\+\_\+import\+\_\+path (\begin{DoxyParamCaption}\item[{str}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+check import path for validity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename to check \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00169}{169}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169     \textcolor{keyword}{def }check\_import\_path(filename : str):}
+\DoxyCodeLine{00170         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00171 \textcolor{stringliteral}{        @brief check import path for validity}}
+\DoxyCodeLine{00172 \textcolor{stringliteral}{        @param filename filename to check}}
+\DoxyCodeLine{00173 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00174         }
+\DoxyCodeLine{00175         if(\textcolor{keywordflow}{not} os.path.isfile(filename)):}
+\DoxyCodeLine{00176             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00177         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00178             \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00179 }
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00077}{Python.\+Markopy.\+Base\+CLI.\+import\+\_\+model()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a14f0a0280b7cc4a16ff018eeefdf1020_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_ad8e1d099c1958e06177c034d1d2ed52e}\label{class_python_1_1_markopy_1_1_base_c_l_i_ad8e1d099c1958e06177c034d1d2ed52e}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!export@{export}}
+\index{export@{export}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{export()}{export()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+export (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{filename }\end{DoxyParamCaption})}
+
+
+
+Export model to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename to export to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00138}{138}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138     \textcolor{keyword}{def }export(self, filename : str):}
+\DoxyCodeLine{00139         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00140 \textcolor{stringliteral}{        @brief Export model to a file}}
+\DoxyCodeLine{00141 \textcolor{stringliteral}{        @param filename filename to export to}}
+\DoxyCodeLine{00142 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00143         self.model.Export(filename)}
+\DoxyCodeLine{00144 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudammx_8py_source_l00065}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{base_8py_source_l00040}{Python.\+Markopy.\+Base\+CLI.\+model}}, \mbox{\hyperlink{mmx_8py_source_l00030}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{mp_8py_source_l00029}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+model}}, and \mbox{\hyperlink{_markov_passwords_g_u_i_8cpp_source_l00042}{Markov\+::\+GUI\+::\+Markov\+Passwords\+GUI.\+model()}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00094}{Python.\+Markopy.\+Base\+CLI.\+train()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_ad8e1d099c1958e06177c034d1d2ed52e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_ad8e1d099c1958e06177c034d1d2ed52e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_ad2823b484ee975432aebb4e50875f8a6}\label{class_python_1_1_markopy_1_1_base_c_l_i_ad2823b484ee975432aebb4e50875f8a6}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!generate@{generate}}
+\index{generate@{generate}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+generate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{wordlist,  }\item[{bool}]{bulk = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Generate strings from the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & model instance \\
+\hline
+{\em wordlist} & wordlist filename \\
+\hline
+{\em bulk} & marks bulk operation with directories \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00145}{145}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00145     \textcolor{keyword}{def }generate(self, wordlist : str, bulk : bool=\textcolor{keyword}{False}):}
+\DoxyCodeLine{00146         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00147 \textcolor{stringliteral}{            @brief Generate strings from the model}}
+\DoxyCodeLine{00148 \textcolor{stringliteral}{            @param model: model instance}}
+\DoxyCodeLine{00149 \textcolor{stringliteral}{            @param wordlist wordlist filename}}
+\DoxyCodeLine{00150 \textcolor{stringliteral}{            @param bulk marks bulk operation with directories}}
+\DoxyCodeLine{00151 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00152         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} (wordlist \textcolor{keywordflow}{or} self.args.count):}
+\DoxyCodeLine{00153             logging.pprint(\textcolor{stringliteral}{"{}Generation mode requires -\/w/-\/-\/wordlist and -\/n/-\/-\/count parameters. Exiting."{}})}
+\DoxyCodeLine{00154             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00155     }
+\DoxyCodeLine{00156         if(bulk \textcolor{keywordflow}{and} os.path.isfile(wordlist)):}
+\DoxyCodeLine{00157             logging.pprint(f\textcolor{stringliteral}{"{}\{wordlist\} exists and will be overwritten."{}}, 1)}
+\DoxyCodeLine{00158         self.\_generate(wordlist)}
+\DoxyCodeLine{00159 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudammx_8py_source_l00075}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{base_8py_source_l00161}{Python.\+Markopy.\+Base\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{mmx_8py_source_l00040}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{mp_8py_source_l00031}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{cudamarkopy_8py_source_l00064}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00075}{Python.\+Markopy.\+Base\+CLI.\+args}}, and \mbox{\hyperlink{markopy_8py_source_l00075}{Python.\+Markopy.\+Markopy\+CLI.\+args}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00202}{Python.\+Markopy.\+Base\+CLI.\+process()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_ad2823b484ee975432aebb4e50875f8a6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_ad2823b484ee975432aebb4e50875f8a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_ab367a1505f21191f550087707288b575}\label{class_python_1_1_markopy_1_1_base_c_l_i_ab367a1505f21191f550087707288b575}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!help@{help}}
+\index{help@{help}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+help (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a76e6c5fbea009bb2cc5cd1fc7278e2fd}{Python.\+Markopy.\+Markopy\+CLI}}, and \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_acb946950d9dbc1402ba081523d497dd3}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00051}{51}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051     \textcolor{keyword}{def }help(self):}
+\DoxyCodeLine{00052         \textcolor{stringliteral}{"{}! @brief Handle help strings. Defaults to argparse's help"{}}}
+\DoxyCodeLine{00053         self.print\_help()}
+\DoxyCodeLine{00054 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{base_8py_source_l00039}{Python.\+Markopy.\+Base\+CLI.\+print\+\_\+help}}.
+
+
+
+Referenced by \mbox{\hyperlink{markopy_8py_source_l00086}{Python.\+Markopy.\+Markopy\+CLI.\+add\+\_\+arguments()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_ab367a1505f21191f550087707288b575_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a70c7dc0679d8e37e1b5d6c65405eeedb}\label{class_python_1_1_markopy_1_1_base_c_l_i_a70c7dc0679d8e37e1b5d6c65405eeedb}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!import\_model@{import\_model}}
+\index{import\_model@{import\_model}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{import\_model()}{import\_model()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+import\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{filename }\end{DoxyParamCaption})}
+
+
+
+Import a model file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename to import \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00077}{77}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077     \textcolor{keyword}{def }import\_model(self, filename : str):}
+\DoxyCodeLine{00078         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00079 \textcolor{stringliteral}{        @brief Import a model file}}
+\DoxyCodeLine{00080 \textcolor{stringliteral}{        @param filename filename to import}}
+\DoxyCodeLine{00081 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00082         logging.pprint(\textcolor{stringliteral}{"{}Importing model file."{}}, 1)}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.check\_import\_path(filename):}
+\DoxyCodeLine{00085             logging.pprint(f\textcolor{stringliteral}{"{}Model file at \{filename\} not found. Check the file path, or working directory"{}})}
+\DoxyCodeLine{00086             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088         self.model.Import(filename)}
+\DoxyCodeLine{00089         logging.pprint(\textcolor{stringliteral}{"{}Model imported successfully."{}}, 2)}
+\DoxyCodeLine{00090         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{base_8py_source_l00169}{Python.\+Markopy.\+Base\+CLI.\+check\+\_\+import\+\_\+path()}}, \mbox{\hyperlink{cudammx_8py_source_l00065}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{base_8py_source_l00040}{Python.\+Markopy.\+Base\+CLI.\+model}}, \mbox{\hyperlink{mmx_8py_source_l00030}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{mp_8py_source_l00029}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+model}}, and \mbox{\hyperlink{_markov_passwords_g_u_i_8cpp_source_l00042}{Markov\+::\+GUI\+::\+Markov\+Passwords\+GUI.\+model()}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00202}{Python.\+Markopy.\+Base\+CLI.\+process()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a70c7dc0679d8e37e1b5d6c65405eeedb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a70c7dc0679d8e37e1b5d6c65405eeedb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a4c7fdd1e03b5bf1ac6a6c0cb40df13da}\label{class_python_1_1_markopy_1_1_base_c_l_i_a4c7fdd1e03b5bf1ac6a6c0cb40df13da}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!init\_post\_arguments@{init\_post\_arguments}}
+\index{init\_post\_arguments@{init\_post\_arguments}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{init\_post\_arguments()}{init\_post\_arguments()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+init\+\_\+post\+\_\+arguments (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_model_matrix_c_l_i_aedd02a1510ad98bec9b755686fbcec23}{Python.\+Markopy.\+Model\+Matrix\+CLI}}, \mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_a84df41ce62183c3c41afee0389d7a3d4}{Python.\+Markopy.\+Markopy\+CLI}}, and \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i_a824030379405eded4fa2561c1a1e8610}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00062}{62}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062     \textcolor{keyword}{def }init\_post\_arguments(self):}
+\DoxyCodeLine{00063         \textcolor{stringliteral}{"{}! @brief set up stuff that is collected from command line arguements"{}}}
+\DoxyCodeLine{00064         logging.VERBOSITY = 0}
+\DoxyCodeLine{00065         \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{00066             \textcolor{keywordflow}{if} self.args.verbosity:}
+\DoxyCodeLine{00067                 logging.VERBOSITY = self.args.verbosity}
+\DoxyCodeLine{00068                 logging.pprint(f\textcolor{stringliteral}{"{}Verbosity set to \{self.args.verbosity\}."{}}, 2)}
+\DoxyCodeLine{00069         \textcolor{keywordflow}{except}:}
+\DoxyCodeLine{00070             \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{00071     }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudamarkopy_8py_source_l00064}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00075}{Python.\+Markopy.\+Base\+CLI.\+args}}, and \mbox{\hyperlink{markopy_8py_source_l00075}{Python.\+Markopy.\+Markopy\+CLI.\+args}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00055}{Python.\+Markopy.\+Base\+CLI.\+parse()}}, and \mbox{\hyperlink{markopy_8py_source_l00126}{Python.\+Markopy.\+Markopy\+CLI.\+parse()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a4c7fdd1e03b5bf1ac6a6c0cb40df13da_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a290240acf366fc65cf0639698dbf662b}\label{class_python_1_1_markopy_1_1_base_c_l_i_a290240acf366fc65cf0639698dbf662b}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!parse@{parse}}
+\index{parse@{parse}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+parse (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_ab3660c4d0e9e5ab1889e76264a2c6e02}{Python.\+Markopy.\+Markopy\+CLI}}, and \mbox{\hyperlink{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i_a222b7d4b86acbdccc103281f80d27f68}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00055}{55}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055     \textcolor{keyword}{def }parse(self):}
+\DoxyCodeLine{00056         \textcolor{stringliteral}{"{}! @brief add, parse and hook arguements"{}}}
+\DoxyCodeLine{00057         self.add\_arguments()}
+\DoxyCodeLine{00058         self.parse\_arguments()}
+\DoxyCodeLine{00059         self.init\_post\_arguments()}
+\DoxyCodeLine{00060 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudammx_8py_source_l00067}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00043}{Python.\+Markopy.\+Base\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00264}{Python.\+Markopy.\+Abstract\+Generation\+Model\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00282}{Python.\+Markopy.\+Abstract\+Training\+Model\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{markopy_8py_source_l00086}{Python.\+Markopy.\+Markopy\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{mmx_8py_source_l00032}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{cudammx_8py_source_l00071}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+init\+\_\+post\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00062}{Python.\+Markopy.\+Base\+CLI.\+init\+\_\+post\+\_\+arguments()}}, \mbox{\hyperlink{markopy_8py_source_l00143}{Python.\+Markopy.\+Markopy\+CLI.\+init\+\_\+post\+\_\+arguments()}}, \mbox{\hyperlink{mmx_8py_source_l00036}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+init\+\_\+post\+\_\+arguments()}}, and \mbox{\hyperlink{base_8py_source_l00073}{Python.\+Markopy.\+Base\+CLI.\+parse\+\_\+arguments()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a290240acf366fc65cf0639698dbf662b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a9ad725de8fe9de68dc7c4f4aece8bb83}\label{class_python_1_1_markopy_1_1_base_c_l_i_a9ad725de8fe9de68dc7c4f4aece8bb83}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!parse\_arguments@{parse\_arguments}}
+\index{parse\_arguments@{parse\_arguments}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{parse\_arguments()}{parse\_arguments()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+parse\+\_\+arguments (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00073}{73}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073     \textcolor{keyword}{def }parse\_arguments(self):}
+\DoxyCodeLine{00074         \textcolor{stringliteral}{"{}! @brief trigger parser"{}}}
+\DoxyCodeLine{00075         self.args = self.parser.parse\_known\_args()[0]}
+\DoxyCodeLine{00076 }
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00055}{Python.\+Markopy.\+Base\+CLI.\+parse()}}, and \mbox{\hyperlink{markopy_8py_source_l00126}{Python.\+Markopy.\+Markopy\+CLI.\+parse()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a9ad725de8fe9de68dc7c4f4aece8bb83_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_aab389488e1f530cf444d9d2ef59a6998}\label{class_python_1_1_markopy_1_1_base_c_l_i_aab389488e1f530cf444d9d2ef59a6998}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!process@{process}}
+\index{process@{process}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+process (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Process parameters for operation. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_markopy_c_l_i_ae6d4af407d5b64f5cb4f1f0ec0cbe0fe}{Python.\+Markopy.\+Markopy\+CLI}}.
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00202}{202}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00202     \textcolor{keyword}{def }process(self):}
+\DoxyCodeLine{00203         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00204 \textcolor{stringliteral}{        @brief Process parameters for operation}}
+\DoxyCodeLine{00205 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00206         if(self.args.bulk):}
+\DoxyCodeLine{00207             logging.pprint(f\textcolor{stringliteral}{"{}Bulk mode operation chosen."{}}, 4)}
+\DoxyCodeLine{00208             \textcolor{keywordflow}{if} (self.args.mode.lower() == \textcolor{stringliteral}{"{}train"{}}):}
+\DoxyCodeLine{00209                 \textcolor{keywordflow}{if} (os.path.isdir(self.args.output) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(self.args.output)) \textcolor{keywordflow}{and} (os.path.isdir(self.args.dataset) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(self.args.dataset)):}
+\DoxyCodeLine{00210                     corpus\_list = os.listdir(self.args.dataset)}
+\DoxyCodeLine{00211                     \textcolor{keywordflow}{for} corpus \textcolor{keywordflow}{in} corpus\_list:}
+\DoxyCodeLine{00212                         self.import\_model(self.args.input)}
+\DoxyCodeLine{00213                         logging.pprint(f\textcolor{stringliteral}{"{}Training \{self.args.input\} with \{corpus\}"{}}, 2)}
+\DoxyCodeLine{00214                         output\_file\_name = corpus}
+\DoxyCodeLine{00215                         model\_extension = \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{00216                         \textcolor{keywordflow}{if} \textcolor{stringliteral}{"{}."{}} \textcolor{keywordflow}{in} self.args.input:}
+\DoxyCodeLine{00217                             model\_extension = self.args.input.split(\textcolor{stringliteral}{"{}."{}})[-\/1]}
+\DoxyCodeLine{00218                         self.train(f\textcolor{stringliteral}{"{}\{self.args.dataset\}/\{corpus\}"{}}, self.args.seperator, f\textcolor{stringliteral}{"{}\{self.args.output\}/\{corpus\}.\{model\_extension\}"{}}, output\_forced=\textcolor{keyword}{True}, bulk=\textcolor{keyword}{True})}
+\DoxyCodeLine{00219                 \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00220                     logging.pprint(\textcolor{stringliteral}{"{}In bulk training, output and dataset should be a directory."{}})}
+\DoxyCodeLine{00221                     exit(1)}
+\DoxyCodeLine{00222 }
+\DoxyCodeLine{00223             \textcolor{keywordflow}{elif} (self.args.mode.lower() == \textcolor{stringliteral}{"{}generate"{}}):}
+\DoxyCodeLine{00224                 \textcolor{keywordflow}{if} (os.path.isdir(self.args.wordlist) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(self.args.wordlist)) \textcolor{keywordflow}{and} (os.path.isdir(self.args.input) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} os.path.isfile(self.args.input)):}
+\DoxyCodeLine{00225                     model\_list = os.listdir(self.args.input)}
+\DoxyCodeLine{00226                     print(model\_list)}
+\DoxyCodeLine{00227                     \textcolor{keywordflow}{for} input \textcolor{keywordflow}{in} model\_list:}
+\DoxyCodeLine{00228                         logging.pprint(f\textcolor{stringliteral}{"{}Generating from \{self.args.input\}/\{input\} to \{self.args.wordlist\}/\{input\}.txt"{}}, 2)}
+\DoxyCodeLine{00229                         self.import\_model(f\textcolor{stringliteral}{"{}\{self.args.input\}/\{input\}"{}})}
+\DoxyCodeLine{00230                         model\_base = input}
+\DoxyCodeLine{00231                         \textcolor{keywordflow}{if} \textcolor{stringliteral}{"{}."{}} \textcolor{keywordflow}{in} self.args.input:}
+\DoxyCodeLine{00232                             model\_base = input.split(\textcolor{stringliteral}{"{}."{}})[1]}
+\DoxyCodeLine{00233                         self.generate(f\textcolor{stringliteral}{"{}\{self.args.wordlist\}/\{model\_base\}.txt"{}}, bulk=\textcolor{keyword}{True})}
+\DoxyCodeLine{00234                 \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00235                     logging.pprint(\textcolor{stringliteral}{"{}In bulk generation, input and wordlist should be directory."{}})}
+\DoxyCodeLine{00236 }
+\DoxyCodeLine{00237         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00238             self.import\_model(self.args.input)}
+\DoxyCodeLine{00239             \textcolor{keywordflow}{if} (self.args.mode.lower() == \textcolor{stringliteral}{"{}generate"{}}):}
+\DoxyCodeLine{00240                 self.generate(self.args.wordlist)}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{00242 }
+\DoxyCodeLine{00243             \textcolor{keywordflow}{elif} (self.args.mode.lower() == \textcolor{stringliteral}{"{}train"{}}):}
+\DoxyCodeLine{00244                 self.train(self.args.dataset, self.args.seperator, self.args.output, output\_forced=\textcolor{keyword}{True})}
+\DoxyCodeLine{00245 }
+\DoxyCodeLine{00246 }
+\DoxyCodeLine{00247             elif(self.args.mode.lower() == \textcolor{stringliteral}{"{}combine"{}}):}
+\DoxyCodeLine{00248                 self.train(self.args.dataset, self.args.seperator, self.args.output)}
+\DoxyCodeLine{00249                 self.generate(self.args.wordlist)}
+\DoxyCodeLine{00250 }
+\DoxyCodeLine{00251 }
+\DoxyCodeLine{00252             \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00253                 logging.pprint(\textcolor{stringliteral}{"{}Invalid mode arguement given."{}})}
+\DoxyCodeLine{00254                 logging.pprint(\textcolor{stringliteral}{"{}Accepted modes: 'Generate', 'Train', 'Combine'"{}})}
+\DoxyCodeLine{00255                 exit(5)}
+\DoxyCodeLine{00256 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudamarkopy_8py_source_l00064}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00075}{Python.\+Markopy.\+Base\+CLI.\+args}}, \mbox{\hyperlink{markopy_8py_source_l00075}{Python.\+Markopy.\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00145}{Python.\+Markopy.\+Base\+CLI.\+generate()}}, \mbox{\hyperlink{base_8py_source_l00077}{Python.\+Markopy.\+Base\+CLI.\+import\+\_\+model()}}, \mbox{\hyperlink{_generate_8cpp_source_l00082}{Markov\+::\+GUI\+::\+Generate.\+train()}}, \mbox{\hyperlink{_train_8cpp_source_l00038}{Markov\+::\+GUI\+::\+Train.\+train()}}, and \mbox{\hyperlink{base_8py_source_l00094}{Python.\+Markopy.\+Base\+CLI.\+train()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_aab389488e1f530cf444d9d2ef59a6998_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a4d0f291accfd276eb967e1121124274b}\label{class_python_1_1_markopy_1_1_base_c_l_i_a4d0f291accfd276eb967e1121124274b}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!train@{train}}
+\index{train@{train}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Base\+CLI.\+train (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{dataset,  }\item[{str}]{seperator,  }\item[{str}]{output,  }\item[{bool}]{output\+\_\+forced = {\ttfamily False},  }\item[{bool}]{bulk = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Train a model via CLI parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & Model instance \\
+\hline
+{\em dataset} & filename for the dataset \\
+\hline
+{\em seperator} & seperator used with the dataset \\
+\hline
+{\em output} & output filename \\
+\hline
+{\em output\+\_\+forced} & force overwrite \\
+\hline
+{\em bulk} & marks bulk operation with directories \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00094}{94}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094     \textcolor{keyword}{def }train(self, dataset : str, seperator : str, output : str, output\_forced : bool=\textcolor{keyword}{False}, bulk : bool=\textcolor{keyword}{False}):}
+\DoxyCodeLine{00095         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00096 \textcolor{stringliteral}{            @brief Train a model via CLI parameters }}
+\DoxyCodeLine{00097 \textcolor{stringliteral}{            @param model Model instance}}
+\DoxyCodeLine{00098 \textcolor{stringliteral}{            @param dataset filename for the dataset}}
+\DoxyCodeLine{00099 \textcolor{stringliteral}{            @param seperator seperator used with the dataset}}
+\DoxyCodeLine{00100 \textcolor{stringliteral}{            @param output output filename}}
+\DoxyCodeLine{00101 \textcolor{stringliteral}{            @param output\_forced force overwrite}}
+\DoxyCodeLine{00102 \textcolor{stringliteral}{            @param bulk marks bulk operation with directories}}
+\DoxyCodeLine{00103 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00104         logging.pprint(\textcolor{stringliteral}{"{}Training."{}})}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} (dataset \textcolor{keywordflow}{and} seperator \textcolor{keywordflow}{and} (output \textcolor{keywordflow}{or} \textcolor{keywordflow}{not} output\_forced)):}
+\DoxyCodeLine{00107             logging.pprint(f\textcolor{stringliteral}{"{}Training mode requires -\/d/-\/-\/dataset\{', -\/o/-\/-\/output' if output\_forced else''\} and -\/s/-\/-\/seperator parameters. Exiting."{}})}
+\DoxyCodeLine{00108             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{00110         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} bulk \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} self.check\_corpus\_path(dataset):}
+\DoxyCodeLine{00111             logging.pprint(f\textcolor{stringliteral}{"{}\{dataset\} doesn't exists. Check the file path, or working directory"{}})}
+\DoxyCodeLine{00112             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00113 }
+\DoxyCodeLine{00114         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.check\_export\_path(output):}
+\DoxyCodeLine{00115             logging.pprint(f\textcolor{stringliteral}{"{}Cannot create output at \{output\}"{}})}
+\DoxyCodeLine{00116             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118         if(seperator == \textcolor{stringliteral}{'\(\backslash\)\(\backslash\)t'}):}
+\DoxyCodeLine{00119             logging.pprint(\textcolor{stringliteral}{"{}Escaping seperator."{}}, 3)}
+\DoxyCodeLine{00120             seperator = \textcolor{stringliteral}{'\(\backslash\)t'}}
+\DoxyCodeLine{00121         }
+\DoxyCodeLine{00122         if(len(seperator)!=1):}
+\DoxyCodeLine{00123             logging.pprint(f\textcolor{stringliteral}{'Delimiter must be a single character, and "{}\{seperator\}"{} is not accepted.'})}
+\DoxyCodeLine{00124             exit(4)}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126         logging.pprint(f\textcolor{stringliteral}{'Starting training.'}, 3)}
+\DoxyCodeLine{00127         self.model.Train(dataset,seperator, int(self.args.threads))}
+\DoxyCodeLine{00128         logging.pprint(f\textcolor{stringliteral}{'Training completed.'}, 2)}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130         if(output):}
+\DoxyCodeLine{00131             logging.pprint(f\textcolor{stringliteral}{'Exporting model to \{output\}'}, 2)}
+\DoxyCodeLine{00132             self.export(output)}
+\DoxyCodeLine{00133         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00134             logging.pprint(f\textcolor{stringliteral}{'Model will not be exported.'}, 1)}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00137 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cudamarkopy_8py_source_l00064}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00075}{Python.\+Markopy.\+Base\+CLI.\+args}}, \mbox{\hyperlink{markopy_8py_source_l00075}{Python.\+Markopy.\+Markopy\+CLI.\+args}}, \mbox{\hyperlink{base_8py_source_l00181}{Python.\+Markopy.\+Base\+CLI.\+check\+\_\+corpus\+\_\+path()}}, \mbox{\hyperlink{base_8py_source_l00192}{Python.\+Markopy.\+Base\+CLI.\+check\+\_\+export\+\_\+path()}}, \mbox{\hyperlink{base_8py_source_l00138}{Python.\+Markopy.\+Base\+CLI.\+export()}}, \mbox{\hyperlink{cudammx_8py_source_l00065}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{base_8py_source_l00040}{Python.\+Markopy.\+Base\+CLI.\+model}}, \mbox{\hyperlink{mmx_8py_source_l00030}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+model}}, \mbox{\hyperlink{mp_8py_source_l00029}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+model}}, and \mbox{\hyperlink{_markov_passwords_g_u_i_8cpp_source_l00042}{Markov\+::\+GUI\+::\+Markov\+Passwords\+GUI.\+model()}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00202}{Python.\+Markopy.\+Base\+CLI.\+process()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a4d0f291accfd276eb967e1121124274b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_base_c_l_i_a4d0f291accfd276eb967e1121124274b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}\label{class_python_1_1_markopy_1_1_base_c_l_i_a5ec7b479c87a31789b026eca6968ce5a}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!args@{args}}
+\index{args@{args}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Base\+CLI.\+args}
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00075}{75}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{cudammx_8py_source_l00075}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{base_8py_source_l00161}{Python.\+Markopy.\+Base\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{mmx_8py_source_l00040}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{mp_8py_source_l00031}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{base_8py_source_l00145}{Python.\+Markopy.\+Base\+CLI.\+generate()}}, \mbox{\hyperlink{markopy_8py_source_l00095}{Python.\+Markopy.\+Markopy\+CLI.\+help()}}, \mbox{\hyperlink{base_8py_source_l00062}{Python.\+Markopy.\+Base\+CLI.\+init\+\_\+post\+\_\+arguments()}}, \mbox{\hyperlink{markopy_8py_source_l00126}{Python.\+Markopy.\+Markopy\+CLI.\+parse()}}, \mbox{\hyperlink{cudamarkopy_8py_source_l00098}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+parse\+\_\+fail()}}, \mbox{\hyperlink{base_8py_source_l00202}{Python.\+Markopy.\+Base\+CLI.\+process()}}, and \mbox{\hyperlink{base_8py_source_l00094}{Python.\+Markopy.\+Base\+CLI.\+train()}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a8dee51fa6e7fbad6ff1a5a3789fd2d0f}\label{class_python_1_1_markopy_1_1_base_c_l_i_a8dee51fa6e7fbad6ff1a5a3789fd2d0f}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!model@{model}}
+\index{model@{model}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Base\+CLI.\+model}
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00040}{40}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{cudammx_8py_source_l00075}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{base_8py_source_l00161}{Python.\+Markopy.\+Base\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{mmx_8py_source_l00040}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{mp_8py_source_l00031}{Python.\+Markopy.\+Markov\+Passwords\+CLI.\+\_\+generate()}}, \mbox{\hyperlink{base_8py_source_l00138}{Python.\+Markopy.\+Base\+CLI.\+export()}}, \mbox{\hyperlink{base_8py_source_l00077}{Python.\+Markopy.\+Base\+CLI.\+import\+\_\+model()}}, and \mbox{\hyperlink{base_8py_source_l00094}{Python.\+Markopy.\+Base\+CLI.\+train()}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_abc1d9ff41df2198aa2ddee090fedc91f}\label{class_python_1_1_markopy_1_1_base_c_l_i_abc1d9ff41df2198aa2ddee090fedc91f}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!parser@{parser}}
+\index{parser@{parser}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Base\+CLI.\+parser}
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00025}{25}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{cudamarkopy_8py_source_l00053}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+\_\+\+\_\+init\+\_\+\+\_\+()}}, \mbox{\hyperlink{cudammx_8py_source_l00067}{Python.\+Cuda\+Markopy.\+Cuda\+Model\+Matrix\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00043}{Python.\+Markopy.\+Base\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00264}{Python.\+Markopy.\+Abstract\+Generation\+Model\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{base_8py_source_l00282}{Python.\+Markopy.\+Abstract\+Training\+Model\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{markopy_8py_source_l00086}{Python.\+Markopy.\+Markopy\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{mmx_8py_source_l00032}{Python.\+Markopy.\+Model\+Matrix\+CLI.\+add\+\_\+arguments()}}, \mbox{\hyperlink{cudamarkopy_8py_source_l00061}{Python.\+Cuda\+Markopy.\+Cuda\+Markopy\+CLI.\+help()}}, and \mbox{\hyperlink{markopy_8py_source_l00095}{Python.\+Markopy.\+Markopy\+CLI.\+help()}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_base_c_l_i_a54cb76c3f1109080b94237738542297e}\label{class_python_1_1_markopy_1_1_base_c_l_i_a54cb76c3f1109080b94237738542297e}} 
+\index{Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}!print\_help@{print\_help}}
+\index{print\_help@{print\_help}!Python.Markopy.BaseCLI@{Python.Markopy.BaseCLI}}
+\doxysubsubsection{\texorpdfstring{print\_help}{print\_help}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Base\+CLI.\+print\+\_\+help}
+
+
+
+Definition at line \mbox{\hyperlink{base_8py_source_l00039}{39}} of file \mbox{\hyperlink{base_8py_source}{base.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00051}{Python.\+Markopy.\+Base\+CLI.\+help()}}, and \mbox{\hyperlink{markopy_8py_source_l00095}{Python.\+Markopy.\+Markopy\+CLI.\+help()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Markopy/\+Markopy/src/\+CLI/\mbox{\hyperlink{base_8py}{base.\+py}}\end{DoxyCompactItemize}

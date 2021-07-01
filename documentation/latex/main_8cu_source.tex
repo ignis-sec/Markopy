@@ -1,5 +1,5 @@
 \hypertarget{main_8cu_source}{}\doxysection{main.\+cu}
-\label{main_8cu_source}\index{main.cu@{main.cu}}
+\label{main_8cu_source}\index{Markopy/CudaMarkovAPI/src/main.cu@{Markopy/CudaMarkovAPI/src/main.cu}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001 \textcolor{comment}{/** @file main.cu}}
@@ -15,7 +15,7 @@
 \DoxyCodeLine{00011 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cstring}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00012 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{sstream}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00013 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{chrono}\textcolor{preprocessor}{>}}
-\DoxyCodeLine{00014 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{cuda_model_matrix_8h}{"cudaModelMatrix.h"}}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \mbox{\hyperlink{cuda_model_matrix_8h}{"{}cudaModelMatrix.h"{}}}}
 \DoxyCodeLine{00015 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cuda\_runtime\_api}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00016 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{cuda}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
 \DoxyCodeLine{00017 \textcolor{preprocessor}{\#}\textcolor{preprocessor}{include} \textcolor{preprocessor}{<}\textcolor{preprocessor}{device\_launch\_parameters}\textcolor{preprocessor}{.}\textcolor{preprocessor}{h}\textcolor{preprocessor}{>}}
@@ -27,21 +27,21 @@
 \DoxyCodeLine{00023 }
 \DoxyCodeLine{00024 }
 \DoxyCodeLine{00025     \mbox{\hyperlink{namespace_markov}{Markov}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i}{API}}::\mbox{\hyperlink{namespace_markov_1_1_a_p_i_1_1_c_u_d_a}{CUDA}}::\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}{CUDAModelMatrix}} markovPass;}
-\DoxyCodeLine{00026     std::cerr << \textcolor{stringliteral}{"Importing model.\(\backslash\)n"};}
-\DoxyCodeLine{00027     markovPass.Import(\textcolor{stringliteral}{"models/finished.mdl"});}
-\DoxyCodeLine{00028     markovPass.Buff(\textcolor{stringliteral}{"!\(\backslash\)"\#\$\%\&'()*+,-\/./:;<=>?@[\(\backslash\)\(\backslash\)]\string^\_`\{|\}\string~"}, 10, \textcolor{keyword}{true}, \textcolor{keyword}{true});}
-\DoxyCodeLine{00029     std::cerr << \textcolor{stringliteral}{"Import done. \(\backslash\)n"};}
+\DoxyCodeLine{00026     std::cerr << \textcolor{stringliteral}{"{}Importing model.\(\backslash\)n"{}};}
+\DoxyCodeLine{00027     markovPass.Import(\textcolor{stringliteral}{"{}models/finished.mdl"{}});}
+\DoxyCodeLine{00028     markovPass.Buff(\textcolor{stringliteral}{"{}!\(\backslash\)"{}\#\$\%\&'()*+,-\/./:;<=>?@[\(\backslash\)\(\backslash\)]\string^\_`\{|\}\string~"{}}, 10, \textcolor{keyword}{true}, \textcolor{keyword}{true});}
+\DoxyCodeLine{00029     std::cerr << \textcolor{stringliteral}{"{}Import done. \(\backslash\)n"{}};}
 \DoxyCodeLine{00030     markovPass.ConstructMatrix();}
 \DoxyCodeLine{00031     \textcolor{comment}{//markovPass.DumpJSON();}}
 \DoxyCodeLine{00032     CUDADeviceController::ListCudaDevices();}
 \DoxyCodeLine{00033 }
 \DoxyCodeLine{00034     std::chrono::steady\_clock::time\_point begin = std::chrono::steady\_clock::now();}
-\DoxyCodeLine{00035     std::cerr << \textcolor{stringliteral}{"Starting walk. \(\backslash\)n"};}
-\DoxyCodeLine{00036     markovPass.FastRandomWalk(1000000000,\textcolor{stringliteral}{"/media/ignis/Stuff/wordlist.txt"},12,12, \textcolor{keyword}{false}, \textcolor{keyword}{false});}
-\DoxyCodeLine{00037     \textcolor{comment}{//markovPass.FastRandomWalk(500000000,"/media/ignis/Stuff/wordlist2.txt",6,12,25, true);}}
+\DoxyCodeLine{00035     std::cerr << \textcolor{stringliteral}{"{}Starting walk. \(\backslash\)n"{}};}
+\DoxyCodeLine{00036     markovPass.FastRandomWalk(1000000000,\textcolor{stringliteral}{"{}/media/ignis/Stuff/wordlist.txt"{}},12,12, \textcolor{keyword}{false}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00037     \textcolor{comment}{//markovPass.FastRandomWalk(500000000,"{}/media/ignis/Stuff/wordlist2.txt"{},6,12,25, true);}}
 \DoxyCodeLine{00038     std::chrono::steady\_clock::time\_point end = std::chrono::steady\_clock::now();}
 \DoxyCodeLine{00039 }
-\DoxyCodeLine{00040     std::cerr << \textcolor{stringliteral}{"Finished in:"} << std::chrono::duration\_cast<std::chrono::milliseconds> (end -\/ begin).count() << \textcolor{stringliteral}{" milliseconds"} << std::endl;}
+\DoxyCodeLine{00040     std::cerr << \textcolor{stringliteral}{"{}Finished in:"{}} << std::chrono::duration\_cast<std::chrono::milliseconds> (end -\/ begin).count() << \textcolor{stringliteral}{"{} milliseconds"{}} << std::endl;}
 \DoxyCodeLine{00041 }
 \DoxyCodeLine{00042 }
 \DoxyCodeLine{00043 \}}

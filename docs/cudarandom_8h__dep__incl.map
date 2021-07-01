@@ -1,4 +1,4 @@
-<map id="cudarandom.h" name="cudarandom.h">
-<area shape="rect" id="node1" title="Extension of Markov::Random::Marsaglia for CUDA." alt="" coords="27,5,166,35"/>
-<area shape="rect" id="node2" href="$cuda_model_matrix_8cu.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="5,83,188,112"/>
+<map id="Markopy/CudaMarkovAPI/src/cudarandom.h" name="Markopy/CudaMarkovAPI/src/cudarandom.h">
+<area shape="rect" id="node1" title="Extension of Markov::Random::Marsaglia for CUDA." alt="" coords="5,5,228,52"/>
+<area shape="rect" id="node2" href="$cuda_model_matrix_8cu.html" title="CUDA accelerated extension of Markov::API::ModelMatrix." alt="" coords="5,100,228,147"/>
 </map>

@@ -132,7 +132,7 @@ var sectionId = 'dynsection-0';
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:title="STL class.">
+<g id="a_node5"><a xlink:title=" ">
 <polygon fill="none" stroke="#bfbfbf" points="186,-126.5 186,-189.5 278,-189.5 278,-126.5 186,-126.5"/>
 <text text-anchor="middle" x="232" y="-175.9" font-family="Helvetica,sans-Serif" font-size="12.00">std::ostream</text>
 <polyline fill="none" stroke="#bfbfbf" points="186,-168.5 278,-168.5 "/>
@@ -152,10 +152,10 @@ var sectionId = 'dynsection-0';
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:title="STL class.">
+<g id="a_node6"><a xlink:title=" ">
 <polygon fill="none" stroke="#bfbfbf" points="168,-252.5 168,-328.5 296,-328.5 296,-252.5 168,-252.5"/>
 <text text-anchor="start" x="176" y="-314.9" font-family="Helvetica,sans-Serif" font-size="12.00">std::basic_ostream</text>
-<text text-anchor="middle" x="232" y="-301.9" font-family="Helvetica,sans-Serif" font-size="12.00">&lt; char &gt;</text>
+<text text-anchor="middle" x="232" y="-301.9" font-family="Helvetica,sans-Serif" font-size="12.00">&lt; Char &gt;</text>
 <polyline fill="none" stroke="#bfbfbf" points="168,-294.5 296,-294.5 "/>
 <text text-anchor="middle" x="232" y="-280.9" font-family="Helvetica,sans-Serif" font-size="12.00"> </text>
 <polyline fill="none" stroke="#bfbfbf" points="168,-273.5 296,-273.5 "/>
@@ -172,7 +172,7 @@ var sectionId = 'dynsection-0';
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:title="STL class.">
+<g id="a_node7"><a xlink:title=" ">
 <polygon fill="none" stroke="#bfbfbf" points="156.5,-366.5 156.5,-429.5 307.5,-429.5 307.5,-366.5 156.5,-366.5"/>
 <text text-anchor="middle" x="232" y="-415.9" font-family="Helvetica,sans-Serif" font-size="12.00">std::basic_ios&lt; Char &gt;</text>
 <polyline fill="none" stroke="#bfbfbf" points="156.5,-408.5 307.5,-408.5 "/>
@@ -191,7 +191,7 @@ var sectionId = 'dynsection-0';
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:title="STL class.">
+<g id="a_node8"><a xlink:title=" ">
 <polygon fill="none" stroke="#bfbfbf" points="185.5,-467.5 185.5,-530.5 278.5,-530.5 278.5,-467.5 185.5,-467.5"/>
 <text text-anchor="middle" x="232" y="-516.9" font-family="Helvetica,sans-Serif" font-size="12.00">std::ios_base</text>
 <polyline fill="none" stroke="#bfbfbf" points="185.5,-509.5 278.5,-509.5 "/>

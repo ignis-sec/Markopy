@@ -1,4 +1,4 @@
-\hypertarget{class_markov_1_1_g_u_i_1_1_generate}{}\doxysection{Markov\+::G\+UI\+::Generate Class Reference}
+\hypertarget{class_markov_1_1_g_u_i_1_1_generate}{}\doxysection{Markov\+::GUI\+::Generate Class Reference}
 \label{class_markov_1_1_g_u_i_1_1_generate}\index{Markov::GUI::Generate@{Markov::GUI::Generate}}
 
 
@@ -11,22 +11,22 @@ QT Generation page class.
 
 
 
-Inheritance diagram for Markov\+::G\+UI\+::Generate\+:
+Inheritance diagram for Markov\+::GUI\+::Generate\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=234pt]{class_markov_1_1_g_u_i_1_1_generate__inherit__graph}
+\includegraphics[width=271pt]{class_markov_1_1_g_u_i_1_1_generate__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Markov\+::G\+UI\+::Generate\+:
+Collaboration diagram for Markov\+::GUI\+::Generate\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=274pt]{class_markov_1_1_g_u_i_1_1_generate__coll__graph}
+\includegraphics[width=280pt]{class_markov_1_1_g_u_i_1_1_generate__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Slots}
@@ -43,7 +43,7 @@ void \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_afbab410a7d15a59d42be4
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a104406389ae61bab2e3d87f771a2e353}{Generate}} (Q\+Widget $\ast$parent=Q\+\_\+\+N\+U\+L\+L\+P\+TR)
+\mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a104406389ae61bab2e3d87f771a2e353}{Generate}} (QWidget $\ast$parent=Q\+\_\+\+NULLPTR)
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -64,7 +64,7 @@ Definition at line \mbox{\hyperlink{_generate_8h_source_l00015}{15}} of file \mb
 \index{Markov::GUI::Generate@{Markov::GUI::Generate}!Generate@{Generate}}
 \index{Generate@{Generate}!Markov::GUI::Generate@{Markov::GUI::Generate}}
 \doxysubsubsection{\texorpdfstring{Generate()}{Generate()}}
-{\footnotesize\ttfamily Generate\+::\+Generate (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily Q\+\_\+NULLPTR} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Generate\+::\+Generate (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily Q\+\_\+NULLPTR} }\end{DoxyParamCaption})}
 
 
 
@@ -118,7 +118,7 @@ Definition at line \mbox{\hyperlink{_generate_8cpp_source_l00042}{42}} of file \
 \DoxyCodeLine{00044    }
 \DoxyCodeLine{00045 }
 \DoxyCodeLine{00046 }
-\DoxyCodeLine{00047     QString file\_name = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Open a File"}, QDir::homePath());}
+\DoxyCodeLine{00047     QString file\_name = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Open a File"{}}, QDir::homePath());}
 \DoxyCodeLine{00048     QFile file(file\_name);}
 \DoxyCodeLine{00049 }
 \DoxyCodeLine{00050     }
@@ -131,21 +131,21 @@ Definition at line \mbox{\hyperlink{_generate_8cpp_source_l00042}{42}} of file \
 \DoxyCodeLine{00057     cstr = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[fname.size() + 1];}
 \DoxyCodeLine{00058     strcpy(cstr, fname.c\_str());}
 \DoxyCodeLine{00059     }
-\DoxyCodeLine{00060     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.label\_6-\/>setText(\textcolor{stringliteral}{"GENERATING!"});}
+\DoxyCodeLine{00060     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.label\_6-\/>setText(\textcolor{stringliteral}{"{}GENERATING!"{}});}
 \DoxyCodeLine{00061     }
-\DoxyCodeLine{00062     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}} mp;}
-\DoxyCodeLine{00063     mp.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"src\(\backslash\)\(\backslash\)CLI\(\backslash\)\(\backslash\)sample\_models\(\backslash\)\(\backslash\)2gram-\/trained.mdl"});}
+\DoxyCodeLine{00062     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}} \mbox{\hyperlink{namespacemarkopy_a2626224ad1569dd3ce7c37599cb1e6fe}{mp}};}
+\DoxyCodeLine{00063     \mbox{\hyperlink{namespacemp}{mp}}.Import(\textcolor{stringliteral}{"{}src\(\backslash\)\(\backslash\)CLI\(\backslash\)\(\backslash\)sample\_models\(\backslash\)\(\backslash\)2gram-\/trained.mdl"{}});}
 \DoxyCodeLine{00064 }
-\DoxyCodeLine{00065     mp.\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a13886b29051abf3edeed97bd7f985f39}{Generate}}(numberPass,cstr,minLen,maxLen);}
+\DoxyCodeLine{00065     \mbox{\hyperlink{namespacemp}{mp}}.Generate(numberPass,cstr,minLen,maxLen);}
 \DoxyCodeLine{00066 }
 \DoxyCodeLine{00067     \textcolor{keywordflow}{if} (!file.open(QFile::ReadOnly | QFile::Text)) \{}
-\DoxyCodeLine{00068         QMessageBox::warning(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Error"}, \textcolor{stringliteral}{"File Not Open!"});}
+\DoxyCodeLine{00068         QMessageBox::warning(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Error"{}}, \textcolor{stringliteral}{"{}File Not Open!"{}});}
 \DoxyCodeLine{00069     \}}
 \DoxyCodeLine{00070     QTextStream in(\&file);}
 \DoxyCodeLine{00071     QString text = in.readAll();}
 \DoxyCodeLine{00072     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.plainTextEdit-\/>setPlainText(text);}
 \DoxyCodeLine{00073     }
-\DoxyCodeLine{00074     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.label\_6-\/>setText(\textcolor{stringliteral}{"DONE!"});}
+\DoxyCodeLine{00074     \mbox{\hyperlink{class_markov_1_1_g_u_i_1_1_generate_a3c360d52d5d94e30bd3cf946d681b1cb}{ui}}.label\_6-\/>setText(\textcolor{stringliteral}{"{}DONE!"{}});}
 \DoxyCodeLine{00075     }
 \DoxyCodeLine{00076     }
 \DoxyCodeLine{00077    }
@@ -155,7 +155,7 @@ Definition at line \mbox{\hyperlink{_generate_8cpp_source_l00042}{42}} of file \
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{markov_passwords_8cpp_source_l00118}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Generate()}}, and \mbox{\hyperlink{_generate_8h_source_l00021}{ui}}.
+References \mbox{\hyperlink{markov_passwords_8cpp_source_l00118}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Generate()}}, and \mbox{\hyperlink{_generate_8h_source_l00021}{ui}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -197,11 +197,11 @@ Definition at line \mbox{\hyperlink{_generate_8cpp_source_l00082}{82}} of file \
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00082                      \{}
-\DoxyCodeLine{00083     QString file\_name = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Open a File"}, QDir::homePath());}
+\DoxyCodeLine{00083     QString file\_name = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Open a File"{}}, QDir::homePath());}
 \DoxyCodeLine{00084     QFile file(file\_name);}
 \DoxyCodeLine{00085 }
 \DoxyCodeLine{00086     \textcolor{keywordflow}{if} (!file.open(QFile::ReadOnly | QFile::Text)) \{}
-\DoxyCodeLine{00087         QMessageBox::warning(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Error"}, \textcolor{stringliteral}{"File Not Open!"});}
+\DoxyCodeLine{00087         QMessageBox::warning(\textcolor{keyword}{this}, \textcolor{stringliteral}{"{}Error"{}}, \textcolor{stringliteral}{"{}File Not Open!"{}});}
 \DoxyCodeLine{00088     \}}
 \DoxyCodeLine{00089     QTextStream in(\&file);}
 \DoxyCodeLine{00090     QString text = in.readAll();}
@@ -215,10 +215,10 @@ Definition at line \mbox{\hyperlink{_generate_8cpp_source_l00082}{82}} of file \
 \DoxyCodeLine{00098 }
 \DoxyCodeLine{00099 }
 \DoxyCodeLine{00100     \textcolor{keywordtype}{char} a = \textcolor{charliteral}{','};}
-\DoxyCodeLine{00101     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}} mp;}
-\DoxyCodeLine{00102     mp.\mbox{\hyperlink{class_markov_1_1_model_a379ea9943f9d4c212e1140d4a9af64f5}{Import}}(\textcolor{stringliteral}{"models\(\backslash\)\(\backslash\)2gram.mdl"});}
-\DoxyCodeLine{00103     mp.\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a2fd4423ae3850e258dcb6b11a7feb9b2}{Train}}(cstr, a,10);}
-\DoxyCodeLine{00104     mp.\mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{Export}}(\textcolor{stringliteral}{"models\(\backslash\)\(\backslash\)finished.mdl"});}
+\DoxyCodeLine{00101     \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords}{Markov::API::MarkovPasswords}} \mbox{\hyperlink{namespacemarkopy_a2626224ad1569dd3ce7c37599cb1e6fe}{mp}};}
+\DoxyCodeLine{00102     \mbox{\hyperlink{namespacemp}{mp}}.Import(\textcolor{stringliteral}{"{}models\(\backslash\)\(\backslash\)2gram.mdl"{}});}
+\DoxyCodeLine{00103     \mbox{\hyperlink{namespacemp}{mp}}.Train(cstr, a,10);}
+\DoxyCodeLine{00104     \mbox{\hyperlink{namespacemp}{mp}}.Export(\textcolor{stringliteral}{"{}models\(\backslash\)\(\backslash\)finished.mdl"{}});}
 \DoxyCodeLine{00105 }
 \DoxyCodeLine{00106 }
 \DoxyCodeLine{00107 }
@@ -238,7 +238,11 @@ Definition at line \mbox{\hyperlink{_generate_8cpp_source_l00082}{82}} of file \
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{markov_passwords_8cpp_source_l00065}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train()}}, and \mbox{\hyperlink{_generate_8h_source_l00021}{ui}}.
+References \mbox{\hyperlink{markov_passwords_8cpp_source_l00065}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Train()}}, and \mbox{\hyperlink{_generate_8h_source_l00021}{ui}}.
+
+
+
+Referenced by \mbox{\hyperlink{base_8py_source_l00202}{Python.\+Markopy.\+Base\+CLI\+::process()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -246,6 +250,14 @@ Here is the call graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_markov_1_1_g_u_i_1_1_generate_af5f5d0fcc5530157d882e35e35d1649e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_markov_1_1_g_u_i_1_1_generate_af5f5d0fcc5530157d882e35e35d1649e_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_markov_1_1_g_u_i_1_1_generate_afbab410a7d15a59d42be45705f32e0fa}\label{class_markov_1_1_g_u_i_1_1_generate_afbab410a7d15a59d42be45705f32e0fa}} 
@@ -274,7 +286,7 @@ Definition at line \mbox{\hyperlink{_generate_8cpp_source_l00126}{126}} of file 
 \index{Markov::GUI::Generate@{Markov::GUI::Generate}!ui@{ui}}
 \index{ui@{ui}!Markov::GUI::Generate@{Markov::GUI::Generate}}
 \doxysubsubsection{\texorpdfstring{ui}{ui}}
-{\footnotesize\ttfamily Ui\+::\+Generate Markov\+::\+G\+U\+I\+::\+Generate\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily Ui\+::\+Generate Markov\+::\+GUI\+::\+Generate\+::ui\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -288,5 +300,5 @@ Referenced by \mbox{\hyperlink{_generate_8cpp_source_l00020}{Generate()}}, \mbox
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_generate_8h}{Generate.\+h}}\item 
-\mbox{\hyperlink{_generate_8cpp}{Generate.\+cpp}}\end{DoxyCompactItemize}
+Markopy/\+Markov\+Passwords\+GUI/src/\mbox{\hyperlink{_generate_8h}{Generate.\+h}}\item 
+Markopy/\+Markov\+Passwords\+GUI/src/\mbox{\hyperlink{_generate_8cpp}{Generate.\+cpp}}\end{DoxyCompactItemize}

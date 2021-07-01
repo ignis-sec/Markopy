@@ -1,4 +1,4 @@
-\hypertarget{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}{}\doxysection{Markov\+::A\+PI\+::Concurrency\+::Thread\+Shared\+List\+Handler Class Reference}
+\hypertarget{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}{}\doxysection{Markov\+::API\+::Concurrency\+::Thread\+Shared\+List\+Handler Class Reference}
 \label{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler}\index{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}}
 
 
@@ -11,7 +11,7 @@ Simple class for managing shared access to file.
 
 
 
-Collaboration diagram for Markov\+::A\+PI\+::Concurrency\+::Thread\+Shared\+List\+Handler\+:
+Collaboration diagram for Markov\+::API\+::Concurrency\+::Thread\+Shared\+List\+Handler\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -22,7 +22,7 @@ Collaboration diagram for Markov\+::A\+PI\+::Concurrency\+::Thread\+Shared\+List
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292}{Thread\+Shared\+List\+Handler}} (const \mbox{\hyperlink{classchar}{char}} $\ast$filename)
+\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292}{Thread\+Shared\+List\+Handler}} (const char $\ast$filename)
 \begin{DoxyCompactList}\small\item\em Construct the Thread Handler with a filename. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a068e1a9ff477de23a44c10230df416a5}{next}} (std\+::string $\ast$line)
 \begin{DoxyCompactList}\small\item\em Read the next line from the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -51,7 +51,7 @@ Definition at line \mbox{\hyperlink{thread_shared_list_handler_8h_source_l00025}
 \index{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}!ThreadSharedListHandler@{ThreadSharedListHandler}}
 \index{ThreadSharedListHandler@{ThreadSharedListHandler}!Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}}
 \doxysubsubsection{\texorpdfstring{ThreadSharedListHandler()}{ThreadSharedListHandler()}}
-{\footnotesize\ttfamily Markov\+::\+A\+P\+I\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler\+::\+Thread\+Shared\+List\+Handler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classchar}{char}} $\ast$}]{filename }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Markov\+::\+API\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler\+::\+Thread\+Shared\+List\+Handler (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
 
 
 
@@ -61,9 +61,10 @@ Simply open the file, and initialize the locks.
 
 {\bfseries{Example}} {\bfseries{Use\+:}} Simple file read 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292}{ThreadSharedListHandler}} listhandler(\textcolor{stringliteral}{"test.txt"});}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292}{ThreadSharedListHandler}} listhandler(\textcolor{stringliteral}{"{}test.txt"{}});}
 \DoxyCodeLine{std::string line;}
-\DoxyCodeLine{std::cout << listhandler-\/>next(\&line) << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{std::cout << listhandler-\/>next(\&line) << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+
 \end{DoxyCode}
 
 
@@ -84,12 +85,12 @@ Simply open the file, and initialize the locks.
 \DoxyCodeLine{     \}}
 \DoxyCodeLine{     \textcolor{keyword}{auto} finish = std::chrono::high\_resolution\_clock::now();}
 \DoxyCodeLine{     std::chrono::duration<double> elapsed = finish -\/ start;}
-\DoxyCodeLine{     std::cout << \textcolor{stringliteral}{"Elapsed time: "} << elapsed.count() << \textcolor{stringliteral}{" s\(\backslash\)n"};}
+\DoxyCodeLine{     std::cout << \textcolor{stringliteral}{"{}Elapsed time: "{}} << elapsed.count() << \textcolor{stringliteral}{"{} s\(\backslash\)n"{}};}
 \DoxyCodeLine{}
 \DoxyCodeLine{ \}}
 \DoxyCodeLine{}
 \DoxyCodeLine{ \textcolor{keywordtype}{void} \mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_markov_passwords_a5f51b0fdb75101b797f38b08da84848e}{MarkovPasswords::TrainThread}}(\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292}{ThreadSharedListHandler}} *listhandler, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* datasetFileName, \textcolor{keywordtype}{char} delimiter)\{}
-\DoxyCodeLine{     \textcolor{keywordtype}{char} format\_str[] =\textcolor{stringliteral}{"\%ld,\%s"};}
+\DoxyCodeLine{     \textcolor{keywordtype}{char} format\_str[] =\textcolor{stringliteral}{"{}\%ld,\%s"{}};}
 \DoxyCodeLine{     format\_str[2]=delimiter;}
 \DoxyCodeLine{     std::string line;}
 \DoxyCodeLine{     \textcolor{keywordflow}{while} (listhandler-\/>next(\&line)) \{}
@@ -103,6 +104,7 @@ Simply open the file, and initialize the locks.
 \DoxyCodeLine{         \textcolor{keyword}{delete} linebuf;}
 \DoxyCodeLine{     \}}
 \DoxyCodeLine{ \}}
+
 \end{DoxyCode}
 
 
@@ -129,7 +131,7 @@ References \mbox{\hyperlink{thread_shared_list_handler_8h_source_l00095}{listfil
 
 
 
-Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00065}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train()}}.
+Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00065}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Train()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -146,7 +148,7 @@ Here is the caller graph for this function\+:
 \index{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}!next@{next}}
 \index{next@{next}!Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}}
 \doxysubsubsection{\texorpdfstring{next()}{next()}}
-{\footnotesize\ttfamily bool Markov\+::\+A\+P\+I\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler\+::next (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{line }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Markov\+::\+API\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler\+::next (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{line }\end{DoxyParamCaption})}
 
 
 
@@ -156,9 +158,10 @@ This action will be blocked until another thread (if any) completes the read ope
 
 {\bfseries{Example}} {\bfseries{Use\+:}} Simple file read 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292}{ThreadSharedListHandler}} listhandler(\textcolor{stringliteral}{"test.txt"});}
+\DoxyCodeLine{\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_concurrency_1_1_thread_shared_list_handler_a08d468aa4146a30f4176bc91a40ed292}{ThreadSharedListHandler}} listhandler(\textcolor{stringliteral}{"{}test.txt"{}});}
 \DoxyCodeLine{std::string line;}
-\DoxyCodeLine{std::cout << listhandler-\/>next(\&line) << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{std::cout << listhandler-\/>next(\&line) << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+
 \end{DoxyCode}
  
 
@@ -182,7 +185,7 @@ References \mbox{\hyperlink{thread_shared_list_handler_8h_source_l00095}{listfil
 
 
 
-Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00085}{Markov\+::\+A\+P\+I\+::\+Markov\+Passwords\+::\+Train\+Thread()}}.
+Referenced by \mbox{\hyperlink{markov_passwords_8cpp_source_l00085}{Markov\+::\+API\+::\+Markov\+Passwords\+::\+Train\+Thread()}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -199,7 +202,7 @@ Here is the caller graph for this function\+:
 \index{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}!listfile@{listfile}}
 \index{listfile@{listfile}!Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}}
 \doxysubsubsection{\texorpdfstring{listfile}{listfile}}
-{\footnotesize\ttfamily std\+::ifstream Markov\+::\+A\+P\+I\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler\+::listfile\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::ifstream Markov\+::\+API\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler\+::listfile\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -213,7 +216,7 @@ Referenced by \mbox{\hyperlink{thread_shared_list_handler_8cpp_source_l00018}{ne
 \index{Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}!mlock@{mlock}}
 \index{mlock@{mlock}!Markov::API::Concurrency::ThreadSharedListHandler@{Markov::API::Concurrency::ThreadSharedListHandler}}
 \doxysubsubsection{\texorpdfstring{mlock}{mlock}}
-{\footnotesize\ttfamily std\+::mutex Markov\+::\+A\+P\+I\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler\+::mlock\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::mutex Markov\+::\+API\+::\+Concurrency\+::\+Thread\+Shared\+List\+Handler\+::mlock\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -227,5 +230,5 @@ Referenced by \mbox{\hyperlink{thread_shared_list_handler_8cpp_source_l00018}{ne
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{thread_shared_list_handler_8h}{thread\+Shared\+List\+Handler.\+h}}\item 
-\mbox{\hyperlink{thread_shared_list_handler_8cpp}{thread\+Shared\+List\+Handler.\+cpp}}\end{DoxyCompactItemize}
+Markopy/\+Markov\+API/src/\mbox{\hyperlink{thread_shared_list_handler_8h}{thread\+Shared\+List\+Handler.\+h}}\item 
+Markopy/\+Markov\+API/src/\mbox{\hyperlink{thread_shared_list_handler_8cpp}{thread\+Shared\+List\+Handler.\+cpp}}\end{DoxyCompactItemize}

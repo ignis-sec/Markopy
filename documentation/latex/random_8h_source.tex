@@ -1,5 +1,5 @@
 \hypertarget{random_8h_source}{}\doxysection{random.\+h}
-\label{random_8h_source}\index{random.h@{random.h}}
+\label{random_8h_source}\index{Markopy/MarkovModel/src/random.h@{Markopy/MarkovModel/src/random.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001 }
@@ -33,7 +33,7 @@
 \DoxyCodeLine{00029 \textcolor{comment}{    */}}
 \DoxyCodeLine{\Hypertarget{random_8h_source_l00030}\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{00030}}     \textcolor{keyword}{class} \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine}{RandomEngine}}\{}
 \DoxyCodeLine{00031     \textcolor{keyword}{public}:}
-\DoxyCodeLine{00032         \textcolor{keyword}{virtual} \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058}{random}}() = 0;}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00032}\mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058}{00032}}         \textcolor{keyword}{virtual} \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{class_markov_1_1_random_1_1_random_engine_a010d310dfebeacd3d7db7d0958dc1058}{random}}() = 0;}
 \DoxyCodeLine{00033     \};}
 \DoxyCodeLine{00034 }
 \DoxyCodeLine{00035 }
@@ -46,12 +46,12 @@
 \DoxyCodeLine{00042 \textcolor{comment}{     * @b Example @b Use: Using Default Engine with RandomWalk}}
 \DoxyCodeLine{00043 \textcolor{comment}{     * @code\{.cpp\}}}
 \DoxyCodeLine{00044 \textcolor{comment}{     * Markov::Model<char> model;}}
-\DoxyCodeLine{00045 \textcolor{comment}{     * Model.import("model.mdl");}}
+\DoxyCodeLine{00045 \textcolor{comment}{     * Model.import("{}model.mdl"{});}}
 \DoxyCodeLine{00046 \textcolor{comment}{     * char* res = new char[11];}}
 \DoxyCodeLine{00047 \textcolor{comment}{     * Markov::Random::DefaultRandomEngine randomEngine;}}
 \DoxyCodeLine{00048 \textcolor{comment}{     * for (int i = 0; i < 10; i++) \{}}
 \DoxyCodeLine{00049 \textcolor{comment}{     *      this-\/>RandomWalk(\&randomEngine, 5, 10, res); }}
-\DoxyCodeLine{00050 \textcolor{comment}{     *      std::cout << res << "\(\backslash\)n";}}
+\DoxyCodeLine{00050 \textcolor{comment}{     *      std::cout << res << "{}\(\backslash\)n"{};}}
 \DoxyCodeLine{00051 \textcolor{comment}{     *  \}}}
 \DoxyCodeLine{00052 \textcolor{comment}{     * @endcode}}
 \DoxyCodeLine{00053 \textcolor{comment}{     * }}
@@ -110,12 +110,12 @@
 \DoxyCodeLine{00106 \textcolor{comment}{     * @b Example @b Use: Using Marsaglia Engine with RandomWalk}}
 \DoxyCodeLine{00107 \textcolor{comment}{     * @code\{.cpp\}}}
 \DoxyCodeLine{00108 \textcolor{comment}{     * Markov::Model<char> model;}}
-\DoxyCodeLine{00109 \textcolor{comment}{     * Model.import("model.mdl");}}
+\DoxyCodeLine{00109 \textcolor{comment}{     * Model.import("{}model.mdl"{});}}
 \DoxyCodeLine{00110 \textcolor{comment}{     * char* res = new char[11];}}
 \DoxyCodeLine{00111 \textcolor{comment}{     * Markov::Random::Marsaglia MarsagliaRandomEngine;}}
 \DoxyCodeLine{00112 \textcolor{comment}{     * for (int i = 0; i < 10; i++) \{}}
 \DoxyCodeLine{00113 \textcolor{comment}{     *      this-\/>RandomWalk(\&MarsagliaRandomEngine, 5, 10, res); }}
-\DoxyCodeLine{00114 \textcolor{comment}{     *      std::cout << res << "\(\backslash\)n";}}
+\DoxyCodeLine{00114 \textcolor{comment}{     *      std::cout << res << "{}\(\backslash\)n"{};}}
 \DoxyCodeLine{00115 \textcolor{comment}{     *  \}}}
 \DoxyCodeLine{00116 \textcolor{comment}{     * @endcode}}
 \DoxyCodeLine{00117 \textcolor{comment}{     * }}
@@ -137,7 +137,7 @@
 \DoxyCodeLine{00133             \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a6d147584295802300120e83d87fa14dc}{x}} = \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{)}}(\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{)}});}
 \DoxyCodeLine{00134             \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_a818a46e943aa0df0f9a65a9cef9eb521}{y}} = \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{)}}(\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{)}});}
 \DoxyCodeLine{00135             \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_marsaglia_af80540e1a0a6897e3cd030d4e1514200}{z}} = \textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{distribution}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_a53c9c440002ed1adb2b18292ca82d1c9}{)}}(\textcolor{keyword}{this}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{-\/>}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{generator}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{(}}\mbox{\hyperlink{class_markov_1_1_random_1_1_default_random_engine_aee6d9202d0aa50c16f46ecec0a2b05de}{)}});}
-\DoxyCodeLine{00136             \textcolor{comment}{//std::cout << "x: " << x << ", y: " << y << ", z: " << z << "\(\backslash\)n";}}
+\DoxyCodeLine{00136             \textcolor{comment}{//std::cout << "{}x: "{} << x << "{}, y: "{} << y << "{}, z: "{} << z << "{}\(\backslash\)n"{};}}
 \DoxyCodeLine{00137         \}}
 \DoxyCodeLine{00138 }
 \DoxyCodeLine{00139 }
@@ -170,12 +170,12 @@
 \DoxyCodeLine{00166 \textcolor{comment}{     * @b Example @b Use: Using Mersenne Engine with RandomWalk}}
 \DoxyCodeLine{00167 \textcolor{comment}{     * @code\{.cpp\}}}
 \DoxyCodeLine{00168 \textcolor{comment}{     * Markov::Model<char> model;}}
-\DoxyCodeLine{00169 \textcolor{comment}{     * Model.import("model.mdl");}}
+\DoxyCodeLine{00169 \textcolor{comment}{     * Model.import("{}model.mdl"{});}}
 \DoxyCodeLine{00170 \textcolor{comment}{     * char* res = new char[11];}}
 \DoxyCodeLine{00171 \textcolor{comment}{     * Markov::Random::Mersenne MersenneTwisterEngine;}}
 \DoxyCodeLine{00172 \textcolor{comment}{     * for (int i = 0; i < 10; i++) \{}}
 \DoxyCodeLine{00173 \textcolor{comment}{     *      this-\/>RandomWalk(\&MersenneTwisterEngine, 5, 10, res); }}
-\DoxyCodeLine{00174 \textcolor{comment}{     *      std::cout << res << "\(\backslash\)n";}}
+\DoxyCodeLine{00174 \textcolor{comment}{     *      std::cout << res << "{}\(\backslash\)n"{};}}
 \DoxyCodeLine{00175 \textcolor{comment}{     *  \}}}
 \DoxyCodeLine{00176 \textcolor{comment}{     * @endcode}}
 \DoxyCodeLine{00177 \textcolor{comment}{     * }}

@@ -1,23 +1,22 @@
 <map id="Markov::API::ModelMatrix" name="Markov::API::ModelMatrix">
-<area shape="rect" id="node1" title="Class to flatten and reduce Markov::Model to a Matrix." alt="" coords="1208,1620,1460,1861"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html" title="Markov::Model with char represented nodes." alt="" coords="478,1313,745,1537"/>
-<area shape="rect" id="node3" href="$class_markov_1_1_model.html" title=" " alt="" coords="649,972,859,1231"/>
-<area shape="rect" id="node4" title=" " alt="" coords="1031,575,1245,678"/>
-<area shape="rect" id="node5" href="$classchar.html" title=" " alt="" coords="1035,5,1094,91"/>
-<area shape="rect" id="node6" href="$class_markov_1_1_node.html" title=" " alt="" coords="640,156,895,432"/>
-<area shape="rect" id="node7" title=" " alt="" coords="612,804,827,907"/>
-<area shape="rect" id="node8" href="$class_markov_1_1_edge.html" title=" " alt="" coords="517,515,719,739"/>
-<area shape="rect" id="node10" title=" " alt="" coords="403,804,587,907"/>
-<area shape="rect" id="node9" href="$classlong_01int.html" title=" " alt="" coords="436,5,517,91"/>
-<area shape="rect" id="node11" title="STL class." alt="" coords="463,1059,586,1144"/>
-<area shape="rect" id="node12" title="STL class." alt="" coords="209,804,379,907"/>
-<area shape="rect" id="node13" title="STL class." alt="" coords="202,575,367,678"/>
-<area shape="rect" id="node14" title="STL class." alt="" coords="71,251,272,337"/>
-<area shape="rect" id="node18" title="STL class." alt="" coords="7,575,178,678"/>
-<area shape="rect" id="node15" title="STL class." alt="" coords="109,5,233,91"/>
-<area shape="rect" id="node16" title="STL class." alt="" coords="233,1059,361,1144"/>
-<area shape="rect" id="node17" title="STL class." alt="" coords="5,804,183,907"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1321,1383,1363,1468"/>
-<area shape="rect" id="node20" title=" " alt="" coords="1489,1383,1545,1468"/>
-<area shape="rect" id="node21" title=" " alt="" coords="1569,1383,1672,1468"/>
+<area shape="rect" id="node1" title="Class to flatten and reduce Markov::Model to a Matrix." alt="" coords="1231,2365,1569,2953"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html" title="Markov::Model with char represented nodes." alt="" coords="429,1712,822,2265"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_model.html" title=" " alt="" coords="660,1215,943,1629"/>
+<area shape="rect" id="node4" title=" " alt="" coords="1122,775,1337,877"/>
+<area shape="rect" id="node5" title=" " alt="" coords="1127,5,1185,91"/>
+<area shape="rect" id="node6" href="$class_markov_1_1_node.html" title=" " alt="" coords="711,156,1006,588"/>
+<area shape="rect" id="node7" title=" " alt="" coords="703,1047,918,1149"/>
+<area shape="rect" id="node8" href="$class_markov_1_1_edge.html" title=" " alt="" coords="515,671,810,981"/>
+<area shape="rect" id="node10" title=" " alt="" coords="495,1047,679,1149"/>
+<area shape="rect" id="node9" href="$classlong_01int.html" title=" " alt="" coords="430,5,511,91"/>
+<area shape="rect" id="node11" title=" " alt="" coords="465,1379,588,1465"/>
+<area shape="rect" id="node12" title=" " alt="" coords="288,1047,459,1149"/>
+<area shape="rect" id="node13" title=" " alt="" coords="200,775,365,877"/>
+<area shape="rect" id="node14" title=" " alt="" coords="95,329,297,415"/>
+<area shape="rect" id="node18" title=" " alt="" coords="5,775,176,877"/>
+<area shape="rect" id="node15" title=" " alt="" coords="134,5,258,91"/>
+<area shape="rect" id="node16" title=" " alt="" coords="217,1379,345,1465"/>
+<area shape="rect" id="node17" title=" " alt="" coords="62,1047,239,1149"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1412,1946,1455,2031"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1580,1946,1636,2031"/>
 </map>

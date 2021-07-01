@@ -1,5 +1,5 @@
-<map id="term.h" name="term.h">
-<area shape="rect" id="node1" title="Terminal handler for pretty stuff like colors." alt="" coords="63,5,138,35"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,83,97,112"/>
-<area shape="rect" id="node3" title=" " alt="" coords="122,83,181,112"/>
+<map id="Markopy/MarkovAPICLI/src/color/term.h" name="Markopy/MarkovAPICLI/src/color/term.h">
+<area shape="rect" id="node1" title="Terminal handler for pretty stuff like colors." alt="" coords="5,5,212,52"/>
+<area shape="rect" id="node2" title=" " alt="" coords="13,100,105,129"/>
+<area shape="rect" id="node3" title=" " alt="" coords="130,100,189,129"/>
 </map>

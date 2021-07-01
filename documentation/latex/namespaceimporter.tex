@@ -1,0 +1,52 @@
+\hypertarget{namespaceimporter}{}\doxysection{importer Namespace Reference}
+\label{namespaceimporter}\index{importer@{importer}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceimporter_a94ba10dfc732b45384713b2908257fb8}{import\+\_\+markopy}} ()
+\begin{DoxyCompactList}\small\item\em import and return markopy module \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceimporter_a94ba10dfc732b45384713b2908257fb8}\label{namespaceimporter_a94ba10dfc732b45384713b2908257fb8}} 
+\index{importer@{importer}!import\_markopy@{import\_markopy}}
+\index{import\_markopy@{import\_markopy}!importer@{importer}}
+\doxysubsubsection{\texorpdfstring{import\_markopy()}{import\_markopy()}}
+{\footnotesize\ttfamily def importer.\+import\+\_\+markopy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+import and return markopy module 
+
+\begin{DoxyReturn}{Returns}
+markopy module 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{importer_8py_source_l00012}{12}} of file \mbox{\hyperlink{importer_8py_source}{importer.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012 \textcolor{keyword}{def }\mbox{\hyperlink{namespaceimporter_a94ba10dfc732b45384713b2908257fb8}{import\_markopy}}():}
+\DoxyCodeLine{00013     \textcolor{stringliteral}{"{}"{}"{}! @brief import and return markopy module}}
+\DoxyCodeLine{00014 \textcolor{stringliteral}{         @returns markopy module}}
+\DoxyCodeLine{00015 \textcolor{stringliteral}{    "{}"{}"{}}}
+\DoxyCodeLine{00016     ext = \textcolor{stringliteral}{"{}so"{}}}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{if} os.name == \textcolor{stringliteral}{'nt'}:}
+\DoxyCodeLine{00018         ext=\textcolor{stringliteral}{"{}pyd"{}}}
+\DoxyCodeLine{00019     \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{00020         spec = spec\_from\_loader(\textcolor{stringliteral}{"{}markopy"{}}, ExtensionFileLoader(\textcolor{stringliteral}{"{}markopy"{}}, os.path.abspath(f\textcolor{stringliteral}{"{}markopy.\{ext\}"{}})))}
+\DoxyCodeLine{00021         markopy = module\_from\_spec(spec)}
+\DoxyCodeLine{00022         spec.loader.exec\_module(markopy)}
+\DoxyCodeLine{00023         \textcolor{keywordflow}{return} markopy}
+\DoxyCodeLine{00024     \textcolor{keywordflow}{except} ImportError \textcolor{keyword}{as} e:}
+\DoxyCodeLine{00025         print(f\textcolor{stringliteral}{"{}(\{\_\_file\_\_\}) Working in development mode. Trying to load markopy.\{ext\} from ../../../out/"{}})}
+\DoxyCodeLine{00026         if(os.path.exists(f\textcolor{stringliteral}{"{}../../../out/lib/markopy.\{ext\}"{}})):}
+\DoxyCodeLine{00027             spec = spec\_from\_loader(\textcolor{stringliteral}{"{}markopy"{}}, ExtensionFileLoader(\textcolor{stringliteral}{"{}markopy"{}}, os.path.abspath(f\textcolor{stringliteral}{"{}../../../out/lib/markopy.\{ext\}"{}})))}
+\DoxyCodeLine{00028             markopy = module\_from\_spec(spec)}
+\DoxyCodeLine{00029             spec.loader.exec\_module(markopy)}
+\DoxyCodeLine{00030             \textcolor{keywordflow}{return} markopy}
+\DoxyCodeLine{00031         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00032             \textcolor{keywordflow}{raise} e}
+
+\end{DoxyCode}

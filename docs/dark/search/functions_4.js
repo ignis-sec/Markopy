@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['edge_352',['Edge',['../class_markov_1_1_edge.html#a893ea498a247e09b2a7e2424f026a137',1,'Markov::Edge::Edge()'],['../class_markov_1_1_edge.html#a7813ff80fd97d5c0bd4fb339e2e5764b',1,'Markov::Edge::Edge(Node&lt; NodeStorageType &gt; *_left, Node&lt; NodeStorageType &gt; *_right)']]],
-  ['edges_353',['Edges',['../class_markov_1_1_model.html#a2e08608905d7b042627ea844b08045fe',1,'Markov::Model::Edges()'],['../class_markov_1_1_node.html#ad404ccc317ef8413881b8d7b72b4f4f0',1,'Markov::Node::Edges()']]],
-  ['edgeweight_354',['EdgeWeight',['../class_markov_1_1_edge.html#a2b1e5a6e6f81502cd8ac6b20ed38b677',1,'Markov::Edge']]],
-  ['export_355',['Export',['../class_markov_1_1_model.html#ae16027a94235d2988ac4be35ea07d939',1,'Markov::Model::Export(std::ofstream *)'],['../class_markov_1_1_model.html#af788426a3c41a7838a2aae199e8aef5b',1,'Markov::Model::Export(const char *filename)']]]
+  ['deallocatematrix_421',['DeallocateMatrix',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a0f95257e1344225233ab49602cd9551c',1,'Markov::API::ModelMatrix']]],
+  ['devrandom_422',['devrandom',['../namespace_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_random.html#ac44f9c51be54b9b123dca4560482a346',1,'Markov::API::CUDA::Random']]],
+  ['distribution_423',['distribution',['../class_markov_1_1_random_1_1_default_random_engine.html#a53c9c440002ed1adb2b18292ca82d1c9',1,'Markov::Random::DefaultRandomEngine']]],
+  ['dumpjson_424',['DumpJSON',['../class_markov_1_1_a_p_i_1_1_model_matrix.html#a405a1c967dfea8d829aa41ad2c14f709',1,'Markov::API::ModelMatrix']]]
 ];

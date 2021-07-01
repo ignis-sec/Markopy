@@ -1,7 +1,8 @@
 <map id="Markov::Model::Import" name="Markov::Model::Import">
-<area shape="rect" id="node1" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="595,75,797,105"/>
-<area shape="rect" id="node2" href="$namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" title=" " alt="" coords="5,5,232,52"/>
-<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aeba8bb79aa4dc2cfeda310f34b7c9427" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="301,67,526,113"/>
-<area shape="rect" id="node5" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html#ab7f0caaea1f96d4fdeea126f78d7081f" title="Initialize the markov model from MarkovModel::Markov::Model, with an import file." alt="" coords="280,137,547,184"/>
-<area shape="rect" id="node4" href="$_markov_a_p_i_c_l_i_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="87,77,150,106"/>
+<area shape="rect" id="node1" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="608,82,811,111"/>
+<area shape="rect" id="node2" href="$namespace_markov_1_1_markopy.html#a379628c09859652215496b63af2bcac9" title=" " alt="" coords="12,5,239,52"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html#aeba8bb79aa4dc2cfeda310f34b7c9427" title="Open a file to import with filename, and call bool Model::Import with std::ifstream." alt="" coords="314,73,539,120"/>
+<area shape="rect" id="node6" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html#ab7f0caaea1f96d4fdeea126f78d7081f" title="Initialize the markov model from MarkovModel::Markov::Model, with an import file." alt="" coords="293,144,560,191"/>
+<area shape="rect" id="node4" href="$namespace_markov_1_1_markopy_1_1_c_u_d_a.html#a584fc8e70bb6cf08f544f52805245e19" title=" " alt="" coords="5,76,245,123"/>
+<area shape="rect" id="node5" href="$_markov_a_p_i_c_l_i_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Launch CLI tool." alt="" coords="94,147,157,177"/>
 </map>
