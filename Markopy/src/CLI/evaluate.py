@@ -15,7 +15,14 @@ import glob
 import re
 
 class Evaluator:
+    """!
+    @brief Abstract class to evaluate and score integrity/validty
+    """
     def __init__(self, filename: str) -> None:
+        """! 
+        @brief default constructor for evaluator
+        @param filename filename to evaluate. Can be a pattern
+        """
         self.filename = filename
         self.checks = []
         self.TEST_PASS_SYMBOL = "✅"
@@ -29,6 +36,7 @@ class Evaluator:
         return True
 
     def evaluate(self) -> bool:
+        "! @brief base evaluation function"
         for file in self.files:
             self._evaluate(file)
         
@@ -36,6 +44,10 @@ class Evaluator:
 
     @abstractmethod
     def _evaluate(self, file) -> list:
+        """! 
+        @brief internal evaluation function for a single file
+        @param file filename to evaluate
+        """
         if(not os.path.isfile(file)):
             logging.pprint(f"Given file {file} is not a valid filename")
             return False
@@ -45,14 +57,24 @@ class Evaluator:
         
 
     def success(self, checkname):
+        """!
+        @brief pass a test
+        @param checkname text to display with the check
+        """
         self.checks.append((checkname, self.TEST_PASS_SYMBOL))
 
     def fail(self, checkname):
+        """!
+        @brief fail a test
+        @checkname text to display with the check
+        """
+
         self.all_checks_passed = False
         self.checks.append((checkname, self.TEST_FAIL_SYMBOL))
         self.checks = []
 
     def finalize(self):
+        "! @brief finalize an evaluation and print checks"
         print("\n################ Checks ################ ")
         for test in self.checks:
             logging.pprint(f"{test[0]:30}:{test[1]} ")
@@ -61,14 +83,18 @@ class Evaluator:
         return self.all_checks_passed
 
 class ModelEvaluator(Evaluator):
+    """!
+    @brief evaluate a model
+    """
     def __init__(self, filename: str) -> None:
-        
+        "! @brief default constructor"
         valid = super().__init__(filename)
         
         if not valid:
             return False
 
     def evaluate(self):
+        "! @brief evaluate a model"
         logging.VERBOSITY=2
         logging.SHOW_STACK_THRESHOLD=3
         super().evaluate()
@@ -116,6 +142,7 @@ class ModelEvaluator(Evaluator):
             self.finalize()
         
     def check_dangling(self):
+        "! @brief check if model has dangling nodes"
         if(self.lnode_count == self.rnode_count):
             self.success("No dangling nodes")
         else:
@@ -123,6 +150,7 @@ class ModelEvaluator(Evaluator):
             self.fail("No dangling nodes")
     
     def check_structure(self):
+        "! @brief check model structure for validity"
         if((self.lnode_count-1) * (self.rnode_count-1) + 2*(self.lnode_count-1)):  
             self.success("Model structure")
         else:
@@ -130,6 +158,7 @@ class ModelEvaluator(Evaluator):
             self.fail("Model structure")
 
     def check_weight_deviation(self):
+        "! @brief check model standart deviation between edge weights"
         mean = sum(self.ews) / len(self.ews)
         variance = sum([((x - mean) ** 2) for x in self.ews]) / len(self.ews)
         res = variance ** 0.5
@@ -148,6 +177,7 @@ class ModelEvaluator(Evaluator):
             self.success(f"Model training score: {round(self.stdev)}")
 
     def check_min(self):
+        "! @brief check 0 edge weights distribution"
         count = 0
         for ew in self.ews:
             if ew==0:
@@ -159,6 +189,7 @@ class ModelEvaluator(Evaluator):
             self.success("0 edges below threshold")
     
     def check_min_10percent(self):
+        "! @brief check minimum 10% of the edges"
         sample = self.ews[int(self.edge_count*0.1)]
         #print(f"10per: {sample}")
         avg = sum(self.ews) / len(self.ews)
@@ -167,6 +198,7 @@ class ModelEvaluator(Evaluator):
         #print(f"med: {med}")
 
     def check_lean(self):
+        "! @brief check which way model is leaning. Left, or right"
         sample = self.ews[int(self.edge_count*0.1)]
         avg = sum(self.ews) / len(self.ews)
         med = statistics.median(self.ews)
@@ -187,6 +219,7 @@ class ModelEvaluator(Evaluator):
         
 
     def check_distrib(self):
+        "! @deprecated"
         sorted_ews = copy(self.ews)
         sorted_ews.sort(reverse=True)
         ratio1 = sorted_ews[0]/sorted_ews[int(self.edge_count/2)]
@@ -196,12 +229,20 @@ class ModelEvaluator(Evaluator):
 
 
 class CorpusEvaluator(Evaluator):
+    """!
+    @brief evaluate a corpus
+    """
     def __init__(self, filename: str) -> None:
+        """! 
+        @brief default constructor
+        @param filename filename or pattern to check
+        """
         valid = super().__init__(filename)
         if not valid:
             return False
 
     def evaluate(self):
+        "! @brief evalute a corpus. Might take a long time"
         logging.pprint("WARNING: This takes a while with larger corpus files", 2)
         logging.VERBOSITY=2
         logging.SHOW_STACK_THRESHOLD=3
@@ -243,6 +284,10 @@ class CorpusEvaluator(Evaluator):
 
             self.finalize()
     def _evaluate(self, file) -> list:
+        """!
+        @brief evaluate a single file. Remove reading file because it should be read line by line.
+        @param file corpus filename to evaluate
+        """
         if(not os.path.isfile(file)):
             logging.pprint(f"Given file {file} is not a valid filename")
             return False
