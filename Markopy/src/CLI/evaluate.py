@@ -14,9 +14,15 @@ from copy import copy
 import glob
 import re
 
+##
+# @namespace Python::Markopy::Evaluation
+# @brief namespace for integrity evaluation
+#
+
 class Evaluator:
     """!
     @brief Abstract class to evaluate and score integrity/validty
+    @belongsto Python::Markopy::Evaluation
     """
     def __init__(self, filename: str) -> None:
         """! 
@@ -25,8 +31,8 @@ class Evaluator:
         """
         self.filename = filename
         self.checks = []
-        self.TEST_PASS_SYMBOL = "✅"
-        self.TEST_FAIL_SYMBOL = "❌"
+        self.TEST_PASS_SYMBOL = b"\xe2\x9c\x85".decode()
+        self.TEST_FAIL_SYMBOL = b"\xe2\x9d\x8c".decode()
         self.all_checks_passed = True
         self.files = []
         if("*" in filename):
@@ -66,12 +72,11 @@ class Evaluator:
     def fail(self, checkname):
         """!
         @brief fail a test
-        @checkname text to display with the check
+        @param checkname text to display with the check
         """
 
         self.all_checks_passed = False
         self.checks.append((checkname, self.TEST_FAIL_SYMBOL))
-        self.checks = []
 
     def finalize(self):
         "! @brief finalize an evaluation and print checks"
@@ -79,12 +84,14 @@ class Evaluator:
         for test in self.checks:
             logging.pprint(f"{test[0]:30}:{test[1]} ")
         print("\n")
-
+        self.checks = []
         return self.all_checks_passed
 
 class ModelEvaluator(Evaluator):
     """!
     @brief evaluate a model
+    @belongsto Python::Markopy::Evaluation
+    @extends Python::Markopy::Evaluation::Evaluator
     """
     def __init__(self, filename: str) -> None:
         "! @brief default constructor"
@@ -231,6 +238,8 @@ class ModelEvaluator(Evaluator):
 class CorpusEvaluator(Evaluator):
     """!
     @brief evaluate a corpus
+    @belongsto Python::Markopy::Evaluation
+    @extends Python::Markopy::Evaluation::Evaluator
     """
     def __init__(self, filename: str) -> None:
         """! 
