@@ -5,12 +5,14 @@
 # @file evaluate.py
 # @brief Evaluation of model integrity and score
 #
+from abc import abstractmethod
 import re
 import allogate as logging
 import statistics
 import os
 from copy import copy
 import glob
+import re
 
 class Evaluator:
     def __init__(self, filename: str) -> None:
@@ -32,6 +34,7 @@ class Evaluator:
         
         self.check_funcs = [func for func in dir(self) if (callable(getattr(self, func)) and func.startswith("check_"))]
 
+    @abstractmethod
     def _evaluate(self, file) -> list:
         if(not os.path.isfile(file)):
             logging.pprint(f"Given file {file} is not a valid filename")
@@ -47,6 +50,7 @@ class Evaluator:
     def fail(self, checkname):
         self.all_checks_passed = False
         self.checks.append((checkname, self.TEST_FAIL_SYMBOL))
+        self.checks = []
 
     def finalize(self):
         print("\n################ Checks ################ ")
@@ -77,7 +81,6 @@ class ModelEvaluator(Evaluator):
             self.rnodes = {}
             self.ews = []
             self.edge_count = len(edges)
-            self.checks = []
             for edge in edges:
                 if(edge ==b''):
                     self.edge_count-=1
@@ -199,6 +202,50 @@ class CorpusEvaluator(Evaluator):
             return False
 
     def evaluate(self):
-        valid = super().evaluate()
-        if not valid:
+        logging.pprint("WARNING: This takes a while with larger corpus files", 2)
+        logging.VERBOSITY=2
+        logging.SHOW_STACK_THRESHOLD=3
+        super().evaluate()
+        for file in self.files:
+
+            delimiter = ''
+            sum=0
+            max=0
+            total_chars = 0
+            lines_count = 0
+            bDelimiterConflict=False
+            logging.pprint(f"Corpus: {file.split('/')[-1]}: ",2)
+            with open(file, "rb") as corpus:
+                for line in corpus:
+                    lines_count+=1
+                    match = re.match(r"([0-9]+)(.)(.*)\n", line.decode()).groups()
+                    if(delimiter and delimiter!=match[1]):
+                        bDelimiterConflict = True
+                        
+                    elif(not delimiter):
+                        delimiter = match[1]
+                        logging.pprint(f"Delimiter is: {delimiter.encode()}")
+                    sum +=int(match[0])
+                    total_chars += len(match[2])
+                    if(int(match[0])>max):
+                        max=int(match[0])
+
+                if(bDelimiterConflict):
+                    self.fail("Incorrect delimiter found")
+                else:
+                    self.success("No structural conflicts")
+
+                logging.pprint(f"Total number of lines: {lines_count}")
+                logging.pprint(f"Sum of all string weights: {sum}")
+                logging.pprint(f"Character total: {total_chars}")
+                logging.pprint(f"Average length: {total_chars/lines_count}")
+                logging.pprint(f"Average weight: {sum/lines_count}")
+
+            self.finalize()
+    def _evaluate(self, file) -> list:
+        if(not os.path.isfile(file)):
+            logging.pprint(f"Given file {file} is not a valid filename")
             return False
+        else:
+            return True
+            
