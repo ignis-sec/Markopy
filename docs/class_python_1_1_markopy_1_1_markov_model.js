@@ -17,7 +17,7 @@ var class_python_1_1_markopy_1_1_markov_model =
     [ "OptimizeEdgeOrder", "class_python_1_1_markopy_1_1_markov_model.html#adf22db37833ae6a4c707b446bef4359d", null ],
     [ "RandomWalk", "class_python_1_1_markopy_1_1_markov_model.html#aa4a11c6679c998936332f8409ae95375", null ],
     [ "Save", "class_python_1_1_markopy_1_1_markov_model.html#a4f4997da3a6cd3bd2717ce9759736660", null ],
-    [ "StarterNode", "class_python_1_1_markopy_1_1_markov_model.html#a0e53104e4ec665f005529f51a80c857d", null ],
+    [ "StarterNode", "class_python_1_1_markopy_1_1_markov_model.html#a35cb15a14d034f3365b9d2d3efa1ffc0", null ],
     [ "Train", "class_python_1_1_markopy_1_1_markov_model.html#a2fd4423ae3850e258dcb6b11a7feb9b2", null ],
     [ "Train", "class_python_1_1_markopy_1_1_markov_model.html#a503d9365e0b97e44beb99bfc6c2adeea", null ],
     [ "TrainThread", "class_python_1_1_markopy_1_1_markov_model.html#a5f51b0fdb75101b797f38b08da84848e", null ],

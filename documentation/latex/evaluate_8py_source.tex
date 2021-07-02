@@ -1,0 +1,305 @@
+\hypertarget{evaluate_8py_source}{}\doxysection{evaluate.\+py}
+\label{evaluate_8py_source}\index{Markopy/Markopy/src/CLI/evaluate.py@{Markopy/Markopy/src/CLI/evaluate.py}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00001}\mbox{\hyperlink{namespaceevaluate}{00001}} }
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00008 \textcolor{keyword}{from} abc \textcolor{keyword}{import} abstractmethod}
+\DoxyCodeLine{00009 \textcolor{keyword}{import} re}
+\DoxyCodeLine{00010 \textcolor{keyword}{import} allogate \textcolor{keyword}{as} logging}
+\DoxyCodeLine{00011 \textcolor{keyword}{import} statistics}
+\DoxyCodeLine{00012 \textcolor{keyword}{import} os}
+\DoxyCodeLine{00013 \textcolor{keyword}{from} copy \textcolor{keyword}{import} copy}
+\DoxyCodeLine{00014 \textcolor{keyword}{import} glob}
+\DoxyCodeLine{00015 \textcolor{keyword}{import} re}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00022}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator}{00022}} \textcolor{keyword}{class }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator}{Evaluator}}:}
+\DoxyCodeLine{00023     \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00024 \textcolor{stringliteral}{    @brief Abstract class to evaluate and score integrity/validty}}
+\DoxyCodeLine{00025 \textcolor{stringliteral}{    @belongsto Python::Markopy::Evaluation}}
+\DoxyCodeLine{00026 \textcolor{stringliteral}{    "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00027}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a871781e80aa7eac6894638997396060c}{00027}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a871781e80aa7eac6894638997396060c}{\_\_init\_\_}}(self, filename: str) -\/> \textcolor{keywordtype}{None}:}
+\DoxyCodeLine{00028         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00029 \textcolor{stringliteral}{        @brief default constructor for evaluator}}
+\DoxyCodeLine{00030 \textcolor{stringliteral}{        @param filename filename to evaluate. Can be a pattern}}
+\DoxyCodeLine{00031 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00032}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa1fcc567fb636c23817445e86f6f4792}{00032}}         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa1fcc567fb636c23817445e86f6f4792}{filename}}filename = filename}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00033}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a0a28d631971e7dbc0b7fb14b4308352c}{00033}}         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a0a28d631971e7dbc0b7fb14b4308352c}{checks}}checks = []}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00034}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a326f8d87fe31965a856eaad5eaa360d2}{00034}}         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a326f8d87fe31965a856eaad5eaa360d2}{TEST\_PASS\_SYMBOL}}TEST\_PASS\_SYMBOL = b\textcolor{stringliteral}{"{}\(\backslash\)xe2\(\backslash\)x9c\(\backslash\)x85"{}}.decode()}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00035}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a84089428eaf66879c4651a4dd2d176a3}{00035}}         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a84089428eaf66879c4651a4dd2d176a3}{TEST\_FAIL\_SYMBOL}}TEST\_FAIL\_SYMBOL = b\textcolor{stringliteral}{"{}\(\backslash\)xe2\(\backslash\)x9d\(\backslash\)x8c"{}}.decode()}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00036}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a6b59a5de4044af97f84a7964ccaa417e}{00036}}         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a6b59a5de4044af97f84a7964ccaa417e}{all\_checks\_passed}}all\_checks\_passed = \textcolor{keyword}{True}}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00037}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a2887af7b6d83d7cc7bc242c9df277c76}{00037}}         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a2887af7b6d83d7cc7bc242c9df277c76}{files}}files = []}
+\DoxyCodeLine{00038         if(\textcolor{stringliteral}{"{}*"{}} \textcolor{keywordflow}{in} filename):}
+\DoxyCodeLine{00039             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a2887af7b6d83d7cc7bc242c9df277c76}{files}}files = glob.glob(filename)}
+\DoxyCodeLine{00040         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00041             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a2887af7b6d83d7cc7bc242c9df277c76}{files}}files.append(filename)}
+\DoxyCodeLine{00042         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00044}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a46497ca96abd975e6c7642a9bc0d4d8e}{00044}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a46497ca96abd975e6c7642a9bc0d4d8e}{evaluate}}(self) -\/> bool:}
+\DoxyCodeLine{00045         \textcolor{stringliteral}{"{}! @brief base evaluation function"{}}}
+\DoxyCodeLine{00046         \textcolor{keywordflow}{for} file \textcolor{keywordflow}{in} self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a2887af7b6d83d7cc7bc242c9df277c76}{files}}files:}
+\DoxyCodeLine{00047             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa57707bfef91275599ca96b73bc311a8}{\_evaluate}}\_evaluate(file)}
+\DoxyCodeLine{00048         }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00049}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a298ea16a08dc0ed85decc9c61a3578fd}{00049}}         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a298ea16a08dc0ed85decc9c61a3578fd}{check\_funcs}}check\_funcs = [func \textcolor{keywordflow}{for} func \textcolor{keywordflow}{in} dir(self) \textcolor{keywordflow}{if} (callable(getattr(self, func)) \textcolor{keywordflow}{and} func.startswith(\textcolor{stringliteral}{"{}check\_"{}}))]}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051     \textcolor{preprocessor}{@abstractmethod}}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00052}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa57707bfef91275599ca96b73bc311a8}{00052}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa57707bfef91275599ca96b73bc311a8}{\_evaluate}}(self, file) -\/> list:}
+\DoxyCodeLine{00053         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00054 \textcolor{stringliteral}{        @brief internal evaluation function for a single file}}
+\DoxyCodeLine{00055 \textcolor{stringliteral}{        @param file filename to evaluate}}
+\DoxyCodeLine{00056 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00057         if(\textcolor{keywordflow}{not} os.path.isfile(file)):}
+\DoxyCodeLine{00058             logging.pprint(f\textcolor{stringliteral}{"{}Given file \{file\} is not a valid filename"{}})}
+\DoxyCodeLine{00059             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00060         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00061              \textcolor{keywordflow}{return} open(file, \textcolor{stringliteral}{"{}rb"{}}).read().split(b\textcolor{stringliteral}{"{}\(\backslash\)n"{}})}
+\DoxyCodeLine{00062         }
+\DoxyCodeLine{00063         }
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00065}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}{00065}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}{success}}(self, checkname):}
+\DoxyCodeLine{00066         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00067 \textcolor{stringliteral}{        @brief pass a test}}
+\DoxyCodeLine{00068 \textcolor{stringliteral}{        @param checkname text to display with the check}}
+\DoxyCodeLine{00069 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00070         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a0a28d631971e7dbc0b7fb14b4308352c}{checks}}checks.append((checkname, self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a326f8d87fe31965a856eaad5eaa360d2}{TEST\_PASS\_SYMBOL}}TEST\_PASS\_SYMBOL))}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00072}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{00072}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{fail}}(self, checkname):}
+\DoxyCodeLine{00073         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00074 \textcolor{stringliteral}{        @brief fail a test}}
+\DoxyCodeLine{00075 \textcolor{stringliteral}{        @param checkname text to display with the check}}
+\DoxyCodeLine{00076 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a6b59a5de4044af97f84a7964ccaa417e}{all\_checks\_passed}}all\_checks\_passed = \textcolor{keyword}{False}}
+\DoxyCodeLine{00079         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a0a28d631971e7dbc0b7fb14b4308352c}{checks}}checks.append((checkname, self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a84089428eaf66879c4651a4dd2d176a3}{TEST\_FAIL\_SYMBOL}}TEST\_FAIL\_SYMBOL))}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00081}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a52996cbe300222dda1d22cc022485181}{00081}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a52996cbe300222dda1d22cc022485181}{finalize}}(self):}
+\DoxyCodeLine{00082         \textcolor{stringliteral}{"{}! @brief finalize an evaluation and print checks"{}}}
+\DoxyCodeLine{00083         print(\textcolor{stringliteral}{"{}\(\backslash\)n\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Checks \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# "{}})}
+\DoxyCodeLine{00084         \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a0a28d631971e7dbc0b7fb14b4308352c}{checks}}checks:}
+\DoxyCodeLine{00085             logging.pprint(f\textcolor{stringliteral}{"{}\{test[0]:30\}:\{test[1]\} "{}})}
+\DoxyCodeLine{00086         print(\textcolor{stringliteral}{"{}\(\backslash\)n"{}})}
+\DoxyCodeLine{00087         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a0a28d631971e7dbc0b7fb14b4308352c}{checks}}checks = []}
+\DoxyCodeLine{00088         \textcolor{keywordflow}{return} self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a6b59a5de4044af97f84a7964ccaa417e}{all\_checks\_passed}}all\_checks\_passed}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00090}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator}{00090}} \textcolor{keyword}{class }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator}{ModelEvaluator}}(\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator}{Evaluator}}):}
+\DoxyCodeLine{00091     \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00092 \textcolor{stringliteral}{    @brief evaluate a model}}
+\DoxyCodeLine{00093 \textcolor{stringliteral}{    @belongsto Python::Markopy::Evaluation}}
+\DoxyCodeLine{00094 \textcolor{stringliteral}{    @extends Python::Markopy::Evaluation::Evaluator}}
+\DoxyCodeLine{00095 \textcolor{stringliteral}{    "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00096}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aae6accb0db253058a04721d3c180e8c3}{00096}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aae6accb0db253058a04721d3c180e8c3}{\_\_init\_\_}}(self, filename: str) -\/> \textcolor{keywordtype}{None}:}
+\DoxyCodeLine{00097         \textcolor{stringliteral}{"{}! @brief default constructor"{}}}
+\DoxyCodeLine{00098         valid = super().\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aae6accb0db253058a04721d3c180e8c3}{\_\_init\_\_}}(filename)}
+\DoxyCodeLine{00099         }
+\DoxyCodeLine{00100         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} valid:}
+\DoxyCodeLine{00101             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00103}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_ac80c86bf9e698c571aacb30027fc664f}{00103}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_ac80c86bf9e698c571aacb30027fc664f}{evaluate}}(self):}
+\DoxyCodeLine{00104         \textcolor{stringliteral}{"{}! @brief evaluate a model"{}}}
+\DoxyCodeLine{00105         logging.VERBOSITY=2}
+\DoxyCodeLine{00106         logging.SHOW\_STACK\_THRESHOLD=3}
+\DoxyCodeLine{00107         super().\mbox{\hyperlink{namespaceevaluate}{evaluate}}()}
+\DoxyCodeLine{00108         \textcolor{keywordflow}{for} file \textcolor{keywordflow}{in} self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a2887af7b6d83d7cc7bc242c9df277c76}{files}}files:}
+\DoxyCodeLine{00109             logging.pprint(f\textcolor{stringliteral}{"{}Model: \{file.split('/')[-\/1]\}: "{}},2)}
+\DoxyCodeLine{00110             edges = super().\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa57707bfef91275599ca96b73bc311a8}{\_evaluate}}(file)}
+\DoxyCodeLine{00111             \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} edges:}
+\DoxyCodeLine{00112                 \textcolor{keywordflow}{continue}}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00113}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_afd2de30aa7499bfe32a294b3f13c7e65}{00113}}             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_afd2de30aa7499bfe32a294b3f13c7e65}{lnodes}}lnodes = \{\}}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00114}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a131b731c31162eee5ad48cfccb5ada11}{00114}}             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a131b731c31162eee5ad48cfccb5ada11}{rnodes}}rnodes = \{\}}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00115}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{00115}}             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews = []}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00116}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aeaaa252df619b06ab096a2e7bd3b501a}{00116}}             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aeaaa252df619b06ab096a2e7bd3b501a}{edge\_count}}edge\_count = len(edges)}
+\DoxyCodeLine{00117             \textcolor{keywordflow}{for} edge \textcolor{keywordflow}{in} edges:}
+\DoxyCodeLine{00118                 if(edge ==b\textcolor{stringliteral}{''}):}
+\DoxyCodeLine{00119                     self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aeaaa252df619b06ab096a2e7bd3b501a}{edge\_count}}edge\_count-\/=1}
+\DoxyCodeLine{00120                     \textcolor{keywordflow}{continue}}
+\DoxyCodeLine{00121                 \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{00122                     e = edge.split(b\textcolor{stringliteral}{','})}
+\DoxyCodeLine{00123                     self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews.append(int(edge[2:-\/2:1]))}
+\DoxyCodeLine{00124                     if(e[0] \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_afd2de30aa7499bfe32a294b3f13c7e65}{lnodes}}lnodes):}
+\DoxyCodeLine{00125                         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_afd2de30aa7499bfe32a294b3f13c7e65}{lnodes}}lnodes[e[0]]=1}
+\DoxyCodeLine{00126                     \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00127                         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_afd2de30aa7499bfe32a294b3f13c7e65}{lnodes}}lnodes[e[0]]+=1}
+\DoxyCodeLine{00128                     if(e[-\/1] \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a131b731c31162eee5ad48cfccb5ada11}{rnodes}}rnodes):}
+\DoxyCodeLine{00129                         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a131b731c31162eee5ad48cfccb5ada11}{rnodes}}rnodes[e[-\/1]]=1}
+\DoxyCodeLine{00130                     \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00131                         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a131b731c31162eee5ad48cfccb5ada11}{rnodes}}rnodes[e[-\/1]]+=1}
+\DoxyCodeLine{00132                 \textcolor{keywordflow}{except} Exception \textcolor{keyword}{as} e:}
+\DoxyCodeLine{00133                     print(e)}
+\DoxyCodeLine{00134                     logging.pprint(f\textcolor{stringliteral}{"{}Model file is corrupted."{}}, 0)}
+\DoxyCodeLine{00135                     \textcolor{keywordflow}{continue}}
+\DoxyCodeLine{00136         }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00137}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a03ab237dc5b94401d17e663ac120ebad}{00137}}             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a03ab237dc5b94401d17e663ac120ebad}{lnode\_count}}lnode\_count = len(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_afd2de30aa7499bfe32a294b3f13c7e65}{lnodes}}lnodes)}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00138}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a1f79a73d6bf9803e6ec34aa4ce7563bb}{00138}}             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a1f79a73d6bf9803e6ec34aa4ce7563bb}{rnode\_count}}rnode\_count = len(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a131b731c31162eee5ad48cfccb5ada11}{rnodes}}rnodes)}
+\DoxyCodeLine{00139             logging.pprint(f\textcolor{stringliteral}{"{}total edges: \{self.edge\_count\}"{}}, 1)}
+\DoxyCodeLine{00140             logging.pprint(f\textcolor{stringliteral}{"{}unique left nodes: \{self.lnode\_count\}"{}}, 1)}
+\DoxyCodeLine{00141             logging.pprint(f\textcolor{stringliteral}{"{}unique right nodes: \{self.rnode\_count\}"{}}, 1)}
+\DoxyCodeLine{00142 }
+\DoxyCodeLine{00143             \textcolor{keywordflow}{for} check \textcolor{keywordflow}{in} self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a298ea16a08dc0ed85decc9c61a3578fd}{check\_funcs}}check\_funcs:}
+\DoxyCodeLine{00144                 \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{00145                     self.\_\_getattribute\_\_(check)()}
+\DoxyCodeLine{00146                 \textcolor{keywordflow}{except} Exception \textcolor{keyword}{as} e:}
+\DoxyCodeLine{00147                     print(e)}
+\DoxyCodeLine{00148                     self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{fail}}fail(f\textcolor{stringliteral}{"{}Exceptionn in \{check\}"{}})}
+\DoxyCodeLine{00149             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a52996cbe300222dda1d22cc022485181}{finalize}}finalize()}
+\DoxyCodeLine{00150         }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00151}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_ad5895711fa6e3fc2f1c9eb4d8203576d}{00151}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_ad5895711fa6e3fc2f1c9eb4d8203576d}{check\_dangling}}(self):}
+\DoxyCodeLine{00152         \textcolor{stringliteral}{"{}! @brief check if model has dangling nodes"{}}}
+\DoxyCodeLine{00153         if(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a03ab237dc5b94401d17e663ac120ebad}{lnode\_count}}lnode\_count == self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a1f79a73d6bf9803e6ec34aa4ce7563bb}{rnode\_count}}rnode\_count):}
+\DoxyCodeLine{00154             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}{success}}success(\textcolor{stringliteral}{"{}No dangling nodes"{}})}
+\DoxyCodeLine{00155         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00156             logging.pprint(f\textcolor{stringliteral}{"{}Dangling nodes found, lnodes and rnodes do not match"{}}, 0)}
+\DoxyCodeLine{00157             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{fail}}fail(\textcolor{stringliteral}{"{}No dangling nodes"{}})}
+\DoxyCodeLine{00158     }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00159}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a64514b3c5f6b6b3cf5a00eede1fbebaf}{00159}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a64514b3c5f6b6b3cf5a00eede1fbebaf}{check\_structure}}(self):}
+\DoxyCodeLine{00160         \textcolor{stringliteral}{"{}! @brief check model structure for validity"{}}}
+\DoxyCodeLine{00161         if((self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a03ab237dc5b94401d17e663ac120ebad}{lnode\_count}}lnode\_count-\/1) * (self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a1f79a73d6bf9803e6ec34aa4ce7563bb}{rnode\_count}}rnode\_count-\/1) + 2*(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a03ab237dc5b94401d17e663ac120ebad}{lnode\_count}}lnode\_count-\/1)):  }
+\DoxyCodeLine{00162             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}{success}}success(\textcolor{stringliteral}{"{}Model structure"{}})}
+\DoxyCodeLine{00163         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00164             logging.pprint(f\textcolor{stringliteral}{"{}Model did not satisfy structural integrity check (lnode\_count-\/1) * (rnode\_count-\/1) + 2*(lnode\_count-\/1)"{}}, 0)}
+\DoxyCodeLine{00165             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{fail}}fail(\textcolor{stringliteral}{"{}Model structure"{}})}
+\DoxyCodeLine{00166 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00167}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a7d52a2c8b91fca13e9b5905662fcd43f}{00167}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a7d52a2c8b91fca13e9b5905662fcd43f}{check\_weight\_deviation}}(self):}
+\DoxyCodeLine{00168         \textcolor{stringliteral}{"{}! @brief check model standart deviation between edge weights"{}}}
+\DoxyCodeLine{00169         mean = sum(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews) / len(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews)}
+\DoxyCodeLine{00170         variance = sum([((x -\/ mean) ** 2) \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews]) / len(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews)}
+\DoxyCodeLine{00171         res = variance ** 0.5}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00172}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_abb8799d6106b09b4dcfd87c6e0d48ae7}{00172}}         self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_abb8799d6106b09b4dcfd87c6e0d48ae7}{stdev}}stdev = res}
+\DoxyCodeLine{00173         if(res==0):}
+\DoxyCodeLine{00174             logging.pprint(f\textcolor{stringliteral}{"{}Model seems to be untrained"{}}, 0)}
+\DoxyCodeLine{00175             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{fail}}fail(\textcolor{stringliteral}{"{}Model has any training"{}})}
+\DoxyCodeLine{00176         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00177             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}{success}}success(\textcolor{stringliteral}{"{}Model has any training"{}})}
+\DoxyCodeLine{00178         if(res<3000):}
+\DoxyCodeLine{00179             logging.pprint(f\textcolor{stringliteral}{"{}Model is not adequately trained. Might result in inadequate results"{}}, 1)}
+\DoxyCodeLine{00180             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{fail}}fail(\textcolor{stringliteral}{"{}Model has training"{}})}
+\DoxyCodeLine{00181             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{fail}}fail(f\textcolor{stringliteral}{"{}Model training score: \{round(self.stdev,2)\}"{}})}
+\DoxyCodeLine{00182         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00183             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}{success}}success(\textcolor{stringliteral}{"{}Model has training"{}})}
+\DoxyCodeLine{00184             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}{success}}success(f\textcolor{stringliteral}{"{}Model training score: \{round(self.stdev)\}"{}})}
+\DoxyCodeLine{00185 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00186}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a0491f56938e5c333d1a68f56d68485a4}{00186}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a0491f56938e5c333d1a68f56d68485a4}{check\_min}}(self):}
+\DoxyCodeLine{00187         \textcolor{stringliteral}{"{}! @brief check 0 edge weights distribution"{}}}
+\DoxyCodeLine{00188         count = 0}
+\DoxyCodeLine{00189         \textcolor{keywordflow}{for} ew \textcolor{keywordflow}{in} self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews:}
+\DoxyCodeLine{00190             \textcolor{keywordflow}{if} ew==0:}
+\DoxyCodeLine{00191                 count+=1}
+\DoxyCodeLine{00192         if(count > self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a1f79a73d6bf9803e6ec34aa4ce7563bb}{rnode\_count}}rnode\_count*0.8):}
+\DoxyCodeLine{00193             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{fail}}fail(\textcolor{stringliteral}{"{}Too many 0 edges"{}})}
+\DoxyCodeLine{00194             logging.pprint(f\textcolor{stringliteral}{"{}0 weighted edges are dangerous and may halt the model."{}}, 0)}
+\DoxyCodeLine{00195         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00196             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}{success}}success(\textcolor{stringliteral}{"{}0 edges below threshold"{}})}
+\DoxyCodeLine{00197     }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00198}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aa550024132134947a206c962f3cc6d25}{00198}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aa550024132134947a206c962f3cc6d25}{check\_min\_10percent}}(self):}
+\DoxyCodeLine{00199         \textcolor{stringliteral}{"{}! @brief check minimum 10\% of the edges"{}}}
+\DoxyCodeLine{00200         sample = self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews[int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aeaaa252df619b06ab096a2e7bd3b501a}{edge\_count}}edge\_count*0.1)]}
+\DoxyCodeLine{00201         \textcolor{comment}{\#print(f"{}10per: \{sample\}"{})}}
+\DoxyCodeLine{00202         avg = sum(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews) / len(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews)}
+\DoxyCodeLine{00203         \textcolor{comment}{\#print(f"{}avg: \{avg\}"{})}}
+\DoxyCodeLine{00204         med = statistics.median(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews)}
+\DoxyCodeLine{00205         \textcolor{comment}{\#print(f"{}med: \{med\}"{})}}
+\DoxyCodeLine{00206 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00207}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_adb894dc005e6e56b208c93746d7a8c34}{00207}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_adb894dc005e6e56b208c93746d7a8c34}{check\_lean}}(self):}
+\DoxyCodeLine{00208         \textcolor{stringliteral}{"{}! @brief check which way model is leaning. Left, or right"{}}}
+\DoxyCodeLine{00209         sample = self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews[int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aeaaa252df619b06ab096a2e7bd3b501a}{edge\_count}}edge\_count*0.1)]}
+\DoxyCodeLine{00210         avg = sum(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews) / len(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews)}
+\DoxyCodeLine{00211         med = statistics.median(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews)}
+\DoxyCodeLine{00212         }
+\DoxyCodeLine{00213         if(med*10<sample):}
+\DoxyCodeLine{00214             logging.pprint(\textcolor{stringliteral}{"{}Median is too left leaning and might indicate high entropy"{}})}
+\DoxyCodeLine{00215             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{fail}}fail(\textcolor{stringliteral}{"{}Median too left leaning"{}})}
+\DoxyCodeLine{00216         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00217             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}{success}}success(\textcolor{stringliteral}{"{}Median in expected ratio"{}})}
+\DoxyCodeLine{00218         \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{00220         if(sample*5>avg):}
+\DoxyCodeLine{00221             logging.pprint(\textcolor{stringliteral}{"{}Least probable 10\% too close to average, might indicate inadequate training"{}})}
+\DoxyCodeLine{00222             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{fail}}fail(\textcolor{stringliteral}{"{}Bad bottom 10\%"{}})}
+\DoxyCodeLine{00223         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00224             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}{success}}success(\textcolor{stringliteral}{"{}Good bottom 10\%"{}})}
+\DoxyCodeLine{00225         \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{00226         }
+\DoxyCodeLine{00227 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00228}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a947aa11cdadd0c0408aa65f76191a4fd}{00228}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a947aa11cdadd0c0408aa65f76191a4fd}{check\_distrib}}(self):}
+\DoxyCodeLine{00229         \textcolor{stringliteral}{"{}! @deprecated"{}}}
+\DoxyCodeLine{00230         sorted\_ews = copy(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_a4a0337458625e2dc55286f5ad9979e91}{ews}}ews)}
+\DoxyCodeLine{00231         sorted\_ews.sort(reverse=\textcolor{keyword}{True})}
+\DoxyCodeLine{00232         ratio1 = sorted\_ews[0]/sorted\_ews[int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aeaaa252df619b06ab096a2e7bd3b501a}{edge\_count}}edge\_count/2)]}
+\DoxyCodeLine{00233         ratio2 = sorted\_ews[int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aeaaa252df619b06ab096a2e7bd3b501a}{edge\_count}}edge\_count/2)]/sorted\_ews[int(self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aeaaa252df619b06ab096a2e7bd3b501a}{edge\_count}}edge\_count*0.1)]}
+\DoxyCodeLine{00234         \textcolor{comment}{\#print(ratio1)}}
+\DoxyCodeLine{00235         \textcolor{comment}{\#print(ratio2)}}
+\DoxyCodeLine{00236 }
+\DoxyCodeLine{00237 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00238}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator}{00238}} \textcolor{keyword}{class }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator}{CorpusEvaluator}}(\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator}{Evaluator}}):}
+\DoxyCodeLine{00239     \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00240 \textcolor{stringliteral}{    @brief evaluate a corpus}}
+\DoxyCodeLine{00241 \textcolor{stringliteral}{    @belongsto Python::Markopy::Evaluation}}
+\DoxyCodeLine{00242 \textcolor{stringliteral}{    @extends Python::Markopy::Evaluation::Evaluator}}
+\DoxyCodeLine{00243 \textcolor{stringliteral}{    "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00244}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator_a03951a01c43d2f39eb7b6b3dbc8ab84c}{00244}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator_a03951a01c43d2f39eb7b6b3dbc8ab84c}{\_\_init\_\_}}(self, filename: str) -\/> \textcolor{keywordtype}{None}:}
+\DoxyCodeLine{00245         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00246 \textcolor{stringliteral}{        @brief default constructor}}
+\DoxyCodeLine{00247 \textcolor{stringliteral}{        @param filename filename or pattern to check}}
+\DoxyCodeLine{00248 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00249         valid = super().\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator_a03951a01c43d2f39eb7b6b3dbc8ab84c}{\_\_init\_\_}}(filename)}
+\DoxyCodeLine{00250         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} valid:}
+\DoxyCodeLine{00251             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00252 }
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00253}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator_a509189084e44b78353ac8662851e894c}{00253}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator_a509189084e44b78353ac8662851e894c}{evaluate}}(self):}
+\DoxyCodeLine{00254         \textcolor{stringliteral}{"{}! @brief evalute a corpus. Might take a long time"{}}}
+\DoxyCodeLine{00255         logging.pprint(\textcolor{stringliteral}{"{}WARNING: This takes a while with larger corpus files"{}}, 2)}
+\DoxyCodeLine{00256         logging.VERBOSITY=2}
+\DoxyCodeLine{00257         logging.SHOW\_STACK\_THRESHOLD=3}
+\DoxyCodeLine{00258         super().\mbox{\hyperlink{namespaceevaluate}{evaluate}}()}
+\DoxyCodeLine{00259         \textcolor{keywordflow}{for} file \textcolor{keywordflow}{in} self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a2887af7b6d83d7cc7bc242c9df277c76}{files}}files:}
+\DoxyCodeLine{00260 }
+\DoxyCodeLine{00261             delimiter = \textcolor{stringliteral}{''}}
+\DoxyCodeLine{00262             sum=0}
+\DoxyCodeLine{00263             max=0}
+\DoxyCodeLine{00264             total\_chars = 0}
+\DoxyCodeLine{00265             lines\_count = 0}
+\DoxyCodeLine{00266             bDelimiterConflict=\textcolor{keyword}{False}}
+\DoxyCodeLine{00267             logging.pprint(f\textcolor{stringliteral}{"{}Corpus: \{file.split('/')[-\/1]\}: "{}},2)}
+\DoxyCodeLine{00268             \textcolor{keyword}{with} open(file, \textcolor{stringliteral}{"{}rb"{}}) \textcolor{keyword}{as} corpus:}
+\DoxyCodeLine{00269                 \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} corpus:}
+\DoxyCodeLine{00270                     lines\_count+=1}
+\DoxyCodeLine{00271                     match = re.match(\textcolor{stringliteral}{r"{}([0-\/9]+)(.)(.*)\(\backslash\)n"{}}, line.decode()).groups()}
+\DoxyCodeLine{00272                     if(delimiter \textcolor{keywordflow}{and} delimiter!=match[1]):}
+\DoxyCodeLine{00273                         bDelimiterConflict = \textcolor{keyword}{True}}
+\DoxyCodeLine{00274                         }
+\DoxyCodeLine{00275                     elif(\textcolor{keywordflow}{not} delimiter):}
+\DoxyCodeLine{00276                         delimiter = match[1]}
+\DoxyCodeLine{00277                         logging.pprint(f\textcolor{stringliteral}{"{}Delimiter is: \{delimiter.encode()\}"{}})}
+\DoxyCodeLine{00278                     sum +=int(match[0])}
+\DoxyCodeLine{00279                     total\_chars += len(match[2])}
+\DoxyCodeLine{00280                     if(int(match[0])>max):}
+\DoxyCodeLine{00281                         max=int(match[0])}
+\DoxyCodeLine{00282 }
+\DoxyCodeLine{00283                 if(bDelimiterConflict):}
+\DoxyCodeLine{00284                     self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{fail}}fail(\textcolor{stringliteral}{"{}Incorrect delimiter found"{}})}
+\DoxyCodeLine{00285                 \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00286                     self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}{success}}success(\textcolor{stringliteral}{"{}No structural conflicts"{}})}
+\DoxyCodeLine{00287 }
+\DoxyCodeLine{00288                 logging.pprint(f\textcolor{stringliteral}{"{}Total number of lines: \{lines\_count\}"{}})}
+\DoxyCodeLine{00289                 logging.pprint(f\textcolor{stringliteral}{"{}Sum of all string weights: \{sum\}"{}})}
+\DoxyCodeLine{00290                 logging.pprint(f\textcolor{stringliteral}{"{}Character total: \{total\_chars\}"{}})}
+\DoxyCodeLine{00291                 logging.pprint(f\textcolor{stringliteral}{"{}Average length: \{total\_chars/lines\_count\}"{}})}
+\DoxyCodeLine{00292                 logging.pprint(f\textcolor{stringliteral}{"{}Average weight: \{sum/lines\_count\}"{}})}
+\DoxyCodeLine{00293 }
+\DoxyCodeLine{00294             self.\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a52996cbe300222dda1d22cc022485181}{finalize}}finalize()}
+\DoxyCodeLine{\Hypertarget{evaluate_8py_source_l00295}\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator_afadf95a3683955a265fcd85c32369178}{00295}}     \textcolor{keyword}{def }\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator_afadf95a3683955a265fcd85c32369178}{\_evaluate}}(self, file) -\/> list:}
+\DoxyCodeLine{00296         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00297 \textcolor{stringliteral}{        @brief evaluate a single file. Remove reading file because it should be read line by line.}}
+\DoxyCodeLine{00298 \textcolor{stringliteral}{        @param file corpus filename to evaluate}}
+\DoxyCodeLine{00299 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00300         if(\textcolor{keywordflow}{not} os.path.isfile(file)):}
+\DoxyCodeLine{00301             logging.pprint(f\textcolor{stringliteral}{"{}Given file \{file\} is not a valid filename"{}})}
+\DoxyCodeLine{00302             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00303         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00304             \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00305             }
+
+\end{DoxyCode}

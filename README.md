@@ -41,6 +41,19 @@
         </ul>
       </li>
       <li>
+        <a href="#using">Using the Project</a>
+        <ul>
+          <li><a href="#using-markopy">Using Markopy/CudaMarkopy</a></li>
+            <ul>
+              <li><a href="#markopy-help">Help</a></li>
+              <li><a href="#markopy-eval">Evaluation</a></li>
+              <li><a href="#markopy-select">Model Selection</a></li>
+              <li><a href="#markopy-train">Training</a></li>
+              <li><a href="#markopy-generate">Generation</a></li>
+            </ul>
+          </li>
+        </ul>
+      <li>
         <a href="#building">Building</a>
         <ul>
           <li>
@@ -81,6 +94,12 @@
           </li>
         </ul>
       </li>
+      <li>
+        <a href="#file-structure">File Structure</a>
+        <ul>
+          <li><a href="#model-structure">Model</a></li>
+          <li><a href="#corpus-structure">Corpus</a></li>
+        </ul>
       <li><a href="#known-issues">Known Common Issues</a></li>
       <li><a href="#contributing">Contributing</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -150,24 +169,381 @@ Release files contain:
 
   
 ---
+
+## Using the Project
+<div id="using"></div>
+
+You may use any section of this project, but we highly recommend using Markopy/CudaMarkopy python modules becaue they are optimized for the better user experience.
+
+[![asciicast](https://asciinema.org/a/QeHkl7rZZnD8TiyZ4Gm1eZP6R.svg)](https://asciinema.org/a/QeHkl7rZZnD8TiyZ4Gm1eZP6R)
+
+### Using Markopy/CudaMarkopy
+<div id="using-markopy"></div>
+
+You can access basic operations from various model types using the python module, and if you are inexperienced with:
+- Libmarkov and Libcudamarkov internals
+- C++ code in general
+- Importing and extending libraries in general
+- Working with Python/C++ intermixed code
+
+We strongly recommend using the python module.
+
+While almost all of the python files provide their own entry point, you should use markopy.py or cudamarkopy.py depending on your preferences.
+Please note that CUDA code will not run without an NVIDIA graphics card, and without CUDA runtime.
+
+markopy.py and cudamarkopy.py will let you select the model type you want to use with the -mt parameter. With each model, there are slightly different parameters available.
+
+For top level CLI selector (markopy.py and cudamarkopy.py)
+```
+Model Mode selection choices:
+usage: cudamarkopy.py [-mt MODEL_TYPE] [-h] [-ev EVALUATE] [-evt EVALUATE_TYPE]
+
+Python wrapper for MarkovPasswords.
+
+optional arguments:
+  -mt MODEL_TYPE, --model_type MODEL_TYPE
+                        Model type to use. Accepted values: MP, MMX
+  -h, --help            Model type to use. Accepted values: MP, MMX
+  -ev EVALUATE, --evaluate EVALUATE
+                        Evaluate a models integrity
+  -evt EVALUATE_TYPE, --evaluate_type EVALUATE_TYPE
+                        Evaluation type, model or corpus
+
+        Sample runs:
+        markopy.py -mt MP generate trained.mdl -n 500 -w output.txt
+            Import trained.mdl, and generate 500 lines to output.txt
+
+        markopy.py -mt MMX generate trained.mdl -n 500 -w output.txt
+            Import trained.mdl, and generate 500 lines to output.txt
+        
+        cudamarkopy.py -mt CUDA generate trained.mdl -n 500 -w output.txt
+            Import trained.mdl, and generate 500 lines to output.txt
+
+```
+
+#### Help
+<div id="markopy-help"></div>
+
+You can use the `--help` function to print all the parameter details for all of the model types. Alternatively, you can combine it with `-mt` parameter to only print a single models parameters.
+
+
+#### Evaluation
+<div id="markopy-eval"></div>
+
+You can use the top level CLI selector to evaluate validity of a model or a corpus file (or many, if you provide a glob path pattern).
+A couple of examples:
+
+[![asciicast](https://asciinema.org/a/tyEfEPVVoeAY96G5gpn12Xy4U.svg)](https://asciinema.org/a/tyEfEPVVoeAY96G5gpn12Xy4U)
+
+**Evaluate all of the models in the repository.**
+```
+python3 cudamarkopy.py -ev "../../../models/**/*" -evt model
+```
+
+Example outputs:
+
+- A well trained model
+
+```
+[+] Model: trained.mdl: 
+[+] total edges: 9024
+[+] unique left nodes: 95
+[+] unique right nodes: 95
+
+################ Checks ################ 
+[+] No dangling nodes             :✅ 
+[+] Median in expected ratio      :✅ 
+[+] Good bottom 10%               :✅ 
+[+] 0 edges below threshold       :✅ 
+[+] Model structure               :✅ 
+[+] Model has any training        :✅ 
+[+] Model has training            :✅ 
+[+] Model training score: 3500088 :✅ 
+
+```
+- An untrained model:
+
+```
+[+] Model: 2gram.mdl: 
+[+] total edges: 9024
+[+] unique left nodes: 95
+[+] unique right nodes: 95
+division by zero
+[+] 0 weighted edges are dangerous and may halt the model.
+[+] Model seems to be untrained
+[+] Model is not adequately trained. Might result in inadequate results
+
+################ Checks ################ 
+[+] No dangling nodes             :✅ 
+[+] Exceptionn in check_distrib   :❌ 
+[+] Median in expected ratio      :✅ 
+[+] Good bottom 10%               :✅ 
+[+] Too many 0 edges              :❌ 
+[+] Model structure               :✅ 
+[+] Model has any training        :❌ 
+[+] Model has training            :❌ 
+[+] Model training score: 0.0     :❌ 
+```
+
+- A model with inadequate training due to small corpus file
+```
+[+] Model: corpus-Icelandic.mdl: 
+[+] total edges: 9024
+[+] unique left nodes: 95
+[+] unique right nodes: 95
+[+] Model is not adequately trained. Might result in inadequate results
+
+################ Checks ################ 
+[+] No dangling nodes             :✅ 
+[+] Median in expected ratio      :✅ 
+[+] Good bottom 10%               :✅ 
+[+] 0 edges below threshold       :✅ 
+[+] Model structure               :✅ 
+[+] Model has any training        :✅ 
+[+] Model has training            :❌ 
+[+] Model training score: 208.68  :❌ 
+```
+
+- A model with improper training due to alphabet conflicts (Mostly seen in languages with non-latin alphabets)
+
+```
+[+] Model: corpus-Japanese.mdl: 
+[+] total edges: 9024
+[+] unique left nodes: 95
+[+] unique right nodes: 95
+[+] Median is too left leaning and might indicate high entropy
+
+################ Checks ################ 
+[+] No dangling nodes             :✅ 
+[+] Median too left leaning       :❌ 
+[+] Good bottom 10%               :✅ 
+[+] 0 edges below threshold       :✅ 
+[+] Model structure               :✅ 
+[+] Model has any training        :✅ 
+[+] Model has training            :✅ 
+[+] Model training score: 10952   :✅ 
+```
+
+**Evaluate a corpus file.**
+```
+python3 cudamarkopy.py -ev "../../../datasets/pwdb.corpus"
+```
+
+```
+[+] Corpus: graduation.corpus: 
+[+] Delimiter is: b'\t'
+[+] Total number of lines: 157668136
+[+] Sum of all string weights: 700089109
+[+] Character total: 1498134485
+[+] Average length: 9.501821503109545
+[+] Average weight: 4.440270093635153
+
+################ Checks ################ 
+[+] No structural conflicts       :✅ 
+```
+
+
+
+#### Model selection
+<div id="markopy-select"></div>
+
+You may use the -mt parameter from markopy.py or cudamarkopy.py to select a model type.
+Allowed parameters are: MP, MMX, CUDA
+
+Following, is each of the parameters required for these model types.
+
+**Following are applicable for -mt MP mode:**
+
+```
+Python wrapper for MarkovPasswords.
+
+positional arguments:
+  mode                  Process mode. Either 'Train', 'Generate', or 'Combine'.
+  input                 Input model file. This model will be imported before starting operation.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -o OUTPUT, --output OUTPUT
+                        Output model file. This model will be exported when done. Will be ignored for generation mode.
+  -d DATASET, --dataset DATASET
+                        Dataset file to read input from for training. Will be ignored for generation mode.
+  -s SEPERATOR, --seperator SEPERATOR
+                        Seperator character to use with training data.(character between occurrence and value)
+  -t THREADS, --threads THREADS
+                        Number of lines to generate. Ignored in training mode.
+  -v, --verbosity       Output verbosity.
+  -b, --bulk            Bulk generate or bulk train every corpus/model in the folder.
+  -w WORDLIST, --wordlist WORDLIST
+                        Wordlist file path to export generation results to. Will be ignored for training mode
+  --min MIN             Minimum length that is allowed during generation
+  --max MAX             Maximum length that is allowed during generation
+  -n COUNT, --count COUNT
+                        Number of lines to generate. Ignored in training mode.
+
+Sample runs:
+        base.py train untrained.mdl -d dataset.dat -s "\t" -o trained.mdl
+            Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl
+
+        base.py generate trained.mdl -n 500 -w output.txt
+            Import trained.mdl, and generate 500 lines to output.txt
+
+        base.py combine untrained.mdl -d dataset.dat -s "\t" -n 500 -w output.txt
+            Train and immediately generate 500 lines to output.txt. Do not export trained model.
+
+        base.py combine untrained.mdl -d dataset.dat -s "\t" -n 500 -w output.txt -o trained.mdl
+            Train and immediately generate 500 lines to output.txt. Export trained model.
+
+usage: cudamarkopy.py [-h] [-o OUTPUT] [-d DATASET] [-s SEPERATOR] [-t THREADS] [-v] [-b] [-w WORDLIST]
+                      [--min MIN] [--max MAX] [-n COUNT]
+                      mode input
+```
+
+
+**Following are applicable for -mt MMX mode:**
+
+```
+usage: cudamarkopy.py [-h] [-t THREADS] [-v] [-b] [-w WORDLIST] [--min MIN] [--max MAX] [-n COUNT] [-st]
+                      mode input
+
+Python wrapper for MarkovPasswords.
+
+positional arguments:
+  mode                  Process mode. Either 'Train', 'Generate', or 'Combine'.
+  input                 Input model file. This model will be imported before starting operation.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -t THREADS, --threads THREADS
+                        Number of lines to generate. Ignored in training mode.
+  -v, --verbosity       Output verbosity.
+  -b, --bulk            Bulk generate or bulk train every corpus/model in the folder.
+  -w WORDLIST, --wordlist WORDLIST
+                        Wordlist file path to export generation results to. Will be ignored for training mode
+  --min MIN             Minimum length that is allowed during generation
+  --max MAX             Maximum length that is allowed during generation
+  -n COUNT, --count COUNT
+                        Number of lines to generate. Ignored in training mode.
+  -st, --stdout         Stdout mode
+
+Sample runs:
+        base.py train untrained.mdl -d dataset.dat -s "\t" -o trained.mdl
+            Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl
+
+        base.py generate trained.mdl -n 500 -w output.txt
+            Import trained.mdl, and generate 500 lines to output.txt
+
+        base.py combine untrained.mdl -d dataset.dat -s "\t" -n 500 -w output.txt
+            Train and immediately generate 500 lines to output.txt. Do not export trained model.
+
+        base.py combine untrained.mdl -d dataset.dat -s "\t" -n 500 -w output.txt -o trained.mdl
+            Train and immediately generate 500 lines to output.txt. Export trained model.
+
+```
+
+**Following are applicable for -mt CUDA mode:**
+
+```
+usage: cudamarkopy.py [-h] [-t THREADS] [-v] [-b] [-w WORDLIST] [--min MIN] [--max MAX] [-n COUNT] [-st] [-if]
+                      mode input
+
+Python wrapper for MarkovPasswords.
+
+positional arguments:
+  mode                  Process mode. Either 'Train', 'Generate', or 'Combine'.
+  input                 Input model file. This model will be imported before starting operation.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -t THREADS, --threads THREADS
+                        Number of lines to generate. Ignored in training mode.
+  -v, --verbosity       Output verbosity.
+  -b, --bulk            Bulk generate or bulk train every corpus/model in the folder.
+  -w WORDLIST, --wordlist WORDLIST
+                        Wordlist file path to export generation results to. Will be ignored for training mode
+  --min MIN             Minimum length that is allowed during generation
+  --max MAX             Maximum length that is allowed during generation
+  -n COUNT, --count COUNT
+                        Number of lines to generate. Ignored in training mode.
+  -st, --stdout         Stdout mode
+  -if, --infinite       Infinite generation mode
+
+Sample runs:
+        base.py train untrained.mdl -d dataset.dat -s "\t" -o trained.mdl
+            Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl
+
+        base.py generate trained.mdl -n 500 -w output.txt
+            Import trained.mdl, and generate 500 lines to output.txt
+
+        base.py combine untrained.mdl -d dataset.dat -s "\t" -n 500 -w output.txt
+            Train and immediately generate 500 lines to output.txt. Do not export trained model.
+
+        base.py combine untrained.mdl -d dataset.dat -s "\t" -n 500 -w output.txt -o trained.mdl
+            Train and immediately generate 500 lines to output.txt. Export trained model.
+```
+
+#### Training
+<div id="markopy-train"></div>
+
+If you do not have a custom corpus to train with, you may use one of the pre-trained models from the github releases.
+
+```
+python3 cudamarkopy.py train ../../../models/base-models/2gram.mdl -d ../../../datasets/graduation.corpus -s "\\t" -o test.mdl -vvvvvvvvv
+```
+
+#### Generation
+<div id="markopy-generate"></div>
+
+If you have not trained a model, you may download on of the trained models (preferably models/trained/trained.mdl) from the releases and use it for generation.
+
+**Generating to a file**
+```
+python3 cudamarkopy.py generate trained.mdl -mt MMX -n 5000 --min 6 --max 12 -w test.txt -vvvv
+```
+
+**Generating to stdout**
+```
+python3 cudamarkopy.py generate trained.mdl -mt MMX -n 5000 --min 6 --max 12 --stdout
+```
+
+**Generating with CUDA model**
+**WARNING** Do not use CUDA model unless you want to generate 500M+ lines. Prefer stdout mode with pipes instead of writing to disk whenever possible
+
+
+**Using with Hashcat**
+```
+python3 cudamarkopy.py generate trained.mdl -mt CUDA -n 5000 --min 6 --max 12 --stdout | hashcat -m 1400 hashes.txt -O
+```
+
+
+**Use with hashcat, continue until terminated**
+```
+python3 cudamarkopy.py generate trained.mdl -mt CUDA -n 5000 --min 6 --max 12 --stdout --infinite | hashcat -m 1400 hashes.txt -O
+```
+
+
+---
+
 ## Building
 <div id="building"></div>
 You can build the project using cmake with g++ & nvcc on linux, and msbuild & nvcc on windows.
 
-## Prerequisites
+### Prerequisites
 <div id="prequisites"></div>
 
 You can find a list of the dependencies below. If you have any missing, check out the <a href="#setting-up-deps">setting up prequisites</a> part.
 
-### General prequisites
+#### General prequisites
 <div id="general-prequisites"></div>
 
 To build the simple core of this project, you'll need:
-#### Linux
+##### Linux
+<div id="general-prequisites-linux"></div>
+
 - CMake, preferably one of the latest versions.
 - CXX compiler, preferably g++ or clang++ (LLVM 3.9+).
 
-#### Windows
+##### Windows
+<div id="general-prequisites-win"></div>
 - CMake, preferably one of the latest versions.
 - CXX compiler, preferably msbuild(cl.exe) or clang++ (LLVM 3.9+). 
   Please note that mingw is not recommended as it is not officially supported by the nvcc.exe, and might not be linkable if you are building the CUDA components too.
@@ -188,7 +564,7 @@ This project does not have any extra dependencies, and it can be compiled with g
 - Boost.program_options (tested on 1.71.0-1.76.0)
 
 ### Markopy
-<div id="preq-mac"></div>
+<div id="preq-mpy"></div>
 
 - Boost.Python (tested on 1.71.0-1.76.0)
 - Python development package (tested on python 36-39)
@@ -335,6 +711,48 @@ Combine methods
   ```
 
 ---
+
+
+## File Structure
+<div id="file-structure"></div>
+
+You may chose to create your own model structures or corpus files. Following, is the reference for the current structure for them.
+
+### Model
+<div id="model-structure"></div>
+
+Model files are basically a list of edges in the model
+
+Format is `{left_node_content},weight,{right_node_content}\n`
+
+Example:
+
+```
+l,5,r
+l,12,g
+...
+```
+
+There are additional requirements for a model for entry and termination nodes.
+Entry nodes are represented with 0x00, and termination nodes are represented with 0xff
+
+It is expected (but not mandatory) to have an edge from starting node to all of the other nodes, and same applies for edges from each nodes to the termination nodes.
+
+If termination node has any edges that it is position on the left (meaning model file expectation is to traverse to another node after termination node) it will be loaded to the edges, but will be ignored during the random walk logic.
+
+### Corpus
+<div id="corpus-structure"></div>
+
+Corpus files are used to train models. You may chose to train your own model (preferably over an existing base model, like 2gram.mdl) to have your own generation style.
+
+Corpus file format is:
+
+`{occurrence}{seperator}{string}\n`
+
+- Occurrence is the weight associated with that string. 
+- Seperator is a single character seperator used to seperate occurrence with the string
+- String is the password/string/sequence you want to add to the model.
+
 
 
 ## Known Common issues

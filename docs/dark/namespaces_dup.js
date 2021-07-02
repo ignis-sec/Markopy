@@ -1,12 +1,12 @@
 var namespaces_dup =
 [
-    [ "Overview", "md__markopy__n_v_sight_report.html#autotoc_md43", null ],
-    [ "Session", "md__markopy__n_v_sight_report.html#autotoc_md44", null ],
-    [ "PTX", "md__markopy__n_v_sight_report.html#autotoc_md45", null ],
+    [ "Overview", "md__markopy__n_v_sight_report.html#autotoc_md54", null ],
+    [ "Session", "md__markopy__n_v_sight_report.html#autotoc_md55", null ],
+    [ "PTX", "md__markopy__n_v_sight_report.html#autotoc_md56", null ],
     [ "base", "namespacebase.html", null ],
     [ "cudamarkopy", "namespacecudamarkopy.html", [
-      [ "Windows", "index.html#autotoc_md28", null ],
-      [ "Linux", "index.html#autotoc_md29", null ],
+      [ "Windows", "index.html#autotoc_md36", null ],
+      [ "Linux", "index.html#autotoc_md37", null ],
       [ "markopy", "namespacecudamarkopy.html#a7a87c11435bfa8306dd873cf62933c5f", null ],
       [ "mp", "namespacecudamarkopy.html#a5d14b257d212c9335b108ffa568983fb", null ],
       [ "spec", "namespacecudamarkopy.html#aae68ce185d78d0c6ad1ad957aba12c31", null ]
@@ -18,14 +18,14 @@ var namespaces_dup =
       [ "mp", "namespacecudammx.html#a5485319c85ea33f4eec2ace6e9ef8c4f", null ],
       [ "spec", "namespacecudammx.html#ad4db43360afc4b86137aa570e69b7fe4", null ]
     ] ],
+    [ "evaluate", "namespaceevaluate.html", null ],
     [ "importer", "namespaceimporter.html", [
       [ "import_markopy", "namespaceimporter.html#a94ba10dfc732b45384713b2908257fb8", null ]
     ] ],
     [ "markopy", "namespacemarkopy.html", [
       [ "ext", "namespacemarkopy.html#a2dfb37b0e0f42f5dd4545a54892ea9c9", null ],
       [ "markopy", "namespacemarkopy.html#a75a951b1fac43ad19ac4fd89ed0026a9", null ],
-      [ "mp", "namespacemarkopy.html#a2626224ad1569dd3ce7c37599cb1e6fe", null ],
-      [ "spec", "namespacemarkopy.html#ace4852aaa5eb79f25ec7693ddb574d9a", null ]
+      [ "mp", "namespacemarkopy.html#a2626224ad1569dd3ce7c37599cb1e6fe", null ]
     ] ],
     [ "Markov", "namespace_markov.html", "namespace_markov" ],
     [ "mm", "namespacemm.html", [
@@ -45,7 +45,17 @@ var namespaces_dup =
     ] ],
     [ "Python", null, [
       [ "CudaMarkopy", "namespace_python_1_1_cuda_markopy.html", "namespace_python_1_1_cuda_markopy" ],
-      [ "Markopy", "namespace_python_1_1_markopy.html", "namespace_python_1_1_markopy" ]
+      [ "Markopy", null, [
+        [ "Evaluation", "namespace_python_1_1_markopy_1_1_evaluation.html", "namespace_python_1_1_markopy_1_1_evaluation" ],
+        [ "BaseCLI", "class_python_1_1_markopy_1_1_base_c_l_i.html", "class_python_1_1_markopy_1_1_base_c_l_i" ],
+        [ "AbstractGenerationModelCLI", "class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i.html", "class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i" ],
+        [ "AbstractTrainingModelCLI", "class_python_1_1_markopy_1_1_abstract_training_model_c_l_i.html", "class_python_1_1_markopy_1_1_abstract_training_model_c_l_i" ],
+        [ "MarkopyCLI", "class_python_1_1_markopy_1_1_markopy_c_l_i.html", "class_python_1_1_markopy_1_1_markopy_c_l_i" ],
+        [ "MarkovModel", "class_python_1_1_markopy_1_1_markov_model.html", "class_python_1_1_markopy_1_1_markov_model" ],
+        [ "ModelMatrix", "class_python_1_1_markopy_1_1_model_matrix.html", "class_python_1_1_markopy_1_1_model_matrix" ],
+        [ "ModelMatrixCLI", "class_python_1_1_markopy_1_1_model_matrix_c_l_i.html", "class_python_1_1_markopy_1_1_model_matrix_c_l_i" ],
+        [ "MarkovPasswordsCLI", "class_python_1_1_markopy_1_1_markov_passwords_c_l_i.html", "class_python_1_1_markopy_1_1_markov_passwords_c_l_i" ]
+      ] ]
     ] ],
     [ "random_model", "namespacerandom__model.html", [
       [ "alphabet", "namespacerandom__model.html#acd7b50c756b5bd40c268042db4c8eed6", null ],

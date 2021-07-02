@@ -29,7 +29,7 @@
 \DoxyCodeLine{00031     \textcolor{keyword}{from} mp \textcolor{keyword}{import} MarkovPasswordsCLI}
 \DoxyCodeLine{00032 }
 \DoxyCodeLine{00033 \textcolor{keywordflow}{except} ModuleNotFoundError \textcolor{keyword}{as} e:}
-\DoxyCodeLine{00034     print(\textcolor{stringliteral}{"{}Working in development mode. Trying to load markopy.py from ../../../Markopy/"{}})}
+\DoxyCodeLine{00034     \textcolor{comment}{\#print("{}Working in development mode. Trying to load markopy.py from ../../../Markopy/"{})}}
 \DoxyCodeLine{00035     if(os.path.exists(\textcolor{stringliteral}{"{}../../../Markopy/src/CLI/cudammx.py"{}})):}
 \DoxyCodeLine{00036         sys.path.insert(1, \textcolor{stringliteral}{'../../../Markopy/src/CLI/'})}
 \DoxyCodeLine{00037         \textcolor{keyword}{from} cudammx \textcolor{keyword}{import} CudaModelMatrixCLI}
