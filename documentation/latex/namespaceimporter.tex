@@ -40,7 +40,7 @@ Definition at line \mbox{\hyperlink{importer_8py_source_l00012}{12}} of file \mb
 \DoxyCodeLine{00022         spec.loader.exec\_module(markopy)}
 \DoxyCodeLine{00023         \textcolor{keywordflow}{return} markopy}
 \DoxyCodeLine{00024     \textcolor{keywordflow}{except} ImportError \textcolor{keyword}{as} e:}
-\DoxyCodeLine{00025         print(f\textcolor{stringliteral}{"{}(\{\_\_file\_\_\}) Working in development mode. Trying to load markopy.\{ext\} from ../../../out/"{}})}
+\DoxyCodeLine{00025         \textcolor{comment}{\#print(f"{}(\{\_\_file\_\_\}) Working in development mode. Trying to load markopy.\{ext\} from ../../../out/"{})}}
 \DoxyCodeLine{00026         if(os.path.exists(f\textcolor{stringliteral}{"{}../../../out/lib/markopy.\{ext\}"{}})):}
 \DoxyCodeLine{00027             spec = spec\_from\_loader(\textcolor{stringliteral}{"{}markopy"{}}, ExtensionFileLoader(\textcolor{stringliteral}{"{}markopy"{}}, os.path.abspath(f\textcolor{stringliteral}{"{}../../../out/lib/markopy.\{ext\}"{}})))}
 \DoxyCodeLine{00028             markopy = module\_from\_spec(spec)}

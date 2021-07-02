@@ -1,0 +1,5 @@
+<map id="Python.Markopy.Evaluation.Evaluator" name="Python.Markopy.Evaluation.Evaluator">
+<area shape="rect" id="node1" title="Abstract class to evaluate and score integrity/validty." alt="" coords="126,5,402,333"/>
+<area shape="rect" id="node2" href="$class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator.html" title="evaluate a corpus" alt="" coords="5,511,248,683"/>
+<area shape="rect" id="node3" href="$class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator.html" title="evaluate a model" alt="" coords="273,381,533,813"/>
+</map>

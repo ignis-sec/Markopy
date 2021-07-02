@@ -160,7 +160,7 @@ LATEX_EXTRA_STYLESHEET = doxygen.sty
 # markers available.
 # This tag requires that the tag GENERATE_LATEX is set to YES.
 
-LATEX_EXTRA_FILES      =
+LATEX_EXTRA_FILES      = ../NVSight/*
 
 # If the PDF_HYPERLINKS tag is set to YES, the LaTeX that is generated is
 # prepared for conversion to PDF (using ps2pdf or pdflatex). The PDF file will
@@ -231,6 +231,11 @@ LATEX_TIMESTAMP        = YES
 
 LATEX_EMOJI_DIRECTORY  =
 
+# The INPUT tag is used to specify the files and/or directories that contain
+# documented source files. You may enter file names like myfile.cpp or
+# directories like /usr/src/myproject. Separate the files or directories with
+# spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
+# Note: If this tag is empty the current directory is searched.
 
 INPUT                  = ../MarkovModel/src/ \
                             ../MarkovAPI/src/ \
@@ -1104,24 +1109,6 @@ WARN_LOGFILE           =
 # Configuration options related to the input files
 #---------------------------------------------------------------------------
 
-# The INPUT tag is used to specify the files and/or directories that contain
-# documented source files. You may enter file names like myfile.cpp or
-# directories like /usr/src/myproject. Separate the files or directories with
-# spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
-# Note: If this tag is empty the current directory is searched.
-
-INPUT                  = ../MarkovModel/src/ \
-                            ../MarkovAPI/src/ \
-                            ../MarkovAPICLI/src/ \
-                            ../Markopy/src/ \
-                            ../CudaMarkovAPI/src/ \
-                            ../CudaMarkopy/src/ \
-                            ../MarkovPasswordsGUI/src/ \
-                            ../UnitTests/ \
-                            ../README.md \
-                            ../NVSight/report.md \
-                            dirs.docs
-
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
 # libiconv (or the iconv built into libc) for the transcoding. See the libiconv
@@ -1567,7 +1554,7 @@ HTML_COLORSTYLE_GAMMA  = 80
 # The default value is: NO.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_TIMESTAMP         = YES
+HTML_TIMESTAMP         = NO
 
 # If the HTML_DYNAMIC_MENUS tag is set to YES then the generated HTML
 # documentation will contain a main index with vertical navigation menus that

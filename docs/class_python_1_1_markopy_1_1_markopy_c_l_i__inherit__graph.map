@@ -1,6 +1,6 @@
 <map id="Python.Markopy.MarkopyCLI" name="Python.Markopy.MarkopyCLI">
-<area shape="rect" id="node1" title="Top level model selector for Markopy CLI." alt="" coords="181,2353,429,2612"/>
-<area shape="rect" id="node12" href="$class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html" title="CUDA extension to MarkopyCLI." alt="" coords="139,2660,470,2815"/>
+<area shape="rect" id="node1" title="Top level model selector for Markopy CLI." alt="" coords="172,2353,437,2664"/>
+<area shape="rect" id="node12" href="$class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html" title="CUDA extension to MarkopyCLI." alt="" coords="139,2712,470,2867"/>
 <area shape="rect" id="node2" href="$class_python_1_1_markopy_1_1_base_c_l_i.html" title="Base CLI class to handle user interactions" alt="" coords="5,537,279,1160"/>
 <area shape="rect" id="node4" href="$class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i.html" title="abstract class for generation capable models" alt="" coords="180,1494,491,1597"/>
 <area shape="rect" id="node10" href="$class_python_1_1_markopy_1_1_abstract_training_model_c_l_i.html" title="abstract class for training capable models" alt="" coords="163,1939,446,2042"/>

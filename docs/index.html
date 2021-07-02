@@ -105,6 +105,24 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </ul>
 </li>
 <li>
+<a href="#using">Using the Project</a> <ul>
+<li>
+<a href="#using-markopy">Using Markopy/CudaMarkopy</a> <ul>
+<li>
+<a href="#markopy-help">Help</a> </li>
+<li>
+<a href="#markopy-eval">Evaluation</a> </li>
+<li>
+<a href="#markopy-select">Model Selection</a> </li>
+<li>
+<a href="#markopy-train">Training</a> </li>
+<li>
+<a href="#markopy-generate">Generation</a> </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
 <a href="#building">Building</a> <ul>
 <li>
 <a href="#cmake-configuration">CMake configuration</a> <ul>
@@ -156,6 +174,14 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <a href="#installing-deps-lin">Linux</a> </li>
 </ul>
 </li>
+</ul>
+</li>
+<li>
+<a href="#file-structure">File Structure</a> <ul>
+<li>
+<a href="#model-structure">Model</a> </li>
+<li>
+<a href="#corpus-structure">Corpus</a> </li>
 </ul>
 </li>
 <li>
@@ -233,96 +259,359 @@ Releases</h2>
 </li>
 </ul>
 <hr  />
- <h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Using the Project</h1>
+<div id="using"></div><p>You may use any section of this project, but we highly recommend using Markopy/CudaMarkopy python modules becaue they are optimized for the better user experience.</p>
+<p><a href="https://asciinema.org/a/QeHkl7rZZnD8TiyZ4Gm1eZP6R"><img src="https://asciinema.org/a/QeHkl7rZZnD8TiyZ4Gm1eZP6R.svg" alt="asciicast" style="pointer-events: none;" class="inline"/></a></p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Using Markopy/CudaMarkopy</h2>
+<div id="using-markopy"></div><p>You can access basic operations from various model types using the python module, and if you are inexperienced with:</p><ul>
+<li>Libmarkov and Libcudamarkov internals</li>
+<li>C++ code in general</li>
+<li>Importing and extending libraries in general</li>
+<li>Working with Python/C++ intermixed code</li>
+</ul>
+<p>We strongly recommend using the python module.</p>
+<p>While almost all of the python files provide their own entry point, you should use <a class="el" href="markopy_8py.html" title="Entry point for markopy scripts.">markopy.py</a> or <a class="el" href="cudamarkopy_8py.html" title="base command line interface for python">cudamarkopy.py</a> depending on your preferences. Please note that CUDA code will not run without an NVIDIA graphics card, and without CUDA runtime.</p>
+<p><a class="el" href="markopy_8py.html" title="Entry point for markopy scripts.">markopy.py</a> and <a class="el" href="cudamarkopy_8py.html" title="base command line interface for python">cudamarkopy.py</a> will let you select the model type you want to use with the -mt parameter. With each model, there are slightly different parameters available.</p>
+<p>For top level CLI selector (<a class="el" href="markopy_8py.html" title="Entry point for markopy scripts.">markopy.py</a> and <a class="el" href="cudamarkopy_8py.html" title="base command line interface for python">cudamarkopy.py</a>) </p><div class="fragment"><div class="line">Model Mode selection choices:</div>
+<div class="line">usage: cudamarkopy.py [-mt MODEL_TYPE] [-h] [-ev EVALUATE] [-evt EVALUATE_TYPE]</div>
+<div class="line"> </div>
+<div class="line">Python wrapper for MarkovPasswords.</div>
+<div class="line"> </div>
+<div class="line">optional arguments:</div>
+<div class="line">  -mt MODEL_TYPE, --model_type MODEL_TYPE</div>
+<div class="line">                        Model type to use. Accepted values: MP, MMX</div>
+<div class="line">  -h, --help            Model type to use. Accepted values: MP, MMX</div>
+<div class="line">  -ev EVALUATE, --evaluate EVALUATE</div>
+<div class="line">                        Evaluate a models integrity</div>
+<div class="line">  -evt EVALUATE_TYPE, --evaluate_type EVALUATE_TYPE</div>
+<div class="line">                        Evaluation type, model or corpus</div>
+<div class="line"> </div>
+<div class="line">        Sample runs:</div>
+<div class="line">        markopy.py -mt MP generate trained.mdl -n 500 -w output.txt</div>
+<div class="line">            Import trained.mdl, and generate 500 lines to output.txt</div>
+<div class="line"> </div>
+<div class="line">        markopy.py -mt MMX generate trained.mdl -n 500 -w output.txt</div>
+<div class="line">            Import trained.mdl, and generate 500 lines to output.txt</div>
+<div class="line">        </div>
+<div class="line">        cudamarkopy.py -mt CUDA generate trained.mdl -n 500 -w output.txt</div>
+<div class="line">            Import trained.mdl, and generate 500 lines to output.txt</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md9"></a>
+Help</h3>
+<div id="markopy-help"></div><p>You can use the <code>--help</code> function to print all the parameter details for all of the model types. Alternatively, you can combine it with <code>-mt</code> parameter to only print a single models parameters.</p>
+<h3><a class="anchor" id="autotoc_md10"></a>
+Evaluation</h3>
+<div id="markopy-eval"></div><p>You can use the top level CLI selector to evaluate validity of a model or a corpus file (or many, if you provide a glob path pattern). A couple of examples:</p>
+<p><a href="https://asciinema.org/a/tyEfEPVVoeAY96G5gpn12Xy4U"><img src="https://asciinema.org/a/tyEfEPVVoeAY96G5gpn12Xy4U.svg" alt="asciicast" style="pointer-events: none;" class="inline"/></a></p>
+<p><b>Evaluate all of the models in the repository.</b> </p><div class="fragment"><div class="line">python3 cudamarkopy.py -ev &quot;../../../models/**/*&quot; -evt model</div>
+</div><!-- fragment --><p>Example outputs:</p>
+<ul>
+<li>A well trained model</li>
+</ul>
+<div class="fragment"><div class="line">[+] Model: trained.mdl: </div>
+<div class="line">[+] total edges: 9024</div>
+<div class="line">[+] unique left nodes: 95</div>
+<div class="line">[+] unique right nodes: 95</div>
+<div class="line"> </div>
+<div class="line">################ Checks ################ </div>
+<div class="line">[+] No dangling nodes             :✅ </div>
+<div class="line">[+] Median in expected ratio      :✅ </div>
+<div class="line">[+] Good bottom 10%               :✅ </div>
+<div class="line">[+] 0 edges below threshold       :✅ </div>
+<div class="line">[+] Model structure               :✅ </div>
+<div class="line">[+] Model has any training        :✅ </div>
+<div class="line">[+] Model has training            :✅ </div>
+<div class="line">[+] Model training score: 3500088 :✅ </div>
+</div><!-- fragment --><ul>
+<li>An untrained model:</li>
+</ul>
+<div class="fragment"><div class="line">[+] Model: 2gram.mdl: </div>
+<div class="line">[+] total edges: 9024</div>
+<div class="line">[+] unique left nodes: 95</div>
+<div class="line">[+] unique right nodes: 95</div>
+<div class="line">division by zero</div>
+<div class="line">[+] 0 weighted edges are dangerous and may halt the model.</div>
+<div class="line">[+] Model seems to be untrained</div>
+<div class="line">[+] Model is not adequately trained. Might result in inadequate results</div>
+<div class="line"> </div>
+<div class="line">################ Checks ################ </div>
+<div class="line">[+] No dangling nodes             :✅ </div>
+<div class="line">[+] Exceptionn in check_distrib   :❌ </div>
+<div class="line">[+] Median in expected ratio      :✅ </div>
+<div class="line">[+] Good bottom 10%               :✅ </div>
+<div class="line">[+] Too many 0 edges              :❌ </div>
+<div class="line">[+] Model structure               :✅ </div>
+<div class="line">[+] Model has any training        :❌ </div>
+<div class="line">[+] Model has training            :❌ </div>
+<div class="line">[+] Model training score: 0.0     :❌ </div>
+</div><!-- fragment --><ul>
+<li>A model with inadequate training due to small corpus file <div class="fragment"><div class="line">[+] Model: corpus-Icelandic.mdl: </div>
+<div class="line">[+] total edges: 9024</div>
+<div class="line">[+] unique left nodes: 95</div>
+<div class="line">[+] unique right nodes: 95</div>
+<div class="line">[+] Model is not adequately trained. Might result in inadequate results</div>
+<div class="line"> </div>
+<div class="line">################ Checks ################ </div>
+<div class="line">[+] No dangling nodes             :✅ </div>
+<div class="line">[+] Median in expected ratio      :✅ </div>
+<div class="line">[+] Good bottom 10%               :✅ </div>
+<div class="line">[+] 0 edges below threshold       :✅ </div>
+<div class="line">[+] Model structure               :✅ </div>
+<div class="line">[+] Model has any training        :✅ </div>
+<div class="line">[+] Model has training            :❌ </div>
+<div class="line">[+] Model training score: 208.68  :❌ </div>
+</div><!-- fragment --></li>
+<li>A model with improper training due to alphabet conflicts (Mostly seen in languages with non-latin alphabets)</li>
+</ul>
+<div class="fragment"><div class="line">[+] Model: corpus-Japanese.mdl: </div>
+<div class="line">[+] total edges: 9024</div>
+<div class="line">[+] unique left nodes: 95</div>
+<div class="line">[+] unique right nodes: 95</div>
+<div class="line">[+] Median is too left leaning and might indicate high entropy</div>
+<div class="line"> </div>
+<div class="line">################ Checks ################ </div>
+<div class="line">[+] No dangling nodes             :✅ </div>
+<div class="line">[+] Median too left leaning       :❌ </div>
+<div class="line">[+] Good bottom 10%               :✅ </div>
+<div class="line">[+] 0 edges below threshold       :✅ </div>
+<div class="line">[+] Model structure               :✅ </div>
+<div class="line">[+] Model has any training        :✅ </div>
+<div class="line">[+] Model has training            :✅ </div>
+<div class="line">[+] Model training score: 10952   :✅ </div>
+</div><!-- fragment --><p><b>Evaluate a corpus file.</b> </p><div class="fragment"><div class="line">python3 cudamarkopy.py -ev &quot;../../../datasets/pwdb.corpus&quot;</div>
+</div><!-- fragment --><div class="fragment"><div class="line">[+] Corpus: graduation.corpus: </div>
+<div class="line">[+] Delimiter is: b&#39;\t&#39;</div>
+<div class="line">[+] Total number of lines: 157668136</div>
+<div class="line">[+] Sum of all string weights: 700089109</div>
+<div class="line">[+] Character total: 1498134485</div>
+<div class="line">[+] Average length: 9.501821503109545</div>
+<div class="line">[+] Average weight: 4.440270093635153</div>
+<div class="line"> </div>
+<div class="line">################ Checks ################ </div>
+<div class="line">[+] No structural conflicts       :✅ </div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md11"></a>
+Model selection</h3>
+<div id="markopy-select"></div><p>You may use the -mt parameter from <a class="el" href="markopy_8py.html" title="Entry point for markopy scripts.">markopy.py</a> or <a class="el" href="cudamarkopy_8py.html" title="base command line interface for python">cudamarkopy.py</a> to select a model type. Allowed parameters are: MP, MMX, CUDA</p>
+<p>Following, is each of the parameters required for these model types.</p>
+<p><b>Following are applicable for -mt MP mode:</b></p>
+<div class="fragment"><div class="line">Python wrapper for MarkovPasswords.</div>
+<div class="line"> </div>
+<div class="line">positional arguments:</div>
+<div class="line">  mode                  Process mode. Either &#39;Train&#39;, &#39;Generate&#39;, or &#39;Combine&#39;.</div>
+<div class="line">  input                 Input model file. This model will be imported before starting operation.</div>
+<div class="line"> </div>
+<div class="line">optional arguments:</div>
+<div class="line">  -h, --help            show this help message and exit</div>
+<div class="line">  -o OUTPUT, --output OUTPUT</div>
+<div class="line">                        Output model file. This model will be exported when done. Will be ignored for generation mode.</div>
+<div class="line">  -d DATASET, --dataset DATASET</div>
+<div class="line">                        Dataset file to read input from for training. Will be ignored for generation mode.</div>
+<div class="line">  -s SEPERATOR, --seperator SEPERATOR</div>
+<div class="line">                        Seperator character to use with training data.(character between occurrence and value)</div>
+<div class="line">  -t THREADS, --threads THREADS</div>
+<div class="line">                        Number of lines to generate. Ignored in training mode.</div>
+<div class="line">  -v, --verbosity       Output verbosity.</div>
+<div class="line">  -b, --bulk            Bulk generate or bulk train every corpus/model in the folder.</div>
+<div class="line">  -w WORDLIST, --wordlist WORDLIST</div>
+<div class="line">                        Wordlist file path to export generation results to. Will be ignored for training mode</div>
+<div class="line">  --min MIN             Minimum length that is allowed during generation</div>
+<div class="line">  --max MAX             Maximum length that is allowed during generation</div>
+<div class="line">  -n COUNT, --count COUNT</div>
+<div class="line">                        Number of lines to generate. Ignored in training mode.</div>
+<div class="line"> </div>
+<div class="line">Sample runs:</div>
+<div class="line">        base.py train untrained.mdl -d dataset.dat -s &quot;\t&quot; -o trained.mdl</div>
+<div class="line">            Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl</div>
+<div class="line"> </div>
+<div class="line">        base.py generate trained.mdl -n 500 -w output.txt</div>
+<div class="line">            Import trained.mdl, and generate 500 lines to output.txt</div>
+<div class="line"> </div>
+<div class="line">        base.py combine untrained.mdl -d dataset.dat -s &quot;\t&quot; -n 500 -w output.txt</div>
+<div class="line">            Train and immediately generate 500 lines to output.txt. Do not export trained model.</div>
+<div class="line"> </div>
+<div class="line">        base.py combine untrained.mdl -d dataset.dat -s &quot;\t&quot; -n 500 -w output.txt -o trained.mdl</div>
+<div class="line">            Train and immediately generate 500 lines to output.txt. Export trained model.</div>
+<div class="line"> </div>
+<div class="line">usage: cudamarkopy.py [-h] [-o OUTPUT] [-d DATASET] [-s SEPERATOR] [-t THREADS] [-v] [-b] [-w WORDLIST]</div>
+<div class="line">                      [--min MIN] [--max MAX] [-n COUNT]</div>
+<div class="line">                      mode input</div>
+</div><!-- fragment --><p><b>Following are applicable for -mt MMX mode:</b></p>
+<div class="fragment"><div class="line">usage: cudamarkopy.py [-h] [-t THREADS] [-v] [-b] [-w WORDLIST] [--min MIN] [--max MAX] [-n COUNT] [-st]</div>
+<div class="line">                      mode input</div>
+<div class="line"> </div>
+<div class="line">Python wrapper for MarkovPasswords.</div>
+<div class="line"> </div>
+<div class="line">positional arguments:</div>
+<div class="line">  mode                  Process mode. Either &#39;Train&#39;, &#39;Generate&#39;, or &#39;Combine&#39;.</div>
+<div class="line">  input                 Input model file. This model will be imported before starting operation.</div>
+<div class="line"> </div>
+<div class="line">optional arguments:</div>
+<div class="line">  -h, --help            show this help message and exit</div>
+<div class="line">  -t THREADS, --threads THREADS</div>
+<div class="line">                        Number of lines to generate. Ignored in training mode.</div>
+<div class="line">  -v, --verbosity       Output verbosity.</div>
+<div class="line">  -b, --bulk            Bulk generate or bulk train every corpus/model in the folder.</div>
+<div class="line">  -w WORDLIST, --wordlist WORDLIST</div>
+<div class="line">                        Wordlist file path to export generation results to. Will be ignored for training mode</div>
+<div class="line">  --min MIN             Minimum length that is allowed during generation</div>
+<div class="line">  --max MAX             Maximum length that is allowed during generation</div>
+<div class="line">  -n COUNT, --count COUNT</div>
+<div class="line">                        Number of lines to generate. Ignored in training mode.</div>
+<div class="line">  -st, --stdout         Stdout mode</div>
+<div class="line"> </div>
+<div class="line">Sample runs:</div>
+<div class="line">        base.py train untrained.mdl -d dataset.dat -s &quot;\t&quot; -o trained.mdl</div>
+<div class="line">            Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl</div>
+<div class="line"> </div>
+<div class="line">        base.py generate trained.mdl -n 500 -w output.txt</div>
+<div class="line">            Import trained.mdl, and generate 500 lines to output.txt</div>
+<div class="line"> </div>
+<div class="line">        base.py combine untrained.mdl -d dataset.dat -s &quot;\t&quot; -n 500 -w output.txt</div>
+<div class="line">            Train and immediately generate 500 lines to output.txt. Do not export trained model.</div>
+<div class="line"> </div>
+<div class="line">        base.py combine untrained.mdl -d dataset.dat -s &quot;\t&quot; -n 500 -w output.txt -o trained.mdl</div>
+<div class="line">            Train and immediately generate 500 lines to output.txt. Export trained model.</div>
+</div><!-- fragment --><p><b>Following are applicable for -mt CUDA mode:</b></p>
+<div class="fragment"><div class="line">usage: cudamarkopy.py [-h] [-t THREADS] [-v] [-b] [-w WORDLIST] [--min MIN] [--max MAX] [-n COUNT] [-st] [-if]</div>
+<div class="line">                      mode input</div>
+<div class="line"> </div>
+<div class="line">Python wrapper for MarkovPasswords.</div>
+<div class="line"> </div>
+<div class="line">positional arguments:</div>
+<div class="line">  mode                  Process mode. Either &#39;Train&#39;, &#39;Generate&#39;, or &#39;Combine&#39;.</div>
+<div class="line">  input                 Input model file. This model will be imported before starting operation.</div>
+<div class="line"> </div>
+<div class="line">optional arguments:</div>
+<div class="line">  -h, --help            show this help message and exit</div>
+<div class="line">  -t THREADS, --threads THREADS</div>
+<div class="line">                        Number of lines to generate. Ignored in training mode.</div>
+<div class="line">  -v, --verbosity       Output verbosity.</div>
+<div class="line">  -b, --bulk            Bulk generate or bulk train every corpus/model in the folder.</div>
+<div class="line">  -w WORDLIST, --wordlist WORDLIST</div>
+<div class="line">                        Wordlist file path to export generation results to. Will be ignored for training mode</div>
+<div class="line">  --min MIN             Minimum length that is allowed during generation</div>
+<div class="line">  --max MAX             Maximum length that is allowed during generation</div>
+<div class="line">  -n COUNT, --count COUNT</div>
+<div class="line">                        Number of lines to generate. Ignored in training mode.</div>
+<div class="line">  -st, --stdout         Stdout mode</div>
+<div class="line">  -if, --infinite       Infinite generation mode</div>
+<div class="line"> </div>
+<div class="line">Sample runs:</div>
+<div class="line">        base.py train untrained.mdl -d dataset.dat -s &quot;\t&quot; -o trained.mdl</div>
+<div class="line">            Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl</div>
+<div class="line"> </div>
+<div class="line">        base.py generate trained.mdl -n 500 -w output.txt</div>
+<div class="line">            Import trained.mdl, and generate 500 lines to output.txt</div>
+<div class="line"> </div>
+<div class="line">        base.py combine untrained.mdl -d dataset.dat -s &quot;\t&quot; -n 500 -w output.txt</div>
+<div class="line">            Train and immediately generate 500 lines to output.txt. Do not export trained model.</div>
+<div class="line"> </div>
+<div class="line">        base.py combine untrained.mdl -d dataset.dat -s &quot;\t&quot; -n 500 -w output.txt -o trained.mdl</div>
+<div class="line">            Train and immediately generate 500 lines to output.txt. Export trained model.</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md12"></a>
+Training</h3>
+<div id="markopy-train"></div><p>If you do not have a custom corpus to train with, you may use one of the pre-trained models from the github releases.</p>
+<div class="fragment"><div class="line">python3 cudamarkopy.py train ../../../models/base-models/2gram.mdl -d ../../../datasets/graduation.corpus -s &quot;\\t&quot; -o test.mdl -vvvvvvvvv</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md13"></a>
+Generation</h3>
+<div id="markopy-generate"></div><p>If you have not trained a model, you may download on of the trained models (preferably models/trained/trained.mdl) from the releases and use it for generation.</p>
+<p><b>Generating to a file</b> </p><div class="fragment"><div class="line">python3 cudamarkopy.py generate trained.mdl -mt MMX -n 5000 --min 6 --max 12 -w test.txt -vvvv</div>
+</div><!-- fragment --><p><b>Generating to stdout</b> </p><div class="fragment"><div class="line">python3 cudamarkopy.py generate trained.mdl -mt MMX -n 5000 --min 6 --max 12 --stdout</div>
+</div><!-- fragment --><p><b>Generating with CUDA model</b> <b>WARNING</b> Do not use CUDA model unless you want to generate 500M+ lines. Prefer stdout mode with pipes instead of writing to disk whenever possible</p>
+<p><b>Using with Hashcat</b> </p><div class="fragment"><div class="line">python3 cudamarkopy.py generate trained.mdl -mt CUDA -n 5000 --min 6 --max 12 --stdout | hashcat -m 1400 hashes.txt -O</div>
+</div><!-- fragment --><p><b>Use with hashcat, continue until terminated</b> </p><div class="fragment"><div class="line">python3 cudamarkopy.py generate trained.mdl -mt CUDA -n 5000 --min 6 --max 12 --stdout --infinite | hashcat -m 1400 hashes.txt -O</div>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md15"></a>
 Building</h1>
 <div id="building"></div><p> You can build the project using cmake with g++ &amp; nvcc on linux, and msbuild &amp; nvcc on windows.</p>
-<h1><a class="anchor" id="autotoc_md8"></a>
-Prerequisites</h1>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Prerequisites</h2>
 <div id="prequisites"></div><p>You can find a list of the dependencies below. If you have any missing, check out the <a href="#setting-up-deps">setting up prequisites</a> part.</p>
-<h2><a class="anchor" id="autotoc_md9"></a>
-General prequisites</h2>
+<h3><a class="anchor" id="autotoc_md17"></a>
+General prequisites</h3>
 <div id="general-prequisites"></div><p>To build the simple core of this project, you'll need: </p>
-<h3><a class="anchor" id="autotoc_md10"></a>
-Linux</h3>
-<ul>
+<h4><a class="anchor" id="autotoc_md18"></a>
+Linux</h4>
+<div id="general-prequisites-linux"></div><ul>
 <li>CMake, preferably one of the latest versions.</li>
 <li>CXX compiler, preferably g++ or clang++ (LLVM 3.9+).</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md11"></a>
-Windows</h3>
-<ul>
+<h4><a class="anchor" id="autotoc_md19"></a>
+Windows</h4>
+<div id="general-prequisites-win"></div><ul>
 <li>CMake, preferably one of the latest versions.</li>
 <li>CXX compiler, preferably msbuild(cl.exe) or clang++ (LLVM 3.9+). Please note that mingw is not recommended as it is not officially supported by the nvcc.exe, and might not be linkable if you are building the CUDA components too.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 MarkovModel</h2>
 <div id="preq-mm"></div><p> This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md21"></a>
 MarkovAPI</h2>
 <div id="preq-ma"></div><p> This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.</p>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md22"></a>
 MarkovAPICLI</h2>
 <div id="preq-mac"></div><ul>
 <li>Boost.program_options (tested on 1.71.0-1.76.0)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md23"></a>
 Markopy</h2>
-<div id="preq-mac"></div><ul>
+<div id="preq-mpy"></div><ul>
 <li>Boost.Python (tested on 1.71.0-1.76.0)</li>
 <li>Python development package (tested on python 36-39)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 CudaMarkovAPI</h2>
 <div id="preq-cma"></div><ul>
 <li>CUDA toolkit (11.0+, c++17 support required)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md17"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 CudaMarkopy</h2>
 <div id="preq-cmpy"></div><ul>
 <li>CUDA toolkit (11.0+, c++17 support required)</li>
 <li>Boost.Python (tested on 1.71.0-1.76.0)</li>
 <li>Python development package (tested on python 36-39)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md18"></a>
+<h2><a class="anchor" id="autotoc_md26"></a>
 MarkovPasswordsGUI</h2>
 <div id="preq-mpgui"></div><ul>
 <li>QT5 development environment. (qt5-qmake on ubuntu apt-get)</li>
 <li>QTWebEngine5 plugin. (qtwebengine5-dev on ubuntu apt-get)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md19"></a>
+<h2><a class="anchor" id="autotoc_md27"></a>
 CMake Configuration</h2>
 <div id="cmake-configuration"></div><p>You can build this project with cmake.</p>
 <p>If you don't have prequisites for some of the projects set up, you can use the partial set up configuration to ignore those projects when setting the project up.</p>
 <p>If you do not meet the prequisites, you'll have to partially set up the CMake file (you cant use &ndash;target to build some of the targets, because configuration phase will fail too).</p>
 <p>Some examples for partially setting up and building the project are below.</p>
-<h3><a class="anchor" id="autotoc_md20"></a>
+<h3><a class="anchor" id="autotoc_md28"></a>
 Build everything</h3>
 <div id="build-all"></div><div class="fragment"><div class="line">$ cmake . -DPYTHON_VER=38 &amp;&amp; cmake --build .</div>
 </div><!-- fragment --><p>This will build all the libraries and executables. Requires python-dev, CUDA, QT5, QT5-Webview</p>
-<h3><a class="anchor" id="autotoc_md21"></a>
+<h3><a class="anchor" id="autotoc_md29"></a>
 Build libraries only</h3>
 <div id="build-libs"></div><div class="fragment"><div class="line">$ cmake . -DPARTIAL=1 -DB_LIBS=1 &amp;&amp; cmake --build .</div>
 </div><!-- fragment --><p>Only build basic libraries. Requires only CXX compiler.</p>
-<h3><a class="anchor" id="autotoc_md22"></a>
+<h3><a class="anchor" id="autotoc_md30"></a>
 Build CUDA-accelerated libraries</h3>
 <div id="build-cuda-libs"></div><div class="fragment"><div class="line">$ cmake . -DPARTIAL=1 -DB_CUDA=1 &amp;&amp; cmake --build .</div>
 </div><!-- fragment --><p>Build libraries along with cuda accelerated ones.</p>
-<h3><a class="anchor" id="autotoc_md23"></a>
+<h3><a class="anchor" id="autotoc_md31"></a>
 Build python module &amp; libraries</h3>
 <div id="build-py-libs"></div><div class="fragment"><div class="line">$ cmake . -DPARTIAL=1 -DPYTHON_VER=39 &amp;&amp; cmake --build .</div>
 </div><!-- fragment --><p>Will build basic libraries and python modules.</p>
-<h3><a class="anchor" id="autotoc_md24"></a>
+<h3><a class="anchor" id="autotoc_md32"></a>
 Build CUDA accelerated python module</h3>
 <div id="build-cpy-libs"></div><div class="fragment"><div class="line">$ cmake . -DPARTIAL=1 -DPYTHON_VER=39 -DB_CUDA=1 &amp;&amp; cmake --build .</div>
 </div><!-- fragment --><p>Will build cudamarkopy.</p>
-<h3><a class="anchor" id="autotoc_md25"></a>
+<h3><a class="anchor" id="autotoc_md33"></a>
 Build CUDA accelerated python module and the GUI</h3>
 <div id="build-cpy-libs-and-gui"></div><div class="fragment"><div class="line">$ cmake . -DPARTIAL=1 -DPYTHON_VER=39 -DB_CUDA=1 -DB_GUI &amp;&amp; cmake --build .</div>
 </div><!-- fragment --><p>Combine methods</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md27"></a>
+<h2><a class="anchor" id="autotoc_md35"></a>
 Installing Dependencies</h2>
-<div id="installing-deps"></div><h4><a class="anchor" id="autotoc_md28"></a>
+<div id="installing-deps"></div><h4><a class="anchor" id="autotoc_md36"></a>
 Windows</h4>
 <div id="installing-deps-win"></div><ul>
 <li>QT: Install <a href="https://doc.qt.io/qt-5/windows.html">QT For Windows</a></li>
@@ -338,7 +627,7 @@ Windows</h4>
 </li>
 <li>Python: You can use the windows app store to download python runtime and libraries.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md29"></a>
+<h4><a class="anchor" id="autotoc_md37"></a>
 Linux</h4>
 <div id="installing-deps-lin"></div><ul>
 <li>QT: Follow <a href="https://wiki.qt.io/Install_Qt_5_on_Ubuntu">this guide</a> to install QT on Linux. Alternatively, on ubuntu you can <code>sudo apt-get install qt5-qmake qtwebengine5-dev</code></li>
@@ -361,24 +650,48 @@ Linux</h4>
 </div><!-- fragment --></li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md31"></a>
+<h1><a class="anchor" id="autotoc_md39"></a>
+File Structure</h1>
+<div id="file-structure"></div><p>You may chose to create your own model structures or corpus files. Following, is the reference for the current structure for them.</p>
+<h2><a class="anchor" id="autotoc_md40"></a>
+Model</h2>
+<div id="model-structure"></div><p>Model files are basically a list of edges in the model</p>
+<p>Format is <code>{left_node_content},weight,{right_node_content}\n</code></p>
+<p>Example:</p>
+<div class="fragment"><div class="line">l,5,r</div>
+<div class="line">l,12,g</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>There are additional requirements for a model for entry and termination nodes. Entry nodes are represented with 0x00, and termination nodes are represented with 0xff</p>
+<p>It is expected (but not mandatory) to have an edge from starting node to all of the other nodes, and same applies for edges from each nodes to the termination nodes.</p>
+<p>If termination node has any edges that it is position on the left (meaning model file expectation is to traverse to another node after termination node) it will be loaded to the edges, but will be ignored during the random walk logic.</p>
+<h2><a class="anchor" id="autotoc_md41"></a>
+Corpus</h2>
+<div id="corpus-structure"></div><p>Corpus files are used to train models. You may chose to train your own model (preferably over an existing base model, like 2gram.mdl) to have your own generation style.</p>
+<p>Corpus file format is:</p>
+<p><code>{occurrence}{seperator}{string}\n</code></p>
+<ul>
+<li>Occurrence is the weight associated with that string.</li>
+<li>Seperator is a single character seperator used to seperate occurrence with the string</li>
+<li>String is the password/string/sequence you want to add to the model.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md42"></a>
 Known Common issues</h1>
-<div id="known-issues"></div><h2><a class="anchor" id="autotoc_md32"></a>
+<div id="known-issues"></div><h2><a class="anchor" id="autotoc_md43"></a>
 Linux</h2>
-<h3><a class="anchor" id="autotoc_md33"></a>
+<h3><a class="anchor" id="autotoc_md44"></a>
 Markopy - Python.h - Not found</h3>
 <p>Make sure you have the development version of python package, which includes the required header files. Check if header files exist: <code>/usr/include/python*</code> or <code>locate Python.h</code>.</p>
 <p>If it doesn't, run <code>sudo apt-get install python3-dev</code></p>
-<h3><a class="anchor" id="autotoc_md34"></a>
+<h3><a class="anchor" id="autotoc_md45"></a>
 Markopy/MarkovAPI - *.so not found, or other library related issues when building</h3>
 <p>Run: </p><div class="fragment"><div class="line">ls /usr/lib/x86_64-linux-gnu/ | grep boost</div>
 </div><!-- fragment --><p>and check the shared object filenames. A common issue is that lboost is required but filenames are formatted as libboost, or vice versa.</p>
 <p>Do the same for python related library issues, run: </p><div class="fragment"><div class="line">ls /usr/lib/x86_64-linux-gnu/ | grep python</div>
 </div><!-- fragment --><p>to verify filename format is as required.</p>
 <p>If not, you can modify the makefile, or create symlinks such as: </p><div class="fragment"><div class="line">ln -s /usr/lib/x86_64-linux-gnu/libboost_python38.so /usr/lib/x86_64-linux-gnu/boost_python38.so</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md35"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md46"></a>
 Windows</h2>
-<h3><a class="anchor" id="autotoc_md36"></a>
+<h3><a class="anchor" id="autotoc_md47"></a>
 Boost - Bootstrap.bat "ctype.h" not found</h3>
 <ul>
 <li>Make sure you are working in the "Visual Studio Developer Command Prompt" terminal.</li>
@@ -388,17 +701,17 @@ Boost - Bootstrap.bat "ctype.h" not found</h3>
 <div class="line">set LIB=%LIB%;C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\um\x64</div>
 </div><!-- fragment --></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md37"></a>
+<h3><a class="anchor" id="autotoc_md48"></a>
 Cannot open file "*.lib"</h3>
 <p>Make sure you have set the BOOST_ROOT environment variable correctly. Make sure you ran <code>b2</code> to build library files from boost sources.</p>
-<h3><a class="anchor" id="autotoc_md38"></a>
+<h3><a class="anchor" id="autotoc_md49"></a>
 Python.h not found</h3>
 <p>Make sure you have python installed, and make sure you set PYTHON_PATH environment variable.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md40"></a>
+<h1><a class="anchor" id="autotoc_md51"></a>
 Contributing</h1>
 <div id="contributing"></div><p>Feel free to contribute. We welcome all the issues and pull requests.</p>
-<h1><a class="anchor" id="autotoc_md41"></a>
+<h1><a class="anchor" id="autotoc_md52"></a>
 Contact</h1>
 <div id="contact"></div><p>Twitter - <a href="https://twitter.com/ahakcil">@ahakcil</a> </p>
 </div></div><!-- PageDoc -->
@@ -407,7 +720,7 @@ Contact</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Jul 1 2021 02:50:48 for Markopy by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0 </li>
   </ul>
 </div>
 </body>

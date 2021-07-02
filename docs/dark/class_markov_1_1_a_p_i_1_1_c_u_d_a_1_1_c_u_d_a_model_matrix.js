@@ -33,7 +33,7 @@ var class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix =
     [ "prepKernelMemoryChannel", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#aa9d82f3bf38544bd94b5074c9d3b89d3", null ],
     [ "RandomWalk", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#aa4a11c6679c998936332f8409ae95375", null ],
     [ "Save", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a4f4997da3a6cd3bd2717ce9759736660", null ],
-    [ "StarterNode", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a0e53104e4ec665f005529f51a80c857d", null ],
+    [ "StarterNode", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a35cb15a14d034f3365b9d2d3efa1ffc0", null ],
     [ "Train", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#af42d40d7a5c80f0dfe126a574a17f423", null ],
     [ "TrainThread", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#a5f51b0fdb75101b797f38b08da84848e", null ],
     [ "alternatingKernels", "class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix.html#ad8d2ede773004722efa2bba39f76e186", null ],

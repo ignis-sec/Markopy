@@ -69,6 +69,10 @@ var hierarchy =
     [ "Markov::Edge< NodeStorageType >", "class_markov_1_1_edge.html", null ],
     [ "Markov::Edge< char >", "class_markov_1_1_edge.html", null ],
     [ "Markov::Edge< storageType >", "class_markov_1_1_edge.html", null ],
+    [ "Python.Markopy.Evaluation.Evaluator", "class_python_1_1_markopy_1_1_evaluation_1_1_evaluator.html", [
+      [ "Python.Markopy.Evaluation.CorpusEvaluator", "class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator.html", null ],
+      [ "Python.Markopy.Evaluation.ModelEvaluator", "class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator.html", null ]
+    ] ],
     [ "std::basic_string< char >::iterator", "classbasic__string_3_01char_01_4_1_1iterator.html", null ],
     [ "std::basic_string< char16_t >::iterator", "classbasic__string_3_01char16__t_01_4_1_1iterator.html", null ],
     [ "std::basic_string< char32_t >::iterator", "classbasic__string_3_01char32__t_01_4_1_1iterator.html", null ],
