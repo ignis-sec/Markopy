@@ -62,7 +62,7 @@ bool \mbox{\hyperlink{class_markov_1_1_model_ae16027a94235d2988ac4be35ea07d939}{
 \begin{DoxyCompactList}\small\item\em Export a file of the model. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_markov_1_1_model_af788426a3c41a7838a2aae199e8aef5b}{Export}} (const char $\ast$filename)
 \begin{DoxyCompactList}\small\item\em Open a file to export with filename, and call bool Model\+::\+Export with std\+::ofstream. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ char $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a0e53104e4ec665f005529f51a80c857d}{Starter\+Node}} ()
+\mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ char $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}{Starter\+Node}} ()
 \begin{DoxyCompactList}\small\item\em Return starter Node. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{class_markov_1_1_edge}{Edge}}$<$ char $>$ $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_markov_1_1_model_a2e08608905d7b042627ea844b08045fe}{Edges}} ()
 \begin{DoxyCompactList}\small\item\em Return a vector of all the edges in the model. \end{DoxyCompactList}\item 
@@ -322,7 +322,7 @@ Definition at line \mbox{\hyperlink{model_matrix_8cpp_source_l00031}{31}} of fil
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00031                                           \{}
 \DoxyCodeLine{00032     \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a6e6994aef7ad847300be6e158e6b3322}{ready}}) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{00033     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}} = this-\/>\mbox{\hyperlink{class_markov_1_1_model_a0e53104e4ec665f005529f51a80c857d}{StarterNode}}()-\/>\mbox{\hyperlink{class_markov_1_1_node_ad2ac18d9abd220dfd90b9df6f92c5d59}{edgesV}}.size() + 2;}
+\DoxyCodeLine{00033     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}} = this-\/>\mbox{\hyperlink{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}{StarterNode}}()-\/>\mbox{\hyperlink{class_markov_1_1_node_ad2ac18d9abd220dfd90b9df6f92c5d59}{edgesV}}.size() + 2;}
 \DoxyCodeLine{00034 }
 \DoxyCodeLine{00035     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_af01f1dbb05b7b25a69a0c95518549f32}{matrixIndex}} = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
 \DoxyCodeLine{00036     this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a47bab10980c3117f75909b640a4096df}{totalEdgeWeights}} = \textcolor{keyword}{new} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}[this-\/>\mbox{\hyperlink{class_markov_1_1_a_p_i_1_1_model_matrix_a14f867fab1a47f06e59c8679ba4d1207}{matrixSize}}];}
@@ -1509,11 +1509,11 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{class_markov_1_1_a_p_i_1_1_markov_passwords_a4f4997da3a6cd3bd2717ce9759736660_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_markov_1_1_model_a0e53104e4ec665f005529f51a80c857d}\label{class_markov_1_1_model_a0e53104e4ec665f005529f51a80c857d}} 
+\mbox{\Hypertarget{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}\label{class_markov_1_1_model_a35cb15a14d034f3365b9d2d3efa1ffc0}} 
 \index{Markov::API::ModelMatrix@{Markov::API::ModelMatrix}!StarterNode@{StarterNode}}
 \index{StarterNode@{StarterNode}!Markov::API::ModelMatrix@{Markov::API::ModelMatrix}}
 \doxysubsubsection{\texorpdfstring{StarterNode()}{StarterNode()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$ char  $>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Starter\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_markov_1_1_node}{Node}}$<$char $>$$\ast$ \mbox{\hyperlink{class_markov_1_1_model}{Markov\+::\+Model}}$<$ char  $>$\+::Starter\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
 
 
 

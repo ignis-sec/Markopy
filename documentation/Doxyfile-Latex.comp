@@ -160,7 +160,7 @@ LATEX_EXTRA_STYLESHEET = doxygen.sty
 # markers available.
 # This tag requires that the tag GENERATE_LATEX is set to YES.
 
-LATEX_EXTRA_FILES      =
+LATEX_EXTRA_FILES      = ../NVSight/*
 
 # If the PDF_HYPERLINKS tag is set to YES, the LaTeX that is generated is
 # prepared for conversion to PDF (using ps2pdf or pdflatex). The PDF file will
@@ -188,7 +188,7 @@ USE_PDFLATEX           = YES
 # The default value is: NO.
 # This tag requires that the tag GENERATE_LATEX is set to YES.
 
-LATEX_BATCHMODE        = NO
+LATEX_BATCHMODE        = YES
 
 # If the LATEX_HIDE_INDICES tag is set to YES then doxygen will not include the
 # index chapters (such as File Index, Compound Index, etc.) in the output.
@@ -230,5 +230,22 @@ LATEX_TIMESTAMP        = YES
 # This tag requires that the tag GENERATE_LATEX is set to YES.
 
 LATEX_EMOJI_DIRECTORY  =
+
+# The INPUT tag is used to specify the files and/or directories that contain
+# documented source files. You may enter file names like myfile.cpp or
+# directories like /usr/src/myproject. Separate the files or directories with
+# spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
+# Note: If this tag is empty the current directory is searched.
+
+INPUT                  = ../MarkovModel/src/ \
+                            ../MarkovAPI/src/ \
+                            ../MarkovAPICLI/src/ \
+                            ../Markopy/src/ \
+                            ../CudaMarkovAPI/src/ \
+                            ../CudaMarkopy/src/ \
+                            ../MarkovPasswordsGUI/src/ \
+                            ../UnitTests/ \
+                            ../README.md \
+                            dirs.docs
 
 # ================================================================================

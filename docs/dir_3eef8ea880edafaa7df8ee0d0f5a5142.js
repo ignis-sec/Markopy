@@ -5,6 +5,11 @@ var dir_3eef8ea880edafaa7df8ee0d0f5a5142 =
       [ "AbstractGenerationModelCLI", "class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i.html", "class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i" ],
       [ "AbstractTrainingModelCLI", "class_python_1_1_markopy_1_1_abstract_training_model_c_l_i.html", "class_python_1_1_markopy_1_1_abstract_training_model_c_l_i" ]
     ] ],
+    [ "evaluate.py", "evaluate_8py.html", [
+      [ "Evaluator", "class_python_1_1_markopy_1_1_evaluation_1_1_evaluator.html", "class_python_1_1_markopy_1_1_evaluation_1_1_evaluator" ],
+      [ "ModelEvaluator", "class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator.html", "class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator" ],
+      [ "CorpusEvaluator", "class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator.html", "class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator" ]
+    ] ],
     [ "importer.py", "importer_8py.html", "importer_8py" ],
     [ "markopy.py", "markopy_8py.html", "markopy_8py" ],
     [ "mm.py", "mm_8py.html", "mm_8py" ],

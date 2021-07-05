@@ -14,7 +14,7 @@
 \usepackage{calc}
 \usepackage{doxygen}
 \usepackage{graphicx}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 \usepackage{makeidx}
 \usepackage{multicol}
 \usepackage{multirow}
@@ -30,6 +30,13 @@
 \usepackage{courier}
 \usepackage{amssymb}
 \usepackage{sectsty}
+
+
+\usepackage{textcomp}  % Required for encoding \textbigcircle
+\usepackage{scalerel}  % Required for emoji \scalerel
+
+\DeclareUnicodeCharacter{10060}{\scalerel*{\includegraphics{274c.png}}{\textrm{\textbigcircle}}}
+\DeclareUnicodeCharacter{9989}{\scalerel*{\includegraphics{2705.png}}{\textrm{\textbigcircle}}}
 \renewcommand{\familydefault}{\sfdefault}
 \allsectionsfont{%
   \fontseries{bc}\selectfont%

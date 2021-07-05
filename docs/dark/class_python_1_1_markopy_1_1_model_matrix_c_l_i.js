@@ -36,7 +36,7 @@ var class_python_1_1_markopy_1_1_model_matrix_c_l_i =
     [ "process", "class_python_1_1_markopy_1_1_model_matrix_c_l_i.html#aab389488e1f530cf444d9d2ef59a6998", null ],
     [ "RandomWalk", "class_python_1_1_markopy_1_1_model_matrix_c_l_i.html#aa4a11c6679c998936332f8409ae95375", null ],
     [ "Save", "class_python_1_1_markopy_1_1_model_matrix_c_l_i.html#a4f4997da3a6cd3bd2717ce9759736660", null ],
-    [ "StarterNode", "class_python_1_1_markopy_1_1_model_matrix_c_l_i.html#a0e53104e4ec665f005529f51a80c857d", null ],
+    [ "StarterNode", "class_python_1_1_markopy_1_1_model_matrix_c_l_i.html#a35cb15a14d034f3365b9d2d3efa1ffc0", null ],
     [ "Train", "class_python_1_1_markopy_1_1_model_matrix_c_l_i.html#af42d40d7a5c80f0dfe126a574a17f423", null ],
     [ "train", "class_python_1_1_markopy_1_1_model_matrix_c_l_i.html#a4d0f291accfd276eb967e1121124274b", null ],
     [ "TrainThread", "class_python_1_1_markopy_1_1_model_matrix_c_l_i.html#a5f51b0fdb75101b797f38b08da84848e", null ],

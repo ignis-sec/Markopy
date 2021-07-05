@@ -1,0 +1,451 @@
+\hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator}{}\doxysection{Python.\+Markopy.\+Evaluation.\+Evaluator Class Reference}
+\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator}\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+
+
+Abstract class to evaluate and score integrity/validty.  
+
+
+
+
+Inheritance diagram for Python.\+Markopy.\+Evaluation.\+Evaluator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Python.\+Markopy.\+Evaluation.\+Evaluator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a871781e80aa7eac6894638997396060c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa1fcc567fb636c23817445e86f6f4792}{filename}})
+\begin{DoxyCompactList}\small\item\em default constructor for evaluator \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a46497ca96abd975e6c7642a9bc0d4d8e}{evaluate}} (self)
+\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}{success}} (self, checkname)
+\begin{DoxyCompactList}\small\item\em pass a test \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}{fail}} (self, checkname)
+\begin{DoxyCompactList}\small\item\em fail a test \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a52996cbe300222dda1d22cc022485181}{finalize}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa1fcc567fb636c23817445e86f6f4792}{filename}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a0a28d631971e7dbc0b7fb14b4308352c}{checks}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a326f8d87fe31965a856eaad5eaa360d2}{TEST\+\_\+\+PASS\+\_\+\+SYMBOL}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a84089428eaf66879c4651a4dd2d176a3}{TEST\+\_\+\+FAIL\+\_\+\+SYMBOL}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a6b59a5de4044af97f84a7964ccaa417e}{all\+\_\+checks\+\_\+passed}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a2887af7b6d83d7cc7bc242c9df277c76}{files}}
+\item 
+\mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a298ea16a08dc0ed85decc9c61a3578fd}{check\+\_\+funcs}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa57707bfef91275599ca96b73bc311a8}{\+\_\+evaluate}} (self, file)
+\begin{DoxyCompactList}\small\item\em internal evaluation function for a single file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class to evaluate and score integrity/validty. 
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00022}{22}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a871781e80aa7eac6894638997396060c}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a871781e80aa7eac6894638997396060c}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None Python.\+Markopy.\+Evaluation.\+Evaluator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{filename }\end{DoxyParamCaption})}
+
+
+
+default constructor for evaluator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename to evaluate. Can be a pattern \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator_a03951a01c43d2f39eb7b6b3dbc8ab84c}{Python.\+Markopy.\+Evaluation.\+Corpus\+Evaluator}}, and \mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_aae6accb0db253058a04721d3c180e8c3}{Python.\+Markopy.\+Evaluation.\+Model\+Evaluator}}.
+
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00027}{27}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027     \textcolor{keyword}{def }\_\_init\_\_(self, filename: str) -\/> \textcolor{keywordtype}{None}:}
+\DoxyCodeLine{00028         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00029 \textcolor{stringliteral}{        @brief default constructor for evaluator}}
+\DoxyCodeLine{00030 \textcolor{stringliteral}{        @param filename filename to evaluate. Can be a pattern}}
+\DoxyCodeLine{00031 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00032         self.filename = filename}
+\DoxyCodeLine{00033         self.checks = []}
+\DoxyCodeLine{00034         self.TEST\_PASS\_SYMBOL = b\textcolor{stringliteral}{"{}\(\backslash\)xe2\(\backslash\)x9c\(\backslash\)x85"{}}.decode()}
+\DoxyCodeLine{00035         self.TEST\_FAIL\_SYMBOL = b\textcolor{stringliteral}{"{}\(\backslash\)xe2\(\backslash\)x9d\(\backslash\)x8c"{}}.decode()}
+\DoxyCodeLine{00036         self.all\_checks\_passed = \textcolor{keyword}{True}}
+\DoxyCodeLine{00037         self.files = []}
+\DoxyCodeLine{00038         if(\textcolor{stringliteral}{"{}*"{}} \textcolor{keywordflow}{in} filename):}
+\DoxyCodeLine{00039             self.files = glob.glob(filename)}
+\DoxyCodeLine{00040         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00041             self.files.append(filename)}
+\DoxyCodeLine{00042         \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00043 }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa57707bfef91275599ca96b73bc311a8}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa57707bfef91275599ca96b73bc311a8}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!\_evaluate@{\_evaluate}}
+\index{\_evaluate@{\_evaluate}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{\_evaluate()}{\_evaluate()}}
+{\footnotesize\ttfamily  list Python.\+Markopy.\+Evaluation.\+Evaluator.\+\_\+evaluate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+internal evaluation function for a single file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & filename to evaluate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator_afadf95a3683955a265fcd85c32369178}{Python.\+Markopy.\+Evaluation.\+Corpus\+Evaluator}}.
+
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00052}{52}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052     \textcolor{keyword}{def }\_evaluate(self, file) -\/> list:}
+\DoxyCodeLine{00053         \textcolor{stringliteral}{"{}"{}"{}! }}
+\DoxyCodeLine{00054 \textcolor{stringliteral}{        @brief internal evaluation function for a single file}}
+\DoxyCodeLine{00055 \textcolor{stringliteral}{        @param file filename to evaluate}}
+\DoxyCodeLine{00056 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00057         if(\textcolor{keywordflow}{not} os.path.isfile(file)):}
+\DoxyCodeLine{00058             logging.pprint(f\textcolor{stringliteral}{"{}Given file \{file\} is not a valid filename"{}})}
+\DoxyCodeLine{00059             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00060         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00061              \textcolor{keywordflow}{return} open(file, \textcolor{stringliteral}{"{}rb"{}}).read().split(b\textcolor{stringliteral}{"{}\(\backslash\)n"{}})}
+\DoxyCodeLine{00062         }
+\DoxyCodeLine{00063         }
+\DoxyCodeLine{00064 }
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{evaluate_8py_source_l00044}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+evaluate()}}, and \mbox{\hyperlink{evaluate_8py_source_l00103}{Python.\+Markopy.\+Evaluation.\+Model\+Evaluator.\+evaluate()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa57707bfef91275599ca96b73bc311a8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a46497ca96abd975e6c7642a9bc0d4d8e}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a46497ca96abd975e6c7642a9bc0d4d8e}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily  bool Python.\+Markopy.\+Evaluation.\+Evaluator.\+evaluate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator_a509189084e44b78353ac8662851e894c}{Python.\+Markopy.\+Evaluation.\+Corpus\+Evaluator}}, and \mbox{\hyperlink{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator_ac80c86bf9e698c571aacb30027fc664f}{Python.\+Markopy.\+Evaluation.\+Model\+Evaluator}}.
+
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00044}{44}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044     \textcolor{keyword}{def }\mbox{\hyperlink{namespaceevaluate}{evaluate}}(self) -\/> bool:}
+\DoxyCodeLine{00045         \textcolor{stringliteral}{"{}! @brief base evaluation function"{}}}
+\DoxyCodeLine{00046         \textcolor{keywordflow}{for} file \textcolor{keywordflow}{in} self.files:}
+\DoxyCodeLine{00047             self.\_evaluate(file)}
+\DoxyCodeLine{00048         }
+\DoxyCodeLine{00049         self.check\_funcs = [func \textcolor{keywordflow}{for} func \textcolor{keywordflow}{in} dir(self) \textcolor{keywordflow}{if} (callable(getattr(self, func)) \textcolor{keywordflow}{and} func.startswith(\textcolor{stringliteral}{"{}check\_"{}}))]}
+\DoxyCodeLine{00050 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{evaluate_8py_source_l00052}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+\_\+evaluate()}}, \mbox{\hyperlink{evaluate_8py_source_l00295}{Python.\+Markopy.\+Evaluation.\+Corpus\+Evaluator.\+\_\+evaluate()}}, and \mbox{\hyperlink{evaluate_8py_source_l00037}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+files}}.
+
+
+
+Referenced by \mbox{\hyperlink{markopy_8py_source_l00125}{Python.\+Markopy.\+Markopy\+CLI.\+parse()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a46497ca96abd975e6c7642a9bc0d4d8e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a46497ca96abd975e6c7642a9bc0d4d8e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!fail@{fail}}
+\index{fail@{fail}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{fail()}{fail()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Evaluation.\+Evaluator.\+fail (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{checkname }\end{DoxyParamCaption})}
+
+
+
+fail a test 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checkname} & text to display with the check \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00072}{72}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072     \textcolor{keyword}{def }fail(self, checkname):}
+\DoxyCodeLine{00073         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00074 \textcolor{stringliteral}{        @brief fail a test}}
+\DoxyCodeLine{00075 \textcolor{stringliteral}{        @param checkname text to display with the check}}
+\DoxyCodeLine{00076 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078         self.all\_checks\_passed = \textcolor{keyword}{False}}
+\DoxyCodeLine{00079         self.checks.append((checkname, self.TEST\_FAIL\_SYMBOL))}
+\DoxyCodeLine{00080 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{evaluate_8py_source_l00036}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+all\+\_\+checks\+\_\+passed}}, \mbox{\hyperlink{evaluate_8py_source_l00033}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+checks}}, and \mbox{\hyperlink{evaluate_8py_source_l00035}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+TEST\+\_\+\+FAIL\+\_\+\+SYMBOL}}.
+
+
+
+Referenced by \mbox{\hyperlink{evaluate_8py_source_l00151}{Python.\+Markopy.\+Evaluation.\+Model\+Evaluator.\+check\+\_\+dangling()}}, \mbox{\hyperlink{evaluate_8py_source_l00207}{Python.\+Markopy.\+Evaluation.\+Model\+Evaluator.\+check\+\_\+lean()}}, \mbox{\hyperlink{evaluate_8py_source_l00186}{Python.\+Markopy.\+Evaluation.\+Model\+Evaluator.\+check\+\_\+min()}}, \mbox{\hyperlink{evaluate_8py_source_l00159}{Python.\+Markopy.\+Evaluation.\+Model\+Evaluator.\+check\+\_\+structure()}}, and \mbox{\hyperlink{evaluate_8py_source_l00253}{Python.\+Markopy.\+Evaluation.\+Corpus\+Evaluator.\+evaluate()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_ae1cab4d74df6a4dc4493b909ca2b923e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a52996cbe300222dda1d22cc022485181}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a52996cbe300222dda1d22cc022485181}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!finalize@{finalize}}
+\index{finalize@{finalize}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Evaluation.\+Evaluator.\+finalize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00081}{81}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081     \textcolor{keyword}{def }finalize(self):}
+\DoxyCodeLine{00082         \textcolor{stringliteral}{"{}! @brief finalize an evaluation and print checks"{}}}
+\DoxyCodeLine{00083         print(\textcolor{stringliteral}{"{}\(\backslash\)n\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Checks \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# "{}})}
+\DoxyCodeLine{00084         \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} self.checks:}
+\DoxyCodeLine{00085             logging.pprint(f\textcolor{stringliteral}{"{}\{test[0]:30\}:\{test[1]\} "{}})}
+\DoxyCodeLine{00086         print(\textcolor{stringliteral}{"{}\(\backslash\)n"{}})}
+\DoxyCodeLine{00087         self.checks = []}
+\DoxyCodeLine{00088         \textcolor{keywordflow}{return} self.all\_checks\_passed}
+\DoxyCodeLine{00089 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{evaluate_8py_source_l00036}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+all\+\_\+checks\+\_\+passed}}, and \mbox{\hyperlink{evaluate_8py_source_l00033}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+checks}}.
+
+
+
+Referenced by \mbox{\hyperlink{evaluate_8py_source_l00253}{Python.\+Markopy.\+Evaluation.\+Corpus\+Evaluator.\+evaluate()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a52996cbe300222dda1d22cc022485181_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!success@{success}}
+\index{success@{success}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{success()}{success()}}
+{\footnotesize\ttfamily def Python.\+Markopy.\+Evaluation.\+Evaluator.\+success (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{checkname }\end{DoxyParamCaption})}
+
+
+
+pass a test 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checkname} & text to display with the check \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00065}{65}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065     \textcolor{keyword}{def }success(self, checkname):}
+\DoxyCodeLine{00066         \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{00067 \textcolor{stringliteral}{        @brief pass a test}}
+\DoxyCodeLine{00068 \textcolor{stringliteral}{        @param checkname text to display with the check}}
+\DoxyCodeLine{00069 \textcolor{stringliteral}{        "{}"{}"{}}}
+\DoxyCodeLine{00070         self.checks.append((checkname, self.TEST\_PASS\_SYMBOL))}
+\DoxyCodeLine{00071 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{evaluate_8py_source_l00033}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+checks}}, and \mbox{\hyperlink{evaluate_8py_source_l00034}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+TEST\+\_\+\+PASS\+\_\+\+SYMBOL}}.
+
+
+
+Referenced by \mbox{\hyperlink{evaluate_8py_source_l00151}{Python.\+Markopy.\+Evaluation.\+Model\+Evaluator.\+check\+\_\+dangling()}}, \mbox{\hyperlink{evaluate_8py_source_l00207}{Python.\+Markopy.\+Evaluation.\+Model\+Evaluator.\+check\+\_\+lean()}}, \mbox{\hyperlink{evaluate_8py_source_l00186}{Python.\+Markopy.\+Evaluation.\+Model\+Evaluator.\+check\+\_\+min()}}, \mbox{\hyperlink{evaluate_8py_source_l00159}{Python.\+Markopy.\+Evaluation.\+Model\+Evaluator.\+check\+\_\+structure()}}, and \mbox{\hyperlink{evaluate_8py_source_l00253}{Python.\+Markopy.\+Evaluation.\+Corpus\+Evaluator.\+evaluate()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a4a25bdb9fcea367eff440d824cdb7227_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a6b59a5de4044af97f84a7964ccaa417e}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a6b59a5de4044af97f84a7964ccaa417e}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!all\_checks\_passed@{all\_checks\_passed}}
+\index{all\_checks\_passed@{all\_checks\_passed}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{all\_checks\_passed}{all\_checks\_passed}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Evaluation.\+Evaluator.\+all\+\_\+checks\+\_\+passed}
+
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00036}{36}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{evaluate_8py_source_l00072}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+fail()}}, and \mbox{\hyperlink{evaluate_8py_source_l00081}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+finalize()}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a298ea16a08dc0ed85decc9c61a3578fd}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a298ea16a08dc0ed85decc9c61a3578fd}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!check\_funcs@{check\_funcs}}
+\index{check\_funcs@{check\_funcs}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{check\_funcs}{check\_funcs}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Evaluation.\+Evaluator.\+check\+\_\+funcs}
+
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00049}{49}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a0a28d631971e7dbc0b7fb14b4308352c}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a0a28d631971e7dbc0b7fb14b4308352c}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!checks@{checks}}
+\index{checks@{checks}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{checks}{checks}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Evaluation.\+Evaluator.\+checks}
+
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00033}{33}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{evaluate_8py_source_l00072}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+fail()}}, \mbox{\hyperlink{evaluate_8py_source_l00081}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+finalize()}}, and \mbox{\hyperlink{evaluate_8py_source_l00065}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+success()}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa1fcc567fb636c23817445e86f6f4792}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_aa1fcc567fb636c23817445e86f6f4792}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!filename@{filename}}
+\index{filename@{filename}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Evaluation.\+Evaluator.\+filename}
+
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00032}{32}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a2887af7b6d83d7cc7bc242c9df277c76}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a2887af7b6d83d7cc7bc242c9df277c76}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!files@{files}}
+\index{files@{files}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{files}{files}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Evaluation.\+Evaluator.\+files}
+
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00037}{37}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{evaluate_8py_source_l00044}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+evaluate()}}, \mbox{\hyperlink{evaluate_8py_source_l00103}{Python.\+Markopy.\+Evaluation.\+Model\+Evaluator.\+evaluate()}}, and \mbox{\hyperlink{evaluate_8py_source_l00253}{Python.\+Markopy.\+Evaluation.\+Corpus\+Evaluator.\+evaluate()}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a84089428eaf66879c4651a4dd2d176a3}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a84089428eaf66879c4651a4dd2d176a3}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!TEST\_FAIL\_SYMBOL@{TEST\_FAIL\_SYMBOL}}
+\index{TEST\_FAIL\_SYMBOL@{TEST\_FAIL\_SYMBOL}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{TEST\_FAIL\_SYMBOL}{TEST\_FAIL\_SYMBOL}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Evaluation.\+Evaluator.\+TEST\+\_\+\+FAIL\+\_\+\+SYMBOL}
+
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00035}{35}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{evaluate_8py_source_l00072}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+fail()}}.
+
+\mbox{\Hypertarget{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a326f8d87fe31965a856eaad5eaa360d2}\label{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator_a326f8d87fe31965a856eaad5eaa360d2}} 
+\index{Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}!TEST\_PASS\_SYMBOL@{TEST\_PASS\_SYMBOL}}
+\index{TEST\_PASS\_SYMBOL@{TEST\_PASS\_SYMBOL}!Python.Markopy.Evaluation.Evaluator@{Python.Markopy.Evaluation.Evaluator}}
+\doxysubsubsection{\texorpdfstring{TEST\_PASS\_SYMBOL}{TEST\_PASS\_SYMBOL}}
+{\footnotesize\ttfamily Python.\+Markopy.\+Evaluation.\+Evaluator.\+TEST\+\_\+\+PASS\+\_\+\+SYMBOL}
+
+
+
+Definition at line \mbox{\hyperlink{evaluate_8py_source_l00034}{34}} of file \mbox{\hyperlink{evaluate_8py_source}{evaluate.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{evaluate_8py_source_l00065}{Python.\+Markopy.\+Evaluation.\+Evaluator.\+success()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Markopy/\+Markopy/src/\+CLI/\mbox{\hyperlink{evaluate_8py}{evaluate.\+py}}\end{DoxyCompactItemize}

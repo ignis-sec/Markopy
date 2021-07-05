@@ -14,7 +14,7 @@
 \usepackage{calc}
 \usepackage{doxygen}
 \usepackage{graphicx}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 \usepackage{makeidx}
 \usepackage{multicol}
 \usepackage{multirow}
@@ -30,6 +30,13 @@
 \usepackage{courier}
 \usepackage{amssymb}
 \usepackage{sectsty}
+
+
+\usepackage{textcomp}  % Required for encoding \textbigcircle
+\usepackage{scalerel}  % Required for emoji \scalerel
+
+\DeclareUnicodeCharacter{10060}{\scalerel*{\includegraphics{274c.png}}{\textrm{\textbigcircle}}}
+\DeclareUnicodeCharacter{9989}{\scalerel*{\includegraphics{2705.png}}{\textrm{\textbigcircle}}}
 \renewcommand{\familydefault}{\sfdefault}
 \allsectionsfont{%
   \fontseries{bc}\selectfont%
@@ -214,10 +221,6 @@
 %--- Begin generated contents ---
 \chapter{Markopy}
 \label{index}\hypertarget{index}{}\input{index}
-\chapter{NVSight Report}
-\label{md__markopy__n_v_sight_report}
-\Hypertarget{md__markopy__n_v_sight_report}
-\input{md__markopy__n_v_sight_report}
 \chapter{Deprecated List}
 \label{deprecated}
 \Hypertarget{deprecated}
@@ -234,6 +237,7 @@
 \input{namespacebase}
 \input{namespacecudamarkopy}
 \input{namespacecudammx}
+\input{namespaceevaluate}
 \input{namespaceimporter}
 \input{namespacemarkopy}
 \input{namespace_markov}
@@ -251,7 +255,7 @@
 \input{namespacemodel__2gram}
 \input{namespacemp}
 \input{namespace_python_1_1_cuda_markopy}
-\input{namespace_python_1_1_markopy}
+\input{namespace_python_1_1_markopy_1_1_evaluation}
 \input{namespacerandom__model}
 \input{namespace_testing}
 \input{namespace_testing_1_1_markov_model}
@@ -305,12 +309,14 @@
 \input{classvector_3_01_markov_1_1_edge_3_01char_01_4_01_5_01_4_1_1const__reverse__iterator}
 \input{classvector_3_01_markov_1_1_edge_3_01_node_storage_type_01_4_01_5_01_4_1_1const__reverse__iterator}
 \input{classvector_3_01_markov_1_1_edge_3_01storage_type_01_4_01_5_01_4_1_1const__reverse__iterator}
+\input{class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator}
 \input{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_device_controller}
 \input{class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i}
 \input{class_markov_1_1_a_p_i_1_1_c_u_d_a_1_1_c_u_d_a_model_matrix}
 \input{class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i}
 \input{class_markov_1_1_random_1_1_default_random_engine}
 \input{class_markov_1_1_edge}
+\input{class_python_1_1_markopy_1_1_evaluation_1_1_evaluator}
 \input{class_markov_1_1_g_u_i_1_1_generate}
 \input{classbasic__string_3_01char_01_4_1_1iterator}
 \input{classbasic__string_3_01char16__t_01_4_1_1iterator}
@@ -341,6 +347,7 @@
 \input{class_markov_1_1_g_u_i_1_1menu}
 \input{class_markov_1_1_random_1_1_mersenne}
 \input{class_markov_1_1_model}
+\input{class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator}
 \input{class_markov_1_1_a_p_i_1_1_model_matrix}
 \input{class_python_1_1_markopy_1_1_model_matrix}
 \input{class_python_1_1_markopy_1_1_model_matrix_c_l_i}
@@ -392,6 +399,8 @@
 \input{dirs_8docs_source}
 \input{base_8py}
 \input{base_8py_source}
+\input{evaluate_8py}
+\input{evaluate_8py_source}
 \input{importer_8py}
 \input{importer_8py_source}
 \input{markopy_8py}
@@ -476,7 +485,6 @@
 \input{_train_8cpp_source}
 \input{_train_8h}
 \input{_train_8h_source}
-\input{report_8md}
 \input{_r_e_a_d_m_e_8md}
 \input{_unit_tests_8cpp}
 \input{_unit_tests_8cpp_source}

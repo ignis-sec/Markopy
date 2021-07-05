@@ -1,10 +1,10 @@
 <map id="Python.Markopy.ModelMatrix" name="Python.Markopy.ModelMatrix">
-<area shape="rect" id="node1" title="Abstract representation of a matrix based model." alt="" coords="165,1896,417,2016"/>
-<area shape="rect" id="node5" href="$class_python_1_1_markopy_1_1_model_matrix_c_l_i.html" title="Extension of Python.Markopy.Base.BaseCLI for Markov::API::ModelMatrix." alt="" coords="153,2064,430,2271"/>
-<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html" title="Class to flatten and reduce Markov::Model to a Matrix." alt="" coords="122,1173,461,1848"/>
-<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html" title="Markov::Model with char represented nodes." alt="" coords="95,537,488,1125"/>
-<area shape="rect" id="node4" href="$class_markov_1_1_model.html" title=" " alt="" coords="150,5,433,489"/>
-<area shape="rect" id="node6" href="$class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i.html" title="Python CLI wrapper for CudaModelMatrix." alt="" coords="5,2345,289,2551"/>
-<area shape="rect" id="node8" href="$class_python_1_1_markopy_1_1_markopy_c_l_i.html" title="Top level model selector for Markopy CLI." alt="" coords="313,2319,561,2577"/>
-<area shape="rect" id="node7" href="$class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html" title="CUDA extension to MarkopyCLI." alt="" coords="126,2625,457,2780"/>
+<area shape="rect" id="node1" title="Abstract representation of a matrix based model." alt="" coords="171,1896,423,2016"/>
+<area shape="rect" id="node5" href="$class_python_1_1_markopy_1_1_model_matrix_c_l_i.html" title="Extension of Python.Markopy.Base.BaseCLI for Markov::API::ModelMatrix." alt="" coords="158,2064,435,2271"/>
+<area shape="rect" id="node2" href="$class_markov_1_1_a_p_i_1_1_model_matrix.html" title="Class to flatten and reduce Markov::Model to a Matrix." alt="" coords="127,1173,466,1848"/>
+<area shape="rect" id="node3" href="$class_markov_1_1_a_p_i_1_1_markov_passwords.html" title="Markov::Model with char represented nodes." alt="" coords="100,537,493,1125"/>
+<area shape="rect" id="node4" href="$class_markov_1_1_model.html" title=" " alt="" coords="155,5,438,489"/>
+<area shape="rect" id="node6" href="$class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i.html" title="Python CLI wrapper for CudaModelMatrix." alt="" coords="5,2371,289,2577"/>
+<area shape="rect" id="node8" href="$class_python_1_1_markopy_1_1_markopy_c_l_i.html" title="Top level model selector for Markopy CLI." alt="" coords="313,2319,579,2629"/>
+<area shape="rect" id="node7" href="$class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html" title="CUDA extension to MarkopyCLI." alt="" coords="131,2677,462,2832"/>
 </map>
