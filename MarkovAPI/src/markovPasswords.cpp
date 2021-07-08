@@ -93,7 +93,7 @@ void Markov::API::MarkovPasswords::TrainThread(Markov::API::Concurrency::ThreadS
 		}
 		char* linebuf = new char[line.length()+5];
 #ifdef _WIN32
-		sscanf_s(line.c_str(), "%ld,%s", &oc, linebuf, line.length()+5); //<== changed format_str to-> "%ld,%s"
+		sscanf_s(line.c_str(), format_str, &oc, linebuf, line.length()+5); //<== changed format_str to-> "%ld,%s"
 #else
 		sscanf(line.c_str(), format_str, &oc, linebuf);
 #endif
