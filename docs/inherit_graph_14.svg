@@ -203,105 +203,105 @@
 <path fill="none" stroke="midnightblue" d="M962.78,-112.23C1039.66,-126.41 1160.57,-149.04 1265,-170 1285.31,-174.08 1307.23,-178.64 1327.6,-182.96"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="963.17,-108.74 952.7,-110.37 961.9,-115.62 963.17,-108.74"/>
 </g>
-<!-- Node75 -->
+<!-- Node78 -->
 <g id="node12" class="node">
-<title>Node75</title>
+<title>Node78</title>
 <g id="a_node12"><a xlink:href="class_markov_1_1_model.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="29.5,-194.5 29.5,-215.5 187.5,-215.5 187.5,-194.5 29.5,-194.5"/>
 <text text-anchor="middle" x="108.5" y="-201.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::Model&lt; char &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node76 -->
+<!-- Node79 -->
 <g id="node13" class="node">
-<title>Node76</title>
+<title>Node79</title>
 <g id="a_node13"><a xlink:href="class_markov_1_1_a_p_i_1_1_markov_passwords.html" target="_top" xlink:title="Markov::Model with char represented nodes.">
 <polygon fill="none" stroke="black" points="263,-194.5 263,-215.5 463,-215.5 463,-194.5 263,-194.5"/>
 <text text-anchor="middle" x="363" y="-201.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::API::MarkovPasswords</text>
 </a>
 </g>
 </g>
-<!-- Node75&#45;&gt;Node76 -->
+<!-- Node78&#45;&gt;Node79 -->
 <g id="edge16" class="edge">
-<title>Node75&#45;&gt;Node76</title>
+<title>Node78&#45;&gt;Node79</title>
 <path fill="none" stroke="midnightblue" d="M197.83,-205C218.82,-205 241.35,-205 262.79,-205"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="197.66,-201.5 187.66,-205 197.66,-208.5 197.66,-201.5"/>
 </g>
-<!-- Node77 -->
+<!-- Node80 -->
 <g id="node14" class="node">
-<title>Node77</title>
+<title>Node80</title>
 <g id="a_node14"><a xlink:href="class_markov_1_1_a_p_i_1_1_model_matrix.html" target="_top" xlink:title="Class to flatten and reduce Markov::Model to a Matrix.">
 <polygon fill="none" stroke="black" points="541,-134.5 541,-155.5 710,-155.5 710,-134.5 541,-134.5"/>
 <text text-anchor="middle" x="625.5" y="-141.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::API::ModelMatrix</text>
 </a>
 </g>
 </g>
-<!-- Node76&#45;&gt;Node77 -->
+<!-- Node79&#45;&gt;Node80 -->
 <g id="edge17" class="edge">
-<title>Node76&#45;&gt;Node77</title>
+<title>Node79&#45;&gt;Node80</title>
 <path fill="none" stroke="midnightblue" d="M419.49,-192.22C466.97,-181.28 534.49,-165.73 578.88,-155.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="418.63,-188.82 409.67,-194.48 420.2,-195.65 418.63,-188.82"/>
 </g>
-<!-- Node79 -->
+<!-- Node82 -->
 <g id="node16" class="node">
-<title>Node79</title>
+<title>Node82</title>
 <g id="a_node16"><a xlink:href="class_python_1_1_markopy_1_1_markov_model.html" target="_top" xlink:title="Abstract representation of a markov model.">
 <polygon fill="none" stroke="black" points="786,-250.5 786,-271.5 982,-271.5 982,-250.5 786,-250.5"/>
 <text text-anchor="middle" x="884" y="-257.9" font-family="Helvetica,sans-Serif" font-size="12.00">Python.Markopy.MarkovModel</text>
 </a>
 </g>
 </g>
-<!-- Node76&#45;&gt;Node79 -->
+<!-- Node79&#45;&gt;Node82 -->
 <g id="edge21" class="edge">
-<title>Node76&#45;&gt;Node79</title>
+<title>Node79&#45;&gt;Node82</title>
 <path fill="none" stroke="midnightblue" d="M404.09,-218.7C432.91,-227.89 472.89,-239.32 509,-245 602.25,-259.66 710.08,-262.84 785.93,-262.84"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="404.98,-215.31 394.39,-215.55 402.82,-221.97 404.98,-215.31"/>
 </g>
-<!-- Node77&#45;&gt;Node50 -->
+<!-- Node80&#45;&gt;Node50 -->
 <g id="edge18" class="edge">
-<title>Node77&#45;&gt;Node50</title>
+<title>Node80&#45;&gt;Node50</title>
 <path fill="none" stroke="midnightblue" d="M694.73,-132.62C710.27,-129.8 726.71,-126.8 742,-124 765.87,-119.63 792.01,-114.82 815.23,-110.53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="693.88,-129.22 684.67,-134.45 695.14,-136.11 693.88,-129.22"/>
 </g>
-<!-- Node78 -->
+<!-- Node81 -->
 <g id="node15" class="node">
-<title>Node78</title>
+<title>Node81</title>
 <g id="a_node15"><a xlink:href="class_python_1_1_markopy_1_1_model_matrix.html" target="_top" xlink:title="Abstract representation of a matrix based model.">
 <polygon fill="none" stroke="black" points="789.5,-134.5 789.5,-155.5 978.5,-155.5 978.5,-134.5 789.5,-134.5"/>
 <text text-anchor="middle" x="884" y="-141.9" font-family="Helvetica,sans-Serif" font-size="12.00">Python.Markopy.ModelMatrix</text>
 </a>
 </g>
 </g>
-<!-- Node77&#45;&gt;Node78 -->
+<!-- Node80&#45;&gt;Node81 -->
 <g id="edge19" class="edge">
-<title>Node77&#45;&gt;Node78</title>
+<title>Node80&#45;&gt;Node81</title>
 <path fill="none" stroke="midnightblue" d="M720.34,-145C742.81,-145 766.8,-145 789.27,-145"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="720.13,-141.5 710.13,-145 720.13,-148.5 720.13,-141.5"/>
 </g>
-<!-- Node78&#45;&gt;Node7 -->
+<!-- Node81&#45;&gt;Node7 -->
 <g id="edge20" class="edge">
-<title>Node78&#45;&gt;Node7</title>
+<title>Node81&#45;&gt;Node7</title>
 <path fill="none" stroke="midnightblue" d="M929.74,-158.45C980.62,-173.74 1062.66,-198.4 1109.23,-212.4"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="930.58,-155.05 920,-155.52 928.57,-161.75 930.58,-155.05"/>
 </g>
-<!-- Node79&#45;&gt;Node5 -->
+<!-- Node82&#45;&gt;Node5 -->
 <g id="edge22" class="edge">
-<title>Node79&#45;&gt;Node5</title>
+<title>Node82&#45;&gt;Node5</title>
 <path fill="none" stroke="midnightblue" d="M992.69,-261.83C1003.54,-261.91 1014.6,-262 1025.56,-262.08"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="992.39,-258.33 982.37,-261.75 992.34,-265.33 992.39,-258.33"/>
 </g>
-<!-- Node90 -->
+<!-- Node93 -->
 <g id="node17" class="node">
-<title>Node90</title>
+<title>Node93</title>
 <g id="a_node17"><a xlink:href="class_markov_1_1_random_1_1_random_engine.html" target="_top" xlink:title="An abstract class for Random Engine.">
 <polygon fill="none" stroke="black" points="0,-20.5 0,-41.5 217,-41.5 217,-20.5 0,-20.5"/>
 <text text-anchor="middle" x="108.5" y="-27.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::Random::RandomEngine</text>
 </a>
 </g>
 </g>
-<!-- Node91 -->
+<!-- Node94 -->
 <g id="node18" class="node">
-<title>Node91</title>
+<title>Node94</title>
 <g id="a_node18"><a xlink:href="class_markov_1_1_random_1_1_default_random_engine.html" target="_top" xlink:title="Implementation using Random.h default random engine.">
 <polygon fill="none" stroke="black" points="253,-14 253,-48 473,-48 473,-14 253,-14"/>
 <text text-anchor="start" x="261" y="-34.4" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::Random::DefaultRandom</text>
@@ -309,45 +309,45 @@
 </a>
 </g>
 </g>
-<!-- Node90&#45;&gt;Node91 -->
+<!-- Node93&#45;&gt;Node94 -->
 <g id="edge23" class="edge">
-<title>Node90&#45;&gt;Node91</title>
+<title>Node93&#45;&gt;Node94</title>
 <path fill="none" stroke="midnightblue" d="M227.59,-31C236.04,-31 244.54,-31 252.94,-31"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="227.32,-27.5 217.32,-31 227.32,-34.5 227.32,-27.5"/>
 </g>
-<!-- Node92 -->
+<!-- Node95 -->
 <g id="node19" class="node">
-<title>Node92</title>
+<title>Node95</title>
 <g id="a_node19"><a xlink:href="class_markov_1_1_random_1_1_marsaglia.html" target="_top" xlink:title="Implementation of Marsaglia Random Engine.">
 <polygon fill="none" stroke="black" points="533.5,-0.5 533.5,-21.5 717.5,-21.5 717.5,-0.5 533.5,-0.5"/>
 <text text-anchor="middle" x="625.5" y="-7.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::Random::Marsaglia</text>
 </a>
 </g>
 </g>
-<!-- Node91&#45;&gt;Node92 -->
+<!-- Node94&#45;&gt;Node95 -->
 <g id="edge24" class="edge">
-<title>Node91&#45;&gt;Node92</title>
+<title>Node94&#45;&gt;Node95</title>
 <path fill="none" stroke="midnightblue" d="M483.66,-21.81C500.29,-20.54 517.15,-19.24 533.16,-18.01"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="483.05,-18.35 473.34,-22.61 483.58,-25.33 483.05,-18.35"/>
 </g>
-<!-- Node93 -->
+<!-- Node96 -->
 <g id="node20" class="node">
-<title>Node93</title>
+<title>Node96</title>
 <g id="a_node20"><a xlink:href="class_markov_1_1_random_1_1_mersenne.html" target="_top" xlink:title="Implementation of Mersenne Twister Engine.">
 <polygon fill="none" stroke="black" points="533,-40.5 533,-61.5 718,-61.5 718,-40.5 533,-40.5"/>
 <text text-anchor="middle" x="625.5" y="-47.9" font-family="Helvetica,sans-Serif" font-size="12.00">Markov::Random::Mersenne</text>
 </a>
 </g>
 </g>
-<!-- Node91&#45;&gt;Node93 -->
+<!-- Node94&#45;&gt;Node96 -->
 <g id="edge26" class="edge">
-<title>Node91&#45;&gt;Node93</title>
+<title>Node94&#45;&gt;Node96</title>
 <path fill="none" stroke="midnightblue" d="M483.59,-40.18C500.1,-41.45 516.85,-42.73 532.75,-43.96"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="483.58,-36.67 473.34,-39.39 483.05,-43.65 483.58,-36.67"/>
 </g>
-<!-- Node92&#45;&gt;Node51 -->
+<!-- Node95&#45;&gt;Node51 -->
 <g id="edge25" class="edge">
-<title>Node92&#45;&gt;Node51</title>
+<title>Node95&#45;&gt;Node51</title>
 <path fill="none" stroke="midnightblue" d="M727.92,-17.72C757.19,-19.66 788.42,-21.73 815.12,-23.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="727.86,-14.21 717.65,-17.04 727.4,-21.2 727.86,-14.21"/>
 </g>

@@ -64,4 +64,22 @@ DOT_TRANSPARENT        = YES
 
 DOT_IMAGE_FORMAT       = svg
 
+# The INPUT tag is used to specify the files and/or directories that contain
+# documented source files. You may enter file names like myfile.cpp or
+# directories like /usr/src/myproject. Separate the files or directories with
+# spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
+# Note: If this tag is empty the current directory is searched.
+
+INPUT                  = ../MarkovModel/src/ \
+                            ../MarkovAPI/src/ \
+                            ../MarkovAPICLI/src/ \
+                            ../Markopy/src/ \
+                            ../CudaMarkovAPI/src/ \
+                            ../CudaMarkopy/src/ \
+                            ../MarkovPasswordsGUI/src/ \
+                            ../UnitTests/ \
+                            ../README.md \
+                            ../NVSight/report.md \
+                            dirs.docs
+
 # ================================================================================

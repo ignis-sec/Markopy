@@ -43,7 +43,12 @@ var annotated_dup =
         [ "CudaMarkopyCLI", "class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html", "class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i" ],
         [ "CudaModelMatrixCLI", "class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i.html", "class_python_1_1_cuda_markopy_1_1_cuda_model_matrix_c_l_i" ]
       ] ],
-      [ "Markopy", "namespace_python_1_1_markopy.html", [
+      [ "Markopy", null, [
+        [ "Evaluation", "namespace_python_1_1_markopy_1_1_evaluation.html", [
+          [ "Evaluator", "class_python_1_1_markopy_1_1_evaluation_1_1_evaluator.html", "class_python_1_1_markopy_1_1_evaluation_1_1_evaluator" ],
+          [ "ModelEvaluator", "class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator.html", "class_python_1_1_markopy_1_1_evaluation_1_1_model_evaluator" ],
+          [ "CorpusEvaluator", "class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator.html", "class_python_1_1_markopy_1_1_evaluation_1_1_corpus_evaluator" ]
+        ] ],
         [ "BaseCLI", "class_python_1_1_markopy_1_1_base_c_l_i.html", "class_python_1_1_markopy_1_1_base_c_l_i" ],
         [ "AbstractGenerationModelCLI", "class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i.html", "class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i" ],
         [ "AbstractTrainingModelCLI", "class_python_1_1_markopy_1_1_abstract_training_model_c_l_i.html", "class_python_1_1_markopy_1_1_abstract_training_model_c_l_i" ],

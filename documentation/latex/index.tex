@@ -20,6 +20,17 @@
 \item \href{\#getting-started}{\texttt{ Getting Started}} 
 \item \href{\#releases}{\texttt{ Releases}} 
 \end{DoxyItemize}
+\item \href{\#using}{\texttt{ Using the Project}} 
+\begin{DoxyItemize}
+\item \href{\#using-markopy}{\texttt{ Using Markopy/\+Cuda\+Markopy}} 
+\begin{DoxyItemize}
+\item \href{\#markopy-help}{\texttt{ Help}} 
+\item \href{\#markopy-eval}{\texttt{ Evaluation}} 
+\item \href{\#markopy-select}{\texttt{ Model Selection}} 
+\item \href{\#markopy-train}{\texttt{ Training}} 
+\item \href{\#markopy-generate}{\texttt{ Generation}} 
+\end{DoxyItemize}
+\end{DoxyItemize}
 \item \href{\#building}{\texttt{ Building}} 
 \begin{DoxyItemize}
 \item \href{\#cmake-configuration}{\texttt{ CMake configuration}} 
@@ -51,6 +62,11 @@
 \item \href{\#installing-deps-win}{\texttt{ Windows}} 
 \item \href{\#installing-deps-lin}{\texttt{ Linux}} 
 \end{DoxyItemize}
+\end{DoxyItemize}
+\item \href{\#file-structure}{\texttt{ File Structure}} 
+\begin{DoxyItemize}
+\item \href{\#model-structure}{\texttt{ Model}} 
+\item \href{\#corpus-structure}{\texttt{ Corpus}} 
 \end{DoxyItemize}
 \item \href{\#known-issues}{\texttt{ Known Common Issues}} 
 \item \href{\#contributing}{\texttt{ Contributing}} 
@@ -133,45 +149,422 @@ Release files contain\+:
 \end{DoxyItemize}
 
 \DoxyHorRuler{0}
- \hypertarget{index_autotoc_md7}{}\doxysection{Building}\label{index_autotoc_md7}
- You can build the project using cmake with g++ \& nvcc on linux, and msbuild \& nvcc on windows.\hypertarget{index_autotoc_md8}{}\doxysection{Prerequisites}\label{index_autotoc_md8}
+\hypertarget{index_autotoc_md7}{}\doxysection{Using the Project}\label{index_autotoc_md7}
 
 
-You can find a list of the dependencies below. If you have any missing, check out the \href{\#setting-up-deps}{\texttt{ setting up prequisites}} part.\hypertarget{index_autotoc_md9}{}\doxysubsection{General prequisites}\label{index_autotoc_md9}
+You may use any section of this project, but we highly recommend using Markopy/\+Cuda\+Markopy python modules becaue they are optimized for the better user experience.
+
+\href{https://asciinema.org/a/QeHkl7rZZnD8TiyZ4Gm1eZP6R}{\texttt{ }}\hypertarget{index_autotoc_md8}{}\doxysubsection{Using Markopy/\+Cuda\+Markopy}\label{index_autotoc_md8}
 
 
-To build the simple core of this project, you\textquotesingle{}ll need\+: \hypertarget{index_autotoc_md10}{}\doxysubsubsection{Linux}\label{index_autotoc_md10}
+You can access basic operations from various model types using the python module, and if you are inexperienced with\+:
+\begin{DoxyItemize}
+\item Libmarkov and Libcudamarkov internals
+\item C++ code in general
+\item Importing and extending libraries in general
+\item Working with Python/\+C++ intermixed code
+\end{DoxyItemize}
+
+We strongly recommend using the python module.
+
+While almost all of the python files provide their own entry point, you should use \mbox{\hyperlink{markopy_8py}{markopy.\+py}} or \mbox{\hyperlink{cudamarkopy_8py}{cudamarkopy.\+py}} depending on your preferences. Please note that CUDA code will not run without an NVIDIA graphics card, and without CUDA runtime.
+
+\mbox{\hyperlink{markopy_8py}{markopy.\+py}} and \mbox{\hyperlink{cudamarkopy_8py}{cudamarkopy.\+py}} will let you select the model type you want to use with the -\/mt parameter. With each model, there are slightly different parameters available.
+
+For top level CLI selector (\mbox{\hyperlink{markopy_8py}{markopy.\+py}} and \mbox{\hyperlink{cudamarkopy_8py}{cudamarkopy.\+py}}) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Model Mode selection choices:}
+\DoxyCodeLine{usage: cudamarkopy.py [-\/mt MODEL\_TYPE] [-\/h] [-\/ev EVALUATE] [-\/evt EVALUATE\_TYPE]}
+\DoxyCodeLine{}
+\DoxyCodeLine{Python wrapper for MarkovPasswords.}
+\DoxyCodeLine{}
+\DoxyCodeLine{optional arguments:}
+\DoxyCodeLine{  -\/mt MODEL\_TYPE, -\/-\/model\_type MODEL\_TYPE}
+\DoxyCodeLine{                        Model type to use. Accepted values: MP, MMX}
+\DoxyCodeLine{  -\/h, -\/-\/help            Model type to use. Accepted values: MP, MMX}
+\DoxyCodeLine{  -\/ev EVALUATE, -\/-\/evaluate EVALUATE}
+\DoxyCodeLine{                        Evaluate a models integrity}
+\DoxyCodeLine{  -\/evt EVALUATE\_TYPE, -\/-\/evaluate\_type EVALUATE\_TYPE}
+\DoxyCodeLine{                        Evaluation type, model or corpus}
+\DoxyCodeLine{}
+\DoxyCodeLine{        Sample runs:}
+\DoxyCodeLine{        markopy.py -\/mt MP generate trained.mdl -\/n 500 -\/w output.txt}
+\DoxyCodeLine{            Import trained.mdl, and generate 500 lines to output.txt}
+\DoxyCodeLine{}
+\DoxyCodeLine{        markopy.py -\/mt MMX generate trained.mdl -\/n 500 -\/w output.txt}
+\DoxyCodeLine{            Import trained.mdl, and generate 500 lines to output.txt}
+\DoxyCodeLine{        }
+\DoxyCodeLine{        cudamarkopy.py -\/mt CUDA generate trained.mdl -\/n 500 -\/w output.txt}
+\DoxyCodeLine{            Import trained.mdl, and generate 500 lines to output.txt}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md9}{}\doxysubsubsection{Help}\label{index_autotoc_md9}
+
+
+You can use the {\ttfamily -\/-\/help} function to print all the parameter details for all of the model types. Alternatively, you can combine it with {\ttfamily -\/mt} parameter to only print a single models parameters.\hypertarget{index_autotoc_md10}{}\doxysubsubsection{Evaluation}\label{index_autotoc_md10}
+
+
+You can use the top level CLI selector to evaluate validity of a model or a corpus file (or many, if you provide a glob path pattern). A couple of examples\+:
+
+\href{https://asciinema.org/a/tyEfEPVVoeAY96G5gpn12Xy4U}{\texttt{ }}
+
+{\bfseries{Evaluate all of the models in the repository.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3 cudamarkopy.py -\/ev "{}../../../models/**/*"{} -\/evt model}
+
+\end{DoxyCode}
+
+
+Example outputs\+:
+
+
+\begin{DoxyItemize}
+\item A well trained model
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[+] Model: trained.mdl: }
+\DoxyCodeLine{[+] total edges: 9024}
+\DoxyCodeLine{[+] unique left nodes: 95}
+\DoxyCodeLine{[+] unique right nodes: 95}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Checks \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# }
+\DoxyCodeLine{[+] No dangling nodes             :✅ }
+\DoxyCodeLine{[+] Median in expected ratio      :✅ }
+\DoxyCodeLine{[+] Good bottom 10\%               :✅ }
+\DoxyCodeLine{[+] 0 edges below threshold       :✅ }
+\DoxyCodeLine{[+] Model structure               :✅ }
+\DoxyCodeLine{[+] Model has any training        :✅ }
+\DoxyCodeLine{[+] Model has training            :✅ }
+\DoxyCodeLine{[+] Model training score: 3500088 :✅ }
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item An untrained model\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[+] Model: 2gram.mdl: }
+\DoxyCodeLine{[+] total edges: 9024}
+\DoxyCodeLine{[+] unique left nodes: 95}
+\DoxyCodeLine{[+] unique right nodes: 95}
+\DoxyCodeLine{division by zero}
+\DoxyCodeLine{[+] 0 weighted edges are dangerous and may halt the model.}
+\DoxyCodeLine{[+] Model seems to be untrained}
+\DoxyCodeLine{[+] Model is not adequately trained. Might result in inadequate results}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Checks \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# }
+\DoxyCodeLine{[+] No dangling nodes             :✅ }
+\DoxyCodeLine{[+] Exceptionn in check\_distrib   :❌ }
+\DoxyCodeLine{[+] Median in expected ratio      :✅ }
+\DoxyCodeLine{[+] Good bottom 10\%               :✅ }
+\DoxyCodeLine{[+] Too many 0 edges              :❌ }
+\DoxyCodeLine{[+] Model structure               :✅ }
+\DoxyCodeLine{[+] Model has any training        :❌ }
+\DoxyCodeLine{[+] Model has training            :❌ }
+\DoxyCodeLine{[+] Model training score: 0.0     :❌ }
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item A model with inadequate training due to small corpus file 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[+] Model: corpus-\/Icelandic.mdl: }
+\DoxyCodeLine{[+] total edges: 9024}
+\DoxyCodeLine{[+] unique left nodes: 95}
+\DoxyCodeLine{[+] unique right nodes: 95}
+\DoxyCodeLine{[+] Model is not adequately trained. Might result in inadequate results}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Checks \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# }
+\DoxyCodeLine{[+] No dangling nodes             :✅ }
+\DoxyCodeLine{[+] Median in expected ratio      :✅ }
+\DoxyCodeLine{[+] Good bottom 10\%               :✅ }
+\DoxyCodeLine{[+] 0 edges below threshold       :✅ }
+\DoxyCodeLine{[+] Model structure               :✅ }
+\DoxyCodeLine{[+] Model has any training        :✅ }
+\DoxyCodeLine{[+] Model has training            :❌ }
+\DoxyCodeLine{[+] Model training score: 208.68  :❌ }
+
+\end{DoxyCode}
+
+\item A model with improper training due to alphabet conflicts (Mostly seen in languages with non-\/latin alphabets)
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[+] Model: corpus-\/Japanese.mdl: }
+\DoxyCodeLine{[+] total edges: 9024}
+\DoxyCodeLine{[+] unique left nodes: 95}
+\DoxyCodeLine{[+] unique right nodes: 95}
+\DoxyCodeLine{[+] Median is too left leaning and might indicate high entropy}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Checks \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# }
+\DoxyCodeLine{[+] No dangling nodes             :✅ }
+\DoxyCodeLine{[+] Median too left leaning       :❌ }
+\DoxyCodeLine{[+] Good bottom 10\%               :✅ }
+\DoxyCodeLine{[+] 0 edges below threshold       :✅ }
+\DoxyCodeLine{[+] Model structure               :✅ }
+\DoxyCodeLine{[+] Model has any training        :✅ }
+\DoxyCodeLine{[+] Model has training            :✅ }
+\DoxyCodeLine{[+] Model training score: 10952   :✅ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Evaluate a corpus file.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3 cudamarkopy.py -\/ev "{}../../../datasets/pwdb.corpus"{}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[+] Corpus: graduation.corpus: }
+\DoxyCodeLine{[+] Delimiter is: b'\(\backslash\)t'}
+\DoxyCodeLine{[+] Total number of lines: 157668136}
+\DoxyCodeLine{[+] Sum of all string weights: 700089109}
+\DoxyCodeLine{[+] Character total: 1498134485}
+\DoxyCodeLine{[+] Average length: 9.501821503109545}
+\DoxyCodeLine{[+] Average weight: 4.440270093635153}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Checks \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# }
+\DoxyCodeLine{[+] No structural conflicts       :✅ }
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md11}{}\doxysubsubsection{Model selection}\label{index_autotoc_md11}
+
+
+You may use the -\/mt parameter from \mbox{\hyperlink{markopy_8py}{markopy.\+py}} or \mbox{\hyperlink{cudamarkopy_8py}{cudamarkopy.\+py}} to select a model type. Allowed parameters are\+: MP, MMX, CUDA
+
+Following, is each of the parameters required for these model types.
+
+{\bfseries{Following are applicable for -\/mt MP mode\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Python wrapper for MarkovPasswords.}
+\DoxyCodeLine{}
+\DoxyCodeLine{positional arguments:}
+\DoxyCodeLine{  mode                  Process mode. Either 'Train', 'Generate', or 'Combine'.}
+\DoxyCodeLine{  input                 Input model file. This model will be imported before starting operation.}
+\DoxyCodeLine{}
+\DoxyCodeLine{optional arguments:}
+\DoxyCodeLine{  -\/h, -\/-\/help            show this help message and exit}
+\DoxyCodeLine{  -\/o OUTPUT, -\/-\/output OUTPUT}
+\DoxyCodeLine{                        Output model file. This model will be exported when done. Will be ignored for generation mode.}
+\DoxyCodeLine{  -\/d DATASET, -\/-\/dataset DATASET}
+\DoxyCodeLine{                        Dataset file to read input from for training. Will be ignored for generation mode.}
+\DoxyCodeLine{  -\/s SEPERATOR, -\/-\/seperator SEPERATOR}
+\DoxyCodeLine{                        Seperator character to use with training data.(character between occurrence and value)}
+\DoxyCodeLine{  -\/t THREADS, -\/-\/threads THREADS}
+\DoxyCodeLine{                        Number of lines to generate. Ignored in training mode.}
+\DoxyCodeLine{  -\/v, -\/-\/verbosity       Output verbosity.}
+\DoxyCodeLine{  -\/b, -\/-\/bulk            Bulk generate or bulk train every corpus/model in the folder.}
+\DoxyCodeLine{  -\/w WORDLIST, -\/-\/wordlist WORDLIST}
+\DoxyCodeLine{                        Wordlist file path to export generation results to. Will be ignored for training mode}
+\DoxyCodeLine{  -\/-\/min MIN             Minimum length that is allowed during generation}
+\DoxyCodeLine{  -\/-\/max MAX             Maximum length that is allowed during generation}
+\DoxyCodeLine{  -\/n COUNT, -\/-\/count COUNT}
+\DoxyCodeLine{                        Number of lines to generate. Ignored in training mode.}
+\DoxyCodeLine{}
+\DoxyCodeLine{Sample runs:}
+\DoxyCodeLine{        base.py train untrained.mdl -\/d dataset.dat -\/s "{}\(\backslash\)t"{} -\/o trained.mdl}
+\DoxyCodeLine{            Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl}
+\DoxyCodeLine{}
+\DoxyCodeLine{        base.py generate trained.mdl -\/n 500 -\/w output.txt}
+\DoxyCodeLine{            Import trained.mdl, and generate 500 lines to output.txt}
+\DoxyCodeLine{}
+\DoxyCodeLine{        base.py combine untrained.mdl -\/d dataset.dat -\/s "{}\(\backslash\)t"{} -\/n 500 -\/w output.txt}
+\DoxyCodeLine{            Train and immediately generate 500 lines to output.txt. Do not export trained model.}
+\DoxyCodeLine{}
+\DoxyCodeLine{        base.py combine untrained.mdl -\/d dataset.dat -\/s "{}\(\backslash\)t"{} -\/n 500 -\/w output.txt -\/o trained.mdl}
+\DoxyCodeLine{            Train and immediately generate 500 lines to output.txt. Export trained model.}
+\DoxyCodeLine{}
+\DoxyCodeLine{usage: cudamarkopy.py [-\/h] [-\/o OUTPUT] [-\/d DATASET] [-\/s SEPERATOR] [-\/t THREADS] [-\/v] [-\/b] [-\/w WORDLIST]}
+\DoxyCodeLine{                      [-\/-\/min MIN] [-\/-\/max MAX] [-\/n COUNT]}
+\DoxyCodeLine{                      mode input}
+
+\end{DoxyCode}
+
+
+{\bfseries{Following are applicable for -\/mt MMX mode\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{usage: cudamarkopy.py [-\/h] [-\/t THREADS] [-\/v] [-\/b] [-\/w WORDLIST] [-\/-\/min MIN] [-\/-\/max MAX] [-\/n COUNT] [-\/st]}
+\DoxyCodeLine{                      mode input}
+\DoxyCodeLine{}
+\DoxyCodeLine{Python wrapper for MarkovPasswords.}
+\DoxyCodeLine{}
+\DoxyCodeLine{positional arguments:}
+\DoxyCodeLine{  mode                  Process mode. Either 'Train', 'Generate', or 'Combine'.}
+\DoxyCodeLine{  input                 Input model file. This model will be imported before starting operation.}
+\DoxyCodeLine{}
+\DoxyCodeLine{optional arguments:}
+\DoxyCodeLine{  -\/h, -\/-\/help            show this help message and exit}
+\DoxyCodeLine{  -\/t THREADS, -\/-\/threads THREADS}
+\DoxyCodeLine{                        Number of lines to generate. Ignored in training mode.}
+\DoxyCodeLine{  -\/v, -\/-\/verbosity       Output verbosity.}
+\DoxyCodeLine{  -\/b, -\/-\/bulk            Bulk generate or bulk train every corpus/model in the folder.}
+\DoxyCodeLine{  -\/w WORDLIST, -\/-\/wordlist WORDLIST}
+\DoxyCodeLine{                        Wordlist file path to export generation results to. Will be ignored for training mode}
+\DoxyCodeLine{  -\/-\/min MIN             Minimum length that is allowed during generation}
+\DoxyCodeLine{  -\/-\/max MAX             Maximum length that is allowed during generation}
+\DoxyCodeLine{  -\/n COUNT, -\/-\/count COUNT}
+\DoxyCodeLine{                        Number of lines to generate. Ignored in training mode.}
+\DoxyCodeLine{  -\/st, -\/-\/stdout         Stdout mode}
+\DoxyCodeLine{}
+\DoxyCodeLine{Sample runs:}
+\DoxyCodeLine{        base.py train untrained.mdl -\/d dataset.dat -\/s "{}\(\backslash\)t"{} -\/o trained.mdl}
+\DoxyCodeLine{            Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl}
+\DoxyCodeLine{}
+\DoxyCodeLine{        base.py generate trained.mdl -\/n 500 -\/w output.txt}
+\DoxyCodeLine{            Import trained.mdl, and generate 500 lines to output.txt}
+\DoxyCodeLine{}
+\DoxyCodeLine{        base.py combine untrained.mdl -\/d dataset.dat -\/s "{}\(\backslash\)t"{} -\/n 500 -\/w output.txt}
+\DoxyCodeLine{            Train and immediately generate 500 lines to output.txt. Do not export trained model.}
+\DoxyCodeLine{}
+\DoxyCodeLine{        base.py combine untrained.mdl -\/d dataset.dat -\/s "{}\(\backslash\)t"{} -\/n 500 -\/w output.txt -\/o trained.mdl}
+\DoxyCodeLine{            Train and immediately generate 500 lines to output.txt. Export trained model.}
+
+\end{DoxyCode}
+
+
+{\bfseries{Following are applicable for -\/mt CUDA mode\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{usage: cudamarkopy.py [-\/h] [-\/t THREADS] [-\/v] [-\/b] [-\/w WORDLIST] [-\/-\/min MIN] [-\/-\/max MAX] [-\/n COUNT] [-\/st] [-\/if]}
+\DoxyCodeLine{                      mode input}
+\DoxyCodeLine{}
+\DoxyCodeLine{Python wrapper for MarkovPasswords.}
+\DoxyCodeLine{}
+\DoxyCodeLine{positional arguments:}
+\DoxyCodeLine{  mode                  Process mode. Either 'Train', 'Generate', or 'Combine'.}
+\DoxyCodeLine{  input                 Input model file. This model will be imported before starting operation.}
+\DoxyCodeLine{}
+\DoxyCodeLine{optional arguments:}
+\DoxyCodeLine{  -\/h, -\/-\/help            show this help message and exit}
+\DoxyCodeLine{  -\/t THREADS, -\/-\/threads THREADS}
+\DoxyCodeLine{                        Number of lines to generate. Ignored in training mode.}
+\DoxyCodeLine{  -\/v, -\/-\/verbosity       Output verbosity.}
+\DoxyCodeLine{  -\/b, -\/-\/bulk            Bulk generate or bulk train every corpus/model in the folder.}
+\DoxyCodeLine{  -\/w WORDLIST, -\/-\/wordlist WORDLIST}
+\DoxyCodeLine{                        Wordlist file path to export generation results to. Will be ignored for training mode}
+\DoxyCodeLine{  -\/-\/min MIN             Minimum length that is allowed during generation}
+\DoxyCodeLine{  -\/-\/max MAX             Maximum length that is allowed during generation}
+\DoxyCodeLine{  -\/n COUNT, -\/-\/count COUNT}
+\DoxyCodeLine{                        Number of lines to generate. Ignored in training mode.}
+\DoxyCodeLine{  -\/st, -\/-\/stdout         Stdout mode}
+\DoxyCodeLine{  -\/if, -\/-\/infinite       Infinite generation mode}
+\DoxyCodeLine{}
+\DoxyCodeLine{Sample runs:}
+\DoxyCodeLine{        base.py train untrained.mdl -\/d dataset.dat -\/s "{}\(\backslash\)t"{} -\/o trained.mdl}
+\DoxyCodeLine{            Import untrained.mdl, train it with dataset.dat which has tab delimited data, output resulting model to trained.mdl}
+\DoxyCodeLine{}
+\DoxyCodeLine{        base.py generate trained.mdl -\/n 500 -\/w output.txt}
+\DoxyCodeLine{            Import trained.mdl, and generate 500 lines to output.txt}
+\DoxyCodeLine{}
+\DoxyCodeLine{        base.py combine untrained.mdl -\/d dataset.dat -\/s "{}\(\backslash\)t"{} -\/n 500 -\/w output.txt}
+\DoxyCodeLine{            Train and immediately generate 500 lines to output.txt. Do not export trained model.}
+\DoxyCodeLine{}
+\DoxyCodeLine{        base.py combine untrained.mdl -\/d dataset.dat -\/s "{}\(\backslash\)t"{} -\/n 500 -\/w output.txt -\/o trained.mdl}
+\DoxyCodeLine{            Train and immediately generate 500 lines to output.txt. Export trained model.}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md12}{}\doxysubsubsection{Training}\label{index_autotoc_md12}
+
+
+If you do not have a custom corpus to train with, you may use one of the pre-\/trained models from the github releases.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3 cudamarkopy.py train ../../../models/base-\/models/2gram.mdl -\/d ../../../datasets/graduation.corpus -\/s "{}\(\backslash\)\(\backslash\)t"{} -\/o test.mdl -\/vvvvvvvvv}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md13}{}\doxysubsubsection{Generation}\label{index_autotoc_md13}
+
+
+If you have not trained a model, you may download on of the trained models (preferably models/trained/trained.\+mdl) from the releases and use it for generation.
+
+{\bfseries{Generating to a file}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3 cudamarkopy.py generate trained.mdl -\/mt MMX -\/n 5000 -\/-\/min 6 -\/-\/max 12 -\/w test.txt -\/vvvv}
+
+\end{DoxyCode}
+
+
+{\bfseries{Generating to stdout}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3 cudamarkopy.py generate trained.mdl -\/mt MMX -\/n 5000 -\/-\/min 6 -\/-\/max 12 -\/-\/stdout}
+
+\end{DoxyCode}
+
+
+{\bfseries{Generating with CUDA model}} {\bfseries{WARNING}} Do not use CUDA model unless you want to generate 500M+ lines. Prefer stdout mode with pipes instead of writing to disk whenever possible
+
+{\bfseries{Using with Hashcat}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3 cudamarkopy.py generate trained.mdl -\/mt CUDA -\/n 5000 -\/-\/min 6 -\/-\/max 12 -\/-\/stdout | hashcat -\/m 1400 hashes.txt -\/O}
+
+\end{DoxyCode}
+
+
+{\bfseries{Use with hashcat, continue until terminated}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3 cudamarkopy.py generate trained.mdl -\/mt CUDA -\/n 5000 -\/-\/min 6 -\/-\/max 12 -\/-\/stdout -\/-\/infinite | hashcat -\/m 1400 hashes.txt -\/O}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md15}{}\doxysection{Building}\label{index_autotoc_md15}
+ You can build the project using cmake with g++ \& nvcc on linux, and msbuild \& nvcc on windows.\hypertarget{index_autotoc_md16}{}\doxysubsection{Prerequisites}\label{index_autotoc_md16}
+
+
+You can find a list of the dependencies below. If you have any missing, check out the \href{\#setting-up-deps}{\texttt{ setting up prequisites}} part.\hypertarget{index_autotoc_md17}{}\doxysubsubsection{General prequisites}\label{index_autotoc_md17}
+
+
+To build the simple core of this project, you\textquotesingle{}ll need\+: \hypertarget{index_autotoc_md18}{}\doxyparagraph{Linux}\label{index_autotoc_md18}
+
+
 
 \begin{DoxyItemize}
 \item CMake, preferably one of the latest versions.
 \item CXX compiler, preferably g++ or clang++ (LLVM 3.\+9+).
-\end{DoxyItemize}\hypertarget{index_autotoc_md11}{}\doxysubsubsection{Windows}\label{index_autotoc_md11}
+\end{DoxyItemize}\hypertarget{index_autotoc_md19}{}\doxyparagraph{Windows}\label{index_autotoc_md19}
 
 \begin{DoxyItemize}
 \item CMake, preferably one of the latest versions.
 \item CXX compiler, preferably msbuild(cl.\+exe) or clang++ (LLVM 3.\+9+). Please note that mingw is not recommended as it is not officially supported by the nvcc.\+exe, and might not be linkable if you are building the CUDA components too.
-\end{DoxyItemize}\hypertarget{index_autotoc_md12}{}\doxysubsection{Markov\+Model}\label{index_autotoc_md12}
- This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.\hypertarget{index_autotoc_md13}{}\doxysubsection{Markov\+API}\label{index_autotoc_md13}
- This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.\hypertarget{index_autotoc_md14}{}\doxysubsection{Markov\+APICLI}\label{index_autotoc_md14}
+\end{DoxyItemize}\hypertarget{index_autotoc_md20}{}\doxysubsection{Markov\+Model}\label{index_autotoc_md20}
+ This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.\hypertarget{index_autotoc_md21}{}\doxysubsection{Markov\+API}\label{index_autotoc_md21}
+ This project does not have any extra dependencies, and it can be compiled with general dependencies without anything extra.\hypertarget{index_autotoc_md22}{}\doxysubsection{Markov\+APICLI}\label{index_autotoc_md22}
 
 
 
 \begin{DoxyItemize}
 \item Boost.\+program\+\_\+options (tested on 1.\+71.\+0-\/1.\+76.\+0)
-\end{DoxyItemize}\hypertarget{index_autotoc_md15}{}\doxysubsection{Markopy}\label{index_autotoc_md15}
+\end{DoxyItemize}\hypertarget{index_autotoc_md23}{}\doxysubsection{Markopy}\label{index_autotoc_md23}
 
 
 
 \begin{DoxyItemize}
 \item Boost.\+Python (tested on 1.\+71.\+0-\/1.\+76.\+0)
 \item Python development package (tested on python 36-\/39)
-\end{DoxyItemize}\hypertarget{index_autotoc_md16}{}\doxysubsection{Cuda\+Markov\+API}\label{index_autotoc_md16}
+\end{DoxyItemize}\hypertarget{index_autotoc_md24}{}\doxysubsection{Cuda\+Markov\+API}\label{index_autotoc_md24}
 
 
 
 \begin{DoxyItemize}
 \item CUDA toolkit (11.\+0+, c++17 support required)
-\end{DoxyItemize}\hypertarget{index_autotoc_md17}{}\doxysubsection{Cuda\+Markopy}\label{index_autotoc_md17}
+\end{DoxyItemize}\hypertarget{index_autotoc_md25}{}\doxysubsection{Cuda\+Markopy}\label{index_autotoc_md25}
 
 
 
@@ -179,14 +572,14 @@ To build the simple core of this project, you\textquotesingle{}ll need\+: \hyper
 \item CUDA toolkit (11.\+0+, c++17 support required)
 \item Boost.\+Python (tested on 1.\+71.\+0-\/1.\+76.\+0)
 \item Python development package (tested on python 36-\/39)
-\end{DoxyItemize}\hypertarget{index_autotoc_md18}{}\doxysubsection{Markov\+Passwords\+GUI}\label{index_autotoc_md18}
+\end{DoxyItemize}\hypertarget{index_autotoc_md26}{}\doxysubsection{Markov\+Passwords\+GUI}\label{index_autotoc_md26}
 
 
 
 \begin{DoxyItemize}
 \item QT5 development environment. (qt5-\/qmake on ubuntu apt-\/get)
 \item QTWeb\+Engine5 plugin. (qtwebengine5-\/dev on ubuntu apt-\/get)
-\end{DoxyItemize}\hypertarget{index_autotoc_md19}{}\doxysubsection{CMake Configuration}\label{index_autotoc_md19}
+\end{DoxyItemize}\hypertarget{index_autotoc_md27}{}\doxysubsection{CMake Configuration}\label{index_autotoc_md27}
 
 
 You can build this project with cmake.
@@ -195,7 +588,7 @@ If you don\textquotesingle{}t have prequisites for some of the projects set up, 
 
 If you do not meet the prequisites, you\textquotesingle{}ll have to partially set up the CMake file (you cant use --target to build some of the targets, because configuration phase will fail too).
 
-Some examples for partially setting up and building the project are below.\hypertarget{index_autotoc_md20}{}\doxysubsubsection{Build everything}\label{index_autotoc_md20}
+Some examples for partially setting up and building the project are below.\hypertarget{index_autotoc_md28}{}\doxysubsubsection{Build everything}\label{index_autotoc_md28}
 
 
 
@@ -205,7 +598,7 @@ Some examples for partially setting up and building the project are below.\hyper
 \end{DoxyCode}
 
 
-This will build all the libraries and executables. Requires python-\/dev, CUDA, QT5, QT5-\/\+Webview\hypertarget{index_autotoc_md21}{}\doxysubsubsection{Build libraries only}\label{index_autotoc_md21}
+This will build all the libraries and executables. Requires python-\/dev, CUDA, QT5, QT5-\/\+Webview\hypertarget{index_autotoc_md29}{}\doxysubsubsection{Build libraries only}\label{index_autotoc_md29}
 
 
 
@@ -215,7 +608,7 @@ This will build all the libraries and executables. Requires python-\/dev, CUDA, 
 \end{DoxyCode}
 
 
-Only build basic libraries. Requires only CXX compiler.\hypertarget{index_autotoc_md22}{}\doxysubsubsection{Build CUDA-\/accelerated libraries}\label{index_autotoc_md22}
+Only build basic libraries. Requires only CXX compiler.\hypertarget{index_autotoc_md30}{}\doxysubsubsection{Build CUDA-\/accelerated libraries}\label{index_autotoc_md30}
 
 
 
@@ -225,7 +618,7 @@ Only build basic libraries. Requires only CXX compiler.\hypertarget{index_autoto
 \end{DoxyCode}
 
 
-Build libraries along with cuda accelerated ones.\hypertarget{index_autotoc_md23}{}\doxysubsubsection{Build python module \& libraries}\label{index_autotoc_md23}
+Build libraries along with cuda accelerated ones.\hypertarget{index_autotoc_md31}{}\doxysubsubsection{Build python module \& libraries}\label{index_autotoc_md31}
 
 
 
@@ -235,7 +628,7 @@ Build libraries along with cuda accelerated ones.\hypertarget{index_autotoc_md23
 \end{DoxyCode}
 
 
-Will build basic libraries and python modules.\hypertarget{index_autotoc_md24}{}\doxysubsubsection{Build CUDA accelerated python module}\label{index_autotoc_md24}
+Will build basic libraries and python modules.\hypertarget{index_autotoc_md32}{}\doxysubsubsection{Build CUDA accelerated python module}\label{index_autotoc_md32}
 
 
 
@@ -245,7 +638,7 @@ Will build basic libraries and python modules.\hypertarget{index_autotoc_md24}{}
 \end{DoxyCode}
 
 
-Will build cudamarkopy.\hypertarget{index_autotoc_md25}{}\doxysubsubsection{Build CUDA accelerated python module and the GUI}\label{index_autotoc_md25}
+Will build cudamarkopy.\hypertarget{index_autotoc_md33}{}\doxysubsubsection{Build CUDA accelerated python module and the GUI}\label{index_autotoc_md33}
 
 
 
@@ -258,8 +651,8 @@ Will build cudamarkopy.\hypertarget{index_autotoc_md25}{}\doxysubsubsection{Buil
 Combine methods
 
 \DoxyHorRuler{0}
-\hypertarget{index_autotoc_md27}{}\doxysubsection{Installing Dependencies}\label{index_autotoc_md27}
-\hypertarget{index_autotoc_md28}{}\doxyparagraph{Windows}\label{index_autotoc_md28}
+\hypertarget{index_autotoc_md35}{}\doxysubsection{Installing Dependencies}\label{index_autotoc_md35}
+\hypertarget{index_autotoc_md36}{}\doxyparagraph{Windows}\label{index_autotoc_md36}
 
 
 
@@ -284,7 +677,7 @@ Combine methods
 
 \end{DoxyItemize}
 \item Python\+: You can use the windows app store to download python runtime and libraries.
-\end{DoxyItemize}\hypertarget{index_autotoc_md29}{}\doxyparagraph{Linux}\label{index_autotoc_md29}
+\end{DoxyItemize}\hypertarget{index_autotoc_md37}{}\doxyparagraph{Linux}\label{index_autotoc_md37}
 
 
 
@@ -326,12 +719,51 @@ Combine methods
 \end{DoxyItemize}
 
 \DoxyHorRuler{0}
-\hypertarget{index_autotoc_md31}{}\doxysection{Known Common issues}\label{index_autotoc_md31}
-\hypertarget{index_autotoc_md32}{}\doxysubsection{Linux}\label{index_autotoc_md32}
-\hypertarget{index_autotoc_md33}{}\doxysubsubsection{Markopy -\/ Python.\+h -\/ Not found}\label{index_autotoc_md33}
+\hypertarget{index_autotoc_md39}{}\doxysection{File Structure}\label{index_autotoc_md39}
+
+
+You may chose to create your own model structures or corpus files. Following, is the reference for the current structure for them.\hypertarget{index_autotoc_md40}{}\doxysubsection{Model}\label{index_autotoc_md40}
+
+
+Model files are basically a list of edges in the model
+
+Format is {\ttfamily \{left\+\_\+node\+\_\+content\},weight,\{right\+\_\+node\+\_\+content\}\textbackslash{}n}
+
+Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{l,5,r}
+\DoxyCodeLine{l,12,g}
+\DoxyCodeLine{...}
+
+\end{DoxyCode}
+
+
+There are additional requirements for a model for entry and termination nodes. Entry nodes are represented with 0x00, and termination nodes are represented with 0xff
+
+It is expected (but not mandatory) to have an edge from starting node to all of the other nodes, and same applies for edges from each nodes to the termination nodes.
+
+If termination node has any edges that it is position on the left (meaning model file expectation is to traverse to another node after termination node) it will be loaded to the edges, but will be ignored during the random walk logic.\hypertarget{index_autotoc_md41}{}\doxysubsection{Corpus}\label{index_autotoc_md41}
+
+
+Corpus files are used to train models. You may chose to train your own model (preferably over an existing base model, like 2gram.\+mdl) to have your own generation style.
+
+Corpus file format is\+:
+
+{\ttfamily \{occurrence\}\{seperator\}\{string\}\textbackslash{}n}
+
+
+\begin{DoxyItemize}
+\item Occurrence is the weight associated with that string.
+\item Seperator is a single character seperator used to seperate occurrence with the string
+\item String is the password/string/sequence you want to add to the model.
+\end{DoxyItemize}\hypertarget{index_autotoc_md42}{}\doxysection{Known Common issues}\label{index_autotoc_md42}
+\hypertarget{index_autotoc_md43}{}\doxysubsection{Linux}\label{index_autotoc_md43}
+\hypertarget{index_autotoc_md44}{}\doxysubsubsection{Markopy -\/ Python.\+h -\/ Not found}\label{index_autotoc_md44}
 Make sure you have the development version of python package, which includes the required header files. Check if header files exist\+: {\ttfamily /usr/include/python$\ast$} or {\ttfamily locate Python.\+h}.
 
-If it doesn\textquotesingle{}t, run {\ttfamily sudo apt-\/get install python3-\/dev}\hypertarget{index_autotoc_md34}{}\doxysubsubsection{Markopy/\+Markov\+API -\/ $\ast$.\+so not found, or other library related issues when building}\label{index_autotoc_md34}
+If it doesn\textquotesingle{}t, run {\ttfamily sudo apt-\/get install python3-\/dev}\hypertarget{index_autotoc_md45}{}\doxysubsubsection{Markopy/\+Markov\+API -\/ $\ast$.\+so not found, or other library related issues when building}\label{index_autotoc_md45}
 Run\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{ls /usr/lib/x86\_64-\/linux-\/gnu/ | grep boost}
@@ -355,8 +787,8 @@ If not, you can modify the makefile, or create symlinks such as\+:
 \DoxyCodeLine{ln -\/s /usr/lib/x86\_64-\/linux-\/gnu/libboost\_python38.so /usr/lib/x86\_64-\/linux-\/gnu/boost\_python38.so}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md35}{}\doxysubsection{Windows}\label{index_autotoc_md35}
-\hypertarget{index_autotoc_md36}{}\doxysubsubsection{Boost -\/ Bootstrap.\+bat \char`\"{}ctype.\+h\char`\"{} not found}\label{index_autotoc_md36}
+\hypertarget{index_autotoc_md46}{}\doxysubsection{Windows}\label{index_autotoc_md46}
+\hypertarget{index_autotoc_md47}{}\doxysubsubsection{Boost -\/ Bootstrap.\+bat \char`\"{}ctype.\+h\char`\"{} not found}\label{index_autotoc_md47}
 
 \begin{DoxyItemize}
 \item Make sure you are working in the \char`\"{}\+Visual Studio Developer Command Prompt\char`\"{} terminal.
@@ -369,15 +801,15 @@ If not, you can modify the makefile, or create symlinks such as\+:
 
 \end{DoxyCode}
 
-\end{DoxyItemize}\hypertarget{index_autotoc_md37}{}\doxysubsubsection{Cannot open file \char`\"{}$\ast$.\+lib\char`\"{}}\label{index_autotoc_md37}
-Make sure you have set the BOOST\+\_\+\+ROOT environment variable correctly. Make sure you ran {\ttfamily b2} to build library files from boost sources.\hypertarget{index_autotoc_md38}{}\doxysubsubsection{Python.\+h not found}\label{index_autotoc_md38}
+\end{DoxyItemize}\hypertarget{index_autotoc_md48}{}\doxysubsubsection{Cannot open file \char`\"{}$\ast$.\+lib\char`\"{}}\label{index_autotoc_md48}
+Make sure you have set the BOOST\+\_\+\+ROOT environment variable correctly. Make sure you ran {\ttfamily b2} to build library files from boost sources.\hypertarget{index_autotoc_md49}{}\doxysubsubsection{Python.\+h not found}\label{index_autotoc_md49}
 Make sure you have python installed, and make sure you set PYTHON\+\_\+\+PATH environment variable.
 
 \DoxyHorRuler{0}
-\hypertarget{index_autotoc_md40}{}\doxysection{Contributing}\label{index_autotoc_md40}
+\hypertarget{index_autotoc_md51}{}\doxysection{Contributing}\label{index_autotoc_md51}
 
 
-Feel free to contribute. We welcome all the issues and pull requests.\hypertarget{index_autotoc_md41}{}\doxysection{Contact}\label{index_autotoc_md41}
+Feel free to contribute. We welcome all the issues and pull requests.\hypertarget{index_autotoc_md52}{}\doxysection{Contact}\label{index_autotoc_md52}
 
 
 Twitter -\/ \href{https://twitter.com/ahakcil}{\texttt{ @ahakcil}} 

@@ -20,7 +20,7 @@ try:
     cudamarkopy = module_from_spec(spec)
     spec.loader.exec_module(cudamarkopy)
 except ImportError as e:
-    print(f"({__file__}) Working in development mode. Trying to load cudamarkopy.{ext} from ../../../out/")
+    #print(f"({__file__}) Working in development mode. Trying to load cudamarkopy.{ext} from ../../../out/")
     if(os.path.exists(f"../../../out/lib/cudamarkopy.{ext}")):
         spec = spec_from_loader("cudamarkopy", ExtensionFileLoader("cudamarkopy", os.path.abspath(f"../../../out/lib/cudamarkopy.{ext}")))
         cudamarkopy = module_from_spec(spec)
@@ -38,7 +38,7 @@ try:
     from base import BaseCLI,AbstractGenerationModelCLI, AbstractTrainingModelCLI
 
 except ImportError as e:
-    print("Working in development mode. Trying to load from ../../../out/")
+    #print("Working in development mode. Trying to load from ../../../out/")
     if(os.path.exists("../../../Markopy/src/CLI/markopy.py")):
         spec = spec_from_loader("markopy", SourceFileLoader("markopy", os.path.abspath("../../../Markopy/src/CLI/markopy.py")))
         markopy = module_from_spec(spec)

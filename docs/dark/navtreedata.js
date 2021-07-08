@@ -30,42 +30,56 @@ var NAVTREE =
       [ "Getting Started", "index.html#autotoc_md4", null ],
       [ "Releases", "index.html#autotoc_md5", null ]
     ] ],
-    [ "Building", "index.html#autotoc_md7", null ],
-    [ "Prerequisites", "index.html#autotoc_md8", [
-      [ "General prequisites", "index.html#autotoc_md9", [
-        [ "Linux", "index.html#autotoc_md10", null ],
-        [ "Windows", "index.html#autotoc_md11", null ]
-      ] ],
-      [ "MarkovModel", "index.html#autotoc_md12", null ],
-      [ "MarkovAPI", "index.html#autotoc_md13", null ],
-      [ "MarkovAPICLI", "index.html#autotoc_md14", null ],
-      [ "Markopy", "index.html#autotoc_md15", null ],
-      [ "CudaMarkovAPI", "index.html#autotoc_md16", null ],
-      [ "CudaMarkopy", "index.html#autotoc_md17", null ],
-      [ "MarkovPasswordsGUI", "index.html#autotoc_md18", null ],
-      [ "CMake Configuration", "index.html#autotoc_md19", [
-        [ "Build everything", "index.html#autotoc_md20", null ],
-        [ "Build libraries only", "index.html#autotoc_md21", null ],
-        [ "Build CUDA-accelerated libraries", "index.html#autotoc_md22", null ],
-        [ "Build python module & libraries", "index.html#autotoc_md23", null ],
-        [ "Build CUDA accelerated python module", "index.html#autotoc_md24", null ],
-        [ "Build CUDA accelerated python module and the GUI", "index.html#autotoc_md25", null ]
-      ] ],
-      [ "Installing Dependencies", "index.html#autotoc_md27", null ]
-    ] ],
-    [ "Known Common issues", "index.html#autotoc_md31", [
-      [ "Linux", "index.html#autotoc_md32", [
-        [ "Markopy - Python.h - Not found", "index.html#autotoc_md33", null ],
-        [ "Markopy/MarkovAPI - *.so not found, or other library related issues when building", "index.html#autotoc_md34", null ]
-      ] ],
-      [ "Windows", "index.html#autotoc_md35", [
-        [ "Boost - Bootstrap.bat \"ctype.h\" not found", "index.html#autotoc_md36", null ],
-        [ "Cannot open file \"*.lib\"", "index.html#autotoc_md37", null ],
-        [ "Python.h not found", "index.html#autotoc_md38", null ]
+    [ "Using the Project", "index.html#autotoc_md7", [
+      [ "Using Markopy/CudaMarkopy", "index.html#autotoc_md8", [
+        [ "Help", "index.html#autotoc_md9", null ],
+        [ "Evaluation", "index.html#autotoc_md10", null ],
+        [ "Model selection", "index.html#autotoc_md11", null ],
+        [ "Training", "index.html#autotoc_md12", null ],
+        [ "Generation", "index.html#autotoc_md13", null ]
       ] ]
     ] ],
-    [ "Contributing", "index.html#autotoc_md40", null ],
-    [ "Contact", "index.html#autotoc_md41", null ],
+    [ "Building", "index.html#autotoc_md15", [
+      [ "Prerequisites", "index.html#autotoc_md16", [
+        [ "General prequisites", "index.html#autotoc_md17", [
+          [ "Linux", "index.html#autotoc_md18", null ],
+          [ "Windows", "index.html#autotoc_md19", null ]
+        ] ]
+      ] ],
+      [ "MarkovModel", "index.html#autotoc_md20", null ],
+      [ "MarkovAPI", "index.html#autotoc_md21", null ],
+      [ "MarkovAPICLI", "index.html#autotoc_md22", null ],
+      [ "Markopy", "index.html#autotoc_md23", null ],
+      [ "CudaMarkovAPI", "index.html#autotoc_md24", null ],
+      [ "CudaMarkopy", "index.html#autotoc_md25", null ],
+      [ "MarkovPasswordsGUI", "index.html#autotoc_md26", null ],
+      [ "CMake Configuration", "index.html#autotoc_md27", [
+        [ "Build everything", "index.html#autotoc_md28", null ],
+        [ "Build libraries only", "index.html#autotoc_md29", null ],
+        [ "Build CUDA-accelerated libraries", "index.html#autotoc_md30", null ],
+        [ "Build python module & libraries", "index.html#autotoc_md31", null ],
+        [ "Build CUDA accelerated python module", "index.html#autotoc_md32", null ],
+        [ "Build CUDA accelerated python module and the GUI", "index.html#autotoc_md33", null ]
+      ] ],
+      [ "Installing Dependencies", "index.html#autotoc_md35", null ]
+    ] ],
+    [ "File Structure", "index.html#autotoc_md39", [
+      [ "Model", "index.html#autotoc_md40", null ],
+      [ "Corpus", "index.html#autotoc_md41", null ]
+    ] ],
+    [ "Known Common issues", "index.html#autotoc_md42", [
+      [ "Linux", "index.html#autotoc_md43", [
+        [ "Markopy - Python.h - Not found", "index.html#autotoc_md44", null ],
+        [ "Markopy/MarkovAPI - *.so not found, or other library related issues when building", "index.html#autotoc_md45", null ]
+      ] ],
+      [ "Windows", "index.html#autotoc_md46", [
+        [ "Boost - Bootstrap.bat \"ctype.h\" not found", "index.html#autotoc_md47", null ],
+        [ "Cannot open file \"*.lib\"", "index.html#autotoc_md48", null ],
+        [ "Python.h not found", "index.html#autotoc_md49", null ]
+      ] ]
+    ] ],
+    [ "Contributing", "index.html#autotoc_md51", null ],
+    [ "Contact", "index.html#autotoc_md52", null ],
     [ "NVSight Report", "md__markopy__n_v_sight_report.html", null ],
     [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -103,12 +117,12 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_c_l_i_8cpp.html",
-"class_markov_1_1_g_u_i_1_1_c_l_i.html#a1695cccf724c76f48e4931e2f636512d",
-"class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html#acb946950d9dbc1402ba081523d497dd3",
-"class_python_1_1_markopy_1_1_base_c_l_i.html#a4c7fdd1e03b5bf1ac6a6c0cb40df13da",
-"class_python_1_1_markopy_1_1_model_matrix.html#af01f1dbb05b7b25a69a0c95518549f32",
-"mp_8py.html#a3a8f6d5230358c7b9d783608fc6e3eed"
+"",
+"class_markov_1_1_edge.html#add40b694fce402c316540c50d0fd3b3c",
+"class_python_1_1_cuda_markopy_1_1_cuda_markopy_c_l_i.html#ac3fb665ee48937ca845d930e72e07917",
+"class_python_1_1_markopy_1_1_base_c_l_i.html",
+"class_python_1_1_markopy_1_1_markov_passwords_c_l_i.html#a9ad725de8fe9de68dc7c4f4aece8bb83",
+"index.html#autotoc_md28"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

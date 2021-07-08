@@ -1,5 +1,5 @@
 <map id="Python.Markopy.MarkopyCLI" name="Python.Markopy.MarkopyCLI">
-<area shape="rect" id="node1" title="Top level model selector for Markopy CLI." alt="" coords="1196,3685,1444,3944"/>
+<area shape="rect" id="node1" title="Top level model selector for Markopy CLI." alt="" coords="1187,3685,1453,3996"/>
 <area shape="rect" id="node2" href="$class_python_1_1_markopy_1_1_base_c_l_i.html" title="Base CLI class to handle user interactions" alt="" coords="1342,1712,1615,2335"/>
 <area shape="rect" id="node4" href="$class_python_1_1_markopy_1_1_abstract_generation_model_c_l_i.html" title="abstract class for generation capable models" alt="" coords="1118,2677,1429,2780"/>
 <area shape="rect" id="node27" href="$class_python_1_1_markopy_1_1_abstract_training_model_c_l_i.html" title="abstract class for training capable models" alt="" coords="1195,3269,1477,3371"/>
